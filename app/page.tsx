@@ -136,7 +136,7 @@ export default function HomePage() {
             title="Recent happenings"
           />
           <div className="flex flex-wrap items-center gap-2">
-            <Button variant="outline" size="sm" asChild>
+            <Button variant="primary" size="sm" asChild>
               <a
                 href="https://luma.com/techtank?period=past"
                 target="_blank"
