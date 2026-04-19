@@ -16,7 +16,7 @@ export function HeroStatsMarquee() {
   const marqueeItems = [...items, ...items, ...items];
 
   return (
-    <div className="relative w-full overflow-hidden py-8 mt-4">
+    <div className="relative w-full overflow-hidden py-8 mt-8">
       {/* Marquee track */}
       <div 
         className="flex w-max animate-marquee"
