@@ -19,7 +19,8 @@ and volunteers.
 
 The site remains content-driven marketing: it does not own accounts or
 ticketing. It funnels visitors to external platforms (Meetup, Luma, Slack,
-LinkedIn, GitHub, YouTube, Instagram) and captures intake via Google Forms.
+LinkedIn, GitHub, YouTube, Instagram) and captures intake via email to
+`techtankto@gmail.com`.
 
 ### 1.1 Mission
 
@@ -83,7 +84,7 @@ under Ontario/Canadian jurisdiction.
 
 ### 1.6 Success metrics
 
-- Intake form submissions per role (speaker / host / sponsor / volunteer)
+- Intake emails per role (speaker / host / sponsor / volunteer)
 - RSVP click-throughs to Meetup / Luma
 - Press Kit downloads
 - Scroll depth and CTA click-through rate on `/` and `/about`
@@ -116,10 +117,10 @@ under Ontario/Canadian jurisdiction.
 | `/` | Home | Social-proof-driven overview and primary CTAs |
 | `/about` | About | Values & community manifesto (the four pillars) |
 | `/how-it-works` | Get Involved | Onboarding hub; routes visitors to a role |
-| `/how-it-works/speaker` | Speak | Speaker logistics + intake form |
-| `/how-it-works/host` | Host | Venue logistics (40–100 cap, 6–8:30pm) + intake |
-| `/how-it-works/sponsor` | Sponsor | Corporate partner pitch + intake |
-| `/how-it-works/volunteer` | Volunteer | Crew onboarding + intake |
+| `/how-it-works/speaker` | Speak | Speaker logistics + intake action (email us) |
+| `/how-it-works/host` | Host | Venue logistics (40–100 cap, 6–8:30pm) + intake action (email us) |
+| `/how-it-works/sponsor` | Sponsor | Corporate partner pitch + intake action (email us) |
+| `/how-it-works/volunteer` | Volunteer | Crew onboarding + intake action (email us) |
 | `/events` | Events | Upcoming events via Luma calendar |
 | `/press-kit` | Press Kit | Brand guidelines, logos, fast facts |
 | `/legal/terms-of-service` | Terms of Service | — |
@@ -131,7 +132,7 @@ under Ontario/Canadian jurisdiction.
 - **Root layout** — global header, footer, theme, SEO defaults.
 - **`/how-it-works` layout** — sticky sub-nav (Speaker / Host / Sponsor /
   Volunteer), persistent "Join our Slack" CTA, shared "Why get involved"
-  strip, consistent intake-form styling.
+  strip, consistent intake CTA styling (email us).
 - **`/legal` layout** — document-style narrow column, table of contents
   sidebar, last-updated stamp.
 
@@ -150,13 +151,13 @@ under Ontario/Canadian jurisdiction.
 
 - Meetup: https://www.meetup.com/techtank-to/
 - Luma: https://luma.com/techtank
-- Slack: invite link (Google Form or direct)
+- Slack: direct invite link
 - LinkedIn: https://ca.linkedin.com/company/techtank-to
 - Instagram: https://www.instagram.com/techtankto/
 - YouTube: https://www.youtube.com/@TechTankTo
 - GitHub: https://github.com/tech-tankorg
 - Google Photos albums (per-event)
-- Google Forms (one per intake role)
+- Email intake: `techtankto@gmail.com` (one inbox for all `/how-it-works/*` roles)
 
 ---
 
@@ -164,8 +165,8 @@ under Ontario/Canadian jurisdiction.
 
 1. **Curious newcomer** → `/` (sees event photos, testimonials, logo
    cloud) → `/about` (values) → `/events` (RSVPs on Luma) → joins Slack.
-2. **Aspiring speaker** → `/` → `/how-it-works/speaker` → submits Google
-   Form.
+2. **Aspiring speaker** → `/` → `/how-it-works/speaker` → emails
+   `techtankto@gmail.com` with their talk proposal.
 3. **Company host** → `/` or `/how-it-works` → `/how-it-works/host` →
    submits intake → receives sponsorship package via email.
 4. **Corporate sponsor** → `/press-kit` or `/how-it-works/sponsor` →
@@ -215,7 +216,7 @@ relative to this file, `prd/PRD.md`):
 ### 5.2 Conversion orientation
 
 Every page must have exactly **one dominant CTA** that moves the visitor
-toward interacting (Join Slack / RSVP / Submit intake form). Secondary
+toward interacting (Join Slack / RSVP / Email us). Secondary
 CTAs are fine; tertiary links belong in the footer.
 
 ### 5.3 Social proof patterns (required on `/` and relevant `/how-it-works/*`)
@@ -305,7 +306,9 @@ and is explicitly out of scope for the initial launch.
   carries: date, venue, title, tags, host/sponsor attribution, status
   (`upcoming` | `past`), RSVP URL, Google Photos album URL, YouTube
   recording URL. Powers both `/events` and the home-page preview.
-- Google Form embedded (or linked) on each `/how-it-works/*` page.
+- Prominent intake action on each `/how-it-works/*` page — a
+  `mailto:techtankto@gmail.com` CTA with a role-specific subject line
+  and a suggested-details scaffold (copy-to-clipboard friendly).
 - Press Kit exposes a downloadable ZIP of logos + a brand-guidelines PDF.
 - Social share / Open Graph metadata on every page.
 - Privacy-respecting analytics (Plausible or equivalent).
@@ -338,8 +341,9 @@ and is explicitly out of scope for the initial launch.
 - **Performance:** LCP < 2.5s on 4G mobile; Core Web Vitals "Good".
 - **SEO:** Per-page metadata, structured data, sitemap, clean slugs.
 - **Reliability:** Static or ISR hosting with CDN (Vercel / Cloudflare).
-- **Privacy:** No PII collected beyond intake forms (handled by Google
-  Forms); cookie banner only if analytics or embeds require one.
+- **Privacy:** No PII collected beyond intake emails sent to
+  `techtankto@gmail.com`; cookie banner only if analytics or embeds
+  require one.
 - **Jurisdiction:** Governed by the laws of Ontario, Canada.
 - **Security:** External links use `rel="noopener noreferrer"`; third-party
   embeds sandboxed where possible.

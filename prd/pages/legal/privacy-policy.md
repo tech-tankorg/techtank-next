@@ -11,13 +11,14 @@ it's used, and who it's shared with.
 
 Be transparent about TechTank's minimal-PII stance. The community
 collects almost nothing directly; most data lives with external
-platforms (Luma, Meetup, Google Forms, Slack).
+platforms (Luma, Meetup, Slack) or arrives via email to
+`techtankto@gmail.com`.
 
 ## 2. Primary audience
 
 - Website visitors
 - Event attendees
-- Intake-form submitters (speaker, host, sponsor, volunteer)
+- People who email us to speak, host, sponsor, or volunteer
 
 ## 3. Structure
 
@@ -31,9 +32,11 @@ a narrow column, table of contents sidebar, and a last-updated stamp.
    - Scope: `techtankto.com` and TechTank-operated community channels.
 
 2. **Data we collect directly**
-   - Intake-form submissions (via Google Forms): name, email, optional
-     profile links, role-specific info (talk abstract, company, etc.).
-   - Contact emails you send to `techtankto@gmail.com`.
+   - Intake emails sent to `techtankto@gmail.com` (speaker, host,
+     sponsor, volunteer): name, email, optional profile links, and
+     role-specific info you choose to include (talk abstract, company,
+     etc.).
+   - Other contact emails you send to `techtankto@gmail.com`.
    - Basic analytics (see below).
 
 3. **Data we don't collect**
@@ -43,7 +46,6 @@ a narrow column, table of contents sidebar, and a last-updated stamp.
 4. **Third-party platforms**
    - Explicit list of platforms and what they process:
      - **Meetup / Luma** — RSVPs, attendee lists.
-     - **Google Forms** — intake submissions.
      - **Slack** — community messages.
      - **YouTube, Instagram, LinkedIn, GitHub** — embedded content.
    - Each platform has its own privacy policy; links included.

@@ -29,7 +29,7 @@ audience, format, logistics, what they get, and how to sign up.
 1. **Hero**
    - Headline: "Speak at a TechTank event."
    - Sub-headline: "Share what you know with the Toronto tech community."
-   - Primary CTA: "Sign up to speak" → intake form.
+   - Primary CTA: "Sign up to speak" → email us (`techtankto@gmail.com`).
    - Supporting image: real event photo of a speaker.
 
 2. **Why speak**
@@ -64,8 +64,10 @@ audience, format, logistics, what they get, and how to sign up.
 7. **Testimonials**
    - 2–3 quotes from past speakers with photo, role, and talk title.
 
-8. **Intake form**
-   - Embedded Google Form (or link) with fields:
+8. **Intake action (email us)**
+   - Prominent `mailto:techtankto@gmail.com` CTA with a pre-filled
+     subject line ("Speaker proposal — <your name>") and a
+     copy-to-clipboard scaffold suggesting:
      - Name, email, LinkedIn
      - Proposed talk title, abstract (300 chars), length
      - Short bio
@@ -75,21 +77,21 @@ audience, format, logistics, what they get, and how to sign up.
 
 ## 5. Calls to action (priority order)
 
-1. Submit speaker intake form
+1. Email us with your talk proposal
 2. Download the slide template
 3. Join our Slack (for questions)
 
 ## 6. Functional requirements
 
-- Intake form embedded if technically feasible, otherwise linked
-  with a clear button.
+- Prominent intake CTA (`mailto:techtankto@gmail.com`) with a clear
+  button and suggested-details scaffold.
 - Slide template link opens in a new tab.
 - Social proof (past speakers + YouTube recordings) must appear above
-  the intake form.
+  the intake CTA.
 
 ## 7. Acceptance criteria
 
-- A potential speaker can understand the commitment and sign up without
-  leaving the page.
+- A potential speaker can understand the commitment and start the
+  conversation (via the email CTA) without leaving the page.
 - First-time speakers see explicit reassurance that we help them
   prepare.

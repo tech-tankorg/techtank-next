@@ -33,7 +33,7 @@ partnership, swag, travel budget for speakers, etc.).
    - Headline: "Sponsor the Toronto tech community."
    - Sub-headline: "Support the monthly events, speakers, and programs
      that bring the community together."
-   - Primary CTA: "Request sponsorship package" → intake form.
+   - Primary CTA: "Request sponsorship package" → email us (`techtankto@gmail.com`).
 
 2. **Why sponsor**
    - **Brand** — align with Toronto's most inclusive tech community.
@@ -63,10 +63,12 @@ partnership, swag, travel budget for speakers, etc.).
    - Logo cloud + 1–2 partner quotes.
 
 7. **Sponsorship package download**
-   - Gated behind the intake form, or linked as a PDF once requested.
+   - Sent by email on request; not hosted as a public download.
 
-8. **Intake form**
-   - Google Form (embedded or linked):
+8. **Intake action (email us)**
+   - Prominent `mailto:techtankto@gmail.com` CTA with a pre-filled
+     subject line ("Sponsorship inquiry — <company>") and a
+     copy-to-clipboard scaffold suggesting:
      - Company, contact name, role, email
      - Goals (brand, recruiting, community, other)
      - Preferred tier / budget range (optional)
@@ -74,13 +76,14 @@ partnership, swag, travel budget for speakers, etc.).
 
 ## 5. Calls to action (priority order)
 
-1. Request sponsorship package (intake form)
-2. Email `techtankto@gmail.com`
-3. Visit `/press-kit` for brand context
+1. Email `techtankto@gmail.com` to request the sponsorship package
+2. Visit `/press-kit` for brand context
+3. Read about hosting (`/how-it-works/host`) if a single-event fit is better
 
 ## 6. Functional requirements
 
-- Intake form embedded or linked with a prominent button.
+- Prominent intake CTA (`mailto:techtankto@gmail.com`) with a clear
+  button and suggested-details scaffold.
 - Page clearly distinguishes sponsoring vs. hosting and links to
   `/how-it-works/host`.
 - Sponsor logos render server-side and include a link where possible.

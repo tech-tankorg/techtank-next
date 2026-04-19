@@ -31,7 +31,7 @@ roles available, and make signing up low-friction.
    - Headline: "Help run TechTank."
    - Sub-headline: "Join the crew that makes Toronto's tech community
      happen every month."
-   - Primary CTA: "Sign up to volunteer" → intake form.
+   - Primary CTA: "Sign up to volunteer" → email us (`techtankto@gmail.com`).
 
 2. **Why volunteer**
    - **Community** — meet people doing the same thing you are.
@@ -62,23 +62,26 @@ roles available, and make signing up low-friction.
 6. **Current crew (optional)**
    - Photos + first names of current volunteers as social proof.
 
-7. **Intake form**
-   - Google Form (embedded or linked):
+7. **Intake action (email us)**
+   - Prominent `mailto:techtankto@gmail.com` CTA with a pre-filled
+     subject line ("Volunteer — <your name>") and a
+     copy-to-clipboard scaffold suggesting:
      - Name, email, LinkedIn (optional)
-     - Roles you're interested in (multi-select)
+     - Roles you're interested in
      - Availability (weeknight events OK? ongoing hours?)
      - Relevant skills / portfolio link
      - Anything else
 
 ## 5. Calls to action (priority order)
 
-1. Submit volunteer intake form
+1. Email `techtankto@gmail.com` to volunteer
 2. Join our Slack
 3. Come to an event first (link to `/events`)
 
 ## 6. Functional requirements
 
-- Intake form embedded or linked.
+- Prominent intake CTA (`mailto:techtankto@gmail.com`) with a clear
+  button and suggested-details scaffold.
 - Role list renders from structured content so organizers can edit it.
 - "Come to an event first" path is always offered for people not ready
   to commit.

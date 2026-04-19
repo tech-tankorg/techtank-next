@@ -32,7 +32,7 @@ host" action is the single most important CTA.
 1. **Hero**
    - Headline: "Host a TechTank event."
    - Sub-headline: "Bring the Toronto tech community to your space."
-   - Primary CTA: "Contact us to host" → intake form.
+   - Primary CTA: "Contact us to host" → email us (`techtankto@gmail.com`).
    - Visual: real photo from a past hosted event.
 
 2. **Why host**
@@ -80,8 +80,10 @@ host" action is the single most important CTA.
    - Host checklist PDF (AV, food, timing, setup).
    - Day-of run-of-show PDF.
 
-10. **Intake form**
-    - Google Form (embedded or linked):
+10. **Intake action (email us)**
+    - Prominent `mailto:techtankto@gmail.com` CTA with a pre-filled
+      subject line ("Host inquiry — <company>") and a
+      copy-to-clipboard scaffold suggesting:
       - Company, contact name, role, email
       - Proposed venue + capacity
       - TTC accessibility notes
@@ -91,13 +93,14 @@ host" action is the single most important CTA.
 
 ## 5. Calls to action (priority order)
 
-1. Submit host intake form
-2. Email `techtankto@gmail.com`
-3. Read the host checklist
+1. Email `techtankto@gmail.com` to propose hosting
+2. Read the host checklist
+3. Visit `/press-kit` for brand context
 
 ## 6. Functional requirements
 
-- Intake form embedded or linked with a prominent button.
+- Prominent intake CTA (`mailto:techtankto@gmail.com`) with a clear
+  button and suggested-details scaffold.
 - Host checklist and run-of-show are real downloadable PDFs, not
   placeholders.
 - Page includes visible past-host logos and event photos.

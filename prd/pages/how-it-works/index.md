@@ -34,7 +34,7 @@ intake.
 - Persistent "Join our Slack" CTA in the header or side rail.
 - Shared "Why get involved" strip rendered under the sub-nav on every
   sub-page (karma, community, marketing, skills).
-- Consistent intake-form card style reused across all four sub-pages.
+- Consistent intake CTA card style (email us) reused across all four sub-pages.
 
 ## 5. Content sections (on `/how-it-works` itself)
 
