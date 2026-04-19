@@ -60,7 +60,7 @@ export const sponsors: Sponsor[] = [
     id: "prema-coffee",
     name: "Prema Coffee",
     logo: "/images/sponsors/prema.svg",
-    url: "https://premacoffee.ca",
+    url: "https://www.prematoronto.ca",
     type: "partner",
   },
 ];
