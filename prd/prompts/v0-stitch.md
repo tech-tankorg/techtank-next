@@ -26,10 +26,18 @@ accounts or ticketing.
 
 - **Voice:** warm, welcoming, beginner-safe, Toronto-local, confident.
   Concrete, not aspirational.
-- **Palette:** professional and elegant, not corporate. Start from a
-  near-black ink base with a single vibrant accent (TechTank's
-  pink→blue→teal gradient can show up as a signature accent, not the
-  whole canvas). Generous whitespace. Editorial rhythm.
+- **Palette (use these exactly — do not invent colours):**
+  - Gradient: three-stop background motif — warm peach/coral
+    (`#F5C4A8`) → soft lavender (`#D8CEED`) → pale aqua teal
+    (`#B5E0D9`). Used for hero and section banding. Not pink.
+  - Logo teal: `#3DC4C0` — primary brand colour, fish mark.
+  - Logo amber: `#F0AA00` — lightning bolt highlight; use sparingly.
+  - Surface dark / CTA: `#141926` — pill buttons, footer background.
+  - Body text: near-black on light surfaces.
+  - Do not introduce hot pink, true blue, or colours outside this
+    family.
+  - Professional and elegant, not corporate. Generous whitespace.
+    Editorial rhythm.
 - **Typography:** one editorial serif or distinctive display face for
   headlines, one humanist sans for body.
 - **Imagery:** real event photography first. No stock illustration.

@@ -314,8 +314,22 @@ and is explicitly out of scope for the initial launch.
 - **Voice:** warm, welcoming, beginner-safe, Toronto-local, confident.
 - **Typography:** one editorial serif for display, one humanist sans for
   body (final pairing per visual design).
-- **Color:** current gradient (pink → blue → teal) retained as a signature
-  accent; grounded by a neutral base (off-white / ink) for professionalism.
+- **Color palette (extracted from current site):**
+  - **Gradient:** warm peach/coral → soft lavender → aqua teal. This
+    three-stop gradient is the site's primary background motif (hero,
+    section banding). It is *not* pink — the warm stop is a
+    desaturated salmon/peach (`≈ #F5C4A8`), the mid is a muted
+    lavender (`≈ #D8CEED`), and the cool stop is a pale aqua
+    (`≈ #B5E0D9`).
+  - **Logo teal:** saturated cyan-teal (`≈ #3DC4C0`) — the fish mark
+    and primary brand colour.
+  - **Logo amber:** warm golden yellow (`≈ #F0AA00`) — the lightning
+    bolt in the logomark; used sparingly as a highlight.
+  - **CTA / surface dark:** near-black for pill buttons and the footer
+    (`≈ #141926`).
+  - **Body text:** near-black on light backgrounds.
+  - Do *not* introduce hot pink, true blue, or colours outside this
+    family without explicit organizer sign-off.
 - **Imagery:** real event photography first; diverse, candid, well-lit.
 
 ---
