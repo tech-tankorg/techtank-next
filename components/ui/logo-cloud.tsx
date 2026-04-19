@@ -1,24 +1,32 @@
+"use client";
+
 import { getAllSponsors } from "@/lib/data/sponsors";
 
 export function LogoCloud() {
   const sponsors = getAllSponsors();
 
+  // Triple the sponsors for seamless loop
+  const marqueeItems = [...sponsors, ...sponsors, ...sponsors];
+
   return (
-    <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 lg:gap-x-12">
-      {sponsors.map((sponsor) => (
-        <a
-          key={sponsor.id}
-          href={sponsor.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-          title={sponsor.name}
-        >
-          <div className="px-3 py-1.5 flex items-center justify-center text-base font-semibold text-teal-dark/40 hover:text-teal-dark transition-all duration-300">
-            {sponsor.name}
-          </div>
-        </a>
-      ))}
+    <div className="relative w-full overflow-hidden py-4">
+      {/* Marquee track */}
+      <div className="flex w-max animate-marquee">
+        {marqueeItems.map((sponsor, index) => (
+          <a
+            key={`${sponsor.id}-${index}`}
+            href={sponsor.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group mx-6 lg:mx-10"
+            title={sponsor.name}
+          >
+            <span className="text-base font-semibold text-teal-dark/40 hover:text-teal-dark transition-all duration-300 whitespace-nowrap">
+              {sponsor.name}
+            </span>
+          </a>
+        ))}
+      </div>
     </div>
   );
 }
