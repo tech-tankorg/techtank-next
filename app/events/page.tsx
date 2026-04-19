@@ -33,7 +33,9 @@ export default function EventsPage() {
                 All Events
               </h1>
               <p className="text-xl text-muted">
-                Every TechTank meetup — most recent first.
+                RSVP to what&apos;s next — and scroll back through the
+                talks, photos, and recaps from every meetup we&apos;ve
+                hosted since 2022.
               </p>
             </div>
             <div className="shrink-0">
