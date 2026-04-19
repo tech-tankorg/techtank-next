@@ -212,7 +212,6 @@ export default function VolunteerPage() {
                 rel="noopener noreferrer"
               >
                 GitHub
-                <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
             <Button variant="outline" size="sm" asChild>
