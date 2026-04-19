@@ -142,10 +142,18 @@ export default function HomePage() {
             <EventCard key={event.id} event={event} variant="featured" />
           ))}
         </div>
-        <div className="grid gap-3 grid-cols-2 lg:grid-cols-4 mb-6">
+        <div className="grid gap-3 grid-cols-2 lg:grid-cols-4 mb-8">
           {smallerEvents.map((event) => (
             <EventCard key={event.id} event={event} variant="compact" />
           ))}
+        </div>
+
+        {/* Sponsors */}
+        <div className="mb-6">
+          <p className="text-center text-xs text-muted mb-4 uppercase tracking-widest font-medium">
+            Hosted and supported by
+          </p>
+          <LogoCloud />
         </div>
 
         {/* CTAs */}
@@ -167,14 +175,6 @@ export default function HomePage() {
             </Link>
           </Button>
         </div>
-      </Section>
-
-      {/* Logo Cloud - More compact */}
-      <Section className="py-8 lg:py-10">
-        <p className="text-center text-xs text-muted mb-6 uppercase tracking-widest font-medium">
-          Hosted and supported by
-        </p>
-        <LogoCloud />
       </Section>
 
       {/* Ways to Get Involved */}
