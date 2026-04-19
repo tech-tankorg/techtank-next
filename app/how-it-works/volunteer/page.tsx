@@ -192,74 +192,43 @@ export default function VolunteerPage() {
         </div>
       </Section>
 
-      {/* Code Contributors */}
-      <Section>
-        <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
-            Developers welcome
-          </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
-            Contribute on GitHub
-          </h2>
-          <p className="text-muted mb-6">
-            We build in the open. Help us improve the TechTank website, create
-            tools for the community, or start your own open source project with us.
-          </p>
-          <Button variant="primary" asChild>
-            <a
-              href="https://github.com/tech-tankorg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View our GitHub
-              <ExternalLink className="ml-2 h-4 w-4" />
-            </a>
-          </Button>
-        </div>
-      </Section>
-
-      {/* Not Ready? */}
-      <Section className="bg-white border-y border-border">
-        <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
-            Not ready to commit?
-          </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
-            Come to an event first
-          </h2>
-          <p className="text-muted mb-6">
-            No pressure. Attend an event, meet the crew, and see what TechTank
-            is about. We&apos;d love to meet you either way.
-          </p>
-          <Button variant="outline" asChild>
-            <Link href="/events">See upcoming events</Link>
-          </Button>
-        </div>
-      </Section>
-
-      {/* Intake Form CTA */}
+      {/* Get Started */}
       <Section className="gradient-brand-soft">
         <div className="max-w-2xl mx-auto text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
-            Ready to join?
+            Get started
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
-            Sign up to volunteer
+            Ready to join the crew?
           </h2>
           <p className="text-muted mb-8">
-            Tell us about yourself and which roles interest you. We&apos;ll be
-            in touch within a week.
+            Sign up to volunteer, contribute code on GitHub, or come to an event first to meet the team.
           </p>
-          <Button variant="primary" size="lg" asChild>
-            <a
-              href="https://forms.gle/volunteer-intake"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Sign up to volunteer
-              <ExternalLink className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <Button variant="primary" size="sm" asChild>
+              <a
+                href="https://forms.gle/volunteer-intake"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Sign up to volunteer
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+            <Button variant="outline" size="sm" asChild>
+              <a
+                href="https://github.com/tech-tankorg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+            <Button variant="outline" size="sm" asChild>
+              <Link href="/events">See events</Link>
+            </Button>
+          </div>
         </div>
       </Section>
 
