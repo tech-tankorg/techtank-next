@@ -41,7 +41,7 @@ audience, format, logistics, what they get, and how to sign up.
    - **Talk duration:** 30–45 minutes plus Q&A.
    - **Topics:** anything related to tech.
    - **Format:** in-person at a host venue in Toronto.
-   - **Audience:** typically 100–120 attendees per event.
+   - **Audience:** typically 40–100 attendees per event.
    - **Recording:** published to TechTank's YouTube channel.
 
 4. **What TechTank handles**

@@ -17,12 +17,14 @@ Within 10 seconds, answer:
 3. What do I do next?
 
 The redesign leans on **social proof** as the primary persuasion lever,
-not product copy.
+not product copy. Content tone is organic and welcoming—inspired by the
+genuine warmth of events like the Code Diversity meetup—while remaining
+professional and credible.
 
 ## 2. Primary audience
 
 - First-time visitors evaluating the community
-- Toronto-based junior / early-career developers
+- Toronto-based tech professionals at all career levels
 - Potential speakers, hosts, sponsors, volunteers sizing us up
 
 ## 3. Key messages
@@ -50,10 +52,16 @@ not product copy.
      is flagged "finalize with organizers", not invented.
    - Renders as a thin band of large numerals under the hero.
 
-3. **Testimonials**
-   - 3–6 quotes from attendees, speakers, and hosts with name, role,
-     company, and a small photo.
-   - Each quote links to the person's LinkedIn where available.
+3. **Social Feed (replaces testimonials)**
+   - Embedded posts from TechTank's LinkedIn and Instagram accounts.
+   - LinkedIn: https://www.linkedin.com/company/techtank-to/
+   - Instagram: https://www.instagram.com/techtankto/
+   - Shows real, organic content from organizers and community members.
+   - Content tone: genuine reactions, welcoming energy—inspired by the
+     organic warmth of the Code Diversity meetup. Professional yet
+     approachable, never corporate or childish.
+   - Fallback: if embeds fail, display curated social cards with links
+     to follow on each platform.
 
 4. **Sponsor / host logo cloud**
    - Grayscale logos of companies that have hosted or sponsored.

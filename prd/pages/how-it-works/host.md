@@ -22,7 +22,7 @@ host" action is the single most important CTA.
 ## 3. Key messages
 
 - TechTank is volunteer-run; hosts provide **venue and food**.
-- Events run **6:00pm – 8:30pm**, typically **100–120 attendees**.
+- Events run **6:00pm – 8:30pm**, typically **40–100 attendees**.
 - The host company gets brand visibility and recruiting pipeline with
   zero salesy vibe.
 - TechTank handles speakers, marketing, and coordination end-to-end.
@@ -41,7 +41,7 @@ host" action is the single most important CTA.
    - **Karma** — the tech community is interrelated; support it.
 
 3. **Event logistics**
-   - **Capacity:** 100–120 attendees.
+   - **Capacity:** 40–100 attendees.
    - **Timing:** Start at 6:00pm, wrap by 8:30pm.
    - **Location:** must be reasonably accessible by TTC subway or
      streetcar.
@@ -106,5 +106,5 @@ host" action is the single most important CTA.
 
 - A prospective host understands, in under one minute, what they
   provide vs. what TechTank provides.
-- The capacity (100–120) and timing (6:00–8:30pm) are visible without
+- The capacity (40–100) and timing (6:00–8:30pm) are visible without
   hunting.

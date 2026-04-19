@@ -151,7 +151,7 @@ Overview page content:
 2. Four role cards (same shape as `/`):
    - **Speak** — `SHARE WHAT YOU KNOW` · 30–45 min talk + Q&A · Any
      tech topic · Recorded & published to YouTube.
-   - **Host** — `BRING US TO YOUR SPACE` · 100–120 attendees ·
+   - **Host** — `BRING US TO YOUR SPACE` · 40–100 attendees ·
      6:00–8:30pm weeknight · Logo on event marketing.
    - **Sponsor** — `SUPPORT THE COMMUNITY` · Logo on website &
      marketing · Speaker slot options · Tasteful brand visibility.

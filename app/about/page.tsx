@@ -1,0 +1,305 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Users, Lightbulb, Handshake, Heart, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Section, SectionHeader } from "@/components/ui/section";
+import { DualCTA } from "@/components/ui/dual-cta";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Learn about TechTank TO's mission, values, and the four pillars that guide our inclusive tech community in Toronto.",
+};
+
+const pillars = [
+  {
+    icon: Users,
+    title: "Community",
+    description:
+      "A place to belong, for all levels. We believe technology is better when everyone has a seat at the table. From first-time attendees to seasoned engineers, TechTank is your community.",
+    color: "teal",
+  },
+  {
+    icon: Lightbulb,
+    title: "Innovation",
+    description:
+      "Curiosity, learning in public, experimentation. We embrace the joy of building and the courage to try new things. Every question is valid, every experiment is progress.",
+    color: "amber",
+  },
+  {
+    icon: Handshake,
+    title: "Teamwork",
+    description:
+      "Collaboration over competition. The best ideas emerge when people work together. We lift each other up and celebrate collective wins over individual glory.",
+    color: "teal",
+  },
+  {
+    icon: Heart,
+    title: "Respect",
+    description:
+      "Inclusive by default, enforced by our Code of Conduct. Every interaction at TechTank is grounded in mutual respect. We do not tolerate harassment or discrimination.",
+    color: "amber",
+  },
+];
+
+const timeline = [
+  {
+    year: "2022",
+    title: "TechTank is founded",
+    description:
+      "A small group of Toronto developers started monthly meetups with a simple goal: create the tech community they wished they had.",
+  },
+  {
+    year: "2023",
+    title: "Growing momentum",
+    description:
+      "Word spread. Attendance grew from 30 to over 100 per event. Companies started reaching out to host and sponsor.",
+  },
+  {
+    year: "2024",
+    title: "Community programs launch",
+    description:
+      "Guppy Talks for first-time speakers. Study Tank for learning groups. The volunteer crew expanded to support larger events.",
+  },
+  {
+    year: "2025",
+    title: "Toronto's tech home",
+    description:
+      "Monthly events, active Slack community, YouTube talks, and a growing reputation as Toronto's most inclusive tech meetup.",
+  },
+  {
+    year: "2026",
+    title: "Building the future",
+    description:
+      "Expanding programs, welcoming new hosts, and continuing to serve Toronto tech with events that matter.",
+  },
+];
+
+export default function AboutPage() {
+  return (
+    <>
+      {/* Hero / Manifesto */}
+      <section className="relative overflow-hidden gradient-hero texture-grain">
+        <div className="relative mx-auto max-w-7xl px-4 py-20 lg:px-8 lg:py-32">
+          <div className="max-w-3xl">
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+              About TechTank
+            </span>
+            <h1 className="font-display text-4xl font-semibold text-foreground lg:text-5xl text-balance mb-6">
+              We build the community we wanted to find
+            </h1>
+            <p className="text-xl text-muted leading-relaxed">
+              TechTank TO is a volunteer-run, Toronto-based tech community
+              founded in 2022. We host monthly in-person events where
+              developers, designers, PMs, and tech-curious people gather to
+              learn, share, and connect. No gatekeeping—just people
+              helping people grow in tech.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Four Pillars */}
+      <Section>
+        <SectionHeader
+          overline="Our values"
+          title="The four pillars of TechTank"
+          description="These principles guide everything we do — from how we run events to how we treat each other."
+          className="mb-12"
+        />
+        <div className="grid gap-8 lg:grid-cols-2">
+          {pillars.map((pillar) => (
+            <div
+              key={pillar.title}
+              className="relative flex gap-6 bg-white rounded-2xl border border-border p-6 lg:p-8"
+            >
+              <div
+                className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl ${
+                  pillar.color === "teal"
+                    ? "bg-teal/10 text-teal"
+                    : "bg-amber/10 text-amber"
+                }`}
+              >
+                <pillar.icon className="h-7 w-7" />
+              </div>
+              <div>
+                <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                  {pillar.title}
+                </h3>
+                <p className="text-muted leading-relaxed">{pillar.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Code of Conduct Teaser */}
+      <Section className="bg-white border-y border-border">
+        <div className="max-w-3xl mx-auto text-center">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+            Safety first
+          </span>
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-6">
+            Our commitment to a safe community
+          </h2>
+          <p className="text-lg text-muted leading-relaxed mb-8">
+            TechTank is committed to providing a harassment-free experience for
+            everyone. Our Code of Conduct applies to all community spaces,
+            online and in-person.
+          </p>
+          <Button variant="outline" asChild>
+            <Link href="/legal/code-of-conduct">Read our Code of Conduct</Link>
+          </Button>
+        </div>
+      </Section>
+
+      {/* What We Do */}
+      <Section className="gradient-brand-soft">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+              What we do
+            </span>
+            <h2 className="font-display text-3xl font-semibold text-foreground lg:text-4xl mb-6">
+              Monthly events and an active community
+            </h2>
+            <div className="space-y-4 text-muted leading-relaxed">
+              <p>
+                <strong className="text-foreground">Monthly meetups:</strong>{" "}
+                In-person events featuring technical talks, networking, and free
+                food. 100-120 attendees, hosted at companies across Toronto.
+              </p>
+              <p>
+                <strong className="text-foreground">Slack community:</strong>{" "}
+                Ongoing discussion, job posts, and mutual support between
+                events.
+              </p>
+              <p>
+                <strong className="text-foreground">YouTube talks:</strong>{" "}
+                Every talk is recorded and published. Learn from the Toronto
+                tech community anytime.
+              </p>
+              <p>
+                <strong className="text-foreground">Community programs:</strong>{" "}
+                Guppy Talks for first-time speakers. Study Tank for learning
+                groups. Code Diversity for underrepresented voices.
+              </p>
+            </div>
+          </div>
+          <div className="relative">
+            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-peach via-lavender to-aqua flex items-center justify-center">
+              <p className="text-center text-foreground/60 px-8">
+                Event photography placeholder
+              </p>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* How We Fund It */}
+      <Section>
+        <div className="max-w-3xl mx-auto text-center">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+            How we fund it
+          </span>
+          <h2 className="font-display text-3xl font-semibold text-foreground lg:text-4xl mb-6">
+            Volunteer-run, company-supported
+          </h2>
+          <p className="text-lg text-muted leading-relaxed mb-8">
+            TechTank is 100% volunteer-run. Companies provide venue and food for
+            events; TechTank handles speakers, marketing, and coordination.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button variant="primary" asChild>
+              <Link href="/how-it-works/host">Host an event</Link>
+            </Button>
+            <Button variant="outline" asChild>
+              <Link href="/how-it-works/sponsor">Become a sponsor</Link>
+            </Button>
+          </div>
+        </div>
+      </Section>
+
+      {/* Timeline */}
+      <Section className="bg-white border-y border-border">
+        <SectionHeader
+          overline="Our story"
+          title="Building Toronto's tech community"
+          className="mb-12"
+        />
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="absolute left-4 lg:left-1/2 top-0 bottom-0 w-px bg-border lg:-translate-x-px" />
+
+          <div className="space-y-12">
+            {timeline.map((item, index) => (
+              <div
+                key={item.year}
+                className={`relative flex gap-8 ${
+                  index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                }`}
+              >
+                {/* Dot */}
+                <div className="absolute left-4 lg:left-1/2 w-3 h-3 rounded-full bg-teal -translate-x-1/2 mt-1.5 ring-4 ring-background" />
+
+                {/* Content */}
+                <div
+                  className={`flex-1 pl-12 lg:pl-0 ${
+                    index % 2 === 0 ? "lg:pr-16 lg:text-right" : "lg:pl-16"
+                  }`}
+                >
+                  <span className="inline-block text-sm font-semibold text-teal mb-1">
+                    {item.year}
+                  </span>
+                  <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-muted">{item.description}</p>
+                </div>
+
+                {/* Spacer for alternating layout */}
+                <div className="hidden lg:block flex-1" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Closing CTA */}
+      <Section className="gradient-brand-soft">
+        <div className="text-center max-w-2xl mx-auto">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+            Join us
+          </span>
+          <h2 className="font-display text-3xl lg:text-4xl font-semibold text-foreground mb-6">
+            Ready to be part of TechTank?
+          </h2>
+          <p className="text-lg text-muted mb-8">
+            Whether you want to attend, speak, host, or volunteer — there&apos;s
+            a place for you here.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button variant="primary" size="lg" asChild>
+              <a
+                href="https://luma.com/techtank"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                RSVP to the next event
+                <ExternalLink className="ml-2 h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/how-it-works">Get involved</Link>
+            </Button>
+          </div>
+        </div>
+      </Section>
+
+      {/* Dual CTA */}
+      <Section>
+        <DualCTA />
+      </Section>
+    </>
+  );
+}

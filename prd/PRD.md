@@ -11,8 +11,8 @@
 
 ## 1. Product Overview
 
-TechTank TO (TechTank) is a volunteer-run, Toronto-based tech community
-founded in 2022. The redesign moves the site away from a flat "link-tree"
+TechTank TO (TechTank) is a volunteer-run, Toronto-based **Canadian** tech
+community founded in 2023. The redesign moves the site away from a flat "link-tree"
 layout toward a **conversion-oriented onboarding hub** that turns curious
 visitors into active contributors — attendees, speakers, hosts, sponsors,
 and volunteers.
@@ -35,13 +35,25 @@ levels can explore, create, and thrive in technology.
 
 ### 1.3 Audience
 
-- Junior / early-career software developers (primary)
+- Software developers at all career levels (junior to senior)
 - Designers, PMs, tech-adjacent roles
 - Experienced professionals open to mentoring or speaking
 - Companies wanting to host, sponsor, or recruit
 - Media, partners, and sponsors looking for brand assets
 
-### 1.4 Product goals
+### 1.4 Event types
+
+- **Tech talks** — Lightning talks, deep dives, and technical presentations
+- **Socials / Meetups** — Casual networking and community building
+- **Sports** — Active events like volleyball and softball
+- **Code Diversity** — Inclusive events for underrepresented groups in tech
+- **Panels** — Multi-speaker discussions on industry topics
+- **Workshops** — Hands-on learning sessions (planned)
+
+Note: Most events are free, but some (workshops, special activities) may
+have associated costs. Do not advertise all events as "free".
+
+### 1.5 Product goals
 
 1. Build social trust via **social proof** — testimonials, event
    photography, sponsor/host logo cloud.
@@ -51,7 +63,25 @@ levels can explore, create, and thrive in technology.
 4. Provide a professional, one-stop resource for press and sponsors.
 5. Centralize legal / compliance docs cleanly.
 
-### 1.5 Success metrics
+### 1.5 Canadian context
+
+TechTank TO is a **Canadian** tech community based in Toronto, Ontario.
+All external links to sponsor/partner companies should use Canadian
+variants where available (e.g., `.ca` domains, `/en-ca` paths). The
+community serves the Greater Toronto Area tech ecosystem and operates
+under Ontario/Canadian jurisdiction.
+
+**Current sponsors and hosts:**
+- 7shifts (Canadian HQ)
+- Rakuten Canada
+- Cohere (Canadian-founded)
+- Vena Solutions (Canadian HQ)
+- Points / Plusgrade (Canadian HQ)
+- Intuit Canada
+- Microsoft Canada
+- Prema Coffee (Toronto local)
+
+### 1.6 Success metrics
 
 - Intake form submissions per role (speaker / host / sponsor / volunteer)
 - RSVP click-throughs to Meetup / Luma
@@ -87,7 +117,7 @@ levels can explore, create, and thrive in technology.
 | `/about` | About | Values & community manifesto (the four pillars) |
 | `/how-it-works` | Get Involved | Onboarding hub; routes visitors to a role |
 | `/how-it-works/speaker` | Speak | Speaker logistics + intake form |
-| `/how-it-works/host` | Host | Venue logistics (100–120 cap, 6–8:30pm) + intake |
+| `/how-it-works/host` | Host | Venue logistics (40–100 cap, 6–8:30pm) + intake |
 | `/how-it-works/sponsor` | Sponsor | Corporate partner pitch + intake |
 | `/how-it-works/volunteer` | Volunteer | Crew onboarding + intake |
 | `/events` | Events | Upcoming events via Luma calendar |
@@ -107,19 +137,19 @@ levels can explore, create, and thrive in technology.
 
 ### 2.3 Global navigation
 
-- **Primary nav:** About, How it Works, Events, Press Kit
+- **Primary nav:** About, How it Works, Events, Code of Conduct
 - **Header CTA:** "Join our Slack" (secondary: "RSVP on Luma")
 - **Footer:**
   - Column 1 — Community: Meetup, Luma, Slack, LinkedIn, Instagram, GitHub, YouTube
   - Column 2 — Get Involved: Speak, Host, Sponsor, Volunteer
   - Column 3 — Resources: Press Kit, Events
   - Column 4 — Legal: Terms of Service, Privacy Policy, Code of Conduct
-  - Contact: `techtankto@gmail.com`
+  - Contact: `techtankto@gmail.com` + Slack community link
 
 ### 2.4 External destinations
 
 - Meetup: https://www.meetup.com/techtank-to/
-- Luma: TechTank calendar
+- Luma: https://luma.com/techtank
 - Slack: invite link (Google Form or direct)
 - LinkedIn: https://ca.linkedin.com/company/techtank-to
 - Instagram: https://www.instagram.com/techtankto/
@@ -190,9 +220,13 @@ CTAs are fine; tertiary links belong in the footer.
 
 ### 5.3 Social proof patterns (required on `/` and relevant `/how-it-works/*`)
 
-- Real photos and quotes from attendees and speakers
-- Numeric facts: attendance range, talks delivered, events hosted,
-  companies that have hosted
+- **Social feed over testimonials:** Embedded LinkedIn and Instagram posts
+  from organizers showing real, organic community moments. No curated
+  quotes—let the genuine reactions speak for themselves.
+  - LinkedIn: https://www.linkedin.com/company/techtank-to/
+  - Instagram: https://www.instagram.com/techtankto/
+- Numeric facts: 40-100 attendees per event, 45+ events hosted (25+ main
+  events + 20+ CodeDiversity events), monthly cadence since 2023
 - Sponsor / host logo cloud
 - Linked previews of recent Google Photos albums and Instagram posts
 - YouTube links to recent Guppy Talks / talks
@@ -293,8 +327,7 @@ and is explicitly out of scope for the initial launch.
 
 - `.ics` calendar export for events.
 - Embedded Instagram feed (light, cached, non-blocking).
-- Testimonial carousel with per-quote link to the speaker's or host's
-  LinkedIn / site.
+- Embedded LinkedIn posts from the company page.
 - Dark mode.
 - i18n scaffold (EN default; FR optional).
 
@@ -315,26 +348,31 @@ and is explicitly out of scope for the initial launch.
 
 ## 8. Content & Brand
 
-- **Voice:** warm, welcoming, beginner-safe, Toronto-local, confident.
+- **Voice:** organic, welcoming, genuine—inspired by the warmth of events
+  like the Code Diversity meetup. Professional yet approachable, never
+  corporate or childish. Toronto-local, beginner-safe, confident.
 - **Typography:** a strong, neutral display typeface (geometric or
   grotesque sans preferred — avoid decorative serifs or script faces);
   a legible humanist sans for body. The pairing should read as
   industry-conference-grade, not startup-blog or community-newsletter.
   Final pairing per visual design.
-- **Color palette (extracted from current site):**
-  - **Gradient:** warm peach/coral → soft lavender → aqua teal. This
-    three-stop gradient is the site's primary background motif (hero,
-    section banding). It is *not* pink — the warm stop is a
-    desaturated salmon/peach (`≈ #F5C4A8`), the mid is a muted
-    lavender (`≈ #D8CEED`), and the cool stop is a pale aqua
-    (`≈ #B5E0D9`).
-  - **Logo teal:** saturated cyan-teal (`≈ #3DC4C0`) — the fish mark
-    and primary brand colour.
-  - **Logo amber:** warm golden yellow (`≈ #F0AA00`) — the lightning
-    bolt in the logomark; used sparingly as a highlight.
-  - **CTA / surface dark:** near-black for pill buttons and the footer
-    (`≈ #141926`).
-  - **Body text:** near-black on light backgrounds.
+- **Color palette (refined from event posters):**
+  - **Teal dark (primary):** deep navy-teal for headlines, buttons,
+    and footer (`#1B4B5A`). This is the primary brand colour.
+  - **Teal mid:** secondary text and headings (`#2A6B7C`).
+  - **Seafoam:** light aqua for soft backgrounds and accents (`#A8D5D8`).
+  - **Mint:** green accent for speaker circles and icons (`#5B9A8B`).
+  - **Peach:** warm gradient tone (`#F5D4C1`).
+  - **Coral (accent):** vibrant orange for CTAs and highlights (`#E87C4E`),
+    inspired by CodeDiversity event branding.
+  - **Blush:** soft pink accent (`#EABFBF`).
+  - **Sand:** warm off-white background (`#F7EDE2`).
+  - **Gradient:** seafoam → sand → peach (textured, organic feel matching
+    event posters). Backgrounds use subtle grain texture overlay.
+  - **Glassmorphism:** frosted-glass cards with `backdrop-blur`, rounded
+    corners (`1.25rem+`), and soft shadows. Used for cards and overlays.
+  - **Photo-forward:** event poster images are hero content; design
+    prioritizes real photography over empty white space.
   - Do *not* introduce hot pink, true blue, or colours outside this
     family without explicit organizer sign-off.
 - **Imagery:** real event photography first; diverse, candid, well-lit.
