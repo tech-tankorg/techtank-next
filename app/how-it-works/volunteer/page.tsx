@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, Users, Palette, Camera, MessageSquare, Calendar, Settings, ExternalLink } from "lucide-react";
+import { Check, Users, Palette, Camera, MessageSquare, Calendar, Settings, ExternalLink, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { ContactCard } from "@/components/ui/contact-card";
@@ -68,6 +68,12 @@ const volunteerRoles = [
     title: "Organizing",
     description: "Help plan events, outreach, speaker sourcing",
     commitment: "Variable; onboarding conversation first",
+  },
+  {
+    icon: Code,
+    title: "Code & open source",
+    description: "Contribute to our website, tools, and open source projects on GitHub",
+    commitment: "Project-based, flexible async work",
   },
 ];
 
@@ -186,8 +192,34 @@ export default function VolunteerPage() {
         </div>
       </Section>
 
-      {/* Not Ready? */}
+      {/* Code Contributors */}
       <Section>
+        <div className="max-w-3xl mx-auto text-center">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+            Developers welcome
+          </span>
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
+            Contribute on GitHub
+          </h2>
+          <p className="text-muted mb-6">
+            We build in the open. Help us improve the TechTank website, create
+            tools for the community, or start your own open source project with us.
+          </p>
+          <Button variant="primary" asChild>
+            <a
+              href="https://github.com/tech-tankorg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View our GitHub
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
+        </div>
+      </Section>
+
+      {/* Not Ready? */}
+      <Section className="bg-white border-y border-border">
         <div className="max-w-3xl mx-auto text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
             Not ready to commit?
