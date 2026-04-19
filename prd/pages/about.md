@@ -42,7 +42,7 @@ page a potential speaker, host, sponsor, or member can point to and say
 
 3. **Origin story**
    - One or two paragraphs: founded in 2022 in Toronto; grown to monthly
-     events with 100–120 attendees; entirely volunteer-run.
+     events with 40–100 attendees; entirely volunteer-run.
 
 4. **What we do**
    - Monthly in-person events (technical talk + networking).

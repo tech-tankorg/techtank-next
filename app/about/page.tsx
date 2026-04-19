@@ -173,8 +173,8 @@ export default function AboutPage() {
             <div className="space-y-4 text-muted leading-relaxed">
               <p>
                 <strong className="text-foreground">Monthly meetups:</strong>{" "}
-                In-person events featuring technical talks, networking, and free
-                food. 100-120 attendees, hosted at companies across Toronto.
+                In-person events featuring technical talks and networking.
+                40-100 attendees, hosted at companies across Toronto.
               </p>
               <p>
                 <strong className="text-foreground">Slack community:</strong>{" "}
