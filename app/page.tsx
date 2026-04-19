@@ -63,40 +63,61 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right: 2-post grid */}
-            <div className="hidden md:grid grid-cols-2 gap-3 lg:gap-4">
-              {heroPosts.map((post) => (
-                <div
-                  key={post.id}
-                  className="relative aspect-[5/4] photo-frame overflow-hidden hover:scale-[1.02] transition-transform duration-300"
-                >
-                  {post.videoSrc ? (
+            {/* Right: staggered overlapping portrait cards */}
+            <div className="hidden md:block relative h-[460px] lg:h-[500px]">
+              {/* First card — left, nudged down, rotated CCW */}
+              {heroPosts[0] && (
+                <div className="absolute left-0 top-6 w-[55%] aspect-[4/5] photo-frame overflow-hidden -rotate-2 shadow-xl z-0 hover:z-10 hover:scale-[1.02] transition-all duration-300">
+                  {heroPosts[0].videoSrc ? (
                     <video
-                      src={post.videoSrc}
+                      src={heroPosts[0].videoSrc}
                       autoPlay
                       loop
                       muted
                       playsInline
                       className="absolute inset-0 h-full w-full object-cover"
                     />
-                  ) : post.imageSrc ? (
+                  ) : heroPosts[0].imageSrc ? (
                     <Image
-                      src={post.imageSrc}
-                      alt={post.alt}
+                      src={heroPosts[0].imageSrc}
+                      alt={heroPosts[0].alt}
                       fill
-                      sizes="(min-width: 1024px) 25vw, 50vw"
+                      sizes="(min-width: 1024px) 28vw, 44vw"
                       className="object-cover"
                     />
                   ) : null}
                 </div>
-              ))}
+              )}
+              {/* Second card — right, at top, rotated CW */}
+              {heroPosts[1] && (
+                <div className="absolute right-0 top-0 w-[55%] aspect-[4/5] photo-frame overflow-hidden rotate-2 shadow-xl z-10 hover:z-20 hover:scale-[1.02] transition-all duration-300">
+                  {heroPosts[1].videoSrc ? (
+                    <video
+                      src={heroPosts[1].videoSrc}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
+                  ) : heroPosts[1].imageSrc ? (
+                    <Image
+                      src={heroPosts[1].imageSrc}
+                      alt={heroPosts[1].alt}
+                      fill
+                      sizes="(min-width: 1024px) 28vw, 44vw"
+                      className="object-cover"
+                    />
+                  ) : null}
+                </div>
+              )}
             </div>
 
             {/* Mobile: Horizontal scroll */}
             <div className="md:hidden -mx-4 px-4">
               <div className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory no-scrollbar">
                 {heroPosts.map((post) => (
-                  <div key={post.id} className="relative flex-shrink-0 w-56 aspect-[5/4] snap-center photo-frame overflow-hidden">
+                  <div key={post.id} className="relative flex-shrink-0 w-44 aspect-[4/5] snap-center photo-frame overflow-hidden">
                     {post.videoSrc ? (
                       <video
                         src={post.videoSrc}
@@ -111,7 +132,7 @@ export default function HomePage() {
                         src={post.imageSrc}
                         alt={post.alt}
                         fill
-                        sizes="56vw"
+                        sizes="44vw"
                         className="object-cover"
                       />
                     ) : null}
