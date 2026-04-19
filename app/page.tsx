@@ -37,7 +37,6 @@ const posterImages = [
 export default function HomePage() {
   const recentEvents = getRecentEvents(4);
   const upcomingEvents = getUpcomingEvents();
-  const featuredEvent = upcomingEvents[0] || recentEvents[0];
 
   return (
     <>
@@ -118,27 +117,12 @@ export default function HomePage() {
       {/* Stats Strip - Compact */}
       <StatsStrip />
 
-      {/* Featured Upcoming Event */}
-      {featuredEvent && (
-        <Section>
-          <div className="max-w-3xl mx-auto">
-            <SectionHeader
-              overline="Next up"
-              title="Don&apos;t miss this one"
-              className="mb-6 text-center"
-            />
-            <EventCard event={featuredEvent} variant="featured" />
-          </div>
-        </Section>
-      )}
-
-      {/* Recent Events Grid */}
+      {/* Events Section - Upcoming (large) + Past (small) */}
       <Section>
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-3 mb-8">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-3 mb-6">
           <SectionHeader
-            overline="From the community"
-            title="Recent happenings"
-            description="A peek at what we&apos;ve been up to."
+            overline="Events"
+            title="What&apos;s happening"
           />
           <Link
             href="/events"
@@ -148,10 +132,31 @@ export default function HomePage() {
             <ArrowRight className="ml-1 h-4 w-4" />
           </Link>
         </div>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {recentEvents.map((event) => (
-            <EventCard key={event.id} event={event} variant="compact" />
-          ))}
+
+        {/* Upcoming Events - Large cards */}
+        {upcomingEvents.length > 0 && (
+          <div className="mb-8">
+            <p className="text-xs font-semibold uppercase tracking-widest text-coral mb-4">
+              Coming up
+            </p>
+            <div className="grid gap-4 lg:grid-cols-2">
+              {upcomingEvents.slice(0, 2).map((event) => (
+                <EventCard key={event.id} event={event} variant="featured" />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Past Events - Smaller cards */}
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-widest text-muted mb-4">
+            Recent
+          </p>
+          <div className="grid gap-3 grid-cols-2 lg:grid-cols-4">
+            {recentEvents.map((event) => (
+              <EventCard key={event.id} event={event} variant="compact" />
+            ))}
+          </div>
         </div>
       </Section>
 
