@@ -13,23 +13,23 @@ import { getRecentEvents } from "@/constants/events";
 
 const posterImages = [
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Triple%20Speaker%20Poster-pO82lupTezdeLbnG8w0LSc1oubWhSE.png",
+    src: "/images/events/triple-speaker-poster.png",
     alt: "Lightning Talks at Vena Solutions",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CodeDiversity%20-%20Meetup%20%281%29-M8pGbZSyN18hxvThJEYVprUcgcB5xr.png",
+    src: "/images/events/codediversity-meetup-1.png",
     alt: "CodeDiversity Coffee Chat",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Mentorship%20Poster-dFmJatCn5QvqEOVDiIdlSRyBPFAFsq.png",
+    src: "/images/events/mentorship-poster.png",
     alt: "Mentorship Meetup",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Brainstation%20-%20Meetup-biF1zd6uLklCH2G07z4bhHDaOaO5KE.png",
+    src: "/images/events/brainstation-meetup.png",
     alt: "BrainStation Meetup",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CodeDiversity%20-%20Meetup-0XO3CsPUKalKcJtMdlBSdcyJncN402.png",
+    src: "/images/events/codediversity-meetup-2.png",
     alt: "CodeDiversity Clay Workshop",
   },
 ];

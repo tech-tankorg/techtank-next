@@ -55,7 +55,7 @@ export const events: Event[] = [
     capacity: 100,
     tags: ["Tech Talk", "DevOps", "CI/CD"],
     status: "past",
-    posterImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Brainstation%20-%20Meetup-biF1zd6uLklCH2G07z4bhHDaOaO5KE.png",
+    posterImage: "/images/events/brainstation-meetup.png",
     sponsor: {
       name: "BrainStation",
       url: "https://brainstation.io",
@@ -128,7 +128,7 @@ export const events: Event[] = [
     venueAddress: "2 Fraser Ave Suite 200",
     tags: ["Tech Talk", "Cloud", "Architecture"],
     status: "past",
-    posterImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Triple%20Speaker%20Poster-pO82lupTezdeLbnG8w0LSc1oubWhSE.png",
+    posterImage: "/images/events/triple-speaker-poster.png",
     sponsor: {
       name: "Vena",
       url: "https://venasolutions.com",

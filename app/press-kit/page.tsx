@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Download, FileText, Copy, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
-import { Logo } from "@/components/ui/logo";
 import { ContactCard } from "@/components/ui/contact-card";
 
 export const metadata: Metadata = {
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
 const fastFacts = [
   { label: "Founded", value: "2022" },
   { label: "Location", value: "Toronto, Canada" },
-  { label: "Cadence", value: "Monthly in-person events + ongoing Slack community" },
-  { label: "Typical attendance", value: "100-120 per event" },
+  { label: "Cadence", value: "Monthly in-person events via Luma + ongoing Slack community" },
+  { label: "Typical attendance", value: "40-100 per event" },
   { label: "Structure", value: "Volunteer-run, non-commercial" },
   { label: "Contact", value: "techtankto@gmail.com" },
 ];
 
 const brandColors = [
-  { name: "Logo Teal", hex: "#3DC4C0", usage: "Primary brand color, fish mark" },
+  { name: "Logo Teal", hex: "#3DC4C0", usage: "Primary brand color" },
   { name: "Logo Amber", hex: "#F0AA00", usage: "Lightning bolt accent" },
   { name: "Peach", hex: "#F5C4A8", usage: "Gradient warm stop" },
   { name: "Lavender", hex: "#D8CEED", usage: "Gradient mid stop" },
@@ -31,10 +31,8 @@ const brandColors = [
 ];
 
 const logoDownloads = [
-  { name: "Primary Logo (Color)", format: "SVG + PNG", description: "Full color on light backgrounds" },
-  { name: "Primary Logo (White)", format: "SVG + PNG", description: "For dark backgrounds" },
-  { name: "Fish Mark Only", format: "SVG + PNG", description: "Compact mark without wordmark" },
-  { name: "Wordmark Only", format: "SVG + PNG", description: "TechTank TO text only" },
+  { name: "Full Logo (Color)", format: "SVG + PNG", description: "Full color on light backgrounds" },
+  { name: "Full Logo (White)", format: "SVG + PNG", description: "For dark backgrounds" },
 ];
 
 const resources = [
@@ -103,11 +101,11 @@ export default function PressKitPage() {
             <p className="text-foreground leading-relaxed mb-4">
               <strong>Full paragraph:</strong> TechTank TO is Toronto&apos;s
               volunteer-run tech community, hosting monthly in-person events
-              since 2022. Each meetup brings together 100-120 developers,
-              designers, and tech professionals for technical talks,
-              networking, and free food. TechTank is committed to fostering a
-              supportive and inclusive environment where people of all skill
-              levels can explore, create, and thrive in technology.
+              since 2022. Each event brings together 40-100 attendees,
+              including developers, designers, and tech professionals for
+              technical talks and networking. TechTank is committed to
+              fostering a supportive and inclusive environment where people of
+              all skill levels can explore, create, and thrive in technology.
             </p>
             <Button variant="ghost" size="sm">
               <Copy className="mr-2 h-4 w-4" />
@@ -117,7 +115,7 @@ export default function PressKitPage() {
           <div className="bg-background rounded-xl border border-border p-6">
             <p className="text-foreground leading-relaxed mb-4">
               <strong>One-liner:</strong> TechTank TO is Toronto&apos;s
-              volunteer-run tech community, hosting monthly meetups for
+              volunteer-run tech community, hosting monthly events for
               developers, designers, and tech professionals since 2022.
             </p>
             <Button variant="ghost" size="sm">
@@ -140,20 +138,24 @@ export default function PressKitPage() {
         {/* Logo Preview */}
         <div className="grid gap-6 lg:grid-cols-2 mb-12">
           <div className="bg-white rounded-xl border border-border p-8 flex items-center justify-center">
-            <div className="flex items-center gap-4">
-              <Logo className="h-16 w-auto" />
-              <span className="font-display text-3xl font-semibold text-foreground">
-                TechTank TO
-              </span>
-            </div>
+            <Image
+              src="/images/techtank-logo.svg"
+              alt="TechTank TO Logo"
+              width={240}
+              height={80}
+              className="h-16 w-auto"
+              style={{ width: "auto" }}
+            />
           </div>
           <div className="bg-dark rounded-xl p-8 flex items-center justify-center">
-            <div className="flex items-center gap-4">
-              <Logo className="h-16 w-auto" variant="light" />
-              <span className="font-display text-3xl font-semibold text-white">
-                TechTank TO
-              </span>
-            </div>
+            <Image
+              src="/images/techtank-logo.svg"
+              alt="TechTank TO Logo"
+              width={240}
+              height={80}
+              className="h-16 w-auto brightness-0 invert"
+              style={{ width: "auto" }}
+            />
           </div>
         </div>
 
