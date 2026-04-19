@@ -149,18 +149,7 @@ export function SocialFeed() {
             <ExternalLink className="ml-2 h-4 w-4" />
           </a>
         </Button>
-        <Button variant="outline" size="sm" asChild>
-          <a href={MEETUP_URL} target="_blank" rel="noopener noreferrer">
-            Meetup
-            <ExternalLink className="ml-2 h-4 w-4" />
-          </a>
-        </Button>
-        <Button variant="outline" size="sm" asChild>
-          <a href={LUMA_URL} target="_blank" rel="noopener noreferrer">
-            Luma
-            <ExternalLink className="ml-2 h-4 w-4" />
-          </a>
-        </Button>
+
         <Button variant="outline" size="sm" asChild>
           <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
             LinkedIn

@@ -132,8 +132,17 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center text-sm font-semibold text-coral hover:text-coral/80 transition-colors"
             >
-              RSVP on Luma
-              <ArrowRight className="ml-1 h-4 w-4" />
+              Luma
+              <ExternalLink className="ml-1 h-3.5 w-3.5" />
+            </a>
+            <a
+              href="https://www.meetup.com/techtank-to/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-sm font-semibold text-coral hover:text-coral/80 transition-colors"
+            >
+              Meetup
+              <ExternalLink className="ml-1 h-3.5 w-3.5" />
             </a>
             <Link
               href="/events"
