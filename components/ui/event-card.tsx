@@ -107,20 +107,7 @@ export function EventCard({ event, variant = "poster" }: EventCardProps) {
   if (variant === "featured") {
     return (
       <div className="relative overflow-hidden rounded-2xl glass shadow-soft">
-        {event.posterImage && (
-          <div className="relative h-64 w-full">
-            <Image
-              src={event.posterImage}
-              alt={event.title}
-              fill
-              className="object-cover"
-              sizes="100vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/50 to-transparent" />
-          </div>
-        )}
-        
-        <div className="relative p-6 lg:p-8">
+        <div className="p-6 lg:p-8">
           {/* Status Badge */}
           <div className="flex items-center justify-between mb-4">
             <span

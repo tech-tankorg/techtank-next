@@ -147,8 +147,8 @@ export default function HomePage() {
 
       {/* Featured Upcoming Event */}
       {featuredEvent && (
-        <Section className="gradient-brand-vertical texture-grain">
-          <div className="max-w-4xl mx-auto">
+        <Section>
+          <div className="max-w-3xl mx-auto">
             <SectionHeader
               overline="Next up"
               title="Don&apos;t miss this one"
