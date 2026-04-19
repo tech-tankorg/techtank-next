@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, Heart, Users, Megaphone, ExternalLink } from "lucide-react";
+import { Check, Heart, Users, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { LogoCloud } from "@/components/ui/logo-cloud";
@@ -85,13 +85,8 @@ export default function SponsorPage() {
               community together. Tasteful brand visibility, real impact.
             </p>
             <Button variant="primary" size="lg" asChild>
-              <a
-                href="https://forms.gle/sponsor-intake"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="mailto:techtankto@gmail.com?subject=Sponsorship%20Inquiry%20-%20TechTank">
                 Request sponsorship package
-                <ExternalLink className="ml-2 h-5 w-5" />
               </a>
             </Button>
           </div>
@@ -257,13 +252,8 @@ export default function SponsorPage() {
             sponsorship deck within a week.
           </p>
           <Button variant="primary" size="lg" asChild>
-            <a
-              href="https://forms.gle/sponsor-intake"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="mailto:techtankto@gmail.com?subject=Sponsorship%20Inquiry%20-%20TechTank">
               Request sponsorship package
-              <ExternalLink className="ml-2 h-5 w-5" />
             </a>
           </Button>
         </div>

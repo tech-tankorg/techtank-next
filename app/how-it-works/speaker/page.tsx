@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Check, Clock, Users, Video, Mic, FileText, ExternalLink } from "lucide-react";
+import { Check, Clock, Users, Video, Mic, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { ContactCard } from "@/components/ui/contact-card";
@@ -80,13 +80,8 @@ export default function SpeakerPage() {
               first-time speakers succeed with coaching and support.
             </p>
             <Button variant="primary" size="lg" asChild>
-              <a
-                href="https://forms.gle/speaker-intake"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="mailto:techtankto@gmail.com?subject=Speaker%20Inquiry%20-%20TechTank">
                 Sign up to speak
-                <ExternalLink className="ml-2 h-5 w-5" />
               </a>
             </Button>
           </div>
@@ -258,13 +253,8 @@ export default function SpeakerPage() {
             you within a week.
           </p>
           <Button variant="primary" size="lg" asChild>
-            <a
-              href="https://forms.gle/speaker-intake"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="mailto:techtankto@gmail.com?subject=Speaker%20Inquiry%20-%20TechTank">
               Sign up to speak
-              <ExternalLink className="ml-2 h-5 w-5" />
             </a>
           </Button>
         </div>

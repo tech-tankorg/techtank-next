@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Check, Clock, Users, Building, MapPin, FileText, ExternalLink } from "lucide-react";
+import { Check, Clock, Users, Building, MapPin, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { LogoCloud } from "@/components/ui/logo-cloud";
@@ -91,13 +91,8 @@ export default function HostPage() {
               recruiting, brand visibility, and giving back to the community.
             </p>
             <Button variant="primary" size="lg" asChild>
-              <a
-                href="https://forms.gle/host-intake"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="mailto:techtankto@gmail.com?subject=Host%20Inquiry%20-%20TechTank">
                 Contact us to host
-                <ExternalLink className="ml-2 h-5 w-5" />
               </a>
             </Button>
           </div>
@@ -288,13 +283,8 @@ export default function HostPage() {
             get back to you within a week.
           </p>
           <Button variant="primary" size="lg" asChild>
-            <a
-              href="https://forms.gle/host-intake"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="mailto:techtankto@gmail.com?subject=Host%20Inquiry%20-%20TechTank">
               Contact us to host
-              <ExternalLink className="ml-2 h-5 w-5" />
             </a>
           </Button>
         </div>

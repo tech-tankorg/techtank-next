@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, Users, Palette, Camera, MessageSquare, Calendar, Settings, ExternalLink, Code } from "lucide-react";
+import { Check, Users, Palette, Camera, MessageSquare, Calendar, Settings, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { ContactCard } from "@/components/ui/contact-card";
@@ -104,13 +104,8 @@ export default function VolunteerPage() {
               every month. Multiple roles available — no speaking required.
             </p>
             <Button variant="primary" size="lg" asChild>
-              <a
-                href="https://forms.gle/volunteer-intake"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="mailto:techtankto@gmail.com?subject=Volunteer%20Inquiry%20-%20TechTank">
                 Sign up to volunteer
-                <ExternalLink className="ml-2 h-5 w-5" />
               </a>
             </Button>
           </div>
@@ -206,13 +201,8 @@ export default function VolunteerPage() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Button variant="primary" size="sm" asChild>
-              <a
-                href="https://forms.gle/volunteer-intake"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="mailto:techtankto@gmail.com?subject=Volunteer%20Inquiry%20-%20TechTank">
                 Sign up to volunteer
-                <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
             <Button variant="outline" size="sm" asChild>
