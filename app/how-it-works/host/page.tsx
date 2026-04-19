@@ -77,10 +77,7 @@ export default function HostPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 gradient-brand opacity-15" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
-
+      <section className="relative overflow-hidden gradient-hero texture-grain">
         <div className="relative mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">

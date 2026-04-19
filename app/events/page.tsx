@@ -22,10 +22,7 @@ export default function EventsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 gradient-brand opacity-15" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
-
+      <section className="relative overflow-hidden gradient-hero texture-grain">
         <div className="relative mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-24">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div className="max-w-2xl">
