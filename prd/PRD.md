@@ -150,7 +150,8 @@ levels can explore, create, and thrive in technology.
 
 ## 4. Page-Level Requirements (Index)
 
-Detailed requirements live in `pages/`:
+Detailed requirements live in `prd/pages/` (relative paths below are
+relative to this file, `prd/PRD.md`):
 
 - [pages/home.md](pages/home.md)
 - [pages/about.md](pages/about.md)
