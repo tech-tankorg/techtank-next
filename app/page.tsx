@@ -202,7 +202,7 @@ export default function HomePage() {
             Community first. Always.
           </h2>
           <p className="text-muted mb-6">
-            No gatekeeping, no cliques—just people who genuinely want to learn, share, and lift each other up.
+            No gatekeeping—just people who genuinely want to learn, share, and lift each other up.
           </p>
           <Button variant="primary" asChild>
             <Link href="/about">More about us</Link>
