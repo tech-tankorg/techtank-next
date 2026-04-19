@@ -2,6 +2,7 @@
 
 import { Calendar, MapPin } from "lucide-react";
 import type { Event } from "@/lib/data/events";
+import { getAllSponsors } from "@/lib/data/sponsors";
 
 interface EventCardProps {
   event: Event;
@@ -10,6 +11,7 @@ interface EventCardProps {
 
 export function EventCard({ event, variant = "compact" }: EventCardProps) {
   const isUpcoming = event.status === "upcoming";
+  const sponsors = getAllSponsors();
 
   // Format date consistently to avoid hydration mismatch
   const dateObj = new Date(event.date + "T12:00:00");
@@ -21,14 +23,19 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
   });
 
   // Determine location text based on sponsor vs host vs venue
-  // Sponsor = company sponsoring the event
-  // Host = company providing venue/hosting
-  // Venue = just a location name
+  // Check if the host/sponsor is a "sponsor" type in sponsors list
   const getLocationText = () => {
     if (event.sponsor) {
       return `Sponsored by ${event.sponsor.name}`;
     }
     if (event.host) {
+      // Check if this host is a "sponsor" type in our sponsors list
+      const sponsorMatch = sponsors.find(
+        (s) => s.name.toLowerCase() === event.host?.name.toLowerCase()
+      );
+      if (sponsorMatch?.type === "sponsor") {
+        return `Sponsored by ${event.host.name}`;
+      }
       return `Hosted at ${event.host.name}`;
     }
     if (event.venue) {
