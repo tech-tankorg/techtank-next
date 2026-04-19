@@ -28,7 +28,7 @@ export default function HomePage() {
 
   const heroPosts = getInstagramPostsByIds([
     "2025-07-07-DLz4I7KOww6", // BBQ season
-    "2025-06-02-DKaPVrgPuE0",  // Code diversity
+    "2026-04-10-DW9vcgiPHx",  // Code diversity (Apr 2026)
   ]).map((post) => ({
     id: post.id,
     imageSrc: getCoverImage(post),
