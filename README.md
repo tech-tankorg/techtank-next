@@ -15,7 +15,7 @@ The initial UI scaffold was generated from the PRD via v0 —
 - React 19 + TypeScript
 - [Tailwind CSS 4](https://tailwindcss.com/)
 - [Radix UI primitives](https://www.radix-ui.com/) (via `@radix-ui/react-slot`)
-- [lucide-react](https://lucide.dev/) and [@icons-pack/react-simple-icons](https://github.com/icons-pack/react-simple-icons) for icons
+- [lucide-react](https://lucide.dev/) for icons
 - Inter + Space Grotesk via `next/font`
 - pnpm 10 for package management
 
