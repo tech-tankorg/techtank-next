@@ -191,7 +191,6 @@ export default function AboutPage() {
           <p className="text-lg text-muted leading-relaxed mb-8">
             TechTank is 100% volunteer-run. Companies provide venue and food for
             events; TechTank handles speakers, marketing, and coordination.
-            There are no membership fees. All events are free.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button variant="primary" asChild>
