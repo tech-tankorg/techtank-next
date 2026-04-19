@@ -33,9 +33,9 @@ export default function EventsPage() {
                 All Events
               </h1>
               <p className="text-xl text-muted">
-                RSVP to what&apos;s next — and scroll back through the
-                talks, photos, and recaps from every meetup we&apos;ve
-                hosted since 2022.
+                Talks worth showing up for, hosts worth meeting, and
+                photos worth scrolling. Grab a seat at the next one —
+                or see what you&apos;ve been missing since 2022.
               </p>
             </div>
             <div className="shrink-0">
