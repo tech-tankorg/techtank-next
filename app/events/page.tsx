@@ -177,7 +177,7 @@ export default function EventsPage() {
         </Section>
       )}
 
-      {/* Luma Calendar Embed */}
+      {/* Subscribe Section */}
       <Section className="bg-white border-y border-border">
         <SectionHeader
           overline="Calendar"
@@ -187,22 +187,33 @@ export default function EventsPage() {
         <div className="rounded-xl border border-border bg-background p-8 text-center">
           <Calendar className="h-12 w-12 text-teal mx-auto mb-4" />
           <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-            Luma Calendar
+            Never miss an event
           </h3>
           <p className="text-muted mb-6 max-w-md mx-auto">
-            Subscribe to our Luma calendar to get notified when new events are
-            announced.
+            Subscribe on Luma or Meetup to get notified when new events are announced.
           </p>
-          <Button variant="primary" asChild>
-            <a
-              href="https://luma.com/techtank"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on Luma
-              <ExternalLink className="ml-2 h-4 w-4" />
-            </a>
-          </Button>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <Button variant="primary" asChild>
+              <a
+                href="https://luma.com/techtank"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Luma
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+            <Button variant="outline" asChild>
+              <a
+                href="https://www.meetup.com/techtank-to/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Meetup
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </div>
         </div>
       </Section>
 
