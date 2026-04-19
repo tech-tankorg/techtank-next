@@ -64,7 +64,7 @@ export default function GetInvolvedPage() {
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
               Get involved
             </span>
-            <h1 className="font-display text-4xl font-semibold text-foreground lg:text-5xl text-balance mb-6">
+            <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
               Let&apos;s build TechTank together
             </h1>
             <p className="text-xl text-muted leading-relaxed">

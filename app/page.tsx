@@ -41,19 +41,19 @@ export default function HomePage() {
       {/* Hero Section - Left aligned text, stacked overlapping photos right */}
       <section className="relative overflow-hidden gradient-hero texture-grain">
         <div className="relative mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-6 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-6 items-center justify-center lg:justify-start text-center lg:text-left">
             {/* Left: Text content */}
-            <div className="max-w-xl py-8 lg:py-12">
+            <div className="lg:max-w-xl py-8 lg:py-12">
               <span className="tag mb-4">
                 Toronto &middot; Monthly &middot; Inclusive
               </span>
-              <h1 className="font-display text-4xl font-bold text-teal-dark lg:text-6xl text-balance mb-4 leading-[1.1]">
+              <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
                 Toronto&apos;s home for tech community
               </h1>
-              <p className="text-lg text-muted leading-relaxed mb-6 max-w-md">
+              <p className="text-lg text-muted leading-relaxed mb-6 lg:max-w-md">
                 Tech talks, panels, socials, sports, and more—hosted at companies across the city.
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                 <Button variant="primary" size="lg" asChild>
                   <Link href="/events">See events</Link>
                 </Button>
@@ -64,10 +64,10 @@ export default function HomePage() {
             </div>
 
             {/* Staggered overlapping portrait cards (inline, transform-based) */}
-            <div className="flex items-start pb-8">
+            <div className="flex items-start justify-center pb-8">
               {/* First card — tilted CCW, nudged down */}
               {heroPosts[0] && (
-                <div className="relative w-[55%] aspect-[4/5] photo-frame overflow-hidden shadow-xl transition-transform duration-300 -rotate-2 translate-y-6 hover:scale-[1.02]">
+                <div className="relative w-[45%] lg:w-[55%] aspect-[4/5] photo-frame overflow-hidden shadow-xl transition-transform duration-300 -rotate-2 translate-y-6 hover:scale-[1.02]">
                   {heroPosts[0].videoSrc ? (
                     <video
                       src={heroPosts[0].videoSrc}
@@ -90,7 +90,7 @@ export default function HomePage() {
               )}
               {/* Second card — overlaps via negative margin, tilted CW */}
               {heroPosts[1] && (
-                <div className="relative w-[55%] aspect-[4/5] -ml-[10%] z-10 photo-frame overflow-hidden shadow-xl transition-transform duration-300 rotate-2 hover:scale-[1.02]">
+                <div className="relative w-[45%] lg:w-[55%] aspect-[4/5] -ml-[10%] z-10 photo-frame overflow-hidden shadow-xl transition-transform duration-300 rotate-2 hover:scale-[1.02]">
                   {heroPosts[1].videoSrc ? (
                     <video
                       src={heroPosts[1].videoSrc}

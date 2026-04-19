@@ -29,7 +29,7 @@ export default function EventsPage() {
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
                 TechTank TO
               </span>
-              <h1 className="font-display text-4xl font-semibold text-foreground lg:text-5xl text-balance mb-4">
+              <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-4">
                 All Events
               </h1>
               <p className="text-xl text-muted">
