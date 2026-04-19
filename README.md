@@ -6,6 +6,8 @@ flat "link-tree" layout toward a conversion-oriented onboarding hub that funnels
 visitors into specific roles — attendee, speaker, host, sponsor, or volunteer.
 
 Specs live in [`prd/`](./prd/PRD.md); application code lives in [`app/`](./app).
+The initial UI scaffold was generated from the PRD via v0 —
+[original prompt and generation](https://v0.app/chat/website-generation-from-prd-eLek8w4RJMh).
 
 ## Stack
 
