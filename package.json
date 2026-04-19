@@ -2,6 +2,7 @@
   "name": "techtank-to",
   "version": "1.0.0",
   "description": "TechTank TO - Toronto's tech community website",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
