@@ -163,8 +163,8 @@ export default function HomePage() {
       {/* Social Feed */}
       <Section className="bg-sand/50 texture-grain">
         <SectionHeader
-          overline="Follow along"
-          title="See what&apos;s happening"
+          overline="From the community"
+          title="Real people, real moments"
           className="mb-8"
         />
         <SocialFeed />
