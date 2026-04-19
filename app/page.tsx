@@ -68,7 +68,7 @@ export default function HomePage() {
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <Link href="/how-it-works">Get involved</Link>
+                  <Link href="/#join-us">Join us</Link>
                 </Button>
               </div>
             </div>
@@ -210,7 +210,7 @@ export default function HomePage() {
       </Section>
 
       {/* Dual CTA */}
-      <Section className="gradient-brand-vertical texture-grain py-8 lg:py-12">
+      <Section id="join-us" className="gradient-brand-vertical texture-grain py-8 lg:py-12">
         <DualCTA />
       </Section>
     </>

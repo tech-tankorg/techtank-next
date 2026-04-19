@@ -47,8 +47,8 @@ export function Header() {
         {/* Desktop CTA */}
         <div className="hidden lg:flex lg:items-center">
           <Button variant="primary" size="sm" asChild>
-            <Link href="/#community">
-              Join the community
+            <Link href="/#join-us">
+              Join us
             </Link>
           </Button>
         </div>
@@ -84,8 +84,8 @@ export function Header() {
             ))}
             <div className="pt-4 border-t border-border">
               <Button variant="primary" size="sm" className="w-full" asChild>
-                <Link href="/#community">
-                  Join the community
+                <Link href="/#join-us">
+                  Join us
                 </Link>
               </Button>
             </div>
