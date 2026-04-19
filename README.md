@@ -39,50 +39,36 @@ Then open <http://localhost:3000>.
 
 ## Project structure
 
+The tree below doubles as a route map — each directory under `app/` is a
+route, annotated with its purpose.
+
 ```
 .
-├── app/                      # Next.js App Router routes
-│   ├── layout.tsx            # Root layout (header, footer, fonts, SEO)
-│   ├── page.tsx              # /
-│   ├── about/
-│   ├── events/
-│   ├── how-it-works/         # Shared layout + role sub-pages
-│   │   ├── speaker/
-│   │   ├── host/
-│   │   ├── sponsor/
-│   │   └── volunteer/
-│   ├── legal/                # Shared layout for legal documents
-│   │   ├── terms-of-service/
-│   │   ├── privacy-policy/
-│   │   └── code-of-conduct/
-│   ├── press-kit/
+├── app/                            # Next.js App Router routes
+│   ├── layout.tsx                  # Root layout (header, footer, fonts, SEO)
+│   ├── page.tsx                    # /                    Social-proof-driven home
+│   ├── about/                      # /about               Values & community manifesto
+│   ├── events/                     # /events              Upcoming (Luma) + past event timeline
+│   ├── how-it-works/               # /how-it-works        Onboarding hub (shared layout)
+│   │   ├── speaker/                #   /speaker           Speaker intake
+│   │   ├── host/                   #   /host              Host intake
+│   │   ├── sponsor/                #   /sponsor           Sponsor intake
+│   │   └── volunteer/              #   /volunteer         Volunteer intake
+│   ├── legal/                      # /legal               Legal documents (shared layout)
+│   │   ├── terms-of-service/       #   /terms-of-service
+│   │   ├── privacy-policy/         #   /privacy-policy
+│   │   └── code-of-conduct/        #   /code-of-conduct
+│   ├── press-kit/                  # /press-kit           Brand assets + fast facts
 │   └── globals.css
 ├── components/
-│   ├── layout/               # Header, Footer
-│   └── ui/                   # Reusable UI (buttons, cards, sections, etc.)
-├── constants/                # Structured data (events, sponsors, social links)
-├── prd/                      # Product requirements documents (specs)
-├── public/images/            # Static imagery
+│   ├── layout/                     # Header, Footer
+│   └── ui/                         # Reusable UI (buttons, cards, sections, etc.)
+├── constants/                      # Structured data (events, sponsors, social links)
+├── prd/                            # Product requirements documents (specs)
+├── public/images/                  # Static imagery
 ├── next.config.ts
 └── tsconfig.json
 ```
-
-## Information architecture
-
-| Path | Purpose |
-|---|---|
-| `/` | Social-proof-driven home |
-| `/about` | Values & community manifesto |
-| `/how-it-works` | Onboarding hub |
-| `/how-it-works/speaker` | Speaker intake |
-| `/how-it-works/host` | Host intake |
-| `/how-it-works/sponsor` | Sponsor intake |
-| `/how-it-works/volunteer` | Volunteer intake |
-| `/events` | Upcoming events (Luma) + past event timeline |
-| `/press-kit` | Brand assets + fast facts |
-| `/legal/terms-of-service` | Terms of Service |
-| `/legal/privacy-policy` | Privacy Policy |
-| `/legal/code-of-conduct` | Code of Conduct |
 
 See [`prd/PRD.md`](./prd/PRD.md) for the full route map, shared-layout
 conventions, and per-page content requirements.
