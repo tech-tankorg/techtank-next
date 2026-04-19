@@ -62,7 +62,7 @@ export default function HomePage() {
                 <Button variant="outline" size="lg" asChild>
                   <Link href="/get-involved">Get involved</Link>
                 </Button>
-                <Button variant="ghost" size="lg" asChild>
+                <Button variant="outline" size="lg" asChild>
                   <Link href="/about">About us</Link>
                 </Button>
               </div>
@@ -215,28 +215,6 @@ export default function HomePage() {
         />
         <div className="grid gap-4 md:grid-cols-3">
           <Link
-            href="/about"
-            className="group relative overflow-hidden rounded-xl glass p-5 lg:p-6 transition-all hover:scale-[1.01]"
-          >
-            <Heart className="absolute top-4 right-4 h-14 w-14 text-teal-dark/10" />
-            <div className="relative">
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-coral mb-2">
-                Know who we are
-              </span>
-              <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
-                About us
-              </h3>
-              <p className="text-sm text-muted mb-4">
-                Our values, our story, and the people behind TechTank.
-              </p>
-              <span className="inline-flex items-center text-sm font-semibold text-teal-dark group-hover:text-coral transition-colors">
-                Meet the community
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </span>
-            </div>
-          </Link>
-
-          <Link
             href="/events"
             className="group relative overflow-hidden rounded-xl glass p-5 lg:p-6 transition-all hover:scale-[1.01]"
           >
@@ -275,6 +253,28 @@ export default function HomePage() {
               </p>
               <span className="inline-flex items-center text-sm font-semibold text-teal-dark group-hover:text-coral transition-colors">
                 Pick your path
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </span>
+            </div>
+          </Link>
+
+          <Link
+            href="/about"
+            className="group relative overflow-hidden rounded-xl glass p-5 lg:p-6 transition-all hover:scale-[1.01]"
+          >
+            <Heart className="absolute top-4 right-4 h-14 w-14 text-teal-dark/10" />
+            <div className="relative">
+              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-coral mb-2">
+                Know who we are
+              </span>
+              <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
+                About us
+              </h3>
+              <p className="text-sm text-muted mb-4">
+                Our values, our story, and the people behind TechTank.
+              </p>
+              <span className="inline-flex items-center text-sm font-semibold text-teal-dark group-hover:text-coral transition-colors">
+                Meet the community
                 <ArrowRight className="ml-2 h-4 w-4" />
               </span>
             </div>
