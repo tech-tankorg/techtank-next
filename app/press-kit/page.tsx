@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const fastFacts = [
   { label: "Founded", value: "2022" },
   { label: "Location", value: "Toronto, Canada" },
-  { label: "Cadence", value: "Monthly in-person events + ongoing Slack community" },
+  { label: "Cadence", value: "Monthly in-person events via Luma + ongoing Slack community" },
   { label: "Typical attendance", value: "100-120 per event" },
   { label: "Structure", value: "Volunteer-run, non-commercial" },
   { label: "Contact", value: "techtankto@gmail.com" },
@@ -103,11 +103,11 @@ export default function PressKitPage() {
             <p className="text-foreground leading-relaxed mb-4">
               <strong>Full paragraph:</strong> TechTank TO is Toronto&apos;s
               volunteer-run tech community, hosting monthly in-person events
-              since 2022. Each meetup brings together 100-120 developers,
-              designers, and tech professionals for technical talks,
-              networking, and free food. TechTank is committed to fostering a
-              supportive and inclusive environment where people of all skill
-              levels can explore, create, and thrive in technology.
+              since 2022. Each event brings together 100-120 developers,
+              designers, and tech professionals for technical talks and
+              networking. TechTank is committed to fostering a supportive and
+              inclusive environment where people of all skill levels can
+              explore, create, and thrive in technology.
             </p>
             <Button variant="ghost" size="sm">
               <Copy className="mr-2 h-4 w-4" />
@@ -117,7 +117,7 @@ export default function PressKitPage() {
           <div className="bg-background rounded-xl border border-border p-6">
             <p className="text-foreground leading-relaxed mb-4">
               <strong>One-liner:</strong> TechTank TO is Toronto&apos;s
-              volunteer-run tech community, hosting monthly meetups for
+              volunteer-run tech community, hosting monthly events for
               developers, designers, and tech professionals since 2022.
             </p>
             <Button variant="ghost" size="sm">
