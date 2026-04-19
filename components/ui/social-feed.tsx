@@ -3,13 +3,7 @@
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const SLACK_URL = "https://join.slack.com/t/thetechtank/shared_invite/zt-2oou5qbue-LXNB4M7~C_6CBAImj1kpJA";
-const MEETUP_URL = "https://www.meetup.com/techtank-to/";
-const LUMA_URL = "https://luma.com/techtank?period=past";
-const GITHUB_URL = "https://github.com/tech-tankorg";
-const LINKEDIN_URL = "https://www.linkedin.com/company/techtank-to/";
-const INSTAGRAM_URL = "https://www.instagram.com/techtankto/";
+import { getAllSocialLinks } from "@/lib/data/social-links";
 
 export interface SocialPost {
   id: string;
@@ -79,7 +73,9 @@ function SocialPostCard({ post }: { post: SocialPost }) {
 
       {/* Link to original */}
       <a
-        href={post.platform === "linkedin" ? LINKEDIN_URL : INSTAGRAM_URL}
+        href={post.platform === "linkedin" 
+          ? getAllSocialLinks().find(l => l.id === "linkedin")?.url 
+          : getAllSocialLinks().find(l => l.id === "instagram")?.url}
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center text-sm text-coral font-medium hover:text-coral/80 transition-colors"
@@ -143,31 +139,21 @@ export function SocialFeed() {
 
       {/* Community CTAs */}
       <div className="flex flex-wrap items-center justify-center gap-3 pt-6">
-        <Button variant="primary" size="sm" asChild>
-          <a href={SLACK_URL} target="_blank" rel="noopener noreferrer">
-            Join Slack
-            <ExternalLink className="ml-2 h-4 w-4" />
-          </a>
-        </Button>
-
-        <Button variant="outline" size="sm" asChild>
-          <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
-            LinkedIn
-            <ExternalLink className="ml-2 h-4 w-4" />
-          </a>
-        </Button>
-        <Button variant="outline" size="sm" asChild>
-          <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
-            Instagram
-            <ExternalLink className="ml-2 h-4 w-4" />
-          </a>
-        </Button>
-        <Button variant="outline" size="sm" asChild>
-          <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
-            GitHub
-            <ExternalLink className="ml-2 h-4 w-4" />
-          </a>
-        </Button>
+        {getAllSocialLinks()
+          .filter((link) => ["slack", "linkedin", "instagram", "github"].includes(link.id))
+          .map((link) => (
+            <Button
+              key={link.id}
+              variant={link.type === "primary" ? "primary" : "outline"}
+              size="sm"
+              asChild
+            >
+              <a href={link.url} target="_blank" rel="noopener noreferrer">
+                {link.id === "slack" ? "Join Slack" : link.name}
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          ))}
       </div>
     </div>
   );

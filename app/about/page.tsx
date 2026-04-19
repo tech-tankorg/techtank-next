@@ -278,66 +278,19 @@ export default function AboutPage() {
             Whether you want to attend, speak, host, or volunteer — there&apos;s
             a place for you here.
           </p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <Button variant="primary" size="sm" asChild>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button variant="primary" size="lg" asChild>
               <a
-                href="https://join.slack.com/t/thetechtank/shared_invite/zt-2oou5qbue-LXNB4M7~C_6CBAImj1kpJA"
+                href="https://luma.com/techtank"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Join Slack
-                <ExternalLink className="ml-2 h-4 w-4" />
+                RSVP to the next event
+                <ExternalLink className="ml-2 h-5 w-5" />
               </a>
             </Button>
-            <Button variant="primary" size="sm" asChild>
-              <a
-                href="https://luma.com/techtank?period=past"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Luma
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-            <Button variant="outline" size="sm" asChild>
-              <a
-                href="https://www.meetup.com/techtank-to/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Meetup
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-            <Button variant="outline" size="sm" asChild>
-              <a
-                href="https://www.linkedin.com/company/techtank-to/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-            <Button variant="outline" size="sm" asChild>
-              <a
-                href="https://www.instagram.com/techtankto/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-            <Button variant="outline" size="sm" asChild>
-              <a
-                href="https://github.com/tech-tankorg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/how-it-works">Get involved</Link>
             </Button>
           </div>
         </div>
