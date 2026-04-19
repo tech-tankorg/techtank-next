@@ -64,10 +64,10 @@ export default function HomePage() {
             </div>
 
             {/* Right: staggered overlapping portrait cards */}
-            <div className="hidden md:block relative h-[690px] lg:h-[750px]">
+            <div className="hidden md:block relative h-[460px] lg:h-[500px]">
               {/* First card — left, nudged down, rotated CCW */}
               {heroPosts[0] && (
-                <div className="absolute left-0 top-9 w-[82%] aspect-[4/5] photo-frame overflow-hidden -rotate-2 shadow-xl z-0 hover:z-10 hover:scale-[1.02] transition-all duration-300">
+                <div className="absolute left-0 top-6 w-[55%] aspect-[4/5] photo-frame overflow-hidden -rotate-2 shadow-xl z-0 hover:z-10 hover:scale-[1.02] transition-all duration-300">
                   {heroPosts[0].videoSrc ? (
                     <video
                       src={heroPosts[0].videoSrc}
@@ -82,7 +82,7 @@ export default function HomePage() {
                       src={heroPosts[0].imageSrc}
                       alt={heroPosts[0].alt}
                       fill
-                      sizes="(min-width: 1024px) 42vw, 66vw"
+                      sizes="(min-width: 1024px) 28vw, 44vw"
                       className="object-cover"
                     />
                   ) : null}
@@ -90,7 +90,7 @@ export default function HomePage() {
               )}
               {/* Second card — right, at top, rotated CW */}
               {heroPosts[1] && (
-                <div className="absolute right-0 top-0 w-[82%] aspect-[4/5] photo-frame overflow-hidden rotate-2 shadow-xl z-10 hover:z-20 hover:scale-[1.02] transition-all duration-300">
+                <div className="absolute right-0 top-0 w-[55%] aspect-[4/5] photo-frame overflow-hidden rotate-2 shadow-xl z-10 hover:z-20 hover:scale-[1.02] transition-all duration-300">
                   {heroPosts[1].videoSrc ? (
                     <video
                       src={heroPosts[1].videoSrc}
@@ -105,7 +105,7 @@ export default function HomePage() {
                       src={heroPosts[1].imageSrc}
                       alt={heroPosts[1].alt}
                       fill
-                      sizes="(min-width: 1024px) 42vw, 66vw"
+                      sizes="(min-width: 1024px) 28vw, 44vw"
                       className="object-cover"
                     />
                   ) : null}
