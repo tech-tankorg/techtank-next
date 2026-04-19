@@ -122,7 +122,7 @@ export default function HomePage() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-3 mb-6">
           <SectionHeader
             overline="Events"
-            title="What&apos;s happening"
+            title="Recent happenings"
           />
           <Link
             href="/events"
@@ -133,30 +133,16 @@ export default function HomePage() {
           </Link>
         </div>
 
-        {/* Upcoming Events - Large cards */}
-        {upcomingEvents.length > 0 && (
-          <div className="mb-8">
-            <p className="text-xs font-semibold uppercase tracking-widest text-coral mb-4">
-              Coming up
-            </p>
-            <div className="grid gap-4 lg:grid-cols-2">
-              {upcomingEvents.slice(0, 2).map((event) => (
-                <EventCard key={event.id} event={event} variant="featured" />
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Past Events - Smaller cards */}
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-widest text-muted mb-4">
-            Recent
-          </p>
-          <div className="grid gap-3 grid-cols-2 lg:grid-cols-4">
-            {recentEvents.map((event) => (
-              <EventCard key={event.id} event={event} variant="compact" />
-            ))}
-          </div>
+        {/* Recent Events - Large featured + smaller cards */}
+        <div className="grid gap-4 lg:grid-cols-2 mb-4">
+          {upcomingEvents.slice(0, 2).map((event) => (
+            <EventCard key={event.id} event={event} variant="featured" />
+          ))}
+        </div>
+        <div className="grid gap-3 grid-cols-2 lg:grid-cols-4">
+          {recentEvents.map((event) => (
+            <EventCard key={event.id} event={event} variant="compact" />
+          ))}
         </div>
       </Section>
 
