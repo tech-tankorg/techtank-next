@@ -133,6 +133,26 @@ export default function AboutPage() {
         </div>
       </Section>
 
+      {/* Code of Conduct Teaser */}
+      <Section className="bg-white border-y border-border">
+        <div className="max-w-3xl mx-auto text-center">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+            Safety first
+          </span>
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-6">
+            Our commitment to a safe community
+          </h2>
+          <p className="text-lg text-muted leading-relaxed mb-8">
+            TechTank is committed to providing a harassment-free experience for
+            everyone. Our Code of Conduct applies to all community spaces,
+            online and in-person.
+          </p>
+          <Button variant="outline" asChild>
+            <Link href="/legal/code-of-conduct">Read our Code of Conduct</Link>
+          </Button>
+        </div>
+      </Section>
+
       {/* What We Do */}
       <Section className="gradient-brand-soft">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
@@ -242,26 +262,6 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-        </div>
-      </Section>
-
-      {/* Code of Conduct Teaser */}
-      <Section>
-        <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
-            Safety first
-          </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-6">
-            Our commitment to a safe community
-          </h2>
-          <p className="text-lg text-muted leading-relaxed mb-8">
-            TechTank is committed to providing a harassment-free experience for
-            everyone. Our Code of Conduct applies to all community spaces,
-            online and in-person.
-          </p>
-          <Button variant="outline" asChild>
-            <Link href="/legal/code-of-conduct">Read our Code of Conduct</Link>
-          </Button>
         </div>
       </Section>
 
