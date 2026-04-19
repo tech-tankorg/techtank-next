@@ -133,3 +133,31 @@ document styling).
   `claude.ai/code` session links, `Co-Authored-By: Claude` trailers,
   or any other "Generated with Claude Code" markers in commit messages
   or PR bodies.
+
+### Conventional commits
+
+- Use [Conventional Commits](https://www.conventionalcommits.org/)
+  for every commit subject:
+  `<type>(<optional scope>): <imperative summary>`
+- Allowed types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`,
+  `test`, `build`, `ci`, `chore`, `revert`.
+- Pick a scope that matches the page or area (`about`, `events`,
+  `get-involved/sponsor`, `prd`, `legal`, etc.) when one is obvious;
+  omit it when the change is global.
+- Keep the subject under ~72 characters, lowercase, no trailing
+  period; explain the *why* in the body if the diff alone doesn't.
+- Use `!` (e.g. `feat(get-involved)!: …`) and a `BREAKING CHANGE:`
+  footer for changes that move URLs, rename routes, or alter
+  documented behavior.
+
+### Branch naming
+
+- Branches follow `<type>/<short-kebab-summary>` using the same
+  type vocabulary as commits — e.g. `feat/sponsor-intake-form`,
+  `fix/events-luma-fallback`, `docs/prd-route-map`,
+  `refactor/get-involved-layout`.
+- Session-managed Claude branches keep the `claude/<slug>` prefix
+  given in the session brief; treat the slug as the conventional
+  summary and don't rename it.
+- Keep slugs short (≤40 chars), lowercase, hyphen-separated, and
+  reference the affected area rather than the ticket number.
