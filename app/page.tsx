@@ -48,7 +48,7 @@ export default function HomePage() {
             {/* Left: Text content */}
             <div className="max-w-xl py-8 lg:py-12">
               <span className="tag mb-4">
-                Toronto &middot; Monthly
+                Toronto &middot; Monthly &middot; Inclusive
               </span>
               <h1 className="font-display text-4xl font-bold text-teal-dark lg:text-6xl text-balance mb-4 leading-[1.1]">
                 Toronto&apos;s home for tech community
