@@ -166,7 +166,7 @@ export default function PressKitPage() {
             <a
               key={logo.name}
               href="#"
-              className="group flex items-center gap-4 bg-white rounded-xl border border-border p-5 hover:border-teal/50 hover:shadow-md transition-all"
+              className="group flex items-center gap-4 bg-white rounded-xl border border-border p-5 hover:border-teal/50 transition-all"
             >
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-background">
                 <FileText className="h-6 w-6 text-teal" />
@@ -255,7 +255,7 @@ export default function PressKitPage() {
             <a
               key={resource.name}
               href="#"
-              className="group flex items-center gap-4 bg-white rounded-xl border border-border p-5 hover:border-teal/50 hover:shadow-md transition-all"
+              className="group flex items-center gap-4 bg-white rounded-xl border border-border p-5 hover:border-teal/50 transition-all"
             >
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-teal/10">
                 <FileText className="h-6 w-6 text-teal" />

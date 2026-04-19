@@ -26,7 +26,7 @@ export function EventCard({ event, variant = "poster" }: EventCardProps) {
   // New poster variant - photo-forward design
   if (variant === "poster" && event.posterImage) {
     return (
-      <div className="group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-soft-lg transition-all duration-300">
+      <div className="group relative overflow-hidden rounded-2xl transition-all duration-300">
         {/* Poster Image */}
         <div className="relative aspect-[16/10] w-full">
           <Image
@@ -217,7 +217,7 @@ export function EventCard({ event, variant = "poster" }: EventCardProps) {
 
   // Compact variant - glass card style
   return (
-    <div className="group relative flex flex-col glass rounded-xl p-5 hover:shadow-soft transition-all duration-300">
+    <div className="group relative flex flex-col glass rounded-xl p-5 transition-all duration-300">
       {/* Poster thumbnail if available */}
       {event.posterImage && (
         <div className="relative h-32 w-full rounded-lg overflow-hidden mb-4">

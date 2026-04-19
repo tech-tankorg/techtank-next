@@ -182,7 +182,7 @@ export default function HomePage() {
 
       {/* Values Teaser */}
       <Section>
-        <div className="glass rounded-2xl p-6 lg:p-10 text-center max-w-2xl mx-auto shadow-soft-lg">
+        <div className="glass rounded-2xl p-6 lg:p-10 text-center max-w-2xl mx-auto">
           <span className="tag-outline mb-4 inline-block text-sm">
             What we&apos;re about
           </span>

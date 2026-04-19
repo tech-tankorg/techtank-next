@@ -55,7 +55,7 @@ function SocialPostCard({ post }: { post: SocialPost }) {
   );
 
   return (
-    <article className="group relative glass rounded-2xl p-6 transition-all hover:shadow-soft-lg">
+    <article className="group relative glass rounded-2xl p-6 transition-all">
       {/* Platform badge */}
       <div className="flex items-center gap-2 mb-4">
         <span className={post.platform === "linkedin" ? "text-[#0077B5]" : "text-[#E4405F]"}>

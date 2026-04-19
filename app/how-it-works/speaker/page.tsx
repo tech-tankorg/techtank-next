@@ -210,7 +210,7 @@ export default function SpeakerPage() {
         <div className="grid gap-6 lg:grid-cols-3">
           <a
             href="#"
-            className="group bg-white rounded-xl border border-border p-6 hover:border-teal/50 hover:shadow-md transition-all"
+            className="group bg-white rounded-xl border border-border p-6 hover:border-teal/50 transition-all"
           >
             <FileText className="h-8 w-8 text-teal mb-4" />
             <h4 className="font-semibold text-foreground group-hover:text-teal transition-colors mb-2">
@@ -222,7 +222,7 @@ export default function SpeakerPage() {
           </a>
           <a
             href="#"
-            className="group bg-white rounded-xl border border-border p-6 hover:border-teal/50 hover:shadow-md transition-all"
+            className="group bg-white rounded-xl border border-border p-6 hover:border-teal/50 transition-all"
           >
             <FileText className="h-8 w-8 text-teal mb-4" />
             <h4 className="font-semibold text-foreground group-hover:text-teal transition-colors mb-2">
@@ -234,7 +234,7 @@ export default function SpeakerPage() {
           </a>
           <a
             href="#"
-            className="group bg-white rounded-xl border border-border p-6 hover:border-teal/50 hover:shadow-md transition-all"
+            className="group bg-white rounded-xl border border-border p-6 hover:border-teal/50 transition-all"
           >
             <FileText className="h-8 w-8 text-teal mb-4" />
             <h4 className="font-semibold text-foreground group-hover:text-teal transition-colors mb-2">

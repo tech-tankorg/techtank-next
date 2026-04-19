@@ -31,7 +31,7 @@ export function RoleCard({
   const Icon = icons[role];
 
   return (
-    <div className="group relative flex flex-col glass rounded-2xl p-6 lg:p-8 hover:shadow-soft-lg transition-all duration-300">
+    <div className="group relative flex flex-col glass rounded-2xl p-6 lg:p-8 transition-all duration-300">
       {/* Icon */}
       <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-seafoam text-teal-dark">
         <Icon className="h-6 w-6" />
