@@ -28,6 +28,7 @@ export function LogoCloud() {
               width={120}
               height={40}
               className="h-8 lg:h-10 w-auto object-contain opacity-70 hover:opacity-100 transition-all duration-300"
+              style={sponsor.scale ? { transform: `scale(${sponsor.scale})` } : undefined}
             />
           </a>
         ))}

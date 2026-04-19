@@ -4,6 +4,7 @@ export interface Sponsor {
   logo: string;
   url: string;
   type: "host" | "sponsor" | "partner";
+  scale?: number; // Logo size multiplier (default 1)
 }
 
 export const sponsors: Sponsor[] = [
@@ -41,6 +42,7 @@ export const sponsors: Sponsor[] = [
     logo: "/images/sponsors/prema.png",
     url: "https://www.prematoronto.ca",
     type: "partner",
+    scale: 1.8,
   },
   {
     id: "vena",
