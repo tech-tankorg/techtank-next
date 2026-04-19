@@ -9,7 +9,7 @@ import { RoleCard, roleCardsData } from "@/components/ui/role-card";
 import { EventCard } from "@/components/ui/event-card";
 import { DualCTA } from "@/components/ui/dual-cta";
 import { SocialFeed } from "@/components/ui/social-feed";
-import { getRecentEvents, getUpcomingEvents } from "@/lib/data/events";
+import { getRecentEvents } from "@/lib/data/events";
 
 const posterImages = [
   {
@@ -35,8 +35,9 @@ const posterImages = [
 ];
 
 export default function HomePage() {
-  const recentEvents = getRecentEvents(4);
-  const upcomingEvents = getUpcomingEvents();
+  const allRecentEvents = getRecentEvents(6);
+  const featuredEvents = allRecentEvents.slice(0, 2);
+  const smallerEvents = allRecentEvents.slice(2, 6);
 
   return (
     <>
@@ -135,12 +136,12 @@ export default function HomePage() {
 
         {/* Recent Events - Large featured + smaller cards */}
         <div className="grid gap-4 lg:grid-cols-2 mb-4">
-          {upcomingEvents.slice(0, 2).map((event) => (
+          {featuredEvents.map((event) => (
             <EventCard key={event.id} event={event} variant="featured" />
           ))}
         </div>
         <div className="grid gap-3 grid-cols-2 lg:grid-cols-4">
-          {recentEvents.map((event) => (
+          {smallerEvents.map((event) => (
             <EventCard key={event.id} event={event} variant="compact" />
           ))}
         </div>
