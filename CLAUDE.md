@@ -4,12 +4,20 @@ Guidance for Claude Code when working in this repository.
 
 ## What this repo is
 
-This is a **PRD / specification repository** for the TechTank TO website
-redesign. It contains no application code yet — only Markdown planning
-documents that describe the intended information architecture, page
-content, and design direction for the future Next.js implementation.
+A Next.js (App Router) implementation of
+[techtankto.com](https://www.techtankto.com/), Toronto's volunteer-run
+tech community website. The redesign moves away from a flat "link-tree"
+layout toward a conversion-oriented onboarding hub that funnels
+visitors into specific roles — attendee, speaker, host, sponsor, or
+volunteer.
 
-The source site being redesigned: https://www.techtankto.com/
+Specs live in `prd/` (see `prd/PRD.md`); application code lives in
+`app/`, with shared pieces in `components/`, `constants/`, and
+`public/`. The initial UI scaffold was generated from the PRD via v0 —
+[original prompt and generation](https://v0.app/chat/website-generation-from-prd-eLek8w4RJMh).
+
+For developer-facing setup (scripts, directory tree, route map), see
+[`README.md`](./README.md).
 
 ## Repository layout
 
@@ -48,7 +56,8 @@ The redesign replaces a flat "link-tree" layout with a
 - `/about` — values manifesto built on four pillars: **Community,
   Innovation, Teamwork, Respect**.
 - `/how-it-works` — onboarding hub with four role sub-pages (Speaker,
-  Host, Sponsor, Volunteer), each ending in a Google Form intake.
+  Host, Sponsor, Volunteer), each ending in an intake action (email us
+  at `techtankto@gmail.com`).
 - `/events` — embedded Luma calendar.
 - `/press-kit` — standalone brand assets and fast facts for media.
 - `/legal` — grouped compliance documents.
@@ -78,7 +87,7 @@ document styling).
 - Concrete, not aspirational. If organizers haven't confirmed a number
   (attendance, tier, timing), flag it instead of inventing one.
 - Conversion-oriented: every page spec must declare **one dominant
-  CTA**, and `/how-it-works/*` must end in an intake form.
+  CTA**, and `/how-it-works/*` must end in an intake action (email us).
 - Social proof first: testimonials, real event photography, and
   logo clouds are required patterns, not decoration.
 
@@ -102,9 +111,9 @@ document styling).
 
 ## Things to avoid
 
-- Don't create scaffolding or application code in this repo yet — it's
-  spec-only. When implementation begins, it will likely live alongside
-  these docs (e.g. a Next.js app in `app/`).
+- Don't let the implementation drift from the PRD. When behaviour or
+  IA changes, update both the relevant `prd/pages/*.md` spec and the
+  matching code under `app/` in the same change.
 - Don't add numbers, quotes, or tier details that organizers haven't
   confirmed. It's better to leave a "finalize with organizers" note
   than to publish fiction.
@@ -113,18 +122,6 @@ document styling).
   were intentionally rolled into `/how-it-works/*` and `/legal/*`.
 - Don't touch settings or hooks without being asked.
 
-## External platforms the site funnels to
-
-- Meetup: https://www.meetup.com/techtank-to/
-- Luma (event RSVPs)
-- Slack (invite via Google Form or direct link)
-- LinkedIn: https://ca.linkedin.com/company/techtank-to
-- Instagram: https://www.instagram.com/techtankto/
-- YouTube: https://www.youtube.com/@TechTankTo
-- GitHub: https://github.com/tech-tankorg
-- Google Forms — one per `/how-it-works/*` intake
-- Google Photos — per-event albums
-
 ## Git workflow
 
 - Feature work happens on the branch specified in the session brief
@@ -132,7 +129,3 @@ document styling).
 - Create new commits rather than amending. Use HEREDOC commit messages.
 - Never force-push or skip hooks without explicit permission.
 - Do not open a pull request unless explicitly asked.
-
-## Contact
-
-`techtankto@gmail.com`
