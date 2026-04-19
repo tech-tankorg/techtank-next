@@ -21,7 +21,7 @@ export default function HowItWorksLayout({
   return (
     <div className="min-h-screen">
       {/* Sticky Sub-Nav */}
-      <nav className="sticky top-[65px] z-40 border-b border-border/30 bg-white/70 backdrop-blur-xl shadow-[inset_0_-4px_8px_-4px_rgba(0,0,0,0.06)]">
+      <nav className="sticky top-[65px] z-40 bg-white/70 backdrop-blur-xl shadow-[inset_0_4px_8px_-4px_rgba(0,0,0,0.08)]">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="flex items-center justify-center py-3">
             {/* Sub-navigation */}
