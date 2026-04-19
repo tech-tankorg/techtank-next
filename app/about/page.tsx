@@ -87,13 +87,21 @@ export default function AboutPage() {
             <h1 className="font-display text-4xl font-semibold text-foreground lg:text-5xl text-balance mb-6">
               We build the community we wanted to find
             </h1>
-            <p className="text-xl text-muted leading-relaxed">
+            <p className="text-xl text-muted leading-relaxed mb-8">
               TechTank TO is a volunteer-run, Toronto-based tech community
               founded in 2022. We host monthly in-person events where
               developers, designers, PMs, and tech-curious people gather to
               learn, share, and connect. No gatekeeping—just people
               helping people grow in tech.
             </p>
+            <div className="flex flex-wrap gap-3">
+              <Button variant="primary" size="lg" asChild>
+                <Link href="/events">See upcoming events</Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <Link href="/get-involved">Get involved</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
