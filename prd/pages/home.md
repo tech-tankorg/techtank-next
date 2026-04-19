@@ -35,15 +35,19 @@ not product copy.
 ## 4. Content sections (top to bottom)
 
 1. **Hero**
+   - Overline kicker: `TORONTO · MONTHLY · SINCE 2022`.
    - Brand lockup + one-sentence mission.
    - Primary CTA: **"RSVP on Luma"** → `/events`.
    - Secondary CTA: "Join our Slack".
    - Hero visual: a curated collage of real event photos (retain the
-     collage motif from the current site, treated more elegantly).
+     collage motif from the current site, treated with more intentional
+     composition and whitespace).
 
 2. **Trust strip / fast facts**
-   - "100–120 attendees per event", "50+ talks", "X companies hosted",
-     "Monthly since 2022" (confirm numbers with organizers).
+   - Fast facts pulled from the structured events content — for
+     example attendees per event, talks delivered, events hosted,
+     monthly cadence. Any number that organizers haven't confirmed
+     is flagged "finalize with organizers", not invented.
    - Renders as a thin band of large numerals under the hero.
 
 3. **Testimonials**
@@ -55,31 +59,57 @@ not product copy.
    - Grayscale logos of companies that have hosted or sponsored.
    - Caption: "Companies that have supported TechTank".
 
-5. **How to get involved**
-   - Four role cards linking into the onboarding hub:
-     - **Speak** → `/how-it-works/speaker`
-     - **Host** → `/how-it-works/host`
-     - **Sponsor** → `/how-it-works/sponsor`
-     - **Volunteer** → `/how-it-works/volunteer`
-   - Overline: "Become part of it" / Caption under: "Every TechTank event
-     runs on the time of community members like you."
+5. **Ways to get involved (role cards)**
+   - Overline kicker: `WAYS TO GET INVOLVED`.
+   - Headline: "Become part of it."
+   - Sub-headline: "Every TechTank event runs on the time of
+     community members like you."
+   - Four role cards sharing one shape (see PRD §5.7):
+     - **Speak** — `Share what you know` → `/how-it-works/speaker`
+     - **Host** — `Bring us to your space` → `/how-it-works/host`
+     - **Sponsor** — `Support the community` → `/how-it-works/sponsor`
+     - **Volunteer** — `Help run the crew` → `/how-it-works/volunteer`
+   - Each card: icon → overline → headline → one-paragraph pitch →
+     three checkmark bullets of what the contributor gets.
 
-6. **Upcoming events preview**
-   - Next 2–3 events pulled from Luma.
-   - CTA: "See all events" → `/events`.
+6. **Recent Events (preview of the archive)**
+   - Overline kicker: `RECENT EVENTS`.
+   - Right-aligned link: "View all events →" → `/events`.
+   - The next upcoming event (if any) plus the two most recent past
+     events, rendered with the same event-card shape used on
+     `/events` (status badge, date, title, tag chips, host/sponsor
+     attribution, CTA).
+   - CTAs per card:
+     - Upcoming → "RSVP on Luma"
+     - Past with recap → "View Recap"
+     - Past without recap → "Photos" / "Watch talk" as available
 
-7. **From the community (social previews)**
-   - Preview tiles linking to:
-     - Recent Google Photos album(s)
-     - Instagram grid (last 6 posts)
-     - YouTube: latest Guppy Talks / recorded talks
-   - Goal: prove the community is alive and active.
+7. **Latest Highlights (social proof)**
+   - Overline kicker: `LATEST HIGHLIGHTS`.
+   - Two-up layout:
+     - Left: an embedded Instagram reel or Google Photos preview from
+       the most recent event.
+     - Right: short copy — e.g. "See what we built at <event name>." —
+       plus "Follow on Instagram" and "Join our Slack" links.
+   - Goal: prove the community is alive and active this month.
 
 8. **Values teaser**
    - Four-pillar strip (Community, Innovation, Teamwork, Respect) with a
      link to `/about`.
 
-9. **Footer** (global)
+9. **Dual end-of-page CTA**
+   - Two side-by-side cards above the footer:
+     - **Never miss an event.** Subscribe to the Luma calendar — CTA
+       "Follow on Luma".
+     - **Want to contribute?** Speak, host, sponsor, or volunteer —
+       CTA "Get involved" → `/how-it-works`.
+
+10. **Supported-by strip**
+    - Single-line "Supported by <host/sponsor logos>" acknowledgment
+      directly above the footer. Distinct from the logo cloud in
+      section 4.
+
+11. **Footer** (global)
 
 ## 5. Calls to action (priority order)
 
@@ -90,18 +120,27 @@ not product copy.
 
 ## 6. Functional requirements
 
-- Upcoming-events module refreshes from Luma (API or scheduled build).
+- Recent Events module reads from the shared structured event content
+  (see PRD §6.1) — same source as `/events`. The home preview is a
+  filtered slice, not a duplicate list.
 - Testimonials and logos live in structured content (MDX / JSON), not
   hard-coded in components.
 - Google Photos and Instagram previews degrade gracefully if embeds fail.
 - All external links open in a new tab with `rel="noopener noreferrer"`.
 - Mobile-first layout; hero collage remains legible at 375px.
 - Open Graph / Twitter card metadata with TechTank branding.
+- Role cards and event cards share their component with
+  `/how-it-works` and `/events` respectively — no bespoke variants.
 
 ## 7. Acceptance criteria
 
 - A visitor can, within one scroll on desktop, see: who TechTank is,
   proof it is active, the next event, and where to join.
 - Every "role" card is reachable within one tap from the hero on mobile.
-- Social-proof section (testimonials + logos) is visible before the
-  visitor reaches the footer on mobile.
+- Social-proof section (testimonials + logos + recent events) is
+  visible before the visitor reaches the footer on mobile.
+- The "Recent Events" preview is never empty: if no events are
+  scheduled, it falls back to the two most recent past events with
+  recap links.
+- Numbers in the trust strip are traceable back to structured content
+  or explicitly flagged as organizer-confirmed. No invented figures.

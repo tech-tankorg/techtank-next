@@ -39,17 +39,39 @@ intake.
 ## 5. Content sections (on `/how-it-works` itself)
 
 1. **Hero**
-   - Headline: "Get Involved".
-   - Sub-headline: "TechTank runs on the Toronto tech community. Here's
-     how you can be part of it."
+   - Overline kicker: `GET INVOLVED`.
+   - Headline: "Let's build TechTank together."
+   - Sub-headline: "TechTank runs on the Toronto tech community —
+     speakers, hosts, sponsors, and volunteers who show up every
+     month. Pick the role that fits you right now."
 
-2. **The four roles**
-   - Four large cards, each linking to its sub-page:
-     - **Speak** — share what you know at a meetup.
-     - **Host** — provide a venue and food for an event.
-     - **Sponsor** — support the community as a corporate partner.
-     - **Volunteer** — help run the community behind the scenes.
-   - Each card shows: one-line pitch, time commitment, primary CTA.
+2. **Ways to get involved (four role cards)**
+   - Overline kicker: `WAYS TO GET INVOLVED`.
+   - Four equal-weight cards rendered with the shared role-card
+     component (see PRD §5.7). Each card follows the same shape:
+     - Icon
+     - Overline (role kicker — e.g. `SHARE WHAT YOU KNOW`)
+     - Headline (e.g. "Speak at an event")
+     - One-paragraph pitch
+     - Three checkmark bullets of what you get / what's required
+     - Primary CTA linking into the sub-page
+   - Card content:
+     - **Speak** → `/how-it-works/speaker`
+       - Overline: `SHARE WHAT YOU KNOW`
+       - Checkmarks: 30–45 min talk + Q&A · Any tech topic · Recorded
+         and published to YouTube
+     - **Host** → `/how-it-works/host`
+       - Overline: `BRING US TO YOUR SPACE`
+       - Checkmarks: 100–120 attendees · 6:00–8:30pm weeknight · Logo
+         on event marketing
+     - **Sponsor** → `/how-it-works/sponsor`
+       - Overline: `SUPPORT THE COMMUNITY`
+       - Checkmarks: Logo on website and marketing · Speaker slot
+         options · Tasteful brand visibility
+     - **Volunteer** → `/how-it-works/volunteer`
+       - Overline: `HELP RUN THE CREW`
+       - Checkmarks: Event-day or ongoing · No speaking required ·
+         Portfolio-quality work for creatives
 
 3. **Why get involved**
    - Three columns reused across sub-pages:
@@ -63,16 +85,31 @@ intake.
    - "Can I volunteer without speaking / hosting?" (Yes.)
    - "How fast will you get back to me?" (Target: within one week.)
 
+5. **Contact strip (end of page)**
+   - Overline kicker: `READY TO CONNECT?`
+   - Headline: "Drop us a line."
+   - Copy: "We respond to every message — hosts, sponsors, speakers,
+     and volunteers. Whichever role fits, we'd love to hear from you."
+   - Direct-email contact card: `techtankto@gmail.com` with a one-line
+     caption ("For hosting, sponsorship, speaking, and community
+     inquiries.").
+
 ## 6. Calls to action (priority order)
 
 1. Pick a role (Speak / Host / Sponsor / Volunteer)
-2. Join our Slack
+2. Email `techtankto@gmail.com`
+3. Join our Slack
 
 ## 7. Functional requirements
 
 - Shared layout renders in all `/how-it-works/*` routes.
 - Sub-nav highlights the active sub-page.
 - Each role card has a stable anchor for deep-linking.
+- The role-card component is shared with the home page (see
+  `pages/home.md` section 5) so the four paths stay visually and
+  structurally identical.
+- The direct-email contact card offers copy-to-clipboard as well as a
+  `mailto:` link.
 
 ## 8. Acceptance criteria
 
@@ -80,3 +117,7 @@ intake.
   click of `/how-it-works`.
 - A visitor understands the difference between Host and Sponsor without
   having to read both sub-pages.
+- All four role cards are reachable without horizontal scroll on
+  mobile and render identically (same height, same bullet count).
+- The contact email is visible and interactive without scrolling past
+  the footer.
