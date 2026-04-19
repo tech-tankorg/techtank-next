@@ -138,6 +138,7 @@ export const events: Event[] = [
       { name: "Pawan Keer", title: "Senior Software Development Manager", talkTitle: "Infrastructure at Scale" },
       { name: "Lucas Tran", title: "Senior Software Developer", talkTitle: "Lessons from the Trenches" },
     ],
+    youtubeUrl: "https://www.youtube.com/watch?v=4MSJq2GBsIc",
   },
   {
     id: "cross-browser-extensions-cohere",
@@ -152,6 +153,7 @@ export const events: Event[] = [
       name: "Cohere",
       url: "https://cohere.com",
     },
+    youtubeUrl: "https://www.youtube.com/watch?v=f8ONw6O_rco",
   },
   // 2024
   {
@@ -177,6 +179,7 @@ export const events: Event[] = [
     date: "2024-10-24",
     tags: ["Tech Talk", "AI", "FinTech"],
     status: "past",
+    youtubeUrl: "https://www.youtube.com/watch?v=2UTsy-Lbulk",
   },
   {
     id: "edtech-ai-accessibility",
@@ -185,6 +188,7 @@ export const events: Event[] = [
     date: "2024-10-10",
     tags: ["Panel", "EdTech", "AI", "Accessibility"],
     status: "past",
+    youtubeUrl: "https://www.youtube.com/watch?v=N50r7eIEIS0",
   },
   {
     id: "forensics-rsc",
@@ -193,6 +197,7 @@ export const events: Event[] = [
     date: "2024-09-19",
     tags: ["Tech Talk", "React", "Web Dev"],
     status: "past",
+    youtubeUrl: "https://www.youtube.com/watch?v=NOlSKs5PLpM",
   },
   {
     id: "fyre-festival",
@@ -209,6 +214,7 @@ export const events: Event[] = [
     date: "2024-08-22",
     tags: ["Panel", "AI"],
     status: "past",
+    youtubeUrl: "https://www.youtube.com/watch?v=RUco7XrbMqk",
   },
   {
     id: "tank-sports-2024",
