@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Calendar, Users, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getEventLinks, getSocialLinks, getContributeLinks } from "@/lib/data/social-links";
+import { getEventLinks, getSocialLinks, getContributeLinks } from "@/constants/social-links";
 
 export function DualCTA() {
   const eventLinks = getEventLinks();

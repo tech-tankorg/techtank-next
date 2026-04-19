@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getAllSocialLinks } from "@/lib/data/social-links";
+import { getAllSocialLinks } from "@/constants/social-links";
 
 export interface SocialPost {
   id: string;

@@ -1,8 +1,8 @@
 "use client";
 
 import { Calendar, MapPin } from "lucide-react";
-import type { Event } from "@/lib/data/events";
-import { getAllSponsors } from "@/lib/data/sponsors";
+import type { Event } from "@/constants/events";
+import { getAllSponsors } from "@/constants/sponsors";
 
 interface EventCardProps {
   event: Event;

@@ -1,4 +1,4 @@
-import { getEventStats } from "@/lib/data/events";
+import { getEventStats } from "@/constants/events";
 
 export function StatsStrip() {
   const stats = getEventStats();

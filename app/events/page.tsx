@@ -6,7 +6,7 @@ import { Section, SectionHeader } from "@/components/ui/section";
 import { EventCard } from "@/components/ui/event-card";
 import { DualCTA } from "@/components/ui/dual-cta";
 import { ContactCard } from "@/components/ui/contact-card";
-import { getUpcomingEvents, getRecentEvents, events } from "@/lib/data/events";
+import { getUpcomingEvents, getRecentEvents, events } from "@/constants/events";
 
 export const metadata: Metadata = {
   title: "Events",

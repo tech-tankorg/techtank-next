@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { getAllSponsors } from "@/lib/data/sponsors";
+import { getAllSponsors } from "@/constants/sponsors";
 
 export function LogoCloud() {
   const sponsors = getAllSponsors();

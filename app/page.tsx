@@ -9,7 +9,7 @@ import { RoleCard, roleCardsData } from "@/components/ui/role-card";
 import { EventCard } from "@/components/ui/event-card";
 import { DualCTA } from "@/components/ui/dual-cta";
 import { SocialFeed } from "@/components/ui/social-feed";
-import { getRecentEvents } from "@/lib/data/events";
+import { getRecentEvents } from "@/constants/events";
 
 const posterImages = [
   {
