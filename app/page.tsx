@@ -63,11 +63,11 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Staggered overlapping portrait cards */}
-            <div className="relative h-[380px] sm:h-[440px] lg:h-[500px]">
-              {/* First card — left, nudged down, rotated CCW */}
+            {/* Staggered overlapping portrait cards (inline, transform-based) */}
+            <div className="flex items-start pb-8">
+              {/* First card — tilted CCW, nudged down */}
               {heroPosts[0] && (
-                <div className="absolute left-0 top-6 w-[55%] aspect-[4/5] photo-frame overflow-hidden -rotate-2 shadow-xl z-0 hover:z-10 hover:scale-[1.02] transition-all duration-300">
+                <div className="relative w-[55%] aspect-[4/5] photo-frame overflow-hidden shadow-xl transition-transform duration-300 -rotate-2 translate-y-6 hover:scale-[1.02]">
                   {heroPosts[0].videoSrc ? (
                     <video
                       src={heroPosts[0].videoSrc}
@@ -88,9 +88,9 @@ export default function HomePage() {
                   ) : null}
                 </div>
               )}
-              {/* Second card — right, at top, rotated CW */}
+              {/* Second card — overlaps via negative margin, tilted CW */}
               {heroPosts[1] && (
-                <div className="absolute right-0 top-0 w-[55%] aspect-[4/5] photo-frame overflow-hidden rotate-2 shadow-xl z-10 hover:z-20 hover:scale-[1.02] transition-all duration-300">
+                <div className="relative w-[55%] aspect-[4/5] -ml-[10%] z-10 photo-frame overflow-hidden shadow-xl transition-transform duration-300 rotate-2 hover:scale-[1.02]">
                   {heroPosts[1].videoSrc ? (
                     <video
                       src={heroPosts[1].videoSrc}
