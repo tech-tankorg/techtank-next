@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { AlertTriangle, Mail } from "lucide-react";
+import { AlertTriangle, Mail, ThumbsUp } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Code of Conduct",
@@ -56,7 +56,8 @@ export default function CodeOfConductPage() {
         </section>
 
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">
+          <h2 className="font-display text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
+            <ThumbsUp className="h-5 w-5 text-teal shrink-0" />
             Expected Behavior
           </h2>
           <ul className="list-disc pl-6 space-y-2 text-muted">
