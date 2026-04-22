@@ -37,10 +37,11 @@ For developer-facing setup (scripts, directory tree, route map), see
         │   ├── host.md            # /get-involved/host
         │   ├── sponsor.md         # /get-involved/sponsor
         │   └── volunteer.md       # /get-involved/volunteer
-        └── legal/                 # Legal folder (shared layout)
-            ├── terms-of-service.md
-            ├── privacy-policy.md
-            └── code-of-conduct.md
+        ├── legal/                 # Legal folder (shared layout)
+        │   ├── terms-of-service.md
+        │   ├── privacy-policy.md
+        │   └── code-of-conduct.md
+        └── design-system.md       # /design-system (internal dev reference — noindex)
 ```
 
 `prd/PRD.md` is the top-level document. Each file in `prd/pages/` fully

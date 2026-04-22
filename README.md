@@ -61,6 +61,7 @@ route, annotated with its purpose.
 │   │   ├── privacy-policy/         #   /privacy-policy
 │   │   └── code-of-conduct/        #   /code-of-conduct
 │   ├── press-kit/                  # /press-kit           Brand assets + fast facts
+│   ├── design-system/              # /design-system       Internal design token & component reference (noindex)
 │   └── globals.css
 ├── components/
 │   ├── layout/                     # Header, Footer
