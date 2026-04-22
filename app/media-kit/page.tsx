@@ -65,7 +65,7 @@ export default function PressKitPage() {
               partners. All assets are free to use with attribution.
             </p>
             <Button variant="primary" size="lg" asChild>
-              <a href="#" download>
+              <a href="/downloads/techtank-logos.zip" download>
                 <Download className="mr-2 h-5 w-5" />
                 Download all assets (ZIP)
               </a>
