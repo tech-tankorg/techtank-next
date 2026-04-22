@@ -207,7 +207,7 @@ export default function SpeakerPage() {
             first-time speakers all live in our Media Kit.
           </p>
           <Button variant="outline" asChild>
-            <Link href="/press-kit">
+            <Link href="/media-kit">
               Open the Media Kit
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>

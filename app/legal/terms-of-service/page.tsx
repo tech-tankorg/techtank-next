@@ -97,7 +97,7 @@ export default function TermsOfServicePage() {
           <p className="text-muted mb-4">
             TechTank branding, logos, and website content are property of
             TechTank TO. Usage is governed by the{" "}
-            <Link href="/press-kit" className="text-teal hover:underline">
+            <Link href="/media-kit" className="text-teal hover:underline">
               Media Kit terms
             </Link>
             .

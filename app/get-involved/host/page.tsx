@@ -248,7 +248,7 @@ export default function HostPage() {
             Run-of-show guides, host checklists, brand assets, and event templates all live in our Media Kit.
           </p>
           <Button variant="outline" asChild>
-            <Link href="/press-kit">
+            <Link href="/media-kit">
               Open the Media Kit
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>

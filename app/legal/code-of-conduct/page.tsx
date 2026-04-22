@@ -77,7 +77,7 @@ export default function CodeOfConductPage() {
               others without their consent.
             </li>
             <li>
-              <strong>Give credit and attribution.</strong> Acknowledge others&apos;
+              <strong>Give credit and attribution.</strong>{' '}Acknowledge others&apos;
               contributions.
             </li>
             <li>

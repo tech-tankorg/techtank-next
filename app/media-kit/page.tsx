@@ -22,12 +22,16 @@ const fastFacts = [
 ];
 
 const brandColors = [
-  { name: "Logo Teal", hex: "#3DC4C0", usage: "Primary brand color" },
-  { name: "Logo Amber", hex: "#F0AA00", usage: "Lightning bolt accent" },
-  { name: "Peach", hex: "#F5C4A8", usage: "Gradient warm stop" },
-  { name: "Lavender", hex: "#D8CEED", usage: "Gradient mid stop" },
-  { name: "Aqua", hex: "#B5E0D9", usage: "Gradient cool stop" },
-  { name: "Dark", hex: "#141926", usage: "CTA buttons, footer" },
+  { name: "Teal", hex: "#2A6B7C", usage: "Secondary headings, accents" },
+  { name: "Teal Dark", hex: "#1B4B5A", usage: "Primary headings, footer, CTAs" },
+  { name: "Amber", hex: "#FFBC55", usage: "Brand amber" },
+  { name: "Amber Dark", hex: "#EFA020", usage: "Brand amber dark" },
+  { name: "Coral", hex: "#E87C4E", usage: "Orange accent" },
+  { name: "Seafoam", hex: "#A8D5D8", usage: "Light backgrounds, accents" },
+  { name: "Mint", hex: "#5B9A8B", usage: "Accent green" },
+  { name: "Peach", hex: "#F5D4C1", usage: "Warm gradient base" },
+  { name: "Blush", hex: "#EABFBF", usage: "Pink accent" },
+  { name: "Sand", hex: "#F7EDE2", usage: "Warm off-white" },
 ];
 
 const logoDownloads = [
@@ -36,10 +40,10 @@ const logoDownloads = [
 ];
 
 const resources = [
-  { name: "Brand Guidelines PDF", description: "Colors, typography, usage rules" },
-  { name: "Speaker Slide Template", description: "Google Slides / PPTX template" },
-  { name: "Social Post Templates", description: "LinkedIn and Instagram formats" },
-  { name: "Host Checklist", description: "Event-day preparation guide" },
+  { name: "Brand Guidelines", href: "/design-system", description: "Colors, typography, usage rules", internal: true },
+  { name: "Speaker Slide Template", href: "#", description: "Google Slides / PPTX template", internal: false },
+  { name: "Speaker Checklist", href: "#", description: "Preparation guide for first-time speakers", internal: false },
+  { name: "Host Checklist", href: "#", description: "Event-day preparation guide", internal: false },
 ];
 
 export default function PressKitPage() {
@@ -250,24 +254,33 @@ export default function PressKitPage() {
           className="mb-12"
         />
         <div className="grid gap-4 sm:grid-cols-2">
-          {resources.map((resource) => (
-            <a
-              key={resource.name}
-              href="#"
-              className="group flex items-center gap-4 bg-white rounded-xl border border-border p-5 hover:border-teal/50 transition-all"
-            >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-teal/10">
-                <FileText className="h-6 w-6 text-teal" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="font-semibold text-foreground group-hover:text-teal transition-colors">
-                  {resource.name}
-                </p>
-                <p className="text-sm text-muted">{resource.description}</p>
-              </div>
-              <Download className="h-5 w-5 text-muted group-hover:text-teal transition-colors shrink-0" />
-            </a>
-          ))}
+          {resources.map((resource) => {
+            const Wrapper = resource.internal ? Link : "a";
+            const wrapperProps = resource.internal
+              ? { href: resource.href }
+              : { href: resource.href };
+            return (
+              <Wrapper
+                key={resource.name}
+                {...wrapperProps}
+                className="group flex items-center gap-4 bg-white rounded-xl border border-border p-5 hover:border-teal/50 transition-all"
+              >
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-teal/10">
+                  <FileText className="h-6 w-6 text-teal" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="font-semibold text-foreground group-hover:text-teal transition-colors">
+                    {resource.name}
+                  </p>
+                  <p className="text-sm text-muted">{resource.description}</p>
+                </div>
+                {resource.internal
+                  ? <ExternalLink className="h-5 w-5 text-muted group-hover:text-teal transition-colors shrink-0" />
+                  : <Download className="h-5 w-5 text-muted group-hover:text-teal transition-colors shrink-0" />
+                }
+              </Wrapper>
+            );
+          })}
         </div>
       </Section>
 
@@ -340,7 +353,7 @@ export default function PressKitPage() {
               announcements, and sponsor materials with proper attribution.
             </p>
             <p className="text-foreground">
-              <strong>Not permitted:</strong> Modifying logo colors, proportions,
+              <strong>Not permitted:</strong>{' '}Modifying logo colors, proportions,
               or elements; using assets to imply endorsement without written
               permission; using assets in ways that could damage TechTank&apos;s
               reputation.
