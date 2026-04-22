@@ -68,7 +68,7 @@ route, annotated with its purpose.
 │   └── ui/                         # Reusable UI (buttons, cards, sections, etc.)
 ├── constants/                      # Structured data (events, sponsors, social links)
 ├── prd/                            # Product requirements documents (specs)
-├── public/images/                  # Static imagery
+├── public/                         # Static assets (images, downloads, social media dumps)
 ├── next.config.ts
 └── tsconfig.json
 ```
