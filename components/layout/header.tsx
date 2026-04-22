@@ -22,7 +22,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/techtank-logo.svg"
+            src="/images/logos/light.svg"
             alt="TechTank TO"
             width={128}
             height={56}

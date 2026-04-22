@@ -51,11 +51,11 @@ export function Footer() {
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center">
               <Image
-                src="/images/techtank-logo.svg"
+                src="/images/logos/dark.svg"
                 alt="TechTank TO"
                 width={128}
                 height={56}
-                className="h-10 w-auto brightness-0 invert"
+                className="h-10 w-auto"
               />
             </Link>
             <p className="mt-4 text-sm text-white/70 leading-relaxed">

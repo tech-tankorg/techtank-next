@@ -34,10 +34,11 @@ const brandColors = [
   { name: "Blush", hex: "#EABFBF", usage: "Pink accent" },
 ];
 
-const logoDownloads = [
-  { name: "Full Logo (Color)", format: "SVG + PNG", description: "Full color on light backgrounds" },
-  { name: "Full Logo (White)", format: "SVG + PNG", description: "For dark backgrounds" },
-];
+const logoDownload = {
+  name: "TechTank Logos",
+  href: "/downloads/techtank-logos.zip",
+  description: "SVG + PNG — light and dark variants",
+};
 
 const resources = [
   { name: "Brand Guidelines", href: "/design-system", description: "Colors, typography, usage rules", internal: true },
@@ -143,8 +144,8 @@ export default function PressKitPage() {
         <div className="grid gap-6 lg:grid-cols-2 mb-12">
           <div className="bg-white rounded-xl border border-border p-8 flex items-center justify-center">
             <Image
-              src="/images/techtank-logo.svg"
-              alt="TechTank TO Logo"
+              src="/images/logos/light.svg"
+              alt="TechTank TO Logo (light)"
               width={240}
               height={80}
               className="h-16 w-auto"
@@ -153,37 +154,33 @@ export default function PressKitPage() {
           </div>
           <div className="bg-dark rounded-xl p-8 flex items-center justify-center">
             <Image
-              src="/images/techtank-logo.svg"
-              alt="TechTank TO Logo"
+              src="/images/logos/dark.svg"
+              alt="TechTank TO Logo (dark)"
               width={240}
               height={80}
-              className="h-16 w-auto brightness-0 invert"
+              className="h-16 w-auto"
               style={{ width: "auto" }}
             />
           </div>
         </div>
 
-        {/* Logo Downloads */}
-        <div className="grid gap-4 sm:grid-cols-2">
-          {logoDownloads.map((logo) => (
-            <a
-              key={logo.name}
-              href="#"
-              className="group flex items-center gap-4 bg-white rounded-xl border border-border p-5 hover:border-teal/50 transition-all"
-            >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-background">
-                <FileText className="h-6 w-6 text-teal" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="font-semibold text-foreground group-hover:text-teal transition-colors">
-                  {logo.name}
-                </p>
-                <p className="text-sm text-muted">{logo.description}</p>
-              </div>
-              <Download className="h-5 w-5 text-muted group-hover:text-teal transition-colors shrink-0" />
-            </a>
-          ))}
-        </div>
+        {/* Logo Download */}
+        <a
+          href={logoDownload.href}
+          download
+          className="group flex items-center gap-4 bg-white rounded-xl border border-border p-5 hover:border-teal/50 transition-all"
+        >
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-background">
+            <FileText className="h-6 w-6 text-teal" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="font-semibold text-foreground group-hover:text-teal transition-colors">
+              {logoDownload.name}
+            </p>
+            <p className="text-sm text-muted">{logoDownload.description}</p>
+          </div>
+          <Download className="h-5 w-5 text-muted group-hover:text-teal transition-colors shrink-0" />
+        </a>
       </Section>
 
       {/* Brand Colors */}
