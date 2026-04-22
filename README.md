@@ -77,9 +77,15 @@ conventions, and per-page content requirements.
 
 ## Contributing
 
+See [`CONTRIBUTORS.md`](./CONTRIBUTORS.md) for contribution guidelines.
+
 1. Read [`CLAUDE.md`](./CLAUDE.md) and [`prd/PRD.md`](./prd/PRD.md) before making
    structural changes — they define the IA, brand, and content conventions.
 2. When adding or renaming a route, update both the route table in
    `prd/PRD.md` §2.1 and the corresponding spec in `prd/pages/`.
 3. Keep one dominant CTA per page. Role pages under `/get-involved/*` must end
    in an intake action (email us).
+
+## License
+
+[MIT](./LICENSE.md) — see the file for details.
