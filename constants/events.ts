@@ -774,6 +774,15 @@ export const events: Event[] = [
   },
   // ─── 2023 ────────────────────────────────────────────────────────────────────
   {
+    id: "holiday-jam-2023",
+    title: "Holiday Jam 2023",
+    pitch: "TechTank's annual holiday social",
+    date: "2023-12-14",
+    tags: ["Social", "Holiday"],
+    status: "past",
+    photoAlbum: photoAlbums["AF1QipNJCcEC8dFz06_EsD32Tpot7evg7OY9ke9lb3Qs8itCUKgczd9V3iTdaKXVPb5qTw"],
+  },
+  {
     id: "figma-devmode-workshop",
     title: "Figma Workshop: Devmode Tips and Tricks",
     pitch: "Level up your Figma workflow with Dev Mode features",
