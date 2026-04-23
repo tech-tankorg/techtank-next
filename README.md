@@ -73,11 +73,18 @@ route, annotated with its purpose.
 ├── prd/                            # Product requirements documents (specs)
 ├── public/                         # Static assets (images, downloads, social media dumps)
 ├── next.config.ts
+├── vercel.json                     # Vercel deployment config (noindex header)
 └── tsconfig.json
 ```
 
 See [`prd/PRD.md`](./prd/PRD.md) for the full route map, shared-layout
 conventions, and per-page content requirements.
+
+## Deployment
+
+The site deploys to [Vercel](https://vercel.com/). Search engine indexing is
+disabled via an `X-Robots-Tag: noindex` header in [`vercel.json`](./vercel.json)
+— remove that header before launching to production.
 
 ## Contributing
 
