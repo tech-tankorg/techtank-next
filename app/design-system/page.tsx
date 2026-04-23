@@ -11,8 +11,6 @@ import {
   Users,
   Star,
   Zap,
-  Camera,
-  Play,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -271,19 +269,6 @@ export default function DesignSystemPage() {
             <div className="flex flex-wrap gap-3 items-center">
               <Badge variant="default" size="md">Medium (default)</Badge>
               <Badge variant="default" size="sm">Small</Badge>
-            </div>
-          </div>
-          <div>
-            <p className="text-sm text-muted-foreground mb-3 uppercase tracking-wider">Event card usage</p>
-            <div className="flex flex-wrap gap-3 items-center">
-              <Badge variant="warning">Upcoming</Badge>
-              <Badge variant="secondary">Past</Badge>
-              <Badge variant="secondary" asChild>
-                <a href="#"><Camera className="h-3 w-3" />Photos</a>
-              </Badge>
-              <Badge variant="secondary" asChild>
-                <a href="#"><Play className="h-3 w-3 fill-current" />Recap</a>
-              </Badge>
             </div>
           </div>
           <div>
