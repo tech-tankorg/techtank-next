@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Check, Clock, Users, Building, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
-import { LogoCloud } from "@/components/ui/logo-cloud";
+import { SponsorsMarquee } from "@/components/ui/sponsors-marquee";
 import { ContactCard } from "@/components/ui/contact-card";
 
 export const metadata: Metadata = {
@@ -87,7 +87,7 @@ export default function HostPage() {
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
               Host a TechTank event
             </h1>
-            <p className="text-xl text-muted leading-relaxed mb-8">
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               Bring the Toronto tech community to your office. Great for
               recruiting, brand visibility, and giving back to the community.
             </p>
@@ -119,14 +119,14 @@ export default function HostPage() {
               <h3 className="font-display text-xl font-semibold text-foreground mb-3">
                 {item.title}
               </h3>
-              <p className="text-muted leading-relaxed">{item.description}</p>
+              <p className="text-muted-foreground leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
       </Section>
 
       {/* Event Logistics */}
-      <Section className="bg-white border-y border-border">
+      <Section background="white">
         <SectionHeader
           overline="Event logistics"
           title="What we need from your space"
@@ -141,7 +141,7 @@ export default function HostPage() {
               <item.icon className="h-5 w-5 text-teal shrink-0 mt-0.5" />
               <div>
                 <p className="font-semibold text-foreground">{item.label}</p>
-                <p className="text-sm text-muted">{item.value}</p>
+                <p className="text-sm text-muted-foreground">{item.value}</p>
               </div>
             </div>
           ))}
@@ -182,7 +182,7 @@ export default function HostPage() {
       </Section>
 
       {/* What You Get */}
-      <Section className="gradient-brand-soft">
+      <Section background="brand-soft">
         <div className="max-w-3xl mx-auto">
           <SectionHeader
             overline="What you get"
@@ -218,21 +218,21 @@ export default function HostPage() {
                 {item.step}
               </div>
               <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
-              <p className="text-sm text-muted">{item.description}</p>
+              <p className="text-sm text-muted-foreground">{item.description}</p>
             </div>
           ))}
         </div>
       </Section>
 
       {/* Past Hosts Logo Cloud */}
-      <Section className="bg-white border-y border-border">
+      <Section background="white">
         <SectionHeader
           overline="Past hosts"
           title="Companies that have hosted"
           align="center"
           className="mb-8"
         />
-        <LogoCloud />
+        <SponsorsMarquee className="py-4" />
       </Section>
 
       {/* Host Resources */}
@@ -244,7 +244,7 @@ export default function HostPage() {
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
             Host toolkit in the Media Kit
           </h2>
-          <p className="text-muted mb-8">
+          <p className="text-muted-foreground mb-8">
             Run-of-show guides, host checklists, brand assets, and event templates all live in our Media Kit.
           </p>
           <Button variant="outline" asChild>
@@ -257,7 +257,7 @@ export default function HostPage() {
       </Section>
 
       {/* Intake Form CTA */}
-      <Section className="gradient-brand-soft">
+      <Section background="brand-soft">
         <div className="max-w-2xl mx-auto text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
             Ready to host?
@@ -265,7 +265,7 @@ export default function HostPage() {
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
             Let&apos;s bring TechTank to your space
           </h2>
-          <p className="text-muted mb-8">
+          <p className="text-muted-foreground mb-8">
             Tell us about your venue and when you&apos;d like to host. We&apos;ll
             get back to you within a week.
           </p>

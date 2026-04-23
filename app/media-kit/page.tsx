@@ -60,7 +60,7 @@ export default function PressKitPage() {
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
               TechTank Media Kit
             </h1>
-            <p className="text-xl text-muted leading-relaxed mb-8">
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               Logos, guidelines, and fast facts for press, sponsors, and
               partners. All assets are free to use with attribution.
             </p>
@@ -87,7 +87,7 @@ export default function PressKitPage() {
               key={fact.label}
               className="bg-white rounded-xl border border-border p-5"
             >
-              <p className="text-sm text-muted mb-1">{fact.label}</p>
+              <p className="text-sm text-muted-foreground mb-1">{fact.label}</p>
               <p className="font-semibold text-foreground">{fact.value}</p>
             </div>
           ))}
@@ -95,7 +95,7 @@ export default function PressKitPage() {
       </Section>
 
       {/* Boilerplate */}
-      <Section className="bg-white border-y border-border">
+      <Section background="white">
         <SectionHeader
           overline="Boilerplate"
           title="About TechTank (for press)"
@@ -177,14 +177,14 @@ export default function PressKitPage() {
             <p className="font-semibold text-foreground group-hover:text-teal transition-colors">
               {logoDownload.name}
             </p>
-            <p className="text-sm text-muted">{logoDownload.description}</p>
+            <p className="text-sm text-muted-foreground">{logoDownload.description}</p>
           </div>
-          <Download className="h-5 w-5 text-muted group-hover:text-teal transition-colors shrink-0" />
+          <Download className="h-5 w-5 text-muted-foreground group-hover:text-teal transition-colors shrink-0" />
         </a>
       </Section>
 
       {/* Brand Colors */}
-      <Section className="bg-white border-y border-border">
+      <Section background="white">
         <SectionHeader
           overline="Brand colors"
           title="Color palette"
@@ -203,9 +203,9 @@ export default function PressKitPage() {
               <div className="p-4">
                 <div className="flex items-center justify-between mb-1">
                   <p className="font-semibold text-foreground">{color.name}</p>
-                  <code className="text-sm text-muted">{color.hex}</code>
+                  <code className="text-sm text-muted-foreground">{color.hex}</code>
                 </div>
-                <p className="text-sm text-muted">{color.usage}</p>
+                <p className="text-sm text-muted-foreground">{color.usage}</p>
               </div>
             </div>
           ))}
@@ -221,21 +221,21 @@ export default function PressKitPage() {
         />
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="bg-white rounded-xl border border-border p-6">
-            <p className="text-sm text-muted mb-2">Display / Headlines</p>
+            <p className="text-sm text-muted-foreground mb-2">Display / Headlines</p>
             <p className="font-display text-4xl font-semibold text-foreground mb-4">
               Space Grotesk
             </p>
-            <p className="text-muted">
+            <p className="text-muted-foreground">
               Used for headings, titles, and display text. Geometric sans-serif
               with a modern, technical feel.
             </p>
           </div>
           <div className="bg-white rounded-xl border border-border p-6">
-            <p className="text-sm text-muted mb-2">Body / UI</p>
+            <p className="text-sm text-muted-foreground mb-2">Body / UI</p>
             <p className="font-sans text-4xl font-semibold text-foreground mb-4">
               Inter
             </p>
-            <p className="text-muted">
+            <p className="text-muted-foreground">
               Used for body text, UI elements, and long-form content. Humanist
               sans-serif optimized for screens.
             </p>
@@ -244,7 +244,7 @@ export default function PressKitPage() {
       </Section>
 
       {/* Resources */}
-      <Section className="bg-background">
+      <Section>
         <SectionHeader
           overline="Resources"
           title="Additional assets"
@@ -269,11 +269,11 @@ export default function PressKitPage() {
                   <p className="font-semibold text-foreground group-hover:text-teal transition-colors">
                     {resource.name}
                   </p>
-                  <p className="text-sm text-muted">{resource.description}</p>
+                  <p className="text-sm text-muted-foreground">{resource.description}</p>
                 </div>
                 {resource.internal
-                  ? <ExternalLink className="h-5 w-5 text-muted group-hover:text-teal transition-colors shrink-0" />
-                  : <Download className="h-5 w-5 text-muted group-hover:text-teal transition-colors shrink-0" />
+                  ? <ExternalLink className="h-5 w-5 text-muted-foreground group-hover:text-teal transition-colors shrink-0" />
+                  : <Download className="h-5 w-5 text-muted-foreground group-hover:text-teal transition-colors shrink-0" />
                 }
               </Wrapper>
             );
@@ -282,7 +282,7 @@ export default function PressKitPage() {
       </Section>
 
       {/* Social Links */}
-      <Section className="gradient-brand-soft">
+      <Section background="brand-soft">
         <div className="max-w-3xl mx-auto text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
             Connect with us
@@ -355,7 +355,7 @@ export default function PressKitPage() {
               permission; using assets in ways that could damage TechTank&apos;s
               reputation.
             </p>
-            <p className="text-muted text-sm">
+            <p className="text-muted-foreground text-sm">
               For questions about asset usage or to request permission for
               special use cases, please contact us at techtankto@gmail.com.
             </p>
@@ -364,7 +364,7 @@ export default function PressKitPage() {
       </Section>
 
       {/* Contact */}
-      <Section className="bg-background">
+      <Section>
         <div className="max-w-2xl mx-auto text-center mb-8">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
             Media contact
@@ -372,7 +372,7 @@ export default function PressKitPage() {
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
             Get in touch
           </h2>
-          <p className="text-muted">
+          <p className="text-muted-foreground">
             For press inquiries, interviews, and partnership discussions.
           </p>
         </div>

@@ -76,7 +76,7 @@ export default function SpeakerPage() {
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
               Speak at a TechTank event
             </h1>
-            <p className="text-xl text-muted leading-relaxed mb-8">
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               Share your expertise with the Toronto tech community. We help
               first-time speakers succeed with coaching and support.
             </p>
@@ -108,14 +108,14 @@ export default function SpeakerPage() {
               <h3 className="font-display text-xl font-semibold text-foreground mb-3">
                 {item.title}
               </h3>
-              <p className="text-muted leading-relaxed">{item.description}</p>
+              <p className="text-muted-foreground leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
       </Section>
 
       {/* Logistics */}
-      <Section className="bg-white border-y border-border">
+      <Section background="white">
         <SectionHeader
           overline="Logistics"
           title="What to expect"
@@ -130,7 +130,7 @@ export default function SpeakerPage() {
               <Clock className="h-5 w-5 text-teal shrink-0 mt-0.5" />
               <div>
                 <p className="font-semibold text-foreground">{item.label}</p>
-                <p className="text-sm text-muted">{item.value}</p>
+                <p className="text-sm text-muted-foreground">{item.value}</p>
               </div>
             </div>
           ))}
@@ -171,7 +171,7 @@ export default function SpeakerPage() {
       </Section>
 
       {/* What You Get */}
-      <Section className="gradient-brand-soft">
+      <Section background="brand-soft">
         <div className="max-w-3xl mx-auto">
           <SectionHeader
             overline="What you get"
@@ -202,7 +202,7 @@ export default function SpeakerPage() {
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
             Speaker toolkit in the Media Kit
           </h2>
-          <p className="text-muted mb-8">
+          <p className="text-muted-foreground mb-8">
             Brand assets, slide templates, run-of-show guidance, and tips for
             first-time speakers all live in our Media Kit.
           </p>
@@ -216,7 +216,7 @@ export default function SpeakerPage() {
       </Section>
 
       {/* Intake Form CTA */}
-      <Section className="gradient-brand-soft">
+      <Section background="brand-soft">
         <div className="max-w-2xl mx-auto text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
             Ready to speak?
@@ -224,7 +224,7 @@ export default function SpeakerPage() {
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
             Submit your talk proposal
           </h2>
-          <p className="text-muted mb-8">
+          <p className="text-muted-foreground mb-8">
             Tell us about yourself and your talk idea. We&apos;ll get back to
             you within a week.
           </p>

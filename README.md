@@ -14,6 +14,8 @@ The initial UI scaffold was generated from the PRD via v0 —
 - [Next.js 16](https://nextjs.org/) (App Router, Turbopack)
 - React 19 + TypeScript
 - [Tailwind CSS 4](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/) component pattern (`components.json` config)
+- [class-variance-authority](https://cva.style/) (CVA) for type-safe component variants
 - [Radix UI primitives](https://www.radix-ui.com/) (via `@radix-ui/react-slot`)
 - [lucide-react](https://lucide.dev/) for icons
 - Inter + Space Grotesk via `next/font`
@@ -78,10 +80,12 @@ conventions, and per-page content requirements.
 
 ## Contributing
 
-See [`CONTRIBUTORS.md`](./CONTRIBUTORS.md) for contribution guidelines.
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for contribution guidelines.
 
-1. Read [`CLAUDE.md`](./CLAUDE.md) and [`prd/PRD.md`](./prd/PRD.md) before making
-   structural changes — they define the IA, brand, and content conventions.
+1. Read [`prd/PRD.md`](./prd/PRD.md) before making structural changes — it
+   defines the IA, brand, and content conventions.
+   - **AI agents only:** also read [`CLAUDE.md`](./CLAUDE.md) for agent-specific
+     working conventions and constraints.
 2. When adding or renaming a route, update both the route table in
    `prd/PRD.md` §2.1 and the corresponding spec in `prd/pages/`.
 3. Keep one dominant CTA per page. Role pages under `/get-involved/*` must end

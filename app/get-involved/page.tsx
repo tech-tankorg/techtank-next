@@ -67,7 +67,7 @@ export default function GetInvolvedPage() {
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
               Let&apos;s build TechTank together
             </h1>
-            <p className="text-xl text-muted leading-relaxed">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               TechTank runs on the Toronto tech community — speakers, hosts,
               sponsors, and volunteers who show up every month. Pick the role
               that fits you right now.
@@ -91,7 +91,7 @@ export default function GetInvolvedPage() {
       </Section>
 
       {/* Why Get Involved */}
-      <Section className="gradient-brand-soft">
+      <Section background="brand-soft">
         <SectionHeader
           overline="Why get involved"
           title="What you get out of it"
@@ -109,7 +109,7 @@ export default function GetInvolvedPage() {
               <h3 className="font-display text-xl font-semibold text-foreground mb-3">
                 {item.title}
               </h3>
-              <p className="text-muted leading-relaxed">{item.description}</p>
+              <p className="text-muted-foreground leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
@@ -131,14 +131,14 @@ export default function GetInvolvedPage() {
               <h3 className="font-display text-lg font-semibold text-foreground mb-2">
                 {faq.question}
               </h3>
-              <p className="text-muted">{faq.answer}</p>
+              <p className="text-muted-foreground">{faq.answer}</p>
             </div>
           ))}
         </div>
       </Section>
 
       {/* Contact Strip */}
-      <Section className="bg-background">
+      <Section>
         <div className="max-w-2xl mx-auto text-center mb-8">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
             Ready to connect?
@@ -146,7 +146,7 @@ export default function GetInvolvedPage() {
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
             Drop us a line
           </h2>
-          <p className="text-muted">
+          <p className="text-muted-foreground">
             We respond to every message — hosts, sponsors, speakers, and
             volunteers. Whichever role fits, we&apos;d love to hear from you.
           </p>

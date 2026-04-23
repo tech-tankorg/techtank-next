@@ -70,11 +70,11 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
           <span className="text-[#E4405F]">
             <InstagramIcon className="h-5 w-5" />
           </span>
-          <span className="text-xs text-muted uppercase tracking-wide font-medium">
+          <span className="text-xs text-muted-foreground uppercase tracking-wide font-medium">
             Instagram
           </span>
-          <span className="text-xs text-muted/50">·</span>
-          <span className="text-xs text-muted">
+          <span className="text-xs text-muted-foreground/50">·</span>
+          <span className="text-xs text-muted-foreground">
             {formatDate(post.date, post.createdAtRaw)}
           </span>
         </div>

@@ -97,7 +97,7 @@ export default function AboutPage() {
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
               We build the community we wanted to find
             </h1>
-            <p className="text-xl text-muted leading-relaxed mb-8">
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               TechTank TO is a volunteer-run, Toronto-based tech community
               founded in 2022. We host monthly in-person events where
               developers, designers, PMs, and tech-curious people gather to
@@ -143,7 +143,7 @@ export default function AboutPage() {
                 <h3 className="font-display text-xl font-semibold text-foreground mb-2">
                   {pillar.title}
                 </h3>
-                <p className="text-muted leading-relaxed">{pillar.description}</p>
+                <p className="text-muted-foreground leading-relaxed">{pillar.description}</p>
               </div>
             </div>
           ))}
@@ -151,7 +151,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Code of Conduct Teaser */}
-      <Section className="bg-white border-y border-border">
+      <Section background="white">
         <div className="max-w-3xl mx-auto text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
             Safety first
@@ -159,7 +159,7 @@ export default function AboutPage() {
           <h2 className="font-display text-3xl font-semibold text-foreground mb-6">
             Our commitment to a safe community
           </h2>
-          <p className="text-lg text-muted leading-relaxed mb-8">
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
             TechTank is committed to providing a harassment-free experience for
             everyone. Our Code of Conduct applies to all community spaces,
             online and in-person.
@@ -171,7 +171,7 @@ export default function AboutPage() {
       </Section>
 
       {/* What We Do */}
-      <Section className="gradient-brand-soft">
+      <Section background="brand-soft">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
@@ -180,7 +180,7 @@ export default function AboutPage() {
             <h2 className="font-display text-3xl font-semibold text-foreground lg:text-4xl mb-6">
               Monthly events and an active community
             </h2>
-            <div className="space-y-4 text-muted leading-relaxed">
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 <strong className="text-foreground">Monthly meetups:</strong>{" "}
                 In-person events featuring technical talks and networking.
@@ -243,7 +243,7 @@ export default function AboutPage() {
           <h2 className="font-display text-3xl font-semibold text-foreground lg:text-4xl mb-6">
             Volunteer-run, company-supported
           </h2>
-          <p className="text-lg text-muted leading-relaxed mb-8">
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
             TechTank is 100% volunteer-run. Companies provide venue and food for
             events; TechTank handles speakers, marketing, and coordination.
           </p>
@@ -259,7 +259,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Timeline */}
-      <Section className="bg-white border-y border-border">
+      <Section background="white">
         <SectionHeader
           overline="Our story"
           title="Building Toronto's tech community"
@@ -292,7 +292,7 @@ export default function AboutPage() {
                   <h3 className="font-display text-xl font-semibold text-foreground mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-muted">{item.description}</p>
+                  <p className="text-muted-foreground">{item.description}</p>
                 </div>
 
                 {/* Spacer for alternating layout */}
@@ -304,7 +304,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Closing CTA */}
-      <Section className="gradient-brand-soft">
+      <Section background="brand-soft">
         <div className="max-w-2xl mx-auto text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
             Join us
@@ -312,7 +312,7 @@ export default function AboutPage() {
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
             Ready to be part of TechTank?
           </h2>
-          <p className="text-muted mb-8">
+          <p className="text-muted-foreground mb-8">
             Whether you want to attend, speak, host, or volunteer — there&apos;s
             a place for you here.
           </p>

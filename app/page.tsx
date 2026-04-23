@@ -3,8 +3,8 @@ import Image from "next/image";
 import { ArrowRight, Calendar, ExternalLink, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
-import { HeroStatsMarquee } from "@/components/ui/hero-stats-marquee";
-import { LogoCloud } from "@/components/ui/logo-cloud";
+import { StatsMarquee } from "@/components/ui/stats-marquee";
+import { SponsorsMarquee } from "@/components/ui/sponsors-marquee";
 import { RoleCard, roleCardsData } from "@/components/ui/role-card";
 import { EventCard } from "@/components/ui/event-card";
 import { SocialFeed } from "@/components/ui/social-feed";
@@ -50,7 +50,7 @@ export default function HomePage() {
               <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
                 Toronto&apos;s home for tech community
               </h1>
-              <p className="text-lg text-muted leading-relaxed mb-6 lg:max-w-md">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6 lg:max-w-md">
                 Tech talks, panels, socials, sports, and more—hosted at companies across the city.
               </p>
               <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
@@ -115,12 +115,12 @@ export default function HomePage() {
           </div>
 
           {/* Stats Marquee */}
-          <HeroStatsMarquee />
+          <StatsMarquee className="py-8 mt-8" />
         </div>
       </section>
 
       {/* Social Feed */}
-      <Section id="community" className="bg-sand/50 texture-grain">
+      <Section id="community" background="muted">
         <SectionHeader
           overline="From the community"
           title="Real people, real moments"
@@ -151,10 +151,10 @@ export default function HomePage() {
 
         {/* Sponsors */}
         <div className="mb-6">
-          <p className="text-center text-xs text-muted mb-4 uppercase tracking-widest font-medium">
+          <p className="text-center text-xs text-muted-foreground mb-4 uppercase tracking-widest font-medium">
             Hosted and supported by
           </p>
-          <LogoCloud />
+          <SponsorsMarquee className="py-4" />
         </div>
 
         {/* CTAs */}
@@ -179,7 +179,7 @@ export default function HomePage() {
       </Section>
 
       {/* Ways to Get Involved */}
-      <Section className="gradient-brand texture-grain">
+      <Section background="brand">
         <SectionHeader
           overline="There&apos;s a spot for you"
           title="Jump in"
@@ -202,7 +202,7 @@ export default function HomePage() {
           <h2 className="font-display text-2xl lg:text-3xl font-bold text-teal-dark mb-4">
             Community first. Always.
           </h2>
-          <p className="text-muted mb-6">
+          <p className="text-muted-foreground mb-6">
             No gatekeeping—just people who genuinely want to learn, share, and lift each other up.
           </p>
           <Button variant="primary" asChild>
@@ -212,7 +212,7 @@ export default function HomePage() {
       </Section>
 
       {/* Two-flow CTA */}
-      <Section id="join-us" className="gradient-brand-vertical texture-grain py-8 lg:py-12">
+      <Section id="join-us" background="brand-vertical" className="py-8 lg:py-12">
         <SectionHeader
           overline="Take the next step"
           title="Where to next?"
@@ -232,7 +232,7 @@ export default function HomePage() {
               <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
                 Upcoming events
               </h3>
-              <p className="text-sm text-muted mb-4">
+              <p className="text-sm text-muted-foreground mb-4">
                 See what&apos;s coming up and RSVP to the next meetup.
               </p>
               <span className="inline-flex items-center text-sm font-semibold text-teal-dark group-hover:text-amber-dark transition-colors">
@@ -254,7 +254,7 @@ export default function HomePage() {
               <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
                 Get involved
               </h3>
-              <p className="text-sm text-muted mb-4">
+              <p className="text-sm text-muted-foreground mb-4">
                 Speak, host, sponsor, or volunteer with the crew.
               </p>
               <span className="inline-flex items-center text-sm font-semibold text-teal-dark group-hover:text-amber-dark transition-colors">

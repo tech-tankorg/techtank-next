@@ -93,7 +93,7 @@ export default function VolunteerPage() {
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
               Volunteer with TechTank
             </h1>
-            <p className="text-xl text-muted leading-relaxed mb-8">
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               Join the crew that makes Toronto&apos;s tech community happen
               every month. Multiple roles available — no speaking required.
             </p>
@@ -125,14 +125,14 @@ export default function VolunteerPage() {
               <h3 className="font-display text-xl font-semibold text-foreground mb-3">
                 {item.title}
               </h3>
-              <p className="text-muted leading-relaxed">{item.description}</p>
+              <p className="text-muted-foreground leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
       </Section>
 
       {/* Volunteer Roles */}
-      <Section className="bg-white border-y border-border">
+      <Section background="white">
         <SectionHeader
           overline="Volunteer roles"
           title="Ways to help"
@@ -149,8 +149,8 @@ export default function VolunteerPage() {
                 <role.icon className="h-5 w-5" />
               </div>
               <h3 className="font-semibold text-foreground mb-2">{role.title}</h3>
-              <p className="text-sm text-muted mb-3">{role.description}</p>
-              <p className="text-xs text-muted/80 border-t border-border pt-3">
+              <p className="text-sm text-muted-foreground mb-3">{role.description}</p>
+              <p className="text-xs text-muted-foreground/80 border-t border-border pt-3">
                 <strong>Time:</strong> {role.commitment}
               </p>
             </div>
@@ -159,7 +159,7 @@ export default function VolunteerPage() {
       </Section>
 
       {/* What You Get */}
-      <Section className="gradient-brand-soft">
+      <Section background="brand-soft">
         <div className="max-w-3xl mx-auto">
           <SectionHeader
             overline="What you get"
@@ -182,7 +182,7 @@ export default function VolunteerPage() {
       </Section>
 
       {/* Get Started */}
-      <Section className="gradient-brand-soft">
+      <Section background="brand-soft">
         <div className="max-w-2xl mx-auto text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
             Get started
@@ -190,7 +190,7 @@ export default function VolunteerPage() {
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
             Ready to join the crew?
           </h2>
-          <p className="text-muted mb-8">
+          <p className="text-muted-foreground mb-8">
             Sign up to volunteer, or come to an event first to meet the team in
             person.
           </p>

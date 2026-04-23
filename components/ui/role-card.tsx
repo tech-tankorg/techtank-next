@@ -48,7 +48,7 @@ export function RoleCard({
       </h3>
 
       {/* Description */}
-      <p className="text-muted text-sm leading-relaxed mb-6">{description}</p>
+      <p className="text-muted-foreground text-sm leading-relaxed mb-6">{description}</p>
 
       {/* Benefits */}
       <ul className="space-y-2 mb-6 flex-1">

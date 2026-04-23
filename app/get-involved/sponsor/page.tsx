@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Check, Heart, Users, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
-import { LogoCloud } from "@/components/ui/logo-cloud";
+import { SponsorsMarquee } from "@/components/ui/sponsors-marquee";
 import { ContactCard } from "@/components/ui/contact-card";
 import {
   getCoverImage,
@@ -88,7 +88,7 @@ export default function SponsorPage() {
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
               Sponsor the Toronto tech community
             </h1>
-            <p className="text-xl text-muted leading-relaxed mb-8">
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               Support the monthly events, speakers, and programs that bring the
               community together. Tasteful brand visibility, real impact.
             </p>
@@ -120,14 +120,14 @@ export default function SponsorPage() {
               <h3 className="font-display text-xl font-semibold text-foreground mb-3">
                 {item.title}
               </h3>
-              <p className="text-muted leading-relaxed">{item.description}</p>
+              <p className="text-muted-foreground leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
       </Section>
 
       {/* What Sponsorship Supports */}
-      <Section className="bg-white border-y border-border">
+      <Section background="white">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
@@ -203,18 +203,18 @@ export default function SponsorPage() {
               <h3 className="font-display text-xl font-semibold text-foreground mb-2">
                 {tier.name}
               </h3>
-              <p className="text-muted">{tier.description}</p>
+              <p className="text-muted-foreground">{tier.description}</p>
             </div>
           ))}
         </div>
-        <p className="text-center text-sm text-muted mt-8">
+        <p className="text-center text-sm text-muted-foreground mt-8">
           Exact pricing and benefits in our sponsorship info. Tiers are
           illustrative — we&apos;ll work with your budget.
         </p>
       </Section>
 
       {/* Base Package */}
-      <Section className="gradient-brand-soft">
+      <Section background="brand-soft">
         <div className="max-w-3xl mx-auto">
           <SectionHeader
             overline="All sponsors get"
@@ -237,18 +237,18 @@ export default function SponsorPage() {
       </Section>
 
       {/* Past Sponsors */}
-      <Section className="bg-white border-y border-border">
+      <Section background="white">
         <SectionHeader
           overline="Our supporters"
           title="Companies that sponsor TechTank"
           align="center"
           className="mb-8"
         />
-        <LogoCloud />
+        <SponsorsMarquee className="py-4" />
       </Section>
 
       {/* Hosting vs Sponsoring */}
-      <Section className="bg-background">
+      <Section>
         <div className="max-w-3xl mx-auto text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
             Not sure?
@@ -256,7 +256,7 @@ export default function SponsorPage() {
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
             Hosting vs. sponsoring
           </h2>
-          <p className="text-muted mb-6">
+          <p className="text-muted-foreground mb-6">
             <strong className="text-foreground">Hosting</strong> means providing
             your venue and food for one event. <strong className="text-foreground">Sponsoring</strong>{" "}
             means supporting TechTank with funding for ongoing operations,
@@ -269,7 +269,7 @@ export default function SponsorPage() {
       </Section>
 
       {/* Intake Form CTA */}
-      <Section className="gradient-brand-soft">
+      <Section background="brand-soft">
         <div className="max-w-2xl mx-auto text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
             Ready to sponsor?
@@ -277,7 +277,7 @@ export default function SponsorPage() {
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
             Get the sponsorship info
           </h2>
-          <p className="text-muted mb-8">
+          <p className="text-muted-foreground mb-8">
             Tell us about your company and goals. We&apos;ll send our full
             sponsorship details within a week.
           </p>

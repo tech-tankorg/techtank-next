@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import {
   Check,
   Mail,
@@ -34,11 +35,23 @@ const accentTokens = [
   { name: "blush", hex: "#EABFBF", label: "Blush", usage: "Pink accent" },
 ];
 
-const semanticColors = [
-  { name: "background", hex: "#F9F6F2", label: "Background" },
-  { name: "foreground", hex: "#1B4B5A", label: "Foreground" },
-  { name: "muted", hex: "#4A6670", label: "Muted" },
-  { name: "border", hex: "rgba(27,75,90,0.12)", label: "Border" },
+// Paired tokens: bg + foreground rendered as a split swatch
+const semanticPairs = [
+  { bg: "background", bgHex: "#F9F6F2", fg: "foreground", fgHex: "#1B4B5A", role: "Page background / body text" },
+  { bg: "muted", bgHex: "#EBF3F4", fg: "muted-foreground", fgHex: "#4A6670", role: "De-emphasized surface / secondary text" },
+  { bg: "card", bgHex: "rgba(255,255,255,0.7)", fg: "card-foreground", fgHex: "#1B4B5A", role: "Glass card surface" },
+  { bg: "popover", bgHex: "#FFFFFF", fg: "popover-foreground", fgHex: "#1B4B5A", role: "Dropdowns, tooltips" },
+  { bg: "primary", bgHex: "#1B4B5A", fg: "primary-foreground", fgHex: "#FFFFFF", role: "Primary actions, buttons" },
+  { bg: "secondary", bgHex: "#A8D5D8", fg: "secondary-foreground", fgHex: "#1B4B5A", role: "Secondary actions, icon fills" },
+  { bg: "accent", bgHex: "#D4ECEE", fg: "accent-foreground", fgHex: "#1B4B5A", role: "Hover / active highlight states" },
+  { bg: "destructive", bgHex: "#E87C4E", fg: "destructive-foreground", fgHex: "#FFFFFF", role: "Errors, destructive actions" },
+  { bg: "warning", bgHex: "#FFBC55", fg: "warning-foreground", fgHex: "#1B4B5A", role: "Upcoming, caution states" },
+];
+
+const semanticUtilities = [
+  { token: "border", hex: "rgba(27,75,90,0.12)", role: "Dividers, card borders" },
+  { token: "input", hex: "rgba(27,75,90,0.18)", role: "Input field borders" },
+  { token: "ring", hex: "#2A6B7C", role: "Focus ring (keyboard nav)" },
 ];
 
 export default function DesignSystemPage() {
@@ -54,7 +67,7 @@ export default function DesignSystemPage() {
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
               Design System
             </h1>
-            <p className="text-xl text-muted leading-relaxed">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               Colors, typography, gradients, and components used across the TechTank TO website.
             </p>
           </div>
@@ -71,9 +84,9 @@ export default function DesignSystemPage() {
               <div className="p-4">
                 <div className="flex items-center justify-between mb-1">
                   <p className="font-semibold text-foreground">{color.label}</p>
-                  <code className="text-xs text-muted">{color.hex}</code>
+                  <code className="text-xs text-muted-foreground">{color.hex}</code>
                 </div>
-                <p className="text-xs text-muted">{color.usage}</p>
+                <p className="text-xs text-muted-foreground">{color.usage}</p>
                 <code className="text-xs text-teal/70 mt-1 block">bg-{color.name} / text-{color.name}</code>
               </div>
             </div>
@@ -82,7 +95,7 @@ export default function DesignSystemPage() {
       </Section>
 
       {/* Colors — Accent */}
-      <Section className="bg-white border-y border-border">
+      <Section background="white">
         <SectionHeader overline="Colors" title="Accent tokens" className="mb-12" />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {accentTokens.map((color) => (
@@ -91,9 +104,9 @@ export default function DesignSystemPage() {
               <div className="p-4">
                 <div className="flex items-center justify-between mb-1">
                   <p className="font-semibold text-foreground">{color.label}</p>
-                  <code className="text-xs text-muted">{color.hex}</code>
+                  <code className="text-xs text-muted-foreground">{color.hex}</code>
                 </div>
-                <p className="text-xs text-muted">{color.usage}</p>
+                <p className="text-xs text-muted-foreground">{color.usage}</p>
                 <code className="text-xs text-teal/70 mt-1 block">bg-{color.name} / text-{color.name}</code>
               </div>
             </div>
@@ -104,14 +117,31 @@ export default function DesignSystemPage() {
       {/* Colors — Semantic */}
       <Section>
         <SectionHeader overline="Colors" title="Semantic tokens" className="mb-12" />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {semanticColors.map((color) => (
-            <div key={color.name} className="bg-background rounded-xl border border-border overflow-hidden">
-              <div className="h-16" style={{ backgroundColor: color.hex }} />
-              <div className="p-4">
-                <p className="font-semibold text-foreground mb-1">{color.label}</p>
-                <code className="text-xs text-muted">{color.hex}</code>
-                <code className="text-xs text-teal/70 mt-1 block">bg-{color.name} / text-{color.name}</code>
+        <p className="text-sm text-muted-foreground mb-6 -mt-8 max-w-2xl">
+          Every token has a paired foreground — use <code className="text-xs bg-muted px-1 py-0.5 rounded">bg-*</code> for surfaces and <code className="text-xs bg-muted px-1 py-0.5 rounded">text-*-foreground</code> for text on top.
+        </p>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-8">
+          {semanticPairs.map((pair) => (
+            <div key={pair.bg} className="rounded-xl border border-border overflow-hidden">
+              <div className="flex h-14">
+                <div className="flex-1" style={{ backgroundColor: pair.bgHex }} />
+                <div className="flex-1" style={{ backgroundColor: pair.fgHex }} />
+              </div>
+              <div className="bg-white p-3">
+                <code className="text-xs font-semibold text-foreground block">bg-{pair.bg}</code>
+                <code className="text-xs text-teal/70 block">text-{pair.fg}</code>
+                <p className="text-[11px] text-muted-foreground mt-1">{pair.role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="grid gap-4 sm:grid-cols-3 max-w-xl">
+          {semanticUtilities.map((u) => (
+            <div key={u.token} className="rounded-xl border border-border overflow-hidden">
+              <div className="h-8" style={{ backgroundColor: u.hex }} />
+              <div className="bg-white p-3">
+                <code className="text-xs font-semibold text-foreground block">{u.token}</code>
+                <p className="text-[11px] text-muted-foreground mt-1">{u.role}</p>
               </div>
             </div>
           ))}
@@ -119,7 +149,7 @@ export default function DesignSystemPage() {
       </Section>
 
       {/* Gradients */}
-      <Section>
+      <Section background="white">
         <SectionHeader overline="Gradients" title="Gradient utilities" className="mb-12" />
         <div className="grid gap-6 lg:grid-cols-2">
           {[
@@ -132,7 +162,7 @@ export default function DesignSystemPage() {
               <div className={`h-32 ${g.cls}`} />
               <div className="bg-white p-4">
                 <code className="text-sm font-semibold text-foreground">{g.label}</code>
-                <p className="text-sm text-muted mt-1">{g.desc}</p>
+                <p className="text-sm text-muted-foreground mt-1">{g.desc}</p>
               </div>
             </div>
           ))}
@@ -140,11 +170,11 @@ export default function DesignSystemPage() {
       </Section>
 
       {/* Typography */}
-      <Section className="bg-white border-y border-border">
+      <Section>
         <SectionHeader overline="Typography" title="Type scale" className="mb-12" />
         <div className="space-y-8 max-w-3xl">
           <div className="pb-6 border-b border-border">
-            <p className="text-xs text-muted uppercase tracking-wider mb-3">Display — Space Grotesk (.font-display)</p>
+            <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Display — Space Grotesk (.font-display)</p>
             <p className="font-display text-6xl font-semibold text-foreground leading-tight">Aa Display 6xl</p>
             <p className="font-display text-5xl font-semibold text-foreground leading-tight mt-2">Aa Display 5xl</p>
             <p className="font-display text-4xl font-semibold text-foreground leading-tight mt-2">Aa Display 4xl</p>
@@ -153,14 +183,14 @@ export default function DesignSystemPage() {
             <p className="font-display text-xl font-semibold text-foreground mt-2">Aa Display xl</p>
           </div>
           <div className="pb-6 border-b border-border">
-            <p className="text-xs text-muted uppercase tracking-wider mb-3">Body — Inter (.font-sans)</p>
+            <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Body — Inter (.font-sans)</p>
             <p className="text-xl text-foreground">Text xl — lead paragraphs</p>
             <p className="text-base text-foreground mt-2">Text base — body copy, default size</p>
-            <p className="text-sm text-muted mt-2">Text sm — secondary copy, captions</p>
-            <p className="text-xs text-muted mt-2">Text xs — labels, overlines, metadata</p>
+            <p className="text-sm text-muted-foreground mt-2">Text sm — secondary copy, captions</p>
+            <p className="text-xs text-muted-foreground mt-2">Text xs — labels, overlines, metadata</p>
           </div>
           <div>
-            <p className="text-xs text-muted uppercase tracking-wider mb-3">Special — Overlines</p>
+            <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Special — Overlines</p>
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal">
               Section overline pattern
             </span>
@@ -169,11 +199,11 @@ export default function DesignSystemPage() {
       </Section>
 
       {/* Buttons */}
-      <Section>
+      <Section background="white">
         <SectionHeader overline="Components" title="Buttons" className="mb-12" />
         <div className="space-y-8">
           <div>
-            <p className="text-sm text-muted mb-4 uppercase tracking-wider">Variants</p>
+            <p className="text-sm text-muted-foreground mb-4 uppercase tracking-wider">Variants</p>
             <div className="flex flex-wrap gap-4 items-center">
               <Button variant="primary">Primary</Button>
               <Button variant="secondary">Secondary</Button>
@@ -182,7 +212,7 @@ export default function DesignSystemPage() {
             </div>
           </div>
           <div>
-            <p className="text-sm text-muted mb-4 uppercase tracking-wider">Sizes</p>
+            <p className="text-sm text-muted-foreground mb-4 uppercase tracking-wider">Sizes</p>
             <div className="flex flex-wrap gap-4 items-center">
               <Button variant="primary" size="lg">Large</Button>
               <Button variant="primary" size="md">Medium (default)</Button>
@@ -190,7 +220,7 @@ export default function DesignSystemPage() {
             </div>
           </div>
           <div>
-            <p className="text-sm text-muted mb-4 uppercase tracking-wider">With icons</p>
+            <p className="text-sm text-muted-foreground mb-4 uppercase tracking-wider">With icons</p>
             <div className="flex flex-wrap gap-4 items-center">
               <Button variant="primary">
                 <Mail className="mr-2 h-4 w-4" />
@@ -211,7 +241,7 @@ export default function DesignSystemPage() {
             </div>
           </div>
           <div>
-            <p className="text-sm text-muted mb-4 uppercase tracking-wider">States</p>
+            <p className="text-sm text-muted-foreground mb-4 uppercase tracking-wider">States</p>
             <div className="flex flex-wrap gap-4 items-center">
               <Button variant="primary" disabled>Disabled primary</Button>
               <Button variant="outline" disabled>Disabled outline</Button>
@@ -221,25 +251,38 @@ export default function DesignSystemPage() {
       </Section>
 
       {/* Tags */}
-      <Section className="bg-white border-y border-border">
-        <SectionHeader overline="Components" title="Tags &amp; Pills" className="mb-12" />
-        <div className="flex flex-wrap gap-4 items-center">
-          <span className="tag">Tag filled</span>
-          <span className="tag-outline">Tag outline</span>
-          <span className="inline-flex items-center px-3 py-1 rounded-full bg-teal/10 text-teal text-sm font-medium">
-            Soft teal
-          </span>
-          <span className="inline-flex items-center px-3 py-1 rounded-full bg-amber/10 text-amber-dark text-sm font-medium">
-            Soft amber
-          </span>
-          <span className="inline-flex items-center px-3 py-1 rounded-full bg-seafoam text-teal-dark text-sm font-medium">
-            Seafoam
-          </span>
+      <Section>
+        <SectionHeader overline="Components" title="Tags &amp; Badges" className="mb-12" />
+        <div className="space-y-6">
+          <div>
+            <p className="text-sm text-muted-foreground mb-3 uppercase tracking-wider">Variants</p>
+            <div className="flex flex-wrap gap-3 items-center">
+              <Badge variant="default">Default</Badge>
+              <Badge variant="secondary">Secondary</Badge>
+              <Badge variant="warning">Warning</Badge>
+              <Badge variant="destructive">Destructive</Badge>
+              <Badge variant="outline">Outline</Badge>
+            </div>
+          </div>
+          <div>
+            <p className="text-sm text-muted-foreground mb-3 uppercase tracking-wider">Sizes</p>
+            <div className="flex flex-wrap gap-3 items-center">
+              <Badge variant="default" size="md">Medium (default)</Badge>
+              <Badge variant="default" size="sm">Small</Badge>
+            </div>
+          </div>
+          <div>
+            <p className="text-sm text-muted-foreground mb-3 uppercase tracking-wider">CSS tag utilities</p>
+            <div className="flex flex-wrap gap-3 items-center">
+              <span className="tag">tag filled</span>
+              <span className="tag-outline">tag outline</span>
+            </div>
+          </div>
         </div>
       </Section>
 
       {/* Cards */}
-      <Section>
+      <Section background="white">
         <SectionHeader overline="Components" title="Cards" className="mb-12" />
         <div className="grid gap-6 lg:grid-cols-3">
           {/* Icon card */}
@@ -248,7 +291,7 @@ export default function DesignSystemPage() {
               <Users className="h-6 w-6" />
             </div>
             <h3 className="font-display text-xl font-semibold text-foreground mb-3">Icon card</h3>
-            <p className="text-muted leading-relaxed">Used for feature lists and benefit sections throughout the site.</p>
+            <p className="text-muted-foreground leading-relaxed">Used for feature lists and benefit sections throughout the site.</p>
           </div>
 
           {/* Checklist card — teal */}
@@ -281,9 +324,9 @@ export default function DesignSystemPage() {
         <div className="grid gap-6 lg:grid-cols-2 mt-6">
           {/* Stat card */}
           <div className="bg-white rounded-xl border border-border p-5">
-            <p className="text-sm text-muted mb-1">Stat label</p>
+            <p className="text-sm text-muted-foreground mb-1">Stat label</p>
             <p className="font-display text-3xl font-semibold text-teal-dark">40–100</p>
-            <p className="text-sm text-muted mt-1">Attendees per event</p>
+            <p className="text-sm text-muted-foreground mt-1">Attendees per event</p>
           </div>
 
           {/* Hover-link card */}
@@ -293,26 +336,26 @@ export default function DesignSystemPage() {
             </div>
             <div className="flex-1 min-w-0">
               <p className="font-semibold text-foreground group-hover:text-teal transition-colors">Hover-link card</p>
-              <p className="text-sm text-muted">Used for downloadable resources and media kit assets.</p>
+              <p className="text-sm text-muted-foreground">Used for downloadable resources and media kit assets.</p>
             </div>
-            <Download className="h-5 w-5 text-muted group-hover:text-teal transition-colors shrink-0" />
+            <Download className="h-5 w-5 text-muted-foreground group-hover:text-teal transition-colors shrink-0" />
           </a>
         </div>
       </Section>
 
       {/* Surfaces */}
-      <Section className="bg-white border-y border-border">
+      <Section>
         <SectionHeader overline="Components" title="Surfaces &amp; effects" className="mb-12" />
         <div className="grid gap-6 lg:grid-cols-3">
           <div className="glass rounded-2xl p-8">
             <Zap className="h-8 w-8 text-teal mb-4" />
             <p className="font-semibold text-foreground mb-1">.glass</p>
-            <p className="text-sm text-muted">White 55%, blur 20px, saturate 180%</p>
+            <p className="text-sm text-muted-foreground">White 55%, blur 20px, saturate 180%</p>
           </div>
           <div className="glass-subtle rounded-2xl p-8">
             <Zap className="h-8 w-8 text-teal mb-4" />
             <p className="font-semibold text-foreground mb-1">.glass-subtle</p>
-            <p className="text-sm text-muted">White 35%, blur 16px, saturate 150%</p>
+            <p className="text-sm text-muted-foreground">White 35%, blur 16px, saturate 150%</p>
           </div>
           <div className="glass-dark rounded-2xl p-8">
             <Zap className="h-8 w-8 text-seafoam mb-4" />
@@ -324,17 +367,17 @@ export default function DesignSystemPage() {
         <div className="grid gap-6 lg:grid-cols-2 mt-6">
           <div className="shadow-soft bg-white rounded-2xl p-8">
             <p className="font-semibold text-foreground mb-1">.shadow-soft</p>
-            <p className="text-sm text-muted">Layered teal-dark drop shadows, default cards</p>
+            <p className="text-sm text-muted-foreground">Layered teal-dark drop shadows, default cards</p>
           </div>
           <div className="shadow-soft-lg bg-white rounded-2xl p-8">
             <p className="font-semibold text-foreground mb-1">.shadow-soft-lg</p>
-            <p className="text-sm text-muted">Deeper layered shadow for elevated panels</p>
+            <p className="text-sm text-muted-foreground">Deeper layered shadow for elevated panels</p>
           </div>
         </div>
       </Section>
 
       {/* Process / Stepper */}
-      <Section>
+      <Section background="white">
         <SectionHeader overline="Components" title="Process stepper" className="mb-12" />
         <div className="grid gap-6 lg:grid-cols-5">
           {["Initial contact", "Scoping call", "Confirm details", "Marketing kickoff", "Event day"].map(
@@ -344,7 +387,7 @@ export default function DesignSystemPage() {
                   {i + 1}
                 </div>
                 <h4 className="font-semibold text-foreground mb-1">{title}</h4>
-                <p className="text-sm text-muted">Step description goes here.</p>
+                <p className="text-sm text-muted-foreground">Step description goes here.</p>
               </div>
             )
           )}
@@ -352,7 +395,7 @@ export default function DesignSystemPage() {
       </Section>
 
       {/* CTA section pattern */}
-      <Section className="gradient-brand-soft">
+      <Section background="brand-soft">
         <div className="max-w-2xl mx-auto text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
             CTA section pattern
@@ -360,7 +403,7 @@ export default function DesignSystemPage() {
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
             Gradient CTA section
           </h2>
-          <p className="text-muted mb-8">
+          <p className="text-muted-foreground mb-8">
             Used at the bottom of every get-involved sub-page. Always ends with a primary action.
           </p>
           <Button variant="primary" size="lg">

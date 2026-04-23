@@ -296,9 +296,6 @@ export const events: Event[] = [
   },
 ];
 
-// CodeDiversity events (20+ monthly meetups)
-export const codeDiversityCount = 20;
-
 export function getUpcomingEvents(): Event[] {
   return events
     .filter((e) => e.status === "upcoming")
@@ -315,14 +312,3 @@ export function getRecentEvents(count: number = 4): Event[] {
   return getPastEvents().slice(0, count);
 }
 
-export function getEventStats() {
-  const totalMainEvents = events.length;
-  const totalWithCodeDiversity = totalMainEvents + codeDiversityCount;
-
-  return {
-    totalEvents: `${totalWithCodeDiversity}+`,
-    avgAttendance: "40-100",
-    cadence: "Monthly",
-    since: 2023,
-  };
-}

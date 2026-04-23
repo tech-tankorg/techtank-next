@@ -13,25 +13,40 @@
   --color-blush: #EABFBF;          /* Pink accent */
   --color-sand: #F7EDE2;           /* Warm off-white */
   
-  /* Semantic Colors */
+  /* Semantic Colors — shadcn-aligned */
   --color-background: #F9F6F2;
   --color-foreground: #1B4B5A;
-  --color-muted: #4A6670;
-  --color-muted-foreground: #6B8A94;
+
+  /* Muted: surface for de-emphasized backgrounds; foreground for de-emphasized text */
+  --color-muted: #EBF3F4;
+  --color-muted-foreground: #4A6670;
+
   --color-border: rgba(27, 75, 90, 0.12);
-  
+  --color-input: rgba(27, 75, 90, 0.18);
+  --color-ring: #2A6B7C;
+
   --color-primary: #1B4B5A;
   --color-primary-foreground: #FFFFFF;
-  
+
   --color-secondary: #A8D5D8;
   --color-secondary-foreground: #1B4B5A;
-  
-  --color-accent: #E87C4E;
-  --color-accent-foreground: #FFFFFF;
-  
+
+  /* Accent: light seafoam tint for interactive hover/active states */
+  --color-accent: #D4ECEE;
+  --color-accent-foreground: #1B4B5A;
+
+  --color-destructive: #E87C4E;
+  --color-destructive-foreground: #FFFFFF;
+
+  --color-warning: #FFBC55;
+  --color-warning-foreground: #1B4B5A;
+
   /* Card and glass surfaces */
   --color-card: rgba(255, 255, 255, 0.7);
   --color-card-foreground: #1B4B5A;
+
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #1B4B5A;
   
   /* Font families */
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -69,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Focus styles for accessibility */
 :focus-visible {
-  outline: 2px solid var(--color-teal);
+  outline: 2px solid var(--color-ring);
   outline-offset: 2px;
 }
 

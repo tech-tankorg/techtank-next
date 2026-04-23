@@ -23,7 +23,7 @@ export default function LegalLayout({
           {/* Sidebar - Table of Contents */}
           <aside className="hidden lg:block lg:col-span-3">
             <div className="sticky top-24">
-              <h2 className="text-sm font-semibold uppercase tracking-wider text-muted mb-4">
+              <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">
                 Legal Documents
               </h2>
               <nav className="space-y-1">
@@ -36,7 +36,7 @@ export default function LegalLayout({
                       className={`block px-3 py-2 rounded-lg text-sm transition-colors ${
                         isActive
                           ? "bg-teal/10 text-teal font-medium"
-                          : "text-muted hover:text-foreground hover:bg-muted/10"
+                          : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
                       }`}
                     >
                       {doc.name}
@@ -46,7 +46,7 @@ export default function LegalLayout({
               </nav>
 
               <div className="mt-8 pt-8 border-t border-border">
-                <p className="text-sm text-muted">
+                <p className="text-sm text-muted-foreground">
                   Questions about these documents?
                 </p>
                 <a
@@ -71,7 +71,7 @@ export default function LegalLayout({
                     className={`shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                       isActive
                         ? "bg-teal text-white"
-                        : "bg-muted/10 text-muted hover:text-foreground"
+                        : "bg-muted/60 text-muted-foreground hover:text-foreground"
                     }`}
                   >
                     {doc.name}

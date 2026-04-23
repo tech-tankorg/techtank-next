@@ -92,6 +92,22 @@ document styling).
 - Social proof first: testimonials, real event photography, and
   logo clouds are required patterns, not decoration.
 
+### Component conventions
+
+Components follow [shadcn/ui](https://ui.shadcn.com/) patterns with
+[CVA](https://cva.style/) (`class-variance-authority`) for variant management:
+
+- Define visual variants (color, size, style) as CVA `variants` — never
+  as ad-hoc `className` overrides at the call site.
+- Use `cn()` from `lib/utils.ts` (clsx + tailwind-merge) for all
+  className composition.
+- Expose `asChild` via Radix `Slot` when a component needs to delegate
+  rendering to its child (e.g. `<Button asChild><Link …>`).
+- Keep layout utilities (`w-full`, `mt-4`, etc.) at the call site via
+  `className`; keep visual styles inside the CVA definition.
+- New primitives go in `components/ui/`; page-specific compositions
+  stay in the relevant `app/` directory.
+
 ### Adding a new page
 
 1. Decide where it belongs in the IA. If it's a role, it goes under

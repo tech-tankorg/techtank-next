@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
     <div className="bg-white rounded-2xl border border-border p-6 lg:p-10">
       {/* Header */}
       <div className="mb-8 pb-8 border-b border-border">
-        <p className="text-sm text-muted mb-2">Last updated: April 18, 2026</p>
+        <p className="text-sm text-muted-foreground mb-2">Last updated: April 18, 2026</p>
         <h1 className="font-display text-3xl lg:text-4xl font-semibold text-foreground">
           Privacy Policy
         </h1>
@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
             1. Overview
           </h2>
-          <p className="text-muted">
+          <p className="text-muted-foreground">
             This Privacy Policy explains what personal information TechTank TO
             collects, how it&apos;s used, and who it&apos;s shared with. This policy
             applies to techtankto.com and TechTank-operated community channels.
@@ -35,10 +35,10 @@ export default function PrivacyPolicyPage() {
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
             2. Data We Collect Directly
           </h2>
-          <p className="text-muted mb-4">
+          <p className="text-muted-foreground mb-4">
             TechTank collects minimal personal information directly:
           </p>
-          <ul className="list-disc pl-6 space-y-2 text-muted">
+          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li>
               <strong>Intake form submissions</strong> (via Google Forms): name,
               email, optional profile links, and role-specific information (talk
@@ -57,7 +57,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
             3. Data We Don&apos;t Collect
           </h2>
-          <ul className="list-disc pl-6 space-y-2 text-muted">
+          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li>No user accounts or passwords on this website</li>
             <li>No payment or financial data</li>
             <li>No tracking cookies beyond essential analytics</li>
@@ -69,11 +69,11 @@ export default function PrivacyPolicyPage() {
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
             4. Third-Party Platforms
           </h2>
-          <p className="text-muted mb-4">
+          <p className="text-muted-foreground mb-4">
             TechTank uses third-party platforms that have their own privacy
             policies:
           </p>
-          <ul className="list-disc pl-6 space-y-2 text-muted">
+          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li>
               <strong>Luma:</strong> Event RSVPs and attendee lists
             </li>
@@ -89,7 +89,7 @@ export default function PrivacyPolicyPage() {
               content and community channels
             </li>
           </ul>
-          <p className="text-muted mt-4">
+          <p className="text-muted-foreground mt-4">
             Each platform has its own privacy policy. Please review them for
             details on how they handle your data.
           </p>
@@ -99,7 +99,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
             5. Analytics
           </h2>
-          <p className="text-muted">
+          <p className="text-muted-foreground">
             TechTank uses privacy-respecting analytics to understand how
             visitors use the website. We collect aggregate data only (page
             views, referrers, general geographic region). We do not track
@@ -112,7 +112,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
             6. How We Use Your Data
           </h2>
-          <ul className="list-disc pl-6 space-y-2 text-muted">
+          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li>Respond to intake form submissions and inquiries</li>
             <li>Coordinate events with speakers, hosts, and sponsors</li>
             <li>Send event-related follow-ups when relevant</li>
@@ -124,10 +124,10 @@ export default function PrivacyPolicyPage() {
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
             7. Data Sharing
           </h2>
-          <p className="text-muted mb-4">
+          <p className="text-muted-foreground mb-4">
             TechTank does not sell personal data. Limited sharing may occur:
           </p>
-          <ul className="list-disc pl-6 space-y-2 text-muted">
+          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li>
               <strong>Host companies:</strong> Event host companies may request
               attendee lists for their hosted events
@@ -144,7 +144,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
             8. Data Retention
           </h2>
-          <p className="text-muted">
+          <p className="text-muted-foreground">
             Intake form submissions are retained while the conversation is
             active and for a reasonable archival period. Analytics data is
             aggregated and retained per our analytics provider&apos;s policy. You
@@ -156,15 +156,15 @@ export default function PrivacyPolicyPage() {
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
             9. Your Rights
           </h2>
-          <p className="text-muted mb-4">
+          <p className="text-muted-foreground mb-4">
             You have the right to:
           </p>
-          <ul className="list-disc pl-6 space-y-2 text-muted">
+          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li>Request access to your personal data</li>
             <li>Request correction of inaccurate data</li>
             <li>Request deletion of your data</li>
           </ul>
-          <p className="text-muted mt-4">
+          <p className="text-muted-foreground mt-4">
             To exercise these rights, email{" "}
             <a
               href="mailto:techtankto@gmail.com"
@@ -181,7 +181,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
             10. Cookies
           </h2>
-          <p className="text-muted">
+          <p className="text-muted-foreground">
             This website uses minimal cookies for essential functionality and
             analytics. No advertising or cross-site tracking cookies are used.
           </p>
@@ -191,7 +191,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
             11. Changes to This Policy
           </h2>
-          <p className="text-muted">
+          <p className="text-muted-foreground">
             TechTank may update this Privacy Policy from time to time. Material
             changes will be announced via the website. The &quot;Last updated&quot; date
             at the top indicates when the policy was last revised.
@@ -202,7 +202,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
             12. Contact
           </h2>
-          <p className="text-muted">
+          <p className="text-muted-foreground">
             For privacy-related questions or to exercise your data rights,
             contact us at{" "}
             <a

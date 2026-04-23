@@ -32,7 +32,7 @@ export default function EventsPage() {
               <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-4">
                 All Events
               </h1>
-              <p className="text-xl text-muted">
+              <p className="text-xl text-muted-foreground">
                 RSVP to what&apos;s next — and scroll back through the
                 talks, photos, and recaps from every meetup we&apos;ve
                 hosted since 2022.
@@ -65,7 +65,7 @@ export default function EventsPage() {
                   <h2 className="font-display text-2xl lg:text-3xl font-semibold text-foreground mb-3">
                     {nextEvent.title}
                   </h2>
-                  <p className="text-muted mb-6">{nextEvent.pitch}</p>
+                  <p className="text-muted-foreground mb-6">{nextEvent.pitch}</p>
 
                   {/* Event details */}
                   <div className="flex flex-wrap gap-4 mb-6">
@@ -99,7 +99,7 @@ export default function EventsPage() {
                     {nextEvent.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="inline-flex items-center px-3 py-1 rounded-full bg-background text-xs font-medium text-muted"
+                        className="inline-flex items-center px-3 py-1 rounded-full bg-background text-xs font-medium text-muted-foreground"
                       >
                         {tag}
                       </span>
@@ -125,16 +125,16 @@ export default function EventsPage() {
                 <div className="lg:border-l lg:border-border lg:pl-8">
                   {nextEvent.host ? (
                     <div>
-                      <p className="text-sm text-muted mb-3">Supported by</p>
+                      <p className="text-sm text-muted-foreground mb-3">Supported by</p>
                       <div className="flex items-center gap-3">
-                        <div className="h-12 w-12 rounded-lg bg-background flex items-center justify-center text-lg font-semibold text-muted">
+                        <div className="h-12 w-12 rounded-lg bg-background flex items-center justify-center text-lg font-semibold text-muted-foreground">
                           {nextEvent.host.name[0]}
                         </div>
                         <div>
                           <p className="font-semibold text-foreground">
                             {nextEvent.host.name}
                           </p>
-                          <p className="text-sm text-muted">Host venue</p>
+                          <p className="text-sm text-muted-foreground">Host venue</p>
                         </div>
                       </div>
                     </div>
@@ -143,7 +143,7 @@ export default function EventsPage() {
                       <p className="text-sm font-medium text-foreground mb-2">
                         Looking for a host
                       </p>
-                      <p className="text-sm text-muted mb-3">
+                      <p className="text-sm text-muted-foreground mb-3">
                         Want to bring TechTank to your space?
                       </p>
                       <Button variant="outline" size="sm" asChild>
@@ -155,13 +155,13 @@ export default function EventsPage() {
                   {/* Speaker */}
                   {nextEvent.speakers && nextEvent.speakers.length > 0 && (
                     <div className="mt-6 pt-6 border-t border-border">
-                      <p className="text-sm text-muted mb-3">Speaker</p>
+                      <p className="text-sm text-muted-foreground mb-3">Speaker</p>
                       {nextEvent.speakers.map((speaker, index) => (
                         <div key={index}>
                           <p className="font-semibold text-foreground">
                             {speaker.name}
                           </p>
-                          <p className="text-sm text-muted">{speaker.title}</p>
+                          <p className="text-sm text-muted-foreground">{speaker.title}</p>
                           <p className="text-sm text-teal mt-1">
                             {speaker.talkTitle}
                           </p>
@@ -177,7 +177,7 @@ export default function EventsPage() {
       )}
 
       {/* Subscribe Section */}
-      <Section className="bg-white border-y border-border">
+      <Section background="white">
         <SectionHeader
           overline="Calendar"
           title="Subscribe to stay updated"
@@ -188,7 +188,7 @@ export default function EventsPage() {
           <h3 className="font-display text-xl font-semibold text-foreground mb-2">
             Never miss an event
           </h3>
-          <p className="text-muted mb-6 max-w-md mx-auto">
+          <p className="text-muted-foreground mb-6 max-w-md mx-auto">
             Subscribe on Luma to get notified when new events are announced.
           </p>
           <Button variant="primary" asChild>
@@ -229,7 +229,7 @@ export default function EventsPage() {
       </Section>
 
       {/* Dual CTA */}
-      <Section className="gradient-brand-soft">
+      <Section background="brand-soft">
         <DualCTA />
       </Section>
 

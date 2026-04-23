@@ -39,7 +39,7 @@ export default function GetInvolvedLayout({
                     className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
                       isActive
                         ? "bg-teal text-white"
-                        : "text-muted hover:text-foreground hover:bg-muted/10"
+                        : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
                     }`}
                   >
                     {item.name}

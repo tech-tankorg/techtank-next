@@ -1,36 +1,64 @@
-interface SectionProps {
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
+
+const sectionVariants = cva("py-10 lg:py-14", {
+  variants: {
+    background: {
+      default: "",
+      muted: "bg-sand/50 texture-grain",
+      white: "bg-white border-y border-border",
+      brand: "gradient-brand texture-grain",
+      "brand-soft": "gradient-brand-soft",
+      "brand-vertical": "gradient-brand-vertical texture-grain",
+    },
+  },
+  defaultVariants: {
+    background: "default",
+  },
+});
+
+interface SectionProps extends VariantProps<typeof sectionVariants> {
   children: React.ReactNode;
   className?: string;
   id?: string;
 }
 
-export function Section({ children, className = "", id }: SectionProps) {
+export function Section({ children, background, className, id }: SectionProps) {
   return (
-    <section id={id} className={`py-10 lg:py-14 ${className}`}>
+    <section id={id} className={cn(sectionVariants({ background }), className)}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">{children}</div>
     </section>
   );
 }
 
-interface SectionHeaderProps {
+const sectionHeaderVariants = cva("max-w-3xl", {
+  variants: {
+    align: {
+      left: "",
+      center: "text-center mx-auto",
+    },
+  },
+  defaultVariants: {
+    align: "left",
+  },
+});
+
+interface SectionHeaderProps extends VariantProps<typeof sectionHeaderVariants> {
   overline?: string;
   title: string;
   description?: string;
   className?: string;
-  align?: "left" | "center";
 }
 
 export function SectionHeader({
   overline,
   title,
   description,
-  className = "",
-  align = "left",
+  align,
+  className,
 }: SectionHeaderProps) {
-  const alignClasses = align === "center" ? "text-center mx-auto" : "";
-
   return (
-    <div className={`max-w-3xl ${alignClasses} ${className}`}>
+    <div className={cn(sectionHeaderVariants({ align }), className)}>
       {overline && (
         <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
           {overline}
@@ -40,7 +68,7 @@ export function SectionHeader({
         {title}
       </h2>
       {description && (
-        <p className="mt-3 text-base text-muted leading-relaxed">{description}</p>
+        <p className="mt-3 text-base text-muted-foreground leading-relaxed">{description}</p>
       )}
     </div>
   );

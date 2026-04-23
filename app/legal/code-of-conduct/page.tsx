@@ -12,7 +12,7 @@ export default function CodeOfConductPage() {
     <div className="bg-white rounded-2xl border border-border p-6 lg:p-10">
       {/* Header */}
       <div className="mb-8 pb-8 border-b border-border">
-        <p className="text-sm text-muted mb-2">Last updated: April 18, 2026</p>
+        <p className="text-sm text-muted-foreground mb-2">Last updated: April 18, 2026</p>
         <h1 className="font-display text-3xl lg:text-4xl font-semibold text-foreground">
           Code of Conduct
         </h1>
@@ -26,7 +26,7 @@ export default function CodeOfConductPage() {
             <h2 className="font-semibold text-foreground mb-1">
               Need to report something?
             </h2>
-            <p className="text-muted text-sm mb-2">
+            <p className="text-muted-foreground text-sm mb-2">
               At events: speak to any TechTank organizer. Any time: email us.
             </p>
             <a
@@ -45,7 +45,7 @@ export default function CodeOfConductPage() {
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
             Our Commitment
           </h2>
-          <p className="text-muted">
+          <p className="text-muted-foreground">
             TechTank TO is dedicated to providing a harassment-free experience
             for everyone, regardless of gender, gender identity and expression,
             sexual orientation, disability, physical appearance, body size,
@@ -60,7 +60,7 @@ export default function CodeOfConductPage() {
             <ThumbsUp className="h-5 w-5 text-teal shrink-0" />
             Expected Behavior
           </h2>
-          <ul className="list-disc pl-6 space-y-2 text-muted">
+          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li>
               <strong>Be respectful and considerate.</strong> Treat others as
               you would like to be treated.
@@ -93,7 +93,7 @@ export default function CodeOfConductPage() {
             <AlertTriangle className="h-5 w-5 text-amber" />
             Unacceptable Behavior
           </h2>
-          <ul className="list-disc pl-6 space-y-2 text-muted">
+          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li>
               <strong>Harassment</strong> in any form — verbal, physical,
               visual, or digital
@@ -130,7 +130,7 @@ export default function CodeOfConductPage() {
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
             Scope
           </h2>
-          <p className="text-muted">
+          <p className="text-muted-foreground">
             This Code of Conduct applies at TechTank events, in our Slack
             community, on associated social media channels, and anywhere else
             TechTank operates. It applies equally to attendees, speakers, hosts,
@@ -142,11 +142,11 @@ export default function CodeOfConductPage() {
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
             Reporting
           </h2>
-          <p className="text-muted mb-4">
+          <p className="text-muted-foreground mb-4">
             If you experience or witness unacceptable behavior, please report
             it:
           </p>
-          <ul className="list-disc pl-6 space-y-2 text-muted">
+          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li>
               <strong>At events:</strong> Speak to any TechTank organizer
               on-site. They will be identified at the start of each event.
@@ -161,7 +161,7 @@ export default function CodeOfConductPage() {
               </a>
             </li>
           </ul>
-          <p className="text-muted mt-4">
+          <p className="text-muted-foreground mt-4">
             All reports are handled confidentially. We will respond as quickly
             as reasonably possible. You will not be retaliated against for
             making a report in good faith.
@@ -172,18 +172,18 @@ export default function CodeOfConductPage() {
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
             Response and Consequences
           </h2>
-          <p className="text-muted mb-4">
+          <p className="text-muted-foreground mb-4">
             TechTank organizers will investigate all reports and determine an
             appropriate response. Possible responses include:
           </p>
-          <ul className="list-disc pl-6 space-y-2 text-muted">
+          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li>A private conversation with the individual</li>
             <li>A formal warning</li>
             <li>Removal from an event</li>
             <li>Removal from community channels (Slack, etc.)</li>
             <li>Permanent ban from TechTank spaces</li>
           </ul>
-          <p className="text-muted mt-4">
+          <p className="text-muted-foreground mt-4">
             Consequences are proportional to the behavior and its impact on the
             community. We err on the side of protecting those who report issues.
           </p>
@@ -193,7 +193,7 @@ export default function CodeOfConductPage() {
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
             Acknowledgments
           </h2>
-          <p className="text-muted">
+          <p className="text-muted-foreground">
             This Code of Conduct draws on widely-used community codes including
             the{" "}
             <a
@@ -221,7 +221,7 @@ export default function CodeOfConductPage() {
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
             Contact
           </h2>
-          <p className="text-muted">
+          <p className="text-muted-foreground">
             For questions about this Code of Conduct or to report an issue,
             email{" "}
             <a

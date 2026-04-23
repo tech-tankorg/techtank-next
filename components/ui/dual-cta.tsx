@@ -20,7 +20,7 @@ export function DualCTA() {
           <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
             Never miss an event
           </h3>
-          <p className="text-sm text-muted mb-4 max-w-sm">
+          <p className="text-sm text-muted-foreground mb-4 max-w-sm">
             Subscribe to our Luma calendar and follow us on socials.
           </p>
           <div className="flex flex-wrap gap-2">
@@ -72,7 +72,7 @@ export function DualCTA() {
           <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
             Want to contribute?
           </h3>
-          <p className="text-sm text-muted mb-4 max-w-sm">
+          <p className="text-sm text-muted-foreground mb-4 max-w-sm">
             Speak, host, sponsor, or volunteer.
           </p>
           <div className="flex flex-wrap gap-2">

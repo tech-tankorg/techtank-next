@@ -22,7 +22,7 @@ export function ContactCard({
 
   return (
     <div className="rounded-2xl glass p-6 lg:p-8 space-y-4">
-      <p className="text-sm text-muted">{context}</p>
+      <p className="text-sm text-muted-foreground">{context}</p>
       
       {/* Email */}
       <div className="flex items-center gap-4">
@@ -38,7 +38,7 @@ export function ContactCard({
           </a>
           <button
             onClick={handleCopy}
-            className="inline-flex items-center justify-center h-7 w-7 rounded-lg bg-white/50 hover:bg-seafoam text-muted hover:text-teal-dark transition-colors"
+            className="inline-flex items-center justify-center h-7 w-7 rounded-lg bg-white/50 hover:bg-seafoam text-muted-foreground hover:text-teal-dark transition-colors"
             aria-label={copied ? "Copied" : "Copy email"}
           >
             {copied ? (
