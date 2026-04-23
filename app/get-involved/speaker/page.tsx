@@ -81,7 +81,11 @@ export default function SpeakerPage() {
               first-time speakers succeed with coaching and support.
             </p>
             <Button variant="primary" size="lg" asChild>
-              <a href="mailto:techtankto@gmail.com?subject=Speaker%20Inquiry%20-%20TechTank">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdtei1QBJb45fF8Fw29yApWCJEiwHROrJEhPhI5X3eXcAnUjQ/viewform?usp=sf_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Sign up to speak
               </a>
             </Button>
@@ -229,7 +233,11 @@ export default function SpeakerPage() {
             you within a week.
           </p>
           <Button variant="primary" size="lg" asChild>
-            <a href="mailto:techtankto@gmail.com?subject=Speaker%20Inquiry%20-%20TechTank">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdtei1QBJb45fF8Fw29yApWCJEiwHROrJEhPhI5X3eXcAnUjQ/viewform?usp=sf_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Sign up to speak
             </a>
           </Button>

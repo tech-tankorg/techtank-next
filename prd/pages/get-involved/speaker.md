@@ -64,34 +64,31 @@ audience, format, logistics, what they get, and how to sign up.
 7. **Testimonials**
    - 2–3 quotes from past speakers with photo, role, and talk title.
 
-8. **Intake action (email us)**
-   - Prominent `mailto:techtankto@gmail.com` CTA with a pre-filled
-     subject line ("Speaker proposal — <your name>") and a
-     copy-to-clipboard scaffold suggesting:
-     - Name, email, LinkedIn
-     - Proposed talk title, abstract (300 chars), length
-     - Short bio
-     - Speaker experience (first time / some / experienced)
-     - Preferred month(s) / willing to wait
-     - Anything else
+8. **Intake action (Google Form)**
+   - Prominent CTA linking to the organizers' Google Form (opens in a
+     new tab):
+     <https://docs.google.com/forms/d/e/1FAIpQLSdtei1QBJb45fF8Fw29yApWCJEiwHROrJEhPhI5X3eXcAnUjQ/viewform?usp=sf_link>
+   - The form collects: name, email, LinkedIn, proposed talk title,
+     abstract, length, short bio, speaker experience level, preferred
+     month(s), and anything else.
 
 ## 5. Calls to action (priority order)
 
-1. Email us with your talk proposal
+1. Submit talk proposal via Google Form (primary CTA)
 2. Download the slide template
 3. Join our Slack (for questions)
 
 ## 6. Functional requirements
 
-- Prominent intake CTA (`mailto:techtankto@gmail.com`) with a clear
-  button and suggested-details scaffold.
+- Prominent intake CTA (Google Form link) with a clear button; link
+  opens in a new tab with `rel="noopener noreferrer"`.
 - Slide template link opens in a new tab.
 - Social proof (past speakers + YouTube recordings) must appear above
   the intake CTA.
 
 ## 7. Acceptance criteria
 
-- A potential speaker can understand the commitment and start the
-  conversation (via the email CTA) without leaving the page.
+- A potential speaker can understand the commitment and submit their
+  proposal via the Google Form without leaving the page context.
 - First-time speakers see explicit reassurance that we help them
   prepare.
