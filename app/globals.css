@@ -140,6 +140,15 @@
   );
 }
 
+.gradient-overlay-brand {
+  background: linear-gradient(
+    to top,
+    rgba(27, 75, 90, 0.92) 0%,
+    rgba(232, 124, 78, 0.55) 42%,
+    transparent 60%
+  );
+}
+
 /* ─── Dark Tokens & Gradients ──────────────────────────────────────────────── */
 
 .dark {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { LayoutGrid, List, Columns2, Calendar, Tag, MapPin, Camera, Play, ExternalLink } from "lucide-react";
+import { LayoutGrid, List, Columns2, Calendar, Tag, MapPin, Camera, Play } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { EventCard } from "@/components/ui/event-card";
 import { cn } from "@/utils/theme";
@@ -224,6 +224,7 @@ function GridView({ events }: { events: Event[] }) {
     <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
       {events.map((event) => {
         const img = event.imagePath;
+        const isUpcoming = event.status === "upcoming";
         const dateObj = new Date(event.date + "T12:00:00");
         const formattedDate = dateObj.toLocaleDateString("en-US", {
           month: "short",
@@ -231,6 +232,9 @@ function GridView({ events }: { events: Event[] }) {
           year: "numeric",
           timeZone: "America/Toronto",
         });
+        const locationText = event.host ? event.host.name : (event.venue ?? null);
+        const locationUrl = event.host?.url ?? null;
+
         return (
           <div key={event.id} className="group relative overflow-hidden rounded-xl aspect-square bg-muted">
             {img ? (
@@ -241,32 +245,64 @@ function GridView({ events }: { events: Event[] }) {
                 className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             ) : (
-              <div className="h-full w-full flex items-center justify-center p-4 gradient-brand">
-                <span className="text-xs font-medium text-center text-primary-foreground line-clamp-3">
-                  {event.title}
-                </span>
-              </div>
+              <div className="h-full w-full gradient-brand" />
             )}
-            <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
-              <p className="text-white text-xs font-semibold line-clamp-2">{event.title}</p>
-              <p className="text-white/70 text-[10px] mt-0.5">{formattedDate}</p>
-              <div className="flex gap-1.5 mt-1.5">
-                {event.eventUrl && (
-                  <a href={event.eventUrl} target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white">
-                    <ExternalLink className="h-3 w-3" />
+
+            {/* Always-visible overlay */}
+            <div className="absolute inset-0 gradient-overlay-brand flex flex-col justify-end p-3 gap-1">
+              <Badge variant={isUpcoming ? "warning" : "secondary"} size="sm" className="self-start">
+                {isUpcoming ? "Upcoming" : "Past"}
+              </Badge>
+              {event.tags[0] && (
+                <span className="text-[10px] text-white">{event.tags[0]}</span>
+              )}
+
+              <p className="text-white text-xs font-semibold line-clamp-2 leading-snug">
+                {event.eventUrl ? (
+                  <a href={event.eventUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    {event.title}
                   </a>
-                )}
-                {event.albumUrl && (
-                  <a href={event.albumUrl} target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white">
-                    <Camera className="h-3 w-3" />
-                  </a>
-                )}
-                {event.youtubeUrl && (
-                  <a href={event.youtubeUrl} target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white">
-                    <Play className="h-3 w-3" />
-                  </a>
-                )}
+                ) : event.title}
+              </p>
+
+              <div className="flex items-center gap-1 text-[10px] text-white/70">
+                <Calendar className="h-2.5 w-2.5 shrink-0" />
+                <span>{formattedDate}</span>
               </div>
+
+              {locationText && (
+                <div className="flex items-center gap-1 text-[10px] text-white/70">
+                  <MapPin className="h-2.5 w-2.5 shrink-0" />
+                  {locationUrl ? (
+                    <a href={locationUrl} target="_blank" rel="noopener noreferrer" className="hover:underline truncate">
+                      {locationText}
+                    </a>
+                  ) : (
+                    <span className="truncate">{locationText}</span>
+                  )}
+                </div>
+              )}
+
+              {(event.albumUrl || event.youtubeUrl) && (
+                <div className="flex flex-wrap gap-1 pt-0.5">
+                  {event.albumUrl && (
+                    <Badge variant="secondary" size="sm" asChild>
+                      <a href={event.albumUrl} target="_blank" rel="noopener noreferrer" aria-label="View event photos">
+                        <Camera className="h-2.5 w-2.5" />
+                        Photos
+                      </a>
+                    </Badge>
+                  )}
+                  {event.youtubeUrl && (
+                    <Badge variant="secondary" size="sm" asChild>
+                      <a href={event.youtubeUrl} target="_blank" rel="noopener noreferrer" aria-label="Watch recap">
+                        <Play className="h-2.5 w-2.5 fill-current" />
+                        Recap
+                      </a>
+                    </Badge>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         );
