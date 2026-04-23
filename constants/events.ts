@@ -58,7 +58,7 @@ export const events: Event[] = [
   // ─── 2026 ────────────────────────────────────────────────────────────────────
   {
     id: "techtank-turns-3",
-    title: "TECHTANK Turns 3",
+    title: "This ain't my first rodeo 🤠🪩 TECHTANK 3 YEAR ANNIVERSARY",
     pitch: "Celebrating three years of Toronto tech community",
     date: "2026-04-16",
     time: "8:00 PM - 11:00 PM",
@@ -470,6 +470,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/303601353/",
     imagePath: "/images/meetup/highres_523676979.jpeg",
+    youtubeVideo: youtubeVideos["cZHiIMuynYE"],
   },
   {
     id: "forensics-rsc",
@@ -561,6 +562,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/301699806/",
     imagePath: "/images/meetup/highres_521809945.jpeg",
+    youtubeVideo: youtubeVideos["iIjdAXX-oD4"],
+    photoAlbum: photoAlbums["AF1QipNyu6nkeQkkImW1usVfuDT6nr64NVj_WG5P6geHbZlDnLnKbZFP0kMGkovhsji1oA"],
   },
   {
     id: "softball-sashimis-2024",
@@ -603,6 +606,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/301198832/",
     imagePath: "/images/meetup/highres_521252023.jpeg",
+    youtubeVideo: youtubeVideos["Fz-AfRrlzLM"],
   },
   {
     id: "engineering-wellness-2024",
@@ -615,6 +619,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/300591167/",
     imagePath: "/images/meetup/highres_520941912.jpeg",
+    youtubeVideo: youtubeVideos["tMoqGyfVkGA"],
+    photoAlbum: photoAlbums["AF1QipMllK8NZdIjH0tP8lf0fw7JoQzXgse-6qCsWP2Kvh1lKWdGAiz_a1eeocYuoAntrA"],
   },
   {
     id: "ai-prompting-101",
@@ -627,6 +633,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/300782288/",
     imagePath: "/images/meetup/highres_520806256.jpeg",
+    youtubeVideo: youtubeVideos["m7wvLa3sUe4"],
   },
   {
     id: "anniversary-social-2024",
@@ -648,6 +655,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/300175753/",
     imagePath: "/images/meetup/highres_520152027.jpeg",
+    youtubeVideo: youtubeVideos["Q5DvWKxpaBE"],
+    photoAlbum: photoAlbums["AF1QipNLPqEiBg7_95ZuKAxeC9GxdOVSUf3RmG8a5Hr5LWmBP8jRnPDGXNlBqkA4Sf2aXQ"],
   },
   {
     id: "pathfinders-2024",
@@ -660,6 +669,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/299326496/",
     imagePath: "/images/meetup/highres_519276676.jpeg",
+    youtubeVideo: youtubeVideos["nRoKA93lJqY"],
+    photoAlbum: photoAlbums["AF1QipOn_EKK627wNTlgtoEjoRR-RIYqwDMZfV8cdxNx5-MAXTT_pvwWZAU3Jd8fgsZ2Lg"],
   },
   {
     id: "accessible-nav-menus",
@@ -672,6 +683,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/299380715/",
     imagePath: "/images/meetup/highres_519308057.jpeg",
+    youtubeVideo: youtubeVideos["Zuvta9giDOM"],
   },
   {
     id: "generative-ai-developers-2024",
@@ -684,6 +696,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/298712672/",
     imagePath: "/images/meetup/highres_518649638.jpeg",
+    youtubeVideo: youtubeVideos["wv3tPtDrl_E"],
   },
   {
     id: "coding-with-character",
@@ -696,6 +709,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/299017176/",
     imagePath: "/images/meetup/highres_518943016.jpeg",
+    youtubeVideo: youtubeVideos["Z1Ka1jsRW7E"],
   },
   {
     id: "containerization-101",
@@ -708,6 +722,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/298854685/",
     imagePath: "/images/meetup/highres_518949413.jpeg",
+    youtubeVideo: youtubeVideos["lYQMYnnb6Kw"],
   },
   {
     id: "css-chronicles-2024",
@@ -720,6 +735,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/298329281/",
     imagePath: "/images/meetup/highres_518418480.jpeg",
+    youtubeVideo: youtubeVideos["JW0Nc5W7yEY"],
   },
   {
     id: "cottage-trip",
@@ -741,6 +757,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/298283794/",
     imagePath: "/images/meetup/highres_518284688.jpeg",
+    youtubeVideo: youtubeVideos["q_aFpilEqMk"],
   },
   {
     id: "feature-flagging-primer",
@@ -753,6 +770,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/298165707/",
     imagePath: "/images/meetup/highres_518139051.jpeg",
+    youtubeVideo: youtubeVideos["KbUbw5QNPfo"],
   },
   // ─── 2023 ────────────────────────────────────────────────────────────────────
   {
@@ -766,6 +784,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/297602552/",
     imagePath: "/images/meetup/highres_517574457.jpeg",
+    youtubeVideo: youtubeVideos["r0jrByKPu8E"],
   },
   {
     id: "app-performance-deep-dive",
@@ -778,6 +797,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/297145894/",
     imagePath: "/images/meetup/highres_517035730.jpeg",
+    youtubeVideo: youtubeVideos["Q89KAMThfCw"],
+    photoAlbum: photoAlbums["AF1QipN7795hAt6xtwWmIIPlBoijkf8svVZFKd4v7vTrDfhJdYe0u5DAn8wSlT4bNKgHig"],
   },
   {
     id: "transitioning-fullstack",
@@ -790,6 +811,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/297176805/",
     imagePath: "/images/meetup/highres_517192330.jpeg",
+    youtubeVideo: youtubeVideos["xbp1Psv2DiY"],
   },
   {
     id: "cracking-a11y-code",
@@ -802,6 +824,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/296957170/",
     imagePath: "/images/meetup/highres_516817887.jpeg",
+    youtubeVideo: youtubeVideos["-X1L81xpBtc"],
   },
   {
     id: "niagara-glen-hike",
@@ -832,6 +855,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/296408305/",
     imagePath: "/images/meetup/highres_516203971.jpeg",
+    youtubeVideo: youtubeVideos["L61l0VzQ5j4"],
+    photoAlbum: photoAlbums["AF1QipPFf6pYTwSxFt1sG8sco1i_tdRYmRzxFSlGLXokJjlMXsc4ZT9288pNP0Z7-_Q71A"],
   },
   {
     id: "junior-to-midlevel",
@@ -844,6 +869,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/296505054/",
     imagePath: "/images/meetup/highres_516306438.jpeg",
+    youtubeVideo: youtubeVideos["xWsj6REFwHA"],
   },
   {
     id: "website-performance-deep-dive",
@@ -856,6 +882,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/295642016/",
     imagePath: "/images/meetup/highres_515354669.jpeg",
+    youtubeVideo: youtubeVideos["IKrZuYJGBKo"],
+    photoAlbum: photoAlbums["AF1QipOG-h347VHP9BpUaj9VGXpH1RbYpvM9VqJPbGMPw22afLsIUrmW1Mc9vPDpBBO8tg"],
   },
   {
     id: "bowling-2023",
@@ -877,6 +905,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/295750233/",
     imagePath: "/images/meetup/highres_515481840.jpeg",
+    youtubeVideo: youtubeVideos["6Mf6CDJnE4U"],
   },
 ];
 
