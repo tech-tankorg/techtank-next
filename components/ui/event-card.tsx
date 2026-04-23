@@ -1,6 +1,6 @@
 "use client";
 
-import { Camera, Calendar, MapPin, Play, Tag } from "lucide-react";
+import { Camera, Calendar, MapPin, Play } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import type { Event } from "@/constants/events";
 
@@ -20,12 +20,16 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
     timeZone: "America/Toronto",
   });
 
-  const locationText = event.host
-    ? `Hosted at ${event.host.name}`
-    : event.venue ?? null;
+  const locationText = event.host ? event.host.name : (event.venue ?? null);
+  const locationUrl = event.host?.url ?? null;
 
-  const sponsorNames = event.sponsors?.map((s) => s.name).join(", ") ?? null;
-  const primaryTag = event.tags?.[0] || null;
+  const TitleWrapper = event.eventUrl
+    ? ({ children }: { children: React.ReactNode }) => (
+        <a href={event.eventUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+          {children}
+        </a>
+      )
+    : ({ children }: { children: React.ReactNode }) => <>{children}</>;
 
   if (variant === "featured") {
     return (
@@ -35,13 +39,13 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
             <Badge variant={isUpcoming ? "warning" : "secondary"}>
               {isUpcoming ? "Upcoming" : "Past"}
             </Badge>
-            {primaryTag && (
-              <span className="ml-auto text-xs text-muted-foreground">{primaryTag}</span>
+            {event.tags[0] && (
+              <span className="ml-auto text-xs text-muted-foreground">{event.tags[0]}</span>
             )}
           </div>
 
           <h3 className="font-display text-xl font-bold text-foreground mb-2 line-clamp-2">
-            {event.title}
+            <TitleWrapper>{event.title}</TitleWrapper>
           </h3>
 
           {event.pitch && (
@@ -57,30 +61,39 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
           {locationText && (
             <div className="flex items-center gap-2 text-sm text-muted-foreground mb-1.5">
               <MapPin className="h-4 w-4 shrink-0" />
-              <span>{locationText}</span>
+              {locationUrl ? (
+                <a href={locationUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  {locationText}
+                </a>
+              ) : (
+                <span>{locationText}</span>
+              )}
             </div>
           )}
 
-          {sponsorNames && (
-            <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-              <Tag className="h-4 w-4 shrink-0" />
-              <span>Sponsored by {sponsorNames}</span>
+          {event.sponsors && event.sponsors.length > 0 && (
+            <div className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground mb-3">
+              {event.sponsors.map((s) => (
+                <a key={s.id} href={s.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  {s.name}
+                </a>
+              ))}
             </div>
           )}
 
-          {(event.photoAlbum || event.youtubeVideo) && (
+          {(event.albumUrl || event.youtubeUrl) && (
             <div className="flex flex-wrap items-center gap-2">
-              {event.photoAlbum && (
+              {event.albumUrl && (
                 <Badge variant="secondary" asChild>
-                  <a href={event.photoAlbum.url} target="_blank" rel="noopener noreferrer" aria-label="View event photos">
+                  <a href={event.albumUrl} target="_blank" rel="noopener noreferrer" aria-label="View event photos">
                     <Camera className="h-3 w-3" />
                     Photos
                   </a>
                 </Badge>
               )}
-              {event.youtubeVideo && (
+              {event.youtubeUrl && (
                 <Badge variant="secondary" asChild>
-                  <a href={event.youtubeVideo.url} target="_blank" rel="noopener noreferrer" aria-label="Watch recap on YouTube">
+                  <a href={event.youtubeUrl} target="_blank" rel="noopener noreferrer" aria-label="Watch recap on YouTube">
                     <Play className="h-3 w-3 fill-current" />
                     Recap
                   </a>
@@ -99,13 +112,13 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
         <Badge variant={isUpcoming ? "warning" : "secondary"} size="sm">
           {isUpcoming ? "Upcoming" : "Past"}
         </Badge>
-        {primaryTag && (
-          <span className="ml-auto text-[10px] text-muted-foreground">{primaryTag}</span>
+        {event.tags[0] && (
+          <span className="ml-auto text-[10px] text-muted-foreground">{event.tags[0]}</span>
         )}
       </div>
 
       <h3 className="font-display text-sm font-bold text-foreground mb-2 line-clamp-2">
-        {event.title}
+        <TitleWrapper>{event.title}</TitleWrapper>
       </h3>
 
       <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-1">
@@ -116,30 +129,39 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
       {locationText && (
         <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-1">
           <MapPin className="h-3 w-3 shrink-0" />
-          <span className="line-clamp-1">{locationText}</span>
+          {locationUrl ? (
+            <a href={locationUrl} target="_blank" rel="noopener noreferrer" className="hover:underline line-clamp-1">
+              {locationText}
+            </a>
+          ) : (
+            <span className="line-clamp-1">{locationText}</span>
+          )}
         </div>
       )}
 
-      {sponsorNames && (
-        <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-2">
-          <Tag className="h-3 w-3 shrink-0" />
-          <span className="line-clamp-1">Sponsored by {sponsorNames}</span>
+      {event.sponsors && event.sponsors.length > 0 && (
+        <div className="flex flex-wrap items-center gap-1 text-xs text-muted-foreground mb-2">
+          {event.sponsors.map((s) => (
+            <a key={s.id} href={s.url} target="_blank" rel="noopener noreferrer" className="hover:underline line-clamp-1">
+              {s.name}
+            </a>
+          ))}
         </div>
       )}
 
-      {(event.photoAlbum || event.youtubeVideo) && (
+      {(event.albumUrl || event.youtubeUrl) && (
         <div className="flex flex-wrap items-center gap-1.5 mt-auto pt-1">
-          {event.photoAlbum && (
+          {event.albumUrl && (
             <Badge variant="secondary" size="sm" asChild>
-              <a href={event.photoAlbum.url} target="_blank" rel="noopener noreferrer" aria-label="View event photos">
+              <a href={event.albumUrl} target="_blank" rel="noopener noreferrer" aria-label="View event photos">
                 <Camera className="h-2.5 w-2.5" />
                 Photos
               </a>
             </Badge>
           )}
-          {event.youtubeVideo && (
+          {event.youtubeUrl && (
             <Badge variant="secondary" size="sm" asChild>
-              <a href={event.youtubeVideo.url} target="_blank" rel="noopener noreferrer" aria-label="Watch recap on YouTube">
+              <a href={event.youtubeUrl} target="_blank" rel="noopener noreferrer" aria-label="Watch recap on YouTube">
                 <Play className="h-2.5 w-2.5 fill-current" />
                 Recap
               </a>
