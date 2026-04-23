@@ -3,7 +3,6 @@ import { stats } from "@/constants/stats";
 
 const items = [
   { value: stats.events, label: "TechTank events" },
-  { value: stats.codeDiversityEvents, label: "CodeDiversity events" },
   { value: stats.avgAttendance, label: "Attendees per event" },
   { value: stats.cadence, label: "Cadence" },
   { value: `Since ${stats.since}`, label: "Serving Toronto tech" },

@@ -1,8 +1,6 @@
 import { sponsors, type Sponsor } from "./sponsors";
-import { youtubeVideos, type YoutubeVideo } from "./youtube-videos";
-import { photoAlbums, type PhotoAlbum } from "./photo-albums";
 
-export type { Sponsor, YoutubeVideo, PhotoAlbum };
+export type { Sponsor };
 
 export interface Event {
   id: string;
@@ -17,8 +15,8 @@ export interface Event {
   /** Event URL — prefers Luma when available, falls back to Meetup */
   eventUrl?: string;
   imagePath?: string;
-  photoAlbum?: PhotoAlbum;
-  youtubeVideo?: YoutubeVideo;
+  albumUrl?: string;
+  youtubeUrl?: string;
   host?: Sponsor;
   sponsors?: Sponsor[];
   speakers?: {
@@ -66,7 +64,7 @@ export const events: Event[] = [
     tags: ["Anniversary", "Social"],
     status: "past",
     eventUrl: "https://lu.ma/qwpt54ke",
-    photoAlbum: photoAlbums["AF1QipM-VmIz5kOG18HrCZIcQyfVLgKKsCQSS_SWIo2ODM5DME1Z7BEoQOoMD5JbBujfkA"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipM-VmIz5kOG18HrCZIcQyfVLgKKsCQSS_SWIo2ODM5DME1Z7BEoQOoMD5JbBujfkA?key=WVVLWkFVXzNsYkpTNkN4MU5uYUNRNEpDQVZuVzJ3",
   },
   {
     id: "ci-optimization-brainstation",
@@ -74,13 +72,12 @@ export const events: Event[] = [
     pitch: "Save CI time with native caching flags your pipeline is missing",
     date: "2026-04-13",
     time: "6:30 PM - 9:00 PM",
-    venue: "BrainStation",
     capacity: 100,
     tags: ["Tech Talk", "DevOps", "CI/CD"],
     status: "past",
     eventUrl: "https://lu.ma/7h4g008b",
     sponsors: [sponsors.brainstation],
-    photoAlbum: photoAlbums["AF1QipN3f4J0Ya2sv76VCQXhdkKipehavLCc3v4kcdfwqqosjY2jN-KWfT3X4wrqCiRy4w"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipN3f4J0Ya2sv76VCQXhdkKipehavLCc3v4kcdfwqqosjY2jN-KWfT3X4wrqCiRy4w?key=WEF6OUk3alhLb3dzOEJ5SWlsU2tVM2x1eDkxNUpn",
     speakers: [
       {
         name: "Emily Xiong",
@@ -186,7 +183,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/311105172/",
     imagePath: "/images/meetup/highres_530261352.jpeg",
-    photoAlbum: photoAlbums["AF1QipPPmVC7Jg5of2zIp8CgLxyavCSvyu-3ekKf_nEVwqqNA3lX4VBuVijVBSvZ62dNng"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipPPmVC7Jg5of2zIp8CgLxyavCSvyu-3ekKf_nEVwqqNA3lX4VBuVijVBSvZ62dNng?key=ZmtQTTRtUWYzejJwaXV5Wi1rOHl1TmxhTVNJYmRR",
   },
   {
     id: "agentic-programming-7shifts",
@@ -194,13 +191,12 @@ export const events: Event[] = [
     pitch: "Introduction to AI agents and autonomous programming",
     date: "2025-09-29",
     time: "6:00 PM - 9:00 PM",
-    venue: "7shifts",
     tags: ["Tech Talk", "AI", "Beginner-friendly"],
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/310620439/",
     imagePath: "/images/meetup/highres_529742663.jpeg",
     host: sponsors["7shifts"],
-    photoAlbum: photoAlbums["AF1QipNHIuIQ3GEwyuE7hRn3rrREKk2jRULCv3DkSatNFoAVgNYpQrzOd3VHmpsbT5L15w"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipNHIuIQ3GEwyuE7hRn3rrREKk2jRULCv3DkSatNFoAVgNYpQrzOd3VHmpsbT5L15w?key=UVFQal9MbTNiVmZhUnlOQVZ0U05iR3BfRlJxdFh3",
   },
   {
     id: "mentorship-meetup-2025",
@@ -256,7 +252,7 @@ export const events: Event[] = [
     date: "2025-06-21",
     tags: ["Sports", "Social"],
     status: "past",
-    photoAlbum: photoAlbums["AF1QipMpnt5xDbFhqPFjq-d3e6NNoGiRUMTXxxbCQ-jTbOPnEE1tx6RMZEDt6s0ILEOetA"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipMpnt5xDbFhqPFjq-d3e6NNoGiRUMTXxxbCQ-jTbOPnEE1tx6RMZEDt6s0ILEOetA?key=M1BBanJKUDdQWWdJMW41aFJoMUExakRwTzhrQWlB",
   },
   {
     id: "supercollider-techweek-2025",
@@ -276,12 +272,12 @@ export const events: Event[] = [
     pitch: "Special CodeDiversity event during Toronto Tech Week at 7shifts HQ",
     date: "2025-06-25",
     time: "6:00 PM - 9:00 PM",
-    venue: "7shifts",
     tags: ["CodeDiversity", "Tech Week"],
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/307623203/",
     imagePath: "/images/meetup/highres_528323722.jpeg",
-    photoAlbum: photoAlbums["AF1QipMingUvuBFdNA4ES6wYi3UCHzRT3k9Il3wlWnFoUu_-5X8jztaoTjtAloU7TLIMJg"],
+    host: sponsors["7shifts"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipMingUvuBFdNA4ES6wYi3UCHzRT3k9Il3wlWnFoUu_-5X8jztaoTjtAloU7TLIMJg?key=LXo2S0U1LXE2RmpJMk1HQXhfb0NISG1ncE1md1VR",
   },
   {
     id: "code-diversity-coffee-2025-05",
@@ -303,7 +299,7 @@ export const events: Event[] = [
     venue: "SpinCo",
     tags: ["Anniversary", "Sports", "Social"],
     status: "past",
-    photoAlbum: photoAlbums["AF1QipNsmSeqY9wxLMtqnFkDoPaj4X5T-cmuUkYkVHYHPUopyT4-b_IYhiPajDguMT-CSQ"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipNsmSeqY9wxLMtqnFkDoPaj4X5T-cmuUkYkVHYHPUopyT4-b_IYhiPajDguMT-CSQ?key=NGlBeXM1bERMeDVKeGNXR2NZOWN5WG9PakZackRR",
   },
   {
     id: "code-diversity-coffee-2025-04",
@@ -334,8 +330,8 @@ export const events: Event[] = [
       { name: "Pawan Keer", title: "Senior Software Development Manager", talkTitle: "Infrastructure at Scale" },
       { name: "Lucas Tran", title: "Senior Software Developer", talkTitle: "Lessons from the Trenches" },
     ],
-    youtubeVideo: youtubeVideos["4MSJq2GBsIc"],
-    photoAlbum: photoAlbums["AF1QipOb1lKTP_ktVaptdlB6GndudP3YQ77pW6BR3IxcDA2YV86ZNaHZe3M0Hp2iD6UoLA"],
+    youtubeUrl: "https://www.youtube.com/watch?v=4MSJq2GBsIc",
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipOb1lKTP_ktVaptdlB6GndudP3YQ77pW6BR3IxcDA2YV86ZNaHZe3M0Hp2iD6UoLA?key=SGxsS0xFRVRNZGdFVGJVQ1ZXN1ZtODBrZDNrNzRR",
   },
   {
     id: "code-diversity-coffee-2025-03",
@@ -367,14 +363,13 @@ export const events: Event[] = [
     pitch: "Building extensions that work everywhere",
     date: "2025-01-28",
     time: "6:00 PM - 9:00 PM",
-    venue: "Cohere",
     tags: ["Tech Talk", "Browser Extensions"],
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/305400630/",
     imagePath: "/images/meetup/highres_525722753.jpeg",
     host: sponsors.cohere,
-    youtubeVideo: youtubeVideos["f8ONw6O_rco"],
-    photoAlbum: photoAlbums["AF1QipMrTfiNbI7_NSGioh-DLR6Slvp51pBjf1cShVzeToyKNr982BbkOEPmrqFYhd7vMg"],
+    youtubeUrl: "https://www.youtube.com/watch?v=f8ONw6O_rco",
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipMrTfiNbI7_NSGioh-DLR6Slvp51pBjf1cShVzeToyKNr982BbkOEPmrqFYhd7vMg?key=VUp4V1ZGNzFibHBpRUNESkZYQ3BhVElob1RsdmdB",
   },
   {
     id: "code-diversity-coffee-2025-01",
@@ -396,7 +391,7 @@ export const events: Event[] = [
     date: "2024-12-14",
     tags: ["Anniversary", "Social", "Holiday"],
     status: "past",
-    photoAlbum: photoAlbums["AF1QipNaxy4wPaRA3EwJOduVBxlFXvGGqBsDmYRoAFw7_ChOrWGOjRo8Kk1TKYA5tiaE6g"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipNaxy4wPaRA3EwJOduVBxlFXvGGqBsDmYRoAFw7_ChOrWGOjRo8Kk1TKYA5tiaE6g?key=ZHVrQjhicDk2c0w3dG9tQVc1MlRGMmV4cTRUc1d3",
   },
   {
     id: "code-diversity-coffee-2024-12",
@@ -417,7 +412,7 @@ export const events: Event[] = [
     date: "2024-11-16",
     tags: ["Sports", "Social"],
     status: "past",
-    photoAlbum: photoAlbums["AF1QipOXFVlljbwPWfZ2MVv5rhWpTIaWzLb6Jdfp9aqRvtYP241OIvn3cbVMN-qooI1Fmg"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipOXFVlljbwPWfZ2MVv5rhWpTIaWzLb6Jdfp9aqRvtYP241OIvn3cbVMN-qooI1Fmg?key=ZkY0eVZvQXNpQXRZYUVCRTk1ZFEybnpZejJSRFlR",
   },
   {
     id: "code-diversity-coffee-2024-11",
@@ -442,8 +437,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/304263016/",
     imagePath: "/images/meetup/highres_524451822.jpeg",
-    youtubeVideo: youtubeVideos["2UTsy-Lbulk"],
-    photoAlbum: photoAlbums["AF1QipMfuV2mdrwgETwmivv4zQUu8pSRAzOG0D9J6j4nCpnNDKPMAgWL5ru6sYqMaMOOQg"],
+    youtubeUrl: "https://www.youtube.com/watch?v=2UTsy-Lbulk",
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipMfuV2mdrwgETwmivv4zQUu8pSRAzOG0D9J6j4nCpnNDKPMAgWL5ru6sYqMaMOOQg?key=OGJrMmFMR2NGT1IzaGxqTVFIRjVlaVJJbXNSaGd3",
   },
   {
     id: "edtech-ai-accessibility",
@@ -456,8 +451,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/303655206/",
     imagePath: "/images/meetup/highres_523810554.jpeg",
-    youtubeVideo: youtubeVideos["N50r7eIEIS0"],
-    photoAlbum: photoAlbums["AF1QipMwzeGDJqNkRSSagw_D8v3F73XeaPR9kmpQcpYjHCCuMx7nZ94feDaTGMA55whrLg"],
+    youtubeUrl: "https://www.youtube.com/watch?v=N50r7eIEIS0",
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipMwzeGDJqNkRSSagw_D8v3F73XeaPR9kmpQcpYjHCCuMx7nZ94feDaTGMA55whrLg?key=QzdzTnpRdHpiaHNaOE0zNnVIUE5EQlMxM0kxYzFR",
   },
   {
     id: "cypress-overwhelmed-dev",
@@ -470,7 +465,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/303601353/",
     imagePath: "/images/meetup/highres_523676979.jpeg",
-    youtubeVideo: youtubeVideos["cZHiIMuynYE"],
+    youtubeUrl: "https://www.youtube.com/watch?v=cZHiIMuynYE",
   },
   {
     id: "forensics-rsc",
@@ -483,8 +478,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/302940980/",
     imagePath: "/images/meetup/highres_523034935.jpeg",
-    youtubeVideo: youtubeVideos["NOlSKs5PLpM"],
-    photoAlbum: photoAlbums["AF1QipMPoK9UuL4g8MKPP8Tk8tI2FTppYtQQ-Nf0ga6DZXjFmqXT5SHTYikca8rhmltqhg"],
+    youtubeUrl: "https://www.youtube.com/watch?v=NOlSKs5PLpM",
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipMPoK9UuL4g8MKPP8Tk8tI2FTppYtQQ-Nf0ga6DZXjFmqXT5SHTYikca8rhmltqhg?key=djduZGhZaHpJTi04SEZ2SVg3NUo0ZTRqcUlVY0Rn",
   },
   {
     id: "code-diversity-coffee-2024-09",
@@ -505,7 +500,7 @@ export const events: Event[] = [
     date: "2024-09-07",
     tags: ["Social"],
     status: "past",
-    photoAlbum: photoAlbums["AF1QipMgtyV8CNEuz-qajiP1CHJXhOThudbAQwu8JRpN_OSpPnjsb1H8PBPNI1old3yukQ"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipMgtyV8CNEuz-qajiP1CHJXhOThudbAQwu8JRpN_OSpPnjsb1H8PBPNI1old3yukQ?key=TVZaMExWQnVWQ1RvRlFFVGdQVGZCV3BXQ3k0ZlF3",
   },
   {
     id: "ai-insights-experts",
@@ -518,8 +513,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/302337555/",
     imagePath: "/images/meetup/highres_522500582.jpeg",
-    youtubeVideo: youtubeVideos["RUco7XrbMqk"],
-    photoAlbum: photoAlbums["AF1QipMlGtrOSia0VXZaDqAcjItENfxwXFdxJO2A9QCKGwXcRPn46nY5e_DB9puMgfky9Q"],
+    youtubeUrl: "https://www.youtube.com/watch?v=RUco7XrbMqk",
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipMlGtrOSia0VXZaDqAcjItENfxwXFdxJO2A9QCKGwXcRPn46nY5e_DB9puMgfky9Q?key=eWNXOGh0SEZqcDdRaDVwRHVEWEF5SjBfRkRvTzFn",
   },
   {
     id: "code-diversity-coffee-2024-08",
@@ -540,7 +535,7 @@ export const events: Event[] = [
     date: "2024-08-10",
     tags: ["Sports", "Social"],
     status: "past",
-    photoAlbum: photoAlbums["AF1QipNm1fut4HKxSRTpQ-6RkNQDkXsrzHhYfCaQwkoZAOWpw6b64L3iLU1yA3MHl_r8aQ"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipNm1fut4HKxSRTpQ-6RkNQDkXsrzHhYfCaQwkoZAOWpw6b64L3iLU1yA3MHl_r8aQ?key=M2pWYXcySC1pazV4dzdxX2hIMFc5RnN6SHA3Q1d3",
   },
   {
     id: "tankolympics",
@@ -549,7 +544,7 @@ export const events: Event[] = [
     date: "2024-07-27",
     tags: ["Sports", "Social"],
     status: "past",
-    photoAlbum: photoAlbums["AF1QipMaV0hBrR-eYX20MmtDBemZSZGUE3Y_kvO0JF9Cfm4crS27KpoU9tuY2u1aGNXWAA"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipMaV0hBrR-eYX20MmtDBemZSZGUE3Y_kvO0JF9Cfm4crS27KpoU9tuY2u1aGNXWAA?key=OHk5TlJRNklhVTFXMzNGYTZ5Y09qOTN5ejM0RWtn",
   },
   {
     id: "mini-webpack-scratch",
@@ -562,8 +557,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/301699806/",
     imagePath: "/images/meetup/highres_521809945.jpeg",
-    youtubeVideo: youtubeVideos["iIjdAXX-oD4"],
-    photoAlbum: photoAlbums["AF1QipNyu6nkeQkkImW1usVfuDT6nr64NVj_WG5P6geHbZlDnLnKbZFP0kMGkovhsji1oA"],
+    youtubeUrl: "https://www.youtube.com/watch?v=iIjdAXX-oD4",
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipNyu6nkeQkkImW1usVfuDT6nr64NVj_WG5P6geHbZlDnLnKbZFP0kMGkovhsji1oA?key=R292TkpacE9ybHVMNTlfdVhvRHYtVGJEbFlZa0xn",
   },
   {
     id: "softball-sashimis-2024",
@@ -572,7 +567,7 @@ export const events: Event[] = [
     date: "2024-07-13",
     tags: ["Sports", "Social"],
     status: "past",
-    photoAlbum: photoAlbums["AF1QipMmBy4aNt0rNAsHwMagst6jvo93awXW5yyWd4yCw9g5u0vdHpN7BRRHedJ8ofNEpQ"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipMmBy4aNt0rNAsHwMagst6jvo93awXW5yyWd4yCw9g5u0vdHpN7BRRHedJ8ofNEpQ?key=TXRZZ2FCazlCSFROZmdmQ1cwYXMwbmxYXy1ldmln",
   },
   {
     id: "code-diversity-coffee-2024-07",
@@ -593,7 +588,7 @@ export const events: Event[] = [
     date: "2024-06-15",
     tags: ["Social", "Charity"],
     status: "past",
-    photoAlbum: photoAlbums["AF1QipNM9FBTNWpRR8DWT99MItot1HtgKiLEccHtwjYZIXBqPyQa8s4-ATrTlPNbCjf1gA"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipNM9FBTNWpRR8DWT99MItot1HtgKiLEccHtwjYZIXBqPyQa8s4-ATrTlPNbCjf1gA?key=WGhjeENGV3VlZ1NpV3lQWjV6bE9OXzJ6b2lEaWN3",
   },
   {
     id: "networking-101-2024",
@@ -606,7 +601,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/301198832/",
     imagePath: "/images/meetup/highres_521252023.jpeg",
-    youtubeVideo: youtubeVideos["Fz-AfRrlzLM"],
+    youtubeUrl: "https://www.youtube.com/watch?v=Fz-AfRrlzLM",
   },
   {
     id: "engineering-wellness-2024",
@@ -619,8 +614,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/300591167/",
     imagePath: "/images/meetup/highres_520941912.jpeg",
-    youtubeVideo: youtubeVideos["tMoqGyfVkGA"],
-    photoAlbum: photoAlbums["AF1QipMllK8NZdIjH0tP8lf0fw7JoQzXgse-6qCsWP2Kvh1lKWdGAiz_a1eeocYuoAntrA"],
+    youtubeUrl: "https://www.youtube.com/watch?v=tMoqGyfVkGA",
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipMllK8NZdIjH0tP8lf0fw7JoQzXgse-6qCsWP2Kvh1lKWdGAiz_a1eeocYuoAntrA?key=cUphRG83Mzg1X0pSVzY2OTJfNTZ5Wlota20tY0pn",
   },
   {
     id: "ai-prompting-101",
@@ -633,7 +628,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/300782288/",
     imagePath: "/images/meetup/highres_520806256.jpeg",
-    youtubeVideo: youtubeVideos["m7wvLa3sUe4"],
+    youtubeUrl: "https://www.youtube.com/watch?v=m7wvLa3sUe4",
   },
   {
     id: "anniversary-social-2024",
@@ -642,7 +637,7 @@ export const events: Event[] = [
     date: "2024-04-20",
     tags: ["Anniversary", "Social"],
     status: "past",
-    photoAlbum: photoAlbums["AF1QipN5YllsNHTVeUJKlSnd8bD4jyTo6muTTiMdHifF3DhT0olsYLxMbHynTtJ8jHJ7Uw"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipN5YllsNHTVeUJKlSnd8bD4jyTo6muTTiMdHifF3DhT0olsYLxMbHynTtJ8jHJ7Uw?key=a1NmcTQ1VUpwWVB1OXNpb0tzeVRhN2hmM1NqcEFR",
   },
   {
     id: "epic-quest-javascript",
@@ -655,8 +650,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/300175753/",
     imagePath: "/images/meetup/highres_520152027.jpeg",
-    youtubeVideo: youtubeVideos["Q5DvWKxpaBE"],
-    photoAlbum: photoAlbums["AF1QipNLPqEiBg7_95ZuKAxeC9GxdOVSUf3RmG8a5Hr5LWmBP8jRnPDGXNlBqkA4Sf2aXQ"],
+    youtubeUrl: "https://www.youtube.com/watch?v=Q5DvWKxpaBE",
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipNLPqEiBg7_95ZuKAxeC9GxdOVSUf3RmG8a5Hr5LWmBP8jRnPDGXNlBqkA4Sf2aXQ?key=UUltWXp4ODRJcDFYaXhOLXVrUE1GcGozZ0c0SFFR",
   },
   {
     id: "pathfinders-2024",
@@ -664,13 +659,13 @@ export const events: Event[] = [
     pitch: "Panel celebrating diverse paths and perspectives in the tech industry",
     date: "2024-03-26",
     time: "6:00 PM - 9:00 PM",
-    venue: "Cohere",
     tags: ["Panel", "CodeDiversity", "Career"],
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/299326496/",
     imagePath: "/images/meetup/highres_519276676.jpeg",
-    youtubeVideo: youtubeVideos["nRoKA93lJqY"],
-    photoAlbum: photoAlbums["AF1QipOn_EKK627wNTlgtoEjoRR-RIYqwDMZfV8cdxNx5-MAXTT_pvwWZAU3Jd8fgsZ2Lg"],
+    host: sponsors.cohere,
+    youtubeUrl: "https://www.youtube.com/watch?v=nRoKA93lJqY",
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipOn_EKK627wNTlgtoEjoRR-RIYqwDMZfV8cdxNx5-MAXTT_pvwWZAU3Jd8fgsZ2Lg?key=eG9aR1A1NzhQa01MN09TSGFGUkxnaldjcTJ2WHhR",
   },
   {
     id: "accessible-nav-menus",
@@ -683,7 +678,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/299380715/",
     imagePath: "/images/meetup/highres_519308057.jpeg",
-    youtubeVideo: youtubeVideos["Zuvta9giDOM"],
+    youtubeUrl: "https://www.youtube.com/watch?v=Zuvta9giDOM",
   },
   {
     id: "generative-ai-developers-2024",
@@ -696,7 +691,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/298712672/",
     imagePath: "/images/meetup/highres_518649638.jpeg",
-    youtubeVideo: youtubeVideos["wv3tPtDrl_E"],
+    youtubeUrl: "https://www.youtube.com/watch?v=wv3tPtDrl_E",
   },
   {
     id: "coding-with-character",
@@ -709,7 +704,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/299017176/",
     imagePath: "/images/meetup/highres_518943016.jpeg",
-    youtubeVideo: youtubeVideos["Z1Ka1jsRW7E"],
+    youtubeUrl: "https://www.youtube.com/watch?v=Z1Ka1jsRW7E",
   },
   {
     id: "containerization-101",
@@ -722,7 +717,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/298854685/",
     imagePath: "/images/meetup/highres_518949413.jpeg",
-    youtubeVideo: youtubeVideos["lYQMYnnb6Kw"],
+    youtubeUrl: "https://www.youtube.com/watch?v=lYQMYnnb6Kw",
   },
   {
     id: "css-chronicles-2024",
@@ -735,7 +730,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/298329281/",
     imagePath: "/images/meetup/highres_518418480.jpeg",
-    youtubeVideo: youtubeVideos["JW0Nc5W7yEY"],
+    youtubeUrl: "https://www.youtube.com/watch?v=JW0Nc5W7yEY",
   },
   {
     id: "cottage-trip",
@@ -744,7 +739,7 @@ export const events: Event[] = [
     date: "2024-02-17",
     tags: ["Social", "Trip"],
     status: "past",
-    photoAlbum: photoAlbums["AF1QipOdL17zISJwXuA-sOQpNz71wSZ5plWDiQ112VjuKLxMFMX3hLObJUJ6v5J_c-asHA"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipOdL17zISJwXuA-sOQpNz71wSZ5plWDiQ112VjuKLxMFMX3hLObJUJ6v5J_c-asHA?key=U3BrY3NOVnk3eHBLRUJYMHFDNnBVMmJ0eFpTbm9B",
   },
   {
     id: "burnout-in-tech",
@@ -757,7 +752,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/298283794/",
     imagePath: "/images/meetup/highres_518284688.jpeg",
-    youtubeVideo: youtubeVideos["q_aFpilEqMk"],
+    youtubeUrl: "https://www.youtube.com/watch?v=q_aFpilEqMk",
   },
   {
     id: "feature-flagging-primer",
@@ -770,7 +765,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/298165707/",
     imagePath: "/images/meetup/highres_518139051.jpeg",
-    youtubeVideo: youtubeVideos["KbUbw5QNPfo"],
+    youtubeUrl: "https://www.youtube.com/watch?v=KbUbw5QNPfo",
   },
   // ─── 2023 ────────────────────────────────────────────────────────────────────
   {
@@ -780,7 +775,7 @@ export const events: Event[] = [
     date: "2023-12-14",
     tags: ["Social", "Holiday"],
     status: "past",
-    photoAlbum: photoAlbums["AF1QipNJCcEC8dFz06_EsD32Tpot7evg7OY9ke9lb3Qs8itCUKgczd9V3iTdaKXVPb5qTw"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipNJCcEC8dFz06_EsD32Tpot7evg7OY9ke9lb3Qs8itCUKgczd9V3iTdaKXVPb5qTw?key=S1RNYjVFRjZyRXRVQzFBR3lGVk1KRFJPOUlIQjJn",
   },
   {
     id: "figma-devmode-workshop",
@@ -793,7 +788,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/297602552/",
     imagePath: "/images/meetup/highres_517574457.jpeg",
-    youtubeVideo: youtubeVideos["r0jrByKPu8E"],
+    youtubeUrl: "https://www.youtube.com/watch?v=r0jrByKPu8E",
   },
   {
     id: "app-performance-deep-dive",
@@ -806,8 +801,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/297145894/",
     imagePath: "/images/meetup/highres_517035730.jpeg",
-    youtubeVideo: youtubeVideos["Q89KAMThfCw"],
-    photoAlbum: photoAlbums["AF1QipN7795hAt6xtwWmIIPlBoijkf8svVZFKd4v7vTrDfhJdYe0u5DAn8wSlT4bNKgHig"],
+    youtubeUrl: "https://www.youtube.com/watch?v=Q89KAMThfCw",
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipN7795hAt6xtwWmIIPlBoijkf8svVZFKd4v7vTrDfhJdYe0u5DAn8wSlT4bNKgHig?key=Q1o4MzdZT1dWSHlzS0QyS0E0Qk1jSzVUSTNvTnZB",
   },
   {
     id: "transitioning-fullstack",
@@ -820,7 +815,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/297176805/",
     imagePath: "/images/meetup/highres_517192330.jpeg",
-    youtubeVideo: youtubeVideos["xbp1Psv2DiY"],
+    youtubeUrl: "https://www.youtube.com/watch?v=xbp1Psv2DiY",
   },
   {
     id: "cracking-a11y-code",
@@ -833,7 +828,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/296957170/",
     imagePath: "/images/meetup/highres_516817887.jpeg",
-    youtubeVideo: youtubeVideos["-X1L81xpBtc"],
+    youtubeUrl: "https://www.youtube.com/watch?v=-X1L81xpBtc",
   },
   {
     id: "niagara-glen-hike",
@@ -842,7 +837,7 @@ export const events: Event[] = [
     date: "2023-10-28",
     tags: ["Social", "Outdoors"],
     status: "past",
-    photoAlbum: photoAlbums["AF1QipOg2itOXIvPeeQKFEFScI2UCeOojdcuGpMGoJXJftFFaKlCVDhzhdkk2PNfrICpzA"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipOg2itOXIvPeeQKFEFScI2UCeOojdcuGpMGoJXJftFFaKlCVDhzhdkk2PNfrICpzA?key=TmRwakJkdl8zMWlYZDM2dlZiT2ZUSWwwN1U2MmtR",
   },
   {
     id: "halloween-2023",
@@ -851,7 +846,7 @@ export const events: Event[] = [
     date: "2023-10-31",
     tags: ["Social", "Holiday"],
     status: "past",
-    photoAlbum: photoAlbums["AF1QipMbVRHwXl8qR8eWRaxk0jqxbUxRBD4ic1arOmYFPQQNPaFonrTiGJU4pf_rfFFMxg"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipMbVRHwXl8qR8eWRaxk0jqxbUxRBD4ic1arOmYFPQQNPaFonrTiGJU4pf_rfFFMxg?key=SXlVb0s5dEZqRnMyejh3QkcyR2o3NTFvQzhEaXRB",
   },
   {
     id: "llms-what-how",
@@ -859,13 +854,13 @@ export const events: Event[] = [
     pitch: "Demystifying LLMs for developers building the next wave of AI apps",
     date: "2023-10-23",
     time: "6:00 PM - 9:00 PM",
-    venue: "Cohere",
     tags: ["Tech Talk", "AI", "LLM"],
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/296408305/",
     imagePath: "/images/meetup/highres_516203971.jpeg",
-    youtubeVideo: youtubeVideos["L61l0VzQ5j4"],
-    photoAlbum: photoAlbums["AF1QipPFf6pYTwSxFt1sG8sco1i_tdRYmRzxFSlGLXokJjlMXsc4ZT9288pNP0Z7-_Q71A"],
+    host: sponsors.cohere,
+    youtubeUrl: "https://www.youtube.com/watch?v=L61l0VzQ5j4",
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipPFf6pYTwSxFt1sG8sco1i_tdRYmRzxFSlGLXokJjlMXsc4ZT9288pNP0Z7-_Q71A?key=aVM3VjA3WU5QOW5XaExMLW1BTFoxbkdCQllERDhB",
   },
   {
     id: "junior-to-midlevel",
@@ -878,7 +873,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/296505054/",
     imagePath: "/images/meetup/highres_516306438.jpeg",
-    youtubeVideo: youtubeVideos["xWsj6REFwHA"],
+    youtubeUrl: "https://www.youtube.com/watch?v=xWsj6REFwHA",
   },
   {
     id: "website-performance-deep-dive",
@@ -891,8 +886,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/295642016/",
     imagePath: "/images/meetup/highres_515354669.jpeg",
-    youtubeVideo: youtubeVideos["IKrZuYJGBKo"],
-    photoAlbum: photoAlbums["AF1QipOG-h347VHP9BpUaj9VGXpH1RbYpvM9VqJPbGMPw22afLsIUrmW1Mc9vPDpBBO8tg"],
+    youtubeUrl: "https://www.youtube.com/watch?v=IKrZuYJGBKo",
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipOG-h347VHP9BpUaj9VGXpH1RbYpvM9VqJPbGMPw22afLsIUrmW1Mc9vPDpBBO8tg?key=NVdxWnV2ckFSZG0zeDdyMlVaUS1VNDFCWV9QRTZB",
   },
   {
     id: "bowling-2023",
@@ -901,7 +896,7 @@ export const events: Event[] = [
     date: "2023-09-16",
     tags: ["Sports", "Social"],
     status: "past",
-    photoAlbum: photoAlbums["AF1QipNJf7YltaKvL5Cq_bX4O8Nt0heaFeetF1UuqVj54JoxVEzjPm4F85nQPHj_LDKpdw"],
+    albumUrl: "https://photos.google.com/u/2/share/AF1QipNJf7YltaKvL5Cq_bX4O8Nt0heaFeetF1UuqVj54JoxVEzjPm4F85nQPHj_LDKpdw?key=V2JKcjBkTDczWVZWWHNpNUl4OVJGOGQxNmQxb3BB",
   },
   {
     id: "continuous-learning-tech",
@@ -914,7 +909,7 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/295750233/",
     imagePath: "/images/meetup/highres_515481840.jpeg",
-    youtubeVideo: youtubeVideos["6Mf6CDJnE4U"],
+    youtubeUrl: "https://www.youtube.com/watch?v=6Mf6CDJnE4U",
   },
 ];
 
@@ -931,5 +926,7 @@ export function getPastEvents(): Event[] {
 }
 
 export function getRecentEvents(count: number = 4): Event[] {
-  return getPastEvents().slice(0, count);
+  const upcoming = getUpcomingEvents();
+  const past = getPastEvents();
+  return [...upcoming, ...past].slice(0, count);
 }

@@ -3,10 +3,10 @@ import Link from "next/link";
 import { Calendar, ExternalLink, Clock, Users, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
-import { EventCard } from "@/components/ui/event-card";
+import { EventBrowser } from "@/components/ui/event-browser";
 import { DualCTA } from "@/components/ui/dual-cta";
 import { ContactCard } from "@/components/ui/contact-card";
-import { getUpcomingEvents, getRecentEvents, events } from "@/constants/events";
+import { getUpcomingEvents, events } from "@/constants/events";
 
 export const metadata: Metadata = {
   title: "Events",
@@ -16,7 +16,6 @@ export const metadata: Metadata = {
 
 export default function EventsPage() {
   const upcomingEvents = getUpcomingEvents();
-  const allRecentEvents = getRecentEvents(50); // Get all events
   const nextEvent = upcomingEvents[0];
 
   return (
@@ -63,7 +62,11 @@ export default function EventsPage() {
                   </div>
 
                   <h2 className="font-display text-2xl lg:text-3xl font-semibold text-foreground mb-3">
-                    {nextEvent.title}
+                    {nextEvent.eventUrl ? (
+                      <a href={nextEvent.eventUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                        {nextEvent.title}
+                      </a>
+                    ) : nextEvent.title}
                   </h2>
                   <p className="text-muted-foreground mb-6">{nextEvent.pitch}</p>
 
@@ -80,18 +83,30 @@ export default function EventsPage() {
                         })}
                       </span>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-foreground">
-                      <Clock className="h-4 w-4 text-ring" />
-                      <span>{nextEvent.time}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-foreground">
-                      <MapPin className="h-4 w-4 text-ring" />
-                      <span>{nextEvent.venue}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-foreground">
-                      <Users className="h-4 w-4 text-ring" />
-                      <span>{nextEvent.capacity} seats</span>
-                    </div>
+                    {nextEvent.time && (
+                      <div className="flex items-center gap-2 text-sm text-foreground">
+                        <Clock className="h-4 w-4 text-ring" />
+                        <span>{nextEvent.time}</span>
+                      </div>
+                    )}
+                    {(nextEvent.venue ?? nextEvent.host) && (
+                      <div className="flex items-center gap-2 text-sm text-foreground">
+                        <MapPin className="h-4 w-4 text-ring" />
+                        {nextEvent.host ? (
+                          <a href={nextEvent.host.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                            {nextEvent.host.name}
+                          </a>
+                        ) : (
+                          <span>{nextEvent.venue}</span>
+                        )}
+                      </div>
+                    )}
+                    {nextEvent.capacity && (
+                      <div className="flex items-center gap-2 text-sm text-foreground">
+                        <Users className="h-4 w-4 text-ring" />
+                        <span>{nextEvent.capacity} seats</span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Tags */}
@@ -131,9 +146,9 @@ export default function EventsPage() {
                           {nextEvent.host.name[0]}
                         </div>
                         <div>
-                          <p className="font-semibold text-foreground">
+                          <a href={nextEvent.host.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:underline">
                             {nextEvent.host.name}
-                          </p>
+                          </a>
                           <p className="text-sm text-muted-foreground">Host venue</p>
                         </div>
                       </div>
@@ -193,7 +208,7 @@ export default function EventsPage() {
           </p>
           <Button variant="primary" asChild>
             <a
-              href="https://luma.com/techtank"
+              href="https://lu.ma/techtank"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -209,23 +224,10 @@ export default function EventsPage() {
         <SectionHeader
           overline="All events"
           title="Event archive"
-          description="Explore all TechTank meetups — most recent first."
+          description="Browse, filter, and search all TechTank meetups."
           className="mb-12"
         />
-
-        {/* Featured events - first 2 */}
-        <div className="grid gap-4 lg:grid-cols-2 mb-4">
-          {allRecentEvents.slice(0, 2).map((event) => (
-            <EventCard key={event.id} event={event} variant="featured" />
-          ))}
-        </div>
-
-        {/* Remaining events - smaller cards */}
-        <div className="grid gap-3 grid-cols-2 lg:grid-cols-4">
-          {allRecentEvents.slice(2).map((event) => (
-            <EventCard key={event.id} event={event} variant="compact" />
-          ))}
-        </div>
+        <EventBrowser events={events} />
       </Section>
 
       {/* Dual CTA */}
