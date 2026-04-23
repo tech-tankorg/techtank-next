@@ -32,7 +32,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
       <div className="group relative overflow-hidden rounded-2xl glass">
         <div className="p-6">
           <div className="flex flex-wrap items-center gap-2 mb-3">
-            <Badge variant="warning">
+            <Badge variant={isUpcoming ? "warning" : "secondary"}>
               {isUpcoming ? "Upcoming" : "Past"}
             </Badge>
             {primaryTag && (
@@ -71,7 +71,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
           {(event.photoAlbum || event.youtubeVideo) && (
             <div className="flex flex-wrap items-center gap-2">
               {event.photoAlbum && (
-                <Badge variant="warning" asChild>
+                <Badge variant="secondary" asChild>
                   <a href={event.photoAlbum.url} target="_blank" rel="noopener noreferrer" aria-label="View event photos">
                     <Camera className="h-3 w-3" />
                     Photos
@@ -79,7 +79,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
                 </Badge>
               )}
               {event.youtubeVideo && (
-                <Badge variant="warning" asChild>
+                <Badge variant="secondary" asChild>
                   <a href={event.youtubeVideo.url} target="_blank" rel="noopener noreferrer" aria-label="Watch recap on YouTube">
                     <Play className="h-3 w-3 fill-current" />
                     Recap
@@ -96,7 +96,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
   return (
     <div className="group relative flex flex-col glass rounded-xl p-4 transition-all duration-300">
       <div className="flex flex-wrap items-center gap-1.5 mb-2">
-        <Badge variant="warning" size="sm">
+        <Badge variant={isUpcoming ? "warning" : "secondary"} size="sm">
           {isUpcoming ? "Upcoming" : "Past"}
         </Badge>
         {primaryTag && (
@@ -130,7 +130,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
       {(event.photoAlbum || event.youtubeVideo) && (
         <div className="flex flex-wrap items-center gap-1.5 mt-auto pt-1">
           {event.photoAlbum && (
-            <Badge variant="warning" size="sm" asChild>
+            <Badge variant="secondary" size="sm" asChild>
               <a href={event.photoAlbum.url} target="_blank" rel="noopener noreferrer" aria-label="View event photos">
                 <Camera className="h-2.5 w-2.5" />
                 Photos
@@ -138,7 +138,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
             </Badge>
           )}
           {event.youtubeVideo && (
-            <Badge variant="warning" size="sm" asChild>
+            <Badge variant="secondary" size="sm" asChild>
               <a href={event.youtubeVideo.url} target="_blank" rel="noopener noreferrer" aria-label="Watch recap on YouTube">
                 <Play className="h-2.5 w-2.5 fill-current" />
                 Recap
