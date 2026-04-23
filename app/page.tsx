@@ -40,8 +40,8 @@ export default function HomePage() {
     <>
       {/* Hero Section - Left aligned text, stacked overlapping photos right */}
       <section className="relative overflow-hidden gradient-hero texture-grain">
-        <div className="relative mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-6 items-center justify-center lg:justify-start text-center lg:text-left">
+        <div className="relative mx-auto max-w-7xl px-8 py-12 lg:px-8 lg:py-16">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-6 items-center">
             {/* Left: Text content */}
             <div className="lg:max-w-xl py-8 lg:py-12">
               <span className="tag mb-4">
@@ -53,11 +53,11 @@ export default function HomePage() {
               <p className="text-lg text-muted-foreground leading-relaxed mb-6 lg:max-w-md">
                 Tech talks, panels, socials, sports, and more—hosted at companies across the city.
               </p>
-              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                <Button variant="primary" size="lg" asChild>
+              <div className="flex flex-wrap gap-3">
+                <Button variant="primary" size="md" asChild>
                   <Link href="/events">See events</Link>
                 </Button>
-                <Button variant="outline" size="lg" asChild>
+                <Button variant="outline" size="md" asChild>
                   <Link href="/get-involved">Get involved</Link>
                 </Button>
               </div>
@@ -159,7 +159,7 @@ export default function HomePage() {
 
         {/* CTAs */}
         <div className="flex flex-wrap items-center justify-center gap-3">
-          <Button variant="primary" size="sm" asChild>
+          <Button variant="primary" size="md" asChild>
             <a
               href="https://luma.com/techtank"
               target="_blank"
@@ -169,7 +169,7 @@ export default function HomePage() {
               <ExternalLink className="ml-2 h-4 w-4" />
             </a>
           </Button>
-          <Button variant="outline" size="sm" asChild>
+          <Button variant="outline" size="md" asChild>
             <Link href="/events">
               View all
               <ArrowRight className="ml-2 h-4 w-4" />

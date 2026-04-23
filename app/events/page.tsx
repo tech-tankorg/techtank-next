@@ -48,7 +48,7 @@ export default function EventsPage() {
 
       {/* Next Up */}
       {nextEvent && (
-        <Section className="pt-0">
+        <Section>
           <SectionHeader overline="Next up" title="" className="mb-8" />
           <div className="rounded-2xl bg-card border border-border overflow-hidden">
             <div className="p-6 lg:p-8">

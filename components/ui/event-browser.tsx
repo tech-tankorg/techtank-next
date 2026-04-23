@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { LayoutGrid, List, Columns2, Calendar, Tag, MapPin, Camera, Play } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { EventCard } from "@/components/ui/event-card";
 import { cn } from "@/utils/theme";
 import type { Event } from "@/constants/events";
@@ -35,11 +36,14 @@ interface EventBrowserProps {
   events: Event[];
 }
 
+const PAGE_SIZE = 20;
+
 export function EventBrowser({ events }: EventBrowserProps) {
   const [category, setCategory] = useState<CategoryFilter>("all");
   const [timeFilter, setTimeFilter] = useState<TimeFilter>("all");
   const [displayMode, setDisplayMode] = useState<DisplayMode>("cards");
   const [sortBy, setSortBy] = useState<SortBy>("date");
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const filtered = useMemo(() => {
     let result = events.filter((e) => {
@@ -62,6 +66,12 @@ export function EventBrowser({ events }: EventBrowserProps) {
     return result;
   }, [events, category, timeFilter, sortBy]);
 
+  useEffect(() => { setVisibleCount(PAGE_SIZE); }, [category, timeFilter, sortBy]);
+
+  const visible = filtered.slice(0, visibleCount);
+  const hasMore = visibleCount < filtered.length;
+
+
   const categories: { id: CategoryFilter; label: string }[] = [
     { id: "all", label: "All" },
     { id: "tech-talks", label: "Tech Talks" },
@@ -80,7 +90,7 @@ export function EventBrowser({ events }: EventBrowserProps) {
   return (
     <div>
       {/* Controls */}
-      <div className="flex flex-col gap-4 mb-8">
+      <div className="rounded-xl bg-card border border-border p-4 flex flex-col gap-4 mb-8">
         {/* Category filters */}
         <div className="flex flex-wrap gap-2">
           {categories.map((c) => (
@@ -121,12 +131,11 @@ export function EventBrowser({ events }: EventBrowserProps) {
           <div className="flex items-center gap-3">
             {/* Sort */}
             <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-              <span>Sort:</span>
               <button
                 onClick={() => setSortBy("date")}
                 className={cn(
-                  "px-2 py-1 rounded transition-colors",
-                  sortBy === "date" ? "text-foreground font-medium" : "hover:text-foreground"
+                  "px-3 py-1 rounded-md text-xs font-medium transition-colors",
+                  sortBy === "date" ? "bg-secondary text-secondary-foreground" : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 Date
@@ -134,8 +143,8 @@ export function EventBrowser({ events }: EventBrowserProps) {
               <button
                 onClick={() => setSortBy("title")}
                 className={cn(
-                  "px-2 py-1 rounded transition-colors",
-                  sortBy === "title" ? "text-foreground font-medium" : "hover:text-foreground"
+                  "px-3 py-1 rounded-md text-xs font-medium transition-colors",
+                  sortBy === "title" ? "bg-secondary text-secondary-foreground" : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 Title
@@ -180,7 +189,7 @@ export function EventBrowser({ events }: EventBrowserProps) {
       </div>
 
       {/* Result count */}
-      <p className="text-xs text-muted-foreground mb-6">
+      <p className="text-xs text-muted-foreground mb-6 text-center">
         {filtered.length} event{filtered.length !== 1 ? "s" : ""}
       </p>
 
@@ -190,11 +199,19 @@ export function EventBrowser({ events }: EventBrowserProps) {
           No events match the current filters.
         </div>
       ) : displayMode === "cards" ? (
-        <CardsView events={filtered} />
+        <CardsView events={visible} />
       ) : displayMode === "grid" ? (
-        <GridView events={filtered} />
+        <GridView events={visible} />
       ) : (
-        <ListView events={filtered} />
+        <ListView events={visible} />
+      )}
+
+      {hasMore && (
+        <div className="mt-8 text-center">
+          <Button variant="outline" onClick={() => setVisibleCount((n) => n + PAGE_SIZE)}>
+            Load more ({filtered.length - visibleCount} remaining)
+          </Button>
+        </div>
       )}
     </div>
   );
