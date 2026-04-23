@@ -40,6 +40,7 @@ export const events: Event[] = [
     tags: ["Networking", "Social", "Multi-community"],
     status: "upcoming",
     eventUrl: "https://lu.ma/supercollider-spring-fling-2026",
+    imagePath: "/images/luma/b3bae200-2226-4cd2-9796-5a7480abda7c.jpeg",
   },
   {
     id: "code-diversity-coffee-2026-05",
@@ -51,7 +52,7 @@ export const events: Event[] = [
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "upcoming",
     eventUrl: "https://lu.ma/3ea6eq1s",
-    imagePath: "/images/luma/bca86cee-3fdb-403a-bb09-ccc095690401.jpg",
+    imagePath: "/images/luma/bca86cee-3fdb-403a-bb09-ccc095690401.jpeg",
   },
   // ─── 2026 ────────────────────────────────────────────────────────────────────
   {
@@ -64,6 +65,7 @@ export const events: Event[] = [
     tags: ["Anniversary", "Social"],
     status: "past",
     eventUrl: "https://lu.ma/qwpt54ke",
+    imagePath: "/images/luma/024f2a7f-8df2-47c2-b24d-a7c48aeab793.jpeg",
     albumUrl: "https://photos.google.com/u/2/share/AF1QipM-VmIz5kOG18HrCZIcQyfVLgKKsCQSS_SWIo2ODM5DME1Z7BEoQOoMD5JbBujfkA?key=WVVLWkFVXzNsYkpTNkN4MU5uYUNRNEpDQVZuVzJ3",
   },
   {
@@ -76,6 +78,7 @@ export const events: Event[] = [
     tags: ["Tech Talk", "DevOps", "CI/CD"],
     status: "past",
     eventUrl: "https://lu.ma/7h4g008b",
+    imagePath: "/images/luma/5d9909f0-ece1-4b30-bdde-b4af7ec8b4da.jpeg",
     sponsors: [sponsors.brainstation],
     albumUrl: "https://photos.google.com/u/2/share/AF1QipN3f4J0Ya2sv76VCQXhdkKipehavLCc3v4kcdfwqqosjY2jN-KWfT3X4wrqCiRy4w?key=WEF6OUk3alhLb3dzOEJ5SWlsU2tVM2x1eDkxNUpn",
     speakers: [
@@ -97,7 +100,7 @@ export const events: Event[] = [
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "past",
     eventUrl: "https://lu.ma/cye39lls",
-    imagePath: "/images/luma/bca86cee-3fdb-403a-bb09-ccc095690401.jpg",
+    imagePath: "/images/luma/bca86cee-3fdb-403a-bb09-ccc095690401.jpeg",
   },
   {
     id: "code-diversity-iwd-pottery-2026",
@@ -109,7 +112,7 @@ export const events: Event[] = [
     tags: ["CodeDiversity", "Social", "IWD"],
     status: "past",
     eventUrl: "https://lu.ma/wzaj4vzy",
-    imagePath: "/images/meetup/highres_532757822.jpeg",
+    imagePath: "/images/luma/2bbde763-1e1f-429d-8491-c9af40b479ab.jpeg",
   },
   {
     id: "code-diversity-coffee-2026-01",
