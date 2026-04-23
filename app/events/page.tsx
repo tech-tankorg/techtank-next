@@ -107,10 +107,10 @@ export default function EventsPage() {
                   </div>
 
                   {/* CTA */}
-                  {nextEvent.rsvpUrl && (
+                  {nextEvent.eventUrl && (
                     <Button variant="primary" size="lg" asChild>
                       <a
-                        href={nextEvent.rsvpUrl}
+                        href={nextEvent.eventUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
