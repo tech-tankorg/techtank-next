@@ -34,9 +34,9 @@ const footerLinks = {
   legal: {
     title: "Legal",
     links: [
+      { name: "Code of Conduct", href: "/legal/code-of-conduct", external: false },
       { name: "Terms of Service", href: "/legal/terms-of-service", external: false },
       { name: "Privacy Policy", href: "/legal/privacy-policy", external: false },
-      { name: "Code of Conduct", href: "/legal/code-of-conduct", external: false },
     ],
   },
 };
