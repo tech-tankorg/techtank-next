@@ -25,7 +25,7 @@ export function Header() {
           <Image
             src="/images/logos/light.svg"
             alt="TechTank TO"
-            width={160}
+            width={192}
             height={56}
             className="h-10 w-auto dark:hidden"
             priority
@@ -33,7 +33,7 @@ export function Header() {
           <Image
             src="/images/logos/dark.svg"
             alt="TechTank TO"
-            width={160}
+            width={192}
             height={56}
             className="h-10 w-auto hidden dark:block"
             priority
