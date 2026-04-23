@@ -11,7 +11,7 @@ const buttonVariants = cva(
         primary: "bg-teal-dark text-white hover:bg-teal-dark/90 focus-visible:ring-teal-dark",
         secondary: "bg-amber text-teal-dark hover:bg-amber-dark hover:text-teal-dark focus-visible:ring-amber-dark",
         outline: "border-2 border-teal-dark text-teal-dark hover:bg-teal-dark hover:text-white focus-visible:ring-teal-dark",
-        ghost: "text-teal-dark hover:bg-teal-dark/5 focus-visible:ring-teal-dark",
+        ghost: "text-foreground/70 hover:bg-teal-dark/5 hover:text-foreground focus-visible:ring-teal-dark",
         nav: "font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 focus-visible:ring-teal",
       },
       isActive: {
@@ -19,6 +19,7 @@ const buttonVariants = cva(
         false: "",
       },
       size: {
+        icon: "h-9 w-9",
         sm: "px-4 py-2 text-sm",
         md: "px-6 py-3 text-base",
         lg: "px-8 py-4 text-lg",

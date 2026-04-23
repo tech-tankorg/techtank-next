@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* TechTank TO Brand Colors - From actual event posters */
   --color-teal: #2A6B7C;           /* Secondary headings */
@@ -58,6 +60,34 @@
   --radius-xl: 1.75rem;
   --radius-2xl: 2rem;
   --radius-full: 9999px;
+}
+
+/* Dark mode token overrides */
+.dark {
+  --color-background: #0D2B35;
+  --color-foreground: #E8F4F5;
+
+  --color-muted: #1A3D4A;
+  --color-muted-foreground: #8BBEC6;
+
+  --color-border: rgba(168, 213, 216, 0.15);
+  --color-input: rgba(168, 213, 216, 0.2);
+  --color-ring: #A8D5D8;
+
+  --color-primary: #A8D5D8;
+  --color-primary-foreground: #0D2B35;
+
+  --color-secondary: #1B4B5A;
+  --color-secondary-foreground: #A8D5D8;
+
+  --color-accent: #1E4A58;
+  --color-accent-foreground: #A8D5D8;
+
+  --color-card: rgba(27, 75, 90, 0.5);
+  --color-card-foreground: #E8F4F5;
+
+  --color-popover: #1A3D4A;
+  --color-popover-foreground: #E8F4F5;
 }
 
 /* Base styles */
