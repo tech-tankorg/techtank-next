@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function CodeOfConductPage() {
   return (
-    <div className="bg-white rounded-2xl border border-border p-6 lg:p-10">
+    <div className="bg-card rounded-2xl border border-border p-6 lg:p-10">
       {/* Header */}
       <div className="mb-8 pb-8 border-b border-border">
         <p className="text-sm text-muted-foreground mb-2">Last updated: April 18, 2026</p>
@@ -19,9 +19,9 @@ export default function CodeOfConductPage() {
       </div>
 
       {/* Quick Report */}
-      <div className="bg-teal/5 border border-teal/20 rounded-xl p-6 mb-8">
+      <div className="bg-ring/5 border border-ring/20 rounded-xl p-6 mb-8">
         <div className="flex items-start gap-4">
-          <Mail className="h-6 w-6 text-teal shrink-0 mt-0.5" />
+          <Mail className="h-6 w-6 text-ring shrink-0 mt-0.5" />
           <div>
             <h2 className="font-semibold text-foreground mb-1">
               Need to report something?
@@ -31,7 +31,7 @@ export default function CodeOfConductPage() {
             </p>
             <a
               href="mailto:techtankto@gmail.com"
-              className="text-teal font-medium hover:underline"
+              className="text-ring font-medium hover:underline"
             >
               techtankto@gmail.com
             </a>
@@ -57,7 +57,7 @@ export default function CodeOfConductPage() {
 
         <section>
           <h2 className="font-display text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-            <ThumbsUp className="h-5 w-5 text-teal shrink-0" />
+            <ThumbsUp className="h-5 w-5 text-success shrink-0" />
             Expected Behavior
           </h2>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
@@ -90,7 +90,7 @@ export default function CodeOfConductPage() {
 
         <section>
           <h2 className="font-display text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-            <AlertTriangle className="h-5 w-5 text-amber" />
+            <AlertTriangle className="h-5 w-5 text-destructive shrink-0" />
             Unacceptable Behavior
           </h2>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
@@ -155,7 +155,7 @@ export default function CodeOfConductPage() {
               <strong>Any time:</strong> Email{" "}
               <a
                 href="mailto:techtankto@gmail.com"
-                className="text-teal hover:underline"
+                className="text-ring hover:underline"
               >
                 techtankto@gmail.com
               </a>
@@ -200,7 +200,7 @@ export default function CodeOfConductPage() {
               href="https://www.contributor-covenant.org/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-teal hover:underline"
+              className="text-ring hover:underline"
             >
               Contributor Covenant
             </a>{" "}
@@ -209,7 +209,7 @@ export default function CodeOfConductPage() {
               href="https://berlincodeofconduct.org/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-teal hover:underline"
+              className="text-ring hover:underline"
             >
               Berlin Code of Conduct
             </a>
@@ -226,7 +226,7 @@ export default function CodeOfConductPage() {
             email{" "}
             <a
               href="mailto:techtankto@gmail.com"
-              className="text-teal hover:underline"
+              className="text-ring hover:underline"
             >
               techtankto@gmail.com
             </a>

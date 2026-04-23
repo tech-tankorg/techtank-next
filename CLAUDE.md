@@ -108,6 +108,27 @@ Components follow [shadcn/ui](https://ui.shadcn.com/) patterns with
 - New primitives go in `components/ui/`; page-specific compositions
   stay in the relevant `app/` directory.
 
+### Theming
+
+- `next-themes` handles light/dark/system detection. Always set `defaultTheme="system"` and `enableSystem` on `ThemeProvider`.
+- Add `suppressHydrationWarning` to the `<html>` element to suppress the server/client hydration mismatch that `next-themes` causes.
+- Theme-aware components must `useEffect` + `useState(mounted)` and return a placeholder until mounted — otherwise icons and states will SSR incorrectly.
+- The theme toggle cycles `system → light → dark` (not just light↔dark) so users can return to system preference without a page reload.
+- Dark-mode overrides use `@custom-variant dark (&:where(.dark, .dark *))` in Tailwind v4. Dark tokens live in `.dark {}` in `globals.css`.
+- `globals.css` is divided into four sections: Base Tokens (`@theme`), Light Tokens & Gradients (`.light`), Dark Tokens & Gradients (`.dark`), Helper Classes.
+
+### Global state
+
+- Use Zustand (`lib/store.ts`) for sitewide UI state (mobile menu, future modal/drawer state, etc.).
+- Keep `next-themes` as the single source of truth for theme — do not duplicate theme state in Zustand.
+- Use `pnpm` (not npm or yarn) for all package operations in this repo.
+
+### Semantic colour tokens
+
+- Never use brand-named colour utilities (e.g. `text-teal-dark`, `bg-seafoam`) in components or pages. Use semantic tokens (`text-foreground`, `bg-primary`, `bg-secondary`, `text-muted-foreground`, etc.) so dark mode works without per-component overrides.
+- Pair every background token with its matching foreground: `bg-primary → text-primary-foreground`, `bg-secondary → text-secondary-foreground`, `bg-success → text-success-foreground`.
+- Gradients are defined as CSS utility classes (`.gradient-brand`, `.gradient-hero`, etc.) with `.dark` overrides in `globals.css`; use the class name in JSX, never inline `background:` values.
+
 ### Adding a new page
 
 1. Decide where it belongs in the IA. If it's a role, it goes under

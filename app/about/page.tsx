@@ -91,7 +91,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden gradient-hero texture-grain">
         <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-32">
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
               About TechTank
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
@@ -128,12 +128,12 @@ export default function AboutPage() {
           {pillars.map((pillar) => (
             <div
               key={pillar.title}
-              className="relative flex gap-6 bg-white rounded-2xl border border-border p-6 lg:p-8"
+              className="relative flex gap-6 bg-card rounded-2xl border border-border p-6 lg:p-8"
             >
               <div
                 className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl ${
                   pillar.color === "teal"
-                    ? "bg-teal/10 text-teal"
+                    ? "bg-ring/10 text-ring"
                     : "bg-amber/10 text-amber"
                 }`}
               >
@@ -153,7 +153,7 @@ export default function AboutPage() {
       {/* Code of Conduct Teaser */}
       <Section background="white">
         <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Safety first
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground mb-6">
@@ -174,7 +174,7 @@ export default function AboutPage() {
       <Section background="brand-soft">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
               What we do
             </span>
             <h2 className="font-display text-3xl font-semibold text-foreground lg:text-4xl mb-6">
@@ -237,7 +237,7 @@ export default function AboutPage() {
       {/* How We Fund It */}
       <Section>
         <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             How we fund it
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground lg:text-4xl mb-6">
@@ -278,7 +278,7 @@ export default function AboutPage() {
                 }`}
               >
                 {/* Dot */}
-                <div className="absolute left-4 lg:left-1/2 w-3 h-3 rounded-full bg-teal -translate-x-1/2 mt-1.5 ring-4 ring-background" />
+                <div className="absolute left-4 lg:left-1/2 w-3 h-3 rounded-full bg-ring -translate-x-1/2 mt-1.5 ring-4 ring-background" />
 
                 {/* Content */}
                 <div
@@ -286,7 +286,7 @@ export default function AboutPage() {
                     index % 2 === 0 ? "lg:pr-16 lg:text-right" : "lg:pl-16"
                   }`}
                 >
-                  <span className="inline-block text-sm font-semibold text-teal mb-1">
+                  <span className="inline-block text-sm font-semibold text-ring mb-1">
                     {item.year}
                   </span>
                   <h3 className="font-display text-xl font-semibold text-foreground mb-2">
@@ -306,7 +306,7 @@ export default function AboutPage() {
       {/* Closing CTA */}
       <Section background="brand-soft">
         <div className="max-w-2xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Join us
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">

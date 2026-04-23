@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="bg-white rounded-2xl border border-border p-6 lg:p-10">
+    <div className="bg-card rounded-2xl border border-border p-6 lg:p-10">
       {/* Header */}
       <div className="mb-8 pb-8 border-b border-border">
         <p className="text-sm text-muted-foreground mb-2">Last updated: April 18, 2026</p>
@@ -168,7 +168,7 @@ export default function PrivacyPolicyPage() {
             To exercise these rights, email{" "}
             <a
               href="mailto:techtankto@gmail.com"
-              className="text-teal hover:underline"
+              className="text-ring hover:underline"
             >
               techtankto@gmail.com
             </a>
@@ -207,7 +207,7 @@ export default function PrivacyPolicyPage() {
             contact us at{" "}
             <a
               href="mailto:techtankto@gmail.com"
-              className="text-teal hover:underline"
+              className="text-ring hover:underline"
             >
               techtankto@gmail.com
             </a>

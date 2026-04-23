@@ -87,7 +87,7 @@ export default function VolunteerPage() {
       <section className="relative overflow-hidden gradient-hero texture-grain">
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
               Help run the crew
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
@@ -117,9 +117,9 @@ export default function VolunteerPage() {
           {whyVolunteer.map((item) => (
             <div
               key={item.title}
-              className="bg-white rounded-2xl border border-border p-6 lg:p-8"
+              className="bg-card rounded-2xl border border-border p-6 lg:p-8"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal/10 text-teal mb-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-ring/10 text-ring mb-4">
                 <item.icon className="h-6 w-6" />
               </div>
               <h3 className="font-display text-xl font-semibold text-foreground mb-3">
@@ -145,7 +145,7 @@ export default function VolunteerPage() {
               key={role.title}
               className="bg-background rounded-xl border border-border p-6"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-teal/10 text-teal mb-4">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-ring/10 text-ring mb-4">
                 <role.icon className="h-5 w-5" />
               </div>
               <h3 className="font-semibold text-foreground mb-2">{role.title}</h3>
@@ -171,9 +171,9 @@ export default function VolunteerPage() {
             {whatYouGet.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center gap-3 bg-white rounded-lg p-4"
+                className="flex items-center gap-3 bg-card rounded-lg p-4"
               >
-                <Check className="h-5 w-5 text-teal shrink-0" />
+                <Check className="h-5 w-5 text-ring shrink-0" />
                 <span className="text-foreground">{item}</span>
               </div>
             ))}
@@ -184,7 +184,7 @@ export default function VolunteerPage() {
       {/* Get Started */}
       <Section background="brand-soft">
         <div className="max-w-2xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Get started
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">

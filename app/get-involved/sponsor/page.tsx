@@ -82,7 +82,7 @@ export default function SponsorPage() {
       <section className="relative overflow-hidden gradient-hero texture-grain">
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
               Support the community
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
@@ -112,9 +112,9 @@ export default function SponsorPage() {
           {whySponsor.map((item) => (
             <div
               key={item.title}
-              className="bg-white rounded-2xl border border-border p-6 lg:p-8"
+              className="bg-card rounded-2xl border border-border p-6 lg:p-8"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal/10 text-teal mb-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-ring/10 text-ring mb-4">
                 <item.icon className="h-6 w-6" />
               </div>
               <h3 className="font-display text-xl font-semibold text-foreground mb-3">
@@ -130,7 +130,7 @@ export default function SponsorPage() {
       <Section background="white">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
               Your impact
             </span>
             <h2 className="font-display text-3xl font-semibold text-foreground mb-6">
@@ -139,7 +139,7 @@ export default function SponsorPage() {
             <ul className="space-y-4">
               {whatSponsorshipSupports.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-teal shrink-0 mt-0.5" />
+                  <Check className="h-5 w-5 text-ring shrink-0 mt-0.5" />
                   <span className="text-foreground">{item}</span>
                 </li>
               ))}
@@ -191,12 +191,12 @@ export default function SponsorPage() {
               key={tier.name}
               className={`rounded-2xl border p-6 lg:p-8 ${
                 tier.highlight
-                  ? "border-teal bg-teal/5"
-                  : "border-border bg-white"
+                  ? "border-ring bg-ring/5"
+                  : "border-border bg-card"
               }`}
             >
               {tier.highlight && (
-                <span className="inline-block text-xs font-semibold uppercase tracking-wider text-teal mb-2">
+                <span className="inline-block text-xs font-semibold uppercase tracking-wider text-ring mb-2">
                   Most popular
                 </span>
               )}
@@ -226,9 +226,9 @@ export default function SponsorPage() {
             {basePackage.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center gap-3 bg-white rounded-lg p-4"
+                className="flex items-center gap-3 bg-card rounded-lg p-4"
               >
-                <Check className="h-5 w-5 text-teal shrink-0" />
+                <Check className="h-5 w-5 text-ring shrink-0" />
                 <span className="text-foreground">{item}</span>
               </div>
             ))}
@@ -250,7 +250,7 @@ export default function SponsorPage() {
       {/* Hosting vs Sponsoring */}
       <Section>
         <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Not sure?
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
@@ -271,7 +271,7 @@ export default function SponsorPage() {
       {/* Intake Form CTA */}
       <Section background="brand-soft">
         <div className="max-w-2xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Ready to sponsor?
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">

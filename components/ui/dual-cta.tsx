@@ -12,12 +12,12 @@ export function DualCTA() {
     <div className="grid gap-4 lg:grid-cols-2">
       {/* Never miss an event */}
       <div className="relative overflow-hidden rounded-xl glass p-5 lg:p-6">
-        <Calendar className="absolute top-4 right-4 h-16 w-16 text-teal-dark/10" />
+        <Calendar className="absolute top-4 right-4 h-16 w-16 text-foreground/10" />
         <div className="relative">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
             Stay in the loop
           </span>
-          <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
+          <h3 className="font-display text-lg lg:text-xl font-bold text-foreground mb-2">
             Never miss an event
           </h3>
           <p className="text-sm text-muted-foreground mb-4 max-w-sm">
@@ -69,7 +69,7 @@ export function DualCTA() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
             Get involved
           </span>
-          <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
+          <h3 className="font-display text-lg lg:text-xl font-bold text-foreground mb-2">
             Want to contribute?
           </h3>
           <p className="text-sm text-muted-foreground mb-4 max-w-sm">

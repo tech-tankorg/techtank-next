@@ -44,7 +44,7 @@ export default function LegalLayout({
                 </p>
                 <a
                   href="mailto:techtankto@gmail.com"
-                  className="text-sm font-medium text-teal hover:text-teal/80 transition-colors"
+                  className="text-sm font-medium text-ring hover:text-ring/80 transition-colors"
                 >
                   Contact us
                 </a>

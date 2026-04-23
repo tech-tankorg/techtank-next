@@ -26,19 +26,19 @@ export function ContactCard({
       
       {/* Email */}
       <div className="flex items-center gap-4">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-seafoam text-teal-dark">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
           <Mail className="h-5 w-5" />
         </div>
         <div className="flex-1 flex items-center gap-3">
           <a
             href={`mailto:${email}`}
-            className="font-display text-base font-semibold text-teal-dark hover:text-amber-dark transition-colors"
+            className="font-display text-base font-semibold text-foreground hover:text-amber-dark transition-colors"
           >
             {email}
           </a>
           <button
             onClick={handleCopy}
-            className="inline-flex items-center justify-center h-7 w-7 rounded-lg bg-white/50 hover:bg-seafoam text-muted-foreground hover:text-teal-dark transition-colors"
+            className="inline-flex items-center justify-center h-7 w-7 rounded-lg bg-card/50 hover:bg-secondary text-muted-foreground hover:text-secondary-foreground transition-colors"
             aria-label={copied ? "Copied" : "Copy email"}
           >
             {copied ? (
@@ -52,14 +52,14 @@ export function ContactCard({
 
       {/* Slack */}
       <div className="flex items-center gap-4">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-seafoam text-teal-dark">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
           <MessageSquare className="h-5 w-5" />
         </div>
         <a
           href={slackUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-display text-base font-semibold text-teal-dark hover:text-amber-dark transition-colors"
+          className="font-display text-base font-semibold text-foreground hover:text-amber-dark transition-colors"
         >
           Join our Slack community
         </a>

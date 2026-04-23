@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function TermsOfServicePage() {
   return (
-    <div className="bg-white rounded-2xl border border-border p-6 lg:p-10">
+    <div className="bg-card rounded-2xl border border-border p-6 lg:p-10">
       {/* Header */}
       <div className="mb-8 pb-8 border-b border-border">
         <p className="text-sm text-muted-foreground mb-2">Last updated: April 18, 2026</p>
@@ -75,7 +75,7 @@ export default function TermsOfServicePage() {
             our{" "}
             <Link
               href="/legal/code-of-conduct"
-              className="text-teal hover:underline"
+              className="text-ring hover:underline"
             >
               Code of Conduct
             </Link>
@@ -97,7 +97,7 @@ export default function TermsOfServicePage() {
           <p className="text-muted-foreground mb-4">
             TechTank branding, logos, and website content are property of
             TechTank TO. Usage is governed by the{" "}
-            <Link href="/media-kit" className="text-teal hover:underline">
+            <Link href="/media-kit" className="text-ring hover:underline">
               Media Kit terms
             </Link>
             .
@@ -176,7 +176,7 @@ export default function TermsOfServicePage() {
             For questions about these Terms of Service, please contact us at{" "}
             <a
               href="mailto:techtankto@gmail.com"
-              className="text-teal hover:underline"
+              className="text-ring hover:underline"
             >
               techtankto@gmail.com
             </a>

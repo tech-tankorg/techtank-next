@@ -1,12 +1,12 @@
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/theme";
 
 const sectionVariants = cva("py-10 lg:py-14", {
   variants: {
     background: {
       default: "",
-      muted: "bg-sand/50 texture-grain",
-      white: "bg-white border-y border-border",
+      muted: "bg-muted texture-grain",
+      white: "bg-card border-y border-border",
       brand: "gradient-brand texture-grain",
       "brand-soft": "gradient-brand-soft",
       "brand-vertical": "gradient-brand-vertical texture-grain",
@@ -64,7 +64,7 @@ export function SectionHeader({
           {overline}
         </span>
       )}
-      <h2 className="font-display text-2xl font-bold text-teal-dark lg:text-3xl text-balance">
+      <h2 className="font-display text-2xl font-bold text-foreground lg:text-3xl text-balance">
         {title}
       </h2>
       {description && (

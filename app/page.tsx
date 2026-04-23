@@ -199,7 +199,7 @@ export default function HomePage() {
           <span className="tag-outline mb-4 inline-block text-sm">
             What we&apos;re about
           </span>
-          <h2 className="font-display text-2xl lg:text-3xl font-bold text-teal-dark mb-4">
+          <h2 className="font-display text-2xl lg:text-3xl font-bold text-foreground mb-4">
             Community first. Always.
           </h2>
           <p className="text-muted-foreground mb-6">
@@ -224,18 +224,18 @@ export default function HomePage() {
             href="/events"
             className="group relative overflow-hidden rounded-xl glass p-5 lg:p-6 transition-all hover:scale-[1.01]"
           >
-            <Calendar className="absolute top-4 right-4 h-14 w-14 text-teal-dark/10" />
+            <Calendar className="absolute top-4 right-4 h-14 w-14 text-foreground/10" />
             <div className="relative">
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
                 Show up
               </span>
-              <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
+              <h3 className="font-display text-lg lg:text-xl font-bold text-foreground mb-2">
                 Upcoming events
               </h3>
               <p className="text-sm text-muted-foreground mb-4">
                 See what&apos;s coming up and RSVP to the next meetup.
               </p>
-              <span className="inline-flex items-center text-sm font-semibold text-teal-dark group-hover:text-amber-dark transition-colors">
+              <span className="inline-flex items-center text-sm font-semibold text-foreground group-hover:text-amber-dark transition-colors">
                 See events
                 <ArrowRight className="ml-2 h-4 w-4" />
               </span>
@@ -251,13 +251,13 @@ export default function HomePage() {
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
                 Contribute
               </span>
-              <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
+              <h3 className="font-display text-lg lg:text-xl font-bold text-foreground mb-2">
                 Get involved
               </h3>
               <p className="text-sm text-muted-foreground mb-4">
                 Speak, host, sponsor, or volunteer with the crew.
               </p>
-              <span className="inline-flex items-center text-sm font-semibold text-teal-dark group-hover:text-amber-dark transition-colors">
+              <span className="inline-flex items-center text-sm font-semibold text-foreground group-hover:text-amber-dark transition-colors">
                 Pick your path
                 <ArrowRight className="ml-2 h-4 w-4" />
               </span>

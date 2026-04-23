@@ -61,7 +61,7 @@ export default function GetInvolvedPage() {
       <section className="relative overflow-hidden gradient-hero texture-grain">
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
               Get involved
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
@@ -101,9 +101,9 @@ export default function GetInvolvedPage() {
           {whyGetInvolved.map((item) => (
             <div
               key={item.title}
-              className="bg-white rounded-2xl border border-border p-6 lg:p-8"
+              className="bg-card rounded-2xl border border-border p-6 lg:p-8"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal/10 text-teal mb-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-ring/10 text-ring mb-4">
                 <item.icon className="h-6 w-6" />
               </div>
               <h3 className="font-display text-xl font-semibold text-foreground mb-3">
@@ -126,7 +126,7 @@ export default function GetInvolvedPage() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl border border-border p-6"
+              className="bg-card rounded-xl border border-border p-6"
             >
               <h3 className="font-display text-lg font-semibold text-foreground mb-2">
                 {faq.question}
@@ -140,7 +140,7 @@ export default function GetInvolvedPage() {
       {/* Contact Strip */}
       <Section>
         <div className="max-w-2xl mx-auto text-center mb-8">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Ready to connect?
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">

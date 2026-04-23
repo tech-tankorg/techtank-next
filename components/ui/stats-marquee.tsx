@@ -15,10 +15,10 @@ export function StatsMarquee({ className }: { className?: string }) {
       {items.map((item) => (
         <div key={item.label} className="shrink-0 px-10 lg:px-16">
           <div className="flex flex-col items-center text-center">
-            <span className="font-display text-xl lg:text-2xl font-bold text-teal-dark">
+            <span className="font-display text-xl lg:text-2xl font-bold text-foreground">
               {item.value}
             </span>
-            <span className="text-xs text-teal-dark/60 whitespace-nowrap">
+            <span className="text-xs text-foreground/60 whitespace-nowrap">
               {item.label}
             </span>
           </div>

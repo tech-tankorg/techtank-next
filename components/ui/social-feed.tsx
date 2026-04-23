@@ -37,7 +37,7 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
   return (
     <article className="group relative glass rounded-2xl overflow-hidden transition-all flex flex-col">
       {(video || cover) && (
-        <div className="relative aspect-[4/5] w-full overflow-hidden bg-sand">
+        <div className="relative aspect-4/5 w-full overflow-hidden bg-muted">
           {video ? (
             <video
               src={video}
@@ -59,7 +59,7 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
             />
           ) : null}
           {post.featured && (
-            <span className="absolute top-3 left-3 tag bg-amber text-teal-dark text-xs">
+            <span className="absolute top-3 left-3 tag bg-warning text-warning-foreground text-xs">
               Featured
             </span>
           )}

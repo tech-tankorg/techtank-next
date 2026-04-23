@@ -26,7 +26,7 @@ export default function EventsPage() {
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div className="max-w-2xl">
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
                 TechTank TO
               </span>
               <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-4">
@@ -51,13 +51,13 @@ export default function EventsPage() {
       {nextEvent && (
         <Section className="pt-0">
           <SectionHeader overline="Next up" title="" className="mb-8" />
-          <div className="rounded-2xl bg-white border border-border overflow-hidden">
+          <div className="rounded-2xl bg-card border border-border overflow-hidden">
             <div className="p-6 lg:p-8">
               <div className="grid gap-8 lg:grid-cols-3">
                 {/* Main content */}
                 <div className="lg:col-span-2">
                   <div className="flex items-center gap-4 mb-4">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-teal/10 text-teal text-xs font-semibold uppercase tracking-wider">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-ring/10 text-ring text-xs font-semibold uppercase tracking-wider">
                       Upcoming
                     </span>
                   </div>
@@ -70,7 +70,7 @@ export default function EventsPage() {
                   {/* Event details */}
                   <div className="flex flex-wrap gap-4 mb-6">
                     <div className="flex items-center gap-2 text-sm text-foreground">
-                      <Calendar className="h-4 w-4 text-teal" />
+                      <Calendar className="h-4 w-4 text-ring" />
                       <span>
                         {new Date(nextEvent.date).toLocaleDateString("en-CA", {
                           weekday: "long",
@@ -81,15 +81,15 @@ export default function EventsPage() {
                       </span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-foreground">
-                      <Clock className="h-4 w-4 text-teal" />
+                      <Clock className="h-4 w-4 text-ring" />
                       <span>{nextEvent.time}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-foreground">
-                      <MapPin className="h-4 w-4 text-teal" />
+                      <MapPin className="h-4 w-4 text-ring" />
                       <span>{nextEvent.venue}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-foreground">
-                      <Users className="h-4 w-4 text-teal" />
+                      <Users className="h-4 w-4 text-ring" />
                       <span>{nextEvent.capacity} seats</span>
                     </div>
                   </div>
@@ -162,7 +162,7 @@ export default function EventsPage() {
                             {speaker.name}
                           </p>
                           <p className="text-sm text-muted-foreground">{speaker.title}</p>
-                          <p className="text-sm text-teal mt-1">
+                          <p className="text-sm text-ring mt-1">
                             {speaker.talkTitle}
                           </p>
                         </div>
@@ -184,7 +184,7 @@ export default function EventsPage() {
           className="mb-8"
         />
         <div className="rounded-xl border border-border bg-background p-8 text-center">
-          <Calendar className="h-12 w-12 text-teal mx-auto mb-4" />
+          <Calendar className="h-12 w-12 text-ring mx-auto mb-4" />
           <h3 className="font-display text-xl font-semibold text-foreground mb-2">
             Never miss an event
           </h3>
@@ -236,7 +236,7 @@ export default function EventsPage() {
       {/* Contact */}
       <Section>
         <div className="max-w-2xl mx-auto text-center mb-8">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Get in touch
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">

@@ -40,7 +40,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
             )}
           </div>
 
-          <h3 className="font-display text-xl font-bold text-teal-dark mb-2 line-clamp-2">
+          <h3 className="font-display text-xl font-bold text-foreground mb-2 line-clamp-2">
             {event.title}
           </h3>
 
@@ -104,7 +104,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
         )}
       </div>
 
-      <h3 className="font-display text-sm font-bold text-teal-dark mb-2 line-clamp-2">
+      <h3 className="font-display text-sm font-bold text-foreground mb-2 line-clamp-2">
         {event.title}
       </h3>
 

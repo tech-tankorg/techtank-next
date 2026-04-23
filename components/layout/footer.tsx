@@ -43,7 +43,7 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-teal-dark text-white">
+    <footer className="bg-primary dark:bg-background text-primary-foreground dark:text-foreground">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         {/* Top section */}
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-5">
@@ -58,7 +58,7 @@ export function Footer() {
                 className="h-10 w-auto"
               />
             </Link>
-            <p className="mt-4 text-sm text-white/70 leading-relaxed">
+            <p className="mt-4 text-sm text-primary-foreground/70 dark:text-foreground/70 leading-relaxed">
               Toronto&apos;s inclusive tech community. Monthly events since 2022.
             </p>
           </div>
@@ -66,7 +66,7 @@ export function Footer() {
           {/* Links columns */}
           {Object.values(footerLinks).map((section) => (
             <div key={section.title}>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-white/90">
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-primary-foreground/90 dark:text-foreground/90">
                 {section.title}
               </h3>
               <ul className="mt-4 space-y-3">
@@ -77,14 +77,14 @@ export function Footer() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-white/60 hover:text-white transition-colors"
+                        className="text-sm text-primary-foreground/60 hover:text-primary-foreground dark:text-foreground/60 dark:hover:text-foreground transition-colors"
                       >
                         {link.name}
                       </a>
                     ) : (
                       <Link
                         href={link.href}
-                        className="text-sm text-white/60 hover:text-white transition-colors"
+                        className="text-sm text-primary-foreground/60 hover:text-primary-foreground dark:text-foreground/60 dark:hover:text-foreground transition-colors"
                       >
                         {link.name}
                       </Link>
@@ -97,14 +97,14 @@ export function Footer() {
         </div>
 
         {/* Bottom section */}
-        <div className="mt-12 pt-8 border-t border-white/10">
+        <div className="mt-12 pt-8 border-t border-primary-foreground/10 dark:border-foreground/10">
           <div className="flex flex-col items-center gap-4 lg:flex-row lg:justify-between">
-            <p className="text-sm text-white/60">
+            <p className="text-sm text-primary-foreground/60 dark:text-foreground/60">
               &copy; {new Date().getFullYear()} TechTank TO. All rights reserved.
             </p>
             <a
               href="mailto:techtankto@gmail.com"
-              className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
+              className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground dark:text-foreground/60 dark:hover:text-foreground transition-colors"
             >
               <Mail className="h-4 w-4" />
               techtankto@gmail.com

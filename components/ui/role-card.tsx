@@ -33,7 +33,7 @@ export function RoleCard({
   return (
     <div className="group relative flex flex-col glass rounded-2xl p-6 lg:p-8 transition-all duration-300">
       {/* Icon */}
-      <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-seafoam text-teal-dark">
+      <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
         <Icon className="h-6 w-6" />
       </div>
 
@@ -43,7 +43,7 @@ export function RoleCard({
       </span>
 
       {/* Title */}
-      <h3 className="font-display text-xl font-bold text-teal-dark mb-3">
+      <h3 className="font-display text-xl font-bold text-foreground mb-3">
         {title}
       </h3>
 

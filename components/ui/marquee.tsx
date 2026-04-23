@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/theme";
 
 interface MarqueeProps {
   children: React.ReactNode;

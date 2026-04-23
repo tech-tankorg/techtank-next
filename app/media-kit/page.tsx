@@ -54,7 +54,7 @@ export default function PressKitPage() {
       <section className="relative overflow-hidden gradient-hero texture-grain">
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
               Media Kit
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
@@ -85,7 +85,7 @@ export default function PressKitPage() {
           {fastFacts.map((fact) => (
             <div
               key={fact.label}
-              className="bg-white rounded-xl border border-border p-5"
+              className="bg-card rounded-xl border border-border p-5"
             >
               <p className="text-sm text-muted-foreground mb-1">{fact.label}</p>
               <p className="font-semibold text-foreground">{fact.value}</p>
@@ -142,7 +142,7 @@ export default function PressKitPage() {
 
         {/* Logo Preview */}
         <div className="grid gap-6 lg:grid-cols-2 mb-12">
-          <div className="bg-white rounded-xl border border-border p-8 flex items-center justify-center">
+          <div className="bg-card rounded-xl border border-border p-8 flex items-center justify-center">
             <Image
               src="/images/logos/light.svg"
               alt="TechTank TO Logo (light)"
@@ -168,18 +168,18 @@ export default function PressKitPage() {
         <a
           href={logoDownload.href}
           download
-          className="group flex items-center gap-4 bg-white rounded-xl border border-border p-5 hover:border-teal/50 transition-all"
+          className="group flex items-center gap-4 bg-card rounded-xl border border-border p-5 hover:border-ring/50 transition-all"
         >
           <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-background">
-            <FileText className="h-6 w-6 text-teal" />
+            <FileText className="h-6 w-6 text-ring" />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="font-semibold text-foreground group-hover:text-teal transition-colors">
+            <p className="font-semibold text-foreground group-hover:text-ring transition-colors">
               {logoDownload.name}
             </p>
             <p className="text-sm text-muted-foreground">{logoDownload.description}</p>
           </div>
-          <Download className="h-5 w-5 text-muted-foreground group-hover:text-teal transition-colors shrink-0" />
+          <Download className="h-5 w-5 text-muted-foreground group-hover:text-ring transition-colors shrink-0" />
         </a>
       </Section>
 
@@ -220,7 +220,7 @@ export default function PressKitPage() {
           className="mb-12"
         />
         <div className="grid gap-8 lg:grid-cols-2">
-          <div className="bg-white rounded-xl border border-border p-6">
+          <div className="bg-card rounded-xl border border-border p-6">
             <p className="text-sm text-muted-foreground mb-2">Display / Headlines</p>
             <p className="font-display text-4xl font-semibold text-foreground mb-4">
               Space Grotesk
@@ -230,7 +230,7 @@ export default function PressKitPage() {
               with a modern, technical feel.
             </p>
           </div>
-          <div className="bg-white rounded-xl border border-border p-6">
+          <div className="bg-card rounded-xl border border-border p-6">
             <p className="text-sm text-muted-foreground mb-2">Body / UI</p>
             <p className="font-sans text-4xl font-semibold text-foreground mb-4">
               Inter
@@ -260,20 +260,20 @@ export default function PressKitPage() {
               <Wrapper
                 key={resource.name}
                 {...wrapperProps}
-                className="group flex items-center gap-4 bg-white rounded-xl border border-border p-5 hover:border-teal/50 transition-all"
+                className="group flex items-center gap-4 bg-card rounded-xl border border-border p-5 hover:border-ring/50 transition-all"
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-teal/10">
-                  <FileText className="h-6 w-6 text-teal" />
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-ring/10">
+                  <FileText className="h-6 w-6 text-ring" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="font-semibold text-foreground group-hover:text-teal transition-colors">
+                  <p className="font-semibold text-foreground group-hover:text-ring transition-colors">
                     {resource.name}
                   </p>
                   <p className="text-sm text-muted-foreground">{resource.description}</p>
                 </div>
                 {resource.internal
-                  ? <ExternalLink className="h-5 w-5 text-muted-foreground group-hover:text-teal transition-colors shrink-0" />
-                  : <Download className="h-5 w-5 text-muted-foreground group-hover:text-teal transition-colors shrink-0" />
+                  ? <ExternalLink className="h-5 w-5 text-muted-foreground group-hover:text-ring transition-colors shrink-0" />
+                  : <Download className="h-5 w-5 text-muted-foreground group-hover:text-ring transition-colors shrink-0" />
                 }
               </Wrapper>
             );
@@ -284,7 +284,7 @@ export default function PressKitPage() {
       {/* Social Links */}
       <Section background="brand-soft">
         <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Connect with us
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground mb-8">
@@ -343,7 +343,7 @@ export default function PressKitPage() {
             title="How to use our assets"
             className="mb-8"
           />
-          <div className="bg-white rounded-xl border border-border p-6 space-y-4">
+          <div className="bg-card rounded-xl border border-border p-6 space-y-4">
             <p className="text-foreground">
               <strong>Permitted:</strong> Use our logos and assets to reference
               TechTank TO in press coverage, event listings, partnership
@@ -366,7 +366,7 @@ export default function PressKitPage() {
       {/* Contact */}
       <Section>
         <div className="max-w-2xl mx-auto text-center mb-8">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Media contact
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">

@@ -22,7 +22,7 @@ export default function GetInvolvedLayout({
   return (
     <div className="min-h-screen">
       {/* Sticky Sub-Nav */}
-      <nav className="sticky top-18.5 z-40 bg-white/70 backdrop-blur-xl shadow-[inset_0_4px_8px_-4px_rgba(0,0,0,0.08)]">
+      <nav className="sticky top-18.5 z-40 bg-background/80 backdrop-blur-xl border-b border-border">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex items-center justify-center py-3">
             {/* Sub-navigation */}
