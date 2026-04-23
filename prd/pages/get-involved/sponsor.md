@@ -75,7 +75,7 @@ partnership, swag, travel budget for speakers, etc.).
 ## 5. Calls to action (priority order)
 
 1. Email `techtankto@gmail.com` to request sponsorship info
-2. Visit `/press-kit` for brand context
+2. Visit `/resources/media-kit` for brand context
 3. Read about hosting (`/get-involved/host`) if a single-event fit is better
 
 ## 6. Functional requirements

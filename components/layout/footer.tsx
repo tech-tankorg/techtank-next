@@ -27,8 +27,8 @@ const footerLinks = {
   resources: {
     title: "Resources",
     links: [
-      { name: "Media Kit", href: "/media-kit", external: false },
-      { name: "Design System", href: "/design-system", external: false },
+      { name: "Media Kit", href: "/resources/media-kit", external: false },
+      { name: "Design System", href: "/resources/design-system", external: false },
     ],
   },
   legal: {

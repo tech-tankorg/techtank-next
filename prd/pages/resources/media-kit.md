@@ -1,7 +1,7 @@
-# Press Kit — `/press-kit`
+# Media Kit — `/resources/media-kit`
 
-**URL:** https://www.techtankto.com/press-kit
-**Page title:** Press Kit — TechTank TO
+**URL:** <https://www.techtankto.com/resources/media-kit>
+**Page title:** Media Kit — TechTank TO
 **Role:** Standalone resource page for media, partners, and sponsors.
 Houses brand guidelines, logos, fast-facts, and boilerplate.
 
