@@ -41,7 +41,7 @@ const logoDownload = {
 };
 
 const resources = [
-  { name: "Brand Guidelines", href: "/design-system", description: "Colors, typography, usage rules", internal: true },
+  { name: "Brand Guidelines", href: "/resources/design-system", description: "Colors, typography, usage rules", internal: true },
   { name: "Speaker Slide Template", href: "/downloads/coming-soon.txt", description: "Google Slides / PPTX template", internal: false },
   { name: "Speaker Checklist", href: "/downloads/coming-soon.txt", description: "Preparation guide for first-time speakers", internal: false },
   { name: "Host Checklist", href: "/downloads/coming-soon.txt", description: "Event-day preparation guide", internal: false },

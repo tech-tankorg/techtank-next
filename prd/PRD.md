@@ -103,12 +103,13 @@ under Ontario/Canadian jurisdiction.
 │   ├── sponsor
 │   └── volunteer
 ├── events                       (Luma calendar embed)
-├── press-kit
-├── legal                        (shared layout)
-│   ├── terms-of-service
-│   ├── privacy-policy
-│   └── code-of-conduct
-└── design-system                (brand guidelines + design token reference)
+├── resources                    (grouped resource pages)
+│   ├── media-kit                (brand assets, logos, fast facts)
+│   └── design-system            (brand guidelines + design token reference)
+└── legal                        (shared layout)
+    ├── terms-of-service
+    ├── privacy-policy
+    └── code-of-conduct
 ```
 
 ### 2.1 Route map
@@ -123,11 +124,11 @@ under Ontario/Canadian jurisdiction.
 | `/get-involved/sponsor` | Sponsor | Corporate partner pitch + intake action (email us) |
 | `/get-involved/volunteer` | Volunteer | Crew onboarding + intake action (email us) |
 | `/events` | Events | Upcoming events via Luma calendar |
-| `/press-kit` | Press Kit | Brand guidelines, logos, fast facts |
+| `/resources/media-kit` | Media Kit | Brand assets, logos, and fast facts for press and partners |
+| `/resources/design-system` | Design System | Brand guidelines — colours, typography, and component reference |
 | `/legal/terms-of-service` | Terms of Service | — |
 | `/legal/privacy-policy` | Privacy Policy | — |
 | `/legal/code-of-conduct` | Code of Conduct | — |
-| `/design-system` | Design System | Brand guidelines — colours, typography, and component reference |
 
 ### 2.2 Shared layouts (Next.js)
 
@@ -170,11 +171,11 @@ under Ontario/Canadian jurisdiction.
    `techtankto@gmail.com` with their talk proposal.
 3. **Company host** → `/` or `/get-involved` → `/get-involved/host` →
    submits intake → receives sponsorship package via email.
-4. **Corporate sponsor** → `/press-kit` or `/get-involved/sponsor` →
+4. **Corporate sponsor** → `/resources/media-kit` or `/get-involved/sponsor` →
    downloads brand assets → submits sponsor intake.
 5. **Volunteer** → Slack invite or `/` → `/get-involved/volunteer` →
    submits intake.
-6. **Journalist / partner** → `/press-kit` → downloads logos + fast-facts
+6. **Journalist / partner** → `/resources/media-kit` → downloads logos + fast-facts
    → emails `techtankto@gmail.com`.
 7. **Returning member** → `/events` or Slack.
 
@@ -193,11 +194,11 @@ relative to this file, `prd/PRD.md`):
 - [pages/get-involved/host.md](pages/get-involved/host.md)
 - [pages/get-involved/sponsor.md](pages/get-involved/sponsor.md)
 - [pages/get-involved/volunteer.md](pages/get-involved/volunteer.md)
-- [pages/press-kit.md](pages/press-kit.md)
+- [pages/resources/media-kit.md](pages/resources/media-kit.md)
+- [pages/resources/design-system.md](pages/resources/design-system.md)
 - [pages/legal/terms-of-service.md](pages/legal/terms-of-service.md)
 - [pages/legal/privacy-policy.md](pages/legal/privacy-policy.md)
 - [pages/legal/code-of-conduct.md](pages/legal/code-of-conduct.md)
-- [pages/design-system.md](pages/design-system.md)
 
 ---
 
@@ -290,7 +291,7 @@ and is explicitly out of scope for the initial launch.
   and `/events`.
 - **Direct-email contact card.** `techtankto@gmail.com` appears as a
   prominent, copy-friendly contact card (not just a hyperlink) at the
-  end of `/get-involved`, `/get-involved/*`, and `/press-kit`. One
+  end of `/get-involved`, `/get-involved/*`, and `/resources/media-kit`. One
   line of context explains what we respond to.
 
 ---
@@ -322,7 +323,7 @@ and is explicitly out of scope for the initial launch.
 - Newsletter / Slack invite capture block in footer.
 - Google Photos album preview cards (Home and event detail).
 - Branded slide deck template (Google Slides / PPTX) linked from
-  `/get-involved/speaker` and `/press-kit`.
+  `/get-involved/speaker` and `/resources/media-kit`.
 - Speaker run-of-show and host checklist (linked PDFs).
 - Per-event recap surface: Google Photos album + YouTube recording +
   host/sponsor acknowledgment, reached via "View Recap" from the
@@ -387,7 +388,7 @@ and is explicitly out of scope for the initial launch.
 
 ## 9. Event Support (Organizer Tooling)
 
-Not user-facing pages, but assets produced and surfaced via `/press-kit`
+Not user-facing pages, but assets produced and surfaced via `/resources/media-kit`
 and `/get-involved/speaker`:
 
 - Branded Google Slides / Keynote / PPTX templates (speaker + title card)

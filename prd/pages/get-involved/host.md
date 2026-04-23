@@ -95,7 +95,7 @@ host" action is the single most important CTA.
 
 1. Email `techtankto@gmail.com` to propose hosting
 2. Read the host checklist
-3. Visit `/press-kit` for brand context
+3. Visit `/resources/media-kit` for brand context
 
 ## 6. Functional requirements
 

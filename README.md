@@ -62,8 +62,9 @@ route, annotated with its purpose.
 │   │   ├── terms-of-service/       #   /terms-of-service
 │   │   ├── privacy-policy/         #   /privacy-policy
 │   │   └── code-of-conduct/        #   /code-of-conduct
-│   ├── press-kit/                  # /press-kit           Brand assets + fast facts
-│   ├── design-system/              # /design-system       Brand guidelines — design tokens & component reference
+│   ├── resources/                  # /resources
+│   │   ├── media-kit/              #   /resources/media-kit     Brand assets + fast facts
+│   │   └── design-system/          #   /resources/design-system  Brand guidelines — design tokens & component reference
 │   └── globals.css
 ├── components/
 │   ├── layout/                     # Header, Footer

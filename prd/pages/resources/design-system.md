@@ -1,6 +1,6 @@
 # Design System
 
-**Route:** `/design-system`
+**Route:** `/resources/design-system`
 **Status:** Public — serves as the canonical brand guidelines page for the site
 
 ---
@@ -51,7 +51,7 @@ None. The page is informational; visitors arrive via the media-kit "Brand Guidel
 
 ## Acceptance criteria
 
-- Page loads at `/design-system` in the local dev server.
+- Page loads at `/resources/design-system` in the local dev server.
 - All brand and accent colour swatches show the correct hex and Tailwind class name.
 - All four gradient utilities render visibly distinct swatches.
 - All button variants and sizes render without visual regressions.

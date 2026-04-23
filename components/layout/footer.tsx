@@ -27,16 +27,16 @@ const footerLinks = {
   resources: {
     title: "Resources",
     links: [
-      { name: "Media Kit", href: "/media-kit", external: false },
-      { name: "Design System", href: "/design-system", external: false },
+      { name: "Media Kit", href: "/resources/media-kit", external: false },
+      { name: "Design System", href: "/resources/design-system", external: false },
     ],
   },
   legal: {
     title: "Legal",
     links: [
+      { name: "Code of Conduct", href: "/legal/code-of-conduct", external: false },
       { name: "Terms of Service", href: "/legal/terms-of-service", external: false },
       { name: "Privacy Policy", href: "/legal/privacy-policy", external: false },
-      { name: "Code of Conduct", href: "/legal/code-of-conduct", external: false },
     ],
   },
 };
