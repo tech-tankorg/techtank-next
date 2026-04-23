@@ -70,7 +70,7 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-border/30 glass">
+        <div className="lg:hidden border-t border-white/20">
           <div className="px-4 py-4 space-y-4">
             {navigation.map((item) => (
               <Link

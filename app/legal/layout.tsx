@@ -33,9 +33,9 @@ export default function LegalLayout({
                     <Link
                       key={doc.href}
                       href={doc.href}
-                      className={`block px-3 py-2 rounded-lg text-sm transition-colors ${
+                      className={`block px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                         isActive
-                          ? "bg-teal/10 text-teal font-medium"
+                          ? "bg-teal text-white"
                           : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
                       }`}
                     >
@@ -71,7 +71,7 @@ export default function LegalLayout({
                     className={`shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                       isActive
                         ? "bg-teal text-white"
-                        : "bg-muted/60 text-muted-foreground hover:text-foreground"
+                        : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
                     }`}
                   >
                     {doc.name}
