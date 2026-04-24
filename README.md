@@ -91,7 +91,7 @@ disabled via an `X-Robots-Tag: noindex` header in [`vercel.json`](./vercel.json)
 See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for contribution guidelines.
 
 1. Read [`prd/PRD.md`](./prd/PRD.md) before making structural changes — it
-   defines the IA, brand, and content conventions.
+   defines the Info Architecture, brand, and content conventions.
    - **AI agents only:** also read [`CLAUDE.md`](./CLAUDE.md) for agent-specific
      working conventions and constraints.
 2. When adding or renaming a route, update both the route table in
