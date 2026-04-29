@@ -20,8 +20,8 @@ export default function CodeOfConductPage() {
 
       {/* Quick Report */}
       <div className="bg-ring/5 border border-ring/20 rounded-xl p-6 mb-8">
-        <div className="flex items-start gap-4">
-          <Mail className="h-6 w-6 text-ring shrink-0 mt-0.5" />
+        <div className="flex flex-col sm:flex-row items-start gap-4">
+          <Mail className="h-6 w-6 text-ring shrink-0 sm:mt-0.5" />
           <div>
             <h2 className="font-semibold text-foreground mb-1">
               Need to report something?
