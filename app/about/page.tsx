@@ -128,7 +128,7 @@ export default function AboutPage() {
           {pillars.map((pillar) => (
             <div
               key={pillar.title}
-              className="relative flex gap-6 bg-card rounded-2xl border border-border p-6 lg:p-8"
+              className="relative flex flex-col sm:flex-row gap-6 bg-card rounded-2xl border border-border p-6 lg:p-8"
             >
               <div
                 className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl ${
