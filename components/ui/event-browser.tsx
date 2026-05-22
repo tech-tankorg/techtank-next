@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { EventCard } from "@/components/ui/event-card";
 import { cn } from "@/utils/theme";
 import type { Event } from "@/app/events/actions";
+import Image from "next/image";
 
 type CategoryFilter = "all" | "tech-talks" | "coffee-chats" | "socials" | "sports" | "other";
 type DisplayMode = "cards" | "grid" | "list";
@@ -196,11 +197,12 @@ function GridView({ events }: { events: Event[] }) {
         return (
           <div key={event.id} className="group relative overflow-hidden rounded-xl aspect-square bg-muted">
             {img ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
+              <Image
                 src={img}
                 alt={event.title}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                fill
+                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
             ) : (
               <div className="h-full w-full gradient-brand" />

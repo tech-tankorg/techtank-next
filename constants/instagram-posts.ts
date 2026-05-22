@@ -21,7 +21,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18027008243035969,
     createdAtRaw: 1715703598,
     media: [
-      { type: "image", path: "/media/instagram/2024-05-14-C69JJhR2qP/techtankto_C69JJh-R2qP_3367888333715237519.jpg" }
+      { type: "image", path: "/media/instagram/2024-05-14-C69JJhR2qP/techtankto_C69JJh-R2qP_3367888333715237519.webp" }
     ]
   },
   "2024-05-17-C7FJzyxWnV": {
@@ -30,7 +30,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17975828336569876,
     createdAtRaw: 1715980471,
     media: [
-      { type: "image", path: "/media/instagram/2024-05-17-C7FJzyxWnV/techtankto_C7FJz-yxWnV_3370143050692389333.jpg" }
+      { type: "image", path: "/media/instagram/2024-05-17-C7FJzyxWnV/techtankto_C7FJz-yxWnV_3370143050692389333.webp" }
     ]
   },
   "2024-05-27-C7ekq8xusC8": {
@@ -40,7 +40,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18030870997869439,
     createdAtRaw: 1716825711,
     media: [
-      { type: "image", path: "/media/instagram/2024-05-27-C7ekq8xusC8/techtankto_C7ekq8xusC8_3377298051725705404.jpg" }
+      { type: "image", path: "/media/instagram/2024-05-27-C7ekq8xusC8/techtankto_C7ekq8xusC8_3377298051725705404.webp" }
     ]
   },
   "2024-05-28-C7hQBJuBg0": {
@@ -50,7 +50,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18078786448486335,
     createdAtRaw: 1716915803,
     media: [
-      { type: "image", path: "/media/instagram/2024-05-28-C7hQBJuBg0/techtankto_C7hQBJ_uBg0_3378051643700942900.jpg" }
+      { type: "image", path: "/media/instagram/2024-05-28-C7hQBJuBg0/techtankto_C7hQBJ_uBg0_3378051643700942900.webp" }
     ]
   },
   "2024-05-31-C7o69MmuY1m": {
@@ -60,8 +60,8 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18017741879093672,
     createdAtRaw: 1717173847,
     media: [
-      { type: "image", path: "/media/instagram/2024-05-31-C7o69MmuY1m/techtankto_C7mQW2PObG8_3379460509198299580.jpg" },
-      { type: "image", path: "/media/instagram/2024-05-31-C7o69MmuY1m/techtankto_C7o69MmuY1m_3380210812461878630.jpg" }
+      { type: "image", path: "/media/instagram/2024-05-31-C7o69MmuY1m/techtankto_C7mQW2PObG8_3379460509198299580.webp" },
+      { type: "image", path: "/media/instagram/2024-05-31-C7o69MmuY1m/techtankto_C7o69MmuY1m_3380210812461878630.webp" }
     ]
   },
   "2024-06-02-C6wKWQOT7D": {
@@ -71,7 +71,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17855448786190591,
     createdAtRaw: 1717298507,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-02-C6wKWQOT7D/techtankto_C6_wKWQOT7D_3368622863618227907.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-02-C6wKWQOT7D/techtankto_C6_wKWQOT7D_3368622863618227907.webp" }
     ]
   },
   "2024-06-02-C7Cb4LUx2iy": {
@@ -81,7 +81,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18266614033215377,
     createdAtRaw: 1717298477,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-02-C7Cb4LUx2iy/techtankto_C7Cb4LUx2iy_3369378078932822194.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-02-C7Cb4LUx2iy/techtankto_C7Cb4LUx2iy_3369378078932822194.webp" }
     ]
   },
   "2024-06-02-C7Cc9Nvxnf": {
@@ -91,7 +91,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18049939513732333,
     createdAtRaw: 1717298424,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-02-C7Cc9Nvxnf/techtankto_C7Cc9Nvxnf-_3369382823177123838.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-02-C7Cc9Nvxnf/techtankto_C7Cc9Nvxnf-_3369382823177123838.webp" }
     ]
   },
   "2024-06-02-C7CchFRxfEi": {
@@ -101,7 +101,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18019116218216505,
     createdAtRaw: 1717298463,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-02-C7CchFRxfEi/techtankto_C7CchFRxfEi_3369380889938489634.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-02-C7CchFRxfEi/techtankto_C7CchFRxfEi_3369380889938489634.webp" }
     ]
   },
   "2024-06-02-C7W3AlHxKfh": {
@@ -111,7 +111,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18028667408031865,
     createdAtRaw: 1717298357,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-02-C7W3AlHxKfh/techtankto_C7W3AlHxKfh_3375126903177652193.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-02-C7W3AlHxKfh/techtankto_C7W3AlHxKfh_3375126903177652193.webp" }
     ]
   },
   "2024-06-02-C7cXA2mxC5g": {
@@ -121,7 +121,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18025321271173342,
     createdAtRaw: 1717298310,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-02-C7cXA2mxC5g/techtankto_C7cXA2mxC5g_3376675034323234400.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-02-C7cXA2mxC5g/techtankto_C7cXA2mxC5g_3376675034323234400.webp" }
     ]
   },
   "2024-06-02-C7cXqLJxf7d": {
@@ -131,8 +131,8 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18267872848232888,
     createdAtRaw: 1717298295,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-02-C7cXqLJxf7d/techtankto_C66tKOhxvH3_3367202286299705847.jpg" },
-      { type: "image", path: "/media/instagram/2024-06-02-C7cXqLJxf7d/techtankto_C7cXqLJxf7d_3376677873883938525.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-02-C7cXqLJxf7d/techtankto_C66tKOhxvH3_3367202286299705847.webp" },
+      { type: "image", path: "/media/instagram/2024-06-02-C7cXqLJxf7d/techtankto_C7cXqLJxf7d_3376677873883938525.webp" }
     ]
   },
   "2024-06-02-C7cskGFP5": {
@@ -142,7 +142,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18050106079730009,
     createdAtRaw: 1717298274,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-02-C7cskGFP5/techtankto_C7cskGFP_5-_3376769815099211390.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-02-C7cskGFP5/techtankto_C7cskGFP_5-_3376769815099211390.webp" }
     ]
   },
   "2024-06-02-C7pxQozOzxs": {
@@ -152,7 +152,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17882936193063784,
     createdAtRaw: 1717298172,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-02-C7pxQozOzxs/techtankto_C7pxQozOzxs_3380449642918132844.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-02-C7pxQozOzxs/techtankto_C7pxQozOzxs_3380449642918132844.webp" }
     ]
   },
   "2024-06-02-C7suzTLuDSF": {
@@ -162,7 +162,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18049391968676537,
     createdAtRaw: 1717300611,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-02-C7suzTLuDSF/techtankto_C7suzTLuDSF_3381283255678940293.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-02-C7suzTLuDSF/techtankto_C7suzTLuDSF_3381283255678940293.webp" }
     ]
   },
   "2024-06-03-C7wn1KJuj5o": {
@@ -172,7 +172,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18188319946288501,
     createdAtRaw: 1717431120,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-03-C7wn1KJuj5o/techtankto_C7wn1KJuj5o_3382378497002061416.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-03-C7wn1KJuj5o/techtankto_C7wn1KJuj5o_3382378497002061416.webp" }
     ]
   },
   "2024-06-06-C74WqthOQf0": {
@@ -182,9 +182,9 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17897279247007839,
     createdAtRaw: 1717695488,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-06-C74WqthOQf0/techtankto_C74WqthOQf0_3384554804066530675.jpg" },
-      { type: "image", path: "/media/instagram/2024-06-06-C74WqthOQf0/techtankto_C74WqthOQf0_3384554804074814185.jpg" },
-      { type: "image", path: "/media/instagram/2024-06-06-C74WqthOQf0/techtankto_C74WqthOQf0_3384554804125287770.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-06-C74WqthOQf0/techtankto_C74WqthOQf0_3384554804066530675.webp" },
+      { type: "image", path: "/media/instagram/2024-06-06-C74WqthOQf0/techtankto_C74WqthOQf0_3384554804074814185.webp" },
+      { type: "image", path: "/media/instagram/2024-06-06-C74WqthOQf0/techtankto_C74WqthOQf0_3384554804125287770.webp" }
     ]
   },
   "2024-06-06-C74av1COssc": {
@@ -194,7 +194,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18074119408503704,
     createdAtRaw: 1717692990,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-06-C74av1COssc/techtankto_C74av1COssc_3384572755939347228.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-06-C74av1COssc/techtankto_C74av1COssc_3384572755939347228.webp" }
     ]
   },
   "2024-06-07-C767bHluU6M": {
@@ -204,7 +204,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17999273321398044,
     createdAtRaw: 1717777707,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-07-C767bHluU6M/techtankto_C767bHluU6M_3385279418241470092.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-07-C767bHluU6M/techtankto_C767bHluU6M_3385279418241470092.webp" }
     ]
   },
   "2024-06-11-C8FNlJBOVSb": {
@@ -214,7 +214,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18010803482426692,
     createdAtRaw: 1718121949,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-11-C8FNlJBOVSb/techtankto_C8FNlJBOVSb_3388174021575660699.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-11-C8FNlJBOVSb/techtankto_C8FNlJBOVSb_3388174021575660699.webp" }
     ]
   },
   "2024-06-17-C8KZhuXOWi": {
@@ -224,13 +224,13 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18051044986663237,
     createdAtRaw: 1718659088,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-17-C8KZhuXOWi/techtankto_C8KZhuXO_Wi_3389633938237158818.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-17-C8KZhuXOWi/techtankto_C8KZhuXO_Wi_3389633938237158818.webp" }
     ]
   },
   "2024-06-17-C8U41WLPrxq": {
     caption: "Pride Month with TechTank's Code-Diversity Group! 🏳️‍🌈🌈👥\nWe're dedicated to celebrating women and non-binary folks in tech, promoting inclusivity and diversity.\nConnect, learn, and grow with us. 🐠🐟🐠\nThis month we had an amazing discussion about valuing ourselves. Tips on salary and job negotiations ‼\n\"How strong the reserves upon which draw you never realize until you need them, but believe me they do not fail you.\" Odette Sanson  Don’t miss our next in-person meetup—join our Slack now!   #PrideMonth #TechTank #CodeDiversity #InclusiveTech #WomenInTech #NonBinaryInTech #Meetup #techtanktoronto #Techtankto #OdetteSanson #value #knowyourworth #techtanker #techtankers #tech #lgbtqtech #proud #nonbinary #nonbinaryintech #strongwomen #community #diversity #inclusivity  -------- Meta: date(YYYY-MM-DD): 2024-06-17 shortcode: C8U41WLPrxq pk: 18062472175566173 created_at_raw: 1718648654 ",
     media: [
-      { type: "image", path: "/media/instagram/2024-06-17-C8U41WLPrxq/techtankto_C8U41WLPrxq_3392586375864695914.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-17-C8U41WLPrxq/techtankto_C8U41WLPrxq_3392586375864695914.webp" }
     ]
   },
   "2024-06-19-C8Z1p08ODt7": {
@@ -250,7 +250,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18328289557133984,
     createdAtRaw: 1718986684,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-21-C8e9VlsOwo/techtankto_C8e9VlsOwo__3395420933500635711.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-21-C8e9VlsOwo/techtankto_C8e9VlsOwo__3395420933500635711.webp" }
     ]
   },
   "2024-06-24-C8msrFGOihO": {
@@ -260,7 +260,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18081122857470135,
     createdAtRaw: 1719245655,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-24-C8msrFGOihO/techtankto_C8msrFGOihO_3397599443354789966.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-24-C8msrFGOihO/techtankto_C8msrFGOihO_3397599443354789966.webp" }
     ]
   },
   "2024-06-25-C8p7857AnMc": {
@@ -270,8 +270,8 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18062164441588673,
     createdAtRaw: 1719354112,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-25-C8p7857AnMc/techtankto_C8p7857AnMc_3398511056962745510.jpg" },
-      { type: "image", path: "/media/instagram/2024-06-25-C8p7857AnMc/techtankto_C8p7857AnMc_3398511057105558154.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-25-C8p7857AnMc/techtankto_C8p7857AnMc_3398511056962745510.webp" },
+      { type: "image", path: "/media/instagram/2024-06-25-C8p7857AnMc/techtankto_C8p7857AnMc_3398511057105558154.webp" }
     ]
   },
   "2024-06-26-C8sVauPXkc": {
@@ -281,9 +281,9 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18043199395865191,
     createdAtRaw: 1719434873,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-26-C8sVauPXkc/techtankto_C8r3lUiuDw-_3399054801017257022.jpg" },
-      { type: "image", path: "/media/instagram/2024-06-26-C8sVauPXkc/techtankto_C8sV_auPXkc_3399188529236874811.jpg" },
-      { type: "image", path: "/media/instagram/2024-06-26-C8sVauPXkc/techtankto_C8sV_auPXkc_3399188529287030092.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-26-C8sVauPXkc/techtankto_C8r3lUiuDw-_3399054801017257022.webp" },
+      { type: "image", path: "/media/instagram/2024-06-26-C8sVauPXkc/techtankto_C8sV_auPXkc_3399188529236874811.webp" },
+      { type: "image", path: "/media/instagram/2024-06-26-C8sVauPXkc/techtankto_C8sV_auPXkc_3399188529287030092.webp" }
     ]
   },
   "2024-06-28-C8xTWmAvRv": {
@@ -293,7 +293,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18232955245284006,
     createdAtRaw: 1719601522,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-28-C8xTWmAvRv/techtankto_C8xTWmAv-Rv_3400584309168399471.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-28-C8xTWmAvRv/techtankto_C8xTWmAv-Rv_3400584309168399471.webp" }
     ]
   },
   "2024-06-28-C8xVNklv28l": {
@@ -303,7 +303,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18082877032485480,
     createdAtRaw: 1719602628,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-28-C8xVNklv28l/techtankto_C8xVNklv28l_3400592485259374373.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-28-C8xVNklv28l/techtankto_C8xVNklv28l_3400592485259374373.webp" }
     ]
   },
   "2024-06-28-C8xWT8nPYJ1": {
@@ -313,8 +313,8 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18065039299512274,
     createdAtRaw: 1719603102,
     media: [
-      { type: "image", path: "/media/instagram/2024-06-28-C8xWT8nPYJ1/techtankto_C8uZtfxOeCd_3399767846362407069.jpg" },
-      { type: "image", path: "/media/instagram/2024-06-28-C8xWT8nPYJ1/techtankto_C8xWT8nPYJ1_3400597321417589365.jpg" }
+      { type: "image", path: "/media/instagram/2024-06-28-C8xWT8nPYJ1/techtankto_C8uZtfxOeCd_3399767846362407069.webp" },
+      { type: "image", path: "/media/instagram/2024-06-28-C8xWT8nPYJ1/techtankto_C8xWT8nPYJ1_3400597321417589365.webp" }
     ]
   },
   "2024-07-03-C892aoWOtZy": {
@@ -324,7 +324,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18038927353789500,
     createdAtRaw: 1720022893,
     media: [
-      { type: "image", path: "/media/instagram/2024-07-03-C892aoWOtZy/techtankto_C892aoWOtZy_3404116217902585458.jpg" }
+      { type: "image", path: "/media/instagram/2024-07-03-C892aoWOtZy/techtankto_C892aoWOtZy_3404116217902585458.webp" }
     ]
   },
   "2024-07-04-C9Aek4COlz": {
@@ -334,12 +334,12 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18037867567941870,
     createdAtRaw: 1720116278,
     media: [
-      { type: "image", path: "/media/instagram/2024-07-04-C9Aek4COlz/techtankto_C9Aek4COl-z_3404855784293078388.jpg" },
-      { type: "image", path: "/media/instagram/2024-07-04-C9Aek4COlz/techtankto_C9Aek4COl-z_3404855784301415861.jpg" },
-      { type: "image", path: "/media/instagram/2024-07-04-C9Aek4COlz/techtankto_C9Aek4COl-z_3404855784301601365.jpg" },
-      { type: "image", path: "/media/instagram/2024-07-04-C9Aek4COlz/techtankto_C9Aek4COl-z_3404855784360124823.jpg" },
-      { type: "image", path: "/media/instagram/2024-07-04-C9Aek4COlz/techtankto_C9Aek4COl-z_3404855784360217576.jpg" },
-      { type: "image", path: "/media/instagram/2024-07-04-C9Aek4COlz/techtankto_C9Aek4COl-z_3404855784402309323.jpg" }
+      { type: "image", path: "/media/instagram/2024-07-04-C9Aek4COlz/techtankto_C9Aek4COl-z_3404855784293078388.webp" },
+      { type: "image", path: "/media/instagram/2024-07-04-C9Aek4COlz/techtankto_C9Aek4COl-z_3404855784301415861.webp" },
+      { type: "image", path: "/media/instagram/2024-07-04-C9Aek4COlz/techtankto_C9Aek4COl-z_3404855784301601365.webp" },
+      { type: "image", path: "/media/instagram/2024-07-04-C9Aek4COlz/techtankto_C9Aek4COl-z_3404855784360124823.webp" },
+      { type: "image", path: "/media/instagram/2024-07-04-C9Aek4COlz/techtankto_C9Aek4COl-z_3404855784360217576.webp" },
+      { type: "image", path: "/media/instagram/2024-07-04-C9Aek4COlz/techtankto_C9Aek4COl-z_3404855784402309323.webp" }
     ]
   },
   "2024-07-05-C9DFZ0ZOrdB": {
@@ -349,7 +349,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17893663280963528,
     createdAtRaw: 1720198633,
     media: [
-      { type: "image", path: "/media/instagram/2024-07-05-C9DFZ0ZOrdB/techtankto_C9DFZ0ZOrdB_3405589507699554113.jpg" }
+      { type: "image", path: "/media/instagram/2024-07-05-C9DFZ0ZOrdB/techtankto_C9DFZ0ZOrdB_3405589507699554113.webp" }
     ]
   },
   "2024-07-08-C9LEpc4vzNp": {
@@ -359,7 +359,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17870853516131109,
     createdAtRaw: 1720465967,
     media: [
-      { type: "image", path: "/media/instagram/2024-07-08-C9LEpc4vzNp/techtankto_C9LEpc4vzNp_3407837983737328489.jpg" }
+      { type: "image", path: "/media/instagram/2024-07-08-C9LEpc4vzNp/techtankto_C9LEpc4vzNp_3407837983737328489.webp" }
     ]
   },
   "2024-07-10-C9P8eVgOztV": {
@@ -369,7 +369,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18049272550800304,
     createdAtRaw: 1720629454,
     media: [
-      { type: "image", path: "/media/instagram/2024-07-10-C9P8eVgOztV/techtankto_C9P8eVgOztV_3409209410407054165.jpg" }
+      { type: "image", path: "/media/instagram/2024-07-10-C9P8eVgOztV/techtankto_C9P8eVgOztV_3409209410407054165.webp" }
     ]
   },
   "2024-07-13-C9SqlM3PjTw": {
@@ -379,7 +379,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17873495958107150,
     createdAtRaw: 1720892030,
     media: [
-      { type: "image", path: "/media/instagram/2024-07-13-C9SqlM3PjTw/techtankto_C9SqlM3PjTw_3409975142258717936.jpg" }
+      { type: "image", path: "/media/instagram/2024-07-13-C9SqlM3PjTw/techtankto_C9SqlM3PjTw_3409975142258717936.webp" }
     ]
   },
   "2024-07-16-C9AxLY3vh77": {
@@ -389,7 +389,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18411075100073582,
     createdAtRaw: 1721156510,
     media: [
-      { type: "image", path: "/media/instagram/2024-07-16-C9AxLY3vh77/techtankto_C9AxLY3vh77_3404937605190393595.jpg" }
+      { type: "image", path: "/media/instagram/2024-07-16-C9AxLY3vh77/techtankto_C9AxLY3vh77_3404937605190393595.webp" }
     ]
   },
   "2024-07-16-C9NDwL7OBFx": {
@@ -399,7 +399,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18070593601548595,
     createdAtRaw: 1721156487,
     media: [
-      { type: "image", path: "/media/instagram/2024-07-16-C9NDwL7OBFx/techtankto_C9NDwL7OBFx_3408396998468440433.jpg" }
+      { type: "image", path: "/media/instagram/2024-07-16-C9NDwL7OBFx/techtankto_C9NDwL7OBFx_3408396998468440433.webp" }
     ]
   },
   "2024-07-16-C9c08uPO9f1": {
@@ -409,7 +409,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18063194065596977,
     createdAtRaw: 1721095790,
     media: [
-      { type: "image", path: "/media/instagram/2024-07-16-C9c08uPO9f1/techtankto_C9c08uPO9f1_3412835488874878965.jpg" }
+      { type: "image", path: "/media/instagram/2024-07-16-C9c08uPO9f1/techtankto_C9c08uPO9f1_3412835488874878965.webp" }
     ]
   },
   "2024-07-18-C9kpAIONos": {
@@ -419,8 +419,8 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18033533795508278,
     createdAtRaw: 1721323895,
     media: [
-      { type: "image", path: "/media/instagram/2024-07-18-C9kpAIONos/techtankto_C9kpA_IONos_3415034798190297072.jpg" },
-      { type: "image", path: "/media/instagram/2024-07-18-C9kpAIONos/techtankto_C9kpA_IONos_3415034798307630168.jpg" }
+      { type: "image", path: "/media/instagram/2024-07-18-C9kpAIONos/techtankto_C9kpA_IONos_3415034798190297072.webp" },
+      { type: "image", path: "/media/instagram/2024-07-18-C9kpAIONos/techtankto_C9kpA_IONos_3415034798307630168.webp" }
     ]
   },
   "2024-07-20-C9nThXfPwQx": {
@@ -430,7 +430,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17945473628827690,
     createdAtRaw: 1721495959,
     media: [
-      { type: "image", path: "/media/instagram/2024-07-20-C9nThXfPwQx/techtankto_C9nThXfPwQx_3415784698230539313.jpg" }
+      { type: "image", path: "/media/instagram/2024-07-20-C9nThXfPwQx/techtankto_C9nThXfPwQx_3415784698230539313.webp" }
     ]
   },
   "2024-07-29-CA1UqhufU": {
@@ -440,7 +440,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18083557162488657,
     createdAtRaw: 1722270415,
     media: [
-      { type: "image", path: "/media/instagram/2024-07-29-CA1UqhufU/techtankto_C-A1Uqhu_fU_3422970233319323604.jpg" }
+      { type: "image", path: "/media/instagram/2024-07-29-CA1UqhufU/techtankto_C-A1Uqhu_fU_3422970233319323604.webp" }
     ]
   },
   "2024-07-30-CBagSLP0do": {
@@ -450,7 +450,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18002963378422009,
     createdAtRaw: 1722376928,
     media: [
-      { type: "image", path: "/media/instagram/2024-07-30-CBagSLP0do/techtankto_C-BagSLP0do_3423133759526881128.jpg" }
+      { type: "image", path: "/media/instagram/2024-07-30-CBagSLP0do/techtankto_C-BagSLP0do_3423133759526881128.webp" }
     ]
   },
   "2024-07-31-CGa7pEvgFk": {
@@ -460,7 +460,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17918516654951963,
     createdAtRaw: 1722457520,
     media: [
-      { type: "image", path: "/media/instagram/2024-07-31-CGa7pEvgFk/techtankto_C-Ga7pEvgFk_3424543014423232868.jpg" }
+      { type: "image", path: "/media/instagram/2024-07-31-CGa7pEvgFk/techtankto_C-Ga7pEvgFk_3424543014423232868.webp" }
     ]
   },
   "2024-08-13-CnSzF3OHAy": {
@@ -470,7 +470,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18048231700895200,
     createdAtRaw: 1723560954,
     media: [
-      { type: "image", path: "/media/instagram/2024-08-13-CnSzF3OHAy/techtankto_C-nSzF3OHAy_3433795916718960690.jpg" }
+      { type: "image", path: "/media/instagram/2024-08-13-CnSzF3OHAy/techtankto_C-nSzF3OHAy_3433795916718960690.webp" }
     ]
   },
   "2024-08-20-C5X4fJOYnp": {
@@ -480,7 +480,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18143865943336629,
     createdAtRaw: 1724171695,
     media: [
-      { type: "image", path: "/media/instagram/2024-08-20-C5X4fJOYnp/techtankto_C-5X4fJOYnp_3438884827275299305.jpg" }
+      { type: "image", path: "/media/instagram/2024-08-20-C5X4fJOYnp/techtankto_C-5X4fJOYnp_3438884827275299305.webp" }
     ]
   },
   "2024-08-29-CQpuckuRIf": {
@@ -490,7 +490,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18248459479265088,
     createdAtRaw: 1724948431,
     media: [
-      { type: "image", path: "/media/instagram/2024-08-29-CQpuckuRIf/techtankto_C_QpuckuRIf_3445437226622194207.jpg" }
+      { type: "image", path: "/media/instagram/2024-08-29-CQpuckuRIf/techtankto_C_QpuckuRIf_3445437226622194207.webp" }
     ]
   },
   "2024-09-02-Cbh9wCvzkA": {
@@ -500,7 +500,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18092008786460907,
     createdAtRaw: 1725313533,
     media: [
-      { type: "image", path: "/media/instagram/2024-09-02-Cbh9wCvzkA/techtankto_C_bh9wCvzkA_3448499318690887936.jpg" }
+      { type: "image", path: "/media/instagram/2024-09-02-Cbh9wCvzkA/techtankto_C_bh9wCvzkA_3448499318690887936.webp" }
     ]
   },
   "2024-09-03-CdVqoFOP2e": {
@@ -510,13 +510,13 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18044417227799792,
     createdAtRaw: 1725373805,
     media: [
-      { type: "image", path: "/media/instagram/2024-09-03-CdVqoFOP2e/techtankto_C_dVqoFOP2e_3448724800623156959.jpg" },
-      { type: "image", path: "/media/instagram/2024-09-03-CdVqoFOP2e/techtankto_C_dVqoFOP2e_3448724800631589752.jpg" },
-      { type: "image", path: "/media/instagram/2024-09-03-CdVqoFOP2e/techtankto_C_dVqoFOP2e_3448724800631609999.jpg" },
-      { type: "image", path: "/media/instagram/2024-09-03-CdVqoFOP2e/techtankto_C_dVqoFOP2e_3448724800631708559.jpg" },
-      { type: "image", path: "/media/instagram/2024-09-03-CdVqoFOP2e/techtankto_C_dVqoFOP2e_3448724800690242522.jpg" },
-      { type: "image", path: "/media/instagram/2024-09-03-CdVqoFOP2e/techtankto_C_dVqoFOP2e_3448724800690372050.jpg" },
-      { type: "image", path: "/media/instagram/2024-09-03-CdVqoFOP2e/techtankto_C_dVqoFOP2e_3448724800698623572.jpg" }
+      { type: "image", path: "/media/instagram/2024-09-03-CdVqoFOP2e/techtankto_C_dVqoFOP2e_3448724800623156959.webp" },
+      { type: "image", path: "/media/instagram/2024-09-03-CdVqoFOP2e/techtankto_C_dVqoFOP2e_3448724800631589752.webp" },
+      { type: "image", path: "/media/instagram/2024-09-03-CdVqoFOP2e/techtankto_C_dVqoFOP2e_3448724800631609999.webp" },
+      { type: "image", path: "/media/instagram/2024-09-03-CdVqoFOP2e/techtankto_C_dVqoFOP2e_3448724800631708559.webp" },
+      { type: "image", path: "/media/instagram/2024-09-03-CdVqoFOP2e/techtankto_C_dVqoFOP2e_3448724800690242522.webp" },
+      { type: "image", path: "/media/instagram/2024-09-03-CdVqoFOP2e/techtankto_C_dVqoFOP2e_3448724800690372050.webp" },
+      { type: "image", path: "/media/instagram/2024-09-03-CdVqoFOP2e/techtankto_C_dVqoFOP2e_3448724800698623572.webp" }
     ]
   },
   "2024-09-03-Cdm2SnujZM": {
@@ -526,7 +526,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18034704305484162,
     createdAtRaw: 1725382811,
     media: [
-      { type: "image", path: "/media/instagram/2024-09-03-Cdm2SnujZM/techtankto_C_dm2SnujZM_3449083746248701516.jpg" }
+      { type: "image", path: "/media/instagram/2024-09-03-Cdm2SnujZM/techtankto_C_dm2SnujZM_3449083746248701516.webp" }
     ]
   },
   "2024-09-04-CgBVf3vCTS": {
@@ -536,7 +536,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18040077086023547,
     createdAtRaw: 1725463809,
     media: [
-      { type: "image", path: "/media/instagram/2024-09-04-CgBVf3vCTS/techtankto_C_gBVf3vCTS_3449763189942396114.jpg" }
+      { type: "image", path: "/media/instagram/2024-09-04-CgBVf3vCTS/techtankto_C_gBVf3vCTS_3449763189942396114.webp" }
     ]
   },
   "2024-09-16-C1y27uKuL": {
@@ -546,7 +546,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17920642085966893,
     createdAtRaw: 1726500057,
     media: [
-      { type: "image", path: "/media/instagram/2024-09-16-C1y27uKuL/techtankto_C_-1y27uKuL_3458438155290061707.jpg" }
+      { type: "image", path: "/media/instagram/2024-09-16-C1y27uKuL/techtankto_C_-1y27uKuL_3458438155290061707.webp" }
     ]
   },
   "2024-09-19-DAGbFxFOHtI": {
@@ -556,7 +556,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18063441517632959,
     createdAtRaw: 1726752757,
     media: [
-      { type: "image", path: "/media/instagram/2024-09-19-DAGbFxFOHtI/techtankto_DAGbFxFOHtI_3460572507234925384.jpg" }
+      { type: "image", path: "/media/instagram/2024-09-19-DAGbFxFOHtI/techtankto_DAGbFxFOHtI_3460572507234925384.webp" }
     ]
   },
   "2024-09-24-DATiy4XOfvL": {
@@ -566,7 +566,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18037461965278612,
     createdAtRaw: 1727196620,
     media: [
-      { type: "image", path: "/media/instagram/2024-09-24-DATiy4XOfvL/techtankto_DATiy4XOfvL_3464265568452475851.jpg" }
+      { type: "image", path: "/media/instagram/2024-09-24-DATiy4XOfvL/techtankto_DATiy4XOfvL_3464265568452475851.webp" }
     ]
   },
   "2024-09-27-DAbc737vNNk": {
@@ -576,7 +576,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18240629236262972,
     createdAtRaw: 1727458185,
     media: [
-      { type: "image", path: "/media/instagram/2024-09-27-DAbc737vNNk/techtankto_DAbc737vNNk_3466491598001197924.jpg" }
+      { type: "image", path: "/media/instagram/2024-09-27-DAbc737vNNk/techtankto_DAbc737vNNk_3466491598001197924.webp" }
     ]
   },
   "2024-10-01-DAlmPeCNBdb": {
@@ -586,16 +586,16 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17899530414064165,
     createdAtRaw: 1727817399,
     media: [
-      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347251291647730.png" },
-      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347251375470465.png" },
-      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347251610367303.png" },
-      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347251635508377.png" },
-      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347251828330158.png" },
-      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347251937482685.png" },
-      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347252013071695.png" },
-      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347252390475052.png" },
-      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347253028008996.png" },
-      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347254193920430.png" }
+      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347251291647730.webp" },
+      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347251375470465.webp" },
+      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347251610367303.webp" },
+      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347251635508377.webp" },
+      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347251828330158.webp" },
+      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347251937482685.webp" },
+      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347252013071695.webp" },
+      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347252390475052.webp" },
+      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347253028008996.webp" },
+      { type: "image", path: "/media/instagram/2024-10-01-DAlmPeCNBdb/techtankto_DAlmPeCNBdb_3469347254193920430.webp" }
     ]
   },
   "2024-10-01-DAmHHnlveoh": {
@@ -605,7 +605,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18073900021507430,
     createdAtRaw: 1727815694,
     media: [
-      { type: "image", path: "/media/instagram/2024-10-01-DAmHHnlveoh/techtankto_DAmHHnlveoh_3469491872806595105.jpg" }
+      { type: "image", path: "/media/instagram/2024-10-01-DAmHHnlveoh/techtankto_DAmHHnlveoh_3469491872806595105.webp" }
     ]
   },
   "2024-10-03-DAq61RWPvMW": {
@@ -615,7 +615,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17873806857174776,
     createdAtRaw: 1727977145,
     media: [
-      { type: "image", path: "/media/instagram/2024-10-03-DAq61RWPvMW/techtankto_DAq61RWPvMW_3470845210299134742.jpg" }
+      { type: "image", path: "/media/instagram/2024-10-03-DAq61RWPvMW/techtankto_DAq61RWPvMW_3470845210299134742.webp" }
     ]
   },
   "2024-10-07-DA1Dl3Kv6k": {
@@ -625,7 +625,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18155268145323328,
     createdAtRaw: 1728324329,
     media: [
-      { type: "image", path: "/media/instagram/2024-10-07-DA1Dl3Kv6k/techtankto_DA1Dl3Kv6k__3473698483582511423.jpg" }
+      { type: "image", path: "/media/instagram/2024-10-07-DA1Dl3Kv6k/techtankto_DA1Dl3Kv6k__3473698483582511423.webp" }
     ]
   },
   "2024-10-07-DAtx67v2D": {
@@ -635,7 +635,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18028519694346723,
     createdAtRaw: 1728324420,
     media: [
-      { type: "image", path: "/media/instagram/2024-10-07-DAtx67v2D/techtankto_DAtx6-7v_2D_3471650445355646339.jpg" }
+      { type: "image", path: "/media/instagram/2024-10-07-DAtx67v2D/techtankto_DAtx6-7v_2D_3471650445355646339.webp" }
     ]
   },
   "2024-10-11-DAZ7SLvG1T": {
@@ -645,7 +645,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17850354615312386,
     createdAtRaw: 1728665911,
     media: [
-      { type: "image", path: "/media/instagram/2024-10-11-DAZ7SLvG1T/techtankto_DA_Z7SLvG1T_3476611462489468243.jpg" }
+      { type: "image", path: "/media/instagram/2024-10-11-DAZ7SLvG1T/techtankto_DA_Z7SLvG1T_3476611462489468243.webp" }
     ]
   },
   "2024-10-14-DBHFWyPYBI": {
@@ -655,7 +655,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17998274993693244,
     createdAtRaw: 1728922126,
     media: [
-      { type: "image", path: "/media/instagram/2024-10-14-DBHFWyPYBI/techtankto_DBHFWy-PYBI_3478772793959350344.jpg" }
+      { type: "image", path: "/media/instagram/2024-10-14-DBHFWyPYBI/techtankto_DBHFWy-PYBI_3478772793959350344.webp" }
     ]
   },
   "2024-10-21-DBZdF5lSjvU": {
@@ -665,7 +665,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18052059433745657,
     createdAtRaw: 1729538480,
     media: [
-      { type: "image", path: "/media/instagram/2024-10-21-DBZdF5lSjvU/techtankto_DBZdF5lSjvU_3483943735522900948.jpg" }
+      { type: "image", path: "/media/instagram/2024-10-21-DBZdF5lSjvU/techtankto_DBZdF5lSjvU_3483943735522900948.webp" }
     ]
   },
   "2024-10-23-DBentgfSU2r": {
@@ -675,7 +675,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18029950235120660,
     createdAtRaw: 1729712327,
     media: [
-      { type: "image", path: "/media/instagram/2024-10-23-DBentgfSU2r/techtankto_DBentgfSU2r_3485397812706364843.jpg" }
+      { type: "image", path: "/media/instagram/2024-10-23-DBentgfSU2r/techtankto_DBentgfSU2r_3485397812706364843.webp" }
     ]
   },
   "2024-10-24-DBgxiIlOOkr": {
@@ -685,12 +685,12 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18045624860296637,
     createdAtRaw: 1729786356,
     media: [
-      { type: "image", path: "/media/instagram/2024-10-24-DBgxiIlOOkr/techtankto_DBgxiIlOOkr_3486003942439582712.jpg" },
-      { type: "image", path: "/media/instagram/2024-10-24-DBgxiIlOOkr/techtankto_DBgxiIlOOkr_3486003942448066005.jpg" },
-      { type: "image", path: "/media/instagram/2024-10-24-DBgxiIlOOkr/techtankto_DBgxiIlOOkr_3486003942448157161.jpg" },
-      { type: "image", path: "/media/instagram/2024-10-24-DBgxiIlOOkr/techtankto_DBgxiIlOOkr_3486003942481541681.jpg" },
-      { type: "image", path: "/media/instagram/2024-10-24-DBgxiIlOOkr/techtankto_DBgxiIlOOkr_3486003942489854238.jpg" },
-      { type: "image", path: "/media/instagram/2024-10-24-DBgxiIlOOkr/techtankto_DBgxiIlOOkr_3486003942523417783.jpg" }
+      { type: "image", path: "/media/instagram/2024-10-24-DBgxiIlOOkr/techtankto_DBgxiIlOOkr_3486003942439582712.webp" },
+      { type: "image", path: "/media/instagram/2024-10-24-DBgxiIlOOkr/techtankto_DBgxiIlOOkr_3486003942448066005.webp" },
+      { type: "image", path: "/media/instagram/2024-10-24-DBgxiIlOOkr/techtankto_DBgxiIlOOkr_3486003942448157161.webp" },
+      { type: "image", path: "/media/instagram/2024-10-24-DBgxiIlOOkr/techtankto_DBgxiIlOOkr_3486003942481541681.webp" },
+      { type: "image", path: "/media/instagram/2024-10-24-DBgxiIlOOkr/techtankto_DBgxiIlOOkr_3486003942489854238.webp" },
+      { type: "image", path: "/media/instagram/2024-10-24-DBgxiIlOOkr/techtankto_DBgxiIlOOkr_3486003942523417783.webp" }
     ]
   },
   "2024-10-28-DBrdDK5ytZm": {
@@ -700,7 +700,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18048273715953539,
     createdAtRaw: 1730143285,
     media: [
-      { type: "image", path: "/media/instagram/2024-10-28-DBrdDK5ytZm/techtankto_DBrdDK5ytZm_3489010097542846054.jpg" }
+      { type: "image", path: "/media/instagram/2024-10-28-DBrdDK5ytZm/techtankto_DBrdDK5ytZm_3489010097542846054.webp" }
     ]
   },
   "2024-10-31-DByybOYuSdw": {
@@ -710,7 +710,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18068227981563337,
     createdAtRaw: 1730389076,
     media: [
-      { type: "image", path: "/media/instagram/2024-10-31-DByybOYuSdw/techtankto_DByybOYuSdw_3491074434364155760.jpg" }
+      { type: "image", path: "/media/instagram/2024-10-31-DByybOYuSdw/techtankto_DByybOYuSdw_3491074434364155760.webp" }
     ]
   },
   "2024-11-01-DB2G8ewvSZr": {
@@ -720,7 +720,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18054018190913837,
     createdAtRaw: 1730501139,
     media: [
-      { type: "image", path: "/media/instagram/2024-11-01-DB2G8ewvSZr/techtankto_DB2G8ewvSZr_3492009105550026347.jpg" }
+      { type: "image", path: "/media/instagram/2024-11-01-DB2G8ewvSZr/techtankto_DB2G8ewvSZr_3492009105550026347.webp" }
     ]
   },
   "2024-11-05-DB07HJOX6Q": {
@@ -730,7 +730,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18021829199300283,
     createdAtRaw: 1730826028,
     media: [
-      { type: "image", path: "/media/instagram/2024-11-05-DB07HJOX6Q/techtankto_DB_07HJOX6Q_3494744596401454736.jpg" }
+      { type: "image", path: "/media/instagram/2024-11-05-DB07HJOX6Q/techtankto_DB_07HJOX6Q_3494744596401454736.webp" }
     ]
   },
   "2024-11-07-DCFhk3OvZVx": {
@@ -740,11 +740,11 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18043548824283056,
     createdAtRaw: 1731017226,
     media: [
-      { type: "image", path: "/media/instagram/2024-11-07-DCFhk3OvZVx/techtankto_DCFhk3OvZVx_3496348345503233145.jpg" },
-      { type: "image", path: "/media/instagram/2024-11-07-DCFhk3OvZVx/techtankto_DCFhk3OvZVx_3496348345511538947.jpg" },
-      { type: "image", path: "/media/instagram/2024-11-07-DCFhk3OvZVx/techtankto_DCFhk3OvZVx_3496348345687656065.jpg" },
-      { type: "image", path: "/media/instagram/2024-11-07-DCFhk3OvZVx/techtankto_DCFhk3OvZVx_3496348345738068339.jpg" },
-      { type: "image", path: "/media/instagram/2024-11-07-DCFhk3OvZVx/techtankto_DCFhk3OvZVx_3496348345746379858.jpg" }
+      { type: "image", path: "/media/instagram/2024-11-07-DCFhk3OvZVx/techtankto_DCFhk3OvZVx_3496348345503233145.webp" },
+      { type: "image", path: "/media/instagram/2024-11-07-DCFhk3OvZVx/techtankto_DCFhk3OvZVx_3496348345511538947.webp" },
+      { type: "image", path: "/media/instagram/2024-11-07-DCFhk3OvZVx/techtankto_DCFhk3OvZVx_3496348345687656065.webp" },
+      { type: "image", path: "/media/instagram/2024-11-07-DCFhk3OvZVx/techtankto_DCFhk3OvZVx_3496348345738068339.webp" },
+      { type: "image", path: "/media/instagram/2024-11-07-DCFhk3OvZVx/techtankto_DCFhk3OvZVx_3496348345746379858.webp" }
     ]
   },
   "2024-11-09-DCHmwcEvQj": {
@@ -754,7 +754,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18036852710252612,
     createdAtRaw: 1731196249,
     media: [
-      { type: "image", path: "/media/instagram/2024-11-09-DCHmwcEvQj/techtankto_DCHmwcEvQ_j_3496934090123055075.jpg" }
+      { type: "image", path: "/media/instagram/2024-11-09-DCHmwcEvQj/techtankto_DCHmwcEvQ_j_3496934090123055075.webp" }
     ]
   },
   "2024-11-10-DBjhqNBPqns": {
@@ -764,7 +764,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18021640388307932,
     createdAtRaw: 1731221663,
     media: [
-      { type: "image", path: "/media/instagram/2024-11-10-DBjhqNBPqns/techtankto_DBjhqNBPqns_3486778572247312876.jpg" }
+      { type: "image", path: "/media/instagram/2024-11-10-DBjhqNBPqns/techtankto_DBjhqNBPqns_3486778572247312876.webp" }
     ]
   },
   "2024-11-11-DCPpNYhbu": {
@@ -774,8 +774,8 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18467247091001953,
     createdAtRaw: 1731356772,
     media: [
-      { type: "image", path: "/media/instagram/2024-11-11-DCPpNYhbu/techtankto_DCPMcRQPHdR_3499070154719655761.jpg" },
-      { type: "image", path: "/media/instagram/2024-11-11-DCPpNYhbu/techtankto_DCPpNY-hb_u_3499196675569074158.jpg" }
+      { type: "image", path: "/media/instagram/2024-11-11-DCPpNYhbu/techtankto_DCPMcRQPHdR_3499070154719655761.webp" },
+      { type: "image", path: "/media/instagram/2024-11-11-DCPpNYhbu/techtankto_DCPpNY-hb_u_3499196675569074158.webp" }
     ]
   },
   "2024-11-14-DCW5HP3xmld": {
@@ -785,10 +785,10 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18022648364535931,
     createdAtRaw: 1731599992,
     media: [
-      { type: "image", path: "/media/instagram/2024-11-14-DCW5HP3xmld/techtankto_DCW5HP3xmld_3501236937485090092.jpg" },
-      { type: "image", path: "/media/instagram/2024-11-14-DCW5HP3xmld/techtankto_DCW5HP3xmld_3501236937518577314.jpg" },
-      { type: "image", path: "/media/instagram/2024-11-14-DCW5HP3xmld/techtankto_DCW5HP3xmld_3501236937518686340.jpg" },
-      { type: "image", path: "/media/instagram/2024-11-14-DCW5HP3xmld/techtankto_DCW5HP3xmld_3501236937552131993.jpg" }
+      { type: "image", path: "/media/instagram/2024-11-14-DCW5HP3xmld/techtankto_DCW5HP3xmld_3501236937485090092.webp" },
+      { type: "image", path: "/media/instagram/2024-11-14-DCW5HP3xmld/techtankto_DCW5HP3xmld_3501236937518577314.webp" },
+      { type: "image", path: "/media/instagram/2024-11-14-DCW5HP3xmld/techtankto_DCW5HP3xmld_3501236937518686340.webp" },
+      { type: "image", path: "/media/instagram/2024-11-14-DCW5HP3xmld/techtankto_DCW5HP3xmld_3501236937552131993.webp" }
     ]
   },
   "2024-11-15-DCZhoCkPPdf": {
@@ -798,7 +798,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18016335188341422,
     createdAtRaw: 1731688841,
     media: [
-      { type: "image", path: "/media/instagram/2024-11-15-DCZhoCkPPdf/techtankto_DCZhoCkPPdf_3501978072326666079.jpg" }
+      { type: "image", path: "/media/instagram/2024-11-15-DCZhoCkPPdf/techtankto_DCZhoCkPPdf_3501978072326666079.webp" }
     ]
   },
   "2024-11-18-DChoRIcBP9R": {
@@ -808,7 +808,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17955183749738958,
     createdAtRaw: 1731960259,
     media: [
-      { type: "image", path: "/media/instagram/2024-11-18-DChoRIcBP9R/techtankto_DChoRIcBP9R_3504259084222529361.jpg" }
+      { type: "image", path: "/media/instagram/2024-11-18-DChoRIcBP9R/techtankto_DChoRIcBP9R_3504259084222529361.webp" }
     ]
   },
   "2024-11-20-DCm66dGvnI": {
@@ -818,7 +818,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18050761831952622,
     createdAtRaw: 1732138145,
     media: [
-      { type: "image", path: "/media/instagram/2024-11-20-DCm66dGvnI/techtankto_DCm66dGvnI__3505748463633461823.jpg" }
+      { type: "image", path: "/media/instagram/2024-11-20-DCm66dGvnI/techtankto_DCm66dGvnI__3505748463633461823.webp" }
     ]
   },
   "2024-11-21-DCpBLdmvBl1": {
@@ -828,16 +828,16 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18145153558344730,
     createdAtRaw: 1732208201,
     media: [
-      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953420465759.jpg" },
-      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953437138357.jpg" },
-      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953437337342.jpg" },
-      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953437356275.jpg" },
-      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953579736550.jpg" },
-      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953579981420.jpg" },
-      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953605020597.jpg" },
-      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953688944594.jpg" },
-      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953688960216.jpg" },
-      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953722397276.jpg" }
+      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953420465759.webp" },
+      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953437138357.webp" },
+      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953437337342.webp" },
+      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953437356275.webp" },
+      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953579736550.webp" },
+      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953579981420.webp" },
+      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953605020597.webp" },
+      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953688944594.webp" },
+      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953688960216.webp" },
+      { type: "image", path: "/media/instagram/2024-11-21-DCpBLdmvBl1/techtankto_DCpBLdmvBl1_3506338953722397276.webp" }
     ]
   },
   "2024-11-25-DCzpnzENKdU": {
@@ -847,7 +847,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17993237915725183,
     createdAtRaw: 1732564947,
     media: [
-      { type: "image", path: "/media/instagram/2024-11-25-DCzpnzENKdU/techtankto_DCzpnzENKdU_3509331589449688916.jpg" }
+      { type: "image", path: "/media/instagram/2024-11-25-DCzpnzENKdU/techtankto_DCzpnzENKdU_3509331589449688916.webp" }
     ]
   },
   "2024-11-28-DC7de7mv4Qc": {
@@ -857,7 +857,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18137267959368349,
     createdAtRaw: 1732827262,
     media: [
-      { type: "image", path: "/media/instagram/2024-11-28-DC7de7mv4Qc/techtankto_DC7de7mv4Qc_3511530003399410716.jpg" }
+      { type: "image", path: "/media/instagram/2024-11-28-DC7de7mv4Qc/techtankto_DC7de7mv4Qc_3511530003399410716.webp" }
     ]
   },
   "2024-11-30-DDAP9IkvaZU": {
@@ -867,7 +867,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18028029848206182,
     createdAtRaw: 1732996011,
     media: [
-      { type: "image", path: "/media/instagram/2024-11-30-DDAP9IkvaZU/techtankto_DDAP9IkvaZU_3512877881141077588.jpg" }
+      { type: "image", path: "/media/instagram/2024-11-30-DDAP9IkvaZU/techtankto_DDAP9IkvaZU_3512877881141077588.webp" }
     ]
   },
   "2024-12-02-DDFWKMavIG": {
@@ -877,7 +877,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18335066851145190,
     createdAtRaw: 1733158724,
     media: [
-      { type: "image", path: "/media/instagram/2024-12-02-DDFWKMavIG/techtankto_DDFWKMavI_G_3514312541784018886.jpg" }
+      { type: "image", path: "/media/instagram/2024-12-02-DDFWKMavIG/techtankto_DDFWKMavI_G_3514312541784018886.webp" }
     ]
   },
   "2024-12-03-DDHtcovAURw": {
@@ -887,12 +887,12 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18073974565623772,
     createdAtRaw: 1733238042,
     media: [
-      { type: "image", path: "/media/instagram/2024-12-03-DDHtcovAURw/techtankto_DDHtcovAURw_3514977895976222728.png" },
-      { type: "image", path: "/media/instagram/2024-12-03-DDHtcovAURw/techtankto_DDHtcovAURw_3514977895992915567.png" },
-      { type: "image", path: "/media/instagram/2024-12-03-DDHtcovAURw/techtankto_DDHtcovAURw_3514977896303294095.png" },
-      { type: "image", path: "/media/instagram/2024-12-03-DDHtcovAURw/techtankto_DDHtcovAURw_3514977896311670364.png" },
-      { type: "image", path: "/media/instagram/2024-12-03-DDHtcovAURw/techtankto_DDHtcovAURw_3514977896454187404.png" },
-      { type: "image", path: "/media/instagram/2024-12-03-DDHtcovAURw/techtankto_DDHtcovAURw_3514977896697634616.png" }
+      { type: "image", path: "/media/instagram/2024-12-03-DDHtcovAURw/techtankto_DDHtcovAURw_3514977895976222728.webp" },
+      { type: "image", path: "/media/instagram/2024-12-03-DDHtcovAURw/techtankto_DDHtcovAURw_3514977895992915567.webp" },
+      { type: "image", path: "/media/instagram/2024-12-03-DDHtcovAURw/techtankto_DDHtcovAURw_3514977896303294095.webp" },
+      { type: "image", path: "/media/instagram/2024-12-03-DDHtcovAURw/techtankto_DDHtcovAURw_3514977896311670364.webp" },
+      { type: "image", path: "/media/instagram/2024-12-03-DDHtcovAURw/techtankto_DDHtcovAURw_3514977896454187404.webp" },
+      { type: "image", path: "/media/instagram/2024-12-03-DDHtcovAURw/techtankto_DDHtcovAURw_3514977896697634616.webp" }
     ]
   },
   "2024-12-04-DDKp0Kbv259": {
@@ -902,7 +902,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18061026415845250,
     createdAtRaw: 1733336801,
     media: [
-      { type: "image", path: "/media/instagram/2024-12-04-DDKp0Kbv259/techtankto_DDKp0Kbv259_3515806363638787709.jpg" }
+      { type: "image", path: "/media/instagram/2024-12-04-DDKp0Kbv259/techtankto_DDKp0Kbv259_3515806363638787709.webp" }
     ]
   },
   "2024-12-05-DDL8DILxGRz": {
@@ -912,12 +912,12 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17873157963233015,
     createdAtRaw: 1733379915,
     media: [
-      { type: "image", path: "/media/instagram/2024-12-05-DDL8DILxGRz/techtankto_DDL8DILxGRz_3516168022929150406.jpg" },
-      { type: "image", path: "/media/instagram/2024-12-05-DDL8DILxGRz/techtankto_DDL8DILxGRz_3516168022937476125.jpg" },
-      { type: "image", path: "/media/instagram/2024-12-05-DDL8DILxGRz/techtankto_DDL8DILxGRz_3516168022945849761.jpg" },
-      { type: "image", path: "/media/instagram/2024-12-05-DDL8DILxGRz/techtankto_DDL8DILxGRz_3516168022945856804.jpg" },
-      { type: "image", path: "/media/instagram/2024-12-05-DDL8DILxGRz/techtankto_DDL8DILxGRz_3516168022954310723.jpg" },
-      { type: "image", path: "/media/instagram/2024-12-05-DDL8DILxGRz/techtankto_DDL8DILxGRz_3516168022971083458.jpg" }
+      { type: "image", path: "/media/instagram/2024-12-05-DDL8DILxGRz/techtankto_DDL8DILxGRz_3516168022929150406.webp" },
+      { type: "image", path: "/media/instagram/2024-12-05-DDL8DILxGRz/techtankto_DDL8DILxGRz_3516168022937476125.webp" },
+      { type: "image", path: "/media/instagram/2024-12-05-DDL8DILxGRz/techtankto_DDL8DILxGRz_3516168022945849761.webp" },
+      { type: "image", path: "/media/instagram/2024-12-05-DDL8DILxGRz/techtankto_DDL8DILxGRz_3516168022945856804.webp" },
+      { type: "image", path: "/media/instagram/2024-12-05-DDL8DILxGRz/techtankto_DDL8DILxGRz_3516168022954310723.webp" },
+      { type: "image", path: "/media/instagram/2024-12-05-DDL8DILxGRz/techtankto_DDL8DILxGRz_3516168022971083458.webp" }
     ]
   },
   "2024-12-13-DDhUiARIj9": {
@@ -927,7 +927,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17918568185917213,
     createdAtRaw: 1734097926,
     media: [
-      { type: "image", path: "/media/instagram/2024-12-13-DDhUiARIj9/techtankto_DDhU_iARIj9_3522188710349408509.jpg" }
+      { type: "image", path: "/media/instagram/2024-12-13-DDhUiARIj9/techtankto_DDhU_iARIj9_3522188710349408509.webp" }
     ]
   },
   "2024-12-17-DDrzcGXudd": {
@@ -937,7 +937,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18080407411572544,
     createdAtRaw: 1734449143,
     media: [
-      { type: "image", path: "/media/instagram/2024-12-17-DDrzcGXudd/techtankto_DDrzcGXud-d_3525137364705468317.jpg" }
+      { type: "image", path: "/media/instagram/2024-12-17-DDrzcGXudd/techtankto_DDrzcGXud-d_3525137364705468317.webp" }
     ]
   },
   "2024-12-23-DB9wVRshHUn": {
@@ -947,7 +947,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18068465776743324,
     createdAtRaw: 1734993755,
     media: [
-      { type: "image", path: "/media/instagram/2024-12-23-DB9wVRshHUn/techtankto_DB9wVRshHUn_3494161454251406631.jpg" }
+      { type: "image", path: "/media/instagram/2024-12-23-DB9wVRshHUn/techtankto_DB9wVRshHUn_3494161454251406631.webp" }
     ]
   },
   "2024-12-26-DEDf3AaPGe": {
@@ -957,7 +957,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17887632048173141,
     createdAtRaw: 1735244584,
     media: [
-      { type: "image", path: "/media/instagram/2024-12-26-DEDf3AaPGe/techtankto_DEDf3AaPGe__3531806652241831871.jpg" }
+      { type: "image", path: "/media/instagram/2024-12-26-DEDf3AaPGe/techtankto_DEDf3AaPGe__3531806652241831871.webp" }
     ]
   },
   "2025-01-07-DENIAWK8UN": {
@@ -967,15 +967,15 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18481010545036535,
     createdAtRaw: 1736215412,
     media: [
-      { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516452376409887.png" },
-      { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516452527193863.png" },
-      { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516452904840660.png" },
-      { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516452921680009.png" },
-      { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516453198320746.png" },
-      { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516453240450445.png" },
-      { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516453458326852.png" },
-      { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516454230119498.png" },
-      { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516454683071781.png" }
+      { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516452376409887.webp" },
+      { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516452527193863.webp" },
+      { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516452904840660.webp" },
+      { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516452921680009.webp" },
+      { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516453198320746.webp" },
+      { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516453240450445.webp" },
+      { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516453458326852.webp" },
+      { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516454230119498.webp" },
+      { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516454683071781.webp" }
     ]
   },
   "2025-01-18-DE8BI1uv0kd": {
@@ -985,7 +985,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18049147364275153,
     createdAtRaw: 1737185500,
     media: [
-      { type: "image", path: "/media/instagram/2025-01-18-DE8BI1uv0kd/techtankto_DE8BI1uv0kd_3547715611956037917.jpg" }
+      { type: "image", path: "/media/instagram/2025-01-18-DE8BI1uv0kd/techtankto_DE8BI1uv0kd_3547715611956037917.webp" }
     ]
   },
   "2025-01-20-DFD0RpYPyQX": {
@@ -995,7 +995,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17995310519753688,
     createdAtRaw: 1737402586,
     media: [
-      { type: "image", path: "/media/instagram/2025-01-20-DFD0RpYPyQX/techtankto_DFD0RpYPyQX_3549910842377970711.jpg" }
+      { type: "image", path: "/media/instagram/2025-01-20-DFD0RpYPyQX/techtankto_DFD0RpYPyQX_3549910842377970711.webp" }
     ]
   },
   "2025-02-25-DGdU8GHOON": {
@@ -1005,7 +1005,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17945902205958214,
     createdAtRaw: 1740513755,
     media: [
-      { type: "image", path: "/media/instagram/2025-02-25-DGdU8GHOON/techtankto_DGdU8GHOON__3575105769864487807.jpg" }
+      { type: "image", path: "/media/instagram/2025-02-25-DGdU8GHOON/techtankto_DGdU8GHOON__3575105769864487807.webp" }
     ]
   },
   "2025-02-26-DGjOLKRNswM": {
@@ -1016,10 +1016,10 @@ export const instagramPosts: Record<string, InstagramPost> = {
     createdAtRaw: 1740610320,
     featured: true,
     media: [
-      { type: "image", path: "/media/instagram/2025-02-26-DGjOLKRNswM/techtankto_DGjOLKRNswM_3576764798978118741.png" },
+      { type: "image", path: "/media/instagram/2025-02-26-DGjOLKRNswM/techtankto_DGjOLKRNswM_3576764798978118741.webp" },
       { type: "video", path: "/media/instagram/2025-02-26-DGjOLKRNswM/techtankto_DGjOLKRNswM_3576764799414295229.mp4" },
-      { type: "image", path: "/media/instagram/2025-02-26-DGjOLKRNswM/techtankto_DGjOLKRNswM_3576764799640753678.png" },
-      { type: "image", path: "/media/instagram/2025-02-26-DGjOLKRNswM/techtankto_DGjOLKRNswM_3576764799993081935.png" }
+      { type: "image", path: "/media/instagram/2025-02-26-DGjOLKRNswM/techtankto_DGjOLKRNswM_3576764799640753678.webp" },
+      { type: "image", path: "/media/instagram/2025-02-26-DGjOLKRNswM/techtankto_DGjOLKRNswM_3576764799993081935.webp" }
     ]
   },
   "2025-03-04-DGyMGxmtIPs": {
@@ -1029,7 +1029,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17879445951167023,
     createdAtRaw: 1741105804,
     media: [
-      { type: "image", path: "/media/instagram/2025-03-04-DGyMGxmtIPs/techtankto_DGyMGxmtIPs_3580977895850673132.jpg" }
+      { type: "image", path: "/media/instagram/2025-03-04-DGyMGxmtIPs/techtankto_DGyMGxmtIPs_3580977895850673132.webp" }
     ]
   },
   "2025-03-08-DG8Yis9u3z9": {
@@ -1039,16 +1039,16 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18079707307639243,
     createdAtRaw: 1741448146,
     media: [
-      { type: "image", path: "/media/instagram/2025-03-08-DG8Yis9u3z9/techtankto_DG8Yis9u3z9_3583847341338885373.jpg" }
+      { type: "image", path: "/media/instagram/2025-03-08-DG8Yis9u3z9/techtankto_DG8Yis9u3z9_3583847341338885373.webp" }
     ]
   },
   "2025-03-17-DHTZOe2BpUC": {
     caption: "🍀 Happy St. Patrick’s Day! Lá Fhéile Pádraig (pronounced: Law-Feh-leh Paw-drig) 🍀\nToday, we’re celebrating Irish contributions to the tech world!\nFrom pioneering programmers to innovators transforming industries, the Irish have shaped the way we use technology.\nHonouring these remarkable individuals who’ve helped build the digital world we live in today.\n👩‍💻 Kay McNulty (Kathleen Rita Antonelli) – Trailblazer in programming\n💳 Patrick & John Collison – Founders of Stripe\n📚 Tim O'Reilly – Tech visionary, writer and educator\nIn Gaelic, “Sláinte mhath” means “Good Health,” and is a traditional way to say \"Cheers!\" to celebrate success and good fortune. 🍻  Sláinte mhath! Here's to the legacy of innovation and the power of tech to connect us all.   #StPatricksDay #IrishTech #TechInnovators #WomenInTech #Entrepreneurship #OReillyMedia #Stripe #TechPioneers #TechTank #TechTankTo #TechTankToronto #TechTanker #TechTankers  -------- Meta: date(YYYY-MM-DD): 2025-03-17 shortcode: DHTZOe2BpUC pk: 18002597894740092 created_at_raw: 1742220028 ",
     media: [
-      { type: "image", path: "/media/instagram/2025-03-17-DHTZOe2BpUC/techtankto_DHTZOe2BpUC_3590324259987485450.png" },
-      { type: "image", path: "/media/instagram/2025-03-17-DHTZOe2BpUC/techtankto_DHTZOe2BpUC_3590324260381870175.png" },
-      { type: "image", path: "/media/instagram/2025-03-17-DHTZOe2BpUC/techtankto_DHTZOe2BpUC_3590324260465752644.png" },
-      { type: "image", path: "/media/instagram/2025-03-17-DHTZOe2BpUC/techtankto_DHTZOe2BpUC_3590324260666949343.png" }
+      { type: "image", path: "/media/instagram/2025-03-17-DHTZOe2BpUC/techtankto_DHTZOe2BpUC_3590324259987485450.webp" },
+      { type: "image", path: "/media/instagram/2025-03-17-DHTZOe2BpUC/techtankto_DHTZOe2BpUC_3590324260381870175.webp" },
+      { type: "image", path: "/media/instagram/2025-03-17-DHTZOe2BpUC/techtankto_DHTZOe2BpUC_3590324260465752644.webp" },
+      { type: "image", path: "/media/instagram/2025-03-17-DHTZOe2BpUC/techtankto_DHTZOe2BpUC_3590324260666949343.webp" }
     ]
   },
   "2025-03-28-DHtTcVTvIo6": {
@@ -1058,7 +1058,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18085231534720582,
     createdAtRaw: 1743160498,
     media: [
-      { type: "image", path: "/media/instagram/2025-03-28-DHtTcVTvIo6/techtankto_DHtTcVTvIo6_3597617187247655482.jpg" }
+      { type: "image", path: "/media/instagram/2025-03-28-DHtTcVTvIo6/techtankto_DHtTcVTvIo6_3597617187247655482.webp" }
     ]
   },
   "2025-03-31-DH3khozuwa5": {
@@ -1068,7 +1068,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18085714615528530,
     createdAtRaw: 1743433942,
     media: [
-      { type: "image", path: "/media/instagram/2025-03-31-DH3khozuwa5/techtankto_DH3khozuwa5_3600507068340700857.jpg" }
+      { type: "image", path: "/media/instagram/2025-03-31-DH3khozuwa5/techtankto_DH3khozuwa5_3600507068340700857.webp" }
     ]
   },
   "2025-04-03-DHURGPAs": {
@@ -1078,7 +1078,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18068943919733727,
     createdAtRaw: 1743694207,
     media: [
-      { type: "image", path: "/media/instagram/2025-04-03-DHURGPAs/techtankto_DH_U_RGPAs-_3602690535535151934.jpg" }
+      { type: "image", path: "/media/instagram/2025-04-03-DHURGPAs/techtankto_DH_U_RGPAs-_3602690535535151934.webp" }
     ]
   },
   "2025-04-07-DIJXS15O4OQ": {
@@ -1088,7 +1088,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17927211408024185,
     createdAtRaw: 1744031204,
     media: [
-      { type: "image", path: "/media/instagram/2025-04-07-DIJXS15O4OQ/techtankto_DIJXS15O4OQ_3605515426575647632.jpg" }
+      { type: "image", path: "/media/instagram/2025-04-07-DIJXS15O4OQ/techtankto_DIJXS15O4OQ_3605515426575647632.webp" }
     ]
   },
   "2025-04-12-DIVH5KgtCqS": {
@@ -1098,7 +1098,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 18090105820586520,
     createdAtRaw: 1744425834,
     media: [
-      { type: "image", path: "/media/instagram/2025-04-12-DIVH5KgtCqS/techtankto_DIVH5KgtCqS_3608825391029168786.jpg" }
+      { type: "image", path: "/media/instagram/2025-04-12-DIVH5KgtCqS/techtankto_DIVH5KgtCqS_3608825391029168786.webp" }
     ]
   },
   "2025-04-23-DIy88Ogx6": {
@@ -1108,7 +1108,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17973027536842059,
     createdAtRaw: 1745426565,
     media: [
-      { type: "image", path: "/media/instagram/2025-04-23-DIy88Ogx6/techtankto_DIy88_-Ogx6_3617221525380926586.jpg" }
+      { type: "image", path: "/media/instagram/2025-04-23-DIy88Ogx6/techtankto_DIy88_-Ogx6_3617221525380926586.webp" }
     ]
   },
   "2025-04-24-DI1cmTyu5kg": {
@@ -1120,8 +1120,8 @@ export const instagramPosts: Record<string, InstagramPost> = {
     featured: true,
     media: [
       { type: "video", path: "/media/instagram/2025-04-24-DI1cmTyu5kg/techtankto_3617221525380926586.mp4" },
-      { type: "image", path: "/media/instagram/2025-04-24-DI1cmTyu5kg/techtankto_DI1cmTyu5kg_3617923646778680573.jpg" },
-      { type: "image", path: "/media/instagram/2025-04-24-DI1cmTyu5kg/techtankto_DI1cmTyu5kg_3617923646795404540.jpg" }
+      { type: "image", path: "/media/instagram/2025-04-24-DI1cmTyu5kg/techtankto_DI1cmTyu5kg_3617923646778680573.webp" },
+      { type: "image", path: "/media/instagram/2025-04-24-DI1cmTyu5kg/techtankto_DI1cmTyu5kg_3617923646795404540.webp" }
     ]
   },
   "2025-06-02-DKaPVrgPuE0": {
@@ -1131,7 +1131,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17942434472881101,
     createdAtRaw: 1748892436,
     media: [
-      { type: "image", path: "/media/instagram/2025-06-02-DKaPVrgPuE0/techtankto_DKaPVrgPuE0_3646294308828406068.jpg" }
+      { type: "image", path: "/media/instagram/2025-06-02-DKaPVrgPuE0/techtankto_DKaPVrgPuE0_3646294308828406068.webp" }
     ]
   },
   "2025-06-10-DKuVT7DuHIx": {
@@ -1141,7 +1141,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17879665506225189,
     createdAtRaw: 1749566397,
     media: [
-      { type: "image", path: "/media/instagram/2025-06-10-DKuVT7DuHIx/techtankto_DKuVT7DuHIx_3651950075904029233.jpg" }
+      { type: "image", path: "/media/instagram/2025-06-10-DKuVT7DuHIx/techtankto_DKuVT7DuHIx_3651950075904029233.webp" }
     ]
   },
   "2025-07-07-DLz4I7KOww6": {
@@ -1153,7 +1153,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     featured: true,
     media: [
       { type: "video", path: "/media/instagram/2025-07-07-DLz4I7KOww6/techtankto_3671525025119931450.mp4" },
-      { type: "image", path: "/media/instagram/2025-07-07-DLz4I7KOww6/techtankto_DLz4I7KOww6_3671525025119931450.jpg" }
+      { type: "image", path: "/media/instagram/2025-07-07-DLz4I7KOww6/techtankto_DLz4I7KOww6_3671525025119931450.webp" }
     ]
   },
   "2025-08-12-DNRVwWtPwky": {
@@ -1165,7 +1165,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     featured: true,
     media: [
       { type: "video", path: "/media/instagram/2025-08-12-DNRVwWtPwky/dj.see.a_3697832450940930354.mp4" },
-      { type: "image", path: "/media/instagram/2025-08-12-DNRVwWtPwky/techtankto_DNRVwWtPwky_3697832450940930354.jpg" }
+      { type: "image", path: "/media/instagram/2025-08-12-DNRVwWtPwky/techtankto_DNRVwWtPwky_3697832450940930354.webp" }
     ]
   },
   "2025-08-20-DNmHtVwNshY": {
@@ -1177,7 +1177,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     featured: true,
     media: [
       { type: "video", path: "/media/instagram/2025-08-20-DNmHtVwNshY/techtankto_3703681645618317400.mp4" },
-      { type: "image", path: "/media/instagram/2025-08-20-DNmHtVwNshY/techtankto_DNmHtVwNshY_3703681645618317400.jpg" }
+      { type: "image", path: "/media/instagram/2025-08-20-DNmHtVwNshY/techtankto_DNmHtVwNshY_3703681645618317400.webp" }
     ]
   },
   "2026-02-05-DUY9ewPgSol": {
@@ -1187,7 +1187,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     pk: 17936958942175039,
     createdAtRaw: 1770324232,
     media: [
-      { type: "image", path: "/media/instagram/2026-02-05-DUY9ewPgSol/techtankto_DUY9ewPgSol_3826078277672446501.jpg" }
+      { type: "image", path: "/media/instagram/2026-02-05-DUY9ewPgSol/techtankto_DUY9ewPgSol_3826078277672446501.webp" }
     ]
   },
   "2026-04-10-DW9vcgiPHx": {
@@ -1199,7 +1199,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     featured: true,
     media: [
       { type: "video", path: "/media/instagram/2026-04-10-DW9vcgiPHx/techtankto_3872527193918206449.mp4" },
-      { type: "image", path: "/media/instagram/2026-04-10-DW9vcgiPHx/techtankto_DW9-vcgiPHx_3872527193918206449.jpg" }
+      { type: "image", path: "/media/instagram/2026-04-10-DW9vcgiPHx/techtankto_DW9-vcgiPHx_3872527193918206449.webp" }
     ]
   },
 };
