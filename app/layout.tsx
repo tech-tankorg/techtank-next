@@ -58,6 +58,10 @@ export async function generateMetadata(): Promise<Metadata> {
       index: true,
       follow: true,
     },
+    appleWebApp: {
+      title: "TechTank TO",
+      statusBarStyle: "default",
+    },
   };
 }
 
