@@ -24,7 +24,7 @@ export const socialLinks: Record<string, SocialLink> = {
   slack: {
     id: "slack",
     name: "Slack",
-    url: "https://join.slack.com/t/thetechtank/shared_invite/zt-2oou5qbue-LXNB4M7~C_6CBAImj1kpJA",
+    url: "/slack",
     type: "secondary",
     category: "social",
   },
