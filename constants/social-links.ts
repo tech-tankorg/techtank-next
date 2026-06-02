@@ -24,7 +24,7 @@ export const socialLinks: Record<string, SocialLink> = {
   slack: {
     id: "slack",
     name: "Slack",
-    url: "/slack",
+    url: "/links/slack",
     type: "secondary",
     category: "social",
   },

@@ -36,7 +36,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: '/slack',
+        source: '/links/slack',
         destination: 'https://join.slack.com/t/thetechtank/shared_invite/zt-3zhdtiavp-afxTnTcQdXEdfx~0mjXGtA',
         permanent: false,
       },

@@ -12,7 +12,7 @@ export function ContactCard({
 }: ContactCardProps) {
   const [copied, setCopied] = useState(false);
   const email = "techtankto@gmail.com";
-  const slackUrl = "/slack";
+  const slackUrl = "/links/slack";
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(email);
