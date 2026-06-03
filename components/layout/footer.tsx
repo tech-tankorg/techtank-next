@@ -8,7 +8,7 @@ const footerLinks = {
     links: [
       { name: "Luma", href: "https://luma.com/techtank", external: true },
       { name: "Meetup", href: "https://meetup.com/techtank-to", external: true },
-      { name: "Slack", href: "https://join.slack.com/t/thetechtank/shared_invite/zt-2oou5qbue-LXNB4M7~C_6CBAImj1kpJA", external: true },
+      { name: "Slack", href: "/links/slack", external: true },
       { name: "LinkedIn", href: "https://linkedin.com/company/techtank-to", external: true },
       { name: "Instagram", href: "https://instagram.com/techtankto", external: true },
       { name: "GitHub", href: "https://github.com/tech-tankorg", external: true },

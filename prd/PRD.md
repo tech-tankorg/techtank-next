@@ -154,7 +154,7 @@ under Ontario/Canadian jurisdiction.
 
 - Luma: https://luma.com/techtank
 - Meetup: https://meetup.com/techtank-to
-- Slack: https://join.slack.com/t/thetechtank/shared_invite/zt-2oou5qbue-LXNB4M7~C_6CBAImj1kpJA
+- Slack: https://techtankto.com/links/slack
 - LinkedIn: https://linkedin.com/company/techtank-to
 - Instagram: https://instagram.com/techtankto
 - YouTube: https://youtube.com/@TechTankTo
