@@ -12,7 +12,7 @@ export default function TermsOfServicePage() {
     <div className="bg-card rounded-2xl border border-border p-6 lg:p-10">
       {/* Header */}
       <div className="mb-8 pb-8 border-b border-border">
-        <p className="text-sm text-muted-foreground mb-2">Last updated: April 18, 2026</p>
+        <p className="text-sm text-muted-foreground mb-2">Last updated: June 5, 2026</p>
         <h1 className="font-display text-3xl lg:text-4xl font-semibold text-foreground">
           Terms of Service
         </h1>
@@ -25,16 +25,27 @@ export default function TermsOfServicePage() {
             1. Acceptance of Terms
           </h2>
           <p className="text-muted-foreground">
-            By accessing and using the TechTank TO website (techtankto.com) or
-            attending TechTank events, you agree to be bound by these Terms of
-            Service. &quot;TechTank TO&quot; refers to the volunteer-run community
-            operating the website and organizing events.
+            These terms apply to anyone who uses the TechTank TO website
+            (techtankto.com), registers for or attends TechTank events, or
+            participates in TechTank community spaces (including Slack or
+            similar). By doing any of the above, you agree to be bound by
+            these Terms of Service. &quot;TechTank TO&quot; refers to the
+            volunteer-run community operating the website and organizing events.
           </p>
         </section>
 
         <section>
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
-            2. Website Use
+            2. What We Ask of You
+          </h2>
+          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+            <li>Respect the <Link href="/legal/code-of-conduct" className="text-ring hover:underline">Code of Conduct</Link> in all community spaces</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="font-display text-xl font-semibold text-foreground mb-4">
+            3. Website Use
           </h2>
           <p className="text-muted-foreground mb-4">
             The TechTank TO website is provided for informational and community
@@ -55,7 +66,7 @@ export default function TermsOfServicePage() {
 
         <section>
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
-            3. External Platforms
+            4. External Platforms
           </h2>
           <p className="text-muted-foreground">
             TechTank uses third-party platforms for event registration (Luma, Meetup),
@@ -68,10 +79,10 @@ export default function TermsOfServicePage() {
 
         <section>
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
-            4. Events
+            5. Events
           </h2>
           <p className="text-muted-foreground mb-4">
-            Participation at TechTank in-person events implies agreement with
+            Participation at TechTank events (virtual or in-person) implies agreement with
             our{" "}
             <Link
               href="/legal/code-of-conduct"
@@ -82,25 +93,42 @@ export default function TermsOfServicePage() {
             . All attendees, speakers, hosts, sponsors, and volunteers are
             expected to follow these guidelines.
           </p>
+          <p className="text-muted-foreground mb-4">
+            Registration for events does not guarantee attendance if capacity
+            is exceeded. TechTank reserves the right to cancel or reschedule
+            events. Refund policies for paid events will be stated at the time
+            of registration.
+          </p>
           <p className="text-muted-foreground">
-            <strong>Photography and Recording:</strong> TechTank events may be
-            photographed and recorded. Attendees may appear in photos or
-            recordings that are published on TechTank channels. If you prefer
-            not to be photographed, please inform an organizer at the event.
+            <strong>Photography and Recording:</strong> By participating in or
+            attending a TechTank event, you grant TechTank and its
+            representatives the right to take photographs, videos, and other
+            media of you, and to use and publish them in print and/or
+            electronically for any lawful purpose, including publicity,
+            illustration, advertising, social media, and web content. You
+            release TechTank, its volunteers, and all persons acting under its
+            permission or authority from any liability related to such use, and
+            acknowledge that you will not receive compensation and waive any
+            right to inspect or approve the finished product. If you prefer not
+            to be photographed, please inform an organizer at the event.
+            Attendees may not record, photograph, or distribute event content
+            without permission from the relevant parties.
           </p>
         </section>
 
         <section>
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
-            5. Intellectual Property
+            6. Intellectual Property
           </h2>
           <p className="text-muted-foreground mb-4">
             TechTank branding, logos, and website content are property of
-            TechTank TO. Usage is governed by the{" "}
-            <Link href="/resources/media-kit" className="text-ring hover:underline">
-              Media Kit terms
-            </Link>
-            .
+            TechTank TO.
+          </p>
+          <p className="text-muted-foreground mb-4">
+            Content shared at TechTank events — including talks, presentations,
+            and workshop materials — belongs to its creators. Do not record,
+            reproduce, or distribute such content without permission from the
+            creator.
           </p>
           <p className="text-muted-foreground">
             User-submitted content (talk proposals, intake form submissions)
@@ -112,7 +140,7 @@ export default function TermsOfServicePage() {
 
         <section>
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
-            6. Disclaimers
+            7. Disclaimers
           </h2>
           <p className="text-muted-foreground">
             Information on this website is provided &quot;as is&quot; without warranty.
@@ -124,7 +152,7 @@ export default function TermsOfServicePage() {
 
         <section>
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
-            7. Limitation of Liability
+            8. Limitation of Liability
           </h2>
           <p className="text-muted-foreground">
             TechTank TO and its organizers shall not be liable for any direct,
@@ -136,7 +164,7 @@ export default function TermsOfServicePage() {
 
         <section>
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
-            8. Indemnification
+            9. Indemnification
           </h2>
           <p className="text-muted-foreground">
             You agree to indemnify and hold harmless TechTank TO and its
@@ -148,7 +176,7 @@ export default function TermsOfServicePage() {
 
         <section>
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
-            9. Changes to Terms
+            10. Changes to Terms
           </h2>
           <p className="text-muted-foreground">
             TechTank may update these Terms of Service at any time. Material
@@ -160,17 +188,18 @@ export default function TermsOfServicePage() {
 
         <section>
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
-            10. Governing Law
+            11. Governing Law
           </h2>
           <p className="text-muted-foreground">
-            These Terms of Service are governed by and construed in accordance
-            with the laws of the Province of Ontario, Canada.
+            These Terms of Service are governed by the laws of the Province of
+            Ontario, Canada, and are subject to the exclusive jurisdiction of
+            courts within Toronto, Ontario, Canada.
           </p>
         </section>
 
         <section>
           <h2 className="font-display text-xl font-semibold text-foreground mb-4">
-            11. Contact
+            12. Contact
           </h2>
           <p className="text-muted-foreground">
             For questions about these Terms of Service, please contact us at{" "}

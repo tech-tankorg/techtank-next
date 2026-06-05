@@ -105,6 +105,7 @@ export default function CodeOfConductPage() {
                 <li>Respect physical and digital boundaries</li>
                 <li>Ask before recording or photographing anyone</li>
                 <li>Respect delays in responses</li>
+                <li>Represent yourself honestly when registering for events</li>
               </ul>
             </div>
 
