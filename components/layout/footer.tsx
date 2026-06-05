@@ -20,6 +20,7 @@ const footerLinks = {
     links: [
       { name: "TechTank", href: "/about", external: false },
       { name: "Team", href: "/about/team", external: false },
+      { name: "FAQ", href: "/about/faq", external: false },
     ],
   },
   getInvolved: {

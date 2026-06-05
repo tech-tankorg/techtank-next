@@ -126,6 +126,7 @@ under Ontario/Canadian jurisdiction.
 | `/events` | Events | Upcoming events via Luma calendar |
 | `/resources/media-kit` | Media Kit | Brand assets, logos, and fast facts for press and partners |
 | `/resources/design-system` | Design System | Brand guidelines — colours, typography, and component reference |
+| `/about/faq` | FAQ | Frequently asked questions about membership, events, sponsorship, and policies |
 | `/legal/terms-of-service` | Terms of Service | — |
 | `/legal/privacy-policy` | Privacy Policy | — |
 | `/legal/code-of-conduct` | Code of Conduct | — |
