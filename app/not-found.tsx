@@ -163,7 +163,7 @@ export default function NotFound() {
 
   return (
     <main
-      className={` bg-background relative min-h-dvh`}
+      className={`relative min-h-dvh`}
     >
       {/* Canvas */}
       <canvas ref={canvasRef} className="absolute inset-0 z-0" />
@@ -190,7 +190,7 @@ export default function NotFound() {
         <PreviousButton />
       </div>
 
-     
+
     </main>
   );
 }
