@@ -119,7 +119,7 @@ under Ontario/Canadian jurisdiction.
 | `/` | Home | Social-proof-driven overview and primary CTAs |
 | `/about` | About | Values & community manifesto (the four pillars) |
 | `/get-involved` | Get Involved | Onboarding hub; routes visitors to a role |
-| `/get-involved/speaker` | Speak | Speaker logistics + intake action (email us) |
+| `/get-involved/speak-or-facilitate` | Speak or Facilitate | Speaker logistics + intake action (email us) |
 | `/get-involved/host` | Host | Venue logistics (40–100 cap, 6–8:30pm) + intake action (email us) |
 | `/get-involved/sponsor` | Sponsor | Corporate partner pitch + intake action (email us) |
 | `/get-involved/organizer` | Organizer Team | Crew onboarding + intake action (email us) |
@@ -133,7 +133,7 @@ under Ontario/Canadian jurisdiction.
 ### 2.2 Shared layouts (Next.js)
 
 - **Root layout** — global header, footer, theme, SEO defaults.
-- **`/get-involved` layout** — sticky sub-nav (Speaker / Host / Sponsor /
+- **`/get-involved` layout** — sticky sub-nav (Speak or Facilitate / Host / Sponsor /
   Organizer Team), persistent "Join our Slack" CTA, shared "Why get involved"
   strip, consistent intake CTA styling (email us).
 - **`/legal` layout** — document-style narrow column, table of contents
@@ -168,7 +168,7 @@ under Ontario/Canadian jurisdiction.
 
 1. **Curious newcomer** → `/` (sees event photos, testimonials, logo
    cloud) → `/about` (values) → `/events` (RSVPs on Luma) → joins Slack.
-2. **Aspiring speaker** → `/` → `/get-involved/speaker` → emails
+2. **Aspiring speaker** → `/` → `/get-involved/speak-or-facilitate` → emails
    `techtankto@gmail.com` with their talk proposal.
 3. **Company host** → `/` or `/get-involved` → `/get-involved/host` →
    submits intake → receives sponsorship package via email.
@@ -191,7 +191,7 @@ relative to this file, `prd/PRD.md`):
 - [pages/about.md](pages/about.md)
 - [pages/events.md](pages/events.md)
 - [pages/get-involved/index.md](pages/get-involved/index.md)
-- [pages/get-involved/speaker.md](pages/get-involved/speaker.md)
+- [pages/get-involved/speak-or-facilitate.md](pages/get-involved/speak-or-facilitate.md)
 - [pages/get-involved/host.md](pages/get-involved/host.md)
 - [pages/get-involved/sponsor.md](pages/get-involved/sponsor.md)
 - [pages/get-involved/organizer.md](pages/get-involved/organizer.md)
@@ -324,7 +324,7 @@ and is explicitly out of scope for the initial launch.
 - Newsletter / Slack invite capture block in footer.
 - Google Photos album preview cards (Home and event detail).
 - Branded slide deck template (Google Slides / PPTX) linked from
-  `/get-involved/speaker` and `/resources/media-kit`.
+  `/get-involved/speak-or-facilitate` and `/resources/media-kit`.
 - Speaker run-of-show and host checklist (linked PDFs).
 - Per-event recap surface: Google Photos album + YouTube recording +
   host/sponsor acknowledgment, reached via "View Recap" from the
@@ -390,7 +390,7 @@ and is explicitly out of scope for the initial launch.
 ## 9. Event Support (Organizer Tooling)
 
 Not user-facing pages, but assets produced and surfaced via `/resources/media-kit`
-and `/get-involved/speaker`:
+and `/get-involved/speak-or-facilitate`:
 
 - Branded Google Slides / Keynote / PPTX templates (speaker + title card)
 - Host checklist PDF (AV, food, timing)

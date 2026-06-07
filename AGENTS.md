@@ -36,7 +36,7 @@ For developer-facing setup (scripts, directory tree, route map), see
         ├── press-kit.md           # /press-kit
         ├── get-involved/          # Onboarding hub (shared layout)
         │   ├── index.md           # /get-involved
-        │   ├── speaker.md         # /get-involved/speaker
+        │   ├── speak-or-facilitate.md         # /get-involved/speak-or-facilitate
         │   ├── host.md            # /get-involved/host
         │   ├── sponsor.md         # /get-involved/sponsor
         │   └── organizer.md       # /get-involved/organizer

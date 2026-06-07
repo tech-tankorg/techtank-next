@@ -54,7 +54,7 @@ route, annotated with its purpose.
 │   ├── about/                      # /about               Values & community manifesto
 │   ├── events/                     # /events              Upcoming (Luma) + past event timeline
 │   ├── get-involved/               # /get-involved        Onboarding hub (shared layout)
-│   │   ├── speaker/                #   /speaker           Speaker intake
+│   │   ├── speak-or-facilitate/    #   /speak-or-facilitate  Speaker/facilitator intake
 │   │   ├── host/                   #   /host              Host intake
 │   │   ├── sponsor/                #   /sponsor           Sponsor intake
 │   │   └── organizer/              #   /organizer         Organizer intake

@@ -1,8 +1,8 @@
-# Speaker — `/get-involved/speaker`
+# Speak or Facilitate — `/get-involved/speak-or-facilitate`
 
-**URL:** https://www.techtankto.com/get-involved/speaker
-**Page title:** Speak at TechTank — TechTank TO
-**Role:** Convince qualified technologists to speak at a TechTank event
+**URL:** https://www.techtankto.com/get-involved/speak-or-facilitate
+**Page title:** Speak or Facilitate — TechTank TO
+**Role:** Convince qualified technologists to speak or facilitate at a TechTank event
 and capture their intake.
 
 ---

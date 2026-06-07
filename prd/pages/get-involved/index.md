@@ -29,7 +29,7 @@ intake.
 
 ## 4. Shared layout (Next.js)
 
-- Sticky sub-nav: **Overview / Speaker / Host / Sponsor / Organizer Team**.
+- Sticky sub-nav: **Overview / Speak or Facilitate / Host / Sponsor / Organizer Team**.
   - On mobile, renders as a segmented control.
 - Persistent "Join our Slack" CTA in the header or side rail.
 - Shared "Why get involved" strip rendered under the sub-nav on every
@@ -56,7 +56,7 @@ intake.
      - Three checkmark bullets of what you get / what's required
      - Primary CTA linking into the sub-page
    - Card content:
-     - **Speak** → `/get-involved/speaker`
+     - **Speak or Facilitate** → `/get-involved/speak-or-facilitate`
        - Overline: `SHARE WHAT YOU KNOW`
        - Checkmarks: 30–45 min talk + Q&A · Any tech topic · Recorded
          and published to YouTube

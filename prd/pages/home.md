@@ -73,7 +73,7 @@ professional and credible.
    - Sub-headline: "Every TechTank event runs on the time of
      community members like you."
    - Four role cards sharing one shape (see PRD §5.7):
-     - **Speak** — `Share what you know` → `/get-involved/speaker`
+     - **Speak or Facilitate** — `Share what you know` → `/get-involved/speak-or-facilitate`
      - **Host** — `Bring us to your space` → `/get-involved/host`
      - **Sponsor** — `Support the community` → `/get-involved/sponsor`
      - **Organizer Team** — `Help run the crew` → `/get-involved/organizer`
