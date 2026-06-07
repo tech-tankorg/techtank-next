@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 
 const resourcesNav = [
   { name: "Media Kit", href: "/resources/media-kit" },
+  { name: "Design System", href: "/resources/design-system" },
 ];
 
 export default function ResourcesLayout({
