@@ -331,7 +331,7 @@ export default function AboutPage() {
                   <h3 className="font-display text-lg font-semibold text-foreground">
                     {p.title}
                   </h3>
-                  <span className="rounded-full bg-warning/20 text-warning-foreground px-2 py-0.5 text-xs font-medium">
+                  <span className="rounded-full bg-warning/40 dark:bg-warning/60 text-warning-foreground px-2 py-0.5 text-xs font-medium">
                     {p.label}
                   </span>
                 </div>
