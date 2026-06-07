@@ -25,7 +25,7 @@ professional and credible.
 
 - First-time visitors evaluating the community
 - Toronto-based tech professionals at all career levels
-- Potential speakers, hosts, sponsors, volunteers sizing us up
+- Potential speakers, hosts, sponsors, organizers sizing us up
 
 ## 3. Key messages
 
@@ -73,10 +73,10 @@ professional and credible.
    - Sub-headline: "Every TechTank event runs on the time of
      community members like you."
    - Four role cards sharing one shape (see PRD §5.7):
-     - **Speak** — `Share what you know` → `/get-involved/speaker`
+     - **Speak or Facilitate** — `Share what you know` → `/get-involved/speak-or-facilitate`
      - **Host** — `Bring us to your space` → `/get-involved/host`
      - **Sponsor** — `Support the community` → `/get-involved/sponsor`
-     - **Volunteer** — `Help run the crew` → `/get-involved/volunteer`
+     - **Organizer Team** — `Help run the crew` → `/get-involved/organizer`
    - Each card: icon → overline → headline → one-paragraph pitch →
      three checkmark bullets of what the contributor gets.
 

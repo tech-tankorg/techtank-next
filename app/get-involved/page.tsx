@@ -68,9 +68,9 @@ export default function GetInvolvedPage() {
               Let&apos;s build TechTank together
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              TechTank runs on the Toronto tech community — speakers, hosts,
-              sponsors, and volunteers who show up every month. Pick the role
-              that fits you right now.
+              TechTank runs because of people who show up and help make things
+              happen. There are a few ways to get involved depending on where
+              you&apos;re at and what you want to put in.
             </p>
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function GetInvolvedPage() {
           title="Choose your path"
           className="mb-12"
         />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {roleCardsData.map((role) => (
             <RoleCard key={role.role} {...role} />
           ))}

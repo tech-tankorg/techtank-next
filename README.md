@@ -3,7 +3,7 @@
 A Next.js (App Router) implementation of [techtankto.com](https://www.techtankto.com/),
 Toronto's volunteer-run tech community website. The redesign moves away from a
 flat "link-tree" layout toward a conversion-oriented onboarding hub that funnels
-visitors into specific roles — attendee, speaker, host, sponsor, or volunteer.
+visitors into specific roles — attendee, speaker, host, sponsor, or organizer.
 
 Specs live in [`prd/`](./prd/PRD.md); application code lives in [`app/`](./app).
 The initial UI scaffold was generated from the PRD via v0 —
@@ -54,10 +54,10 @@ route, annotated with its purpose.
 │   ├── about/                      # /about               Values & community manifesto
 │   ├── events/                     # /events              Upcoming (Luma) + past event timeline
 │   ├── get-involved/               # /get-involved        Onboarding hub (shared layout)
-│   │   ├── speaker/                #   /speaker           Speaker intake
+│   │   ├── speak-or-facilitate/    #   /speak-or-facilitate  Speaker/facilitator intake
 │   │   ├── host/                   #   /host              Host intake
 │   │   ├── sponsor/                #   /sponsor           Sponsor intake
-│   │   └── volunteer/              #   /volunteer         Volunteer intake
+│   │   └── organizer/              #   /organizer         Organizer intake
 │   ├── legal/                      # /legal               Legal documents (shared layout)
 │   │   ├── terms-of-service/       #   /terms-of-service
 │   │   ├── privacy-policy/         #   /privacy-policy

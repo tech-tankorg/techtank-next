@@ -1,7 +1,7 @@
-# Volunteer — `/get-involved/volunteer`
+# Organizer — `/get-involved/organizer`
 
-**URL:** https://www.techtankto.com/get-involved/volunteer
-**Page title:** Volunteer with TechTank — TechTank TO
+**URL:** https://techtankto.com/get-involved/organizer
+**Page title:** Organize with TechTank — TechTank TO
 **Role:** Onboard the crew that keeps TechTank running — organizers,
 event-day volunteers, content volunteers, community moderators.
 
@@ -60,7 +60,7 @@ roles available, and make signing up low-friction.
    - The gratitude of an entire tech community.
 
 6. **Current crew (optional)**
-   - Photos + first names of current volunteers as social proof.
+   - Photos + first names of current organizers as social proof.
 
 7. **Intake action (email us)**
    - Prominent `mailto:techtankto@gmail.com` CTA with a pre-filled

@@ -33,7 +33,7 @@ a narrow column, table of contents sidebar, and a last-updated stamp.
 
 2. **Data we collect directly**
    - Intake emails sent to `techtankto@gmail.com` (speaker, host,
-     sponsor, volunteer): name, email, optional profile links, and
+     sponsor, organizer): name, email, optional profile links, and
      role-specific info you choose to include (talk abstract, company,
      etc.).
    - Other contact emails you send to `techtankto@gmail.com`.

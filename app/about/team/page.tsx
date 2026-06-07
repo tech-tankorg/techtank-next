@@ -160,7 +160,7 @@ export default function TeamPage() {
               Toronto&apos;s tech community more inclusive and welcoming.
             </p>
             <Button variant="outline" size="lg" asChild>
-              <Link href="/get-involved/volunteer">Join the team</Link>
+              <Link href="/get-involved/organizer">Join the team</Link>
             </Button>
           </div>
         </div>
@@ -274,7 +274,7 @@ export default function TeamPage() {
             Toronto&apos;s most inclusive tech community.
           </p>
           <Button variant="primary" size="lg" asChild>
-            <Link href="/get-involved/volunteer">Volunteer with us</Link>
+            <Link href="/get-involved/organizer">Volunteer with us</Link>
           </Button>
         </div>
       </Section>
