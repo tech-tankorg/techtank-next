@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
     <div className="bg-card rounded-2xl border border-border p-6 lg:p-10">
       {/* Header */}
       <div className="mb-8 pb-8 border-b border-border">
-        <p className="text-sm text-muted-foreground mb-2">Last updated: April 18, 2026</p>
+        <p className="text-sm text-muted-foreground mb-2">Last updated: June 5, 2026</p>
         <h1 className="font-display text-3xl lg:text-4xl font-semibold text-foreground">
           Privacy Policy
         </h1>
@@ -43,6 +43,14 @@ export default function PrivacyPolicyPage() {
               <strong>Intake form submissions</strong> (via Google Forms): name,
               email, optional profile links, and role-specific information (talk
               abstract, company, venue details, etc.)
+            </li>
+            <li>
+              <strong>Event registration and attendance data</strong> collected
+              via Luma and Meetup
+            </li>
+            <li>
+              <strong>Optional demographic or background information</strong> you
+              choose to share when registering or filling out a form
             </li>
             <li>
               <strong>Contact emails</strong> you send to techtankto@gmail.com
@@ -113,10 +121,20 @@ export default function PrivacyPolicyPage() {
             6. How We Use Your Data
           </h2>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+            <li>Confirm your registration and send event updates</li>
             <li>Respond to intake form submissions and inquiries</li>
             <li>Coordinate events with speakers, hosts, and sponsors</li>
-            <li>Send event-related follow-ups when relevant</li>
-            <li>Improve the website and community programs</li>
+            <li>
+              Improve future programming based on who&apos;s attending and what&apos;s
+              working
+            </li>
+            <li>
+              Contact you about TechTank news, only if you&apos;ve opted in
+            </li>
+            <li>
+              Share with venue partners where required for building access,
+              capacity management, or emergency protocols
+            </li>
           </ul>
         </section>
 
@@ -125,12 +143,15 @@ export default function PrivacyPolicyPage() {
             7. Data Sharing
           </h2>
           <p className="text-muted-foreground mb-4">
-            TechTank does not sell personal data. Limited sharing may occur:
+            TechTank does not sell personal data. We do not share attendee
+            contact information or registration data with sponsors for marketing
+            or recruitment purposes. Limited sharing may occur:
           </p>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li>
-              <strong>Host companies:</strong> Event host companies may request
-              attendee lists for their hosted events
+              <strong>Venue partners:</strong> Attendee information may be
+              shared where required for building access, capacity management, or
+              emergency protocols
             </li>
             <li>
               <strong>Speaker/sponsor coordination:</strong> Your contact
@@ -145,10 +166,11 @@ export default function PrivacyPolicyPage() {
             8. Data Retention
           </h2>
           <p className="text-muted-foreground">
-            Intake form submissions are retained while the conversation is
-            active and for a reasonable archival period. Analytics data is
-            aggregated and retained per our analytics provider&apos;s policy. You
-            may request deletion of your data at any time.
+            Registration data is stored through Google Forms and associated
+            Google Workspace tools. Event data is managed through Luma and
+            Meetup. We retain data as long as it&apos;s relevant to community
+            operations. Analytics data is aggregated and retained per our
+            analytics provider&apos;s policy.
           </p>
         </section>
 
@@ -162,7 +184,10 @@ export default function PrivacyPolicyPage() {
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li>Request access to your personal data</li>
             <li>Request correction of inaccurate data</li>
-            <li>Request deletion of your data</li>
+            <li>
+              Request removal of your data from TechTank-managed records, where
+              technically feasible
+            </li>
           </ul>
           <p className="text-muted-foreground mt-4">
             To exercise these rights, email{" "}
@@ -173,7 +198,8 @@ export default function PrivacyPolicyPage() {
               techtankto@gmail.com
             </a>
             . These rights are available under PIPEDA (Canada) and, where
-            applicable, GDPR.
+            applicable, GDPR. For data held by third-party platforms like Luma
+            and Meetup, please refer to their respective privacy policies.
           </p>
         </section>
 
