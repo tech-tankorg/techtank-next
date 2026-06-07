@@ -31,23 +31,6 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     description:
       "Foster a supportive and inclusive environment where people of all skill levels can explore, create, and thrive in technology. Monthly in-person events in Toronto.",
-    // openGraph: {
-    //   title: "TechTank TO — Toronto's Tech Community",
-    //   description:
-    //     "Foster a supportive and inclusive environment where people of all skill levels can explore, create, and thrive in technology.",
-    //   url: host,
-    //   siteName: "TechTank TO",
-    //   images: [
-    //     {
-    //       url: "/images/logos/light.png",
-    //       width: 1200,
-    //       height: 630,
-    //       alt: "TechTank TO",
-    //     },
-    //   ],
-    //   locale: "en_CA",
-    //   type: "website",
-    // },
     twitter: {
       card: "summary_large_image",
       title: "TechTank TO — Toronto's Tech Community",
