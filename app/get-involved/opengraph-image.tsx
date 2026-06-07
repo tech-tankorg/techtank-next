@@ -7,7 +7,7 @@ export const contentType = "image/png";
 
 export default function OGImage() {
   return createOGImage({
-    title: "VOLUNTEERS",
+    title: "GET INVOLVED",
     imageAlt: alt,
   });
 }
