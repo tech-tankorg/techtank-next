@@ -15,7 +15,7 @@ TechTank TO (TechTank) is a volunteer-run, Toronto-based **Canadian** tech
 community founded in 2023. The redesign moves the site away from a flat "link-tree"
 layout toward a **conversion-oriented onboarding hub** that turns curious
 visitors into active contributors — attendees, speakers, hosts, sponsors,
-and volunteers.
+and organizers.
 
 The site remains content-driven marketing: it does not own accounts or
 ticketing. It funnels visitors to external platforms (Luma, Meetup, Slack,
@@ -84,7 +84,7 @@ under Ontario/Canadian jurisdiction.
 
 ### 1.6 Success metrics
 
-- Intake emails per role (speaker / host / sponsor / volunteer)
+- Intake emails per role (speaker / host / sponsor / organizer)
 - RSVP click-throughs to Luma
 - Press Kit downloads
 - Scroll depth and CTA click-through rate on `/` and `/about`
@@ -101,7 +101,7 @@ under Ontario/Canadian jurisdiction.
 │   ├── speaker
 │   ├── host
 │   ├── sponsor
-│   └── volunteer
+│   └── organizer
 ├── events                       (Luma calendar embed)
 ├── resources                    (grouped resource pages)
 │   ├── media-kit                (brand assets, logos, fast facts)
@@ -122,7 +122,7 @@ under Ontario/Canadian jurisdiction.
 | `/get-involved/speaker` | Speak | Speaker logistics + intake action (email us) |
 | `/get-involved/host` | Host | Venue logistics (40–100 cap, 6–8:30pm) + intake action (email us) |
 | `/get-involved/sponsor` | Sponsor | Corporate partner pitch + intake action (email us) |
-| `/get-involved/volunteer` | Volunteer | Crew onboarding + intake action (email us) |
+| `/get-involved/organizer` | Organizer Team | Crew onboarding + intake action (email us) |
 | `/events` | Events | Upcoming events via Luma calendar |
 | `/resources/media-kit` | Media Kit | Brand assets, logos, and fast facts for press and partners |
 | `/resources/design-system` | Design System | Brand guidelines — colours, typography, and component reference |
@@ -134,7 +134,7 @@ under Ontario/Canadian jurisdiction.
 
 - **Root layout** — global header, footer, theme, SEO defaults.
 - **`/get-involved` layout** — sticky sub-nav (Speaker / Host / Sponsor /
-  Volunteer), persistent "Join our Slack" CTA, shared "Why get involved"
+  Organizer Team), persistent "Join our Slack" CTA, shared "Why get involved"
   strip, consistent intake CTA styling (email us).
 - **`/legal` layout** — document-style narrow column, table of contents
   sidebar, last-updated stamp.
@@ -145,7 +145,7 @@ under Ontario/Canadian jurisdiction.
 - **Header CTA:** "Join our Slack" (secondary: "RSVP on Luma")
 - **Footer:**
   - Column 1 — Community: Luma, Meetup, Slack, LinkedIn, Instagram, GitHub, YouTube
-  - Column 2 — Get Involved: Speak, Host, Sponsor, Volunteer
+  - Column 2 — Get Involved: Speak, Host, Sponsor, Organizer Team
   - Column 3 — Resources: Press Kit, Events
   - Column 4 — Legal: Terms of Service, Privacy Policy, Code of Conduct
   - Contact: `techtankto@gmail.com` + Slack community link
@@ -174,7 +174,7 @@ under Ontario/Canadian jurisdiction.
    submits intake → receives sponsorship package via email.
 4. **Corporate sponsor** → `/resources/media-kit` or `/get-involved/sponsor` →
    downloads brand assets → submits sponsor intake.
-5. **Volunteer** → Slack invite or `/` → `/get-involved/volunteer` →
+5. **Organizer Team** → Slack invite or `/` → `/get-involved/organizer` →
    submits intake.
 6. **Journalist / partner** → `/resources/media-kit` → downloads logos + fast-facts
    → emails `techtankto@gmail.com`.
@@ -194,7 +194,7 @@ relative to this file, `prd/PRD.md`):
 - [pages/get-involved/speaker.md](pages/get-involved/speaker.md)
 - [pages/get-involved/host.md](pages/get-involved/host.md)
 - [pages/get-involved/sponsor.md](pages/get-involved/sponsor.md)
-- [pages/get-involved/volunteer.md](pages/get-involved/volunteer.md)
+- [pages/get-involved/organizer.md](pages/get-involved/organizer.md)
 - [pages/resources/media-kit.md](pages/resources/media-kit.md)
 - [pages/resources/design-system.md](pages/resources/design-system.md)
 - [pages/legal/terms-of-service.md](pages/legal/terms-of-service.md)
@@ -415,7 +415,7 @@ and `/get-involved/speaker`:
 
 - Do we keep a first-party blog, or continue relying on YouTube for
   long-form content?
-- Should `/get-involved/volunteer` gate behind Slack membership, or stay
+- Should `/get-involved/organizer` gate behind Slack membership, or stay
   open?
 - Is individual donation still a funded path, or fully replaced by
   corporate sponsorship?

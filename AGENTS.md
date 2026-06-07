@@ -39,7 +39,7 @@ For developer-facing setup (scripts, directory tree, route map), see
         │   ├── speaker.md         # /get-involved/speaker
         │   ├── host.md            # /get-involved/host
         │   ├── sponsor.md         # /get-involved/sponsor
-        │   └── volunteer.md       # /get-involved/volunteer
+        │   └── organizer.md       # /get-involved/organizer
         ├── resources/             # Resources folder
         │   ├── media-kit.md       # /resources/media-kit
         │   └── design-system.md   # /resources/design-system (brand guidelines + design token reference)
@@ -62,7 +62,7 @@ The redesign replaces a flat "link-tree" layout with a
 - `/about` — values manifesto built on four pillars: **Community,
   Innovation, Teamwork, Respect**.
 - `/get-involved` — onboarding hub with four role sub-pages (Speaker,
-  Host, Sponsor, Volunteer), each ending in an intake action (email us
+  Host, Sponsor, Organizer Team), each ending in an intake action (email us
   at `techtankto@gmail.com`).
 - `/events` — embedded Luma calendar.
 - `/press-kit` — standalone brand assets and fast facts for media.

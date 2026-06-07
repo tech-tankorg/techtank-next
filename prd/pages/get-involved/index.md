@@ -18,7 +18,7 @@ intake.
 
 - Community members curious about getting involved
 - Professionals deciding between speaking, hosting, sponsoring, or
-  volunteering
+  organizing
 
 ## 3. Key messages
 
@@ -29,7 +29,7 @@ intake.
 
 ## 4. Shared layout (Next.js)
 
-- Sticky sub-nav: **Overview / Speaker / Host / Sponsor / Volunteer**.
+- Sticky sub-nav: **Overview / Speaker / Host / Sponsor / Organizer Team**.
   - On mobile, renders as a segmented control.
 - Persistent "Join our Slack" CTA in the header or side rail.
 - Shared "Why get involved" strip rendered under the sub-nav on every
@@ -42,7 +42,7 @@ intake.
    - Overline kicker: `GET INVOLVED`.
    - Headline: "Let's build TechTank together."
    - Sub-headline: "TechTank runs on the Toronto tech community —
-     speakers, hosts, sponsors, and volunteers who show up every
+     speakers, hosts, sponsors, and organizers who show up every
      month. Pick the role that fits you right now."
 
 2. **Ways to get involved (four role cards)**
@@ -68,7 +68,7 @@ intake.
        - Overline: `SUPPORT THE COMMUNITY`
        - Checkmarks: Logo on website and marketing · Speaker slot
          options · Tasteful brand visibility
-     - **Volunteer** → `/get-involved/volunteer`
+     - **Organizer Team** → `/get-involved/organizer`
        - Overline: `HELP RUN THE CREW`
        - Checkmarks: Event-day or ongoing · No speaking required ·
          Portfolio-quality work for creatives

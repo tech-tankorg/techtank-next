@@ -18,7 +18,7 @@ issues. This document operationalizes the **Respect** pillar from
 
 - All attendees at TechTank events
 - All members of TechTank-operated channels (Slack, etc.)
-- Speakers, hosts, sponsors, and volunteers
+- Speakers, hosts, sponsors, and organizers
 
 ## 3. Structure
 
