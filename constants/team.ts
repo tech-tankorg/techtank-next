@@ -21,6 +21,7 @@ export const teamGroups: TeamGroup[] = [
         name: "Danny Kim",
         pronouns: "he/him",
         role: "Co-Chair, Board Member & Organizer",
+        avatar: "/images/team/danny.kim.webp",
         bio: `Danny is an event organizer at TechTank. He used to be a regular at TechTank events when the community was run by the previous director, Chris, and he stepped in to help keep things running after she stepped down.
 Danny focuses on organizing tech talks and panel discussions. Although he doesn't speak at these events himself, his role is behind the scenes, making sure speakers don't have to think about anything except showing up as their best selves and delivering their talk.
 He's careful about picking topics that are relatable to the audience. The best talks, in his view, are about problems people have actually run into, or ideas that are just genuinely interesting. Self-promotion or corporate pitches dressed up as talks, not so much.
@@ -32,6 +33,7 @@ By day, Danny is a software engineer on the frontend team at Ideogram, an AI ima
         name: "Niki Fereidooni",
         pronouns: "she/her",
         role: "Co-Chair, Board Member & Organizer",
+        avatar: "/images/team/niki.fereidooni.webp",
         bio: `Niki has been running tech community events since October 2024. She currently leads Code Diversity and Tech Talks at TechTank.
 By day she's a software engineer, though she got there the long way. After nearly a decade in the print packaging industry in project management and operations, she transitioned into tech in 2020. She's a generalist at heart, someone who loves building things as much as she loves the people building alongside her.
 She got involved with TechTank almost by accident. When the Code Diversity series was at risk of ending, she stepped in as a community leader. Today she's a board member and handles strategy, volunteer management, sponsor relationships, and general planning for the organization. She's the first to admit it's a lot, and the first to say it's worth it.
@@ -67,6 +69,7 @@ Outside of tech, she enjoys hosting events, muay thai, travelling, and creating 
         name: "Thannia Blanchet",
         pronouns: "she/her",
         role: "Organizer",
+        avatar: "/images/team/thannia.blanchet.webp",
         bio: `Thannia co-runs CodeDiversity alongside Niki and has spoken at multiple TechTank events.
 She’s been a Front-End Software Engineer since 2014 and moved to Toronto in 2023, where shortly after she met TechTank by a matter of destiny, she was the only one available to show them the office to host an event. In TechTank, she has found community and friends, and decided to use it to continue her mission of promoting diversity, equality, inclusion, and lifting everyone up.
 Outside of tech, Thannia enjoys different things: drawing, acting, muay thai, and roller derby: a sport you should totally check out.
@@ -76,6 +79,7 @@ Outside of tech, Thannia enjoys different things: drawing, acting, muay thai, an
         name: "Tony Ko",
         pronouns: "he/him",
         role: "Digital Lead & Organizer",
+        avatar: "/images/team/tony.ko.webp",
         bio: `Tony leads TechTank's web team while serving as an organizer. By day, he's a Staff Software Engineer working where engineering, design, and product thinking meet. He's shipped products for Aeroplan, Loblaws, and a few others you'd recognize.
 
 He showed up early, camera in hand, doing whatever the community needed: events, copy, posters. What kept him was the people: their energy, the way quick conversations turned into real ones. To Tony, the most valuable thing TechTank offers isn't a talk or a networking opportunity, it's what happens between.
@@ -88,6 +92,7 @@ Outside of TechTank, he's drawn to experiences worth remembering. Good food, mus
       {
         name: "Natasha Kasunic",
         pronouns: "she/her",
+        avatar: "/images/team/natasha.kasunic.webp",
         bio: `Natasha is one of TechTank's newer volunteers! She's a Technical Customer Success Lead at Tightknit, a small startup building an app for community builders, where she sits between the engineering and the humans using it, translating one to the other. Computer science at Waterloo gave her the technical half; the years since taught her the part that actually matters, which is people.
 She came to TechTank as an attendee first and found something she didn't expect: a room full of community leaders, operators, and builders, who happen to be her favourite kind of person. So she started pitching in. What's kept her around isn't any single event but the in-between, the hallway conversation that turns into a real one, and the way a good community quietly makes space for people, women in tech especially, to find their footing.
 She's early in her TechTank story, which is the fun part. Expect to see her wherever the community needs an extra set of hands.
@@ -97,6 +102,7 @@ When she's not here, she's doing stand-up comedy, crocheting, fencing, or digita
       {
         name: "Eileen Xue",
         pronouns: "she/her",
+        avatar: "/images/team/eileen.xu.webp",
         bio: ``,
       },
     ],
@@ -104,8 +110,8 @@ When she's not here, she's doing stand-up comedy, crocheting, fencing, or digita
   {
     title: "Website Team",
     members: [
-      { name: "Tony Ko", pronouns: "he/him" },
-      { name: "Danny Kim", pronouns: "he/him" },
+      { name: "Tony Ko", pronouns: "he/him", avatar: "/images/team/tony.ko.webp" },
+      { name: "Danny Kim", pronouns: "he/him", avatar: "/images/team/danny.kim.webp" },
       { name: "Rohan Villoth", pronouns: "he/him" },
       { name: "Danyal Imran", pronouns: "he/him" },
       { name: "Justin Bento", pronouns: "he/him" },
@@ -119,8 +125,8 @@ When she's not here, she's doing stand-up comedy, crocheting, fencing, or digita
       { name: "Amanda Collantes", pronouns: "she/her" },
       { name: "Beatrice Yu", pronouns: "she/her" },
       { name: "Sophia Kim", pronouns: "she/her" },
-      { name: "Natasha Kasunic", pronouns: "she/her" },
-      { name: "Niki Fereidooni", pronouns: "she/her" },
+      { name: "Natasha Kasunic", pronouns: "she/her", avatar: "/images/team/natasha.kasunic.webp" },
+      { name: "Niki Fereidooni", pronouns: "she/her", avatar: "/images/team/niki.fereidooni.webp" },
     ],
   },
   {
