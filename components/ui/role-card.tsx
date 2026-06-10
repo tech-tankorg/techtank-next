@@ -68,11 +68,11 @@ export function RoleCard({
 
       {/* CTA */}
       {comingSoon ? (
-        <Button variant="outline" size="sm" className="w-full" disabled>
+        <Button variant="outline" size="sm" className="w-full text-center" disabled>
           Coming soon
         </Button>
       ) : (
-        <Button variant="outline" size="sm" asChild className="w-full">
+        <Button variant="outline" size="sm" asChild className="w-full text-center">
           <Link href={href} {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
             {ctaText}
           </Link>

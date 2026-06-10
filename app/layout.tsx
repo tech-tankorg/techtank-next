@@ -25,6 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = headersList.get("host");
 
   return {
+    metadataBase: new URL("https://techtankto.com"),
     title: {
       default: "TechTank TO — Toronto's Tech Community",
       template: "%s — TechTank TO",
@@ -44,6 +45,17 @@ export async function generateMetadata(): Promise<Metadata> {
     appleWebApp: {
       title: "TechTank TO",
       statusBarStyle: "default",
+    },
+    openGraph: {
+      url: "/",
+      type: "website",
+      siteName: "TechTank TO",
+      title: "TechTank TO — Toronto's Tech Community",
+      description:
+        "Foster a supportive and inclusive environment where people of all skill levels can explore, create, and thrive in technology.",
+    },
+    other: {
+      "og:logo": "https://techtankto.com/icon.png",
     },
   };
 }

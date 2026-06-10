@@ -137,7 +137,7 @@ export default function PressKitPage() {
 
         {/* Logo Preview */}
         <div className="grid gap-6 lg:grid-cols-2 mb-12">
-          <div className="bg-card rounded-xl border border-border p-8 flex items-center justify-center">
+          <div className="bg-white/70 backdrop-blur-md rounded-xl border border-border p-8 flex items-center justify-center">
             <Image
               src="/images/logos/light.svg"
               alt="TechTank TO Logo (light)"

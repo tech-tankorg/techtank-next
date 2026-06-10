@@ -27,7 +27,7 @@ export default async function HomePage() {
   const pastEvents = await getPastLumaEvents();
 
   const heroPosts = getInstagramPostsByIds([
-    "2025-07-07-DLz4I7KOww6", // BBQ season
+    "2026-06-09-DZWPNciI8eO", // Docebo Brainstation (Jun 2026)
     "2026-04-10-DW9vcgiPHx", // Code diversity (Apr 2026)
   ]).map((post) => ({
     id: post.id,
@@ -201,7 +201,7 @@ export default async function HomePage() {
           description="TechTank runs on people who show up."
           className="mb-8"
         />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {roleCardsData.map((role) => (
             <RoleCard key={role.role} {...role} />
           ))}

@@ -1202,6 +1202,15 @@ export const instagramPosts: Record<string, InstagramPost> = {
       { type: "image", path: "/media/instagram/2026-04-10-DW9vcgiPHx/techtankto_DW9-vcgiPHx_3872527193918206449.webp" }
     ]
   },
+  "2026-06-09-DZWPNciI8eO": {
+    caption: "TechTank latest video",
+    date: "2026-06-09",
+    shortcode: "DZWPNciI8eO",
+    media: [
+      { type: "video", path: "/media/instagram/2026-06-09-DZWPNciI8eO/techtankto_DZWPNciI8eO.mp4" },
+      { type: "image", path: "/media/instagram/2026-06-09-DZWPNciI8eO/techtankto_DZWPNciI8eO.webp" }
+    ]
+  },
 };
 
 export interface InstagramPostWithId extends InstagramPost {
