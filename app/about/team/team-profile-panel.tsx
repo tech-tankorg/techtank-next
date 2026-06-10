@@ -115,7 +115,9 @@ function TeamProfileDialog({
       className={cn(
         "fixed z-50 flex flex-col overflow-hidden bg-card border border-border shadow-soft-lg",
         "left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2",
-        "w-[calc(100%-2rem)] max-w-md max-h-[85dvh] rounded-2xl"
+        "w-[calc(100%-2rem)] max-w-md max-h-[85dvh] rounded-2xl",
+        "md:max-w-xl md:max-h-[80dvh]",
+        "lg:max-w-2xl"
       )}
       role="dialog"
       aria-modal="true"
@@ -135,7 +137,7 @@ function TeamProfileDialog({
         </Button>
       </div>
 
-      <div className="flex flex-1 flex-col gap-5 overflow-y-auto px-6 pb-8 min-h-0">
+      <div className="flex flex-1 flex-col gap-5 overflow-y-auto px-6 md:px-8 lg:px-10 pb-8 min-h-0">
         <div className="flex flex-col items-center text-center gap-4">
           <TeamAvatar name={name} avatar={avatar} size="xl" />
           <div>
@@ -149,7 +151,19 @@ function TeamProfileDialog({
 
         <div className="border-t border-border pt-5">
           {bio ? (
-            <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{bio}</p>
+            <div className="space-y-4">
+              {bio
+                .split(/\n+/)
+                .filter(Boolean)
+                .map((paragraph, i) => (
+                  <p
+                    key={i}
+                    className="text-sm md:text-base text-muted-foreground leading-relaxed"
+                  >
+                    {paragraph.trim()}
+                  </p>
+                ))}
+            </div>
           ) : (
             <p className="text-sm text-muted-foreground/40 italic">Bio coming soon</p>
           )}
