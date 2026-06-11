@@ -1,0 +1,88 @@
+import type { InstagramPost, InstagramPostMedia } from "../../constants/instagram-posts";
+import type { MediaChild, MediaNode } from "./schema";
+import { deriveKey, shortcodeFromPermalink, utcDateFromTimestamp } from "./keys";
+
+// A file the shell must fetch and write. kind drives the compression step:
+// images are re-encoded to webp, videos to mp4.
+export interface Download {
+  sourceUrl: string;
+  destPath: string;
+  kind: "image" | "video";
+}
+
+export interface TransformResult {
+  key: string;
+  post: InstagramPost;
+  downloads: Download[];
+}
+
+type MediaSource = Pick<MediaChild, "id" | "media_type" | "media_url" | "thumbnail_url">;
+
+function expandSource(
+  source: MediaSource,
+  dir: string,
+  shortcode: string,
+): { media: InstagramPostMedia[]; downloads: Download[] } {
+  if (!source.media_url) {
+    throw new Error(`Media ${source.id} has no media_url`);
+  }
+  const base = `${dir}/techtankto_${shortcode}_${source.id}`;
+
+  if (source.media_type === "VIDEO") {
+    const video: InstagramPostMedia = { type: "video", path: `${base}.mp4` };
+    const downloads: Download[] = [
+      { sourceUrl: source.media_url, destPath: video.path, kind: "video" },
+    ];
+    const media: InstagramPostMedia[] = [video];
+    // Videos historically carry a poster image; keep that so getCoverImage works.
+    if (source.thumbnail_url) {
+      const poster: InstagramPostMedia = {
+        type: "image",
+        path: `${base}_poster.webp`,
+      };
+      media.push(poster);
+      downloads.push({
+        sourceUrl: source.thumbnail_url,
+        destPath: poster.path,
+        kind: "image",
+      });
+    }
+    return { media, downloads };
+  }
+
+  const image: InstagramPostMedia = { type: "image", path: `${base}.webp` };
+  return {
+    media: [image],
+    downloads: [{ sourceUrl: source.media_url, destPath: image.path, kind: "image" }],
+  };
+}
+
+export function transformNode(node: MediaNode): TransformResult {
+  const shortcode = shortcodeFromPermalink(node.permalink);
+  const key = deriveKey(node.timestamp, shortcode);
+  const dir = `/media/instagram/${key}`;
+
+  const sources: MediaSource[] =
+    node.media_type === "CAROUSEL_ALBUM"
+      ? (node.children?.data ?? [])
+      : [node];
+
+  const media: InstagramPostMedia[] = [];
+  const downloads: Download[] = [];
+  for (const source of sources) {
+    const expanded = expandSource(source, dir, shortcode);
+    media.push(...expanded.media);
+    downloads.push(...expanded.downloads);
+  }
+
+  const post: InstagramPost = {
+    caption: node.caption ?? "",
+    date: utcDateFromTimestamp(node.timestamp),
+    shortcode,
+    pk: node.id,
+    createdAtRaw: Math.floor(new Date(node.timestamp).getTime() / 1000),
+    media,
+  };
+
+  return { key, post, downloads };
+}
