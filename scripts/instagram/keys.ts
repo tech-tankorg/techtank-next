@@ -25,6 +25,14 @@ export function utcDateFromTimestamp(timestamp: string): string {
   return date.toISOString().slice(0, 10);
 }
 
+export function unixSecondsFromTimestamp(timestamp: string): number {
+  const ms = new Date(timestamp).getTime();
+  if (Number.isNaN(ms)) {
+    throw new Error(`Invalid timestamp: ${timestamp}`);
+  }
+  return Math.floor(ms / 1000);
+}
+
 export function deriveKey(timestamp: string, shortcode: string): string {
   return `${utcDateFromTimestamp(timestamp)}-${stripShortcode(shortcode)}`;
 }

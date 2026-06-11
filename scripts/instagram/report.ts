@@ -27,7 +27,7 @@ export function formatRunReport(summary: RunSummary): string {
   }
 
   if (summary.failed.length > 0) {
-    lines.push(`\n⚠ ${summary.failed.length} post(s) skipped due to errors:`);
+    lines.push(`\n${summary.failed.length} post(s) skipped due to errors:`);
     for (const { id, reason } of summary.failed) {
       lines.push(`  - ${id}: ${reason}`);
     }

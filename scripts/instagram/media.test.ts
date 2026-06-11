@@ -60,13 +60,17 @@ describe("processDownload", () => {
       kind: "video",
     };
     await processDownload(dl, "/public", { ...baseDeps, runFfmpeg });
-    expect(baseDeps.fetchImpl).toHaveBeenCalledWith("https://c/v.mp4");
+    expect(baseDeps.fetchImpl).toHaveBeenCalledWith(
+      "https://c/v.mp4",
+      expect.objectContaining({ signal: expect.anything() }),
+    );
     const [, args] = runFfmpeg.mock.calls[0];
     expect(args).toContain("libx264");
     expect(args.at(-1)).toBe("/public/media/instagram/k/techtankto_X_1.mp4");
   });
 
-  test("throws when ffmpeg exits non-zero", async () => {
+  test("throws and still cleans up the temp file when ffmpeg fails", async () => {
+    const cleanup = vi.fn();
     const dl: Download = {
       sourceUrl: "https://c/a.jpg",
       destPath: "/media/instagram/k/a.webp",
@@ -75,8 +79,40 @@ describe("processDownload", () => {
     await expect(
       processDownload(dl, "/public", {
         ...baseDeps,
+        cleanup,
         runFfmpeg: vi.fn().mockReturnValue({ status: 1, stderr: "boom" }),
       }),
     ).rejects.toThrow(/ffmpeg/i);
+    expect(cleanup).toHaveBeenCalledWith("/tmp/raw");
+  });
+
+  test("throws on a failed download without invoking ffmpeg", async () => {
+    const runFfmpeg = vi.fn();
+    const dl: Download = {
+      sourceUrl: "https://c/missing.jpg",
+      destPath: "/media/instagram/k/a.webp",
+      kind: "image",
+    };
+    await expect(
+      processDownload(dl, "/public", {
+        ...baseDeps,
+        runFfmpeg,
+        fetchImpl: vi
+          .fn()
+          .mockResolvedValue({ ok: false, status: 404 }) as unknown as typeof fetch,
+      }),
+    ).rejects.toThrow(/404/);
+    expect(runFfmpeg).not.toHaveBeenCalled();
+  });
+
+  test("refuses a destPath that escapes the public dir", async () => {
+    const dl: Download = {
+      sourceUrl: "https://c/a.jpg",
+      destPath: "/../../etc/evil.webp",
+      kind: "image",
+    };
+    await expect(processDownload(dl, "/public", baseDeps)).rejects.toThrow(
+      /outside public/i,
+    );
   });
 });

@@ -28,7 +28,9 @@ export async function fetchRecentMedia(
   config: GraphConfig,
   fetchImpl: typeof fetch = fetch,
 ): Promise<MediaResponse> {
-  const res = await fetchImpl(buildMediaUrl(config));
+  const res = await fetchImpl(buildMediaUrl(config), {
+    signal: AbortSignal.timeout(30_000),
+  });
   if (!res.ok) {
     const body = await res.text();
     throw new Error(`Graph API request failed (${res.status}): ${body}`);

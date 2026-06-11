@@ -1,8 +1,10 @@
 import { spawnSync } from "node:child_process";
 import { mkdir, rm, writeFile } from "node:fs/promises";
-import { dirname, join } from "node:path";
+import { dirname, join, resolve, sep } from "node:path";
 import { tmpdir } from "node:os";
 import type { Download } from "./transform";
+
+const FETCH_TIMEOUT_MS = 30_000;
 
 export interface FfmpegResult {
   status: number | null;
@@ -73,7 +75,17 @@ export async function processDownload(
   publicDir: string,
   deps: ProcessDeps = defaultProcessDeps,
 ): Promise<void> {
-  const res = await deps.fetchImpl(download.sourceUrl);
+  // Defense in depth: even though transform.ts sanitizes filename segments,
+  // re-check that the resolved output never escapes publicDir before any write.
+  const output = join(publicDir, download.destPath);
+  const root = resolve(publicDir) + sep;
+  if (!resolve(output).startsWith(root)) {
+    throw new Error(`Refusing to write outside public dir: ${download.destPath}`);
+  }
+
+  const res = await deps.fetchImpl(download.sourceUrl, {
+    signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+  });
   if (!res.ok) {
     throw new Error(`Download failed (${res.status}) for ${download.sourceUrl}`);
   }
@@ -81,7 +93,6 @@ export async function processDownload(
   const suffix = download.destPath.split("/").pop() ?? "asset";
   const temp = await deps.writeTemp(bytes, suffix);
 
-  const output = join(publicDir, download.destPath);
   await deps.ensureDir(dirname(output));
   const args =
     download.kind === "video"
