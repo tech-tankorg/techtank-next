@@ -1,7 +1,8 @@
-import { writeFile } from "node:fs/promises";
+import { rename, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { join } from "node:path";
 import { generatedPosts } from "../../constants/instagram-posts.generated";
+import type { InstagramPost } from "../../constants/instagram-posts";
 import type { GraphConfig } from "./graph-api";
 import { fetchRecentMedia } from "./graph-api";
 import type { MediaNode } from "./schema";
@@ -13,6 +14,17 @@ import { isFfmpegAvailable, processDownload } from "./media";
 
 const DEFAULT_VERSION = "v21.0";
 const DEFAULT_LIMIT = 25;
+
+const toMessage = (error: unknown): string =>
+  error instanceof Error ? error.message : String(error);
+
+// Coerce-and-guard: a non-positive or non-integer env value falls back to the
+// default rather than producing a "limit=NaN" request.
+function parseLimit(raw: string | undefined): number {
+  if (raw === undefined) return DEFAULT_LIMIT;
+  const n = Number(raw);
+  return Number.isInteger(n) && n > 0 ? n : DEFAULT_LIMIT;
+}
 
 export function loadConfig(env: Record<string, string | undefined>): GraphConfig {
   const missing = ["INSTAGRAM_USER_ID", "INSTAGRAM_ACCESS_TOKEN"].filter(
@@ -27,7 +39,7 @@ export function loadConfig(env: Record<string, string | undefined>): GraphConfig
     userId: env.INSTAGRAM_USER_ID!,
     accessToken: env.INSTAGRAM_ACCESS_TOKEN!,
     version: env.INSTAGRAM_GRAPH_VERSION ?? DEFAULT_VERSION,
-    limit: Number(env.INSTAGRAM_FETCH_LIMIT ?? DEFAULT_LIMIT),
+    limit: parseLimit(env.INSTAGRAM_FETCH_LIMIT),
   };
 }
 
@@ -67,9 +79,17 @@ interface RunOptions {
   dryRun: boolean;
   publicDir: string;
   generatedPath: string;
+  // The current dataset, passed in (not imported) so run() is reproducible and
+  // the full merge -> emit -> write path is integration-testable.
+  existing: Record<string, InstagramPost>;
 }
 
-async function run({ dryRun, publicDir, generatedPath }: RunOptions): Promise<void> {
+export async function run({
+  dryRun,
+  publicDir,
+  generatedPath,
+  existing,
+}: RunOptions): Promise<string> {
   if (!dryRun && !isFfmpegAvailable()) {
     throw new Error(
       "ffmpeg not found in PATH. Install it (macOS: `brew install ffmpeg`).",
@@ -78,47 +98,55 @@ async function run({ dryRun, publicDir, generatedPath }: RunOptions): Promise<vo
 
   const config = loadConfig(process.env);
   const response = await fetchRecentMedia(config);
-  const existingKeys = new Set(Object.keys(generatedPosts));
+  const existingKeys = new Set(Object.keys(existing));
   const selection = selectNewPosts(existingKeys, response.data);
 
   // Download + compress each fresh post's media; a media failure skips that post.
+  // Media within a post run concurrently; posts stay sequential for ordered
+  // failure reporting.
   const toAdd = [];
   for (const result of selection.fresh) {
     try {
       if (!dryRun) {
-        for (const download of result.downloads) {
-          await processDownload(download, publicDir);
-        }
+        await Promise.all(
+          result.downloads.map((download) => processDownload(download, publicDir)),
+        );
       }
       toAdd.push({ key: result.key, post: result.post });
     } catch (error) {
-      selection.failed.push({ id: result.key, reason: (error as Error).message });
+      selection.failed.push({ id: result.key, reason: toMessage(error) });
     }
   }
 
-  const before = Object.keys(generatedPosts).length;
-  const { merged, added } = upsertByKey(generatedPosts, toAdd);
+  const before = Object.keys(existing).length;
+  const { merged, added } = upsertByKey(existing, toAdd);
   assertNoShrink(before, Object.keys(merged).length);
 
+  // Atomic write: render to a temp file then rename, so a crash mid-write can
+  // never leave a truncated, unparseable data file that breaks the build.
   if (!dryRun && added.length > 0) {
-    await writeFile(generatedPath, renderGeneratedFile(merged));
+    const tmp = `${generatedPath}.tmp`;
+    await writeFile(tmp, renderGeneratedFile(merged));
+    await rename(tmp, generatedPath);
   }
 
-  const report = formatRunReport({
+  return formatRunReport({
     added,
     skippedExisting: selection.skippedExisting,
     failed: selection.failed,
   });
-  console.log(`${dryRun ? "[dry-run] " : ""}${report}`);
 }
 
 async function main(): Promise<void> {
   const root = process.cwd();
-  await run({
-    dryRun: process.argv.includes("--dry-run"),
+  const dryRun = process.argv.includes("--dry-run");
+  const report = await run({
+    dryRun,
     publicDir: join(root, "public"),
     generatedPath: join(root, "constants", "instagram-posts.generated.ts"),
+    existing: generatedPosts,
   });
+  console.log(`${dryRun ? "[dry-run] " : ""}${report}`);
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
