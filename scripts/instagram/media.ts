@@ -1,0 +1,99 @@
+import { spawnSync } from "node:child_process";
+import { mkdir, rm, writeFile } from "node:fs/promises";
+import { dirname, join } from "node:path";
+import { tmpdir } from "node:os";
+import type { Download } from "./transform";
+
+export interface FfmpegResult {
+  status: number | null;
+  stderr?: string;
+}
+type FfmpegRunner = (cmd: string, args: string[]) => FfmpegResult;
+
+const SCALE = "scale='w=min(1080,iw):h=min(1080,ih):force_original_aspect_ratio=decrease'";
+
+// Ported from scripts/compress-media.ps1 — h264 mp4, downscaled, faststart for
+// progressive playback. The site uses mp4 for video (no webm in the dataset).
+export function buildVideoArgs(input: string, output: string): string[] {
+  return [
+    "-y", "-i", input, "-vf", SCALE,
+    "-c:v", "libx264", "-preset", "medium", "-crf", "28",
+    "-c:a", "aac", "-movflags", "+faststart", output,
+  ];
+}
+
+// Images are served as webp across the dataset.
+export function buildImageArgs(input: string, output: string): string[] {
+  return ["-y", "-i", input, "-vf", SCALE, "-c:v", "libwebp", "-quality", "80", output];
+}
+
+const defaultRunner: FfmpegRunner = (cmd, args) => {
+  const r = spawnSync(cmd, args, { encoding: "utf8" });
+  return { status: r.status, stderr: r.stderr };
+};
+
+export function isFfmpegAvailable(
+  probe: FfmpegRunner = defaultRunner,
+): boolean {
+  try {
+    return probe("ffmpeg", ["-version"]).status === 0;
+  } catch {
+    return false;
+  }
+}
+
+export interface ProcessDeps {
+  fetchImpl: typeof fetch;
+  writeTemp: (bytes: Uint8Array, suffix: string) => Promise<string>;
+  ensureDir: (dir: string) => Promise<void>;
+  runFfmpeg: FfmpegRunner;
+  cleanup: (path: string) => void | Promise<void>;
+}
+
+const defaultWriteTemp = async (bytes: Uint8Array, suffix: string) => {
+  const path = join(tmpdir(), `ig-${suffix}`);
+  await writeFile(path, bytes);
+  return path;
+};
+
+export const defaultProcessDeps: ProcessDeps = {
+  fetchImpl: fetch,
+  writeTemp: defaultWriteTemp,
+  ensureDir: async (dir) => {
+    await mkdir(dir, { recursive: true });
+  },
+  runFfmpeg: defaultRunner,
+  cleanup: (path) => rm(path, { force: true }),
+};
+
+// Download one asset to a temp file, compress it to its final public path, and
+// clean up. Throws on any failure so the caller can skip-and-flag the post.
+export async function processDownload(
+  download: Download,
+  publicDir: string,
+  deps: ProcessDeps = defaultProcessDeps,
+): Promise<void> {
+  const res = await deps.fetchImpl(download.sourceUrl);
+  if (!res.ok) {
+    throw new Error(`Download failed (${res.status}) for ${download.sourceUrl}`);
+  }
+  const bytes = new Uint8Array(await res.arrayBuffer());
+  const suffix = download.destPath.split("/").pop() ?? "asset";
+  const temp = await deps.writeTemp(bytes, suffix);
+
+  const output = join(publicDir, download.destPath);
+  await deps.ensureDir(dirname(output));
+  const args =
+    download.kind === "video"
+      ? buildVideoArgs(temp, output)
+      : buildImageArgs(temp, output);
+
+  try {
+    const result = deps.runFfmpeg("ffmpeg", args);
+    if (result.status !== 0) {
+      throw new Error(`ffmpeg failed (${result.status}): ${result.stderr ?? ""}`);
+    }
+  } finally {
+    await deps.cleanup(temp);
+  }
+}

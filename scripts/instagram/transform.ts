@@ -1,5 +1,5 @@
 import type { InstagramPost, InstagramPostMedia } from "../../constants/instagram-posts";
-import type { MediaChild, MediaNode } from "./schema";
+import type { MediaNode } from "./schema";
 import { deriveKey, shortcodeFromPermalink, utcDateFromTimestamp } from "./keys";
 
 // A file the shell must fetch and write. kind drives the compression step:
@@ -16,7 +16,15 @@ export interface TransformResult {
   downloads: Download[];
 }
 
-type MediaSource = Pick<MediaChild, "id" | "media_type" | "media_url" | "thumbnail_url">;
+// A carousel parent is always expanded to its children before reaching here, so
+// at runtime a source is only ever IMAGE or VIDEO; the wide type keeps both a
+// MediaNode and a MediaChild assignable.
+interface MediaSource {
+  id: string;
+  media_type: MediaNode["media_type"];
+  media_url?: string;
+  thumbnail_url?: string;
+}
 
 function expandSource(
   source: MediaSource,
