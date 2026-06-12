@@ -7,11 +7,10 @@ import { Button } from "@/components/ui/button";
 import { EventCard } from "@/components/ui/event-card";
 import { cn } from "@/utils/theme";
 import type { Event } from "@/app/events/actions";
+import Image from "next/image";
 
 type CategoryFilter = "all" | "tech-talks" | "coffee-chats" | "socials" | "sports" | "other";
-type TimeFilter = "all" | "upcoming" | "past";
 type DisplayMode = "cards" | "grid" | "list";
-type SortBy = "date" | "title";
 
 const CATEGORY_TAGS: Record<Exclude<CategoryFilter, "all" | "other">, string[]> = {
   "tech-talks": ["Tech Talk", "Panel", "Workshop"],
@@ -40,33 +39,25 @@ const PAGE_SIZE = 20;
 
 export function EventBrowser({ events }: EventBrowserProps) {
   const [category, setCategory] = useState<CategoryFilter>("all");
-  const [timeFilter, setTimeFilter] = useState<TimeFilter>("all");
   const [displayMode, setDisplayMode] = useState<DisplayMode>("cards");
-  const [sortBy, setSortBy] = useState<SortBy>("date");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const filtered = useMemo(() => {
     let result = events.filter((e) => {
       if (!matchesCategory(e, category)) return false;
-      if (timeFilter === "upcoming") return e.status === "upcoming";
-      if (timeFilter === "past") return e.status === "past";
       return true;
     });
 
-    if (sortBy === "date") {
-      result = result.sort((a, b) => {
-        if (a.status !== b.status) return a.status === "upcoming" ? -1 : 1;
-        const diff = new Date(a.start_at).getTime() - new Date(b.start_at).getTime();
-        return a.status === "upcoming" ? diff : -diff;
-      });
-    } else {
-      result = result.sort((a, b) => a.title.localeCompare(b.title));
-    }
+    result = result.sort((a, b) => {
+      if (a.status !== b.status) return a.status === "upcoming" ? -1 : 1;
+      const diff = new Date(a.start_at).getTime() - new Date(b.start_at).getTime();
+      return a.status === "upcoming" ? diff : -diff;
+    });
 
     return result;
-  }, [events, category, timeFilter, sortBy]);
+  }, [events, category]);
 
-  useEffect(() => { setVisibleCount(PAGE_SIZE); }, [category, timeFilter, sortBy]);
+  useEffect(() => { setVisibleCount(PAGE_SIZE); }, [category]);
 
   const visible = filtered.slice(0, visibleCount);
   const hasMore = visibleCount < filtered.length;
@@ -81,18 +72,13 @@ export function EventBrowser({ events }: EventBrowserProps) {
     { id: "other", label: "Other" },
   ];
 
-  const timeFilters: { id: TimeFilter; label: string }[] = [
-    { id: "all", label: "All" },
-    { id: "upcoming", label: "Upcoming" },
-    { id: "past", label: "Past" },
-  ];
 
   return (
     <div>
       {/* Controls */}
-      <div className="rounded-xl bg-card border border-border p-4 flex flex-col gap-4 mb-8">
+      <div className="rounded-xl bg-card border border-border p-4 flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
         {/* Category filters */}
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
           {categories.map((c) => (
             <button
               key={c.id}
@@ -109,82 +95,38 @@ export function EventBrowser({ events }: EventBrowserProps) {
           ))}
         </div>
 
-        {/* Time filter + display mode + sort */}
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <div className="flex gap-1.5">
-            {timeFilters.map((t) => (
-              <button
-                key={t.id}
-                onClick={() => setTimeFilter(t.id)}
-                className={cn(
-                  "px-3 py-1 rounded-md text-xs font-medium transition-colors",
-                  timeFilter === t.id
-                    ? "bg-secondary text-secondary-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                )}
-              >
-                {t.label}
-              </button>
-            ))}
-          </div>
-
-          <div className="flex items-center gap-3">
-            {/* Sort */}
-            <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-              <button
-                onClick={() => setSortBy("date")}
-                className={cn(
-                  "px-3 py-1 rounded-md text-xs font-medium transition-colors",
-                  sortBy === "date" ? "bg-secondary text-secondary-foreground" : "text-muted-foreground hover:text-foreground"
-                )}
-              >
-                Date
-              </button>
-              <button
-                onClick={() => setSortBy("title")}
-                className={cn(
-                  "px-3 py-1 rounded-md text-xs font-medium transition-colors",
-                  sortBy === "title" ? "bg-secondary text-secondary-foreground" : "text-muted-foreground hover:text-foreground"
-                )}
-              >
-                Title
-              </button>
-            </div>
-
-            {/* Display mode */}
-            <div className="flex items-center gap-0.5 rounded-lg bg-muted p-0.5">
-              <button
-                onClick={() => setDisplayMode("cards")}
-                className={cn(
-                  "p-1.5 rounded-md transition-colors",
-                  displayMode === "cards" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
-                )}
-                aria-label="Cards view"
-              >
-                <Columns2 className="h-3.5 w-3.5" />
-              </button>
-              <button
-                onClick={() => setDisplayMode("grid")}
-                className={cn(
-                  "p-1.5 rounded-md transition-colors",
-                  displayMode === "grid" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
-                )}
-                aria-label="Grid view"
-              >
-                <LayoutGrid className="h-3.5 w-3.5" />
-              </button>
-              <button
-                onClick={() => setDisplayMode("list")}
-                className={cn(
-                  "p-1.5 rounded-md transition-colors",
-                  displayMode === "list" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
-                )}
-                aria-label="List view"
-              >
-                <List className="h-3.5 w-3.5" />
-              </button>
-            </div>
-          </div>
+        {/* Display mode */}
+        <div className="flex items-center gap-0.5 rounded-lg bg-muted p-0.5 shrink-0">
+          <button
+            onClick={() => setDisplayMode("cards")}
+            className={cn(
+              "p-1.5 rounded-md transition-colors",
+              displayMode === "cards" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
+            )}
+            aria-label="Cards view"
+          >
+            <Columns2 className="h-3.5 w-3.5" />
+          </button>
+          <button
+            onClick={() => setDisplayMode("grid")}
+            className={cn(
+              "p-1.5 rounded-md transition-colors",
+              displayMode === "grid" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
+            )}
+            aria-label="Grid view"
+          >
+            <LayoutGrid className="h-3.5 w-3.5" />
+          </button>
+          <button
+            onClick={() => setDisplayMode("list")}
+            className={cn(
+              "p-1.5 rounded-md transition-colors",
+              displayMode === "list" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
+            )}
+            aria-label="List view"
+          >
+            <List className="h-3.5 w-3.5" />
+          </button>
         </div>
       </div>
 
@@ -255,11 +197,12 @@ function GridView({ events }: { events: Event[] }) {
         return (
           <div key={event.id} className="group relative overflow-hidden rounded-xl aspect-square bg-muted">
             {img ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
+              <Image
                 src={img}
                 alt={event.title}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                fill
+                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
             ) : (
               <div className="h-full w-full gradient-brand" />

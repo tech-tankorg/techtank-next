@@ -30,7 +30,7 @@ Contributors, designers, and Claude Code sessions working on this repository.
 1. **Brand palette** — primary teal / teal-dark / amber swatches with hex values and usage notes.
 2. **Accent tokens** — coral, mint, seafoam, sand, peach, blush.
 3. **Semantic tokens** — background, foreground, muted, border.
-4. **Gradient utilities** — `.gradient-brand`, `.gradient-brand-vertical`, `.gradient-hero`, `.gradient-brand-soft`.
+4. **Gradient utilities** — `.gradient-brand`, `.gradient-brand-vertical`, `.gradient-hero`, `.gradient-hero-soft`.
 5. **Type scale** — Space Grotesk display sizes (6xl–xl) and Inter body sizes (xl–xs); overline pattern.
 6. **Buttons** — all variants (primary, secondary, outline, ghost), sizes (lg, md, sm), icon usage, and disabled states.
 7. **Tags & Pills** — filled, outline, soft-teal, soft-amber, seafoam variants.

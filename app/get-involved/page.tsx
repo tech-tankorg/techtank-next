@@ -31,28 +31,6 @@ const whyGetInvolved = [
   },
 ];
 
-const faqs = [
-  {
-    question: "Do I need to be a senior engineer to speak?",
-    answer:
-      "No! We welcome speakers at all levels. Some of our best talks come from people sharing what they just learned. We also offer coaching for first-time speakers.",
-  },
-  {
-    question: "Is there a cost to host?",
-    answer:
-      "No fee to TechTank. Hosts provide venue and food (typically pizza and drinks). TechTank handles everything else: speakers, marketing, coordination, recording.",
-  },
-  {
-    question: "Can I volunteer without speaking or hosting?",
-    answer:
-      "Absolutely! We have event-day roles (check-in, setup), ongoing roles (social media, design), and organizing roles. No public speaking required.",
-  },
-  {
-    question: "How fast will you get back to me?",
-    answer:
-      "We aim to respond to all inquiries within one week. If you haven't heard back, please email us directly at techtankto@gmail.com.",
-  },
-];
 
 export default function GetInvolvedPage() {
   return (
@@ -68,9 +46,9 @@ export default function GetInvolvedPage() {
               Let&apos;s build TechTank together
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              TechTank runs on the Toronto tech community — speakers, hosts,
-              sponsors, and volunteers who show up every month. Pick the role
-              that fits you right now.
+              TechTank runs because of people who show up and help make things
+              happen. There are a few ways to get involved depending on where
+              you&apos;re at and what you want to put in.
             </p>
           </div>
         </div>
@@ -83,7 +61,7 @@ export default function GetInvolvedPage() {
           title="Choose your path"
           className="mb-12"
         />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {roleCardsData.map((role) => (
             <RoleCard key={role.role} {...role} />
           ))}
@@ -110,28 +88,6 @@ export default function GetInvolvedPage() {
                 {item.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* FAQ */}
-      <Section>
-        <SectionHeader
-          overline="FAQ"
-          title="Common questions"
-          className="mb-12"
-        />
-        <div className="grid gap-6 lg:grid-cols-2">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-card rounded-xl border border-border p-6"
-            >
-              <h3 className="font-display text-lg font-semibold text-foreground mb-2">
-                {faq.question}
-              </h3>
-              <p className="text-muted-foreground">{faq.answer}</p>
             </div>
           ))}
         </div>

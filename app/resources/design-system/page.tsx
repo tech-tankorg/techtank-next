@@ -20,43 +20,51 @@ export const metadata: Metadata = {
 };
 
 const brandColors = [
-  { name: "teal", hex: "#2A6B7C", label: "Teal", usage: "Ring / focus, kicker labels" },
-  { name: "teal-dark", hex: "#1B4B5A", label: "Teal Dark", usage: "Primary (light mode)" },
-  { name: "amber", hex: "#FFBC55", label: "Amber", usage: "Warning / secondary CTA" },
-  { name: "amber-dark", hex: "#EFA020", label: "Amber Dark", usage: "Overlines, hover links" },
+  { name: "teal",       cls: "bg-teal",       label: "Teal",       hex: "#2A6B7C", usage: "Ring / focus, kicker labels" },
+  { name: "teal-dark",  cls: "bg-teal-dark",  label: "Teal Dark",  hex: "#1B4B5A", usage: "Primary (light mode)" },
+  { name: "amber",      cls: "bg-amber",      label: "Amber",      hex: "#FFBC55", usage: "Warning / secondary CTA" },
+  { name: "amber-dark", cls: "bg-amber-dark", label: "Amber Dark", hex: "#EFA020", usage: "Overlines, hover links" },
 ];
 
 const accentTokens = [
-  { name: "coral", hex: "#E87C4E", label: "Coral", usage: "Destructive / orange accent" },
-  { name: "mint", hex: "#5B9A8B", label: "Mint", usage: "Check icons, accent green" },
-  { name: "seafoam", hex: "#A8D5D8", label: "Seafoam", usage: "Secondary (light mode)" },
-  { name: "sand", hex: "#F7EDE2", label: "Sand", usage: "Warm off-white, gradients" },
-  { name: "peach", hex: "#F5D4C1", label: "Peach", usage: "Warm gradient base" },
-  { name: "blush", hex: "#EABFBF", label: "Blush", usage: "Pink accent" },
+  { name: "coral",   cls: "bg-coral",   label: "Coral",   hex: "#E87C4E", usage: "Destructive / orange accent" },
+  { name: "mint",    cls: "bg-mint",    label: "Mint",    hex: "#5B9A8B", usage: "Check icons, accent green" },
+  { name: "seafoam", cls: "bg-seafoam", label: "Seafoam", hex: "#A8D5D8", usage: "Secondary (light mode)" },
+  { name: "sand",    cls: "bg-sand",    label: "Sand",    hex: "#F7EDE2", usage: "Warm off-white, gradients" },
+  { name: "peach",   cls: "bg-peach",   label: "Peach",   hex: "#F5D4C1", usage: "Warm gradient base" },
+  { name: "blush",   cls: "bg-blush",   label: "Blush",   hex: "#EABFBF", usage: "Pink accent" },
 ];
 
 const semanticPairs = [
-  { bg: "background", bgHex: "#F9F6F2", darkBgHex: "#0D2B35", fg: "foreground", fgHex: "#1B4B5A", darkFgHex: "#E8F4F5", role: "Page background / body text" },
-  { bg: "muted", bgHex: "#EBF3F4", darkBgHex: "#1A3D4A", fg: "muted-foreground", fgHex: "#4A6670", darkFgHex: "#8BBEC6", role: "De-emphasized surface / secondary text" },
-  { bg: "card", bgHex: "rgba(255,255,255,0.7)", darkBgHex: "rgba(27,75,90,0.5)", fg: "card-foreground", fgHex: "#1B4B5A", darkFgHex: "#E8F4F5", role: "Glass card surface" },
-  { bg: "primary", bgHex: "#1B4B5A", darkBgHex: "#A8D5D8", fg: "primary-foreground", fgHex: "#FFFFFF", darkFgHex: "#0D2B35", role: "Primary actions, buttons" },
-  { bg: "secondary", bgHex: "#A8D5D8", darkBgHex: "#1B4B5A", fg: "secondary-foreground", fgHex: "#1B4B5A", darkFgHex: "#A8D5D8", role: "Secondary actions, icon fills" },
-  { bg: "accent", bgHex: "#D4ECEE", darkBgHex: "#1E4A58", fg: "accent-foreground", fgHex: "#1B4B5A", darkFgHex: "#A8D5D8", role: "Hover / active highlight states" },
-  { bg: "destructive", bgHex: "#E87C4E", darkBgHex: "#E87C4E", fg: "destructive-foreground", fgHex: "#FFFFFF", darkFgHex: "#FFFFFF", role: "Errors, destructive actions" },
-  { bg: "warning", bgHex: "#FFBC55", darkBgHex: "#FFBC55", fg: "warning-foreground", fgHex: "#1B4B5A", darkFgHex: "#1B4B5A", role: "Upcoming, caution states" },
+  { bg: "background",  bgCls: "bg-background",  bgAlias: "#F9F6F2",       darkBgAlias: "#0D2B35",
+    fg: "foreground",  fgCls: "bg-[var(--color-foreground)]",  fgAlias: "teal-dark",    darkFgAlias: "#E8F4F5" },
+  { bg: "muted",       bgCls: "bg-muted",        bgAlias: "#EBF3F4",       darkBgAlias: "#1A3D4A",
+    fg: "muted-foreground",  fgCls: "bg-[var(--color-muted-foreground)]",  fgAlias: "#4A6670",     darkFgAlias: "#8BBEC6" },
+  { bg: "card",        bgCls: "bg-card",         bgAlias: "white / 70%",   darkBgAlias: "teal-dark / 50%",
+    fg: "card-foreground",   fgCls: "bg-[var(--color-card-foreground)]",   fgAlias: "teal-dark",    darkFgAlias: "#E8F4F5" },
+  { bg: "primary",     bgCls: "bg-primary",      bgAlias: "teal-dark",     darkBgAlias: "seafoam",
+    fg: "primary-foreground",  fgCls: "bg-[var(--color-primary-foreground)]",  fgAlias: "white",   darkFgAlias: "#0D2B35" },
+  { bg: "secondary",   bgCls: "bg-secondary",    bgAlias: "seafoam",       darkBgAlias: "teal-dark",
+    fg: "secondary-foreground",  fgCls: "bg-[var(--color-secondary-foreground)]",  fgAlias: "teal-dark",  darkFgAlias: "seafoam" },
+  { bg: "accent",      bgCls: "bg-accent",       bgAlias: "seafoam / 20%", darkBgAlias: "#1E4A58",
+    fg: "accent-foreground",   fgCls: "bg-[var(--color-accent-foreground)]",   fgAlias: "teal-dark",   darkFgAlias: "seafoam" },
+  { bg: "destructive", bgCls: "bg-destructive",  bgAlias: "coral",         darkBgAlias: "coral",
+    fg: "destructive-foreground",  fgCls: "bg-[var(--color-destructive-foreground)]",  fgAlias: "white",  darkFgAlias: "white" },
+  { bg: "warning",     bgCls: "bg-warning",      bgAlias: "amber",         darkBgAlias: "amber",
+    fg: "warning-foreground",  fgCls: "bg-[var(--color-warning-foreground)]",  fgAlias: "teal-dark",   darkFgAlias: "teal-dark" },
 ];
 
 const semanticUtilities = [
-  { token: "border", lightHex: "rgba(27,75,90,0.12)", darkHex: "rgba(168,213,216,0.15)", role: "Dividers, card borders" },
-  { token: "ring", lightHex: "#2A6B7C", darkHex: "#A8D5D8", role: "Focus ring (keyboard nav)" },
-  { token: "input", lightHex: "rgba(27,75,90,0.18)", darkHex: "rgba(168,213,216,0.2)", role: "Input field borders" },
+  { token: "border", bgCls: "bg-border", lightAlias: "teal-dark / 12%", darkAlias: "seafoam / 15%" },
+  { token: "ring",   bgCls: "bg-ring",   lightAlias: "teal",            darkAlias: "seafoam" },
+  { token: "input",  bgCls: "bg-input",  lightAlias: "teal-dark / 18%", darkAlias: "seafoam / 20%" },
 ];
 
 const gradients = [
-  { cls: "gradient-brand texture-grain", label: ".gradient-brand", desc: "135° — seafoam → sand → peach" },
+  { cls: "gradient-brand texture-grain",          label: ".gradient-brand",          desc: "135° — seafoam → sand → peach" },
   { cls: "gradient-brand-vertical texture-grain", label: ".gradient-brand-vertical", desc: "180° vertical — seafoam → sand → peach" },
-  { cls: "gradient-hero texture-grain", label: ".gradient-hero", desc: "160° hero — aqua → warm off-white → peach" },
-  { cls: "gradient-brand-soft", label: ".gradient-brand-soft", desc: "Soft brand gradient for CTA sections" },
+  { cls: "gradient-hero texture-grain",           label: ".gradient-hero",           desc: "160° — aqua → warm off-white → peach" },
+  { cls: "gradient-hero-soft",                    label: ".gradient-hero-soft",      desc: "Soft brand gradient for CTA sections" },
 ];
 
 export default function DesignSystemPage() {
@@ -79,117 +87,171 @@ export default function DesignSystemPage() {
         </div>
       </section>
 
-      {/* Colors — Brand */}
+      {/* Color palette */}
       <Section>
-        <SectionHeader overline="Colors" title="Brand palette" className="mb-12" />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {brandColors.map((color) => (
-            <div key={color.name} className="bg-card rounded-xl border border-border overflow-hidden">
-              <div className="h-20" style={{ backgroundColor: color.hex }} />
-              <div className="p-4">
-                <div className="flex items-center justify-between mb-1">
-                  <p className="font-semibold text-foreground">{color.label}</p>
-                  <code className="text-xs text-muted-foreground">{color.hex}</code>
+        <SectionHeader overline="Colors" title="Color palette" className="mb-8" />
+
+        <div className="space-y-6">
+          {/* Brand */}
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground mb-2">Brand</p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border rounded-xl overflow-hidden border border-border">
+              {brandColors.map((color) => (
+                <div key={color.name} className="bg-background">
+                  <div className={`h-14 ${color.cls}`} />
+                  <div className="px-3 py-2.5">
+                    <p className="text-xs font-medium text-foreground">{color.label}</p>
+                    <code className="text-[10px] text-muted-foreground">{color.hex}</code>
+                    <p className="text-[10px] text-muted-foreground mt-0.5 leading-tight">{color.usage}</p>
+                  </div>
                 </div>
-                <p className="text-xs text-muted-foreground">{color.usage}</p>
-                <code className="text-xs text-ring/70 mt-1 block">bg-{color.name} / text-{color.name}</code>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Accent */}
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground mb-2">Accent</p>
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-px bg-border rounded-xl overflow-hidden border border-border">
+              {accentTokens.map((color) => (
+                <div key={color.name} className="bg-background">
+                  <div className={`h-14 ${color.cls}`} />
+                  <div className="px-3 py-2.5">
+                    <p className="text-xs font-medium text-foreground">{color.label}</p>
+                    <code className="text-[10px] text-muted-foreground">{color.hex}</code>
+                    <p className="text-[10px] text-muted-foreground mt-0.5 leading-tight">{color.usage}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </Section>
 
-      {/* Colors — Accent */}
-      <Section background="white">
-        <SectionHeader overline="Colors" title="Accent tokens" className="mb-12" />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {accentTokens.map((color) => (
-            <div key={color.name} className="bg-background rounded-xl border border-border overflow-hidden">
-              <div className="h-20" style={{ backgroundColor: color.hex }} />
-              <div className="p-4">
-                <div className="flex items-center justify-between mb-1">
-                  <p className="font-semibold text-foreground">{color.label}</p>
-                  <code className="text-xs text-muted-foreground">{color.hex}</code>
-                </div>
-                <p className="text-xs text-muted-foreground">{color.usage}</p>
-                <code className="text-xs text-ring/70 mt-1 block">bg-{color.name} / text-{color.name}</code>
-              </div>
+      {/* Semantic tokens */}
+      <Section background="muted">
+        <SectionHeader overline="Theming" title="Semantic tokens" className="mb-4" />
+        <p className="text-sm text-muted-foreground mb-8 max-w-2xl">
+          Every token resolves differently in light and dark mode. Never use raw brand hex values for text, surfaces, or borders in components — always use the semantic name.
+        </p>
+
+        <div className="grid lg:grid-cols-2 gap-5">
+          {/* Light panel */}
+          <div className="light rounded-xl overflow-hidden border border-border bg-background">
+            <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
+              <div className="h-2.5 w-2.5 rounded-full bg-background border border-foreground/30" />
+              <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">Light mode</span>
             </div>
-          ))}
+            {semanticPairs.map((pair) => (
+              <div key={pair.bg} className="px-4 py-2.5 border-b border-border/60">
+                <div className="flex items-center gap-2.5 mb-1.5">
+                  <div className={`h-4 w-4 rounded-[3px] border border-foreground/20 shrink-0 ${pair.bgCls}`} />
+                  <code className="text-[11px] font-semibold flex-1 text-foreground">bg-{pair.bg}</code>
+                  <span className="text-[10px] font-mono text-muted-foreground">{pair.bgAlias}</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <div className={`h-4 w-4 rounded-[3px] border border-foreground/20 shrink-0 ${pair.fgCls}`} />
+                  <code className="text-[11px] flex-1 text-muted-foreground">text-{pair.fg}</code>
+                  <span className="text-[10px] font-mono text-muted-foreground">{pair.fgAlias}</span>
+                </div>
+              </div>
+            ))}
+            <div className="px-4 pt-3 pb-1 border-t border-border">
+              <p className="text-[10px] font-semibold uppercase tracking-widest mb-2 text-muted-foreground">Utilities</p>
+            </div>
+            {semanticUtilities.map((u, i) => (
+              <div key={u.token} className={`flex items-center gap-2.5 px-4 py-2${i === semanticUtilities.length - 1 ? " pb-4" : ""}`}>
+                <div className={`h-4 w-4 rounded-[3px] border border-foreground/20 shrink-0 ${u.bgCls}`} />
+                <code className="text-[11px] font-semibold flex-1 text-foreground">{u.token}</code>
+                <span className="text-[10px] font-mono text-muted-foreground">{u.lightAlias}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Dark panel */}
+          <div className="dark rounded-xl overflow-hidden border border-border bg-background">
+            <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
+              <div className="h-2.5 w-2.5 rounded-full bg-background border border-foreground/30" />
+              <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">Dark mode</span>
+            </div>
+            {semanticPairs.map((pair) => (
+              <div key={pair.bg} className="px-4 py-2.5 border-b border-border/60">
+                <div className="flex items-center gap-2.5 mb-1.5">
+                  <div className={`h-4 w-4 rounded-[3px] border border-foreground/20 shrink-0 ${pair.bgCls}`} />
+                  <code className="text-[11px] font-semibold flex-1 text-foreground">bg-{pair.bg}</code>
+                  <span className="text-[10px] font-mono text-muted-foreground">{pair.darkBgAlias}</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <div className={`h-4 w-4 rounded-[3px] border border-foreground/20 shrink-0 ${pair.fgCls}`} />
+                  <code className="text-[11px] flex-1 text-muted-foreground">text-{pair.fg}</code>
+                  <span className="text-[10px] font-mono text-muted-foreground">{pair.darkFgAlias}</span>
+                </div>
+              </div>
+            ))}
+            <div className="px-4 pt-3 pb-1 border-t border-border">
+              <p className="text-[10px] font-semibold uppercase tracking-widest mb-2 text-muted-foreground">Utilities</p>
+            </div>
+            {semanticUtilities.map((u, i) => (
+              <div key={u.token} className={`flex items-center gap-2.5 px-4 py-2${i === semanticUtilities.length - 1 ? " pb-4" : ""}`}>
+                <div className={`h-4 w-4 rounded-[3px] border border-foreground/20 shrink-0 ${u.bgCls}`} />
+                <code className="text-[11px] font-semibold flex-1 text-foreground">{u.token}</code>
+                <span className="text-[10px] font-mono text-muted-foreground">{u.darkAlias}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
 
-      {/* Semantic Tokens & Gradients */}
+      {/* Gradient utilities */}
       <Section>
-        <SectionHeader overline="Theming" title="Semantic tokens &amp; gradients" className="mb-4" />
-        <p className="text-sm text-muted-foreground mb-10 max-w-2xl">
-          Every semantic token adapts across <code className="text-xs bg-muted px-1 py-0.5 rounded">.light</code> and{" "}
-          <code className="text-xs bg-muted px-1 py-0.5 rounded">.dark</code> — never reach for a raw brand token for text, backgrounds, or borders.
-          Use <code className="text-xs bg-muted px-1 py-0.5 rounded">bg-*</code> for surfaces and{" "}
-          <code className="text-xs bg-muted px-1 py-0.5 rounded">text-*-foreground</code> for text on top.
+        <SectionHeader overline="Theming" title="Gradient utilities" className="mb-4" />
+        <p className="text-sm text-muted-foreground mb-8 max-w-xl">
+          Each gradient has a paired dark variant in CSS — same class name, palette flips automatically.
         </p>
 
-        {/* Paired semantic swatches with light + dark columns */}
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-8">
-          {semanticPairs.map((pair) => (
-            <div key={pair.bg} className="rounded-xl border border-border overflow-hidden">
-              {/* Light */}
-              <div className="flex h-10">
-                <div className="flex-1" style={{ backgroundColor: pair.bgHex }} />
-                <div className="flex-1" style={{ backgroundColor: pair.fgHex }} />
-              </div>
-              {/* Dark */}
-              <div className="flex h-10">
-                <div className="flex-1" style={{ backgroundColor: pair.darkBgHex }} />
-                <div className="flex-1" style={{ backgroundColor: pair.darkFgHex }} />
-              </div>
-              <div className="bg-card p-3">
-                <code className="text-xs font-semibold text-foreground block">bg-{pair.bg}</code>
-                <code className="text-xs text-ring/70 block">text-{pair.fg}</code>
-                <p className="text-[11px] text-muted-foreground mt-1">{pair.role}</p>
-              </div>
+        <div className="grid lg:grid-cols-2 gap-5">
+          {/* Light panel */}
+          <div className="light rounded-xl overflow-hidden border border-border">
+            <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-background">
+              <div className="h-2.5 w-2.5 rounded-full bg-background border border-foreground/30" />
+              <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">Light mode</span>
             </div>
-          ))}
-        </div>
-
-        {/* Utility tokens */}
-        <div className="grid gap-4 sm:grid-cols-3 max-w-xl mb-12">
-          {semanticUtilities.map((u) => (
-            <div key={u.token} className="rounded-xl border border-border overflow-hidden">
-              <div className="flex h-8">
-                <div className="flex-1" style={{ backgroundColor: u.lightHex }} />
-                <div className="flex-1 bg-gray-900" style={{ backgroundColor: "#0D2B35" }}>
-                  <div className="h-full" style={{ backgroundColor: u.darkHex }} />
+            <div className="grid grid-cols-2">
+              {gradients.map((g, i) => (
+                <div key={g.label} className={`bg-background${i % 2 === 0 ? " border-r border-border" : ""}${i < 2 ? " border-b border-border" : ""}`}>
+                  <div className={`h-28 w-full ${g.cls}`} />
+                  <div className="px-3 py-2.5">
+                    <code className="text-[11px] font-semibold block text-foreground">{g.label}</code>
+                    <p className="text-[10px] mt-0.5 leading-tight text-muted-foreground">{g.desc}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="bg-card p-3">
-                <code className="text-xs font-semibold text-foreground block">{u.token}</code>
-                <p className="text-[11px] text-muted-foreground mt-1">{u.role}</p>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* Gradients */}
-        <p className="text-sm font-semibold text-foreground mb-4 uppercase tracking-wider">Gradient utilities</p>
-        <p className="text-sm text-muted-foreground mb-6 max-w-xl">
-          Each gradient has a matching dark variant defined in CSS — the class name stays the same, the palette flips.
-        </p>
-        <div className="grid gap-6 lg:grid-cols-2">
-          {gradients.map((g) => (
-            <div key={g.label} className="rounded-2xl overflow-hidden border border-border">
-              <div className={`h-32 ${g.cls}`} />
-              <div className="bg-card p-4">
-                <code className="text-sm font-semibold text-foreground">{g.label}</code>
-                <p className="text-sm text-muted-foreground mt-1">{g.desc}</p>
-              </div>
+          {/* Dark panel */}
+          <div className="dark rounded-xl overflow-hidden border border-border">
+            <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-background">
+              <div className="h-2.5 w-2.5 rounded-full bg-background border border-foreground/30" />
+              <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">Dark mode</span>
             </div>
-          ))}
+            <div className="grid grid-cols-2">
+              {gradients.map((g, i) => (
+                <div key={g.label} className={`bg-background${i % 2 === 0 ? " border-r border-border" : ""}${i < 2 ? " border-b border-border" : ""}`}>
+                  <div className={`h-28 w-full ${g.cls}`} />
+                  <div className="px-3 py-2.5">
+                    <code className="text-[11px] font-semibold block text-foreground">{g.label}</code>
+                    <p className="text-[10px] mt-0.5 leading-tight text-muted-foreground">{g.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </Section>
 
       {/* Typography */}
-      <Section background="white">
+      <Section background="muted">
         <SectionHeader overline="Typography" title="Type scale" className="mb-12" />
         <div className="space-y-8 max-w-3xl">
           <div className="pb-6 border-b border-border">
@@ -271,7 +333,7 @@ export default function DesignSystemPage() {
       </Section>
 
       {/* Tags */}
-      <Section background="white">
+      <Section background="muted">
         <SectionHeader overline="Components" title="Tags &amp; Badges" className="mb-12" />
         <div className="space-y-6">
           <div>
@@ -364,7 +426,7 @@ export default function DesignSystemPage() {
       </Section>
 
       {/* Surfaces */}
-      <Section background="white">
+      <Section background="muted">
         <SectionHeader overline="Components" title="Surfaces &amp; effects" className="mb-12" />
         <div className="grid gap-6 lg:grid-cols-3">
           <div className="glass rounded-2xl p-8">

@@ -8,7 +8,7 @@ const footerLinks = {
     links: [
       { name: "Luma", href: "https://luma.com/techtank", external: true },
       { name: "Meetup", href: "https://meetup.com/techtank-to", external: true },
-      { name: "Slack", href: "https://join.slack.com/t/thetechtank/shared_invite/zt-2oou5qbue-LXNB4M7~C_6CBAImj1kpJA", external: true },
+      { name: "Slack", href: "/links/slack", external: true },
       { name: "LinkedIn", href: "https://linkedin.com/company/techtank-to", external: true },
       { name: "Instagram", href: "https://instagram.com/techtankto", external: true },
       { name: "GitHub", href: "https://github.com/tech-tankorg", external: true },
@@ -20,15 +20,16 @@ const footerLinks = {
     links: [
       { name: "TechTank", href: "/about", external: false },
       { name: "Team", href: "/about/team", external: false },
+      { name: "FAQ", href: "/about/faq", external: false },
     ],
   },
   getInvolved: {
     title: "Get Involved",
     links: [
-      { name: "Speak", href: "/get-involved/speaker", external: false },
+      { name: "Speak or Facilitate", href: "/get-involved/speak-or-facilitate", external: false },
       { name: "Host", href: "/get-involved/host", external: false },
       { name: "Sponsor", href: "/get-involved/sponsor", external: false },
-      { name: "Volunteer", href: "/get-involved/volunteer", external: false },
+      { name: "Organizer Team", href: "/get-involved/organizer", external: false },
       { name: "Events", href: "/events", external: false },
     ],
   },

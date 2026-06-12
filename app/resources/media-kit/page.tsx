@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Download, FileText, Copy, ExternalLink } from "lucide-react";
+import { Download, FileText, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { ContactCard } from "@/components/ui/contact-card";
+import { CopyButton } from "@/components/ui/copy-button";
 
 export const metadata: Metadata = {
   title: "Media Kit",
@@ -36,7 +37,7 @@ const brandColors = [
 
 const logoDownload = {
   name: "TechTank Logos",
-  href: "/downloads/techtank-logos.zip",
+  href: "/downloads/techtank-media-kit.zip",
   description: "SVG + PNG — light and dark variants",
 };
 
@@ -65,7 +66,7 @@ export default function PressKitPage() {
               partners. All assets are free to use with attribution.
             </p>
             <Button variant="primary" size="lg" asChild>
-              <a href="/downloads/techtank-logos.zip" download>
+              <a href="/downloads/techtank-media-kit.zip" download>
                 <Download className="mr-2 h-5 w-5" />
                 Download all assets (ZIP)
               </a>
@@ -104,7 +105,7 @@ export default function PressKitPage() {
         <div className="max-w-3xl">
           <div className="bg-background rounded-xl border border-border p-6 mb-6">
             <p className="text-foreground leading-relaxed mb-4">
-              <strong>Full paragraph:</strong> TechTank TO is Toronto&apos;s
+              <strong>Full paragraph: </strong>TechTank TO is Toronto&apos;s
               volunteer-run tech community, hosting monthly in-person events
               since 2023. Each event brings together 40-100 attendees,
               including developers, designers, and tech professionals for
@@ -112,21 +113,15 @@ export default function PressKitPage() {
               fostering a supportive and inclusive environment where people of
               all skill levels can explore, create, and thrive in technology.
             </p>
-            <Button variant="ghost" size="sm">
-              <Copy className="mr-2 h-4 w-4" />
-              Copy to clipboard
-            </Button>
+            <CopyButton text="TechTank TO is Toronto's volunteer-run tech community, hosting monthly in-person events since 2023. Each event brings together 40-100 attendees, including developers, designers, and tech professionals for technical talks and networking. TechTank is committed to fostering a supportive and inclusive environment where people of all skill levels can explore, create, and thrive in technology." />
           </div>
           <div className="bg-background rounded-xl border border-border p-6">
             <p className="text-foreground leading-relaxed mb-4">
-              <strong>One-liner:</strong> TechTank TO is Toronto&apos;s
+              <strong>One-liner: </strong>TechTank TO is Toronto&apos;s
               volunteer-run tech community, hosting monthly events for
               developers, designers, and tech professionals since 2023.
             </p>
-            <Button variant="ghost" size="sm">
-              <Copy className="mr-2 h-4 w-4" />
-              Copy to clipboard
-            </Button>
+            <CopyButton text="TechTank TO is Toronto's volunteer-run tech community, hosting monthly events for developers, designers, and tech professionals since 2023." />
           </div>
         </div>
       </Section>
@@ -142,7 +137,7 @@ export default function PressKitPage() {
 
         {/* Logo Preview */}
         <div className="grid gap-6 lg:grid-cols-2 mb-12">
-          <div className="bg-card rounded-xl border border-border p-8 flex items-center justify-center">
+          <div className="bg-white/70 backdrop-blur-md rounded-xl border border-border p-8 flex items-center justify-center">
             <Image
               src="/images/logos/light.svg"
               alt="TechTank TO Logo (light)"

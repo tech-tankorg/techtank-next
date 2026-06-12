@@ -71,7 +71,8 @@ function AvatarSm({ name }: { name: string }) {
 
 function BoardCard({ name, pronouns, role, bio }: TeamMember) {
   return (
-    <div className="poster-card group relative overflow-hidden p-8 flex flex-col gap-6 shadow-soft-lg">
+<<<<<<< HEAD
+    <div className="poster-card gradient-brand group relative overflow-hidden p-8 flex flex-col gap-6 shadow-soft-lg">
       {/* Decorative circle */}
       <div className="pointer-events-none absolute -top-8 -right-8 h-40 w-40 rounded-full bg-white/10 dark:bg-white/5" />
       <div className="pointer-events-none absolute -bottom-12 -left-6 h-32 w-32 rounded-full bg-white/10 dark:bg-white/5" />
@@ -160,7 +161,7 @@ export default function TeamPage() {
               Toronto&apos;s tech community more inclusive and welcoming.
             </p>
             <Button variant="outline" size="lg" asChild>
-              <Link href="/get-involved/volunteer">Join the team</Link>
+              <Link href="/get-involved/organizer">Join the team</Link>
             </Button>
           </div>
         </div>
@@ -274,7 +275,7 @@ export default function TeamPage() {
             Toronto&apos;s most inclusive tech community.
           </p>
           <Button variant="primary" size="lg" asChild>
-            <Link href="/get-involved/volunteer">Volunteer with us</Link>
+            <Link href="/get-involved/organizer">Volunteer with us</Link>
           </Button>
         </div>
       </Section>

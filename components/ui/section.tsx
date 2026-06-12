@@ -8,7 +8,7 @@ const sectionVariants = cva("py-10 lg:py-14", {
       muted: "bg-muted texture-grain",
       white: "bg-card border-y border-border",
       brand: "gradient-brand texture-grain",
-      "brand-soft": "gradient-brand-soft",
+      "brand-soft": "gradient-hero-soft",
       "brand-vertical": "gradient-brand-vertical texture-grain",
     },
   },

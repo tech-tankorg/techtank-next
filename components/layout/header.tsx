@@ -11,6 +11,7 @@ const navigation = [
   { name: "About", href: "/about" },
   { name: "Get Involved", href: "/get-involved" },
   { name: "Events", href: "/events" },
+  { name: "Resources", href: "/resources/media-kit" },
   { name: "Code of Conduct", href: "/legal/code-of-conduct" },
 ];
 

@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['lucide-react'],
   },
   images: {
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
         protocol: "https",
@@ -26,7 +27,20 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.squarespace-cdn.com",
       },
+      {
+        protocol: "https",
+        hostname: "images.lumacdn.com",
+      },
     ],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/links/slack',
+        destination: 'https://join.slack.com/t/thetechtank/shared_invite/zt-3zhdtiavp-afxTnTcQdXEdfx~0mjXGtA',
+        permanent: false,
+      },
+    ];
   },
 };
 

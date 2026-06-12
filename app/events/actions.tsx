@@ -45,6 +45,7 @@ const EventSchema = z.object({
     end_at: z.string(),
     timezone: z.string(),
     url: z.string(),
+    cover_url: z.string().optional(),
   }),
 });
 
@@ -67,6 +68,7 @@ function lumaCalendarResponseToEvents(parsed: LumaEventResponse[]): Event[] {
     status:
       Date.now() > new Date(event.start_at).valueOf() ? "past" : "upcoming",
     eventUrl: `https://luma.com/${event.url}`,
+    imagePath: event.cover_url,
   }));
 }
 

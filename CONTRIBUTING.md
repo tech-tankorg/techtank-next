@@ -68,4 +68,4 @@ Clear issues mean anyone on the team can pick them up and ship without needing t
 
 ## Before you start
 
-Read [`CLAUDE.md`](./CLAUDE.md) and [`prd/PRD.md`](./prd/PRD.md) — they define the information architecture, brand conventions, and content rules that all contributions must follow.
+Read [`AGENTS.md`](./AGENTS.md) and [`prd/PRD.md`](./prd/PRD.md) — they define the information architecture, brand conventions, and content rules that all contributions must follow. (`CLAUDE.md` is a stub that includes `AGENTS.md`.)

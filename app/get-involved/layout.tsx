@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 
 const subNav = [
   { name: "Overview", href: "/get-involved" },
-  { name: "Speaker", href: "/get-involved/speaker" },
+  { name: "Speak or Facilitate", href: "/get-involved/speak-or-facilitate" },
   { name: "Host", href: "/get-involved/host" },
   { name: "Sponsor", href: "/get-involved/sponsor" },
-  { name: "Volunteer", href: "/get-involved/volunteer" },
+  { name: "Organizer Team", href: "/get-involved/organizer" },
 ];
 
 export default function GetInvolvedLayout({

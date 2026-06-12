@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 const subNav = [
   { name: "TechTank", href: "/about" },
   { name: "Team", href: "/about/team" },
+  { name: "FAQ", href: "/about/faq" },
 ];
 
 export default function AboutLayout({ children }: { children: React.ReactNode }) {

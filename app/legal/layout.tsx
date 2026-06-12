@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 
 const legalDocs = [
   { name: "Code of Conduct", href: "/legal/code-of-conduct" },
-  { name: "Privacy Policy", href: "/legal/privacy-policy" },
   { name: "Terms of Service", href: "/legal/terms-of-service" },
+  { name: "Privacy Policy", href: "/legal/privacy-policy" },
 ];
 
 export default function LegalLayout({

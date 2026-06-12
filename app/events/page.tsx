@@ -6,7 +6,8 @@ import { Section, SectionHeader } from "@/components/ui/section";
 import { EventBrowser } from "@/components/ui/event-browser";
 import { DualCTA } from "@/components/ui/dual-cta";
 import { ContactCard } from "@/components/ui/contact-card";
-import { getUpcomingEvents, events } from "@/constants/events";
+import { events } from "@/constants/events";
+import { getLumaEvents, getPastLumaEvents } from "./actions";
 
 export const metadata: Metadata = {
   title: "Events",
@@ -14,9 +15,36 @@ export const metadata: Metadata = {
     "All TechTank TO events — upcoming meetups and past recaps. Monthly in-person events in Toronto since 2023.",
 };
 
-export default function EventsPage() {
-  const upcomingEvents = getUpcomingEvents();
-  const nextEvent = upcomingEvents[0];
+export default async function EventsPage() {
+  const lumaEvents = await getLumaEvents();
+  const pastLumaEvents = await getPastLumaEvents();
+  const allLumaEvents = [...lumaEvents, ...pastLumaEvents];
+
+  const staticLumaSlugs = new Set(
+    events
+      .filter((e) => e.eventUrl?.includes("lu.ma/") || e.eventUrl?.includes("luma.com/"))
+      .map((e) => {
+        const url = e.eventUrl!;
+        const parts = url.split("/");
+        return parts[parts.length - 1].split("?")[0];
+      })
+  );
+
+  const mergedEvents = [...events];
+  for (const lumaEvent of allLumaEvents) {
+    if (!lumaEvent.eventUrl) continue;
+    const parts = lumaEvent.eventUrl.split("/");
+    const slug = parts[parts.length - 1].split("?")[0];
+
+    if (!staticLumaSlugs.has(slug)) {
+      mergedEvents.push(lumaEvent);
+    }
+  }
+
+  // Sort descending by date
+  mergedEvents.sort(
+    (a, b) => new Date(b.start_at).getTime() - new Date(a.start_at).getTime()
+  );
 
   return (
     <>
@@ -39,7 +67,7 @@ export default function EventsPage() {
             </div>
             <div className="shrink-0">
               <p className="text-sm font-semibold text-foreground">
-                {events.length} EVENTS · SINCE 2023
+                {mergedEvents.length} EVENTS · SINCE 2023
               </p>
             </div>
           </div>
@@ -99,7 +127,7 @@ export default function EventsPage() {
           description="Browse, filter, and search all TechTank meetups."
           className="mb-12"
         />
-        <EventBrowser events={events} />
+        <EventBrowser events={mergedEvents} />
       </Section>
 
       {/* Dual CTA */}

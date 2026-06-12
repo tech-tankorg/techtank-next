@@ -1,22 +1,26 @@
 import Link from "next/link";
-import { Check, Mic, Building, Heart, Users } from "lucide-react";
+import { Check, Mic, Building, Heart, Calendar, Star, HandCoins } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export interface RoleCardProps {
-  role: "speaker" | "host" | "sponsor" | "volunteer";
+  role: "attendee" | "speaker" | "host" | "sponsor" | "organizer" | "donate";
   overline: string;
   title: string;
   description: string;
   benefits: string[];
   href: string;
   ctaText?: string;
+  external?: boolean;
+  comingSoon?: boolean;
 }
 
 const icons = {
+  attendee: Calendar,
   speaker: Mic,
   host: Building,
   sponsor: Heart,
-  volunteer: Users,
+  organizer: Star,
+  donate: HandCoins,
 };
 
 export function RoleCard({
@@ -27,6 +31,8 @@ export function RoleCard({
   benefits,
   href,
   ctaText = "Learn more",
+  external = false,
+  comingSoon = false,
 }: RoleCardProps) {
   const Icon = icons[role];
 
@@ -61,34 +67,56 @@ export function RoleCard({
       </ul>
 
       {/* CTA */}
-      <Button variant="outline" size="sm" asChild className="w-full">
-        <Link href={href}>{ctaText}</Link>
-      </Button>
+      {comingSoon ? (
+        <Button variant="outline" size="sm" className="w-full text-center" disabled>
+          Coming soon
+        </Button>
+      ) : (
+        <Button variant="outline" size="sm" asChild className="w-full text-center">
+          <Link href={href} {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
+            {ctaText}
+          </Link>
+        </Button>
+      )}
     </div>
   );
 }
 
 export const roleCardsData: RoleCardProps[] = [
   {
+    role: "attendee",
+    overline: "Start here",
+    title: "Attend an event",
+    description:
+      "The easiest way to start. All events are listed on our Luma calendar. Show up, meet people, see if it clicks.",
+    benefits: [
+      "No signup required",
+      "Meet the community in person",
+      "Keeps most events accessible",
+    ],
+    href: "/events",
+    ctaText: "Browse upcoming events",
+  },
+  {
     role: "speaker",
     overline: "Share what you know",
-    title: "Speak at an event",
+    title: "Speak or Facilitate",
     description:
-      "Share your expertise with the Toronto tech community. We help first-time speakers succeed.",
+      "Got something to share? We're always looking for speakers, panelists, and workshop facilitators. You don't need to be a senior engineer or a public figure.",
     benefits: [
       "30-45 min talk + Q&A",
       "Any tech topic welcome",
       "Recorded and published to YouTube",
     ],
-    href: "/get-involved/speaker",
+    href: "/get-involved/speak-or-facilitate",
     ctaText: "Apply to speak",
   },
   {
     role: "host",
-    overline: "Bring us to your space",
+    overline: "Your space, our community",
     title: "Host an event",
     description:
-      "Bring the Toronto tech community to your office. Great for recruiting and brand visibility.",
+      "If your company has space and wants to support community-driven tech programming in Toronto, we'd love to talk.",
     benefits: [
       "40-100 attendees",
       "6:00-8:30pm weeknight",
@@ -99,10 +127,10 @@ export const roleCardsData: RoleCardProps[] = [
   },
   {
     role: "sponsor",
-    overline: "Support the community",
-    title: "Become a sponsor",
+    overline: "Back the community",
+    title: "Sponsor TechTank",
     description:
-      "Support Toronto's most inclusive tech community with tasteful brand visibility.",
+      "If your company has budget or resources and wants to support community-driven tech programming in Toronto, we'd love to talk.",
     benefits: [
       "Logo on website and marketing",
       "Speaker slot options",
@@ -112,17 +140,32 @@ export const roleCardsData: RoleCardProps[] = [
     ctaText: "Sponsor TechTank",
   },
   {
-    role: "volunteer",
-    overline: "Help run the crew",
-    title: "Volunteer with us",
+    role: "organizer",
+    overline: "Shape what TechTank becomes",
+    title: "Join the Organizer Team",
     description:
-      "Join the team that makes TechTank happen. Multiple roles available.",
+      "We're building out a more structured volunteer leadership team with defined roles and a 6-month commitment. If you want to help shape what TechTank becomes, this is the path.",
     benefits: [
-      "Event-day or ongoing roles",
-      "No speaking required",
-      "Portfolio-quality work",
+      "Defined leadership roles",
+      "6-month commitment",
+      "Shape TechTank's direction",
     ],
-    href: "/get-involved/volunteer",
-    ctaText: "Join the crew",
+    href: "/get-involved/organizer",
+    ctaText: "Express interest in organizing",
+  },
+  {
+    role: "donate",
+    overline: "Support the mission",
+    title: "Donate to TechTank",
+    description:
+      "TechTank is a registered nonprofit corporation in Ontario. We're volunteer-run and community-funded, and every dollar goes directly back into programming and operations.",
+    benefits: [
+      "Covers platform fees and event materials",
+      "Keeps most events accessible",
+      "Supports a registered nonprofit",
+    ],
+    href: "#",
+    ctaText: "Donate",
+    comingSoon: true,
   },
 ];

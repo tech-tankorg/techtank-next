@@ -4,7 +4,7 @@ import { sponsors, type Sponsor } from "./sponsors";
 export type { Sponsor };
 
 export const events: Event[] = [
-  // ─── Upcoming ────────────────────────────────────────────────────────────────
+  // ─── 2026 ────────────────────────────────────────────────────────────────────
   {
     id: "supercollider-spring-fling-2026",
     title: "SUPERCOLLIDER Spring Fling — Toronto Tech Communities Networking Night",
@@ -12,7 +12,7 @@ export const events: Event[] = [
     start_at: "2026-04-27T18:00:00",
     venue: "Left Field Brewery (Liberty Village)",
     tags: ["Networking", "Social", "Multi-community"],
-    status: "upcoming",
+    status: "past",
     eventUrl: "https://lu.ma/supercollider-spring-fling-2026",
     imagePath: "/images/luma/b3bae200-2226-4cd2-9796-5a7480abda7c.jpeg",
   },
@@ -23,11 +23,10 @@ export const events: Event[] = [
     start_at: "2026-05-02T11:00:00",
     venue: "Prema Coffee and Bar",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
-    status: "upcoming",
+    status: "past",
     eventUrl: "https://lu.ma/3ea6eq1s",
     imagePath: "/images/luma/bca86cee-3fdb-403a-bb09-ccc095690401.jpeg",
   },
-  // ─── 2026 ────────────────────────────────────────────────────────────────────
   {
     id: "techtank-turns-3",
     title: "This ain't my first rodeo 🤠🪩 TECHTANK 3 YEAR ANNIVERSARY",
