@@ -16,7 +16,7 @@ export function TeamProfileDialog({ member, open, onClose, titleId }: TeamProfil
 
   return (
     <Dialog open={open} onClose={onClose} labelledBy={titleId}>
-      <div className="flex flex-col items-center text-center gap-4">
+      <div className="flex shrink-0 flex-col items-center text-center gap-4">
         <TeamAvatar name={name} avatar={avatar} size="xl" />
         <div>
           <p id={titleId} className="font-display text-2xl font-bold text-foreground leading-tight">
@@ -27,7 +27,8 @@ export function TeamProfileDialog({ member, open, onClose, titleId }: TeamProfil
         </div>
       </div>
 
-      <div className="border-t border-border pt-5 pb-4">
+      <div className="shrink-0 border-t border-border" />
+      <div className="flex-1 min-h-0 overflow-y-auto pb-4">
         {bio ? (
           <div className="space-y-4">
             {bio
