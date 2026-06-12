@@ -40,7 +40,7 @@ press kit signals that the community is serious.
 2. **Fast facts**
    - Founded: 2023
    - Location: Toronto, Canada
-   - Cadence: monthly in-person events + ongoing Slack community
+   - Cadence: year-round in-person events + ongoing Slack community
    - Typical attendance: 40–100 / event
    - Volunteer-run, non-commercial
    - Contact: `techtankto@gmail.com`

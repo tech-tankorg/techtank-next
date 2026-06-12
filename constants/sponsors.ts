@@ -22,6 +22,14 @@ export const sponsors: Record<string, Sponsor> = {
     url: "https://www.kobo.com",
     type: "sponsor",
   },
+  docebo: {
+    id: "docebo",
+    name: "Docebo",
+    logo: "/images/sponsors/docebo.svg",
+    url: "https://www.docebo.com",
+    type: "sponsor",
+    scale: 0.8,
+  },
   microsoft: {
     id: "microsoft",
     name: "Microsoft",

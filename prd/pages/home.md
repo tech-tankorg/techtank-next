@@ -31,13 +31,13 @@ professional and credible.
 
 - A lively, inclusive tech community that welcomes all walks of life.
 - Volunteer-run, Toronto-based, founded 2023.
-- Monthly in-person events: technical talks + networking.
+- Year-round in-person events: technical talks + networking.
 - Built by and for the Toronto tech community.
 
 ## 4. Content sections (top to bottom)
 
 1. **Hero**
-   - Overline kicker: `TORONTO · MONTHLY · SINCE 2023`.
+   - Overline kicker: `TORONTO · YEAR-ROUND · SINCE 2023`.
    - Brand lockup + one-sentence mission.
    - Primary CTA: **"RSVP on Luma"** → `/events`.
    - Secondary CTA: "Join our Slack".
@@ -48,7 +48,7 @@ professional and credible.
 2. **Trust strip / fast facts**
    - Fast facts pulled from the structured events content — for
      example attendees per event, talks delivered, events hosted,
-     monthly cadence. Any number that organizers haven't confirmed
+     year-round availability. Any number that organizers haven't confirmed
      is flagged "finalize with organizers", not invented.
    - Renders as a thin band of large numerals under the hero.
 

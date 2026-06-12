@@ -3,7 +3,7 @@
 **URL:** https://www.techtankto.com/get-involved/host
 **Page title:** Host a TechTank Event — TechTank TO
 **Role:** Recruit Toronto companies to provide venue and food for a
-TechTank monthly meetup.
+TechTank meetup.
 
 ---
 

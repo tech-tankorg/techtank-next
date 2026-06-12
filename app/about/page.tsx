@@ -54,13 +54,6 @@ const values = [
     color: "teal",
   },
   {
-    icon: Unlock,
-    title: "Expanding access to opportunity",
-    description:
-      "We create pathways for people to discover opportunities, build networks, and move forward in their careers.",
-    color: "amber",
-  },
-  {
     icon: MapPin,
     title: "Local impact",
     description:
@@ -143,7 +136,7 @@ export default function AboutPage() {
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               TechTank TO is a volunteer-run, Toronto-based tech community
-              founded in 2023. We host monthly in-person events where
+              founded in 2023. We host year-round in-person events where
               developers, designers, PMs, and tech-curious people gather to
               learn, share, and connect. No gatekeeping—just people
               helping people grow in tech.
@@ -217,7 +210,7 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                TechTank was founded in January 2023 with a simple idea: build a
+                TechTank TO was founded in January 2023 with a simple idea: build a
                 community for early-stage engineers in Toronto. Free (or low cost)
                 events, real connections, no pressure. A place where people just
                 starting out could learn, meet others, and feel like they belonged
