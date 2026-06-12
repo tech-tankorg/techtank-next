@@ -104,7 +104,11 @@ When she's not here, she's doing stand-up comedy, crocheting, fencing, or digita
         name: "Eileen Xue",
         pronouns: "she/her",
         avatar: "/images/team/eileen-xu.webp",
-        bio: ``,
+        bio: `Eileen is a Tech Lead, Product at Curacity, a platform that helps hospitality brands reach travellers through media and AI-driven discovery. Beyond her day job, she's a Women Techmakers Ambassador and an active member of several women-in-tech communities.
+Her TechTank story started in the pandemic, attending virtual events and slowly getting to know the community. A chance run-in at a conference with current co-chair Niki (who, as it turns out, went to undergrad with Eileen's husband) led to an invitation to Code Diversity. That small-world moment has kept her showing up ever since.
+Today she volunteers wherever help is needed: events, participation, community engagement, and the in-between moments that make a community feel real. She believes TechTank is for everyone in tech, not just developers, and hopes people leave with a connection they didn't expect and a sense that they belong here.
+When she's not here, she's somewhere in the world or somewhere in Toronto chasing a great meal. Sushi and steak are her love languages, ideally on the same menu.
+`,
       },
     ],
   },
