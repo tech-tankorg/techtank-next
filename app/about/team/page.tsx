@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
-import { BoardCard, CompactTile, CoreCard } from "@/components/ui/team-card";
+import { BoardCard } from "@/components/ui/board-card";
+import { CompactTile } from "@/components/ui/compact-tile";
+import { CoreCard } from "@/components/ui/core-card";
 import { teamGroups } from "@/constants/team";
 
 export const metadata: Metadata = {
