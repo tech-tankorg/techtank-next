@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
-import { BoardCard } from "@/components/ui/board-card";
-import { CompactTile } from "@/components/ui/compact-tile";
-import { CoreCard } from "@/components/ui/core-card";
+import { TeamCard } from "@/components/ui/team-card";
 import { teamGroups } from "@/constants/team";
 
 export const metadata: Metadata = {
@@ -60,7 +58,7 @@ export default function TeamPage() {
           </p>
           <div className="grid gap-5 sm:grid-cols-2">
             {boardCoChairs.members.map((m) => (
-              <BoardCard key={m.name} member={m} />
+              <TeamCard key={m.name} variant="board" member={m} />
             ))}
           </div>
         </div>
@@ -71,7 +69,7 @@ export default function TeamPage() {
           </p>
           <div className="grid gap-5 sm:grid-cols-2">
             {boardTreasurer.members.map((m) => (
-              <BoardCard key={m.name} member={m} />
+              <TeamCard key={m.name} variant="board" member={m} />
             ))}
           </div>
         </div>
@@ -87,7 +85,7 @@ export default function TeamPage() {
         />
         <div className="grid gap-4 sm:grid-cols-2">
           {coreTeam.members.map((m) => (
-            <CoreCard key={m.name} member={m} />
+            <TeamCard key={m.name} variant="core" member={m} />
           ))}
         </div>
       </Section>
@@ -103,7 +101,7 @@ export default function TeamPage() {
             />
             <div className="grid gap-3">
               {websiteTeam.members.map((m) => (
-                <CompactTile key={m.name} {...m} />
+                <TeamCard key={m.name} variant="compact" member={m} />
               ))}
             </div>
           </div>
@@ -115,7 +113,7 @@ export default function TeamPage() {
             />
             <div className="grid gap-3">
               {socialMedia.members.map((m) => (
-                <CompactTile key={m.name} {...m} />
+                <TeamCard key={m.name} variant="compact" member={m} />
               ))}
             </div>
           </div>
@@ -132,7 +130,7 @@ export default function TeamPage() {
         />
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {volunteers.members.map((m) => (
-            <CompactTile key={m.name + (m.role ?? "")} {...m} />
+            <TeamCard key={m.name + (m.role ?? "")} variant="compact" member={m} />
           ))}
         </div>
       </Section>
