@@ -42,7 +42,7 @@ page a potential speaker, host, sponsor, or member can point to and say
 
 3. **Origin story**
    - One or two paragraphs: founded in 2023 in Toronto
-     events with 40–100 attendees; entirely volunteer-run.
+     events with 40–120 attendees; entirely volunteer-run.
 
 4. **What we do**
    - Year-round in-person events (technical talk + networking).

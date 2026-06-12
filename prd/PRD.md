@@ -122,7 +122,7 @@ under Ontario/Canadian jurisdiction.
 | `/about` | About | Values & community manifesto (the four pillars) |
 | `/get-involved` | Get Involved | Onboarding hub; routes visitors to a role |
 | `/get-involved/speak-or-facilitate` | Speak or Facilitate | Speaker logistics + intake action (email us) |
-| `/get-involved/host` | Host | Venue logistics (40–100 cap, 6–8:30pm) + intake action (email us) |
+| `/get-involved/host` | Host | Venue logistics (40–120 cap, 6–8:30pm) + intake action (email us) |
 | `/get-involved/sponsor` | Sponsor | Corporate partner pitch + intake action (email us) |
 | `/get-involved/organizer` | Organizer Team | Crew onboarding + intake action (email us) |
 | `/events` | Events | Upcoming events via Luma calendar |

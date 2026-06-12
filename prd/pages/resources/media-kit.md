@@ -41,7 +41,7 @@ press kit signals that the community is serious.
    - Founded: 2023
    - Location: Toronto, Canada
    - Cadence: year-round in-person events + ongoing Slack community
-   - Typical attendance: 40–100 / event
+   - Typical attendance: 40–120 / event
    - Volunteer-run, non-commercial
    - Contact: `techtankto@gmail.com`
    - Finalize all numbers with organizers before publishing.
