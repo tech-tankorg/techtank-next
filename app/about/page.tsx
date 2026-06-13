@@ -94,7 +94,7 @@ const currentPrograms = [
     icon: Coffee,
     title: "Code Diversity Monthly Coffee Chats",
     description:
-      "A recurring monthly series for women and non-binary folks in tech. Casual, intentional, and community-led.",
+      "A recurring monthly series for women and gender-diverse folks in tech. Casual, intentional, and community-led.",
   },
   {
     icon: Trophy,

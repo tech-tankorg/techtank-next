@@ -19,7 +19,7 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2026-05",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Welcoming coffee meetup for women and non-binary folks in tech",
+    pitch: "Welcoming coffee meetup for women and gender-diverse folks in tech",
     start_at: "2026-05-02T11:00:00",
     venue: "Prema Coffee and Bar",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
@@ -63,7 +63,7 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2026-04",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2026-04-11T11:00:00",
     venue: "Prema Coffee and Bar",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
@@ -85,7 +85,7 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2026-01",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2026-01-17T11:00:00",
     venue: "Prema Coffee and Bar",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
@@ -97,7 +97,7 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2025-12",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-12-20T11:00:00",
     venue: "Prema Coffee and Bar",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
@@ -119,7 +119,7 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2025-11",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-11-15T11:00:00",
     venue: "Prema Coffee and Bar",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
@@ -130,7 +130,7 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2025-10",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-10-18T11:00:00",
     venue: "Prema Coffee and Bar",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
@@ -176,7 +176,7 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2025-09",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-09-06T11:00:00",
     venue: "Prema Coffee and Bar",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
@@ -197,7 +197,7 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2025-08",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-08-02T11:00:00",
     venue: "Prema Coffee and Bar",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
@@ -240,7 +240,7 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2025-05",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-05-24T11:00:00",
     venue: "Prema Coffee and Bar",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
@@ -263,7 +263,7 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2025-04",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-04-26T11:00:00",
     venue: "Prema Coffee and Bar",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
@@ -293,7 +293,7 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2025-03",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-03-15T11:00:00",
     venue: "Prema Coffee and Bar",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
@@ -304,7 +304,7 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2025-02",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-02-15T11:00:00",
     venue: "Carbonic Coffee",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
@@ -328,7 +328,7 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2025-01",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-01-11T11:00:00",
     venue: "Carbonic Coffee",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
@@ -352,7 +352,7 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2024-12",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2024-12-14T11:00:00",
     venue: "Carbonic Coffee",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
@@ -375,7 +375,7 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2024-11",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2024-11-16T11:00:00",
     venue: "Carbonic Coffee",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
@@ -437,7 +437,7 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2024-09",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2024-09-14T11:00:00",
     venue: "Carbonic Coffee",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
@@ -484,7 +484,7 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2024-08",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2024-08-10T11:00:00",
     venue: "Carbonic Coffee",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
@@ -539,7 +539,7 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2024-07",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2024-07-13T11:00:00",
     venue: "Carbonic Coffee",
     tags: ["Coffee Chat", "CodeDiversity", "Social",],
