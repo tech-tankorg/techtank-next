@@ -38,7 +38,7 @@ const logistics = [
   { label: "Workshop", value: "60-90 minutes, hands-on and interactive" },
   { label: "Topics", value: "Anything related to tech" },
   { label: "Format", value: "In-person at a host venue in Toronto" },
-  { label: "Audience", value: "40-100 attendees per event" },
+  { label: "Audience", value: "40-120 attendees per event" },
 ];
 
 const techTankHandles = [

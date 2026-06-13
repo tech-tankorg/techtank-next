@@ -118,8 +118,8 @@ export const roleCardsData: RoleCardProps[] = [
     description:
       "If your company has space and wants to support community-driven tech programming in Toronto, we'd love to talk.",
     benefits: [
-      "40-100 attendees",
-      "6:00-8:30pm weeknight",
+      "40-120 attendees",
+      "~6:00-8:30pm on weeknights",
       "Logo on event marketing",
     ],
     href: "/get-involved/host",

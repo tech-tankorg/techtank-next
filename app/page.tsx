@@ -45,7 +45,7 @@ export default async function HomePage() {
             {/* Left: Text content */}
             <div className="lg:max-w-xl py-8 lg:py-12">
               <span className="tag mb-4">
-                Toronto &middot; Monthly &middot; Inclusive
+                Toronto &middot; Year-round &middot; Inclusive
               </span>
               <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
                 Toronto&apos;s home for tech community

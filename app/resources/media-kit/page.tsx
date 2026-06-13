@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 const fastFacts = [
   { label: "Founded", value: "2023" },
   { label: "Location", value: "Toronto, Canada" },
-  { label: "Cadence", value: "Monthly in-person events via Luma + ongoing Slack community" },
-  { label: "Typical attendance", value: "40-100 per event" },
+  { label: "Cadence", value: "Year-round, in-person events via Luma + ongoing Slack community" },
+  { label: "Typical attendance", value: "40-120 per event" },
   { label: "Structure", value: "Volunteer-run, non-commercial" },
   { label: "Contact", value: "techtankto@gmail.com" },
 ];
@@ -102,26 +102,36 @@ export default function PressKitPage() {
           title="About TechTank (for press)"
           className="mb-8"
         />
-        <div className="max-w-3xl">
-          <div className="bg-background rounded-xl border border-border p-6 mb-6">
+        <div className="max-w-3xl space-y-6">
+          <div className="bg-background rounded-xl border border-border p-6">
             <p className="text-foreground leading-relaxed mb-4">
               <strong>Full paragraph: </strong>TechTank TO is Toronto&apos;s
-              volunteer-run tech community, hosting monthly in-person events
-              since 2023. Each event brings together 40-100 attendees,
+              volunteer-run tech community, hosting year-round in-person events
+              since 2023. Each event brings together 40-120 attendees,
               including developers, designers, and tech professionals for
               technical talks and networking. TechTank is committed to
               fostering a supportive and inclusive environment where people of
               all skill levels can explore, create, and thrive in technology.
             </p>
-            <CopyButton text="TechTank TO is Toronto's volunteer-run tech community, hosting monthly in-person events since 2023. Each event brings together 40-100 attendees, including developers, designers, and tech professionals for technical talks and networking. TechTank is committed to fostering a supportive and inclusive environment where people of all skill levels can explore, create, and thrive in technology." />
+            <CopyButton text="TechTank TO is Toronto's volunteer-run tech community, hosting year-round in-person events since 2023. Each event brings together 40-120 attendees, including developers, designers, and tech professionals for technical talks and networking. TechTank is committed to fostering a supportive and inclusive environment where people of all skill levels can explore, create, and thrive in technology." />
           </div>
           <div className="bg-background rounded-xl border border-border p-6">
             <p className="text-foreground leading-relaxed mb-4">
               <strong>One-liner: </strong>TechTank TO is Toronto&apos;s
-              volunteer-run tech community, hosting monthly events for
+              volunteer-run tech community, hosting year-round events for
               developers, designers, and tech professionals since 2023.
             </p>
-            <CopyButton text="TechTank TO is Toronto's volunteer-run tech community, hosting monthly events for developers, designers, and tech professionals since 2023." />
+            <CopyButton text="TechTank TO is Toronto's volunteer-run tech community, hosting year-round events for developers, designers, and tech professionals since 2023." />
+          </div>
+          <div className="bg-background rounded-xl border border-border p-6">
+            <p className="text-foreground leading-relaxed mb-4">
+              <strong>Mission statement: </strong>TechTank strengthens
+              Toronto&apos;s tech ecosystem by creating engaging,
+              community-driven spaces that bring people together through social
+              events and career-focused programming, helping them build
+              meaningful connections and grow in their careers.
+            </p>
+            <CopyButton text="TechTank strengthens Toronto's tech ecosystem by creating engaging, community-driven spaces that bring people together through social events and career-focused programming, helping them build meaningful connections and grow in their careers." />
           </div>
         </div>
       </Section>

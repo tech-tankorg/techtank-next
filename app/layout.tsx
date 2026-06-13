@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
       template: "%s — TechTank TO",
     },
     description:
-      "Foster a supportive and inclusive environment where people of all skill levels can explore, create, and thrive in technology. Monthly in-person events in Toronto.",
+      "Foster a supportive and inclusive environment where people of all skill levels can explore, create, and thrive in technology. Year-round in-person events in Toronto.",
     twitter: {
       card: "summary_large_image",
       title: "TechTank TO — Toronto's Tech Community",
@@ -77,7 +77,7 @@ export default async function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${spaceGrotesk.variable} bg-background`}
     >
-      <body className="min-h-screen flex flex-col font-sans antialiased">
+      <body className="min-h-screen flex flex-col font-sans antialiased" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

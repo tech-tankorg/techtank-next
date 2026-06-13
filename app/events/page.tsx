@@ -12,7 +12,7 @@ import { getLumaEvents, getPastLumaEvents } from "./actions";
 export const metadata: Metadata = {
   title: "Events",
   description:
-    "All TechTank TO events — upcoming meetups and past recaps. Monthly in-person events in Toronto since 2023.",
+    "All TechTank TO events — upcoming meetups and past recaps. Year-round in-person events in Toronto since 2023.",
 };
 
 export default async function EventsPage() {

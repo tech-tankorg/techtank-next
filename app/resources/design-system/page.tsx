@@ -407,7 +407,7 @@ export default function DesignSystemPage() {
           {/* Stat card */}
           <div className="bg-card rounded-xl border border-border p-5">
             <p className="text-sm text-muted-foreground mb-1">Stat label</p>
-            <p className="font-display text-3xl font-semibold text-foreground">40–100</p>
+            <p className="font-display text-3xl font-semibold text-foreground">40–120</p>
             <p className="text-sm text-muted-foreground mt-1">Attendees per event</p>
           </div>
 

@@ -62,7 +62,7 @@ intake.
          and published to YouTube
      - **Host** → `/get-involved/host`
        - Overline: `BRING US TO YOUR SPACE`
-       - Checkmarks: 40–100 attendees · 6:00–8:30pm weeknight · Logo
+       - Checkmarks: 40–120 attendees · 6:00–8:30pm weeknight · Logo
          on event marketing
      - **Sponsor** → `/get-involved/sponsor`
        - Overline: `SUPPORT THE COMMUNITY`
