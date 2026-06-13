@@ -136,7 +136,7 @@ export default function OrganizerPage() {
               </a>
             </Button>
             <Button variant="outline" size="sm" asChild>
-              <Link href="/events">Come to an event first</Link>
+              <Link href="/events">Attend an event first</Link>
             </Button>
           </div>
         </div>

@@ -76,10 +76,12 @@ under Ontario/Canadian jurisdiction.
 - 7shifts (Canadian HQ)
 - Rakuten Canada
 - Cohere (Canadian-founded)
+- Docebo (Canadian HQ)
 - Vena Solutions (Canadian HQ)
 - Points / Plusgrade (Canadian HQ)
 - Intuit Canada
 - Microsoft Canada
+- BrainStation
 - Prema Coffee (Toronto local)
 
 ### 1.6 Success metrics
@@ -120,7 +122,7 @@ under Ontario/Canadian jurisdiction.
 | `/about` | About | Values & community manifesto (the four pillars) |
 | `/get-involved` | Get Involved | Onboarding hub; routes visitors to a role |
 | `/get-involved/speak-or-facilitate` | Speak or Facilitate | Speaker logistics + intake action (email us) |
-| `/get-involved/host` | Host | Venue logistics (40–100 cap, 6–8:30pm) + intake action (email us) |
+| `/get-involved/host` | Host | Venue logistics (40–120 cap, 6–8:30pm) + intake action (email us) |
 | `/get-involved/sponsor` | Sponsor | Corporate partner pitch + intake action (email us) |
 | `/get-involved/organizer` | Organizer Team | Crew onboarding + intake action (email us) |
 | `/events` | Events | Upcoming events via Luma calendar |
@@ -231,7 +233,7 @@ CTAs are fine; tertiary links belong in the footer.
   quotes—let the genuine reactions speak for themselves.
   - LinkedIn: https://linkedin.com/company/techtank-to
   - Instagram: https://instagram.com/techtankto
-- Numeric facts: 40-100 attendees per event, 45+ events hosted (25+ main
+- Numeric facts: 40-120 attendees per event, 45+ events hosted (25+ main
   events + 20+ CodeDiversity events), monthly cadence since 2023
 - Sponsor / host logo cloud
 - Linked previews of recent Google Photos albums and Instagram posts

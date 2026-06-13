@@ -76,14 +76,14 @@ roles available, and make signing up low-friction.
 
 1. Email `techtankto@gmail.com` to volunteer
 2. Join our Slack
-3. Come to an event first (link to `/events`)
+3. Attend an event first (link to `/events`)
 
 ## 6. Functional requirements
 
 - Prominent intake CTA (`mailto:techtankto@gmail.com`) with a clear
   button and suggested-details scaffold.
 - Role list renders from structured content so organizers can edit it.
-- "Come to an event first" path is always offered for people not ready
+- "Attend an event first" path is always offered for people not ready
   to commit.
 
 ## 7. Acceptance criteria

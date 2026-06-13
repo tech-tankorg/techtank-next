@@ -31,7 +31,7 @@ partnership, swag, travel budget for speakers, etc.).
 
 1. **Hero**
    - Headline: "Sponsor the Toronto tech community."
-   - Sub-headline: "Support the monthly events, speakers, and programs
+   - Sub-headline: "Support the year-round events, speakers, and programs
      that bring the community together."
    - Primary CTA: "Request sponsorship info" → email us (`techtankto@gmail.com`).
 
@@ -41,7 +41,7 @@ partnership, swag, travel budget for speakers, etc.).
    - **Impact** — your support keeps events accessible and free.
 
 3. **What sponsorship supports**
-   - Monthly event operations (when no host is available).
+   - Year-round event operations (when no host is available).
    - Programs like Code Diversity for underrepresented voices.
    - Equipment (AV, recording) and production costs.
 

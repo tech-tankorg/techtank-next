@@ -40,7 +40,7 @@ const whySponsor = [
 ];
 
 const whatSponsorshipSupports = [
-  "Monthly event operations when no host venue is available",
+  "Event operations when no host venue is available",
   "Community programs like Code Diversity for underrepresented voices",
   "Equipment, recording, and production costs",
   "Slack community and online resources",
@@ -89,7 +89,7 @@ export default function SponsorPage() {
               Sponsor the Toronto tech community
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Support the monthly events, speakers, and programs that bring the
+              Support the year-round events, speakers, and programs that bring the
               community together. Tasteful brand visibility, real impact.
             </p>
             <Button variant="primary" size="lg" asChild>
