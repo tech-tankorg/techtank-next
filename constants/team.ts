@@ -138,7 +138,7 @@ When she's not here, she's somewhere in the world or somewhere in Toronto chasin
   {
     title: "Community Volunteers",
     members: [
-      { name: "Charu Idnani", pronouns: "she/her", role: "CodeDiversity" },
+      { name: "Charu Idnani", pronouns: "she/her", role: "CodeDiversity", avatar: "/images/team/charu-idnani.webp" },
       { name: "Garv Gupta", pronouns: "she/her", role: "General", avatar: "/images/team/garv-gupta.webp" },
       { name: "Nhi Nguyen", pronouns: "she/her", role: "General, CodeDiversity", avatar: "/images/team/nhi-nguyen.webp" },
       { name: "Rana Soyak", pronouns: "she/her", role: "General", avatar: "/images/team/rana-soyak.webp" },
