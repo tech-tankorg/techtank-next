@@ -87,7 +87,7 @@ const currentPrograms = [
     icon: Coffee,
     title: "Code Diversity Monthly Coffee Chats",
     description:
-      "A recurring monthly series for women and non-binary folks in tech. Casual, intentional, and community-led.",
+      "A recurring monthly series for women and gender-diverse folks in tech. Casual, intentional, and community-led.",
   },
   {
     icon: Trophy,
@@ -350,9 +350,17 @@ export default function AboutPage() {
             Whether you want to pitch a new idea or get involved in an existing
             initiative, we want to hear from you.
           </p>
-          <Button variant="primary" size="lg" asChild>
-            <Link href="/get-involved">Get involved as an organizer</Link>
-          </Button>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button variant="primary" size="lg" asChild>
+              <Link href="/events">See upcoming events</Link>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/get-involved">Get involved</Link>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/about/team">Meet the team</Link>
+            </Button>
+          </div>
         </div>
       </Section>
 
