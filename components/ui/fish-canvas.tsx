@@ -108,12 +108,10 @@ export default function FishCanvas() {
     let lastTime = 0;
 
     function resize() {
-      W = window.innerWidth;
-      H = window.innerHeight;
+      W = canvas!.clientWidth;
+      H = canvas!.clientHeight;
       canvas!.width = W * dpr;
       canvas!.height = H * dpr;
-      canvas!.style.width = `${W}px`;
-      canvas!.style.height = `${H}px`;
       ctx!.scale(dpr, dpr);
       fishRef.current = Array.from({ length: FISH_COUNT }, (_, i) =>
         makeFish(i, W, H)
@@ -155,11 +153,26 @@ export default function FishCanvas() {
       mouseRef.current = { x: e.clientX, y: e.clientY };
       setCursorPos({ x: e.clientX, y: e.clientY });
     }
+    
+    function handleTouchMove(e: TouchEvent) {
+      if (e.touches.length > 0) {
+        mouseRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+        setCursorPos({ x: e.touches[0].clientX, y: e.touches[0].clientY });
+      }
+    }
+
     window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    window.addEventListener('touchmove', handleTouchMove);
+    window.addEventListener('touchstart', handleTouchMove);
+    
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchstart', handleTouchMove);
+    };
   }, []);
 
   return (
-      <canvas ref={canvasRef} className="absolute inset-0 z-0" />
+      <canvas ref={canvasRef} className="absolute inset-0 z-0 w-full h-full" />
   );
 }
