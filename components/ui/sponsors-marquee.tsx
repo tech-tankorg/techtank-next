@@ -13,7 +13,7 @@ export function SponsorsMarquee({ className }: { className?: string }) {
           href={sponsor.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="group mx-8 lg:mx-12 shrink-0"
+          className="group mx-8 lg:mx-12 shrink-0 min-w-32 flex items-center justify-center"
           title={sponsor.name}
         >
           <Image

@@ -83,6 +83,13 @@ export const sponsors: Record<string, Sponsor> = {
     url: "https://brainstation.io",
     type: "sponsor",
   },
+  posthog: {
+    id: "posthog",
+    name: "PostHog",
+    logo: "/images/sponsors/posthog.svg",
+    url: "https://posthog.com",
+    type: "sponsor",
+  },
 };
 
 export function getAllSponsors(): Sponsor[] {
