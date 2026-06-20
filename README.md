@@ -83,8 +83,8 @@ conventions, and per-page content requirements.
 ## Deployment
 
 The site deploys to [Vercel](https://vercel.com/). Search engine indexing is
-disabled via an `X-Robots-Tag: noindex` header in [`vercel.json`](./vercel.json)
-— remove that header before launching to production.
+enabled site-wide via the `robots` metadata in
+[`app/layout.tsx`](./app/layout.tsx).
 
 ## Contributing
 
