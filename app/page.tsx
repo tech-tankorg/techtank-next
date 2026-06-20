@@ -75,7 +75,7 @@ export default async function HomePage() {
                       loop
                       muted
                       playsInline
-                      className="absolute inset-0 h-full w-full object-cover"
+                      className="absolute inset-0 h-full w-full object-cover object-top"
                     >
                       <source src={heroPosts[0].videoSrc.replace(/\.mp4$/, '.webm')} type="video/webm" />
                       <source src={heroPosts[0].videoSrc} type="video/mp4" />
@@ -100,7 +100,7 @@ export default async function HomePage() {
                       loop
                       muted
                       playsInline
-                      className="absolute inset-0 h-full w-full object-cover"
+                      className="absolute inset-0 h-full w-full object-cover object-top"
                     >
                       <source src={heroPosts[1].videoSrc.replace(/\.mp4$/, '.webm')} type="video/webm" />
                       <source src={heroPosts[1].videoSrc} type="video/mp4" />
