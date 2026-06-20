@@ -104,18 +104,18 @@ See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for contribution guidelines.
 This redesign was built by TechTank TO volunteers who gave their time to a
 community they believe in. Thank you to everyone who shipped it 💙
 
-- [Batstone Christyanton](https://github.com/batstonechristyanton)
-- [Danny Kim](https://github.com/0916dhkim)
-- [Danyal Imran](https://github.com/imRanDan)
+- [Tony Ko](https://github.com/tkodev)
+- [Rohan Villoth](https://github.com/RohanVilloth)
+- [Justin Bento](https://github.com/Justin-Bento)
 - [Jacky](https://github.com/jackytea)
 - [John Malapit](https://github.com/johnmal-dev)
-- [Justin Bento](https://github.com/Justin-Bento)
-- [Jyle Vergara](https://github.com/jylevergara)
-- [Miller Gonzalez](https://github.com/Millertaker)
+- [Danyal Imran](https://github.com/imRanDan)
 - [Niki Fereidooni](https://github.com/nfereidooni)
-- [Rohan Villoth](https://github.com/RohanVilloth)
+- [Danny Kim](https://github.com/0916dhkim)
+- [Batstone Christyanton](https://github.com/batstonechristyanton)
+- [Miller Gonzalez](https://github.com/Millertaker)
 - [Taehyeon Kim](https://github.com/1234tgk)
-- [Tony Ko](https://github.com/tkodev)
+- [Jyle Vergara](https://github.com/jylevergara)
 
 And a heartfelt thank you to everyone who built and stewarded earlier versions
 of techtankto.com. This redesign stands on the foundation, inspiration, and
