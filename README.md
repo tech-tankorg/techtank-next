@@ -99,6 +99,28 @@ See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for contribution guidelines.
 3. Keep one dominant CTA per page. Role pages under `/get-involved/*` must end
    in an intake action (email us).
 
+## Contributors
+
+This redesign was built by TechTank TO volunteers who gave their time to a
+community they believe in. Thank you to everyone who shipped it 💙
+
+- [Batstone Christyanton](https://github.com/batstonechristyanton)
+- [Danny Kim](https://github.com/0916dhkim)
+- [Danyal Imran](https://github.com/imRanDan)
+- [Jacky](https://github.com/jackytea)
+- [John Malapit](https://github.com/johnmal-dev)
+- [Justin Bento](https://github.com/Justin-Bento)
+- [Jyle Vergara](https://github.com/jylevergara)
+- [Miller Gonzalez](https://github.com/Millertaker)
+- [Niki Fereidooni](https://github.com/nfereidooni)
+- [Rohan Villoth](https://github.com/RohanVilloth)
+- [Taehyeon Kim](https://github.com/1234tgk)
+- [Tony Ko](https://github.com/tkodev)
+
+And a heartfelt thank you to everyone who built and stewarded earlier versions
+of techtankto.com. This redesign stands on the foundation, inspiration, and
+lessons you left behind.
+
 ## License
 
 [MIT](./LICENSE.md) — see the file for details.
