@@ -323,13 +323,12 @@
 
 /* Marquee */
 @keyframes marquee {
-  from { transform: translate3d(0%, 0, 0); }
-  to { transform: translate3d(-33.333%, 0, 0); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
 }
 
 .animate-marquee {
-  display: flex;
-  animation: marquee 25s linear infinite;
+  animation: marquee var(--marquee-duration, 25s) linear infinite;
   will-change: transform;
 }
 
