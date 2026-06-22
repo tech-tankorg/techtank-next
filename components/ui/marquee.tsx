@@ -1,19 +1,50 @@
 "use client";
 
+import React from "react";
 import { cn } from "@/utils/theme";
 
 interface MarqueeProps {
   children: React.ReactNode;
   className?: string;
+  itemWidth?: string;
+  duration?: string;
+  visibleCount?: number;
 }
 
-export function Marquee({ children, className }: MarqueeProps) {
+export function Marquee({ 
+  children, 
+  className,
+  itemWidth = "250px",
+  duration = "25s",
+  visibleCount = 4
+}: MarqueeProps) {
+  const count = React.Children.count(children);
+
   return (
-    <div className={cn("relative flex w-full overflow-hidden", className)}>
-      <div className="flex shrink-0 animate-marquee items-center">{children}</div>
-      <div className="flex shrink-0 animate-marquee items-center" aria-hidden="true">{children}</div>
-      <div className="flex shrink-0 animate-marquee items-center" aria-hidden="true">{children}</div>
-      <div className="flex shrink-0 animate-marquee items-center" aria-hidden="true">{children}</div>
+    <div 
+      className={cn("modern-marquee relative w-full overflow-hidden", className)}
+      style={{ containerType: "inline-size" } as React.CSSProperties}
+    >
+      {/* Invisible placeholder dictates the natural height of the container */}
+      <div className="invisible pointer-events-none opacity-0" aria-hidden="true">
+        {React.Children.toArray(children)[0]}
+      </div>
+
+      {React.Children.map(children, (child, index) => (
+        <div 
+          className="absolute inset-y-0 left-0 flex items-center justify-center animate-marquee"
+          style={{
+            width: itemWidth,
+            "--s": itemWidth,
+            "--count": count,
+            "--idx": index,
+            "--d": duration,
+            "--n": visibleCount,
+          } as React.CSSProperties}
+        >
+          {child}
+        </div>
+      ))}
     </div>
   );
 }

@@ -8,14 +8,14 @@ const sponsors = getAllSponsors();
 
 export function SponsorsMarquee({ className }: { className?: string }) {
   return (
-    <Marquee className={cn("[--marquee-duration:40s]", className)}>
+    <Marquee duration="40s" itemWidth="180px" visibleCount={5} className={className}>
       {sponsors.map((sponsor) => (
         <a
           key={sponsor.id}
           href={sponsor.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="group mx-8 lg:mx-12 shrink-0 min-w-32 flex items-center justify-center"
+          className="group flex items-center justify-center"
           title={sponsor.name}
         >
           <Image
