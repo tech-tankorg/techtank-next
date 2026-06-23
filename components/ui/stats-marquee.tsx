@@ -10,7 +10,7 @@ const items = [
 
 export function StatsMarquee({ className }: { className?: string }) {
   return (
-    <Marquee duration="25s" itemWidth="250px" visibleCount={3} className={className}>
+    <Marquee duration="25s" itemWidth="160px" visibleCount={3} className={className}>
       {items.map((item) => (
         <div key={item.label} className="flex flex-col items-center text-center">
           <span className="font-display text-xl lg:text-2xl font-bold text-foreground">
