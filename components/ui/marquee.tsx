@@ -22,8 +22,7 @@ export function Marquee({
 
   return (
     <div 
-      className={cn("modern-marquee relative w-full overflow-hidden", className)}
-      style={{ containerType: "inline-size" } as React.CSSProperties}
+      className={cn("@container modern-marquee relative w-full overflow-hidden", className)}
     >
       {/* Invisible placeholder dictates the natural height of the container */}
       <div className="invisible pointer-events-none opacity-0" aria-hidden="true">
@@ -35,11 +34,11 @@ export function Marquee({
           className="absolute inset-y-0 left-0 flex items-center justify-center animate-marquee"
           style={{
             width: itemWidth,
-            "--s": itemWidth,
-            "--count": count,
-            "--idx": index,
-            "--d": duration,
-            "--n": visibleCount,
+            "--item-width": itemWidth,
+            "--total-items": count,
+            "--item-index": index,
+            "--marquee-duration": duration,
+            "--visible-count": visibleCount,
           } as React.CSSProperties}
         >
           {child}
