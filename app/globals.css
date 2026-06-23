@@ -323,17 +323,30 @@
 
 /* Marquee */
 @keyframes marquee {
-  from { transform: translateX(0%); }
-  to { transform: translateX(-33.333%); }
+  /* 
+    Path length = gap * total items - item width 
+    Gap = max(container / visible count, item width + 32px)
+  */
+  from { 
+    transform: translateX(
+      calc(
+        max(100cqw / var(--visible-count, 4), calc(var(--item-width, 250px) + 32px)) * var(--total-items, 4) - var(--item-width, 250px)
+      )
+    ); 
+  }
+  to { 
+    transform: translateX(calc(-1 * var(--item-width, 250px))); 
+  }
 }
 
 .animate-marquee {
-  display: flex;
-  animation: marquee 25s linear infinite;
+  animation: marquee var(--marquee-duration, 25s) linear infinite;
+  animation-delay: calc(var(--marquee-duration, 25s) / var(--total-items, 4) * var(--item-index, 0) * -1);
+  will-change: transform;
 }
 
-.animate-marquee:hover {
-  animation-play-state: paused;
+.modern-marquee:hover .animate-marquee {
+  animation-play-state: paused !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
