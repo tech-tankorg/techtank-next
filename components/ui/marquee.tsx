@@ -7,6 +7,7 @@ interface MarqueeProps {
   itemWidth?: string;
   duration?: string;
   copies?: number;
+  visibleCount?: number;
 }
 
 export function Marquee({
@@ -15,17 +16,20 @@ export function Marquee({
   itemWidth = "250px",
   duration = "25s",
   copies = 2,
+  visibleCount = 4,
 }: MarqueeProps) {
   const childArray = React.Children.toArray(children);
 
   return (
-    <div className={cn("relative w-full overflow-hidden", className)}>
+    <div className={cn("marquee-container relative w-full overflow-hidden", className)}>
       <div
         className="flex w-max marquee-track"
         style={
           {
             "--marquee-duration": duration,
             "--marquee-copies": copies,
+            "--item-width": itemWidth,
+            "--visible-count": visibleCount,
           } as React.CSSProperties
         }
       >
@@ -38,8 +42,7 @@ export function Marquee({
             {childArray.map((child, i) => (
               <div
                 key={i}
-                className="flex-none flex items-center justify-center px-8"
-                style={{ width: itemWidth }}
+                className="marquee-item flex-none flex items-center justify-center px-8"
               >
                 {child}
               </div>

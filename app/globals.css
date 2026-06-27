@@ -322,6 +322,14 @@
 }
 
 /* Marquee */
+.marquee-container {
+  container-type: inline-size;
+}
+
+.marquee-item {
+  width: max(100cqw / var(--visible-count, 4), var(--item-width, 250px));
+}
+
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(calc(-100% / var(--marquee-copies, 2))); }
@@ -332,6 +340,10 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-duration: var(--marquee-duration, 25s);
+}
+
+.marquee-track:hover {
+  animation-play-state: paused !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
