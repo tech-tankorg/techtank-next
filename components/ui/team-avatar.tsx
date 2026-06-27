@@ -31,7 +31,7 @@ const sizeClasses = {
   xl: { box: "h-40 w-40", text: "text-3xl", ring: "ring-4 shadow-soft" },
 } as const;
 
-export type TeamAvatarSize = keyof typeof sizeClasses;
+type TeamAvatarSize = keyof typeof sizeClasses;
 
 interface TeamAvatarProps {
   name: string;

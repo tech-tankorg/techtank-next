@@ -32,7 +32,7 @@ const badgeVariants = cva(
   }
 );
 
-export interface BadgeProps
+interface BadgeProps
   extends React.HTMLAttributes<HTMLElement>,
     VariantProps<typeof badgeVariants> {
   asChild?: boolean;
@@ -45,4 +45,4 @@ function Badge({ className, variant, size, asChild = false, ...props }: BadgePro
   );
 }
 
-export { Badge, badgeVariants };
+export { Badge };

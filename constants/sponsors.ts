@@ -96,15 +96,3 @@ export const sponsors: Record<string, Sponsor> = {
 export function getAllSponsors(): Sponsor[] {
   return Object.values(sponsors);
 }
-
-export function getHosts(): Sponsor[] {
-  return Object.values(sponsors).filter((s) => s.type === "host");
-}
-
-export function getSponsorsOnly(): Sponsor[] {
-  return Object.values(sponsors).filter((s) => s.type === "sponsor");
-}
-
-export function getPartners(): Sponsor[] {
-  return Object.values(sponsors).filter((s) => s.type === "partner");
-}

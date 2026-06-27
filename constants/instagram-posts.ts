@@ -1,4 +1,4 @@
-export interface InstagramPostMedia {
+interface InstagramPostMedia {
   type: "image" | "video";
   path: string;
 }
@@ -13,7 +13,7 @@ export interface InstagramPost {
   media: InstagramPostMedia[];
 }
 
-export const instagramPosts: Record<string, InstagramPost> = {
+const instagramPosts: Record<string, InstagramPost> = {
   "2024-05-14-C69JJhR2qP": {
     caption: "🌟 Dive into the world of AI Prompting with us at #StudyTank! 🚀\nJoin our StudyTank session tonight at 7:00 p.m. as we explore the art of crafting well-written prompts to elicit desired behaviors from AI models.\nDon’t miss out on practical tips from our guest teacher, Nhi Nguyen!\nRSVP now at the link in our bio on the app Meetup\nhttps://www.meetup.com/techtank-to/events/300782288\n#AI #TechTalks #StudyTank #TechTank #TechTankTo #FollowUs #TechCommunity #followforfollowback #follow4followback #onlineevent #onlineevents #aiprompts #techenthusiast #techenthusiasts #coder #programmer #dev #developer #designer\n#techtanktoronto #swimwithus #iykyk #foryou #technology #aiprompt #artificialintellegence #toolsandtips #lifehack #quicktips\n#careergrowth",
     date: "2024-05-14",
@@ -1217,7 +1217,7 @@ export interface InstagramPostWithId extends InstagramPost {
   id: string;
 }
 
-export function getInstagramPosts(): InstagramPostWithId[] {
+function getInstagramPosts(): InstagramPostWithId[] {
   return Object.entries(instagramPosts)
     .map(([id, post]) => ({ id, ...post }))
     .sort((a, b) => (b.createdAtRaw ?? 0) - (a.createdAtRaw ?? 0));

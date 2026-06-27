@@ -1,7 +1,5 @@
 import type { Event } from "@/app/events/actions";
-import { sponsors, type Sponsor } from "./sponsors";
-
-export type { Sponsor };
+import { sponsors } from "./sponsors";
 
 export const events: Event[] = [
   // ─── 2026 ────────────────────────────────────────────────────────────────────
@@ -896,13 +894,13 @@ export const events: Event[] = [
   },
 ];
 
-export function getUpcomingEvents(): Event[] {
+function getUpcomingEvents(): Event[] {
   return events
     .filter((e) => e.status === "upcoming")
     .sort((a, b) => new Date(a.start_at).getTime() - new Date(b.start_at).getTime());
 }
 
-export function getPastEvents(): Event[] {
+function getPastEvents(): Event[] {
   return events
     .filter((e) => e.status === "past")
     .sort((a, b) => new Date(b.start_at).getTime() - new Date(a.start_at).getTime());
