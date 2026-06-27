@@ -6,6 +6,7 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
+    "knip": "knip --fix --allow-remove-files",
     "analyze": "next experimental-analyze",
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -40,6 +41,7 @@
     "@types/node": "^25.6.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "knip": "^6.22.0",
     "postcss": "^8.5.10",
     "tailwindcss": "^4.2.2",
     "typescript": "^6.0.3"
