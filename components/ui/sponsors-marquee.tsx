@@ -8,7 +8,7 @@ const sponsors = getAllSponsors();
 
 export function SponsorsMarquee({ className }: { className?: string }) {
   return (
-    <Marquee duration="40s" itemWidth="180px" visibleCount={5} className={className}>
+    <Marquee duration="40s" itemWidth="200px" className={className}>
       {sponsors.map((sponsor) => (
         <a
           key={sponsor.id}
