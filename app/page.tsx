@@ -8,7 +8,6 @@ import { SponsorsMarquee } from "@/components/ui/sponsors-marquee";
 import { RoleCard, roleCardsData } from "@/components/ui/role-card";
 import { EventCard } from "@/components/ui/event-card";
 import { SocialFeed } from "@/components/ui/social-feed";
-import { getRecentEvents } from "@/constants/events";
 import {
   getCoverImage,
   getCoverVideo,

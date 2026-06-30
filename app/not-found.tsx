@@ -1,4 +1,3 @@
-import React from 'react'
 import FishCanvas from "@/components/ui/fish-canvas"
 import PreviousButton from "@/components/ui/PreviousButton"
 

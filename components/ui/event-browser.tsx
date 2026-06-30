@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { LayoutGrid, List, Columns2, Calendar, Tag, MapPin, Camera, Play } from "lucide-react";
+import { LayoutGrid, List, Columns2, Calendar, MapPin, Camera, Play } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { EventCard } from "@/components/ui/event-card";

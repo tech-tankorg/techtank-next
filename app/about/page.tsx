@@ -5,7 +5,6 @@ import {
   DoorOpen,
   Users,
   Sprout,
-  Unlock,
   MapPin,
   Smile,
   Mic,

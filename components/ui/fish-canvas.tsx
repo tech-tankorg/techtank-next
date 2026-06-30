@@ -93,7 +93,7 @@ export default function FishCanvas() {
   const mouseRef = useRef({ x: -999, y: -999 });
   const fishRef = useRef<Fish[]>([]);
   const rafRef = useRef<number>(0);
-  const [cursorPos, setCursorPos] = useState({ x: -999, y: -999 });
+  const [, setCursorPos] = useState({ x: -999, y: -999 });
 
   useEffect(() => {
     const canvas = canvasRef.current;

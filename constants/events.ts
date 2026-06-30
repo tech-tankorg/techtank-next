@@ -894,20 +894,3 @@ export const events: Event[] = [
   },
 ];
 
-function getUpcomingEvents(): Event[] {
-  return events
-    .filter((e) => e.status === "upcoming")
-    .sort((a, b) => new Date(a.start_at).getTime() - new Date(b.start_at).getTime());
-}
-
-function getPastEvents(): Event[] {
-  return events
-    .filter((e) => e.status === "past")
-    .sort((a, b) => new Date(b.start_at).getTime() - new Date(a.start_at).getTime());
-}
-
-export function getRecentEvents(count: number = 4): Event[] {
-  const upcoming = getUpcomingEvents();
-  const past = getPastEvents();
-  return [...upcoming, ...past].slice(0, count);
-}

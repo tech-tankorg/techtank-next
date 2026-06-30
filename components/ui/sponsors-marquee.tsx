@@ -2,8 +2,6 @@ import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
 import { getAllSponsors } from "@/constants/sponsors";
 
-import { cn } from "@/utils/theme";
-
 const sponsors = getAllSponsors();
 
 export function SponsorsMarquee({ className }: { className?: string }) {
