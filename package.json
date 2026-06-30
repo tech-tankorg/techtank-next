@@ -12,7 +12,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "oxfmt .",
+    "format:check": "oxfmt --check ."
   },
   "keywords": [],
   "author": "",
@@ -43,6 +45,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "knip": "^6.22.0",
+    "oxfmt": "^0.57.0",
     "postcss": "^8.5.10",
     "tailwindcss": "^4.2.2",
     "typescript": "^6.0.3"
