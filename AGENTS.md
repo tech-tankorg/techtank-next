@@ -134,6 +134,13 @@ Components follow [shadcn/ui](https://ui.shadcn.com/) patterns with
 - Pair every background token with its matching foreground: `bg-primary → text-primary-foreground`, `bg-secondary → text-secondary-foreground`, `bg-success → text-success-foreground`.
 - Gradients are defined as CSS utility classes (`.gradient-brand`, `.gradient-hero`, etc.) with `.dark` overrides in `globals.css`; use the class name in JSX, never inline `background:` values.
 
+### After making code changes
+
+- Run `pnpm typecheck` to catch type errors.
+- Run `pnpm format` to keep the codebase oxfmt-clean.
+
+Do both before reporting a task complete or opening a commit.
+
 ### Adding a new page
 
 1. Decide where it belongs in the IA. If it's a role, it goes under

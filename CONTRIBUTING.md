@@ -41,6 +41,20 @@ chore/upgrade-tailwind
 - Lowercase, hyphen-separated, ≤40 characters
 - Reference the affected area, not a ticket number
 
+## Editor setup
+
+This repo uses [oxfmt](https://www.npmjs.com/package/oxfmt) for formatting. In VS Code, install the [Oxc extension](https://marketplace.visualstudio.com/items?itemName=oxc.oxc-vscode), set it as the default formatter, and enable format-on-save:
+
+```jsonc
+// .vscode/settings.json
+{
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.formatOnSave": true,
+}
+```
+
+You can also run `pnpm format` from the CLI at any time.
+
 ## Pull requests
 
 - One focused concern per PR — avoid mixing features with refactors
