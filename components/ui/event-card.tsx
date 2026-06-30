@@ -42,21 +42,15 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
       <div className="group relative overflow-hidden rounded-2xl glass">
         <div className="p-6">
           <div className="flex flex-wrap items-center gap-2 mb-3">
-            <Badge variant={isUpcoming ? "warning" : "secondary"}>
-              {isUpcoming ? "Upcoming" : "Past"}
-            </Badge>
-            {event.tags[0] && (
-              <span className="ml-auto text-xs text-muted-foreground">{event.tags[0]}</span>
-            )}
+            <Badge variant={isUpcoming ? "warning" : "secondary"}>{isUpcoming ? "Upcoming" : "Past"}</Badge>
+            {event.tags[0] && <span className="ml-auto text-xs text-muted-foreground">{event.tags[0]}</span>}
           </div>
 
           <h3 className="font-display text-xl font-bold text-foreground mb-2 line-clamp-2">
             <TitleWrapper>{event.title}</TitleWrapper>
           </h3>
 
-          {event.pitch && (
-            <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{event.pitch}</p>
-          )}
+          {event.pitch && <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{event.pitch}</p>}
 
           <div className="flex items-center gap-2 text-sm text-muted-foreground mb-1.5">
             <Calendar className="h-4 w-4 shrink-0" />
@@ -99,7 +93,12 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
               )}
               {event.youtubeUrl && (
                 <Badge variant="secondary" asChild>
-                  <a href={event.youtubeUrl} target="_blank" rel="noopener noreferrer" aria-label="Watch recap on YouTube">
+                  <a
+                    href={event.youtubeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Watch recap on YouTube"
+                  >
                     <Play className="h-3 w-3 fill-current" />
                     Recap
                   </a>
@@ -118,9 +117,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
         <Badge variant={isUpcoming ? "warning" : "secondary"} size="sm">
           {isUpcoming ? "Upcoming" : "Past"}
         </Badge>
-        {event.tags[0] && (
-          <span className="ml-auto text-[10px] text-muted-foreground">{event.tags[0]}</span>
-        )}
+        {event.tags[0] && <span className="ml-auto text-[10px] text-muted-foreground">{event.tags[0]}</span>}
       </div>
 
       <h3 className="font-display text-sm font-bold text-foreground mb-2 line-clamp-2">
@@ -148,7 +145,13 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
       {event.sponsors && event.sponsors.length > 0 && (
         <div className="flex flex-wrap items-center gap-1 text-xs text-muted-foreground mb-2">
           {event.sponsors.map((s) => (
-            <a key={s.id} href={s.url} target="_blank" rel="noopener noreferrer" className="hover:underline line-clamp-1">
+            <a
+              key={s.id}
+              href={s.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline line-clamp-1"
+            >
               {s.name}
             </a>
           ))}

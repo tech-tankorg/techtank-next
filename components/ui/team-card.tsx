@@ -51,9 +51,7 @@ function CoreBody({ name, pronouns, role, bio }: TeamMember) {
     <div className="min-w-0 flex-1">
       <p className="font-display text-lg font-semibold text-foreground leading-tight">{name}</p>
       <p className="text-xs text-muted-foreground mt-0.5">{pronouns}</p>
-      {role && (
-        <p className="mt-1 text-xs font-semibold text-ring uppercase tracking-wide">{role}</p>
-      )}
+      {role && <p className="mt-1 text-xs font-semibold text-ring uppercase tracking-wide">{role}</p>}
       {bio ? (
         <p className="mt-4 text-sm text-muted-foreground leading-relaxed line-clamp-2">{bio}</p>
       ) : (
@@ -93,11 +91,7 @@ export function TeamCard({ member, variant = "core", className }: TeamCardProps)
 
   return (
     <>
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        className={cn(teamCardVariants({ variant }), className)}
-      >
+      <button type="button" onClick={() => setOpen(true)} className={cn(teamCardVariants({ variant }), className)}>
         {variant === "board" && (
           <>
             <div className="pointer-events-none absolute -top-8 -right-8 h-40 w-40 rounded-full bg-white/10 dark:bg-white/5" />

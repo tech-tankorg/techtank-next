@@ -78,10 +78,9 @@ export default function SpeakOrFacilitatePage() {
               Speak or Facilitate
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Got something to share? We&apos;re always looking for speakers,
-              panelists, and workshop facilitators. You don&apos;t need to be a
-              senior engineer or a public figure. If you have a perspective
-              worth hearing, we want to hear it.
+              Got something to share? We&apos;re always looking for speakers, panelists, and workshop facilitators. You
+              don&apos;t need to be a senior engineer or a public figure. If you have a perspective worth hearing, we
+              want to hear it.
             </p>
             <Button variant="primary" size="lg" asChild>
               <a
@@ -98,23 +97,14 @@ export default function SpeakOrFacilitatePage() {
 
       {/* Why Participate */}
       <Section>
-        <SectionHeader
-          overline="Why speak or facilitate"
-          title="What you get out of it"
-          className="mb-12"
-        />
+        <SectionHeader overline="Why speak or facilitate" title="What you get out of it" className="mb-12" />
         <div className="grid gap-8 lg:grid-cols-3">
           {whyParticipate.map((item) => (
-            <div
-              key={item.title}
-              className="bg-card rounded-2xl border border-border p-6 lg:p-8"
-            >
+            <div key={item.title} className="bg-card rounded-2xl border border-border p-6 lg:p-8">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-ring/10 text-ring mb-4">
                 <item.icon className="h-6 w-6" />
               </div>
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3">
-                {item.title}
-              </h3>
+              <h3 className="font-display text-xl font-semibold text-foreground mb-3">{item.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{item.description}</p>
             </div>
           ))}
@@ -123,17 +113,10 @@ export default function SpeakOrFacilitatePage() {
 
       {/* Logistics */}
       <Section background="white">
-        <SectionHeader
-          overline="Logistics"
-          title="What to expect"
-          className="mb-12"
-        />
+        <SectionHeader overline="Logistics" title="What to expect" className="mb-12" />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {logistics.map((item) => (
-            <div
-              key={item.label}
-              className="flex items-start gap-4 bg-background rounded-xl p-5"
-            >
+            <div key={item.label} className="flex items-start gap-4 bg-background rounded-xl p-5">
               <Clock className="h-5 w-5 text-ring shrink-0 mt-0.5" />
               <div>
                 <p className="font-semibold text-foreground">{item.label}</p>
@@ -148,9 +131,7 @@ export default function SpeakOrFacilitatePage() {
       <Section>
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="bg-ring/8 rounded-2xl border border-ring/30 p-6 lg:p-8">
-            <h3 className="font-display text-xl font-semibold text-foreground mb-6">
-              What TechTank handles
-            </h3>
+            <h3 className="font-display text-xl font-semibold text-foreground mb-6">What TechTank handles</h3>
             <ul className="space-y-3">
               {techTankHandles.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
@@ -162,9 +143,7 @@ export default function SpeakOrFacilitatePage() {
           </div>
 
           <div className="bg-amber/8 rounded-2xl border border-amber/30 p-6 lg:p-8">
-            <h3 className="font-display text-xl font-semibold text-foreground mb-6">
-              What you provide
-            </h3>
+            <h3 className="font-display text-xl font-semibold text-foreground mb-6">What you provide</h3>
             <ul className="space-y-3">
               {youProvide.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
@@ -180,18 +159,10 @@ export default function SpeakOrFacilitatePage() {
       {/* What You Get */}
       <Section background="brand-soft">
         <div className="max-w-3xl mx-auto">
-          <SectionHeader
-            overline="What you get"
-            title="What you get"
-            align="center"
-            className="mb-12"
-          />
+          <SectionHeader overline="What you get" title="What you get" align="center" className="mb-12" />
           <div className="grid gap-4 sm:grid-cols-2">
             {whatYouGet.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-3 bg-card rounded-lg p-4"
-              >
+              <div key={index} className="flex items-center gap-3 bg-card rounded-lg p-4">
                 <Check className="h-5 w-5 text-ring shrink-0" />
                 <span className="text-foreground">{item}</span>
               </div>
@@ -203,15 +174,11 @@ export default function SpeakOrFacilitatePage() {
       {/* Speaker Resources */}
       <Section>
         <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
-            Resources
-          </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
-            Speaker and facilitator toolkit
-          </h2>
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">Resources</span>
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Speaker and facilitator toolkit</h2>
           <p className="text-muted-foreground mb-8">
-            Brand assets, slide templates, run-of-show guidance, and tips for
-            first-time speakers and facilitators all live in our Media Kit.
+            Brand assets, slide templates, run-of-show guidance, and tips for first-time speakers and facilitators all
+            live in our Media Kit.
           </p>
           <Button variant="outline" asChild>
             <Link href="/resources/media-kit">
@@ -228,12 +195,9 @@ export default function SpeakOrFacilitatePage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Ready to participate?
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
-            Submit your proposal
-          </h2>
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Submit your proposal</h2>
           <p className="text-muted-foreground mb-8">
-            Tell us about yourself and your idea — talk, panel, or workshop.
-            We&apos;ll get back to you within a week.
+            Tell us about yourself and your idea — talk, panel, or workshop. We&apos;ll get back to you within a week.
           </p>
           <Button variant="primary" size="lg" asChild>
             <a

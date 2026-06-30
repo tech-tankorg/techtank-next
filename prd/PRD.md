@@ -73,6 +73,7 @@ community serves the Greater Toronto Area tech ecosystem and operates
 under Ontario/Canadian jurisdiction.
 
 **Current sponsors and hosts:**
+
 - 7shifts (Canadian HQ)
 - Rakuten Canada
 - Cohere (Canadian-founded)
@@ -116,22 +117,22 @@ under Ontario/Canadian jurisdiction.
 
 ### 2.1 Route map
 
-| Path | Title | Purpose |
-|---|---|---|
-| `/` | Home | Social-proof-driven overview and primary CTAs |
-| `/about` | About | Values & community manifesto (the four pillars) |
-| `/get-involved` | Get Involved | Onboarding hub; routes visitors to a role |
-| `/get-involved/speak-or-facilitate` | Speak or Facilitate | Speaker logistics + intake action (email us) |
-| `/get-involved/host` | Host | Venue logistics (40–120 cap, 6–8:30pm) + intake action (email us) |
-| `/get-involved/sponsor` | Sponsor | Corporate partner pitch + intake action (email us) |
-| `/get-involved/organizer` | Organizer Team | Crew onboarding + intake action (email us) |
-| `/events` | Events | Upcoming events via Luma calendar |
-| `/resources/media-kit` | Media Kit | Brand assets, logos, and fast facts for press and partners |
-| `/resources/design-system` | Design System | Brand guidelines — colours, typography, and component reference |
-| `/about/faq` | FAQ | Frequently asked questions about membership, events, sponsorship, and policies |
-| `/legal/terms-of-service` | Terms of Service | — |
-| `/legal/privacy-policy` | Privacy Policy | — |
-| `/legal/code-of-conduct` | Code of Conduct | — |
+| Path                                | Title               | Purpose                                                                        |
+| ----------------------------------- | ------------------- | ------------------------------------------------------------------------------ |
+| `/`                                 | Home                | Social-proof-driven overview and primary CTAs                                  |
+| `/about`                            | About               | Values & community manifesto (the four pillars)                                |
+| `/get-involved`                     | Get Involved        | Onboarding hub; routes visitors to a role                                      |
+| `/get-involved/speak-or-facilitate` | Speak or Facilitate | Speaker logistics + intake action (email us)                                   |
+| `/get-involved/host`                | Host                | Venue logistics (40–120 cap, 6–8:30pm) + intake action (email us)              |
+| `/get-involved/sponsor`             | Sponsor             | Corporate partner pitch + intake action (email us)                             |
+| `/get-involved/organizer`           | Organizer Team      | Crew onboarding + intake action (email us)                                     |
+| `/events`                           | Events              | Upcoming events via Luma calendar                                              |
+| `/resources/media-kit`              | Media Kit           | Brand assets, logos, and fast facts for press and partners                     |
+| `/resources/design-system`          | Design System       | Brand guidelines — colours, typography, and component reference                |
+| `/about/faq`                        | FAQ                 | Frequently asked questions about membership, events, sponsorship, and policies |
+| `/legal/terms-of-service`           | Terms of Service    | —                                                                              |
+| `/legal/privacy-policy`             | Privacy Policy      | —                                                                              |
+| `/legal/code-of-conduct`            | Code of Conduct     | —                                                                              |
 
 ### 2.2 Shared layouts (Next.js)
 
@@ -270,15 +271,16 @@ carries:
   so visitors can scroll the full history as additional social proof.
 
 For v1, a "recap" is a linked bundle (Google Photos URL + YouTube URL
-+ host/sponsor thanks surfaced inline). A dedicated `/events/<slug>`
-detail route is a v2 option only if organizers want editorial recaps
-and is explicitly out of scope for the initial launch.
+
+- host/sponsor thanks surfaced inline). A dedicated `/events/<slug>`
+  detail route is a v2 option only if organizers want editorial recaps
+  and is explicitly out of scope for the initial launch.
 
 ### 5.7 Recurring UI patterns
 
 - **Overline kicker.** Every major section opens with a short,
   all-caps kicker (e.g. `WAYS TO GET INVOLVED`, `NEXT UP`, `RECENT
-  EVENTS`, `LATEST HIGHLIGHTS`, `GET IN TOUCH`) above the headline.
+EVENTS`, `LATEST HIGHLIGHTS`, `GET IN TOUCH`) above the headline.
   Establishes a clear scanning rhythm.
 - **Role cards with checkmarks.** The four `/get-involved` role
   teasers share one shape on `/` and `/get-involved`: icon → overline
@@ -384,7 +386,7 @@ and is explicitly out of scope for the initial launch.
     corners (`1.25rem+`), and soft shadows. Used for cards and overlays.
   - **Photo-forward:** event poster images are hero content; design
     prioritizes real photography over empty white space.
-  - Do *not* introduce hot pink, true blue, or colours outside this
+  - Do _not_ introduce hot pink, true blue, or colours outside this
     family without explicit organizer sign-off.
 - **Imagery:** real event photography first; diverse, candid, well-lit.
 

@@ -1,5 +1,5 @@
-'use client';
-import { useEffect, useRef, useState } from 'react';
+"use client";
+import { useEffect, useRef, useState } from "react";
 
 interface Fish {
   x: number;
@@ -99,7 +99,7 @@ export default function FishCanvas() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
     const dpr = window.devicePixelRatio || 1;
@@ -113,9 +113,7 @@ export default function FishCanvas() {
       canvas!.width = W * dpr;
       canvas!.height = H * dpr;
       ctx!.scale(dpr, dpr);
-      fishRef.current = Array.from({ length: FISH_COUNT }, (_, i) =>
-        makeFish(i, W, H)
-      );
+      fishRef.current = Array.from({ length: FISH_COUNT }, (_, i) => makeFish(i, W, H));
     }
 
     function loop(ts: number) {
@@ -129,8 +127,7 @@ export default function FishCanvas() {
         const dx = f.x - mouseRef.current.x;
         const dy = f.y - mouseRef.current.y;
         const d = Math.hypot(dx, dy);
-        f.targetOpacity =
-          d < REVEAL_RADIUS ? Math.pow(1 - d / REVEAL_RADIUS, 0.6) : 0;
+        f.targetOpacity = d < REVEAL_RADIUS ? Math.pow(1 - d / REVEAL_RADIUS, 0.6) : 0;
         f.opacity += (f.targetOpacity - f.opacity) * Math.min(dt * 6, 1);
         drawFish(ctx!, f, t);
       }
@@ -140,11 +137,11 @@ export default function FishCanvas() {
 
     resize();
     rafRef.current = requestAnimationFrame(loop);
-    window.addEventListener('resize', resize);
+    window.addEventListener("resize", resize);
 
     return () => {
       cancelAnimationFrame(rafRef.current);
-      window.removeEventListener('resize', resize);
+      window.removeEventListener("resize", resize);
     };
   }, []);
 
@@ -153,7 +150,7 @@ export default function FishCanvas() {
       mouseRef.current = { x: e.clientX, y: e.clientY };
       setCursorPos({ x: e.clientX, y: e.clientY });
     }
-    
+
     function handleTouchMove(e: TouchEvent) {
       if (e.touches.length > 0) {
         mouseRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
@@ -161,18 +158,16 @@ export default function FishCanvas() {
       }
     }
 
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('touchmove', handleTouchMove);
-    window.addEventListener('touchstart', handleTouchMove);
-    
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener("touchstart", handleTouchMove);
+
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('touchmove', handleTouchMove);
-      window.removeEventListener('touchstart', handleTouchMove);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchstart", handleTouchMove);
     };
   }, []);
 
-  return (
-      <canvas ref={canvasRef} className="absolute inset-0 z-0 w-full h-full" />
-  );
+  return <canvas ref={canvasRef} className="absolute inset-0 z-0 w-full h-full" />;
 }

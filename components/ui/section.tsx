@@ -50,13 +50,7 @@ interface SectionHeaderProps extends VariantProps<typeof sectionHeaderVariants> 
   className?: string;
 }
 
-export function SectionHeader({
-  overline,
-  title,
-  description,
-  align,
-  className,
-}: SectionHeaderProps) {
+export function SectionHeader({ overline, title, description, align, className }: SectionHeaderProps) {
   return (
     <div className={cn(sectionHeaderVariants({ align }), className)}>
       {overline && (
@@ -64,12 +58,8 @@ export function SectionHeader({
           {overline}
         </span>
       )}
-      <h2 className="font-display text-2xl font-bold text-foreground lg:text-3xl text-balance">
-        {title}
-      </h2>
-      {description && (
-        <p className="mt-3 text-base text-muted-foreground leading-relaxed">{description}</p>
-      )}
+      <h2 className="font-display text-2xl font-bold text-foreground lg:text-3xl text-balance">{title}</h2>
+      {description && <p className="mt-3 text-base text-muted-foreground leading-relaxed">{description}</p>}
     </div>
   );
 }

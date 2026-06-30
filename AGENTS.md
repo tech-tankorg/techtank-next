@@ -188,7 +188,7 @@ Components follow [shadcn/ui](https://ui.shadcn.com/) patterns with
   `get-involved/sponsor`, `prd`, `legal`, etc.) when one is obvious;
   omit it when the change is global.
 - Keep the subject under ~72 characters, lowercase, no trailing
-  period; explain the *why* in the body if the diff alone doesn't.
+  period; explain the _why_ in the body if the diff alone doesn't.
 - Use `!` (e.g. `feat(get-involved)!: …`) and a `BREAKING CHANGE:`
   footer for changes that move URLs, rename routes, or alter
   documented behavior.

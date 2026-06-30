@@ -13,9 +13,7 @@ export const contentType = "image/png";
 
 // Image generation
 export default async function OGImage() {
-  const imageData = await readFile(
-    join(process.cwd(), "public/images/logos/light.png"),
-  );
+  const imageData = await readFile(join(process.cwd(), "public/images/logos/light.png"));
   const base64Image = `data:image/png;base64,${imageData.toString("base64")}`;
 
   return new ImageResponse(

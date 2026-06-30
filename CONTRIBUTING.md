@@ -12,7 +12,7 @@ This repo uses [Conventional Commits](https://www.conventionalcommits.org/).
 
 **Scope:** match the affected page or area — `home`, `about`, `events`, `get-involved/sponsor`, `legal`, `design-system`, `prd`, etc. Omit when the change is global.
 
-**Subject:** lowercase, no trailing period, ≤72 characters. Put the *why* in the commit body if the diff alone doesn't explain it.
+**Subject:** lowercase, no trailing period, ≤72 characters. Put the _why_ in the commit body if the diff alone doesn't explain it.
 
 **Breaking changes:** append `!` to the type+scope and add a `BREAKING CHANGE:` footer for anything that moves a URL, renames a route, or alters documented behaviour.
 

@@ -10,11 +10,7 @@ const legalDocs = [
   { name: "Privacy Policy", href: "/legal/privacy-policy" },
 ];
 
-export default function LegalLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function LegalLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   return (
@@ -40,9 +36,7 @@ export default function LegalLayout({
 
       {/* Main Content */}
       <main className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:pb-16">
-        <article className="prose prose-slate max-w-none">
-          {children}
-        </article>
+        <article className="prose prose-slate max-w-none">{children}</article>
       </main>
     </div>
   );

@@ -55,14 +55,11 @@ export default function OrganizerPage() {
               Join the Organizer Team
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              We&apos;re building out a more structured volunteer leadership
-              team with defined roles and a 6-month commitment. If you want to
-              help shape what TechTank becomes, this is the path.
+              We&apos;re building out a more structured volunteer leadership team with defined roles and a 6-month
+              commitment. If you want to help shape what TechTank becomes, this is the path.
             </p>
             <Button variant="primary" size="lg" asChild>
-              <a href="mailto:techtankto@gmail.com?subject=Organizer%20Team%20Inquiry%20-%20TechTank">
-                Get in touch
-              </a>
+              <a href="mailto:techtankto@gmail.com?subject=Organizer%20Team%20Inquiry%20-%20TechTank">Get in touch</a>
             </Button>
           </div>
         </div>
@@ -70,23 +67,14 @@ export default function OrganizerPage() {
 
       {/* Why Organize */}
       <Section>
-        <SectionHeader
-          overline="Why organize"
-          title="What this role is about"
-          className="mb-12"
-        />
+        <SectionHeader overline="Why organize" title="What this role is about" className="mb-12" />
         <div className="grid gap-8 lg:grid-cols-3">
           {whyOrganize.map((item) => (
-            <div
-              key={item.title}
-              className="bg-card rounded-2xl border border-border p-6 lg:p-8"
-            >
+            <div key={item.title} className="bg-card rounded-2xl border border-border p-6 lg:p-8">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-ring/10 text-ring mb-4">
                 <item.icon className="h-6 w-6" />
               </div>
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3">
-                {item.title}
-              </h3>
+              <h3 className="font-display text-xl font-semibold text-foreground mb-3">{item.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{item.description}</p>
             </div>
           ))}
@@ -96,18 +84,10 @@ export default function OrganizerPage() {
       {/* What You Get */}
       <Section background="brand-soft">
         <div className="max-w-3xl mx-auto">
-          <SectionHeader
-            overline="What you get"
-            title="Organizer perks"
-            align="center"
-            className="mb-12"
-          />
+          <SectionHeader overline="What you get" title="Organizer perks" align="center" className="mb-12" />
           <div className="grid gap-4 sm:grid-cols-2">
             {whatYouGet.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-3 bg-card rounded-lg p-4"
-              >
+              <div key={index} className="flex items-center gap-3 bg-card rounded-lg p-4">
                 <Check className="h-5 w-5 text-ring shrink-0" />
                 <span className="text-foreground">{item}</span>
               </div>
@@ -122,18 +102,13 @@ export default function OrganizerPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Get started
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
-            Ready to get involved?
-          </h2>
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Ready to get involved?</h2>
           <p className="text-muted-foreground mb-8">
-            Send us a note introducing yourself. Tell us what you&apos;d want
-            to own and why TechTank matters to you.
+            Send us a note introducing yourself. Tell us what you&apos;d want to own and why TechTank matters to you.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Button variant="primary" size="sm" asChild>
-              <a href="mailto:techtankto@gmail.com?subject=Organizer%20Team%20Inquiry%20-%20TechTank">
-                Get in touch
-              </a>
+              <a href="mailto:techtankto@gmail.com?subject=Organizer%20Team%20Inquiry%20-%20TechTank">Get in touch</a>
             </Button>
             <Button variant="outline" size="sm" asChild>
               <Link href="/events">Attend an event first</Link>

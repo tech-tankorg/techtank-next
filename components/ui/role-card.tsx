@@ -44,14 +44,10 @@ export function RoleCard({
       </div>
 
       {/* Overline */}
-      <span className="text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
-        {overline}
-      </span>
+      <span className="text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">{overline}</span>
 
       {/* Title */}
-      <h3 className="font-display text-xl font-bold text-foreground mb-3">
-        {title}
-      </h3>
+      <h3 className="font-display text-xl font-bold text-foreground mb-3">{title}</h3>
 
       {/* Description */}
       <p className="text-muted-foreground text-sm leading-relaxed mb-6">{description}</p>
@@ -89,11 +85,7 @@ export const roleCardsData: RoleCardProps[] = [
     title: "Attend an event",
     description:
       "The easiest way to start. All events are listed on our Luma calendar. Show up, meet people, see if it clicks.",
-    benefits: [
-      "No signup required",
-      "Meet the community in person",
-      "Keeps most events accessible",
-    ],
+    benefits: ["No signup required", "Meet the community in person", "Keeps most events accessible"],
     href: "/events",
     ctaText: "Browse upcoming events",
   },
@@ -103,11 +95,7 @@ export const roleCardsData: RoleCardProps[] = [
     title: "Speak or Facilitate",
     description:
       "Got something to share? We're always looking for speakers, panelists, and workshop facilitators. You don't need to be a senior engineer or a public figure.",
-    benefits: [
-      "30-45 min talk + Q&A",
-      "Any tech topic welcome",
-      "Recorded and published to YouTube",
-    ],
+    benefits: ["30-45 min talk + Q&A", "Any tech topic welcome", "Recorded and published to YouTube"],
     href: "/get-involved/speak-or-facilitate",
     ctaText: "Apply to speak",
   },
@@ -117,11 +105,7 @@ export const roleCardsData: RoleCardProps[] = [
     title: "Host an event",
     description:
       "If your company has space and wants to support community-driven tech programming in Toronto, we'd love to talk.",
-    benefits: [
-      "40-120 attendees",
-      "~6:00-8:30pm on weeknights",
-      "Logo on event marketing",
-    ],
+    benefits: ["40-120 attendees", "~6:00-8:30pm on weeknights", "Logo on event marketing"],
     href: "/get-involved/host",
     ctaText: "Host an event",
   },
@@ -131,11 +115,7 @@ export const roleCardsData: RoleCardProps[] = [
     title: "Sponsor TechTank",
     description:
       "If your company has budget or resources and wants to support community-driven tech programming in Toronto, we'd love to talk.",
-    benefits: [
-      "Logo on website and marketing",
-      "Speaker slot options",
-      "Reach Toronto tech talent",
-    ],
+    benefits: ["Logo on website and marketing", "Speaker slot options", "Reach Toronto tech talent"],
     href: "/get-involved/sponsor",
     ctaText: "Sponsor TechTank",
   },
@@ -145,11 +125,7 @@ export const roleCardsData: RoleCardProps[] = [
     title: "Join the Organizer Team",
     description:
       "We're building out a more structured volunteer leadership team with defined roles and a 6-month commitment. If you want to help shape what TechTank becomes, this is the path.",
-    benefits: [
-      "Defined leadership roles",
-      "6-month commitment",
-      "Shape TechTank's direction",
-    ],
+    benefits: ["Defined leadership roles", "6-month commitment", "Shape TechTank's direction"],
     href: "/get-involved/organizer",
     ctaText: "Express interest in organizing",
   },

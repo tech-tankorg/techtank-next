@@ -27,7 +27,7 @@ export default async function EventsPage() {
         const url = e.eventUrl!;
         const parts = url.split("/");
         return parts[parts.length - 1].split("?")[0];
-      })
+      }),
   );
 
   const mergedEvents = [...events];
@@ -42,9 +42,7 @@ export default async function EventsPage() {
   }
 
   // Sort descending by date
-  mergedEvents.sort(
-    (a, b) => new Date(b.start_at).getTime() - new Date(a.start_at).getTime()
-  );
+  mergedEvents.sort((a, b) => new Date(b.start_at).getTime() - new Date(a.start_at).getTime());
 
   return (
     <>
@@ -60,15 +58,12 @@ export default async function EventsPage() {
                 All Events
               </h1>
               <p className="text-xl text-muted-foreground">
-                RSVP to what&apos;s next — and scroll back through the
-                talks, photos, and recaps from every meetup we&apos;ve
-                hosted since 2023.
+                RSVP to what&apos;s next — and scroll back through the talks, photos, and recaps from every meetup
+                we&apos;ve hosted since 2023.
               </p>
             </div>
             <div className="shrink-0">
-              <p className="text-sm font-semibold text-foreground">
-                {mergedEvents.length} EVENTS · SINCE 2023
-              </p>
+              <p className="text-sm font-semibold text-foreground">{mergedEvents.length} EVENTS · SINCE 2023</p>
             </div>
           </div>
         </div>
@@ -76,12 +71,8 @@ export default async function EventsPage() {
 
       {/* Luma Calendar Embed Section */}
       <Section className="bg-[#f7f8f9] dark:bg-[#212325] text-center">
-        <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
-          Next Up
-        </span>
-        <h2 className="font-display text-3xl font-semibold text-foreground mb-6">
-          Subscribe on Luma
-        </h2>
+        <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">Next Up</span>
+        <h2 className="font-display text-3xl font-semibold text-foreground mb-6">Subscribe on Luma</h2>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
           Subscribe on Luma to get notified when new events are announced.
         </p>
@@ -141,9 +132,7 @@ export default async function EventsPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Get in touch
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
-            Questions about events?
-          </h2>
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Questions about events?</h2>
         </div>
         <div className="max-w-xl mx-auto">
           <ContactCard context="For hosting, sponsorship, and media inquiries." />

@@ -17,17 +17,12 @@ import {
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { SponsorsMarquee } from "@/components/ui/sponsors-marquee";
-import {
-  getCoverImage,
-  getCoverVideo,
-  getInstagramPostsByIds,
-} from "@/constants/instagram-posts";
+import { getCoverImage, getCoverVideo, getInstagramPostsByIds } from "@/constants/instagram-posts";
 import { socialLinks } from "@/constants/social-links";
 
 export const metadata: Metadata = {
   title: "About",
-  description:
-    "Learn about TechTank's mission, values, story, and the programs we run in Toronto's tech community.",
+  description: "Learn about TechTank's mission, values, story, and the programs we run in Toronto's tech community.",
 };
 
 const values = [
@@ -41,8 +36,7 @@ const values = [
   {
     icon: Users,
     title: "Connection over networking",
-    description:
-      "We prioritize genuine relationships over transactional interactions or surface-level networking.",
+    description: "We prioritize genuine relationships over transactional interactions or surface-level networking.",
     color: "amber",
   },
   {
@@ -55,8 +49,7 @@ const values = [
   {
     icon: MapPin,
     title: "Local impact",
-    description:
-      "We are committed to strengthening Toronto's tech ecosystem by supporting the people within it.",
+    description: "We are committed to strengthening Toronto's tech ecosystem by supporting the people within it.",
     color: "teal",
   },
   {
@@ -97,8 +90,7 @@ const currentPrograms = [
   {
     icon: MessageSquare,
     title: "The Slack Channel",
-    description:
-      "Join the conversation between events. Where the community lives day-to-day.",
+    description: "Join the conversation between events. Where the community lives day-to-day.",
     cta: { label: "Join on Slack", href: socialLinks.slack.url },
   },
 ];
@@ -134,11 +126,9 @@ export default function AboutPage() {
               We build the community we wanted to find
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              TechTank TO is a volunteer-run, Toronto-based tech community
-              founded in 2023. We host year-round in-person events where
-              developers, designers, PMs, and tech-curious people gather to
-              learn, share, and connect. No gatekeeping—just people
-              helping people grow in tech.
+              TechTank TO is a volunteer-run, Toronto-based tech community founded in 2023. We host year-round in-person
+              events where developers, designers, PMs, and tech-curious people gather to learn, share, and connect. No
+              gatekeeping—just people helping people grow in tech.
             </p>
             <div className="flex flex-wrap gap-3">
               <Button variant="primary" size="lg" asChild>
@@ -171,26 +161,17 @@ export default function AboutPage() {
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {values.map((value) => (
-            <div
-              key={value.title}
-              className="flex flex-col gap-4 bg-card rounded-2xl border border-border p-6"
-            >
+            <div key={value.title} className="flex flex-col gap-4 bg-card rounded-2xl border border-border p-6">
               <div
                 className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${
-                  value.color === "teal"
-                    ? "bg-ring/10 text-ring"
-                    : "bg-amber/10 text-amber"
+                  value.color === "teal" ? "bg-ring/10 text-ring" : "bg-amber/10 text-amber"
                 }`}
               >
                 <value.icon className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">
-                  {value.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed text-sm">
-                  {value.description}
-                </p>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">{value.title}</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">{value.description}</p>
               </div>
             </div>
           ))}
@@ -204,47 +185,32 @@ export default function AboutPage() {
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
               From a simple idea to a registered nonprofit
             </span>
-            <h2 className="font-display text-3xl font-semibold text-foreground lg:text-4xl mb-6">
-              Our Story
-            </h2>
+            <h2 className="font-display text-3xl font-semibold text-foreground lg:text-4xl mb-6">Our Story</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                TechTank TO was founded in January 2023 with a simple idea: build a
-                community for early-stage engineers in Toronto. Free (or low cost)
-                events, real connections, no pressure. A place where people just
-                starting out could learn, meet others, and feel like they belonged
-                somewhere in this industry.
+                TechTank TO was founded in January 2023 with a simple idea: build a community for early-stage engineers
+                in Toronto. Free (or low cost) events, real connections, no pressure. A place where people just starting
+                out could learn, meet others, and feel like they belonged somewhere in this industry.
               </p>
               <p>
-                Since then, TechTank has grown beyond that original vision. The
-                community expanded to include people at all stages of their careers,
-                the programming diversified, and a team of volunteer organizers
-                stepped up to help keep things running.
+                Since then, TechTank has grown beyond that original vision. The community expanded to include people at
+                all stages of their careers, the programming diversified, and a team of volunteer organizers stepped up
+                to help keep things running.
               </p>
               <p>
                 In April 2026, TechTank became a{" "}
-                <strong className="text-foreground">
-                  registered nonprofit corporation in Ontario
-                </strong>
-                .
+                <strong className="text-foreground">registered nonprofit corporation in Ontario</strong>.
               </p>
               <p>
-                At a time when the industry is shifting faster than most people can
-                keep up with, we believe having a community behind you matters more
-                than it used to.
+                At a time when the industry is shifting faster than most people can keep up with, we believe having a
+                community behind you matters more than it used to.
               </p>
             </div>
           </div>
           <div className="relative">
             <div className="relative aspect-4/3 rounded-2xl overflow-hidden bg-linear-to-br from-peach via-lavender to-aqua">
               {featuredVideo ? (
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="absolute inset-0 h-full w-full object-cover"
-                >
+                <video autoPlay loop muted playsInline className="absolute inset-0 h-full w-full object-cover">
                   <source src={featuredVideo.replace(/\.mp4$/, ".webm")} type="video/webm" />
                   <source src={featuredVideo} type="video/mp4" />
                 </video>
@@ -258,9 +224,7 @@ export default function AboutPage() {
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="text-center text-foreground/60 px-8">
-                    Event photography placeholder
-                  </p>
+                  <p className="text-center text-foreground/60 px-8">Event photography placeholder</p>
                 </div>
               )}
             </div>
@@ -278,20 +242,13 @@ export default function AboutPage() {
         />
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {currentPrograms.map((program) => (
-            <div
-              key={program.title}
-              className="flex flex-col gap-4 bg-card rounded-2xl border border-border p-6"
-            >
+            <div key={program.title} className="flex flex-col gap-4 bg-card rounded-2xl border border-border p-6">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-ring/10 text-ring">
                 <program.icon className="h-6 w-6" />
               </div>
               <div className="flex-1">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">
-                  {program.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed text-sm">
-                  {program.description}
-                </p>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">{program.title}</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">{program.description}</p>
               </div>
               {program.cta && (
                 <Button variant="outline" size="sm" className="self-start" asChild>
@@ -301,7 +258,6 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
-
       </Section>
 
       {/* What We've Run Before */}
@@ -314,22 +270,15 @@ export default function AboutPage() {
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {pastPrograms.map((p) => (
-            <div
-              key={p.title}
-              className="flex flex-col gap-4 bg-card rounded-2xl border border-border p-6"
-            >
+            <div key={p.title} className="flex flex-col gap-4 bg-card rounded-2xl border border-border p-6">
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-2">
-                  <h3 className="font-display text-lg font-semibold text-foreground">
-                    {p.title}
-                  </h3>
+                  <h3 className="font-display text-lg font-semibold text-foreground">{p.title}</h3>
                   <span className="rounded-full bg-warning/40 dark:bg-warning/60 text-warning-foreground px-2 py-0.5 text-xs font-medium">
                     {p.label}
                   </span>
                 </div>
-                <p className="text-muted-foreground leading-relaxed text-sm">
-                  {p.description}
-                </p>
+                <p className="text-muted-foreground leading-relaxed text-sm">{p.description}</p>
               </div>
             </div>
           ))}
@@ -342,12 +291,9 @@ export default function AboutPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Help shape what TechTank becomes
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
-            Get Involved
-          </h2>
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Get Involved</h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-            Whether you want to pitch a new idea or get involved in an existing
-            initiative, we want to hear from you.
+            Whether you want to pitch a new idea or get involved in an existing initiative, we want to hear from you.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button variant="primary" size="lg" asChild>
@@ -372,29 +318,20 @@ export default function AboutPage() {
           className="mb-6"
         />
         <Button variant="outline" className="mb-10" asChild>
-          <a href="mailto:techtankto@gmail.com">
-            Interested in becoming a technology sponsor? Get in touch.
-          </a>
+          <a href="mailto:techtankto@gmail.com">Interested in becoming a technology sponsor? Get in touch.</a>
         </Button>
         <SponsorsMarquee />
       </Section>
 
       {/* Affiliations */}
       <Section background="white">
-        <SectionHeader
-          overline="Part of something bigger"
-          title="Affiliations"
-          className="mb-10"
-        />
+        <SectionHeader overline="Part of something bigger" title="Affiliations" className="mb-10" />
         <div className="max-w-2xl">
           <div className="rounded-2xl border border-border bg-card p-6 lg:p-8">
-            <h3 className="font-display text-xl font-semibold text-foreground mb-3">
-              Supercollider
-            </h3>
+            <h3 className="font-display text-xl font-semibold text-foreground mb-3">Supercollider</h3>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              TechTank is a proud member of the Supercollider network, a community
-              of communities bringing together Toronto&apos;s tech scene. Our events
-              are listed on their Luma calendar so you can discover everything
+              TechTank is a proud member of the Supercollider network, a community of communities bringing together
+              Toronto&apos;s tech scene. Our events are listed on their Luma calendar so you can discover everything
               happening across the ecosystem.
             </p>
             <div className="flex flex-wrap gap-3">

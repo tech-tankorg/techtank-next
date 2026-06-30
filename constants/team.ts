@@ -27,7 +27,6 @@ Danny focuses on organizing tech talks and panel discussions. Although he doesn'
 He's careful about picking topics that are relatable to the audience. The best talks, in his view, are about problems people have actually run into, or ideas that are just genuinely interesting. Self-promotion or corporate pitches dressed up as talks, not so much.
 As an introverted self-taught developer, Danny understands how it can feel discouraging to show up to a tech event for the first time. What keeps him invested is watching people grow, whether they're just starting out or further along in their careers. He believes seeing and hearing how someone else thinks is where a lot of insight lives, and he doesn't want anyone to miss out on that.
 By day, Danny is a software engineer on the frontend team at Ideogram, an AI image generation company, where he gets to work across the stack and ship features end to end. Outside of TechTank and his day job, software is still what he spends his time on.`,
-
       },
       {
         name: "Niki Fereidooni",
@@ -59,7 +58,7 @@ She found TechTank through a LinkedIn message from the founder and decided to ch
 As she became more involved, Sophia naturally stepped into a bigger role. She started TechTank’s Instagram account to share moments from events and help grow the community. From there, she took on social media, event planning, and later finances, creating experiences people genuinely enjoy, remember, and keep coming back for.
 To Sophia, TechTank is about real connection, growth, and opportunity. She hopes people leave TechTank events feeling inspired, supported, and more confident in their journey, whether that means making new friends, finding career opportunities, or simply feeling like they belong in tech, just as she once did.
 Outside of tech, she enjoys hosting events, muay thai, travelling, and creating unforgettable experiences.
-`
+`,
       },
     ],
   },
@@ -140,9 +139,19 @@ When she's not here, she's somewhere in the world or somewhere in Toronto chasin
     members: [
       { name: "Charu Idnani", pronouns: "she/her", role: "CodeDiversity", avatar: "/images/team/charu-idnani.webp" },
       { name: "Garv Gupta", pronouns: "she/her", role: "General", avatar: "/images/team/garv-gupta.webp" },
-      { name: "Nhi Nguyen", pronouns: "she/her", role: "General, CodeDiversity", avatar: "/images/team/nhi-nguyen.webp" },
+      {
+        name: "Nhi Nguyen",
+        pronouns: "she/her",
+        role: "General, CodeDiversity",
+        avatar: "/images/team/nhi-nguyen.webp",
+      },
       { name: "Rana Soyak", pronouns: "she/her", role: "General", avatar: "/images/team/rana-soyak.webp" },
-      { name: "John Malapit", pronouns: "he/him", role: "General, Sashimis (Sports)", avatar: "/images/team/john-malapit.webp" },
+      {
+        name: "John Malapit",
+        pronouns: "he/him",
+        role: "General, Sashimis (Sports)",
+        avatar: "/images/team/john-malapit.webp",
+      },
       { name: "Rohan Villoth", pronouns: "he/him", role: "General", avatar: "/images/team/rohan-villoth.webp" },
       { name: "Danyal Imran", pronouns: "he/him", role: "General", avatar: "/images/team/danyal-imran.webp" },
       { name: "Justin Bento", pronouns: "he/him", role: "General", avatar: "/images/team/justin-bento.webp" },

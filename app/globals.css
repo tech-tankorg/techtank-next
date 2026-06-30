@@ -6,51 +6,51 @@
 
 @theme {
   /* Brand palette — fixed across themes */
-  --color-teal: #2A6B7C;
-  --color-teal-dark: #1B4B5A;
-  --color-seafoam: #A8D5D8;
-  --color-mint: #5B9A8B;
-  --color-amber: #FFBC55;
-  --color-amber-dark: #EFA020;
-  --color-peach: #F5D4C1;
-  --color-coral: #E87C4E;
-  --color-blush: #EABFBF;
-  --color-sand: #F7EDE2;
+  --color-teal: #2a6b7c;
+  --color-teal-dark: #1b4b5a;
+  --color-seafoam: #a8d5d8;
+  --color-mint: #5b9a8b;
+  --color-amber: #ffbc55;
+  --color-amber-dark: #efa020;
+  --color-peach: #f5d4c1;
+  --color-coral: #e87c4e;
+  --color-blush: #eabfbf;
+  --color-sand: #f7ede2;
 
   /* Semantic tokens — light defaults (overridden per theme below) */
-  --color-background: #F9F6F2;
-  --color-foreground: #1B4B5A;
+  --color-background: #f9f6f2;
+  --color-foreground: #1b4b5a;
 
-  --color-muted: #EBF3F4;
-  --color-muted-foreground: #4A6670;
+  --color-muted: #ebf3f4;
+  --color-muted-foreground: #4a6670;
 
   --color-border: rgba(27, 75, 90, 0.12);
   --color-input: rgba(27, 75, 90, 0.18);
-  --color-ring: #2A6B7C;
+  --color-ring: #2a6b7c;
 
-  --color-primary: #1B4B5A;
-  --color-primary-foreground: #FFFFFF;
+  --color-primary: #1b4b5a;
+  --color-primary-foreground: #ffffff;
 
-  --color-secondary: #A8D5D8;
-  --color-secondary-foreground: #1B4B5A;
+  --color-secondary: #a8d5d8;
+  --color-secondary-foreground: #1b4b5a;
 
-  --color-accent: #D4ECEE;
-  --color-accent-foreground: #1B4B5A;
+  --color-accent: #d4ecee;
+  --color-accent-foreground: #1b4b5a;
 
-  --color-destructive: #E87C4E;
-  --color-destructive-foreground: #FFFFFF;
+  --color-destructive: #e87c4e;
+  --color-destructive-foreground: #ffffff;
 
-  --color-warning: #FFBC55;
-  --color-warning-foreground: #1B4B5A;
+  --color-warning: #ffbc55;
+  --color-warning-foreground: #1b4b5a;
 
-  --color-success: #5B9A8B;
-  --color-success-foreground: #FFFFFF;
+  --color-success: #5b9a8b;
+  --color-success-foreground: #ffffff;
 
   --color-card: rgba(255, 255, 255, 0.7);
-  --color-card-foreground: #1B4B5A;
+  --color-card-foreground: #1b4b5a;
 
-  --color-popover: #FFFFFF;
-  --color-popover-foreground: #1B4B5A;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #1b4b5a;
 
   /* Typography */
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -62,103 +62,105 @@
   --radius-xl: 1.75rem;
   --radius-2xl: 2rem;
   --radius-full: 9999px;
-
 }
 
 /* ─── Light Tokens & Gradients ─────────────────────────────────────────────── */
 
 /* Gradient defaults (light) — :root ensures var() resolves during SSR and before theme hydration */
 :root {
-  --gradient-brand: linear-gradient(135deg, #A8D5D8 0%, #C9E4E5 22%, #F7EDE2 45%, #F4DFA8 82%, #F2D870 100%);
-  --gradient-brand-vertical: linear-gradient(180deg, #A8D5D8 0%, #F7EDE2 40%, #F2DCA8 100%);
-  --gradient-hero: linear-gradient(160deg, #B5DFE0 0%, #D4E8E5 20%, #F0E6DC 45%, #F5D4C1 80%, #F5C9B0 100%);
-  --gradient-hero-soft: linear-gradient(135deg, #BEE0E2 0%, #F0E9E0 40%, #F5D4C1 100%);
+  --gradient-brand: linear-gradient(135deg, #a8d5d8 0%, #c9e4e5 22%, #f7ede2 45%, #f4dfa8 82%, #f2d870 100%);
+  --gradient-brand-vertical: linear-gradient(180deg, #a8d5d8 0%, #f7ede2 40%, #f2dca8 100%);
+  --gradient-hero: linear-gradient(160deg, #b5dfe0 0%, #d4e8e5 20%, #f0e6dc 45%, #f5d4c1 80%, #f5c9b0 100%);
+  --gradient-hero-soft: linear-gradient(135deg, #bee0e2 0%, #f0e9e0 40%, #f5d4c1 100%);
 }
 
 .light {
-  --color-background: #F9F6F2;
-  --color-foreground: #1B4B5A;
+  --color-background: #f9f6f2;
+  --color-foreground: #1b4b5a;
 
-  --color-muted: #EBF3F4;
-  --color-muted-foreground: #4A6670;
+  --color-muted: #ebf3f4;
+  --color-muted-foreground: #4a6670;
 
   --color-border: rgba(27, 75, 90, 0.12);
   --color-input: rgba(27, 75, 90, 0.18);
-  --color-ring: #2A6B7C;
+  --color-ring: #2a6b7c;
 
-  --color-primary: #1B4B5A;
-  --color-primary-foreground: #FFFFFF;
+  --color-primary: #1b4b5a;
+  --color-primary-foreground: #ffffff;
 
-  --color-secondary: #A8D5D8;
-  --color-secondary-foreground: #1B4B5A;
+  --color-secondary: #a8d5d8;
+  --color-secondary-foreground: #1b4b5a;
 
-  --color-accent: #D4ECEE;
-  --color-accent-foreground: #1B4B5A;
+  --color-accent: #d4ecee;
+  --color-accent-foreground: #1b4b5a;
 
-  --color-success: #5B9A8B;
-  --color-success-foreground: #FFFFFF;
+  --color-success: #5b9a8b;
+  --color-success-foreground: #ffffff;
 
   --color-card: rgba(255, 255, 255, 0.7);
-  --color-card-foreground: #1B4B5A;
+  --color-card-foreground: #1b4b5a;
 
-  --color-popover: #FFFFFF;
-  --color-popover-foreground: #1B4B5A;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #1b4b5a;
 
-  --gradient-brand: linear-gradient(135deg, #A8D5D8 0%, #C9E4E5 22%, #F7EDE2 45%, #F4DFA8 82%, #F2D870 100%);
-  --gradient-brand-vertical: linear-gradient(180deg, #A8D5D8 0%, #F7EDE2 40%, #F2DCA8 100%);
-  --gradient-hero: linear-gradient(160deg, #B5DFE0 0%, #D4E8E5 20%, #F0E6DC 45%, #F5D4C1 80%, #F5C9B0 100%);
-  --gradient-hero-soft: linear-gradient(135deg, #BEE0E2 0%, #F0E9E0 40%, #F5D4C1 100%);
+  --gradient-brand: linear-gradient(135deg, #a8d5d8 0%, #c9e4e5 22%, #f7ede2 45%, #f4dfa8 82%, #f2d870 100%);
+  --gradient-brand-vertical: linear-gradient(180deg, #a8d5d8 0%, #f7ede2 40%, #f2dca8 100%);
+  --gradient-hero: linear-gradient(160deg, #b5dfe0 0%, #d4e8e5 20%, #f0e6dc 45%, #f5d4c1 80%, #f5c9b0 100%);
+  --gradient-hero-soft: linear-gradient(135deg, #bee0e2 0%, #f0e9e0 40%, #f5d4c1 100%);
 }
 
-.gradient-brand          { background: var(--gradient-brand); }
-.gradient-brand-vertical { background: var(--gradient-brand-vertical); }
-.gradient-hero           { background: var(--gradient-hero); }
-.gradient-hero-soft      { background: var(--gradient-hero-soft); }
+.gradient-brand {
+  background: var(--gradient-brand);
+}
+.gradient-brand-vertical {
+  background: var(--gradient-brand-vertical);
+}
+.gradient-hero {
+  background: var(--gradient-hero);
+}
+.gradient-hero-soft {
+  background: var(--gradient-hero-soft);
+}
 
 .gradient-overlay-brand {
-  background: linear-gradient(
-    to top,
-    rgba(27, 75, 90, 0.92) 0%,
-    rgba(232, 124, 78, 0.55) 42%,
-    transparent 60%
-  );
+  background: linear-gradient(to top, rgba(27, 75, 90, 0.92) 0%, rgba(232, 124, 78, 0.55) 42%, transparent 60%);
 }
 
 /* ─── Dark Tokens & Gradients ──────────────────────────────────────────────── */
 
 .dark {
-  --color-background: #0D2B35;
-  --color-foreground: #E8F4F5;
+  --color-background: #0d2b35;
+  --color-foreground: #e8f4f5;
 
-  --color-muted: #1A3D4A;
-  --color-muted-foreground: #8BBEC6;
+  --color-muted: #1a3d4a;
+  --color-muted-foreground: #8bbec6;
 
   --color-border: rgba(168, 213, 216, 0.15);
   --color-input: rgba(168, 213, 216, 0.2);
-  --color-ring: #A8D5D8;
+  --color-ring: #a8d5d8;
 
-  --color-primary: #A8D5D8;
-  --color-primary-foreground: #0D2B35;
+  --color-primary: #a8d5d8;
+  --color-primary-foreground: #0d2b35;
 
-  --color-secondary: #1B4B5A;
-  --color-secondary-foreground: #A8D5D8;
+  --color-secondary: #1b4b5a;
+  --color-secondary-foreground: #a8d5d8;
 
-  --color-accent: #1E4A58;
-  --color-accent-foreground: #A8D5D8;
+  --color-accent: #1e4a58;
+  --color-accent-foreground: #a8d5d8;
 
-  --color-success: #4A8A7A;
-  --color-success-foreground: #FFFFFF;
+  --color-success: #4a8a7a;
+  --color-success-foreground: #ffffff;
 
   --color-card: rgba(27, 75, 90, 0.5);
-  --color-card-foreground: #E8F4F5;
+  --color-card-foreground: #e8f4f5;
 
-  --color-popover: #1A3D4A;
-  --color-popover-foreground: #E8F4F5;
+  --color-popover: #1a3d4a;
+  --color-popover-foreground: #e8f4f5;
 
-  --gradient-brand: linear-gradient(135deg, #1A3D4A 0%, #1B4B5A 25%, #3A2E20 50%, #352E18 100%);
-  --gradient-brand-vertical: linear-gradient(180deg, #1A3D4A 0%, #2A3830 38%, #352E18 100%);
-  --gradient-hero: linear-gradient(160deg, #0B2E38 0%, #1A3D4A 22%, #2E3028 48%, #4A2E1A 82%, #3A1E0E 100%);
-  --gradient-hero-soft: linear-gradient(135deg, #1A3D4A 0%, #2A3028 38%, #3A2818 100%);
+  --gradient-brand: linear-gradient(135deg, #1a3d4a 0%, #1b4b5a 25%, #3a2e20 50%, #352e18 100%);
+  --gradient-brand-vertical: linear-gradient(180deg, #1a3d4a 0%, #2a3830 38%, #352e18 100%);
+  --gradient-hero: linear-gradient(160deg, #0b2e38 0%, #1a3d4a 22%, #2e3028 48%, #4a2e1a 82%, #3a1e0e 100%);
+  --gradient-hero-soft: linear-gradient(135deg, #1a3d4a 0%, #2a3028 38%, #3a2818 100%);
 }
 
 /* ─── Helper Classes ───────────────────────────────────────────────────────── */
@@ -178,7 +180,12 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
     font-weight: 700;
     letter-spacing: -0.025em;
@@ -192,7 +199,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -331,8 +340,12 @@
 }
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(calc(-100% / var(--marquee-copies, 2))); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% / var(--marquee-copies, 2)));
+  }
 }
 
 .marquee-track {

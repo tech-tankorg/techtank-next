@@ -20,10 +20,7 @@ export default function AboutLayout({ children }: { children: React.ReactNode })
           <div className="flex items-center justify-center py-3">
             <div className="flex flex-wrap items-center justify-center gap-1">
               {subNav.map((item) => {
-                const isActive =
-                  item.href === "/about"
-                    ? pathname === "/about"
-                    : pathname.startsWith(item.href);
+                const isActive = item.href === "/about" ? pathname === "/about" : pathname.startsWith(item.href);
 
                 return (
                   <Button key={item.name} variant="nav" size="sm" isActive={isActive} asChild>
