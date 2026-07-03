@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   experimental: {
-    optimizePackageImports: ['lucide-react'],
+    optimizePackageImports: ["lucide-react"],
   },
   images: {
     formats: ["image/avif", "image/webp"],
@@ -36,8 +36,8 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: '/links/slack',
-        destination: 'https://join.slack.com/t/thetechtank/shared_invite/zt-3zhdtiavp-afxTnTcQdXEdfx~0mjXGtA',
+        source: "/links/slack",
+        destination: "https://join.slack.com/t/thetechtank/shared_invite/zt-3zhdtiavp-afxTnTcQdXEdfx~0mjXGtA",
         permanent: false,
       },
     ];

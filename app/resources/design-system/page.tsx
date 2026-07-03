@@ -2,16 +2,7 @@ import type { Metadata } from "next";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import {
-  Check,
-  Mail,
-  ArrowRight,
-  Download,
-  ExternalLink,
-  Users,
-  Star,
-  Zap,
-} from "lucide-react";
+import { Check, Mail, ArrowRight, Download, ExternalLink, Users, Star, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Design System",
@@ -20,51 +11,119 @@ export const metadata: Metadata = {
 };
 
 const brandColors = [
-  { name: "teal",       cls: "bg-teal",       label: "Teal",       hex: "#2A6B7C", usage: "Ring / focus, kicker labels" },
-  { name: "teal-dark",  cls: "bg-teal-dark",  label: "Teal Dark",  hex: "#1B4B5A", usage: "Primary (light mode)" },
-  { name: "amber",      cls: "bg-amber",      label: "Amber",      hex: "#FFBC55", usage: "Warning / secondary CTA" },
+  { name: "teal", cls: "bg-teal", label: "Teal", hex: "#2A6B7C", usage: "Ring / focus, kicker labels" },
+  { name: "teal-dark", cls: "bg-teal-dark", label: "Teal Dark", hex: "#1B4B5A", usage: "Primary (light mode)" },
+  { name: "amber", cls: "bg-amber", label: "Amber", hex: "#FFBC55", usage: "Warning / secondary CTA" },
   { name: "amber-dark", cls: "bg-amber-dark", label: "Amber Dark", hex: "#EFA020", usage: "Overlines, hover links" },
 ];
 
 const accentTokens = [
-  { name: "coral",   cls: "bg-coral",   label: "Coral",   hex: "#E87C4E", usage: "Destructive / orange accent" },
-  { name: "mint",    cls: "bg-mint",    label: "Mint",    hex: "#5B9A8B", usage: "Check icons, accent green" },
+  { name: "coral", cls: "bg-coral", label: "Coral", hex: "#E87C4E", usage: "Destructive / orange accent" },
+  { name: "mint", cls: "bg-mint", label: "Mint", hex: "#5B9A8B", usage: "Check icons, accent green" },
   { name: "seafoam", cls: "bg-seafoam", label: "Seafoam", hex: "#A8D5D8", usage: "Secondary (light mode)" },
-  { name: "sand",    cls: "bg-sand",    label: "Sand",    hex: "#F7EDE2", usage: "Warm off-white, gradients" },
-  { name: "peach",   cls: "bg-peach",   label: "Peach",   hex: "#F5D4C1", usage: "Warm gradient base" },
-  { name: "blush",   cls: "bg-blush",   label: "Blush",   hex: "#EABFBF", usage: "Pink accent" },
+  { name: "sand", cls: "bg-sand", label: "Sand", hex: "#F7EDE2", usage: "Warm off-white, gradients" },
+  { name: "peach", cls: "bg-peach", label: "Peach", hex: "#F5D4C1", usage: "Warm gradient base" },
+  { name: "blush", cls: "bg-blush", label: "Blush", hex: "#EABFBF", usage: "Pink accent" },
 ];
 
 const semanticPairs = [
-  { bg: "background",  bgCls: "bg-background",  bgAlias: "#F9F6F2",       darkBgAlias: "#0D2B35",
-    fg: "foreground",  fgCls: "bg-[var(--color-foreground)]",  fgAlias: "teal-dark",    darkFgAlias: "#E8F4F5" },
-  { bg: "muted",       bgCls: "bg-muted",        bgAlias: "#EBF3F4",       darkBgAlias: "#1A3D4A",
-    fg: "muted-foreground",  fgCls: "bg-[var(--color-muted-foreground)]",  fgAlias: "#4A6670",     darkFgAlias: "#8BBEC6" },
-  { bg: "card",        bgCls: "bg-card",         bgAlias: "white / 70%",   darkBgAlias: "teal-dark / 50%",
-    fg: "card-foreground",   fgCls: "bg-[var(--color-card-foreground)]",   fgAlias: "teal-dark",    darkFgAlias: "#E8F4F5" },
-  { bg: "primary",     bgCls: "bg-primary",      bgAlias: "teal-dark",     darkBgAlias: "seafoam",
-    fg: "primary-foreground",  fgCls: "bg-[var(--color-primary-foreground)]",  fgAlias: "white",   darkFgAlias: "#0D2B35" },
-  { bg: "secondary",   bgCls: "bg-secondary",    bgAlias: "seafoam",       darkBgAlias: "teal-dark",
-    fg: "secondary-foreground",  fgCls: "bg-[var(--color-secondary-foreground)]",  fgAlias: "teal-dark",  darkFgAlias: "seafoam" },
-  { bg: "accent",      bgCls: "bg-accent",       bgAlias: "seafoam / 20%", darkBgAlias: "#1E4A58",
-    fg: "accent-foreground",   fgCls: "bg-[var(--color-accent-foreground)]",   fgAlias: "teal-dark",   darkFgAlias: "seafoam" },
-  { bg: "destructive", bgCls: "bg-destructive",  bgAlias: "coral",         darkBgAlias: "coral",
-    fg: "destructive-foreground",  fgCls: "bg-[var(--color-destructive-foreground)]",  fgAlias: "white",  darkFgAlias: "white" },
-  { bg: "warning",     bgCls: "bg-warning",      bgAlias: "amber",         darkBgAlias: "amber",
-    fg: "warning-foreground",  fgCls: "bg-[var(--color-warning-foreground)]",  fgAlias: "teal-dark",   darkFgAlias: "teal-dark" },
+  {
+    bg: "background",
+    bgCls: "bg-background",
+    bgAlias: "#F9F6F2",
+    darkBgAlias: "#0D2B35",
+    fg: "foreground",
+    fgCls: "bg-[var(--color-foreground)]",
+    fgAlias: "teal-dark",
+    darkFgAlias: "#E8F4F5",
+  },
+  {
+    bg: "muted",
+    bgCls: "bg-muted",
+    bgAlias: "#EBF3F4",
+    darkBgAlias: "#1A3D4A",
+    fg: "muted-foreground",
+    fgCls: "bg-[var(--color-muted-foreground)]",
+    fgAlias: "#4A6670",
+    darkFgAlias: "#8BBEC6",
+  },
+  {
+    bg: "card",
+    bgCls: "bg-card",
+    bgAlias: "white / 70%",
+    darkBgAlias: "teal-dark / 50%",
+    fg: "card-foreground",
+    fgCls: "bg-[var(--color-card-foreground)]",
+    fgAlias: "teal-dark",
+    darkFgAlias: "#E8F4F5",
+  },
+  {
+    bg: "primary",
+    bgCls: "bg-primary",
+    bgAlias: "teal-dark",
+    darkBgAlias: "seafoam",
+    fg: "primary-foreground",
+    fgCls: "bg-[var(--color-primary-foreground)]",
+    fgAlias: "white",
+    darkFgAlias: "#0D2B35",
+  },
+  {
+    bg: "secondary",
+    bgCls: "bg-secondary",
+    bgAlias: "seafoam",
+    darkBgAlias: "teal-dark",
+    fg: "secondary-foreground",
+    fgCls: "bg-[var(--color-secondary-foreground)]",
+    fgAlias: "teal-dark",
+    darkFgAlias: "seafoam",
+  },
+  {
+    bg: "accent",
+    bgCls: "bg-accent",
+    bgAlias: "seafoam / 20%",
+    darkBgAlias: "#1E4A58",
+    fg: "accent-foreground",
+    fgCls: "bg-[var(--color-accent-foreground)]",
+    fgAlias: "teal-dark",
+    darkFgAlias: "seafoam",
+  },
+  {
+    bg: "destructive",
+    bgCls: "bg-destructive",
+    bgAlias: "coral",
+    darkBgAlias: "coral",
+    fg: "destructive-foreground",
+    fgCls: "bg-[var(--color-destructive-foreground)]",
+    fgAlias: "white",
+    darkFgAlias: "white",
+  },
+  {
+    bg: "warning",
+    bgCls: "bg-warning",
+    bgAlias: "amber",
+    darkBgAlias: "amber",
+    fg: "warning-foreground",
+    fgCls: "bg-[var(--color-warning-foreground)]",
+    fgAlias: "teal-dark",
+    darkFgAlias: "teal-dark",
+  },
 ];
 
 const semanticUtilities = [
   { token: "border", bgCls: "bg-border", lightAlias: "teal-dark / 12%", darkAlias: "seafoam / 15%" },
-  { token: "ring",   bgCls: "bg-ring",   lightAlias: "teal",            darkAlias: "seafoam" },
-  { token: "input",  bgCls: "bg-input",  lightAlias: "teal-dark / 18%", darkAlias: "seafoam / 20%" },
+  { token: "ring", bgCls: "bg-ring", lightAlias: "teal", darkAlias: "seafoam" },
+  { token: "input", bgCls: "bg-input", lightAlias: "teal-dark / 18%", darkAlias: "seafoam / 20%" },
 ];
 
 const gradients = [
-  { cls: "gradient-brand texture-grain",          label: ".gradient-brand",          desc: "135° — seafoam → sand → peach" },
-  { cls: "gradient-brand-vertical texture-grain", label: ".gradient-brand-vertical", desc: "180° vertical — seafoam → sand → peach" },
-  { cls: "gradient-hero texture-grain",           label: ".gradient-hero",           desc: "160° — aqua → warm off-white → peach" },
-  { cls: "gradient-hero-soft",                    label: ".gradient-hero-soft",      desc: "Soft brand gradient for CTA sections" },
+  { cls: "gradient-brand texture-grain", label: ".gradient-brand", desc: "135° — seafoam → sand → peach" },
+  {
+    cls: "gradient-brand-vertical texture-grain",
+    label: ".gradient-brand-vertical",
+    desc: "180° vertical — seafoam → sand → peach",
+  },
+  { cls: "gradient-hero texture-grain", label: ".gradient-hero", desc: "160° — aqua → warm off-white → peach" },
+  { cls: "gradient-hero-soft", label: ".gradient-hero-soft", desc: "Soft brand gradient for CTA sections" },
 ];
 
 export default function DesignSystemPage() {
@@ -132,7 +191,8 @@ export default function DesignSystemPage() {
       <Section background="muted">
         <SectionHeader overline="Theming" title="Semantic tokens" className="mb-4" />
         <p className="text-sm text-muted-foreground mb-8 max-w-2xl">
-          Every token resolves differently in light and dark mode. Never use raw brand hex values for text, surfaces, or borders in components — always use the semantic name.
+          Every token resolves differently in light and dark mode. Never use raw brand hex values for text, surfaces, or
+          borders in components — always use the semantic name.
         </p>
 
         <div className="grid lg:grid-cols-2 gap-5">
@@ -140,7 +200,9 @@ export default function DesignSystemPage() {
           <div className="light rounded-xl overflow-hidden border border-border bg-background">
             <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
               <div className="h-2.5 w-2.5 rounded-full bg-background border border-foreground/30" />
-              <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">Light mode</span>
+              <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+                Light mode
+              </span>
             </div>
             {semanticPairs.map((pair) => (
               <div key={pair.bg} className="px-4 py-2.5 border-b border-border/60">
@@ -157,10 +219,15 @@ export default function DesignSystemPage() {
               </div>
             ))}
             <div className="px-4 pt-3 pb-1 border-t border-border">
-              <p className="text-[10px] font-semibold uppercase tracking-widest mb-2 text-muted-foreground">Utilities</p>
+              <p className="text-[10px] font-semibold uppercase tracking-widest mb-2 text-muted-foreground">
+                Utilities
+              </p>
             </div>
             {semanticUtilities.map((u, i) => (
-              <div key={u.token} className={`flex items-center gap-2.5 px-4 py-2${i === semanticUtilities.length - 1 ? " pb-4" : ""}`}>
+              <div
+                key={u.token}
+                className={`flex items-center gap-2.5 px-4 py-2${i === semanticUtilities.length - 1 ? " pb-4" : ""}`}
+              >
                 <div className={`h-4 w-4 rounded-[3px] border border-foreground/20 shrink-0 ${u.bgCls}`} />
                 <code className="text-[11px] font-semibold flex-1 text-foreground">{u.token}</code>
                 <span className="text-[10px] font-mono text-muted-foreground">{u.lightAlias}</span>
@@ -172,7 +239,9 @@ export default function DesignSystemPage() {
           <div className="dark rounded-xl overflow-hidden border border-border bg-background">
             <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
               <div className="h-2.5 w-2.5 rounded-full bg-background border border-foreground/30" />
-              <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">Dark mode</span>
+              <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+                Dark mode
+              </span>
             </div>
             {semanticPairs.map((pair) => (
               <div key={pair.bg} className="px-4 py-2.5 border-b border-border/60">
@@ -189,10 +258,15 @@ export default function DesignSystemPage() {
               </div>
             ))}
             <div className="px-4 pt-3 pb-1 border-t border-border">
-              <p className="text-[10px] font-semibold uppercase tracking-widest mb-2 text-muted-foreground">Utilities</p>
+              <p className="text-[10px] font-semibold uppercase tracking-widest mb-2 text-muted-foreground">
+                Utilities
+              </p>
             </div>
             {semanticUtilities.map((u, i) => (
-              <div key={u.token} className={`flex items-center gap-2.5 px-4 py-2${i === semanticUtilities.length - 1 ? " pb-4" : ""}`}>
+              <div
+                key={u.token}
+                className={`flex items-center gap-2.5 px-4 py-2${i === semanticUtilities.length - 1 ? " pb-4" : ""}`}
+              >
                 <div className={`h-4 w-4 rounded-[3px] border border-foreground/20 shrink-0 ${u.bgCls}`} />
                 <code className="text-[11px] font-semibold flex-1 text-foreground">{u.token}</code>
                 <span className="text-[10px] font-mono text-muted-foreground">{u.darkAlias}</span>
@@ -214,11 +288,16 @@ export default function DesignSystemPage() {
           <div className="light rounded-xl overflow-hidden border border-border">
             <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-background">
               <div className="h-2.5 w-2.5 rounded-full bg-background border border-foreground/30" />
-              <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">Light mode</span>
+              <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+                Light mode
+              </span>
             </div>
             <div className="grid grid-cols-2">
               {gradients.map((g, i) => (
-                <div key={g.label} className={`bg-background${i % 2 === 0 ? " border-r border-border" : ""}${i < 2 ? " border-b border-border" : ""}`}>
+                <div
+                  key={g.label}
+                  className={`bg-background${i % 2 === 0 ? " border-r border-border" : ""}${i < 2 ? " border-b border-border" : ""}`}
+                >
                   <div className={`h-28 w-full ${g.cls}`} />
                   <div className="px-3 py-2.5">
                     <code className="text-[11px] font-semibold block text-foreground">{g.label}</code>
@@ -233,11 +312,16 @@ export default function DesignSystemPage() {
           <div className="dark rounded-xl overflow-hidden border border-border">
             <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-background">
               <div className="h-2.5 w-2.5 rounded-full bg-background border border-foreground/30" />
-              <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">Dark mode</span>
+              <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+                Dark mode
+              </span>
             </div>
             <div className="grid grid-cols-2">
               {gradients.map((g, i) => (
-                <div key={g.label} className={`bg-background${i % 2 === 0 ? " border-r border-border" : ""}${i < 2 ? " border-b border-border" : ""}`}>
+                <div
+                  key={g.label}
+                  className={`bg-background${i % 2 === 0 ? " border-r border-border" : ""}${i < 2 ? " border-b border-border" : ""}`}
+                >
                   <div className={`h-28 w-full ${g.cls}`} />
                   <div className="px-3 py-2.5">
                     <code className="text-[11px] font-semibold block text-foreground">{g.label}</code>
@@ -255,7 +339,9 @@ export default function DesignSystemPage() {
         <SectionHeader overline="Typography" title="Type scale" className="mb-12" />
         <div className="space-y-8 max-w-3xl">
           <div className="pb-6 border-b border-border">
-            <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Display — Space Grotesk (.font-display)</p>
+            <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">
+              Display — Space Grotesk (.font-display)
+            </p>
             <p className="font-display text-6xl font-semibold text-foreground leading-tight">Aa Display 6xl</p>
             <p className="font-display text-5xl font-semibold text-foreground leading-tight mt-2">Aa Display 5xl</p>
             <p className="font-display text-4xl font-semibold text-foreground leading-tight mt-2">Aa Display 4xl</p>
@@ -295,10 +381,18 @@ export default function DesignSystemPage() {
           <div>
             <p className="text-sm text-muted-foreground mb-4 uppercase tracking-wider">Sizes</p>
             <div className="flex flex-wrap gap-4 items-center">
-              <Button variant="primary" size="lg">Large</Button>
-              <Button variant="primary" size="md">Medium (default)</Button>
-              <Button variant="primary" size="sm">Small</Button>
-              <Button variant="primary" size="icon"><Star className="h-4 w-4" /></Button>
+              <Button variant="primary" size="lg">
+                Large
+              </Button>
+              <Button variant="primary" size="md">
+                Medium (default)
+              </Button>
+              <Button variant="primary" size="sm">
+                Small
+              </Button>
+              <Button variant="primary" size="icon">
+                <Star className="h-4 w-4" />
+              </Button>
             </div>
           </div>
           <div>
@@ -325,8 +419,12 @@ export default function DesignSystemPage() {
           <div>
             <p className="text-sm text-muted-foreground mb-4 uppercase tracking-wider">States</p>
             <div className="flex flex-wrap gap-4 items-center">
-              <Button variant="primary" disabled>Disabled primary</Button>
-              <Button variant="outline" disabled>Disabled outline</Button>
+              <Button variant="primary" disabled>
+                Disabled primary
+              </Button>
+              <Button variant="outline" disabled>
+                Disabled outline
+              </Button>
             </div>
           </div>
         </div>
@@ -349,8 +447,12 @@ export default function DesignSystemPage() {
           <div>
             <p className="text-sm text-muted-foreground mb-3 uppercase tracking-wider">Sizes</p>
             <div className="flex flex-wrap gap-3 items-center">
-              <Badge variant="default" size="md">Medium (default)</Badge>
-              <Badge variant="default" size="sm">Small</Badge>
+              <Badge variant="default" size="md">
+                Medium (default)
+              </Badge>
+              <Badge variant="default" size="sm">
+                Small
+              </Badge>
             </div>
           </div>
           <div>
@@ -373,7 +475,9 @@ export default function DesignSystemPage() {
               <Users className="h-6 w-6" />
             </div>
             <h3 className="font-display text-xl font-semibold text-foreground mb-3">Icon card</h3>
-            <p className="text-muted-foreground leading-relaxed">Used for feature lists and benefit sections throughout the site.</p>
+            <p className="text-muted-foreground leading-relaxed">
+              Used for feature lists and benefit sections throughout the site.
+            </p>
           </div>
 
           {/* Checklist card — ring tint */}
@@ -412,7 +516,10 @@ export default function DesignSystemPage() {
           </div>
 
           {/* Hover-link card */}
-          <a href="#" className="group flex items-center gap-4 bg-card rounded-xl border border-border p-5 hover:border-ring/50 transition-all">
+          <a
+            href="#"
+            className="group flex items-center gap-4 bg-card rounded-xl border border-border p-5 hover:border-ring/50 transition-all"
+          >
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-ring/10">
               <Star className="h-6 w-6 text-ring" />
             </div>
@@ -462,17 +569,15 @@ export default function DesignSystemPage() {
       <Section>
         <SectionHeader overline="Components" title="Process stepper" className="mb-12" />
         <div className="grid gap-6 lg:grid-cols-5">
-          {["Initial contact", "Scoping call", "Confirm details", "Marketing kickoff", "Event day"].map(
-            (title, i) => (
-              <div key={title} className="relative">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-ring text-primary-foreground font-semibold mb-4">
-                  {i + 1}
-                </div>
-                <h4 className="font-semibold text-foreground mb-1">{title}</h4>
-                <p className="text-sm text-muted-foreground">Step description goes here.</p>
+          {["Initial contact", "Scoping call", "Confirm details", "Marketing kickoff", "Event day"].map((title, i) => (
+            <div key={title} className="relative">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-ring text-primary-foreground font-semibold mb-4">
+                {i + 1}
               </div>
-            )
-          )}
+              <h4 className="font-semibold text-foreground mb-1">{title}</h4>
+              <p className="text-sm text-muted-foreground">Step description goes here.</p>
+            </div>
+          ))}
         </div>
       </Section>
 
@@ -482,9 +587,7 @@ export default function DesignSystemPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             CTA section pattern
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
-            Gradient CTA section
-          </h2>
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Gradient CTA section</h2>
           <p className="text-muted-foreground mb-8">
             Used at the bottom of every get-involved sub-page. Always ends with a primary action.
           </p>

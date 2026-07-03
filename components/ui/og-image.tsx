@@ -10,15 +10,11 @@ export const size = {
 const logoPath = join(process.cwd(), "public/images/logos/light.png");
 
 async function loadGoogleFont(font: string, text: string) {
-  const url = `https://fonts.googleapis.com/css2?family=${font}&text=${encodeURIComponent(
-    text,
-  )}`;
+  const url = `https://fonts.googleapis.com/css2?family=${font}&text=${encodeURIComponent(text)}`;
 
   const css = await fetch(url).then((res) => res.text());
 
-  const resource = css.match(
-    /src: url\((.+)\) format\('(opentype|truetype)'\)/,
-  );
+  const resource = css.match(/src: url\((.+)\) format\('(opentype|truetype)'\)/);
 
   if (!resource) {
     throw new Error("Failed to load font");
@@ -32,17 +28,13 @@ type CreateOGImageParams = {
   imageAlt?: string;
 };
 
-export async function createOGImage({
-  title,
-  imageAlt = "TechTank TO",
-}: CreateOGImageParams) {
+export async function createOGImage({ title, imageAlt = "TechTank TO" }: CreateOGImageParams) {
   const hasTitle = Boolean(title?.trim());
 
   const logo = await readFile(logoPath);
   const logoSrc = `data:image/png;base64,${logo.toString("base64")}`;
 
-  const font =
-    hasTitle && title ? await loadGoogleFont("Inter:wght@700", title) : null;
+  const font = hasTitle && title ? await loadGoogleFont("Inter:wght@700", title) : null;
 
   return new ImageResponse(
     <div

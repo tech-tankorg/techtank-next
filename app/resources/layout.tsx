@@ -9,11 +9,7 @@ const resourcesNav = [
   { name: "Design System", href: "/resources/design-system" },
 ];
 
-export default function ResourcesLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function ResourcesLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   return (

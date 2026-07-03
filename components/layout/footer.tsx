@@ -59,13 +59,7 @@ export function Footer() {
           {/* Brand column */}
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center">
-              <Image
-                src="/images/logos/dark.svg"
-                alt="TechTank TO"
-                width={128}
-                height={56}
-                className="h-10 w-auto"
-              />
+              <Image src="/images/logos/dark.svg" alt="TechTank TO" width={128} height={56} className="h-10 w-auto" />
             </Link>
             <p className="mt-4 text-sm text-primary-foreground/70 dark:text-foreground/70 leading-relaxed">
               Toronto&apos;s inclusive tech community. Year-round events since 2023.

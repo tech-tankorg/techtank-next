@@ -1,25 +1,23 @@
 {
   "name": "techtank-to",
   "version": "1.0.0",
-  "description": "TechTank TO - Toronto's tech community website",
-  "type": "module",
   "private": true,
+  "description": "TechTank TO - Toronto's tech community website",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "type": "module",
   "sideEffects": false,
   "scripts": {
     "knip": "knip --fix --format --include-entry-exports --allow-remove-files",
     "analyze": "next experimental-analyze",
-    "typecheck": "pnpm exec tsc --noEmit",
+    "type:check": "pnpm exec tsc --noEmit",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.33.0",
-  "engines": {
-    "pnpm": ">=10"
+    "lint": "next lint",
+    "format": "oxfmt .",
+    "format:check": "oxfmt --check ."
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
@@ -43,8 +41,13 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "knip": "^6.22.0",
+    "oxfmt": "^0.57.0",
     "postcss": "^8.5.10",
     "tailwindcss": "^4.2.2",
     "typescript": "^6.0.3"
-  }
+  },
+  "engines": {
+    "pnpm": ">=10"
+  },
+  "packageManager": "pnpm@10.33.0"
 }

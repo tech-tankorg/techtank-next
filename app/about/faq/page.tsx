@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, SectionHeader } from "@/components/ui/section";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
   title: "FAQ",
@@ -47,8 +42,12 @@ const faqs = [
         q: "Can my company sponsor or host an event?",
         a: (
           <>
-            Yes. Companies can sponsor by providing a venue, covering food and drinks, or contributing financially. Hosting a TechTank event is a great way to get your space and team in front of Toronto's tech community.{" "}
-            <Link href="/get-involved/sponsor" className="underline underline-offset-2 hover:text-foreground transition-colors">
+            Yes. Companies can sponsor by providing a venue, covering food and drinks, or contributing financially.
+            Hosting a TechTank event is a great way to get your space and team in front of Toronto's tech community.{" "}
+            <Link
+              href="/get-involved/sponsor"
+              className="underline underline-offset-2 hover:text-foreground transition-colors"
+            >
               Fill out the sponsor and host inquiry form
             </Link>{" "}
             and an organizer will follow up.
@@ -59,7 +58,10 @@ const faqs = [
         q: "Where does donation and sponsorship money go?",
         a: (
           <>
-            <p className="mb-3">TechTank is a nonprofit run almost entirely by volunteers. When you donate or when a company sponsors us, here is where that money goes:</p>
+            <p className="mb-3">
+              TechTank is a nonprofit run almost entirely by volunteers. When you donate or when a company sponsors us,
+              here is where that money goes:
+            </p>
             <ul className="list-disc list-inside space-y-1 text-muted-foreground mb-3">
               <li>Platform fees for Luma and Meetup</li>
               <li>Website hosting and domain costs</li>
@@ -68,9 +70,15 @@ const faqs = [
               <li>Special event costs for socials and programming not covered by a venue sponsor</li>
               <li>Operational costs including legal and bookkeeping services</li>
               <li>Food and drinks for volunteers and organizers at events and team meetings</li>
-              <li>Eventually: speaker honorariums and travel costs, as we grow our ability to bring in speakers who require compensation</li>
+              <li>
+                Eventually: speaker honorariums and travel costs, as we grow our ability to bring in speakers who
+                require compensation
+              </li>
             </ul>
-            <p>We keep most events free specifically because we believe access to community shouldn't cost anything. Donations and sponsorships are what make that possible.</p>
+            <p>
+              We keep most events free specifically because we believe access to community shouldn't cost anything.
+              Donations and sponsorships are what make that possible.
+            </p>
           </>
         ),
       },
@@ -91,8 +99,12 @@ const faqs = [
         q: "I have an idea for an event or initiative. Can I bring it to TechTank?",
         a: (
           <>
-            Please do. TechTank has been shaped by people who showed up with ideas and made them happen. If you want to organize something, facilitate a workshop, or launch a new initiative under the TechTank umbrella,{" "}
-            <a href="mailto:techtankto@gmail.com" className="underline underline-offset-2 hover:text-foreground transition-colors">
+            Please do. TechTank has been shaped by people who showed up with ideas and made them happen. If you want to
+            organize something, facilitate a workshop, or launch a new initiative under the TechTank umbrella,{" "}
+            <a
+              href="mailto:techtankto@gmail.com"
+              className="underline underline-offset-2 hover:text-foreground transition-colors"
+            >
               reach out
             </a>{" "}
             or fill out the organizer interest form. We'd love to hear it.
@@ -103,8 +115,14 @@ const faqs = [
         q: "Can I volunteer?",
         a: (
           <>
-            Yes. We need help behind the scenes with social media, design, website, operations, fundraising, and sponsorship outreach. We also need people to help run events like socials and Tech Talks — though for event roles, we ask that you get involved in the community first so you know what TechTank is all about. Time commitment varies.{" "}
-            <Link href="/get-involved/volunteer" className="underline underline-offset-2 hover:text-foreground transition-colors">
+            Yes. We need help behind the scenes with social media, design, website, operations, fundraising, and
+            sponsorship outreach. We also need people to help run events like socials and Tech Talks — though for event
+            roles, we ask that you get involved in the community first so you know what TechTank is all about. Time
+            commitment varies.{" "}
+            <Link
+              href="/get-involved/volunteer"
+              className="underline underline-offset-2 hover:text-foreground transition-colors"
+            >
               Fill out the volunteer form
             </Link>{" "}
             and we'll be in touch.
@@ -129,11 +147,18 @@ const faqs = [
         a: (
           <>
             Please reach out to us at{" "}
-            <a href="mailto:techtankto@gmail.com" className="underline underline-offset-2 hover:text-foreground transition-colors">
+            <a
+              href="mailto:techtankto@gmail.com"
+              className="underline underline-offset-2 hover:text-foreground transition-colors"
+            >
               techtankto@gmail.com
             </a>{" "}
-            or speak to any organizer at the event. We take every report seriously and handle them confidentially. You can also review our full{" "}
-            <Link href="/legal/code-of-conduct" className="underline underline-offset-2 hover:text-foreground transition-colors">
+            or speak to any organizer at the event. We take every report seriously and handle them confidentially. You
+            can also review our full{" "}
+            <Link
+              href="/legal/code-of-conduct"
+              className="underline underline-offset-2 hover:text-foreground transition-colors"
+            >
               Code of Conduct
             </Link>{" "}
             for more detail on how reports are handled.
@@ -151,15 +176,13 @@ export default function FAQPage() {
       <section className="relative overflow-hidden gradient-hero texture-grain">
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
-              FAQ
-            </span>
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">FAQ</span>
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
               Frequently asked questions
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Everything you need to know about TechTank — events, membership,
-              sponsorship, and more. Can't find what you're looking for?{" "}
+              Everything you need to know about TechTank — events, membership, sponsorship, and more. Can't find what
+              you're looking for?{" "}
               <a
                 href="mailto:techtankto@gmail.com"
                 className="underline underline-offset-2 hover:text-foreground transition-colors"
@@ -176,11 +199,7 @@ export default function FAQPage() {
       {faqs.map((group, groupIndex) => (
         <Section key={group.category} background={groupIndex % 2 === 0 ? undefined : "white"}>
           <div>
-            <SectionHeader
-              overline={group.category}
-              title={group.category}
-              className="mb-8"
-            />
+            <SectionHeader overline={group.category} title={group.category} className="mb-8" />
             <Accordion type="single" collapsible className="space-y-2">
               {group.items.map((item, index) => (
                 <AccordionItem
@@ -191,9 +210,7 @@ export default function FAQPage() {
                   <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5">
                     {item.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
-                    {item.a}
-                  </AccordionContent>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5">{item.a}</AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
@@ -207,12 +224,9 @@ export default function FAQPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Still have questions?
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
-            We're happy to help
-          </h2>
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">We're happy to help</h2>
           <p className="text-muted-foreground mb-6">
-            If you didn't find what you were looking for, reach out directly and
-            an organizer will get back to you.
+            If you didn't find what you were looking for, reach out directly and an organizer will get back to you.
           </p>
           <a
             href="mailto:techtankto@gmail.com"

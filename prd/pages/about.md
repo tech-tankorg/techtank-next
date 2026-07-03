@@ -2,8 +2,8 @@
 
 **URL:** https://www.techtankto.com/about
 **Page title:** About — TechTank TO
-**Role:** Values and community manifesto. Establishes *why* TechTank
-exists and *what* it stands for, through the four core pillars.
+**Role:** Values and community manifesto. Establishes _why_ TechTank
+exists and _what_ it stands for, through the four core pillars.
 
 ---
 

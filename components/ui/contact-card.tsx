@@ -23,7 +23,7 @@ export function ContactCard({
   return (
     <div className="rounded-2xl glass p-6 lg:p-8 space-y-4">
       <p className="text-sm text-muted-foreground">{context}</p>
-      
+
       {/* Email */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
@@ -41,11 +41,7 @@ export function ContactCard({
             className="inline-flex items-center justify-center h-7 w-7 rounded-lg bg-card/50 hover:bg-secondary text-muted-foreground hover:text-secondary-foreground transition-colors"
             aria-label={copied ? "Copied" : "Copy email"}
           >
-            {copied ? (
-              <Check className="h-3.5 w-3.5" />
-            ) : (
-              <Copy className="h-3.5 w-3.5" />
-            )}
+            {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
           </button>
         </div>
       </div>

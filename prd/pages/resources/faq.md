@@ -30,12 +30,12 @@ about membership, events, sponsorship, volunteering, and policies.
 
 ### FAQ groups (accordion per group)
 
-| Group | Questions |
-|---|---|
-| General | Is TechTank free? / Where are you based? / Who are these events for? / How do I find out about events? / Do I need to be a member to attend? |
-| Sponsorship & Hosting | Can my company sponsor or host? / Where does donation and sponsorship money go? / What does sponsoring include? / Is TechTank a nonprofit? |
-| Getting Involved | I have an idea for an event — can I bring it? / Can I volunteer? |
-| Events & Policies | RSVP and cancellation policy / Photos and video at events / What to do if something made me uncomfortable |
+| Group                 | Questions                                                                                                                                    |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| General               | Is TechTank free? / Where are you based? / Who are these events for? / How do I find out about events? / Do I need to be a member to attend? |
+| Sponsorship & Hosting | Can my company sponsor or host? / Where does donation and sponsorship money go? / What does sponsoring include? / Is TechTank a nonprofit?   |
+| Getting Involved      | I have an idea for an event — can I bring it? / Can I volunteer?                                                                             |
+| Events & Policies     | RSVP and cancellation policy / Photos and video at events / What to do if something made me uncomfortable                                    |
 
 ### Closing CTA
 

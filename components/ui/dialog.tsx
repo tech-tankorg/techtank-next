@@ -55,7 +55,7 @@ export function Dialog({ open, onClose, labelledBy, className, children }: Dialo
           "w-[calc(100%-2rem)] max-w-md max-h-[85dvh] rounded-2xl",
           "md:max-w-xl md:max-h-[80dvh]",
           "lg:max-w-2xl",
-          className
+          className,
         )}
         role="dialog"
         aria-modal="true"
@@ -75,11 +75,9 @@ export function Dialog({ open, onClose, labelledBy, className, children }: Dialo
           </Button>
         </div>
 
-        <div className="flex flex-1 flex-col gap-5 overflow-hidden px-6 md:px-8 lg:px-10 pb-4 min-h-0">
-          {children}
-        </div>
+        <div className="flex flex-1 flex-col gap-5 overflow-hidden px-6 md:px-8 lg:px-10 pb-4 min-h-0">{children}</div>
       </div>
     </>,
-    document.body
+    document.body,
   );
 }

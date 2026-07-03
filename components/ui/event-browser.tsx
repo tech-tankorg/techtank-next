@@ -15,14 +15,16 @@ type DisplayMode = "cards" | "grid" | "list";
 const CATEGORY_TAGS: Record<Exclude<CategoryFilter, "all" | "other">, string[]> = {
   "tech-talks": ["Tech Talk", "Panel", "Workshop"],
   "coffee-chats": ["Coffee Chat"],
-  "socials": ["Social"],
-  "sports": ["Sports"],
+  socials: ["Social"],
+  sports: ["Sports"],
 };
 
 function matchesCategory(event: Event, cat: CategoryFilter): boolean {
   if (cat === "all") return true;
   if (cat === "other") {
-    return !Object.values(CATEGORY_TAGS).flat().some((t) => event.tags.includes(t));
+    return !Object.values(CATEGORY_TAGS)
+      .flat()
+      .some((t) => event.tags.includes(t));
   }
   const required = CATEGORY_TAGS[cat];
   if (cat === "socials") {
@@ -57,11 +59,12 @@ export function EventBrowser({ events }: EventBrowserProps) {
     return result;
   }, [events, category]);
 
-  useEffect(() => { setVisibleCount(PAGE_SIZE); }, [category]);
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [category]);
 
   const visible = filtered.slice(0, visibleCount);
   const hasMore = visibleCount < filtered.length;
-
 
   const categories: { id: CategoryFilter; label: string }[] = [
     { id: "all", label: "All" },
@@ -71,7 +74,6 @@ export function EventBrowser({ events }: EventBrowserProps) {
     { id: "sports", label: "Sports" },
     { id: "other", label: "Other" },
   ];
-
 
   return (
     <div>
@@ -87,7 +89,7 @@ export function EventBrowser({ events }: EventBrowserProps) {
                 "px-3 py-1.5 rounded-full text-sm font-medium transition-colors",
                 category === c.id
                   ? "bg-primary text-primary-foreground"
-                  : "bg-muted text-muted-foreground hover:bg-muted/80"
+                  : "bg-muted text-muted-foreground hover:bg-muted/80",
               )}
             >
               {c.label}
@@ -101,7 +103,9 @@ export function EventBrowser({ events }: EventBrowserProps) {
             onClick={() => setDisplayMode("cards")}
             className={cn(
               "p-1.5 rounded-md transition-colors",
-              displayMode === "cards" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
+              displayMode === "cards"
+                ? "bg-background text-foreground shadow-sm"
+                : "text-muted-foreground hover:text-foreground",
             )}
             aria-label="Cards view"
           >
@@ -111,7 +115,9 @@ export function EventBrowser({ events }: EventBrowserProps) {
             onClick={() => setDisplayMode("grid")}
             className={cn(
               "p-1.5 rounded-md transition-colors",
-              displayMode === "grid" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
+              displayMode === "grid"
+                ? "bg-background text-foreground shadow-sm"
+                : "text-muted-foreground hover:text-foreground",
             )}
             aria-label="Grid view"
           >
@@ -121,7 +127,9 @@ export function EventBrowser({ events }: EventBrowserProps) {
             onClick={() => setDisplayMode("list")}
             className={cn(
               "p-1.5 rounded-md transition-colors",
-              displayMode === "list" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
+              displayMode === "list"
+                ? "bg-background text-foreground shadow-sm"
+                : "text-muted-foreground hover:text-foreground",
             )}
             aria-label="List view"
           >
@@ -137,9 +145,7 @@ export function EventBrowser({ events }: EventBrowserProps) {
 
       {/* Events */}
       {filtered.length === 0 ? (
-        <div className="text-center py-16 text-muted-foreground">
-          No events match the current filters.
-        </div>
+        <div className="text-center py-16 text-muted-foreground">No events match the current filters.</div>
       ) : displayMode === "cards" ? (
         <CardsView events={visible} />
       ) : displayMode === "grid" ? (
@@ -213,16 +219,16 @@ function GridView({ events }: { events: Event[] }) {
               <Badge variant={isUpcoming ? "warning" : "secondary"} size="sm" className="self-start">
                 {isUpcoming ? "Upcoming" : "Past"}
               </Badge>
-              {event.tags[0] && (
-                <span className="text-[10px] text-white">{event.tags[0]}</span>
-              )}
+              {event.tags[0] && <span className="text-[10px] text-white">{event.tags[0]}</span>}
 
               <p className="text-white text-xs font-semibold line-clamp-2 leading-snug">
                 {event.eventUrl ? (
                   <a href={event.eventUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
                     {event.title}
                   </a>
-                ) : event.title}
+                ) : (
+                  event.title
+                )}
               </p>
 
               <div className="flex items-center gap-1 text-[10px] text-white/70">
@@ -234,7 +240,12 @@ function GridView({ events }: { events: Event[] }) {
                 <div className="flex items-center gap-1 text-[10px] text-white/70">
                   <MapPin className="h-2.5 w-2.5 shrink-0" />
                   {locationUrl ? (
-                    <a href={locationUrl} target="_blank" rel="noopener noreferrer" className="hover:underline truncate">
+                    <a
+                      href={locationUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline truncate"
+                    >
                       {locationText}
                     </a>
                   ) : (
@@ -297,7 +308,9 @@ function ListView({ events }: { events: Event[] }) {
                   <a href={event.eventUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
                     {event.title}
                   </a>
-                ) : event.title}
+                ) : (
+                  event.title
+                )}
               </p>
               {location && (
                 <p className="text-xs text-muted-foreground truncate">
@@ -306,7 +319,9 @@ function ListView({ events }: { events: Event[] }) {
                     <a href={event.host.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
                       {location}
                     </a>
-                  ) : location}
+                  ) : (
+                    location
+                  )}
                 </p>
               )}
             </div>
@@ -319,12 +334,22 @@ function ListView({ events }: { events: Event[] }) {
                 {event.status === "upcoming" ? "Upcoming" : "Past"}
               </Badge>
               {event.albumUrl && (
-                <a href={event.albumUrl} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
+                <a
+                  href={event.albumUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground"
+                >
                   <Camera className="h-3.5 w-3.5" />
                 </a>
               )}
               {event.youtubeUrl && (
-                <a href={event.youtubeUrl} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
+                <a
+                  href={event.youtubeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground"
+                >
                   <Play className="h-3.5 w-3.5" />
                 </a>
               )}

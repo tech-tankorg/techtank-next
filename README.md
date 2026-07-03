@@ -34,12 +34,14 @@ Then open <http://localhost:3000>.
 
 ### Scripts
 
-| Command | What it does |
-|---|---|
-| `pnpm dev` | Start the dev server with Turbopack |
-| `pnpm build` | Production build |
-| `pnpm start` | Serve the production build |
-| `pnpm lint` | Run Next.js' linter |
+| Command             | What it does                        |
+| ------------------- | ----------------------------------- |
+| `pnpm dev`          | Start the dev server with Turbopack |
+| `pnpm build`        | Production build                    |
+| `pnpm start`        | Serve the production build          |
+| `pnpm lint`         | Run Next.js' linter                 |
+| `pnpm format`       | Format the repo with oxfmt          |
+| `pnpm format:check` | Check formatting without writing    |
 
 ## Project structure
 

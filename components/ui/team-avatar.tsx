@@ -52,7 +52,7 @@ export function TeamAvatar({ name, avatar, size = "md", className }: TeamAvatarP
           s.box,
           s.ring && `ring ${p.ring}`,
           s.ring,
-          className
+          className,
         )}
       >
         <Image
@@ -74,7 +74,7 @@ export function TeamAvatar({ name, avatar, size = "md", className }: TeamAvatarP
         s.ring && `ring ${p.ring}`,
         s.ring,
         p.bg,
-        className
+        className,
       )}
     >
       <span className={cn("font-display font-bold", s.text, p.text)}>{initials(name)}</span>

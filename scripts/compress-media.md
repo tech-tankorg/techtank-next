@@ -5,6 +5,7 @@ This directory contains scripts for batch compressing and optimizing video asset
 ## Purpose
 
 The `compress-media` scripts processes all `.mp4` files found in the `public/media/instagram` directory. For each video, it:
+
 1. Downscales the resolution (max 480px width) to drastically reduce file size without impacting the UI.
 2. Generates a highly optimized **WebM (VP9)** version for modern browsers.
 3. Re-encodes the original video into a heavily compressed **MP4 (H.264)** version to serve as a reliable fallback for iOS and older devices.
@@ -23,7 +24,7 @@ You can easily install FFmpeg using the Windows Package Manager (`winget`):
 winget install --exact --id Gyan.FFmpeg --accept-package-agreements
 ```
 
-*Note: After installing, you may need to restart your terminal for the `ffmpeg` command to be recognized in your PATH.*
+_Note: After installing, you may need to restart your terminal for the `ffmpeg` command to be recognized in your PATH._
 
 ### Installation (macOS)
 

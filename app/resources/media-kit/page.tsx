@@ -9,8 +9,7 @@ import { CopyButton } from "@/components/ui/copy-button";
 
 export const metadata: Metadata = {
   title: "Media Kit",
-  description:
-    "TechTank TO media kit — logos, brand guidelines, and fast facts for press, sponsors, and partners.",
+  description: "TechTank TO media kit — logos, brand guidelines, and fast facts for press, sponsors, and partners.",
 };
 
 const fastFacts = [
@@ -42,10 +41,30 @@ const logoDownload = {
 };
 
 const resources = [
-  { name: "Brand Guidelines", href: "/resources/design-system", description: "Colors, typography, usage rules", internal: true },
-  { name: "Speaker Slide Template", href: "/downloads/coming-soon.txt", description: "Google Slides / PPTX template", internal: false },
-  { name: "Speaker Checklist", href: "/downloads/coming-soon.txt", description: "Preparation guide for first-time speakers", internal: false },
-  { name: "Host Checklist", href: "/downloads/coming-soon.txt", description: "Event-day preparation guide", internal: false },
+  {
+    name: "Brand Guidelines",
+    href: "/resources/design-system",
+    description: "Colors, typography, usage rules",
+    internal: true,
+  },
+  {
+    name: "Speaker Slide Template",
+    href: "/downloads/coming-soon.txt",
+    description: "Google Slides / PPTX template",
+    internal: false,
+  },
+  {
+    name: "Speaker Checklist",
+    href: "/downloads/coming-soon.txt",
+    description: "Preparation guide for first-time speakers",
+    internal: false,
+  },
+  {
+    name: "Host Checklist",
+    href: "/downloads/coming-soon.txt",
+    description: "Event-day preparation guide",
+    internal: false,
+  },
 ];
 
 export default function PressKitPage() {
@@ -62,8 +81,8 @@ export default function PressKitPage() {
               TechTank Media Kit
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Logos, guidelines, and fast facts for press, sponsors, and
-              partners. All assets are free to use with attribution.
+              Logos, guidelines, and fast facts for press, sponsors, and partners. All assets are free to use with
+              attribution.
             </p>
             <Button variant="primary" size="lg" asChild>
               <a href="/downloads/techtank-media-kit.zip" download>
@@ -77,17 +96,10 @@ export default function PressKitPage() {
 
       {/* Fast Facts */}
       <Section>
-        <SectionHeader
-          overline="Fast facts"
-          title="About TechTank TO"
-          className="mb-12"
-        />
+        <SectionHeader overline="Fast facts" title="About TechTank TO" className="mb-12" />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {fastFacts.map((fact) => (
-            <div
-              key={fact.label}
-              className="bg-card rounded-xl border border-border p-5"
-            >
+            <div key={fact.label} className="bg-card rounded-xl border border-border p-5">
               <p className="text-sm text-muted-foreground mb-1">{fact.label}</p>
               <p className="font-semibold text-foreground">{fact.value}</p>
             </div>
@@ -97,39 +109,30 @@ export default function PressKitPage() {
 
       {/* Boilerplate */}
       <Section background="white">
-        <SectionHeader
-          overline="Boilerplate"
-          title="About TechTank (for press)"
-          className="mb-8"
-        />
+        <SectionHeader overline="Boilerplate" title="About TechTank (for press)" className="mb-8" />
         <div className="max-w-3xl space-y-6">
           <div className="bg-background rounded-xl border border-border p-6">
             <p className="text-foreground leading-relaxed mb-4">
-              <strong>Full paragraph: </strong>TechTank TO is Toronto&apos;s
-              volunteer-run tech community, hosting year-round in-person events
-              since 2023. Each event brings together 40-120 attendees,
-              including developers, designers, and tech professionals for
-              technical talks and networking. TechTank is committed to
-              fostering a supportive and inclusive environment where people of
-              all skill levels can explore, create, and thrive in technology.
+              <strong>Full paragraph: </strong>TechTank TO is Toronto&apos;s volunteer-run tech community, hosting
+              year-round in-person events since 2023. Each event brings together 40-120 attendees, including developers,
+              designers, and tech professionals for technical talks and networking. TechTank is committed to fostering a
+              supportive and inclusive environment where people of all skill levels can explore, create, and thrive in
+              technology.
             </p>
             <CopyButton text="TechTank TO is Toronto's volunteer-run tech community, hosting year-round in-person events since 2023. Each event brings together 40-120 attendees, including developers, designers, and tech professionals for technical talks and networking. TechTank is committed to fostering a supportive and inclusive environment where people of all skill levels can explore, create, and thrive in technology." />
           </div>
           <div className="bg-background rounded-xl border border-border p-6">
             <p className="text-foreground leading-relaxed mb-4">
-              <strong>One-liner: </strong>TechTank TO is Toronto&apos;s
-              volunteer-run tech community, hosting year-round events for
-              developers, designers, and tech professionals since 2023.
+              <strong>One-liner: </strong>TechTank TO is Toronto&apos;s volunteer-run tech community, hosting year-round
+              events for developers, designers, and tech professionals since 2023.
             </p>
             <CopyButton text="TechTank TO is Toronto's volunteer-run tech community, hosting year-round events for developers, designers, and tech professionals since 2023." />
           </div>
           <div className="bg-background rounded-xl border border-border p-6">
             <p className="text-foreground leading-relaxed mb-4">
-              <strong>Mission statement: </strong>TechTank strengthens
-              Toronto&apos;s tech ecosystem by creating engaging,
-              community-driven spaces that bring people together through social
-              events and career-focused programming, helping them build
-              meaningful connections and grow in their careers.
+              <strong>Mission statement: </strong>TechTank strengthens Toronto&apos;s tech ecosystem by creating
+              engaging, community-driven spaces that bring people together through social events and career-focused
+              programming, helping them build meaningful connections and grow in their careers.
             </p>
             <CopyButton text="TechTank strengthens Toronto's tech ecosystem by creating engaging, community-driven spaces that bring people together through social events and career-focused programming, helping them build meaningful connections and grow in their careers." />
           </div>
@@ -179,9 +182,7 @@ export default function PressKitPage() {
             <FileText className="h-6 w-6 text-ring" />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="font-semibold text-foreground group-hover:text-ring transition-colors">
-              {logoDownload.name}
-            </p>
+            <p className="font-semibold text-foreground group-hover:text-ring transition-colors">{logoDownload.name}</p>
             <p className="text-sm text-muted-foreground">{logoDownload.description}</p>
           </div>
           <Download className="h-5 w-5 text-muted-foreground group-hover:text-ring transition-colors shrink-0" />
@@ -190,21 +191,11 @@ export default function PressKitPage() {
 
       {/* Brand Colors */}
       <Section background="white">
-        <SectionHeader
-          overline="Brand colors"
-          title="Color palette"
-          className="mb-12"
-        />
+        <SectionHeader overline="Brand colors" title="Color palette" className="mb-12" />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {brandColors.map((color) => (
-            <div
-              key={color.name}
-              className="bg-background rounded-xl border border-border overflow-hidden"
-            >
-              <div
-                className="h-20"
-                style={{ backgroundColor: color.hex }}
-              />
+            <div key={color.name} className="bg-background rounded-xl border border-border overflow-hidden">
+              <div className="h-20" style={{ backgroundColor: color.hex }} />
               <div className="p-4">
                 <div className="flex items-center justify-between mb-1">
                   <p className="font-semibold text-foreground">{color.name}</p>
@@ -219,30 +210,20 @@ export default function PressKitPage() {
 
       {/* Typography */}
       <Section>
-        <SectionHeader
-          overline="Typography"
-          title="Font pairing"
-          className="mb-12"
-        />
+        <SectionHeader overline="Typography" title="Font pairing" className="mb-12" />
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="bg-card rounded-xl border border-border p-6">
             <p className="text-sm text-muted-foreground mb-2">Display / Headlines</p>
-            <p className="font-display text-4xl font-semibold text-foreground mb-4">
-              Space Grotesk
-            </p>
+            <p className="font-display text-4xl font-semibold text-foreground mb-4">Space Grotesk</p>
             <p className="text-muted-foreground">
-              Used for headings, titles, and display text. Geometric sans-serif
-              with a modern, technical feel.
+              Used for headings, titles, and display text. Geometric sans-serif with a modern, technical feel.
             </p>
           </div>
           <div className="bg-card rounded-xl border border-border p-6">
             <p className="text-sm text-muted-foreground mb-2">Body / UI</p>
-            <p className="font-sans text-4xl font-semibold text-foreground mb-4">
-              Inter
-            </p>
+            <p className="font-sans text-4xl font-semibold text-foreground mb-4">Inter</p>
             <p className="text-muted-foreground">
-              Used for body text, UI elements, and long-form content. Humanist
-              sans-serif optimized for screens.
+              Used for body text, UI elements, and long-form content. Humanist sans-serif optimized for screens.
             </p>
           </div>
         </div>
@@ -250,17 +231,11 @@ export default function PressKitPage() {
 
       {/* Resources */}
       <Section>
-        <SectionHeader
-          overline="Resources"
-          title="Additional assets"
-          className="mb-12"
-        />
+        <SectionHeader overline="Resources" title="Additional assets" className="mb-12" />
         <div className="grid gap-4 sm:grid-cols-2">
           {resources.map((resource) => {
             const Wrapper = resource.internal ? Link : "a";
-            const wrapperProps = resource.internal
-              ? { href: resource.href }
-              : { href: resource.href };
+            const wrapperProps = resource.internal ? { href: resource.href } : { href: resource.href };
             return (
               <Wrapper
                 key={resource.name}
@@ -276,10 +251,11 @@ export default function PressKitPage() {
                   </p>
                   <p className="text-sm text-muted-foreground">{resource.description}</p>
                 </div>
-                {resource.internal
-                  ? <ExternalLink className="h-5 w-5 text-muted-foreground group-hover:text-ring transition-colors shrink-0" />
-                  : <Download className="h-5 w-5 text-muted-foreground group-hover:text-ring transition-colors shrink-0" />
-                }
+                {resource.internal ? (
+                  <ExternalLink className="h-5 w-5 text-muted-foreground group-hover:text-ring transition-colors shrink-0" />
+                ) : (
+                  <Download className="h-5 w-5 text-muted-foreground group-hover:text-ring transition-colors shrink-0" />
+                )}
               </Wrapper>
             );
           })}
@@ -292,46 +268,28 @@ export default function PressKitPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Connect with us
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-8">
-            Official channels
-          </h2>
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-8">Official channels</h2>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button variant="outline" asChild>
-              <a
-                href="https://linkedin.com/company/techtank-to"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://linkedin.com/company/techtank-to" target="_blank" rel="noopener noreferrer">
                 LinkedIn
                 <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
             <Button variant="outline" asChild>
-              <a
-                href="https://instagram.com/techtankto"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://instagram.com/techtankto" target="_blank" rel="noopener noreferrer">
                 Instagram
                 <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
             <Button variant="outline" asChild>
-              <a
-                href="https://youtube.com/@TechTankTo"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://youtube.com/@TechTankTo" target="_blank" rel="noopener noreferrer">
                 YouTube
                 <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
             <Button variant="outline" asChild>
-              <a
-                href="https://github.com/tech-tankorg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://github.com/tech-tankorg" target="_blank" rel="noopener noreferrer">
                 GitHub
                 <ExternalLink className="ml-2 h-4 w-4" />
               </a>
@@ -343,26 +301,19 @@ export default function PressKitPage() {
       {/* Usage Terms */}
       <Section>
         <div className="max-w-3xl mx-auto">
-          <SectionHeader
-            overline="Usage terms"
-            title="How to use our assets"
-            className="mb-8"
-          />
+          <SectionHeader overline="Usage terms" title="How to use our assets" className="mb-8" />
           <div className="bg-card rounded-xl border border-border p-6 space-y-4">
             <p className="text-foreground">
-              <strong>Permitted:</strong> Use our logos and assets to reference
-              TechTank TO in press coverage, event listings, partnership
-              announcements, and sponsor materials with proper attribution.
+              <strong>Permitted:</strong> Use our logos and assets to reference TechTank TO in press coverage, event
+              listings, partnership announcements, and sponsor materials with proper attribution.
             </p>
             <p className="text-foreground">
-              <strong>Not permitted:</strong>{' '}Modifying logo colors, proportions,
-              or elements; using assets to imply endorsement without written
-              permission; using assets in ways that could damage TechTank&apos;s
-              reputation.
+              <strong>Not permitted:</strong> Modifying logo colors, proportions, or elements; using assets to imply
+              endorsement without written permission; using assets in ways that could damage TechTank&apos;s reputation.
             </p>
             <p className="text-muted-foreground text-sm">
-              For questions about asset usage or to request permission for
-              special use cases, please contact us at techtankto@gmail.com.
+              For questions about asset usage or to request permission for special use cases, please contact us at
+              techtankto@gmail.com.
             </p>
           </div>
         </div>
@@ -374,12 +325,8 @@ export default function PressKitPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Media contact
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
-            Get in touch
-          </h2>
-          <p className="text-muted-foreground">
-            For press inquiries, interviews, and partnership discussions.
-          </p>
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Get in touch</h2>
+          <p className="text-muted-foreground">For press inquiries, interviews, and partnership discussions.</p>
         </div>
         <div className="max-w-xl mx-auto">
           <ContactCard context="For press inquiries, interviews, and partnership requests." />

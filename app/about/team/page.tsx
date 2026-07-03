@@ -7,8 +7,7 @@ import { teamGroups } from "@/constants/team";
 
 export const metadata: Metadata = {
   title: "Team",
-  description:
-    "Meet the volunteers, organizers, and board members who make TechTank TO happen.",
+  description: "Meet the volunteers, organizers, and board members who make TechTank TO happen.",
 };
 
 export default function TeamPage() {
@@ -32,9 +31,8 @@ export default function TeamPage() {
               The people behind TechTank
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              TechTank TO is powered entirely by volunteers — organizers, designers,
-              developers, and community builders who give their time to make
-              Toronto&apos;s tech community more inclusive and welcoming.
+              TechTank TO is powered entirely by volunteers — organizers, designers, developers, and community builders
+              who give their time to make Toronto&apos;s tech community more inclusive and welcoming.
             </p>
             <Button variant="outline" size="lg" asChild>
               <Link href="/get-involved/organizer">Join the team</Link>
@@ -53,9 +51,7 @@ export default function TeamPage() {
         />
 
         <div className="mb-10">
-          <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-5">
-            Co-Chairs
-          </p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-5">Co-Chairs</p>
           <div className="grid gap-5 sm:grid-cols-2">
             {boardCoChairs.members.map((m) => (
               <TeamCard key={m.name} variant="board" member={m} />
@@ -64,9 +60,7 @@ export default function TeamPage() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-5">
-            Treasurer
-          </p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-5">Treasurer</p>
           <div className="grid gap-5 sm:grid-cols-2">
             {boardTreasurer.members.map((m) => (
               <TeamCard key={m.name} variant="board" member={m} />
@@ -94,11 +88,7 @@ export default function TeamPage() {
       <Section background="brand-soft">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <SectionHeader
-              overline="Website team"
-              title="Developers & designers"
-              className="mb-8"
-            />
+            <SectionHeader overline="Website team" title="Developers & designers" className="mb-8" />
             <div className="grid gap-3">
               {websiteTeam.members.map((m) => (
                 <TeamCard key={m.name} variant="compact" member={m} />
@@ -106,11 +96,7 @@ export default function TeamPage() {
             </div>
           </div>
           <div>
-            <SectionHeader
-              overline="Social media"
-              title="Content & community"
-              className="mb-8"
-            />
+            <SectionHeader overline="Social media" title="Content & community" className="mb-8" />
             <div className="grid gap-3">
               {socialMedia.members.map((m) => (
                 <TeamCard key={m.name} variant="compact" member={m} />
@@ -141,12 +127,10 @@ export default function TeamPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Get involved
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
-            Want to be part of the team?
-          </h2>
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Want to be part of the team?</h2>
           <p className="text-muted-foreground mb-8">
-            We&apos;re always looking for volunteers who want to help build
-            Toronto&apos;s most inclusive tech community.
+            We&apos;re always looking for volunteers who want to help build Toronto&apos;s most inclusive tech
+            community.
           </p>
           <Button variant="primary" size="lg" asChild>
             <Link href="/get-involved/organizer">Volunteer with us</Link>
