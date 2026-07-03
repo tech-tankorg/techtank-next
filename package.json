@@ -11,7 +11,7 @@
   "scripts": {
     "knip": "knip --fix --format --include-entry-exports --allow-remove-files",
     "analyze": "next experimental-analyze",
-    "typecheck": "pnpm exec tsc --noEmit",
+    "type:check": "pnpm exec tsc --noEmit",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",

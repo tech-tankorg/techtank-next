@@ -136,7 +136,7 @@ Components follow [shadcn/ui](https://ui.shadcn.com/) patterns with
 
 ### After making code changes
 
-- Run `pnpm typecheck` to catch type errors.
+- Run `pnpm type:check` to catch type errors.
 - Run `pnpm format` to keep the codebase oxfmt-clean.
 
 Do both before reporting a task complete or opening a commit.
