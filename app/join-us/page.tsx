@@ -1,7 +1,5 @@
-import { EventCard } from "@/components/ui/event-card";
 import { Section, SectionHeader } from "@/components/ui/section";
 import Image from "next/image";
-import React from "react";
 
 export default function JoinUsPage() {
   const links = [
@@ -53,20 +51,11 @@ export default function JoinUsPage() {
         <div className="flex items-center w-full gap-8">
           {links.map((link) => {
             return (
-              <div
-                key={link.name}
-                className="group relative overflow-hidden rounded-2xl glass"
-              >
+              <div key={link.name} className="group relative overflow-hidden rounded-2xl glass">
                 <a href={link.href} target="_blank">
                   <div className="p-6 flex flex-col items-center justify-center">
                     <div className="relative w-12 h-12 flex flex-col items-center justify-center">
-                      <Image
-                        src={link.icon}
-                        alt=""
-                        width={64}
-                        height={64}
-                        className=""
-                      />
+                      <Image src={link.icon} alt="" width={64} height={64} className="" />
                     </div>
                     <h2 className="text-xl mt-1">{link.name}</h2>
                   </div>
