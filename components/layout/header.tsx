@@ -57,7 +57,7 @@ export function Header() {
         <div className="hidden lg:flex lg:items-center lg:gap-2">
           <ThemeToggle />
           <Button variant="primary" size="sm" asChild>
-            <Link href="/#join-us">
+            <Link href="/join-us">
               Join us
             </Link>
           </Button>
