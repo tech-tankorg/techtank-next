@@ -20,15 +20,16 @@ const footerLinks = {
     links: [
       { name: "TechTank", href: "/about", external: false },
       { name: "Team", href: "/about/team", external: false },
+      { name: "FAQ", href: "/about/faq", external: false },
     ],
   },
   getInvolved: {
     title: "Get Involved",
     links: [
-      { name: "Speak", href: "/get-involved/speaker", external: false },
+      { name: "Speak or Facilitate", href: "/get-involved/speak-or-facilitate", external: false },
       { name: "Host", href: "/get-involved/host", external: false },
       { name: "Sponsor", href: "/get-involved/sponsor", external: false },
-      { name: "Volunteer", href: "/get-involved/volunteer", external: false },
+      { name: "Organizer Team", href: "/get-involved/organizer", external: false },
       { name: "Events", href: "/events", external: false },
     ],
   },
@@ -58,16 +59,10 @@ export function Footer() {
           {/* Brand column */}
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center">
-              <Image
-                src="/images/logos/dark.svg"
-                alt="TechTank TO"
-                width={128}
-                height={56}
-                className="h-10 w-auto"
-              />
+              <Image src="/images/logos/dark.svg" alt="TechTank TO" width={128} height={56} className="h-10 w-auto" />
             </Link>
             <p className="mt-4 text-sm text-primary-foreground/70 dark:text-foreground/70 leading-relaxed">
-              Toronto&apos;s inclusive tech community. Monthly events since 2023.
+              Toronto&apos;s inclusive tech community. Year-round events since 2023.
             </p>
           </div>
 
@@ -108,7 +103,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-primary-foreground/10 dark:border-foreground/10">
           <div className="flex flex-col items-center gap-4 lg:flex-row lg:justify-between">
             <p className="text-sm text-primary-foreground/60 dark:text-foreground/60">
-              &copy; 2023 - {Math.max(new Date().getFullYear(), 2026)} TechTank TO. All rights reserved.
+              Copyright &copy; {Math.max(new Date().getFullYear(), 2026)} TechTank TO Inc. All rights reserved.
             </p>
             <a
               href="mailto:techtankto@gmail.com"

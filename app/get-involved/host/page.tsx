@@ -22,8 +22,7 @@ const whyHost = [
   {
     icon: Building,
     title: "Back to the office",
-    description:
-      "Give your team a reason to come in. Hosting an event creates energy and shows off your space.",
+    description: "Give your team a reason to come in. Hosting an event creates energy and shows off your space.",
   },
   {
     icon: Users,
@@ -34,7 +33,7 @@ const whyHost = [
 ];
 
 const logistics = [
-  { label: "Capacity", value: "40-100 attendees", icon: Users },
+  { label: "Capacity", value: "40-120 attendees", icon: Users },
   { label: "Timing", value: "6:00pm - 8:30pm weeknight", icon: Clock },
   { label: "Location", value: "TTC accessible (subway or streetcar)", icon: MapPin },
   { label: "AV", value: "Projector + screen required; microphone nice-to-have", icon: Building },
@@ -88,13 +87,11 @@ export default function HostPage() {
               Host a TechTank event
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Bring the Toronto tech community to your office. Great for
-              recruiting, brand visibility, and giving back to the community.
+              Bring the Toronto tech community to your office. Great for recruiting, brand visibility, and giving back
+              to the community.
             </p>
             <Button variant="primary" size="lg" asChild>
-              <a href="mailto:techtankto@gmail.com?subject=Host%20Inquiry%20-%20TechTank">
-                Contact us to host
-              </a>
+              <a href="mailto:techtankto@gmail.com?subject=Host%20Inquiry%20-%20TechTank">Contact us to host</a>
             </Button>
           </div>
         </div>
@@ -102,23 +99,14 @@ export default function HostPage() {
 
       {/* Why Host */}
       <Section>
-        <SectionHeader
-          overline="Why host"
-          title="What you get out of it"
-          className="mb-12"
-        />
+        <SectionHeader overline="Why host" title="What you get out of it" className="mb-12" />
         <div className="grid gap-8 lg:grid-cols-3">
           {whyHost.map((item) => (
-            <div
-              key={item.title}
-              className="bg-card rounded-2xl border border-border p-6 lg:p-8"
-            >
+            <div key={item.title} className="bg-card rounded-2xl border border-border p-6 lg:p-8">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-ring/10 text-ring mb-4">
                 <item.icon className="h-6 w-6" />
               </div>
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3">
-                {item.title}
-              </h3>
+              <h3 className="font-display text-xl font-semibold text-foreground mb-3">{item.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{item.description}</p>
             </div>
           ))}
@@ -127,17 +115,10 @@ export default function HostPage() {
 
       {/* Event Logistics */}
       <Section background="white">
-        <SectionHeader
-          overline="Event logistics"
-          title="What we need from your space"
-          className="mb-12"
-        />
+        <SectionHeader overline="Event logistics" title="What we need from your space" className="mb-12" />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {logistics.map((item) => (
-            <div
-              key={item.label}
-              className="flex items-start gap-4 bg-background rounded-xl p-5"
-            >
+            <div key={item.label} className="flex items-start gap-4 bg-background rounded-xl p-5">
               <item.icon className="h-5 w-5 text-ring shrink-0 mt-0.5" />
               <div>
                 <p className="font-semibold text-foreground">{item.label}</p>
@@ -152,9 +133,7 @@ export default function HostPage() {
       <Section>
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="bg-ring/8 rounded-2xl border border-ring/30 p-6 lg:p-8">
-            <h3 className="font-display text-xl font-semibold text-foreground mb-6">
-              What TechTank handles
-            </h3>
+            <h3 className="font-display text-xl font-semibold text-foreground mb-6">What TechTank handles</h3>
             <ul className="space-y-3">
               {techTankHandles.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
@@ -166,9 +145,7 @@ export default function HostPage() {
           </div>
 
           <div className="bg-amber/8 rounded-2xl border border-amber/30 p-6 lg:p-8">
-            <h3 className="font-display text-xl font-semibold text-foreground mb-6">
-              What you provide
-            </h3>
+            <h3 className="font-display text-xl font-semibold text-foreground mb-6">What you provide</h3>
             <ul className="space-y-3">
               {youProvide.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
@@ -184,18 +161,10 @@ export default function HostPage() {
       {/* What You Get */}
       <Section background="brand-soft">
         <div className="max-w-3xl mx-auto">
-          <SectionHeader
-            overline="What you get"
-            title="Host perks"
-            align="center"
-            className="mb-12"
-          />
+          <SectionHeader overline="What you get" title="Host perks" align="center" className="mb-12" />
           <div className="grid gap-4 sm:grid-cols-2">
             {whatYouGet.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-3 bg-card rounded-lg p-4"
-              >
+              <div key={index} className="flex items-center gap-3 bg-card rounded-lg p-4">
                 <Check className="h-5 w-5 text-ring shrink-0" />
                 <span className="text-foreground">{item}</span>
               </div>
@@ -206,11 +175,7 @@ export default function HostPage() {
 
       {/* Process */}
       <Section>
-        <SectionHeader
-          overline="The process"
-          title="How it works"
-          className="mb-12"
-        />
+        <SectionHeader overline="The process" title="How it works" className="mb-12" />
         <div className="grid gap-6 lg:grid-cols-5">
           {process.map((item) => (
             <div key={item.step} className="relative">
@@ -226,24 +191,15 @@ export default function HostPage() {
 
       {/* Past Hosts Logo Cloud */}
       <Section background="white">
-        <SectionHeader
-          overline="Past hosts"
-          title="Companies that have hosted"
-          align="center"
-          className="mb-8"
-        />
+        <SectionHeader overline="Past hosts" title="Companies that have hosted" align="center" className="mb-8" />
         <SponsorsMarquee className="py-4" />
       </Section>
 
       {/* Host Resources */}
       <Section>
         <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
-            Resources
-          </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
-            Host toolkit in the Media Kit
-          </h2>
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">Resources</span>
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Host toolkit in the Media Kit</h2>
           <p className="text-muted-foreground mb-8">
             Run-of-show guides, host checklists, brand assets, and event templates all live in our Media Kit.
           </p>
@@ -266,13 +222,10 @@ export default function HostPage() {
             Let&apos;s bring TechTank to your space
           </h2>
           <p className="text-muted-foreground mb-8">
-            Tell us about your venue and when you&apos;d like to host. We&apos;ll
-            get back to you within a week.
+            Tell us about your venue and when you&apos;d like to host. We&apos;ll get back to you within a week.
           </p>
           <Button variant="primary" size="lg" asChild>
-            <a href="mailto:techtankto@gmail.com?subject=Host%20Inquiry%20-%20TechTank">
-              Contact us to host
-            </a>
+            <a href="mailto:techtankto@gmail.com?subject=Host%20Inquiry%20-%20TechTank">Contact us to host</a>
           </Button>
         </div>
       </Section>

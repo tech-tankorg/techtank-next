@@ -65,8 +65,7 @@ function lumaCalendarResponseToEvents(parsed: LumaEventResponse[]): Event[] {
     title: event.name,
     start_at: event.start_at,
     tags: [],
-    status:
-      Date.now() > new Date(event.start_at).valueOf() ? "past" : "upcoming",
+    status: Date.now() > new Date(event.start_at).valueOf() ? "past" : "upcoming",
     eventUrl: `https://luma.com/${event.url}`,
     imagePath: event.cover_url,
   }));

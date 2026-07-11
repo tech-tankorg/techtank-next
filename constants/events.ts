@@ -1,7 +1,5 @@
 import type { Event } from "@/app/events/actions";
-import { sponsors, type Sponsor } from "./sponsors";
-
-export type { Sponsor };
+import { sponsors } from "./sponsors";
 
 export const events: Event[] = [
   // ─── 2026 ────────────────────────────────────────────────────────────────────
@@ -19,10 +17,10 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2026-05",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Welcoming coffee meetup for women and non-binary folks in tech",
+    pitch: "Welcoming coffee meetup for women and gender-diverse folks in tech",
     start_at: "2026-05-02T11:00:00",
     venue: "Prema Coffee and Bar",
-    tags: ["Coffee Chat", "CodeDiversity", "Social",],
+    tags: ["Coffee Chat", "CodeDiversity", "Social"],
     status: "past",
     eventUrl: "https://lu.ma/3ea6eq1s",
     imagePath: "/images/luma/bca86cee-3fdb-403a-bb09-ccc095690401.jpeg",
@@ -37,7 +35,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://lu.ma/qwpt54ke",
     imagePath: "/images/luma/024f2a7f-8df2-47c2-b24d-a7c48aeab793.jpeg",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipM-VmIz5kOG18HrCZIcQyfVLgKKsCQSS_SWIo2ODM5DME1Z7BEoQOoMD5JbBujfkA?key=WVVLWkFVXzNsYkpTNkN4MU5uYUNRNEpDQVZuVzJ3",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipM-VmIz5kOG18HrCZIcQyfVLgKKsCQSS_SWIo2ODM5DME1Z7BEoQOoMD5JbBujfkA?key=WVVLWkFVXzNsYkpTNkN4MU5uYUNRNEpDQVZuVzJ3",
   },
   {
     id: "ci-optimization-brainstation",
@@ -50,7 +49,8 @@ export const events: Event[] = [
     eventUrl: "https://lu.ma/7h4g008b",
     imagePath: "/images/luma/5d9909f0-ece1-4b30-bdde-b4af7ec8b4da.jpeg",
     sponsors: [sponsors.brainstation],
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipN3f4J0Ya2sv76VCQXhdkKipehavLCc3v4kcdfwqqosjY2jN-KWfT3X4wrqCiRy4w?key=WEF6OUk3alhLb3dzOEJ5SWlsU2tVM2x1eDkxNUpn",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipN3f4J0Ya2sv76VCQXhdkKipehavLCc3v4kcdfwqqosjY2jN-KWfT3X4wrqCiRy4w?key=WEF6OUk3alhLb3dzOEJ5SWlsU2tVM2x1eDkxNUpn",
     speakers: [
       {
         name: "Emily Xiong",
@@ -63,10 +63,10 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2026-04",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2026-04-11T11:00:00",
     venue: "Prema Coffee and Bar",
-    tags: ["Coffee Chat", "CodeDiversity", "Social",],
+    tags: ["Coffee Chat", "CodeDiversity", "Social"],
     status: "past",
     eventUrl: "https://lu.ma/cye39lls",
     imagePath: "/images/luma/bca86cee-3fdb-403a-bb09-ccc095690401.jpeg",
@@ -85,10 +85,10 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2026-01",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2026-01-17T11:00:00",
     venue: "Prema Coffee and Bar",
-    tags: ["Coffee Chat", "CodeDiversity", "Social",],
+    tags: ["Coffee Chat", "CodeDiversity", "Social"],
     status: "past",
     eventUrl: "https://lu.ma/mbafwfgu",
     imagePath: "/images/luma/799c848f-b71f-4d62-99a1-a93afcf4089c.jpeg",
@@ -97,10 +97,10 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2025-12",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-12-20T11:00:00",
     venue: "Prema Coffee and Bar",
-    tags: ["Coffee Chat", "CodeDiversity", "Social",],
+    tags: ["Coffee Chat", "CodeDiversity", "Social"],
     status: "past",
     eventUrl: "https://lu.ma/q3w5yoeb",
     imagePath: "/images/luma/b7019fa7-2bd2-4607-b69a-f2ad33cbc09c.jpeg",
@@ -119,10 +119,10 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2025-11",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-11-15T11:00:00",
     venue: "Prema Coffee and Bar",
-    tags: ["Coffee Chat", "CodeDiversity", "Social",],
+    tags: ["Coffee Chat", "CodeDiversity", "Social"],
     status: "past",
     eventUrl: "https://lu.ma/bafv7trd",
     imagePath: "/images/luma/b7019fa7-2bd2-4607-b69a-f2ad33cbc09c.jpeg",
@@ -130,10 +130,10 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2025-10",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-10-18T11:00:00",
     venue: "Prema Coffee and Bar",
-    tags: ["Coffee Chat", "CodeDiversity", "Social",],
+    tags: ["Coffee Chat", "CodeDiversity", "Social"],
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/308164572/",
     imagePath: "/images/meetup/highres_524928803.jpeg",
@@ -148,7 +148,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://lu.ma/u2mzq5bn",
     imagePath: "/images/luma/71320253-f6a1-441e-95d5-4217915cd1db.jpeg",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipPPmVC7Jg5of2zIp8CgLxyavCSvyu-3ekKf_nEVwqqNA3lX4VBuVijVBSvZ62dNng?key=ZmtQTTRtUWYzejJwaXV5Wi1rOHl1TmxhTVNJYmRR",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipPPmVC7Jg5of2zIp8CgLxyavCSvyu-3ekKf_nEVwqqNA3lX4VBuVijVBSvZ62dNng?key=ZmtQTTRtUWYzejJwaXV5Wi1rOHl1TmxhTVNJYmRR",
   },
   {
     id: "agentic-programming-7shifts",
@@ -160,7 +161,8 @@ export const events: Event[] = [
     eventUrl: "https://lu.ma/s6f56qtz",
     imagePath: "/images/luma/f75dc08b-1fe1-4bb4-acd0-7dce871d028e.jpeg",
     host: sponsors["7shifts"],
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipNHIuIQ3GEwyuE7hRn3rrREKk2jRULCv3DkSatNFoAVgNYpQrzOd3VHmpsbT5L15w?key=UVFQal9MbTNiVmZhUnlOQVZ0U05iR3BfRlJxdFh3",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipNHIuIQ3GEwyuE7hRn3rrREKk2jRULCv3DkSatNFoAVgNYpQrzOd3VHmpsbT5L15w?key=UVFQal9MbTNiVmZhUnlOQVZ0U05iR3BfRlJxdFh3",
   },
   {
     id: "mentorship-meetup-2025",
@@ -176,10 +178,10 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2025-09",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-09-06T11:00:00",
     venue: "Prema Coffee and Bar",
-    tags: ["Coffee Chat", "CodeDiversity", "Social",],
+    tags: ["Coffee Chat", "CodeDiversity", "Social"],
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/308163824/",
     imagePath: "/images/meetup/highres_528812977.jpeg",
@@ -197,10 +199,10 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2025-08",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-08-02T11:00:00",
     venue: "Prema Coffee and Bar",
-    tags: ["Coffee Chat", "CodeDiversity", "Social",],
+    tags: ["Coffee Chat", "CodeDiversity", "Social"],
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/308163788/",
     imagePath: "/images/meetup/highres_524928803.jpeg",
@@ -212,7 +214,8 @@ export const events: Event[] = [
     start_at: "2025-06-21T12:00:00",
     tags: ["Sports", "Social"],
     status: "past",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipMpnt5xDbFhqPFjq-d3e6NNoGiRUMTXxxbCQ-jTbOPnEE1tx6RMZEDt6s0ILEOetA?key=M1BBanJKUDdQWWdJMW41aFJoMUExakRwTzhrQWlB",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipMpnt5xDbFhqPFjq-d3e6NNoGiRUMTXxxbCQ-jTbOPnEE1tx6RMZEDt6s0ILEOetA?key=M1BBanJKUDdQWWdJMW41aFJoMUExakRwTzhrQWlB",
   },
   {
     id: "supercollider-techweek-2025",
@@ -235,15 +238,16 @@ export const events: Event[] = [
     eventUrl: "https://lu.ma/mbmwbu15",
     imagePath: "/images/luma/c9166e5b-8fd8-453a-abb8-a9d8cbe1cc0d.jpeg",
     host: sponsors["7shifts"],
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipMingUvuBFdNA4ES6wYi3UCHzRT3k9Il3wlWnFoUu_-5X8jztaoTjtAloU7TLIMJg?key=LXo2S0U1LXE2RmpJMk1HQXhfb0NISG1ncE1md1VR",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipMingUvuBFdNA4ES6wYi3UCHzRT3k9Il3wlWnFoUu_-5X8jztaoTjtAloU7TLIMJg?key=LXo2S0U1LXE2RmpJMk1HQXhfb0NISG1ncE1md1VR",
   },
   {
     id: "code-diversity-coffee-2025-05",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-05-24T11:00:00",
     venue: "Prema Coffee and Bar",
-    tags: ["Coffee Chat", "CodeDiversity", "Social",],
+    tags: ["Coffee Chat", "CodeDiversity", "Social"],
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/307465132/",
     imagePath: "/images/meetup/highres_527561328.jpeg",
@@ -258,15 +262,16 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://lu.ma/ekdq0p25",
     imagePath: "/images/luma/f6eb44a9-e019-40cf-b3b7-87eeea4cc5a5.jpeg",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipNsmSeqY9wxLMtqnFkDoPaj4X5T-cmuUkYkVHYHPUopyT4-b_IYhiPajDguMT-CSQ?key=NGlBeXM1bERMeDVKeGNXR2NZOWN5WG9PakZackRR",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipNsmSeqY9wxLMtqnFkDoPaj4X5T-cmuUkYkVHYHPUopyT4-b_IYhiPajDguMT-CSQ?key=NGlBeXM1bERMeDVKeGNXR2NZOWN5WG9PakZackRR",
   },
   {
     id: "code-diversity-coffee-2025-04",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-04-26T11:00:00",
     venue: "Prema Coffee and Bar",
-    tags: ["Coffee Chat", "CodeDiversity", "Social",],
+    tags: ["Coffee Chat", "CodeDiversity", "Social"],
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/306889689/",
     imagePath: "/images/meetup/highres_524928803.jpeg",
@@ -288,15 +293,16 @@ export const events: Event[] = [
       { name: "Lucas Tran", title: "Senior Software Developer", talkTitle: "Lessons from the Trenches" },
     ],
     youtubeUrl: "https://www.youtube.com/watch?v=4MSJq2GBsIc",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipOb1lKTP_ktVaptdlB6GndudP3YQ77pW6BR3IxcDA2YV86ZNaHZe3M0Hp2iD6UoLA?key=SGxsS0xFRVRNZGdFVGJVQ1ZXN1ZtODBrZDNrNzRR",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipOb1lKTP_ktVaptdlB6GndudP3YQ77pW6BR3IxcDA2YV86ZNaHZe3M0Hp2iD6UoLA?key=SGxsS0xFRVRNZGdFVGJVQ1ZXN1ZtODBrZDNrNzRR",
   },
   {
     id: "code-diversity-coffee-2025-03",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-03-15T11:00:00",
     venue: "Prema Coffee and Bar",
-    tags: ["Coffee Chat", "CodeDiversity", "Social",],
+    tags: ["Coffee Chat", "CodeDiversity", "Social"],
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/306586846/",
     imagePath: "/images/meetup/highres_524928803.jpeg",
@@ -304,10 +310,10 @@ export const events: Event[] = [
   {
     id: "code-diversity-coffee-2025-02",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-02-15T11:00:00",
     venue: "Carbonic Coffee",
-    tags: ["Coffee Chat", "CodeDiversity", "Social",],
+    tags: ["Coffee Chat", "CodeDiversity", "Social"],
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/305857202/",
     imagePath: "/images/meetup/highres_524928803.jpeg",
@@ -323,15 +329,16 @@ export const events: Event[] = [
     imagePath: "/images/meetup/highres_525722753.jpeg",
     host: sponsors.cohere,
     youtubeUrl: "https://www.youtube.com/watch?v=f8ONw6O_rco",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipMrTfiNbI7_NSGioh-DLR6Slvp51pBjf1cShVzeToyKNr982BbkOEPmrqFYhd7vMg?key=VUp4V1ZGNzFibHBpRUNESkZYQ3BhVElob1RsdmdB",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipMrTfiNbI7_NSGioh-DLR6Slvp51pBjf1cShVzeToyKNr982BbkOEPmrqFYhd7vMg?key=VUp4V1ZGNzFibHBpRUNESkZYQ3BhVElob1RsdmdB",
   },
   {
     id: "code-diversity-coffee-2025-01",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2025-01-11T11:00:00",
     venue: "Carbonic Coffee",
-    tags: ["Coffee Chat", "CodeDiversity", "Social",],
+    tags: ["Coffee Chat", "CodeDiversity", "Social"],
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/305395398/",
     imagePath: "/images/meetup/highres_524928803.jpeg",
@@ -347,15 +354,16 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://lu.ma/eqp4ccn5",
     imagePath: "/images/luma/2671403b-57d3-4af9-b22d-2b3879c7b4dc.jpeg",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipNaxy4wPaRA3EwJOduVBxlFXvGGqBsDmYRoAFw7_ChOrWGOjRo8Kk1TKYA5tiaE6g?key=ZHVrQjhicDk2c0w3dG9tQVc1MlRGMmV4cTRUc1d3",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipNaxy4wPaRA3EwJOduVBxlFXvGGqBsDmYRoAFw7_ChOrWGOjRo8Kk1TKYA5tiaE6g?key=ZHVrQjhicDk2c0w3dG9tQVc1MlRGMmV4cTRUc1d3",
   },
   {
     id: "code-diversity-coffee-2024-12",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2024-12-14T11:00:00",
     venue: "Carbonic Coffee",
-    tags: ["Coffee Chat", "CodeDiversity", "Social",],
+    tags: ["Coffee Chat", "CodeDiversity", "Social"],
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/304806485/",
     imagePath: "/images/meetup/highres_524928803.jpeg",
@@ -370,15 +378,16 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://lu.ma/8qe5mdb7",
     imagePath: "/images/luma/7445101b-ae32-40a1-b19a-c8f36ad2529a.jpeg",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipOXFVlljbwPWfZ2MVv5rhWpTIaWzLb6Jdfp9aqRvtYP241OIvn3cbVMN-qooI1Fmg?key=ZkY0eVZvQXNpQXRZYUVCRTk1ZFEybnpZejJSRFlR",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipOXFVlljbwPWfZ2MVv5rhWpTIaWzLb6Jdfp9aqRvtYP241OIvn3cbVMN-qooI1Fmg?key=ZkY0eVZvQXNpQXRZYUVCRTk1ZFEybnpZejJSRFlR",
   },
   {
     id: "code-diversity-coffee-2024-11",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2024-11-16T11:00:00",
     venue: "Carbonic Coffee",
-    tags: ["Coffee Chat", "CodeDiversity", "Social",],
+    tags: ["Coffee Chat", "CodeDiversity", "Social"],
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/304348630/",
     imagePath: "/images/meetup/highres_524471440.jpeg",
@@ -394,7 +403,8 @@ export const events: Event[] = [
     eventUrl: "https://www.meetup.com/techtank-to/events/304263016/",
     imagePath: "/images/meetup/highres_524451822.jpeg",
     youtubeUrl: "https://www.youtube.com/watch?v=2UTsy-Lbulk",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipMfuV2mdrwgETwmivv4zQUu8pSRAzOG0D9J6j4nCpnNDKPMAgWL5ru6sYqMaMOOQg?key=OGJrMmFMR2NGT1IzaGxqTVFIRjVlaVJJbXNSaGd3",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipMfuV2mdrwgETwmivv4zQUu8pSRAzOG0D9J6j4nCpnNDKPMAgWL5ru6sYqMaMOOQg?key=OGJrMmFMR2NGT1IzaGxqTVFIRjVlaVJJbXNSaGd3",
   },
   {
     id: "edtech-ai-accessibility",
@@ -407,7 +417,8 @@ export const events: Event[] = [
     eventUrl: "https://www.meetup.com/techtank-to/events/303655206/",
     imagePath: "/images/meetup/highres_523810554.jpeg",
     youtubeUrl: "https://www.youtube.com/watch?v=N50r7eIEIS0",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipMwzeGDJqNkRSSagw_D8v3F73XeaPR9kmpQcpYjHCCuMx7nZ94feDaTGMA55whrLg?key=QzdzTnpRdHpiaHNaOE0zNnVIUE5EQlMxM0kxYzFR",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipMwzeGDJqNkRSSagw_D8v3F73XeaPR9kmpQcpYjHCCuMx7nZ94feDaTGMA55whrLg?key=QzdzTnpRdHpiaHNaOE0zNnVIUE5EQlMxM0kxYzFR",
   },
   {
     id: "cypress-overwhelmed-dev",
@@ -432,15 +443,16 @@ export const events: Event[] = [
     eventUrl: "https://www.meetup.com/techtank-to/events/302940980/",
     imagePath: "/images/meetup/highres_523034935.jpeg",
     youtubeUrl: "https://www.youtube.com/watch?v=NOlSKs5PLpM",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipMPoK9UuL4g8MKPP8Tk8tI2FTppYtQQ-Nf0ga6DZXjFmqXT5SHTYikca8rhmltqhg?key=djduZGhZaHpJTi04SEZ2SVg3NUo0ZTRqcUlVY0Rn",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipMPoK9UuL4g8MKPP8Tk8tI2FTppYtQQ-Nf0ga6DZXjFmqXT5SHTYikca8rhmltqhg?key=djduZGhZaHpJTi04SEZ2SVg3NUo0ZTRqcUlVY0Rn",
   },
   {
     id: "code-diversity-coffee-2024-09",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2024-09-14T11:00:00",
     venue: "Carbonic Coffee",
-    tags: ["Coffee Chat", "CodeDiversity", "Social",],
+    tags: ["Coffee Chat", "CodeDiversity", "Social"],
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/303330348/",
     imagePath: "/images/meetup/highres_521950379.jpeg",
@@ -466,7 +478,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://lu.ma/jkr3i7pz",
     imagePath: "/images/luma/f26d4d6d-417f-4d0e-a901-c0094391be56.jpeg",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipMgtyV8CNEuz-qajiP1CHJXhOThudbAQwu8JRpN_OSpPnjsb1H8PBPNI1old3yukQ?key=TVZaMExWQnVWQ1RvRlFFVGdQVGZCV3BXQ3k0ZlF3",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipMgtyV8CNEuz-qajiP1CHJXhOThudbAQwu8JRpN_OSpPnjsb1H8PBPNI1old3yukQ?key=TVZaMExWQnVWQ1RvRlFFVGdQVGZCV3BXQ3k0ZlF3",
   },
   {
     id: "ai-insights-experts",
@@ -479,15 +492,16 @@ export const events: Event[] = [
     eventUrl: "https://www.meetup.com/techtank-to/events/302337555/",
     imagePath: "/images/meetup/highres_522500582.jpeg",
     youtubeUrl: "https://www.youtube.com/watch?v=RUco7XrbMqk",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipMlGtrOSia0VXZaDqAcjItENfxwXFdxJO2A9QCKGwXcRPn46nY5e_DB9puMgfky9Q?key=eWNXOGh0SEZqcDdRaDVwRHVEWEF5SjBfRkRvTzFn",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipMlGtrOSia0VXZaDqAcjItENfxwXFdxJO2A9QCKGwXcRPn46nY5e_DB9puMgfky9Q?key=eWNXOGh0SEZqcDdRaDVwRHVEWEF5SjBfRkRvTzFn",
   },
   {
     id: "code-diversity-coffee-2024-08",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2024-08-10T11:00:00",
     venue: "Carbonic Coffee",
-    tags: ["Coffee Chat", "CodeDiversity", "Social",],
+    tags: ["Coffee Chat", "CodeDiversity", "Social"],
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/302503778/",
     imagePath: "/images/meetup/highres_521950379.jpeg",
@@ -501,7 +515,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://lu.ma/cidoy6p6",
     imagePath: "/images/luma/1dc01730-5cbd-466a-8f80-ef9e420a29bb.jpeg",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipNm1fut4HKxSRTpQ-6RkNQDkXsrzHhYfCaQwkoZAOWpw6b64L3iLU1yA3MHl_r8aQ?key=M2pWYXcySC1pazV4dzdxX2hIMFc5RnN6SHA3Q1d3",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipNm1fut4HKxSRTpQ-6RkNQDkXsrzHhYfCaQwkoZAOWpw6b64L3iLU1yA3MHl_r8aQ?key=M2pWYXcySC1pazV4dzdxX2hIMFc5RnN6SHA3Q1d3",
   },
   {
     id: "tankolympics",
@@ -512,7 +527,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://lu.ma/55hizq8f",
     imagePath: "/images/luma/b6c5f6a3-1f3a-4ebd-9d29-075b9d6d74dc.jpeg",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipMaV0hBrR-eYX20MmtDBemZSZGUE3Y_kvO0JF9Cfm4crS27KpoU9tuY2u1aGNXWAA?key=OHk5TlJRNklhVTFXMzNGYTZ5Y09qOTN5ejM0RWtn",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipMaV0hBrR-eYX20MmtDBemZSZGUE3Y_kvO0JF9Cfm4crS27KpoU9tuY2u1aGNXWAA?key=OHk5TlJRNklhVTFXMzNGYTZ5Y09qOTN5ejM0RWtn",
   },
   {
     id: "mini-webpack-scratch",
@@ -525,7 +541,8 @@ export const events: Event[] = [
     eventUrl: "https://www.meetup.com/techtank-to/events/301699806/",
     imagePath: "/images/meetup/highres_521809945.jpeg",
     youtubeUrl: "https://www.youtube.com/watch?v=iIjdAXX-oD4",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipNyu6nkeQkkImW1usVfuDT6nr64NVj_WG5P6geHbZlDnLnKbZFP0kMGkovhsji1oA?key=R292TkpacE9ybHVMNTlfdVhvRHYtVGJEbFlZa0xn",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipNyu6nkeQkkImW1usVfuDT6nr64NVj_WG5P6geHbZlDnLnKbZFP0kMGkovhsji1oA?key=R292TkpacE9ybHVMNTlfdVhvRHYtVGJEbFlZa0xn",
   },
   {
     id: "softball-sashimis-2024",
@@ -534,15 +551,16 @@ export const events: Event[] = [
     start_at: "2024-07-13T12:00:00",
     tags: ["Sports", "Social"],
     status: "past",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipMmBy4aNt0rNAsHwMagst6jvo93awXW5yyWd4yCw9g5u0vdHpN7BRRHedJ8ofNEpQ?key=TXRZZ2FCazlCSFROZmdmQ1cwYXMwbmxYXy1ldmln",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipMmBy4aNt0rNAsHwMagst6jvo93awXW5yyWd4yCw9g5u0vdHpN7BRRHedJ8ofNEpQ?key=TXRZZ2FCazlCSFROZmdmQ1cwYXMwbmxYXy1ldmln",
   },
   {
     id: "code-diversity-coffee-2024-07",
     title: "Code Diversity Monthly Coffee Chats",
-    pitch: "Monthly coffee chat for women and non-binary folks in tech",
+    pitch: "Monthly coffee chat for women and gender-diverse folks in tech",
     start_at: "2024-07-13T11:00:00",
     venue: "Carbonic Coffee",
-    tags: ["Coffee Chat", "CodeDiversity", "Social",],
+    tags: ["Coffee Chat", "CodeDiversity", "Social"],
     status: "past",
     eventUrl: "https://www.meetup.com/techtank-to/events/301852269/",
     imagePath: "/images/meetup/highres_521950379.jpeg",
@@ -554,7 +572,8 @@ export const events: Event[] = [
     start_at: "2024-06-15T12:00:00",
     tags: ["Social", "Charity"],
     status: "past",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipNM9FBTNWpRR8DWT99MItot1HtgKiLEccHtwjYZIXBqPyQa8s4-ATrTlPNbCjf1gA?key=WGhjeENGV3VlZ1NpV3lQWjV6bE9OXzJ6b2lEaWN3",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipNM9FBTNWpRR8DWT99MItot1HtgKiLEccHtwjYZIXBqPyQa8s4-ATrTlPNbCjf1gA?key=WGhjeENGV3VlZ1NpV3lQWjV6bE9OXzJ6b2lEaWN3",
   },
   {
     id: "networking-101-2024",
@@ -579,7 +598,8 @@ export const events: Event[] = [
     eventUrl: "https://www.meetup.com/techtank-to/events/300591167/",
     imagePath: "/images/meetup/highres_520941912.jpeg",
     youtubeUrl: "https://www.youtube.com/watch?v=tMoqGyfVkGA",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipMllK8NZdIjH0tP8lf0fw7JoQzXgse-6qCsWP2Kvh1lKWdGAiz_a1eeocYuoAntrA?key=cUphRG83Mzg1X0pSVzY2OTJfNTZ5Wlota20tY0pn",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipMllK8NZdIjH0tP8lf0fw7JoQzXgse-6qCsWP2Kvh1lKWdGAiz_a1eeocYuoAntrA?key=cUphRG83Mzg1X0pSVzY2OTJfNTZ5Wlota20tY0pn",
   },
   {
     id: "ai-prompting-101",
@@ -600,7 +620,8 @@ export const events: Event[] = [
     start_at: "2024-04-20T12:00:00",
     tags: ["Anniversary", "Social"],
     status: "past",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipN5YllsNHTVeUJKlSnd8bD4jyTo6muTTiMdHifF3DhT0olsYLxMbHynTtJ8jHJ7Uw?key=a1NmcTQ1VUpwWVB1OXNpb0tzeVRhN2hmM1NqcEFR",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipN5YllsNHTVeUJKlSnd8bD4jyTo6muTTiMdHifF3DhT0olsYLxMbHynTtJ8jHJ7Uw?key=a1NmcTQ1VUpwWVB1OXNpb0tzeVRhN2hmM1NqcEFR",
   },
   {
     id: "epic-quest-javascript",
@@ -613,7 +634,8 @@ export const events: Event[] = [
     eventUrl: "https://www.meetup.com/techtank-to/events/300175753/",
     imagePath: "/images/meetup/highres_520152027.jpeg",
     youtubeUrl: "https://www.youtube.com/watch?v=Q5DvWKxpaBE",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipNLPqEiBg7_95ZuKAxeC9GxdOVSUf3RmG8a5Hr5LWmBP8jRnPDGXNlBqkA4Sf2aXQ?key=UUltWXp4ODRJcDFYaXhOLXVrUE1GcGozZ0c0SFFR",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipNLPqEiBg7_95ZuKAxeC9GxdOVSUf3RmG8a5Hr5LWmBP8jRnPDGXNlBqkA4Sf2aXQ?key=UUltWXp4ODRJcDFYaXhOLXVrUE1GcGozZ0c0SFFR",
   },
   {
     id: "track-field-2024",
@@ -637,7 +659,8 @@ export const events: Event[] = [
     imagePath: "/images/meetup/highres_519276676.jpeg",
     host: sponsors.cohere,
     youtubeUrl: "https://www.youtube.com/watch?v=nRoKA93lJqY",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipOn_EKK627wNTlgtoEjoRR-RIYqwDMZfV8cdxNx5-MAXTT_pvwWZAU3Jd8fgsZ2Lg?key=eG9aR1A1NzhQa01MN09TSGFGUkxnaldjcTJ2WHhR",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipOn_EKK627wNTlgtoEjoRR-RIYqwDMZfV8cdxNx5-MAXTT_pvwWZAU3Jd8fgsZ2Lg?key=eG9aR1A1NzhQa01MN09TSGFGUkxnaldjcTJ2WHhR",
   },
   {
     id: "accessible-nav-menus",
@@ -716,7 +739,8 @@ export const events: Event[] = [
     start_at: "2024-02-17T12:00:00",
     tags: ["Social", "Trip"],
     status: "past",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipOdL17zISJwXuA-sOQpNz71wSZ5plWDiQ112VjuKLxMFMX3hLObJUJ6v5J_c-asHA?key=U3BrY3NOVnk3eHBLRUJYMHFDNnBVMmJ0eFpTbm9B",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipOdL17zISJwXuA-sOQpNz71wSZ5plWDiQ112VjuKLxMFMX3hLObJUJ6v5J_c-asHA?key=U3BrY3NOVnk3eHBLRUJYMHFDNnBVMmJ0eFpTbm9B",
   },
   {
     id: "burnout-in-tech",
@@ -750,7 +774,8 @@ export const events: Event[] = [
     start_at: "2023-12-14T12:00:00",
     tags: ["Social", "Holiday"],
     status: "past",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipNJCcEC8dFz06_EsD32Tpot7evg7OY9ke9lb3Qs8itCUKgczd9V3iTdaKXVPb5qTw?key=S1RNYjVFRjZyRXRVQzFBR3lGVk1KRFJPOUlIQjJn",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipNJCcEC8dFz06_EsD32Tpot7evg7OY9ke9lb3Qs8itCUKgczd9V3iTdaKXVPb5qTw?key=S1RNYjVFRjZyRXRVQzFBR3lGVk1KRFJPOUlIQjJn",
   },
   {
     id: "skating-2023",
@@ -786,7 +811,8 @@ export const events: Event[] = [
     eventUrl: "https://www.meetup.com/techtank-to/events/297145894/",
     imagePath: "/images/meetup/highres_517035730.jpeg",
     youtubeUrl: "https://www.youtube.com/watch?v=Q89KAMThfCw",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipN7795hAt6xtwWmIIPlBoijkf8svVZFKd4v7vTrDfhJdYe0u5DAn8wSlT4bNKgHig?key=Q1o4MzdZT1dWSHlzS0QyS0E0Qk1jSzVUSTNvTnZB",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipN7795hAt6xtwWmIIPlBoijkf8svVZFKd4v7vTrDfhJdYe0u5DAn8wSlT4bNKgHig?key=Q1o4MzdZT1dWSHlzS0QyS0E0Qk1jSzVUSTNvTnZB",
   },
   {
     id: "transitioning-fullstack",
@@ -819,7 +845,8 @@ export const events: Event[] = [
     start_at: "2023-10-28T12:00:00",
     tags: ["Social", "Outdoors"],
     status: "past",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipOg2itOXIvPeeQKFEFScI2UCeOojdcuGpMGoJXJftFFaKlCVDhzhdkk2PNfrICpzA?key=TmRwakJkdl8zMWlYZDM2dlZiT2ZUSWwwN1U2MmtR",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipOg2itOXIvPeeQKFEFScI2UCeOojdcuGpMGoJXJftFFaKlCVDhzhdkk2PNfrICpzA?key=TmRwakJkdl8zMWlYZDM2dlZiT2ZUSWwwN1U2MmtR",
   },
   {
     id: "halloween-2023",
@@ -830,7 +857,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://lu.ma/tou5yec8",
     imagePath: "/images/luma/4be95679-e8c7-4149-bbba-60b80ff57c04.jpeg",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipMbVRHwXl8qR8eWRaxk0jqxbUxRBD4ic1arOmYFPQQNPaFonrTiGJU4pf_rfFFMxg?key=SXlVb0s5dEZqRnMyejh3QkcyR2o3NTFvQzhEaXRB",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipMbVRHwXl8qR8eWRaxk0jqxbUxRBD4ic1arOmYFPQQNPaFonrTiGJU4pf_rfFFMxg?key=SXlVb0s5dEZqRnMyejh3QkcyR2o3NTFvQzhEaXRB",
   },
   {
     id: "llms-what-how",
@@ -843,7 +871,8 @@ export const events: Event[] = [
     imagePath: "/images/meetup/highres_516203971.jpeg",
     host: sponsors.cohere,
     youtubeUrl: "https://www.youtube.com/watch?v=L61l0VzQ5j4",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipPFf6pYTwSxFt1sG8sco1i_tdRYmRzxFSlGLXokJjlMXsc4ZT9288pNP0Z7-_Q71A?key=aVM3VjA3WU5QOW5XaExMLW1BTFoxbkdCQllERDhB",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipPFf6pYTwSxFt1sG8sco1i_tdRYmRzxFSlGLXokJjlMXsc4ZT9288pNP0Z7-_Q71A?key=aVM3VjA3WU5QOW5XaExMLW1BTFoxbkdCQllERDhB",
   },
   {
     id: "junior-to-midlevel",
@@ -868,7 +897,8 @@ export const events: Event[] = [
     eventUrl: "https://www.meetup.com/techtank-to/events/295642016/",
     imagePath: "/images/meetup/highres_515354669.jpeg",
     youtubeUrl: "https://www.youtube.com/watch?v=IKrZuYJGBKo",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipOG-h347VHP9BpUaj9VGXpH1RbYpvM9VqJPbGMPw22afLsIUrmW1Mc9vPDpBBO8tg?key=NVdxWnV2ckFSZG0zeDdyMlVaUS1VNDFCWV9QRTZB",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipOG-h347VHP9BpUaj9VGXpH1RbYpvM9VqJPbGMPw22afLsIUrmW1Mc9vPDpBBO8tg?key=NVdxWnV2ckFSZG0zeDdyMlVaUS1VNDFCWV9QRTZB",
   },
   {
     id: "bowling-2023",
@@ -880,7 +910,8 @@ export const events: Event[] = [
     status: "past",
     eventUrl: "https://lu.ma/om45mvv3",
     imagePath: "/images/luma/default-retro4.jpeg",
-    albumUrl: "https://photos.google.com/u/2/share/AF1QipNJf7YltaKvL5Cq_bX4O8Nt0heaFeetF1UuqVj54JoxVEzjPm4F85nQPHj_LDKpdw?key=V2JKcjBkTDczWVZWWHNpNUl4OVJGOGQxNmQxb3BB",
+    albumUrl:
+      "https://photos.google.com/u/2/share/AF1QipNJf7YltaKvL5Cq_bX4O8Nt0heaFeetF1UuqVj54JoxVEzjPm4F85nQPHj_LDKpdw?key=V2JKcjBkTDczWVZWWHNpNUl4OVJGOGQxNmQxb3BB",
   },
   {
     id: "continuous-learning-tech",
@@ -895,21 +926,3 @@ export const events: Event[] = [
     youtubeUrl: "https://www.youtube.com/watch?v=6Mf6CDJnE4U",
   },
 ];
-
-export function getUpcomingEvents(): Event[] {
-  return events
-    .filter((e) => e.status === "upcoming")
-    .sort((a, b) => new Date(a.start_at).getTime() - new Date(b.start_at).getTime());
-}
-
-export function getPastEvents(): Event[] {
-  return events
-    .filter((e) => e.status === "past")
-    .sort((a, b) => new Date(b.start_at).getTime() - new Date(a.start_at).getTime());
-}
-
-export function getRecentEvents(count: number = 4): Event[] {
-  const upcoming = getUpcomingEvents();
-  const past = getPastEvents();
-  return [...upcoming, ...past].slice(0, count);
-}

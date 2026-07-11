@@ -6,11 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { SponsorsMarquee } from "@/components/ui/sponsors-marquee";
 import { ContactCard } from "@/components/ui/contact-card";
-import {
-  getCoverImage,
-  getCoverVideo,
-  getInstagramPostsByIds,
-} from "@/constants/instagram-posts";
+import { getCoverImage, getCoverVideo, getInstagramPostsByIds } from "@/constants/instagram-posts";
 
 export const metadata: Metadata = {
   title: "Sponsor TechTank",
@@ -40,7 +36,7 @@ const whySponsor = [
 ];
 
 const whatSponsorshipSupports = [
-  "Monthly event operations when no host venue is available",
+  "Event operations when no host venue is available",
   "Community programs like Code Diversity for underrepresented voices",
   "Equipment, recording, and production costs",
   "Slack community and online resources",
@@ -89,8 +85,8 @@ export default function SponsorPage() {
               Sponsor the Toronto tech community
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Support the monthly events, speakers, and programs that bring the
-              community together. Tasteful brand visibility, real impact.
+              Support the year-round events, speakers, and programs that bring the community together. Tasteful brand
+              visibility, real impact.
             </p>
             <Button variant="primary" size="lg" asChild>
               <a href="mailto:techtankto@gmail.com?subject=Sponsorship%20Inquiry%20-%20TechTank">
@@ -103,23 +99,14 @@ export default function SponsorPage() {
 
       {/* Why Sponsor */}
       <Section>
-        <SectionHeader
-          overline="Why sponsor"
-          title="What you get out of it"
-          className="mb-12"
-        />
+        <SectionHeader overline="Why sponsor" title="What you get out of it" className="mb-12" />
         <div className="grid gap-8 lg:grid-cols-3">
           {whySponsor.map((item) => (
-            <div
-              key={item.title}
-              className="bg-card rounded-2xl border border-border p-6 lg:p-8"
-            >
+            <div key={item.title} className="bg-card rounded-2xl border border-border p-6 lg:p-8">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-ring/10 text-ring mb-4">
                 <item.icon className="h-6 w-6" />
               </div>
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3">
-                {item.title}
-              </h3>
+              <h3 className="font-display text-xl font-semibold text-foreground mb-3">{item.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{item.description}</p>
             </div>
           ))}
@@ -133,9 +120,7 @@ export default function SponsorPage() {
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
               Your impact
             </span>
-            <h2 className="font-display text-3xl font-semibold text-foreground mb-6">
-              What sponsorship supports
-            </h2>
+            <h2 className="font-display text-3xl font-semibold text-foreground mb-6">What sponsorship supports</h2>
             <ul className="space-y-4">
               {whatSponsorshipSupports.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
@@ -148,14 +133,8 @@ export default function SponsorPage() {
           <div className="relative">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-peach via-lavender to-aqua">
               {featuredVideo ? (
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="absolute inset-0 h-full w-full object-cover"
-                >
-                  <source src={featuredVideo.replace(/\.mp4$/, '.webm')} type="video/webm" />
+                <video autoPlay loop muted playsInline className="absolute inset-0 h-full w-full object-cover">
+                  <source src={featuredVideo.replace(/\.mp4$/, ".webm")} type="video/webm" />
                   <source src={featuredVideo} type="video/mp4" />
                 </video>
               ) : featuredImage ? (
@@ -168,9 +147,7 @@ export default function SponsorPage() {
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="text-center text-foreground/60 px-8">
-                    Community event photography
-                  </p>
+                  <p className="text-center text-foreground/60 px-8">Community event photography</p>
                 </div>
               )}
             </div>
@@ -191,9 +168,7 @@ export default function SponsorPage() {
             <div
               key={tier.name}
               className={`rounded-2xl border p-6 lg:p-8 ${
-                tier.highlight
-                  ? "border-ring bg-ring/5"
-                  : "border-border bg-card"
+                tier.highlight ? "border-ring bg-ring/5" : "border-border bg-card"
               }`}
             >
               {tier.highlight && (
@@ -201,34 +176,23 @@ export default function SponsorPage() {
                   Most popular
                 </span>
               )}
-              <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-                {tier.name}
-              </h3>
+              <h3 className="font-display text-xl font-semibold text-foreground mb-2">{tier.name}</h3>
               <p className="text-muted-foreground">{tier.description}</p>
             </div>
           ))}
         </div>
         <p className="text-center text-sm text-muted-foreground mt-8">
-          Exact pricing and benefits in our sponsorship info. Tiers are
-          illustrative — we&apos;ll work with your budget.
+          Exact pricing and benefits in our sponsorship info. Tiers are illustrative — we&apos;ll work with your budget.
         </p>
       </Section>
 
       {/* Base Package */}
       <Section background="brand-soft">
         <div className="max-w-3xl mx-auto">
-          <SectionHeader
-            overline="All sponsors get"
-            title="Base sponsor package"
-            align="center"
-            className="mb-12"
-          />
+          <SectionHeader overline="All sponsors get" title="Base sponsor package" align="center" className="mb-12" />
           <div className="grid gap-4 sm:grid-cols-2">
             {basePackage.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-3 bg-card rounded-lg p-4"
-              >
+              <div key={index} className="flex items-center gap-3 bg-card rounded-lg p-4">
                 <Check className="h-5 w-5 text-ring shrink-0" />
                 <span className="text-foreground">{item}</span>
               </div>
@@ -251,17 +215,12 @@ export default function SponsorPage() {
       {/* Hosting vs Sponsoring */}
       <Section>
         <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
-            Not sure?
-          </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
-            Hosting vs. sponsoring
-          </h2>
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">Not sure?</span>
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Hosting vs. sponsoring</h2>
           <p className="text-muted-foreground mb-6">
-            <strong className="text-foreground">Hosting</strong> means providing
-            your venue and food for one event. <strong className="text-foreground">Sponsoring</strong>{" "}
-            means supporting TechTank with funding for ongoing operations,
-            programs, or multiple events.
+            <strong className="text-foreground">Hosting</strong> means providing your venue and food for one event.{" "}
+            <strong className="text-foreground">Sponsoring</strong> means supporting TechTank with funding for ongoing
+            operations, programs, or multiple events.
           </p>
           <Button variant="outline" asChild>
             <Link href="/get-involved/host">Learn about hosting</Link>
@@ -275,12 +234,9 @@ export default function SponsorPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Ready to sponsor?
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
-            Get the sponsorship info
-          </h2>
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Get the sponsorship info</h2>
           <p className="text-muted-foreground mb-8">
-            Tell us about your company and goals. We&apos;ll send our full
-            sponsorship details within a week.
+            Tell us about your company and goals. We&apos;ll send our full sponsorship details within a week.
           </p>
           <Button variant="primary" size="lg" asChild>
             <a href="mailto:techtankto@gmail.com?subject=Sponsorship%20Inquiry%20-%20TechTank">

@@ -8,12 +8,7 @@ import { SponsorsMarquee } from "@/components/ui/sponsors-marquee";
 import { RoleCard, roleCardsData } from "@/components/ui/role-card";
 import { EventCard } from "@/components/ui/event-card";
 import { SocialFeed } from "@/components/ui/social-feed";
-import { getRecentEvents } from "@/constants/events";
-import {
-  getCoverImage,
-  getCoverVideo,
-  getInstagramPostsByIds,
-} from "@/constants/instagram-posts";
+import { getCoverImage, getCoverVideo, getInstagramPostsByIds } from "@/constants/instagram-posts";
 import { getLumaEvents, getPastLumaEvents } from "./events/actions";
 
 function captionToAlt(caption: string): string {
@@ -27,7 +22,7 @@ export default async function HomePage() {
   const pastEvents = await getPastLumaEvents();
 
   const heroPosts = getInstagramPostsByIds([
-    "2025-07-07-DLz4I7KOww6", // BBQ season
+    "2026-06-09-DZWPNciI8eO", // Docebo Brainstation (Jun 2026)
     "2026-04-10-DW9vcgiPHx", // Code diversity (Apr 2026)
   ]).map((post) => ({
     id: post.id,
@@ -44,15 +39,12 @@ export default async function HomePage() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-6 items-center">
             {/* Left: Text content */}
             <div className="lg:max-w-xl py-8 lg:py-12">
-              <span className="tag mb-4">
-                Toronto &middot; Monthly &middot; Inclusive
-              </span>
+              <span className="tag mb-4">Toronto &middot; Year-round &middot; Inclusive</span>
               <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
                 Toronto&apos;s home for tech community
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6 lg:max-w-md">
-                Tech talks, panels, socials, sports, and more—hosted at
-                companies across the city.
+                Tech talks, panels, socials, sports, and more—hosted at companies across the city.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Button variant="primary" size="md" asChild>
@@ -75,9 +67,9 @@ export default async function HomePage() {
                       loop
                       muted
                       playsInline
-                      className="absolute inset-0 h-full w-full object-cover"
+                      className="absolute inset-0 h-full w-full object-cover object-top"
                     >
-                      <source src={heroPosts[0].videoSrc.replace(/\.mp4$/, '.webm')} type="video/webm" />
+                      <source src={heroPosts[0].videoSrc.replace(/\.mp4$/, ".webm")} type="video/webm" />
                       <source src={heroPosts[0].videoSrc} type="video/mp4" />
                     </video>
                   ) : heroPosts[0].imageSrc ? (
@@ -100,9 +92,9 @@ export default async function HomePage() {
                       loop
                       muted
                       playsInline
-                      className="absolute inset-0 h-full w-full object-cover"
+                      className="absolute inset-0 h-full w-full object-cover object-top"
                     >
-                      <source src={heroPosts[1].videoSrc.replace(/\.mp4$/, '.webm')} type="video/webm" />
+                      <source src={heroPosts[1].videoSrc.replace(/\.mp4$/, ".webm")} type="video/webm" />
                       <source src={heroPosts[1].videoSrc} type="video/mp4" />
                     </video>
                   ) : heroPosts[1].imageSrc ? (
@@ -126,21 +118,13 @@ export default async function HomePage() {
 
       {/* Social Feed */}
       <Section id="community" background="muted">
-        <SectionHeader
-          overline="From the community"
-          title="Real people, real moments"
-          className="mb-8"
-        />
+        <SectionHeader overline="From the community" title="Real people, real moments" className="mb-8" />
         <SocialFeed />
       </Section>
 
       {/* Events Section - Upcoming (large) + Past (small) */}
       <Section>
-        <SectionHeader
-          overline="Events"
-          title="Recent happenings"
-          className="mb-6"
-        />
+        <SectionHeader overline="Events" title="Recent happenings" className="mb-6" />
 
         {/* Recent Events - Large featured + smaller cards */}
         <div className="grid gap-4 lg:grid-cols-2 mb-4">
@@ -165,21 +149,13 @@ export default async function HomePage() {
         {/* CTAs */}
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Button variant="primary" size="md" asChild>
-            <a
-              href="https://luma.com/techtank"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://luma.com/techtank" target="_blank" rel="noopener noreferrer">
               Luma
               <ExternalLink className="ml-2 h-4 w-4" />
             </a>
           </Button>
           <Button variant="outline" size="md" asChild>
-            <a
-              href="https://meetup.com/techtank-to"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://meetup.com/techtank-to" target="_blank" rel="noopener noreferrer">
               Meetup
               <ExternalLink className="ml-2 h-4 w-4" />
             </a>
@@ -201,7 +177,7 @@ export default async function HomePage() {
           description="TechTank runs on people who show up."
           className="mb-8"
         />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {roleCardsData.map((role) => (
             <RoleCard key={role.role} {...role} />
           ))}
@@ -211,15 +187,10 @@ export default async function HomePage() {
       {/* Values Teaser */}
       <Section>
         <div className="glass rounded-2xl p-6 lg:p-10 text-center max-w-2xl mx-auto">
-          <span className="tag-outline mb-4 inline-block text-sm">
-            What we&apos;re about
-          </span>
-          <h2 className="font-display text-2xl lg:text-3xl font-bold text-foreground mb-4">
-            Community first. Always.
-          </h2>
+          <span className="tag-outline mb-4 inline-block text-sm">What we&apos;re about</span>
+          <h2 className="font-display text-2xl lg:text-3xl font-bold text-foreground mb-4">Community first. Always.</h2>
           <p className="text-muted-foreground mb-6">
-            No gatekeeping—just people who genuinely want to learn, share, and
-            lift each other up.
+            No gatekeeping—just people who genuinely want to learn, share, and lift each other up.
           </p>
           <Button variant="primary" asChild>
             <Link href="/about">More about us</Link>
@@ -228,11 +199,7 @@ export default async function HomePage() {
       </Section>
 
       {/* Two-flow CTA */}
-      <Section
-        id="join-us"
-        background="brand-vertical"
-        className="py-8 lg:py-12"
-      >
+      <Section id="join-us" background="brand-vertical" className="py-8 lg:py-12">
         <SectionHeader
           overline="Take the next step"
           title="Where to next?"
@@ -249,9 +216,7 @@ export default async function HomePage() {
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
                 Show up
               </span>
-              <h3 className="font-display text-lg lg:text-xl font-bold text-foreground mb-2">
-                Upcoming events
-              </h3>
+              <h3 className="font-display text-lg lg:text-xl font-bold text-foreground mb-2">Upcoming events</h3>
               <p className="text-sm text-muted-foreground mb-4">
                 See what&apos;s coming up and RSVP to the next meetup.
               </p>
@@ -271,12 +236,8 @@ export default async function HomePage() {
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
                 Contribute
               </span>
-              <h3 className="font-display text-lg lg:text-xl font-bold text-foreground mb-2">
-                Get involved
-              </h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                Speak, host, sponsor, or volunteer with the crew.
-              </p>
+              <h3 className="font-display text-lg lg:text-xl font-bold text-foreground mb-2">Get involved</h3>
+              <p className="text-sm text-muted-foreground mb-4">Speak, host, sponsor, or volunteer with the crew.</p>
               <span className="inline-flex items-center text-sm font-semibold text-foreground group-hover:text-amber-dark transition-colors">
                 Pick your path
                 <ArrowRight className="ml-2 h-4 w-4" />

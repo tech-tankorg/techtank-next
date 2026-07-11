@@ -36,10 +36,10 @@ For developer-facing setup (scripts, directory tree, route map), see
         ├── press-kit.md           # /press-kit
         ├── get-involved/          # Onboarding hub (shared layout)
         │   ├── index.md           # /get-involved
-        │   ├── speaker.md         # /get-involved/speaker
+        │   ├── speak-or-facilitate.md         # /get-involved/speak-or-facilitate
         │   ├── host.md            # /get-involved/host
         │   ├── sponsor.md         # /get-involved/sponsor
-        │   └── volunteer.md       # /get-involved/volunteer
+        │   └── organizer.md       # /get-involved/organizer
         ├── resources/             # Resources folder
         │   ├── media-kit.md       # /resources/media-kit
         │   └── design-system.md   # /resources/design-system (brand guidelines + design token reference)
@@ -62,7 +62,7 @@ The redesign replaces a flat "link-tree" layout with a
 - `/about` — values manifesto built on four pillars: **Community,
   Innovation, Teamwork, Respect**.
 - `/get-involved` — onboarding hub with four role sub-pages (Speaker,
-  Host, Sponsor, Volunteer), each ending in an intake action (email us
+  Host, Sponsor, Organizer Team), each ending in an intake action (email us
   at `techtankto@gmail.com`).
 - `/events` — embedded Luma calendar.
 - `/press-kit` — standalone brand assets and fast facts for media.
@@ -134,6 +134,13 @@ Components follow [shadcn/ui](https://ui.shadcn.com/) patterns with
 - Pair every background token with its matching foreground: `bg-primary → text-primary-foreground`, `bg-secondary → text-secondary-foreground`, `bg-success → text-success-foreground`.
 - Gradients are defined as CSS utility classes (`.gradient-brand`, `.gradient-hero`, etc.) with `.dark` overrides in `globals.css`; use the class name in JSX, never inline `background:` values.
 
+### After making code changes
+
+- Run `pnpm type:check` to catch type errors.
+- Run `pnpm format` to keep the codebase oxfmt-clean.
+
+Do both before reporting a task complete or opening a commit.
+
 ### Adding a new page
 
 1. Decide where it belongs in the IA. If it's a role, it goes under
@@ -188,7 +195,7 @@ Components follow [shadcn/ui](https://ui.shadcn.com/) patterns with
   `get-involved/sponsor`, `prd`, `legal`, etc.) when one is obvious;
   omit it when the change is global.
 - Keep the subject under ~72 characters, lowercase, no trailing
-  period; explain the *why* in the body if the diff alone doesn't.
+  period; explain the _why_ in the body if the diff alone doesn't.
 - Use `!` (e.g. `feat(get-involved)!: …`) and a `BREAKING CHANGE:`
   footer for changes that move URLs, rename routes, or alter
   documented behavior.

@@ -24,7 +24,7 @@ giving them a full past-events timeline with recaps.
 ## 3. Key messages
 
 - "Stay up to date with everything happening at TechTank."
-- Monthly in-person events; occasional socials and virtual talks.
+- Year-round in-person events; occasional socials and virtual talks.
 - Every past event has photos, speakers, and often a recording — this
   is an active, ongoing community, not a dormant page.
 

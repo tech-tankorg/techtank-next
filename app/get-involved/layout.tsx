@@ -6,17 +6,13 @@ import { Button } from "@/components/ui/button";
 
 const subNav = [
   { name: "Overview", href: "/get-involved" },
-  { name: "Speaker", href: "/get-involved/speaker" },
+  { name: "Speak or Facilitate", href: "/get-involved/speak-or-facilitate" },
   { name: "Host", href: "/get-involved/host" },
   { name: "Sponsor", href: "/get-involved/sponsor" },
-  { name: "Volunteer", href: "/get-involved/volunteer" },
+  { name: "Organizer Team", href: "/get-involved/organizer" },
 ];
 
-export default function GetInvolvedLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function GetInvolvedLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   return (
@@ -29,9 +25,7 @@ export default function GetInvolvedLayout({
             <div className="flex flex-wrap items-center justify-center gap-1">
               {subNav.map((item) => {
                 const isActive =
-                  item.href === "/get-involved"
-                    ? pathname === "/get-involved"
-                    : pathname.startsWith(item.href);
+                  item.href === "/get-involved" ? pathname === "/get-involved" : pathname.startsWith(item.href);
 
                 return (
                   <Button key={item.name} variant="nav" size="sm" isActive={isActive} asChild>

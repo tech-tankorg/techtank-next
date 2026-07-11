@@ -12,7 +12,7 @@ This repo uses [Conventional Commits](https://www.conventionalcommits.org/).
 
 **Scope:** match the affected page or area — `home`, `about`, `events`, `get-involved/sponsor`, `legal`, `design-system`, `prd`, etc. Omit when the change is global.
 
-**Subject:** lowercase, no trailing period, ≤72 characters. Put the *why* in the commit body if the diff alone doesn't explain it.
+**Subject:** lowercase, no trailing period, ≤72 characters. Put the _why_ in the commit body if the diff alone doesn't explain it.
 
 **Breaking changes:** append `!` to the type+scope and add a `BREAKING CHANGE:` footer for anything that moves a URL, renames a route, or alters documented behaviour.
 
@@ -40,6 +40,20 @@ chore/upgrade-tailwind
 
 - Lowercase, hyphen-separated, ≤40 characters
 - Reference the affected area, not a ticket number
+
+## Editor setup
+
+This repo uses [oxfmt](https://www.npmjs.com/package/oxfmt) for formatting. In VS Code, install the [Oxc extension](https://marketplace.visualstudio.com/items?itemName=oxc.oxc-vscode), set it as the default formatter, and enable format-on-save:
+
+```jsonc
+// .vscode/settings.json
+{
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.formatOnSave": true,
+}
+```
+
+You can also run `pnpm format` from the CLI at any time.
 
 ## Pull requests
 

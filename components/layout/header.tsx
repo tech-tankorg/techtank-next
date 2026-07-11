@@ -11,6 +11,7 @@ const navigation = [
   { name: "About", href: "/about" },
   { name: "Get Involved", href: "/get-involved" },
   { name: "Events", href: "/events" },
+  { name: "Resources", href: "/resources/media-kit" },
   { name: "Code of Conduct", href: "/legal/code-of-conduct" },
 ];
 
@@ -72,11 +73,7 @@ export function Header() {
             onClick={toggleMobileMenu}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
+            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </nav>
@@ -97,9 +94,7 @@ export function Header() {
             ))}
             <div className="pt-4 border-t border-border">
               <Button variant="primary" size="sm" className="w-full" asChild>
-                <Link href="/#join-us">
-                  Join us
-                </Link>
+                <Link href="/#join-us">Join us</Link>
               </Button>
             </div>
           </div>

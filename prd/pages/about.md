@@ -2,8 +2,8 @@
 
 **URL:** https://www.techtankto.com/about
 **Page title:** About — TechTank TO
-**Role:** Values and community manifesto. Establishes *why* TechTank
-exists and *what* it stands for, through the four core pillars.
+**Role:** Values and community manifesto. Establishes _why_ TechTank
+exists and _what_ it stands for, through the four core pillars.
 
 ---
 
@@ -41,11 +41,11 @@ page a potential speaker, host, sponsor, or member can point to and say
    - Each pillar: icon + short heading + 2–3 sentence statement.
 
 3. **Origin story**
-   - One or two paragraphs: founded in 2023 in Toronto; grown to monthly
-     events with 40–100 attendees; entirely volunteer-run.
+   - One or two paragraphs: founded in 2023 in Toronto
+     events with 40–120 attendees; entirely volunteer-run.
 
 4. **What we do**
-   - Monthly in-person events (technical talk + networking).
+   - Year-round in-person events (technical talk + networking).
    - Recorded talks on YouTube.
    - Slack community for ongoing discussion.
    - Optional programs (Code Diversity) — keep a short list with links;

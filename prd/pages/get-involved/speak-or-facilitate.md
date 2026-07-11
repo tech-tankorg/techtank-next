@@ -1,8 +1,8 @@
-# Speaker — `/get-involved/speaker`
+# Speak or Facilitate — `/get-involved/speak-or-facilitate`
 
-**URL:** https://www.techtankto.com/get-involved/speaker
-**Page title:** Speak at TechTank — TechTank TO
-**Role:** Convince qualified technologists to speak at a TechTank event
+**URL:** https://www.techtankto.com/get-involved/speak-or-facilitate
+**Page title:** Speak or Facilitate — TechTank TO
+**Role:** Convince qualified technologists to speak or facilitate at a TechTank event
 and capture their intake.
 
 ---
@@ -41,7 +41,7 @@ audience, format, logistics, what they get, and how to sign up.
    - **Talk duration:** 30–45 minutes plus Q&A.
    - **Topics:** anything related to tech.
    - **Format:** in-person at a host venue in Toronto.
-   - **Audience:** typically 40–100 attendees per event.
+   - **Audience:** typically 40–120 attendees per event.
    - **Recording:** published to TechTank's YouTube channel.
 
 4. **What TechTank handles**

@@ -32,7 +32,7 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
   const video = getCoverVideo(post);
   const postUrl = post.shortcode
     ? `https://instagram.com/p/${post.shortcode}`
-    : instagramUrl ?? "https://instagram.com/techtankto";
+    : (instagramUrl ?? "https://instagram.com/techtankto");
 
   return (
     <article className="group relative glass rounded-2xl overflow-hidden transition-all flex flex-col">
@@ -48,7 +48,7 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
               preload="auto"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
             >
-              <source src={video.replace(/\.mp4$/, '.webm')} type="video/webm" />
+              <source src={video.replace(/\.mp4$/, ".webm")} type="video/webm" />
               <source src={video} type="video/mp4" />
             </video>
           ) : cover ? (
@@ -61,9 +61,7 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
             />
           ) : null}
           {post.featured && (
-            <span className="absolute top-3 left-3 tag bg-warning text-warning-foreground text-xs">
-              Featured
-            </span>
+            <span className="absolute top-3 left-3 tag bg-warning text-warning-foreground text-xs">Featured</span>
           )}
         </div>
       )}
@@ -72,9 +70,7 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
           <span className="text-[#E4405F]">
             <InstagramIcon className="h-5 w-5" />
           </span>
-          <span className="text-xs text-muted-foreground uppercase tracking-wide font-medium shrink-0">
-            Instagram
-          </span>
+          <span className="text-xs text-muted-foreground uppercase tracking-wide font-medium shrink-0">Instagram</span>
           <span className="text-xs text-muted-foreground/50 shrink-0">·</span>
           <span className="text-xs text-muted-foreground min-w-[8.5em] shrink-0">
             {formatDate(post.date, post.createdAtRaw)}
@@ -114,14 +110,9 @@ export function SocialFeed() {
         {getAllSocialLinks()
           .filter((link) => ["slack", "linkedin", "instagram"].includes(link.id))
           .map((link) => (
-            <Button
-              key={link.id}
-              variant={link.type === "primary" ? "primary" : "outline"}
-              size="sm"
-              asChild
-            >
+            <Button key={link.id} variant={link.type === "primary" ? "primary" : "outline"} size="sm" asChild>
               <a
-                href={link.id === "instagram" ? instagramUrl ?? link.url : link.url}
+                href={link.id === "instagram" ? (instagramUrl ?? link.url) : link.url}
                 target="_blank"
                 rel="noopener noreferrer"
               >

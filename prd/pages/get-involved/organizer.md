@@ -1,7 +1,7 @@
-# Volunteer — `/get-involved/volunteer`
+# Organizer — `/get-involved/organizer`
 
-**URL:** https://www.techtankto.com/get-involved/volunteer
-**Page title:** Volunteer with TechTank — TechTank TO
+**URL:** https://techtankto.com/get-involved/organizer
+**Page title:** Organize with TechTank — TechTank TO
 **Role:** Onboard the crew that keeps TechTank running — organizers,
 event-day volunteers, content volunteers, community moderators.
 
@@ -60,7 +60,7 @@ roles available, and make signing up low-friction.
    - The gratitude of an entire tech community.
 
 6. **Current crew (optional)**
-   - Photos + first names of current volunteers as social proof.
+   - Photos + first names of current organizers as social proof.
 
 7. **Intake action (email us)**
    - Prominent `mailto:techtankto@gmail.com` CTA with a pre-filled
@@ -76,14 +76,14 @@ roles available, and make signing up low-friction.
 
 1. Email `techtankto@gmail.com` to volunteer
 2. Join our Slack
-3. Come to an event first (link to `/events`)
+3. Attend an event first (link to `/events`)
 
 ## 6. Functional requirements
 
 - Prominent intake CTA (`mailto:techtankto@gmail.com`) with a clear
   button and suggested-details scaffold.
 - Role list renders from structured content so organizers can edit it.
-- "Come to an event first" path is always offered for people not ready
+- "Attend an event first" path is always offered for people not ready
   to commit.
 
 ## 7. Acceptance criteria
