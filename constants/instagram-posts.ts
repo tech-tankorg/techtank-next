@@ -7,7 +7,7 @@ export interface InstagramPost {
   caption: string;
   date?: string;
   shortcode?: string;
-  pk?: number;
+  pk?: bigint;
   createdAtRaw?: number;
   featured?: boolean;
   media: InstagramPostMedia[];
@@ -19,7 +19,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🌟 Dive into the world of AI Prompting with us at #StudyTank! 🚀\nJoin our StudyTank session tonight at 7:00 p.m. as we explore the art of crafting well-written prompts to elicit desired behaviors from AI models.\nDon’t miss out on practical tips from our guest teacher, Nhi Nguyen!\nRSVP now at the link in our bio on the app Meetup\nhttps://www.meetup.com/techtank-to/events/300782288\n#AI #TechTalks #StudyTank #TechTank #TechTankTo #FollowUs #TechCommunity #followforfollowback #follow4followback #onlineevent #onlineevents #aiprompts #techenthusiast #techenthusiasts #coder #programmer #dev #developer #designer\n#techtanktoronto #swimwithus #iykyk #foryou #technology #aiprompt #artificialintellegence #toolsandtips #lifehack #quicktips\n#careergrowth",
     date: "2024-05-14",
     shortcode: "C69JJh-R2qP",
-    pk: 18027008243035969,
+    pk: 18027008243035969n,
     createdAtRaw: 1715703598,
     media: [
       { type: "image", path: "/media/instagram/2024-05-14-C69JJhR2qP/techtankto_C69JJh-R2qP_3367888333715237519.webp" },
@@ -29,7 +29,7 @@ const instagramPosts: Record<string, InstagramPost> = {
     caption:
       "🌟 Yesterday at TechTank’s ‘Guppy Talks,’ we delved into ‘Engineering Wellness: Innovations and Challenges in Health Tech.’\nAttendees enjoyed insightful discussions with our expert panelists: Marta, Niya (Sorry I mispronounced your name it is pronounced “Nee-ya”!) and Roveena. Fellow enthusiasts and tech professionals explored new health technology trends:\nWhite Labeling: League’s approach to offering branded health solutions.\nDigital Prescriptions and Medical Health Records: Innovations by Healthie and the transition from paper charts to fully digital systems.\nImpact of the Pandemic: The acceleration of telemedicine and changes in patient-provider interactions.\nData Privacy and Security: Addressing the challenges of data integration and ensuring privacy.\nAPI Development: Creating custom APIs for better data exchange.\nEHR Document Transfer: Using databases like Google Fire for efficient document transfer.\nInter-network Communication: Overcoming the siloed nature of health networks.\nWearable Technology: Utilizing smartwatches to monitor health metrics and predict medical events.\nCase Studies Sharing: Platforms like Figure 1 for healthcare professionals to share and discuss cases.\nStartup vs. Large Company Dynamics: Handling innovation and integration in different organizational settings.\nHuge thanks to our sponsor, @7shifts, and everyone who made it an unforgettable Thursday evening!\nHere is the link to join 7shifts talent and apply online 👇 🔗 https://www.gem.com/form?formID=236bc24b-f0e9-4c98-8c7e-b5a113dcfc49\nSpecial thanks to @blondies_pizza for catering the event!\nA HUGE thank you to all the volunteers making this event go smoothly! We couldn’t do this without you!\nStay tuned for more events with @airicodes_ . 🚀\n#TechTank #HealthTech #Innovation #GuppyTalks #TorontoEvents #7Shifts #healthtechsaveslives\n#techsaveslives #techtankto #techtankers #torontotechevents #networking #professionalnetworking #toronto #6ix #yyz #downtown #blondies #nonprofit #volunteers #freeevents #torontoevent #bloorcourt #bloorcourtvillage #slack #meetup #healthtech #healthtechnology #techdiscussion",
     shortcode: "C7FJz-yxWnV",
-    pk: 17975828336569876,
+    pk: 17975828336569876n,
     createdAtRaw: 1715980471,
     media: [
       { type: "image", path: "/media/instagram/2024-05-17-C7FJzyxWnV/techtankto_C7FJz-yxWnV_3370143050692389333.webp" },
@@ -40,7 +40,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🚀 Next #StudyTank Session: Networking 101🚀\nLearning is not just about acquiring knowledge; it’s also about effectively communicating what we’ve learned. By teaching others, we solidify our own understanding. Through this initiative, we aim to foster a culture of sharing, learning, and mutual growth within Study Tank.\nJoin us online!👇\n📅 Date: June 4 🕖 Time: 7-8 PM EST 📍 Location: Online Event\n🌟 #Joinus for an exciting session on networking with Sammy Lam, where we’ll dive into practical strategies and techniques for the art of networking in the tech space.\nWhether connecting online or at professional events, this session will help you build and maintain valuable professional relationships that can significantly enhance your career. Don’t miss out on this opportunity to boost your networking skills and drive your career growth!\n📲 Please register on the Meetup app! Link in Bio\n#StudyTank #Networking #CareerGrowth #TechNetworking #ProfessionalDevelopment #learningtogether #networkingevent #TechCommunity #careerdevelopment #SkillBuilding #professionalnetworking #ProfessionalSkills #OnlineLearning #NetworkingTips #CareerSuccess #TechTank #TechTankto #TechTankToronto #TechTanker #TechTankers #developers #devlife #devcommunity #softwaredeveloper #softwareengineer #careertransition",
     date: "2024-05-27",
     shortcode: "C7ekq8xusC8",
-    pk: 18030870997869439,
+    pk: 18030870997869439n,
     createdAtRaw: 1716825711,
     media: [
       {
@@ -54,7 +54,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "When the #JavaScript bugs get you down…😢💻\nMy code will go on 🫡 🚢\n🌊🎶 🐠\n#MyCode #javascriptdeveloper #Coding #programminglife #Dev #devmemes #techlife #Coder #stuggle #celinedion #myheartwillgoon #codelife #techjokes #programmermemes #javascripts #TechTank #Debugging #Techtankto #techtanktoronto #techtanker #techtankers #titanicvibes\n#geekhumor #crying #toronto #techevents #fun #memes #memesdaily",
     date: "2024-05-28",
     shortcode: "C7hQBJ_uBg0",
-    pk: 18078786448486335,
+    pk: 18078786448486335n,
     createdAtRaw: 1716915803,
     media: [
       { type: "image", path: "/media/instagram/2024-05-28-C7hQBJuBg0/techtankto_C7hQBJ_uBg0_3378051643700942900.webp" },
@@ -65,7 +65,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Deploying on a Friday? 😅\nGet ready for a rollercoaster of emotions! 🫠\nSpare a thought for the brave soul on call. 💻💔\n#techlife #fridaydeploy #oncall #TechTank #techtankto #friday #techtanktoronto #techtankers #techtanker #devops #codelife #itcommunity #softwareengineering #techhumor #techmemes #deploymentdays #sysadmin #techtips #codingproblems #techworld #programmerlife #itsupport #debugging #memesdaily #softwaredeveloper #yyz #torontoevents",
     date: "2024-05-31",
     shortcode: "C7o69MmuY1m",
-    pk: 18017741879093672,
+    pk: 18017741879093672n,
     createdAtRaw: 1717173847,
     media: [
       {
@@ -83,7 +83,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🌟 Join us tomorrow for an enriching evening at TechTank’s ‘Guppy Talks’ event! 🐠 🐟 🐠\nDelve into the realm of health technology as we explore ‘Engineering Wellness: Innovations and Challenges in Health Tech.’\nReminder to RSVP on Meetup 🚀\n🔗 meetup.com/techtank-to/events/300591167/\nOr check out our links in the bio! 🐠\nThis event will be IN-PERSON on Thursday, May 16th (doors open 6pm) and hosted at the Roof Garden building (1 Roof Garden Lane, Toronto, ON M6H 1R2), thanks to our sponsors, 7Shifts 🙏\nWe’ll have drinks, food, and great conversations.\nPanelists: Marta Kule (she/her) - Senior Software Engineer, League Niya Panamdanam (she/her) - Senior Software Engineer, Healthie Roveena Sequeira (she/her) - MD CCFP(EM), Emergency Medicine Physician, Niagara Health, & Assistant Clinical Professor (Adjunct)\nModerator:  Riaz Virani (he/him), Community Organizer at TechTank\nSchedule: 6:00pm - 6:45pm - Get to the venue, eat, socialize! 6:45pm - 7:45pm - Announcements / Panel discussion 7:45pm - 8:30pm - Hang out some more, ask questions\nℹ️ For more information about us and free events, please visit www.techtankto.com\nAbout our Sponsor: 7Shifts, a leading tech company streamlining team management for over 40,000 restaurants worldwide, optimizing scheduling, communication, and compliance while reducing overhead costs.\n#TechTank #HealthTech #innovation #GuppyTalks #techtankto #techtankers #techtanker #TorontoEvents #7Shifts #inperson #networking #torontonetworking #free #RestaurantTech #techpanel #panel #torontoevents #meetup #rsvp #tomorrow #healthtechnology #yyz #6ix #gta #downtowntoronto #techtanktoronto #jobseekers #techsociety #medicaltechnology #restauranttechnology",
     date: "2024-06-02",
     shortcode: "C6_wKWQOT7D",
-    pk: 17855448786190591,
+    pk: 17855448786190591n,
     createdAtRaw: 1717298507,
     media: [
       { type: "image", path: "/media/instagram/2024-06-02-C6wKWQOT7D/techtankto_C6_wKWQOT7D_3368622863618227907.webp" },
@@ -94,7 +94,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Connect and thrive with TechTank this summer! 🌅\n#Throwback to our cottage retreat as we eagerly await the upcoming long weekend.\nJoin us on #Slack to our inclusive tech community and unforgettable memories. Who’s ready to dive in? 🤿\n🐠 🐟 🐠\n#TechTankTo #SummerFun #TechCommunity #techtank #techtanker #techtankers #tb #tbt #thursday #sunset #toronto #dev #developers #devcommunity #cottage #victoriadaylongweekend #longsummer #techtanktoronto #slackcommunity #coders #mentorship #studytank #studyonline #meetup",
     date: "2024-06-02",
     shortcode: "C7Cb4LUx2iy",
-    pk: 18266614033215377,
+    pk: 18266614033215377n,
     createdAtRaw: 1717298477,
     media: [
       {
@@ -108,7 +108,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "☀️ Embrace the warmth of summer with TechTank!\nThrowback to our 2023 retreat, and get ready for another Long Weekend full of tech and sunshine.\nJoin us on our slack community and make unforgettable memories! 💪 👨‍💻 👩‍💻 🧑‍💻\n#TechTank #SummerVibes #TechCommunity #TechTankTo\n#thursday #tb #tbt #throwback #summer #warm #longweekendvibes #goodvibesonly #4dayweekend #longweekend #victoriaday #sunset #igsunset #techtanker #techtankers #toronto #6ix #tech #slack #studytank #coders #developers #devcommunity #codewithus #meetpeople #network",
     date: "2024-06-02",
     shortcode: "C7Cc9Nvxnf-",
-    pk: 18049939513732333,
+    pk: 18049939513732333n,
     createdAtRaw: 1717298424,
     media: [
       { type: "image", path: "/media/instagram/2024-06-02-C7Cc9Nvxnf/techtankto_C7Cc9Nvxnf-_3369382823177123838.webp" },
@@ -119,7 +119,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "💪 Empower yourself with the TechTank community!\nAs we countdown to another four day long weekend, dive into the warmth of relaxation and connections.\nThat sweater is hilarious 😂\nJoin our inclusive tech community for an unforgettable experience! 🐠 🐟 🐠\n#TechTank #Empowerment #SummerAdventure\n#techtanktoronto #techtanker #techtankers #devcommunity\n#TechTankTo #SummerFun #TechCommunity #developers #devcommunity #longweekend #victoriadaylongweekend #cottageweekend #4dayweekend #studytank #mentor #studycode #studywithme #slackcommunity #socials #torontoevents #continuelearning #thursday #tb #tbt #throwback",
     date: "2024-06-02",
     shortcode: "C7CchFRxfEi",
-    pk: 18019116218216505,
+    pk: 18019116218216505n,
     createdAtRaw: 1717298463,
     media: [
       {
@@ -133,7 +133,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "When the excitement of starting a new project outweighs the guilt of unfinished ones. 😂\nWe’ve all been there with project hopping.\nFYI #StudyTank Session has been posted check out our website for more information. 🐠\n🔗 www.techtankto.com\n#DevLife #techtankto #techtank #techtankers #techtanker #TechTankMemes #NewProject #unfinishedproject #ProgrammerHumor #DevJokes #CodingReality #CodeConfessions #Programmer #DevMemes #TechHumor\n#IncompleteTasks\n#Tech #Procrastination\n#Programming #NewProjectHype #OldProject #DeveloperLife",
     date: "2024-06-02",
     shortcode: "C7W3AlHxKfh",
-    pk: 18028667408031865,
+    pk: 18028667408031865n,
     createdAtRaw: 1717298357,
     media: [
       {
@@ -147,7 +147,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Had an epic night at the Toronto social with Da Tank! 🐠 🐟\nWe hit up Midnight Arcade for endless retro games, delicious half-priced food, and incredible video game-themed cocktails.\n🕹️🎉\n📸 @nmpanam\nThis event was organized by TechTank. To join us next time, be sure to join our Slack community!\n🔗 https://techtankto.com/links/slack\nLink also in Bio!\n#GoodTimes #TorontoNights #RetroGaming #ArcadeLife #MidnightArcade #GamerVibes #CocktailMagic #HalfPricedEats #SocialNight #VideoGameLovers #TorontoEvents #DaTank #GamingCommunity #NostalgiaTrip #TorontoFun #TechTank #kensingtonmarket #6ix",
     date: "2024-06-02",
     shortcode: "C7cXA2mxC5g",
-    pk: 18025321271173342,
+    pk: 18025321271173342n,
     createdAtRaw: 1717298310,
     media: [
       {
@@ -161,7 +161,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Last night’s Toronto social with Da Tank was a blast! 💥\nWe spent the evening at Midnight Arcade enjoying unlimited retro games, tasty half-priced food, and awesome video game-themed cocktails. 🕹️✨\n📸 @nmpanam\nHuge thanks to TechTank for organizing. Want to join the fun next time? Join our Slack community!\n🔗 https://techtankto.com/links/slack\nOr check the link in bio!\n#TorontoNights #RetroGaming #ArcadeFun #MidnightArcade #GamingNight #CocktailVibes #HalfPricedFood #SocialEvent #GamerCommunity #TorontoEvents #DaTank #TechTank #VideoGameNight #NostalgiaGaming #TorontoLife",
     date: "2024-06-02",
     shortcode: "C7cXqLJxf7d",
-    pk: 18267872848232888,
+    pk: 18267872848232888n,
     createdAtRaw: 1717298295,
     media: [
       {
@@ -179,7 +179,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🎉 Hey Y’all! We had a blast at The Midnight Arcade in downtown Toronto! 🕹️\n📍 @midnight.arcade\nOrganized by @nmpana, this event was so fun! 🤩\nMissed out? Don’t worry!\nJoin our TechTank Slack community and stay updated on all our events.\nCheck our website for more info and get ready for the next epic night! 🌟👾\n🐠 www.techtankto.com 🐠\n#TechTank #TechTankers #Toronto #stayconnected #JoinUs #ArcadeFun #CommunityVibes #GameNight #RetroGaming #NextLevelFun #SocialEvents #Networking #TechCommunity #FunTimes #activitiesinToronto #ClassicGames #EventRecap #daTank #torontosocial #techtanktoronto #techtankto",
     date: "2024-06-02",
     shortcode: "C7cskGFP_5-",
-    pk: 18050106079730009,
+    pk: 18050106079730009n,
     createdAtRaw: 1717298274,
     media: [
       { type: "image", path: "/media/instagram/2024-06-02-C7cskGFP5/techtankto_C7cskGFP_5-_3376769815099211390.webp" },
@@ -190,7 +190,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🌍 Tomorrow marks the beginning of June, recognized as National Indigenous History Month in Canada! ✨\nJoin us in learning, reflecting, and honoring the rich and diverse cultures of the First Nations, Inuit, and Métis, who have lived and thrived on this land from long before it was called ‘Canada,’ whose resilience and presence continues to impact and shape our culture and our land. 🌱\n💡 As a community that celebrates diversity and inclusion, TechTank is committed to engaging in further learning and sharing important resources such as:\nThe Indigenous Friends Association (IFA) @indigenousfriends\nAn Indigenous-led tech not-for-profit organization that ignites the Spirit of Indigenous communities to create, engage and renovate digital technologies through ethical and communal values.\n🔗 Website: www.indigenousfriends.org\nThe Centre for Indigenous Innovation and Technology Promoting excellence & diversity in technology training & innovation. CIIT aims to increase Indigenous representation in the tech industry and approach problem-solving with an Indigenous lens. 🔗 Website: www.ciit.io\nCanadian Council for Indigenous Business Dedicated to building a prosperous Indigenous economy by fostering relationships between Indigenous and non-Indigenous peoples, businesses, and communities through diverse programming. 🔗 Website: www.ccab.com\nIf you have any resources you’d like to share with us, please let us know via our Slack community! 🔗 Join our Slack community: https://techtankto.com/links/slack\n“Shine Bright” is an energetic pop song fused with youthful voices and a hopefully message of resilience and hope. Created by a group of youth from Quaqtag, Nunavik in Northern Quebec. @nwejinantv\n#indigenoushistorymonth #celebratediversity #indigenousheritage #learnfromthepast #strongertogether #resources #embracingcultures #JUNE #NIHM2024 #nhim #Developer #devcommunity #TechTank #TechTankTo #TechTankToronto #TechTanker #TechTankers #inclusivecommunity #diversity #inclusion #Canada #Toronto #YYZ #torontononprofit",
     date: "2024-06-02",
     shortcode: "C7pxQozOzxs",
-    pk: 17882936193063784,
+    pk: 17882936193063784n,
     createdAtRaw: 1717298172,
     media: [
       {
@@ -204,7 +204,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🌈 Happy Pride Month from TechTank 🫶🏻\nLive with pride and be proud of who you are!\n✨ We hope this Pride Month brings you joy, a deep sense of community, and the happiness of feeling seen and heard for your authentic selves!\n💜 We love our LGBTQ+ colleagues, friends, and family members, and we aim to create an inclusive environment where everyone feels valued and respected, not only in June, but all year round 🏳️‍🌈💫.\n💡 As part of our commitment to diversity and inclusion, TechTank hosts monthly coffee chats (aka our “Code Diversity” group) dedicated to supporting women and gender-diverse individuals in tech. These meetings offer a supportive space for sharing experiences, networking, and promoting initiatives that enhance gender diversity in our industry.\nJoin the Code Diversity group from our Slack community:\n🔗 https://techtankto.com/links/slack\nLet’s make this Pride Month one to remember by spreading love, acceptance, and empowerment together!💗\n💬 Repost this post on your stories and let’s continue to build a supportive and inclusive tech space together! 🏳️‍🌈 ✨\n#PrideMonth #CelebrateDiversity #LGBTQ #Inclusion #Queer #TechCommunity #SupportPride #DiversityInTech #StrongerTogether #TechTank #TechTankTo #TechTankToronto #TechTanker #TechTankers #InclusiveCommunity #WomenInTech #NonBinaryInTech #June2024 #Developers #DEVcommunity #Toronto #YYZ #Motivational",
     date: "2024-06-02",
     shortcode: "C7suzTLuDSF",
-    pk: 18049391968676537,
+    pk: 18049391968676537n,
     createdAtRaw: 1717300611,
     media: [
       {
@@ -218,7 +218,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🎉 Guppy Talks 2.0?!🎉\nThat’s right! Our panel discussion series has evolved into in-person meetups, and now we’re excited to announce Guppy Talks, the podcast for our global audience 🤘😎.\nGuppy Talks offers a unique take on the tech world, exploring a range of topics and fishing 🎣 for ideas from a fishbowl of random thoughts.\nDebut Episode: ‘Testing the Waters’\n🏊 We dive into: - The state of modern CSS\n- To DRY or not-to-DRY - Our growth as developers - Surprises in tech - The future of remote work - ⁠and more! 🧑‍💻\nJoin Riaz Virani, Chris Taeyoung Kim, Benjamin Lokash, Rana Selva Soyak, and special guest Nonso (George) Otoh as we navigate these uncharted waters together!\n🎙️ Listen now on: - Spotify: https://open.spotify.com/episode/2idIwKnGKXnl41CpEAODU3?si=e9e5734fd8a34112 - Apple Podcasts: https://podcasts.apple.com/ca/podcast/guppy-talks/id1749790391?i=1000657521798 - Or wherever you get your podcasts: https://podcasters.spotify.com/pod/show/techtank6\nOr check the link in bio!\nDon’t forget to follow/subscribe to Guppy Talks on your preferred platform for more episodes coming your way! ✨\nFor more info about TechTank and our community, visit techtankto.com or email us at techtankto@gmail.com.\nHappy listening 🎧!\n#podcast #guppytalks #TechTankTO #TechTank #TechTanker #TechTankers #techtanktoronto #TechCommunity #TorontoTech #PodcastAlert #TechKnowledge #TechEnthusiasts #TechTalks #CSS #RemoteWork #DeveloperLife #css3 #dry #remote #podcasting #podcastersofinstagram #developers #devlife #development #coders #softwaredeveloper #softwaredeveloper #devloper #educator #teacher",
     date: "2024-06-03",
     shortcode: "C7wn1KJuj5o",
-    pk: 18188319946288501,
+    pk: 18188319946288501n,
     createdAtRaw: 1717431120,
     media: [
       {
@@ -232,7 +232,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Summer vibes and hiking trails calling! 🌞🌲 #ThrowbackThursday to those sunny adventures in the great outdoors. Let’s relive those epic summertime memories! 🏞️\nDon't forget to take breaks from coding to get some fresh air and bright sun ☀️🩵\n#TechTank #summervibes #TechCommunity #TechTankTo #thursday #hiking #tb #tbt #throwback #summer #warm #goodvibesonly #techtankers #toronto #6ix #tech #slack #studytank #coders #developers #devcommunity #codewithus #meetpeople #network #coding #selfcare",
     date: "2024-06-06",
     shortcode: "C74WqthOQf0",
-    pk: 17897279247007839,
+    pk: 17897279247007839n,
     createdAtRaw: 1717695488,
     media: [
       {
@@ -254,7 +254,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Join the TechTank community and relive those epic summertime adventures with us! 🌞🌲\n#ThrowbackThursday to sunny hikes and great outdoor memories. Let’s create more together! 🌳🌐\n#TechTank #TechCommunity #SummerVibes #TechTankTo #Hiking #GoodVibesOnly #MeetPeople #Network #tbt #hikingadventures #CodeWithUs #DevCommunity #techtankers #techtanktoronto #slackcommunity #techtanker #developer #yyz #torontoevents #torontonetworking #datank #tb #throwback #throwbackmemories📷❤️ #throwback😍 #throwbackpicture",
     date: "2024-06-06",
     shortcode: "C74av1COssc",
-    pk: 18074119408503704,
+    pk: 18074119408503704n,
     createdAtRaw: 1717692990,
     media: [
       {
@@ -268,7 +268,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "💼 Tips for Networking Success\nRecap notes from Study Tank: Networking 101 by Sammy Lam\n1️⃣ Be Authentic: Genuine interactions are more memorable and build stronger relationships.\n2️⃣ Follow Up: After initial meetings, follow up to maintain the connection and express your interest.\n3️⃣ Diversify Your Network: Connect with people from various backgrounds and roles to gain diverse insights and opportunities.\n4️⃣ Leverage Social Media: Use platforms like LinkedIn to stay connected and informed about industry trends and opportunities.\n5️⃣ Prepare for Conversations: Have a clear idea of what you want to discuss and what you hope to achieve from each networking interaction.\n6️⃣ Show Appreciation: Thank people for their time and insights, reinforcing a positive impression.\nBy applying these strategies and tips, you can enhance your networking efforts and build a robust professional network that supports your career growth. Let‘s thrive together! 🌟\nCheck out our bio @TechTankTo to watch the full recording of our previous StudyTank session on our YouTube channel\n❗️If you found these tips helpful, don‘t forget to save this post on your Instagram for future reference! ✅\n#TechTank #NetworkingSuccess #CareerGrowth #TechTankTo #techtankers #ProfessionalDevelopment #NetworkingTips #Authenticity #DiverseNetwork #toronto #Preparation #tech #slack #studytank #coders #developers #devcommunity #codewithus #meetpeople #network #coding #Appreciation #StayConnected #ThriveTogether",
     date: "2024-06-07",
     shortcode: "C767bHluU6M",
-    pk: 17999273321398044,
+    pk: 17999273321398044n,
     createdAtRaw: 1717777707,
     media: [
       {
@@ -282,7 +282,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🔥 Get ready to feast, TechTank crew! 🍔\nWe’re thrilled to announce our epic BBQ fundraiser! Bring your appetite and laughter for an unforgettable start to the long weekend! 🎉\nJoin us on Saturday, June 29th, for mouthwatering BBQ, refreshing drinks, and awesome memories! 🍻 Whether you’re a BBQ enthusiast or just love a good time, we’ve got something for everyone.\nRegister now: http://lu.ma/c6v8k87c (you can also find the direct link on our slack)\nHere’s the info:\n​​Location📍: Toronto - exact location will be shared once you register! ​​When: Saturday, June 29th, 12:30 PM ​​Fee💰: $30 per person* (covers food, rental space and keeps TechTank going for the year) ​​Dress Code: Cozy BBQ vibes 🍖🔥 ​​BYOB🍻 - we’ll be providing soft drinks, but please bring your own beer/alcohol! ​Dietary Restrictions🛑: To ensure we can accommodate for all the registrants’ dietary needs, please make sure you fill out the details about any dietary restrictions/allergies you may have! ​​ ​​​*(NB: If you’re currently not in a place to pay the fee, please contact someone from the admin team and we can find an arrangement for you!)\nSee you soon👋✨\n#TechTank #Summervibes #TechCommunity #TechTankTo #bbq #fundraiser #summer #goodvibesonly #techtankers #toronto #6ix #tech #slack #coders #developers #devcommunity #codewithus #meetpeople #networking #network #softwareengineer #techevents #Meetup #TorontoEvents",
     date: "2024-06-11",
     shortcode: "C8FNlJBOVSb",
-    pk: 18010803482426692,
+    pk: 18010803482426692n,
     createdAtRaw: 1718121949,
     media: [
       {
@@ -296,7 +296,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Throwback to the epic 1-year anniversary party for TechTank back in April! 🎉🕺💃🕴👯🏽‍♂️\nWe’re the ultimate party tech crew, and guess what?\nOur next social event is a BBQ! 🍖\n🔥 Don’t miss out—sign up now and join the fun!\n#ThrowbackThursday #TechTank #PartyTech #tbt #TechCommunity #TechTankTo #thursday #tb #throwback #summer #goodvibesonly #techtankers #toronto #6ix #tech #slack #coders #softwareengineers #developers #devcommunity #codewithus #meetpeople #network #coding #networking #techevents #Meetup #TorontoEvents",
     date: "2024-06-17",
     shortcode: "C8KZhuXO_Wi",
-    pk: 18051044986663237,
+    pk: 18051044986663237n,
     createdAtRaw: 1718659088,
     media: [
       { type: "image", path: "/media/instagram/2024-06-17-C8KZhuXOWi/techtankto_C8KZhuXO_Wi_3389633938237158818.webp" },
@@ -317,7 +317,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🌈 Resource Share - New Report by Queertech 🌈\nQueering the Tech Ecosystem: Barriers and Opportunities\nWe are excited to share the release of a groundbreaking report by QueerTech that highlights the experiences of 2SLGBTQ+ individuals in the tech industry. This extensive research uncovers unique challenges and opportunities within the community.\n❤🧡💛💚💙💜🤎🖤🤍\n🔑 Key findings include: 👇\n🔴 Underrepresentation in the tech workforce (6-8%) and leadership (0.6-3%).🟢\n🟠 High rates of discrimination and harassment in job interviews and workplaces.🔵\n🟡 Decline of women in tech leadership, with only 1% of 2SLGBTQIA+ women in line for senior management.🟣\nOur goal is to raise awareness and drive real, positive change. The report offers actionable recommendations for tech companies to improve recruitment, retention, and workplace culture for 2SLGBTQ+ individuals. ❕🏳️‍🌈🏳️‍⚧️\nJoin us in building a tech industry that values diversity, inclusivity, and empathy. 🫂\nLearn more about the findings and recommendations: 🔗www.queertech.info/QueeringTechReport\n🐠🐟At TechTank, we are dedicated to promoting innovation and inclusivity in the tech sector. By sharing resources like this important report, we aim to empower all individuals, regardless of their background, to thrive in tech. 🧑‍💻👩‍💻👨‍💻\nTogether, we can create a more equitable and diverse industry. 🌟 💪💪🏻💪🏿💪🏼💪🏾💪🏽🦾\n#TechDiversity #LGBTQinTech #InclusionMatters #Pride2024 #QueerTech #TechTank #TechInnovation #TechInclusivity #techtankto #techtanktoronto #techtanker #techtankers #beproud #queerreads #tech #devcommunity #devlife #developers #swe #software #techindustry #jobmarket #statistics #queerstats",
     date: "2024-06-19",
     shortcode: "C8Z1p08ODt7",
-    pk: 17859828264176375,
+    pk: 17859828264176375n,
     createdAtRaw: 1718813938,
     media: [
       {
@@ -331,7 +331,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🎙️ Dive into the making of Guppy Talks our podcast! 🏊‍♂️🏊‍♀️🏊\nBehind the scenes as we unravel...\n💻 software engineering,\n📡 tech trends,\n📑 and work-life culture.\n👨‍💻👩‍💻🧑‍💻\nStay tuned for our latest episode! 🎤🎞\n🔍Let's see whats comes up next in our fishbowl of tech related topics.\nCheck the LIW in bio👇 or\n🔗podcasters.spotify.com/pod/show/techtank6\n🐟 🐠 🎏\n#GuppyTalks #PodcastLife #TechPodcast #TECHTANK #techtanktoronto #techtankto #techtankers #techtanker #SoftwareEngineering #WorkLifeBalance #coding #BehindTheScenes #PodcastProduction #TechTrends #StayTuned #PodcastersOfInstagram #TechDiscussion #Innovation #DigitalTransformation #GeekOut #PodcastingCommunity #TechCulture #PodcastCreators #GuppyPodcast #TechTopics #BehindTheMic #InDepthConversations #frontend #backend #InclusiveTech",
     date: "2024-06-21",
     shortcode: "C8e9VlsOwo_",
-    pk: 18328289557133984,
+    pk: 18328289557133984n,
     createdAtRaw: 1718986684,
     media: [
       { type: "image", path: "/media/instagram/2024-06-21-C8e9VlsOwo/techtankto_C8e9VlsOwo__3395420933500635711.webp" },
@@ -342,7 +342,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "QA on Monday morning finding another bug like... 🐡\nBack to testing I guess... software never ends! 😪\n#techtank #techtanktoronto #techtankto #techtankers #techtanker #DevLife #mondayblues #qa #developerhumor #codebug #blobfish #buglife #testingtime #devproblems #programmerhumour #debugging #codequality #techlife #Software #devmemes #qatesting #ithumour #codinglife #programmerproblems #Developer\n#softwaredeveloper #qualityassurance #bughunting",
     date: "2024-06-24",
     shortcode: "C8msrFGOihO",
-    pk: 18081122857470135,
+    pk: 18081122857470135n,
     createdAtRaw: 1719245655,
     media: [
       {
@@ -356,7 +356,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🌈 Honoring Lynn Conway: a trailblazer in computer science and a fearless advocate for transgender rights.\nFrom pioneering microchip design to championing inclusivity in STEM, Lynn's legacy shines brightly. Her groundbreaking work, including co-developing the VLSI method, transformed chip design forever, making technology accessible to all. 💻✨\nBeyond her technical prowess, Lynn's journey as a transgender woman inspires. Despite challenges, she rose as an academic leader and a prominent voice for equality. Her resilience reminds us of the power of diversity in innovation. 💪🏳️‍⚧️\nToday, we celebrate Lynn Conway's remarkable contributions and commitment to progress. She will be deeply missed, but her impact lives on. 🌍\nTechTank is celebrating Lynn Conway's Legacy as a revolutionary innovator.\nPioneered Microchip Design: Co-developed VLSI method, democratizing chip design.\nMead-Conway Revolution: Standardized microchip design education, influencing thousands of students.\nAcademic Leader University of Michigan: Associate Dean & influential faculty member (1985-1998). Key Positions: NSF Chief Scientist, DARPA Assistant Director, MIT Visiting Professor.\nHonors: 5 U.S. patents, Member of National Academy of Engineering, numerous honorary doctorates. Transgender Rights Advocate\nEarly Transition: One of the first Americans to undergo modern gender transition.\nAdvocacy: Became a prominent voice for transgender rights and women in STEM.\nA true #Legacy of Inspiration\n#TechTank #LynnConway #WomenInSTEM #TransRights #TechPioneer #Inspiration #DiversityInTech #Memorial #LGBTQInTech #Innovators #EqualityInTech #Empowerment #TechCommunity",
     date: "2024-06-25",
     shortcode: "C8p7857AnMc",
-    pk: 18062164441588673,
+    pk: 18062164441588673n,
     createdAtRaw: 1719354112,
     media: [
       {
@@ -374,7 +374,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🌈 Happy Pride! 🌈\nExcited to share an amazing opportunity for our 2SLGBTQIA+ community members! Whether you’re a seasoned AI/Tech professional or simply passionate about these fields, we encourage you to join 🏳️‍⚧️\nCohere’s annual Pride Camp celebrates creating space, longevity, and stability for queer folks in AI/Tech. Can’t attend in person? No worries! Join the livestream on Thursday, June 27, from 3:45 PM - 6:30 PM ET. 📅\nEvent link:\nhttps://www.linkedin.com/events/7210016485178556416/\nExpand your network, gain new perspectives, and connect with like-minded individuals. This year, they have a special keynote from @naoufelt, co-founder and CEO of QueerTech, along with a thought-provoking panel discussion on creating space and stability for our queer selves in the evolving AI/Tech landscape.\nShare this with anyone who might benefit! 🏳️‍🌈💻\n#Pride2024 #2SLGBTQIA #AI #Tech #CoherePrideCamp #Cohere #Inspiration #DiversityInTech #LGBTQInTech #EqualityInTech #Empowerment #TechCommunity #TechTank #TechTankTo #techtanktoronto #Toronto #techevents #TorontoEvents",
     date: "2024-06-26",
     shortcode: "C8sV_auPXkc",
-    pk: 18043199395865191,
+    pk: 18043199395865191n,
     createdAtRaw: 1719434873,
     media: [
       { type: "image", path: "/media/instagram/2024-06-26-C8sVauPXkc/techtankto_C8r3lUiuDw-_3399054801017257022.webp" },
@@ -387,7 +387,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🌈 Our Right to Be. Our Place to Be. Our Time to Be. 🌈\nAs we come to the end of Pride month, we reflect on the power of our collective voice. United, we fight to exist without adversity. Holding space for one another, we create safety in the communities we build. Celebrating the triumphs of generations before us, we continue their legacy for a future where we can all simply be.\nWe are here, and we always will be. 🌟\nOur celebration doesn’t end in June. ❗️\nAt TechTank, we aim to amplify and highlight our 2SLGBTQIA+ and other underserved communities all throughout the year. 🐠 🐟 🐠 🏳️‍🌈🏳️‍⚧️\nWe also asked people in our community to share their own version of “Be + ___,” expressing the importance of an inclusive tech community to them.\n🩷❤️🧡💛💚🩵💙💜🖤🩶🤍🤎\nHappy Pride and have a safe and fun Pride weekend! 🎉🏳️‍🌈\n#Pride #OurRightToBe #OurPlaceToBe #OurTimeToBe #2SLGBTQIA+ #Pride2024 #CelebratePride #techtankers #techtanker #InclusiveCommunity #TechTank #techtankto #TechForAll #DiversityInTech #techdiversity #inclusiveinnovation #devcommunity #toronto #nonprofit #community #pride #proud #be",
     date: "2024-06-28",
     shortcode: "C8xTWmAv-Rv",
-    pk: 18232955245284006,
+    pk: 18232955245284006n,
     createdAtRaw: 1719601522,
     media: [
       { type: "image", path: "/media/instagram/2024-06-28-C8xTWmAvRv/techtankto_C8xTWmAv-Rv_3400584309168399471.webp" },
@@ -398,7 +398,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🌈 Be Kind. Be Respectful. 🌈\nAs we come to the end of Pride month, we reflect on the inspiring messages from our community. 📝\nChristine’s words, “Be Kind. Be Respectful,” remind us of the core values that strengthen our inclusive tech community at TechTank.\nUnited, we fight to exist without adversity. Holding space for one another, we create safety in the communities we build. 🫂\nCelebrating the triumphs of generations before us, we continue their legacy for a future where we can all simply be. 🌈\nWe are here, and we always will be. 🌟\nOur celebration doesn’t end in June. At TechTank, we aim to amplify and highlight our 2SLGBTQIA+ and other underserved communities all throughout the year.\nHappy Pride and have a safe and fun Pride weekend! 🎉🏳️‍🌈\n#Pride #BeKindBeRespectful #2SLGBTQIA+ #Pride2024 #CelebratePride #InclusiveCommunity #Techtank #TechForAll #DiversityInTech #Techtankers #InclusiveInnovation #techtankto #techtanker #techtanktoronto #toronto #yyz #rainbow #pridemonth #prideally🏳️‍🌈 #prideallyear #proud #respectfully #be #respect #kind #safeprideplace",
     date: "2024-06-28",
     shortcode: "C8xVNklv28l",
-    pk: 18082877032485480,
+    pk: 18082877032485480n,
     createdAtRaw: 1719602628,
     media: [
       {
@@ -412,7 +412,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🌈 Be in Tune with the Light Inside You and Shine! 🌈\nAs we come to the end of Pride month, we reflect on the inspiring messages from our community. 💡\nLeslie’s words, “Be in tune with the light inside you and shine!” remind us of the brilliance and strength within each of us at TechTank 🙌\nUnited, we fight to exist without adversity. Holding space for one another, we create safety in the communities we build. 🫂\nCelebrating the triumphs of generations before us, we continue their legacy for a future where we can all simply be.\n❤️🧡💛💚🩵💙🩷💜🖤🩶🤍🤎\nWe are here, and we always will be. 🌟\nOur celebration doesn’t end in June. 🌈🌈🌈\nAt TechTank, we aim to amplify and highlight our 2SLGBTQIA+ and other underserved communities all throughout the year.\nHappy Pride and have a safe and fun Pride weekend! 🎉🏳️‍🌈\n#Pride #BeInTune #ShineBright #2SLGBTQIA+ #Pride2024 #CelebratePride #InclusiveCommunity #Techtank #TechForAll #DiversityInTech #TechtankPride #InclusiveInnovation #Be #pridemonth #pride🌈 #ally #toronto #techtankto #techtanktoronto #techtanker #techtankers #loveislove #prideparade #besafe #prideweekend #prideallyear #bethelight",
     date: "2024-06-28",
     shortcode: "C8xWT8nPYJ1",
-    pk: 18065039299512274,
+    pk: 18065039299512274n,
     createdAtRaw: 1719603102,
     media: [
       {
@@ -430,7 +430,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🌟 Event Alert by TechTank 🌟\nJoin us for our Monthly in-person Coffee Chat for Women & Gender-Diverse Folks in Tech! ☕✨\n📅 Date: Saturday, July 13 🕚 Time: 11 am 📍 Location: Carbonic Coffee\nTopic: Speaking Up Confidently, Even After Making a Mistake\nLet’s gather for great coffee, new connections, and an inspiring discussion on finding the courage to speak up, even when things don’t go perfectly. As Maggie Kuhn said, “Stand before the people you fear and speak your mind— even if your voice shakes.”\nSchedule: 11:00am - 11:30am - Arrival, grab drinks and snacks, socialize! 11:30am - 1:00pm - Group discussion, paired chats, and activities.\nCome join us and let’s explore this vital skill together! 💬✨\n7 spots left!\n🔗 https://www.meetup.com/techtank-to/events/301852269/\n#TechTank #WomenInTech #NonBinaryInTech #CoffeeChat #SpeakUp #CommunityEvent #CarbonicCoffee #TechTankTo #TechTankToronto #DiversityTech #devcommunity #queertech #techtoronto #techtankers #techtanker #toronto #techgirl #techgirls #techgirlsglobal #coders #queerinstem #queerintech #discussion #mistake #khun #maggiekhun #fear #standup",
     date: "2024-07-03",
     shortcode: "C892aoWOtZy",
-    pk: 18038927353789500,
+    pk: 18038927353789500n,
     createdAtRaw: 1720022893,
     media: [
       {
@@ -444,7 +444,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🚀 #ThrowbackThursday to an electrifying April when we dove deep into the history of #JavaScript frameworks with amazing @thanniablanchet! 🌟\nAnd guess what? We’re back and ready to blow your minds again this month! 🔥\nJoin us on Tuesday, July 16th, for an evening dedicated to demystifying the art of building your own JavaScript module bundler! 🛠️✨\nWe’re thrilled to welcome Michael Rose, a principal software engineer and front-end enthusiast at Mimecast, who will guide us through the intricacies of creating a mini Webpack from scratch. 🌐🔧\nDon’t miss out!\nRSVP NOW on Meetup\n👉 https://www.meetup.com/techtank-to/events/301699806/ 👈\n#JavaScriptJourney #TankTalks #TechTank #DevCommunity #LearnBuildGrow #JSCompiler #Frontend #Thursday #tb #tbt #Throwback #TechTankers #Toronto #TechCommunity #TechTankTo #TechEvent #Meetpeople #Network #techtankto #techtanktoronto #techtanker #meetup #memories",
     date: "2024-07-04",
     shortcode: "C9Aek4COl-z",
-    pk: 18037867567941870,
+    pk: 18037867567941870n,
     createdAtRaw: 1720116278,
     media: [
       { type: "image", path: "/media/instagram/2024-07-04-C9Aek4COlz/techtankto_C9Aek4COl-z_3404855784293078388.webp" },
@@ -460,7 +460,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🧑‍💻 👨‍💻 👩‍💻 When you spend all day coding and realize you’ve just been debugging the debugger… #HappyFriday !\n😅\nSometimes it’s a whole day reading and understanding someone else’s code too!\n#developerlife #CodingProblems #Debugging #FridayFeels #DevStruggles #SoftwareDeveloper #CodingLife #TechLife #CodeAllDay #FridayMood #ProgrammingHumor #TechHumor #CoderProblems #DebuggingLife #SoftwareEngineer #CodingCommunity #CodeLife #FridayVibes #DeveloperHumor #WeekendWarrior #techtank #techtankto #techtanktoronto #techtanker #techtankers #toronto",
     date: "2024-07-05",
     shortcode: "C9DFZ0ZOrdB",
-    pk: 17893663280963528,
+    pk: 17893663280963528n,
     createdAtRaw: 1720198633,
     media: [
       {
@@ -474,7 +474,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Hedy Lamarr wasn’t just a famous Hollywood actress. She was also a brilliant inventor who changed the world of wireless communication. 🌟 Born in Austria in 1914, she starred in classics like ‘Ziegfeld Girl’ and ‘Algiers.’ 🎬\nDuring World War II, Hedy co-invented a frequency hopping spread spectrum system to prevent radio-controlled torpedoes from being jammed. This innovation became the foundation for modern Wi-Fi, Bluetooth, and GPS. 📡✨\nThough her groundbreaking work was overlooked during her lifetime, Hedy’s contributions are now celebrated as essential to the tech we use every day.\nJoin us for the Women & Gender-Diverse Social this Saturday, July 13th @ 11am! The meetup link can be found in our bio. ❤️\n#HedyLamarr #TechTank #TechPioneer #Innovation #Inspiration #TechTankTo #WiFi #Bluetooth #GPS #WomenInTech #Engineering #TechHistory #WomenHistory #TechCommunity #EngineeringHeroes",
     date: "2024-07-08",
     shortcode: "C9LEpc4vzNp",
-    pk: 17870853516131109,
+    pk: 17870853516131109n,
     createdAtRaw: 1720465967,
     media: [
       {
@@ -488,7 +488,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Friendly reminder to join us for our Monthly in-person Coffee Chat for Women & Gender-Diverse Folks in Tech coming up this Saturday ☕✨\n🕚 Time: 11 am 📍 Location: Carbonic Coffee\nMain Discussion Topic:\nSpeaking Up Confidently, Even After Making a Mistake\nHave you ever struggled to speak up after making a mistake?\nLet’s talk about it!\nMaggie Kuhn said, “Stand before the people you fear and speak your mind— even if your voice shakes.” This Saturday, we’ll explore how to find the courage to speak confidently, even when things don’t go as planned.\nWhat are your thoughts on this quote?\nHow do you handle speaking up in tough situations?\nShare your experiences with us or come join us for a morning of meaningful discussions, new connections, and, of course, great coffee.\nDon’t miss out—only 4 spots left!\nReservations on the meetup app.👇\n🔗 https://www.meetup.com/techtank-to/events/301852269/\n#TechTank #WomenInTech #NonBinaryInTech #CoffeeChat #SpeakUp #CommunityEvent #CarbonicCoffee #TechTankTo #TechTankToronto #DiversityTech #devcommunity #queertech #techtoronto #techtankers #techtanker #toronto #womensupportingwomen #coders #queerinstem #queerintech #discussion #mistake #khun #maggiekhun #fear #standup #speak #workplace #companyculture #worklife",
     date: "2024-07-10",
     shortcode: "C9P8eVgOztV",
-    pk: 18049272550800304,
+    pk: 18049272550800304n,
     createdAtRaw: 1720629454,
     media: [
       {
@@ -501,7 +501,7 @@ const instagramPosts: Record<string, InstagramPost> = {
     caption: "#TechTank #TooSweet #JuneMemories",
     date: "2024-07-13",
     shortcode: "C9SqlM3PjTw",
-    pk: 17873495958107150,
+    pk: 17873495958107150n,
     createdAtRaw: 1720892030,
     media: [
       {
@@ -515,7 +515,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🚨 Event is back to schedule! 🥂\n🚀 Get ready for an exciting evening of coding and community! 🚀\nJoin us on Tuesday, July 16th at 6 PM at League (225 King St W Suite 800, Toronto, ON M5V 3M2) for a special in-person event featuring Michael Rose. 🌟\n🛠️ Topic: Building a Mini Webpack from Scratch\n🗣️ Speaker: Michael Rose, Principal Software Engineer at Mimecast\n🗓️ Schedule:\n6:00 PM - 6:45 PM: Arrival, food, and socializing 🍕🍻 6:45 PM - 7:45 PM: Announcements and presentation 🎤 7:45 PM - 8:30 PM: Q&A and more socializing 🤝\nDon’t miss out on great conversation, drinks, and the chance to learn how to create your own module bundler! 💻✨\nCheck out the source code and speaker notes here:\n🔗 github.com/msrose/weepack\n#JavaScript #Webpack #CodingEvent #TorontoTech #TechTalk #TechTank #TechTankTo #TechTankToronto #TechTankers #TechTanker #FrontEndDev #SoftwareEngineering #ModuleBundling #WebDevelopment #JSCommunity #LearnToCode #CodeNewbie #TechMeetup #Programming #DeveloperLife #TechCommunity #CodingLife #TechEvents #InPersonEvent #TorontoEvents #TechLearning #JS\n📅 Save the date and see you there! 👋\n✨ Sponsored by League - Leading the way in personalized healthcare experiences. ✨",
     date: "2024-07-16",
     shortcode: "C9AxLY3vh77",
-    pk: 18411075100073582,
+    pk: 18411075100073582n,
     createdAtRaw: 1721156510,
     media: [
       {
@@ -529,7 +529,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🚨 Event is back to schedule! 🥂\n🚀 Exciting Event Next Week!🚀\nJoin us for a deep dive into module bundling! 🤿\nLearn how to:\n- Understand module bundling and its role in optimizing front-end apps. - See Webpack in action and even build a module bundler from scratch. - Discover why bundling is essential and how to master it in projects.\nBoost your coding skills and get ready to slice and dice your JavaScript like never before! 🛠️💻\n📅 Event Date: Tuesday, July 16 (doors open 6pm)\n📍 Location: League (225 King St W Suite #800, Toronto, ON M5V 3M2)\n🍻 Details: We’ll have drinks, food, and great conversation to boot.\n🗣️ Speaker: Michael Rose, Principal Software Engineer at Mimecast\n🔗 Source Code and Speaker Notes:\nhttps://github.com/msrose/weepack\nDon’t miss out – see you next week!\n#developerlife #Dev #codingevent #modulebundling #Webpack #JavaScript #FrontendDev #JS #CodingSkills #TechEvent #LearnToCode #WebDevelopment #devlifestyle #codingcommunity #SoftwareEngineering #DevLife #CodeOptimization #TechLearning #WebDevTools #ProgrammingLife #CodeLikeAPro #TechTankTalks #DeveloperEvent #TechTank #TechTankTo #TechTankToronto #TechTalks #TechTanker #TechTankers",
     date: "2024-07-16",
     shortcode: "C9NDwL7OBFx",
-    pk: 18070593601548595,
+    pk: 18070593601548595n,
     createdAtRaw: 1721156487,
     media: [
       {
@@ -543,7 +543,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🎉 Get ready to go for gold, TechTank crew! 🏅\nJoin us for an unforgettable Olympic-themed beach event! 🌊🏖️\nBACK TO OCEAN MANDATE!!\n📍 Location: Toronto Beach (exact spot shared upon registration) 🗓️ Date: Saturday, July 27th ⏰ Time: 3-7PM 👕 Dress Code: Sporty beach vibes! Be ready for games and sun! Optional bathing suits if you want to jump into the water 👙 🍻 BYOB & BYOF: This is a free event! We won’t provide food, but there are BBQs and restaurants around. Bring your own drinks! 🍹\n✨ Can’t wait to dive into fun with you all!\nNote: By signing up, you agree to TechTank’s Sport Waiver. ‼️\n🔗 Register here: lu.ma/55hizq8f?tk=J8MrsV\n#TechTank #TechTankTo #TechTankToronto #TechTankCrew #TechTanker #TechTankers #TechCommunity #Innovation #summer #hellosummer #BeachEvent #TeamBuilding #TechLife #TorontoEvents #Networking #TechEvents #OlympicTheme #SummerFun #BYOB #TechCulture #devcommunity #TechNetworking #funinthesun #BeachVibes #TorontoTech #TechGathering #sportbeach",
     date: "2024-07-16",
     shortcode: "C9c08uPO9f1",
-    pk: 18063194065596977,
+    pk: 18063194065596977n,
     createdAtRaw: 1721095790,
     media: [
       {
@@ -557,7 +557,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Throw back to last year’s bowling night fun! 🎳✨ Now it’s all about those sunny patio vibes.\nGet ready for our next outdoor event! 🏅TANKOLYMPICS | Return to Ocean Mandate 🌊\nJoin us for an unforgettable Olympic-themed beach event! Link in our bio 🔗\n#TechTankTo #SummerNights #TechTank #Thursday #tbt #summer #Throwback #TechTankers #Toronto #TechCommunity #TechEvent #Meetpeople #meetup #memories #goodvibesonly",
     date: "2024-07-18",
     shortcode: "C9kpA_IONos",
-    pk: 18033533795508278,
+    pk: 18033533795508278n,
     createdAtRaw: 1721323895,
     media: [
       { type: "image", path: "/media/instagram/2024-07-18-C9kpAIONos/techtankto_C9kpA_IONos_3415034798190297072.webp" },
@@ -569,7 +569,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🎉 Recap Reel - Building a Mini Webpack from Scratch 🎉\n🚨UPDATE: THE EVENT HAPPENED! POWER WAS RESTORED!\nWe had an amazing time this month with Michael Rose’s deep dive into building your own webpack-like JavaScript module bundler!\nDespite the weather issues and flooding in Toronto, we made it work. Huge thanks to League for hosting us and to everyone who came out. #thanks 🌧️ ☔️\n✨ Highlights✨\n🔍 In-Depth Webpack Exploration: Michael’s step-by-step guide on creating a mini Webpack from scratch.\n🌧️ Virtual Welcome: Bhavna Muraleedharan of League greeted us virtually despite the weather conditions. We were super greatly welcomed were able to still use the office to host the event that night!\n🛠️ Hands-On Learning: Practical insights into module bundling and debugging.\n💬 Great Conversations: Engaging discussions on the complexities and solutions in module bundling.\nMissed it?\nWe’ve got you!\nCheck out the source code and speaker notes here by Michael Rose 🔗 https://github.com/msrose/weepack\n📅 See you next month!\nStay tuned on Slack for the YouTube recording and the Google Photos album! 📸\n📹 YouTube @techtankto to all our recording sessions.\n🚀 Don’t miss our next in person event: 🏐 🏖️\nThe Tankolympics on July 27th! ☀️\nRegister now 🔗 lu.ma/55hizq8f?tk=J8MrsV\nOur Sponsor: League is the CX platform that healthcare organizations rely on to create integrated, personalized experiences that people use everyday.\n🔗 league.com/about/\nTypo: What a* 🆒 office!\n#JavaScript #WebDevelopment #FrontendDev #Webpack #CodingLife #TechEvent #DevCommunity #SoftwareEngineering #TechTalks #codenewbie #Programming #TechNetworking #DevMeetup #LearnToCode #TechTank #JSCommunity #WebDev #DeveloperLife #CodeLearning #TorontoTech #TechTankTo #TechTankToronto #TechTankers #TechTanker #JS #webpack #torontoflood",
     date: "2024-07-20",
     shortcode: "C9nThXfPwQx",
-    pk: 17945473628827690,
+    pk: 17945473628827690n,
     createdAtRaw: 1721495959,
     media: [
       {
@@ -583,7 +583,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🚀✨ Join us for our next in-person panel discussion in the heart of Toronto at the stunning Roof Garden event space! 🌆\n🍃 Get ready for an evening of insightful talks, networking, and learning from AI experts.\n📅 Date: Thursday, August 15th 🕕 Time: Doors open at 6 PM 📍 Location: Roof Garden, 1 Roof Garden Lane, Toronto, ON M6H 1R2 🙏 Thanks to our sponsor: 7Shifts\n🎤 Panelists: - Myles Harrison (he/him) - Consultant and Trainer, NLP From Scratch - Jay Alammar (he/him) - Director and Engineering Fellow, Cohere - Luke Galea (he/him) - CTO, 7Shifts - Ramy ElMallah (he/him) - PhD AI Researcher, University of Toronto - Moderator: Riaz Virani (he/him), Community Organizer @ TechTank\n🗓️ Schedule: - 6:00pm - 6:45pm: Arrival, food, and socializing 🍴🗣️ - 6:45pm - 7:45pm: Announcements & panel discussion 🎙️🧠 - 7:45pm - 8:30pm: More networking & Q&A 🤝❓\nWant to keep the conversation going? Join us at a nearby bar afterward! 🍻\n✨ Sponsor Spotlight: 7Shifts helps restaurants optimize scheduling, streamline communication, and ensure labor compliance. Trusted by over 40,000 restaurants globally! 🍽️👩‍🍳\nDon’t miss out on this fantastic evening! See you there! 💬🤩\n🔗 Register at meetup.com/techtank-to/events/302337555/\n#AI #paneldiscussion #Networking #TorontoEvents #TechTank #InPersonEvent #RoofGarden #AIExperts #TechCommunity #artificialintelligence #Insights #networkingevent #TorontoTech #TechTalks #TechTanker #techtantto\n#TechIndustry #AIInnovation #FutureOfAI #TorontoLife #7Shifts #LLM #TechPanel #AIResearch #TechInsights #TorontoNetworking #EventDetails #TorontoGathering #TorontoPanel #AIInToronto",
     date: "2024-07-29",
     shortcode: "C-A1Uqhu_fU",
-    pk: 18083557162488657,
+    pk: 18083557162488657n,
     createdAtRaw: 1722270415,
     media: [
       { type: "image", path: "/media/instagram/2024-07-29-CA1UqhufU/techtankto_C-A1Uqhu_fU_3422970233319323604.webp" },
@@ -594,7 +594,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "⚠️ Flash Warning ⚠️\nThe best programming language? #Brainf*ck\nHosts of Guppy Talks🐠 @ranasoyak and @benjnil are joined by special guests @jc.malapit and @imjustkeding\nListen to the full episodes 🎙️ Link on our bio🐠😆\n#TechTank #GuppyTalks #Dev #codingcommunity #softwareengineering #Devlife #programming #TechTankers #Toronto #spotify #TechTankTo #techcommunity",
     date: "2024-07-30",
     shortcode: "C-BagSLP0do",
-    pk: 18002963378422009,
+    pk: 18002963378422009n,
     createdAtRaw: 1722376928,
     media: [
       { type: "image", path: "/media/instagram/2024-07-30-CBagSLP0do/techtankto_C-BagSLP0do_3423133759526881128.webp" },
@@ -605,7 +605,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🌟 Join us for our Monthly Coffee Chat for Women & Gender-Diverse Folks in Tech! 🌟\n📅 Date: Saturday, Aug 10\n⏰ Time: 11:00 AM\n📍 Venue: Carbonic Coffee\nCome for the coffee, stay for the conversation! ☕️✨\nThis month’s topic: “Focus on what you can control and let go of worrying about everything else.”\nLet’s maximize our skills and make the most out of the cards we’ve been dealt. Only 7 spots left—grab yours now!\nSchedule: 11:00am - 11:30am: Arrive, grab your favorite drink, and mingle!\n11:30am - 1:00pm: Group discussion and interactive activities.\n🔗 Register on the Meetup app: https://www.meetup.com/techtank-to/events/302503778/\n#WomenInTech #NonBinaryInTech #TechCommunity #CoffeeChat #WomenEmpowerment #NetworkingEvent #InPersonEvent #TechEvent #TorontoTech #CarbonicCoffee #SkillBuilding #MindsetMatters #FocusOnYou #GrowthMindset #TechTalk #CommunityEvent #TechNetworking #techtank #techtankto #techtanker #techtankers #techtanktoronto #WomenWhoCode #SupportAndInspire #Meetup #TechMeetup",
     date: "2024-07-31",
     shortcode: "C-Ga7pEvgFk",
-    pk: 17918516654951963,
+    pk: 17918516654951963n,
     createdAtRaw: 1722457520,
     media: [
       { type: "image", path: "/media/instagram/2024-07-31-CGa7pEvgFk/techtankto_C-Ga7pEvgFk_3424543014423232868.webp" },
@@ -616,7 +616,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Join us for an epic tank-sports outing at Withrow Park! 🎾 🏐 🥎\n​Here’s the scoop:\n​👉 Where: Withrow Park - 725 Logan Ave, Toronto\n​👉 When: Saturday, Aug 31th, 3-7PM\n​👉 Dress Code: Sporty vibes! We’ll be playing softball, volleyball, and tennis, so make sure you’re dressed comfortably and ready for some action under the sun!\n​ 👉 BYOB & BYOF: This is a free event - we won’t be providing food, but there are BBQs and restaurants around. As usual, please BYOB 🍻🍹\n​Can’t wait to dive into the fun with y’all ✨\nRegister 🔗 lu.ma/cidoy6p6\n​(N.B.: By signing up for this event, you agree to TechTank’s Sport Waiver.)\n#techtank #techtankto #techtanktoronto #techtanker #techtankers #sportsday #socialtoronto #letshangout #softball #volleyball #tennis #bringyourgame #gameon #gg #devcommunity #devsocial #techsocialevents #sports #sashimis #igdaily #6ix #toronto #torontolife #torontoevents",
     date: "2024-08-13",
     shortcode: "C-nSzF3OHAy",
-    pk: 18048231700895200,
+    pk: 18048231700895200n,
     createdAtRaw: 1723560954,
     media: [
       { type: "image", path: "/media/instagram/2024-08-13-CnSzF3OHAy/techtankto_C-nSzF3OHAy_3433795916718960690.webp" },
@@ -627,7 +627,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🥎 Fear the Sashimis! Playoff season is on fire, we’re slicing home runs and serving up W’s! 🍣 Go Sashimis!!🔥\n#SoftballSquad #SashimisPower #TechTankTo #TechTankers #teamspirit #techtank #techtanktoronto #techtanker #sashimis #softball #toronto #gta #6ix #devcommunity",
     date: "2024-08-20",
     shortcode: "C-5X4fJOYnp",
-    pk: 18143865943336629,
+    pk: 18143865943336629n,
     createdAtRaw: 1724171695,
     media: [
       { type: "image", path: "/media/instagram/2024-08-20-C5X4fJOYnp/techtankto_C-5X4fJOYnp_3438884827275299305.webp" },
@@ -638,7 +638,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🎉🏅 Recap from the Last #TankOlympics 🏅🎉\nMissed the last TankOlympics? Don’t worry—there’s more action coming your way before summer slips away! 🌞\nJoin us for an epic sports outing🔥\nLink on bio 🔗\n✨ We can’t wait to dive into the fun with y’all! ✨\n#TechTankTo #TechTankers #summer #memories #sports #TechCommunity #TechEvent #MeetPeople #Meetups",
     date: "2024-08-29",
     shortcode: "C_QpuckuRIf",
-    pk: 18248459479265088,
+    pk: 18248459479265088n,
     createdAtRaw: 1724948431,
     media: [
       { type: "image", path: "/media/instagram/2024-08-29-CQpuckuRIf/techtankto_C_QpuckuRIf_3445437226622194207.webp" },
@@ -649,7 +649,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "☀️Hope everyone’s enjoying their long weekend! TechTank had an amazing time at Withrow Park on Saturday, soaking up the last bit of summer ⚽️🥏🌳 While it’s bittersweet to see the long weekend winding down, it was the perfect way to recharge before the week begins!\nOur members are always on top of their game—active, competitive, and embracing their athletic spirit! 🏃‍♀️💪\n#TechTank #TechTanker #TechTankTo #TechCommunity #TorontoEvents #Meetup #Community #Social #Networking #Toronto #Summer #Memories",
     date: "2024-09-02",
     shortcode: "C_bh9wCvzkA",
-    pk: 18092008786460907,
+    pk: 18092008786460907n,
     createdAtRaw: 1725313533,
     media: [
       { type: "image", path: "/media/instagram/2024-09-02-Cbh9wCvzkA/techtankto_C_bh9wCvzkA_3448499318690887936.webp" },
@@ -660,7 +660,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Our latest meetup✨ We dove deep into the world of AI with some of the brightest minds in the industry 🧑‍💻\nA huge shoutout to our amazing panelists—Jay Alammar, Myles Harrison, Luke Galea, and Ramy ElMallah—who generously shared their knowledge and experiences with our community.\nThank you to our sponsor, @7shifts, for making this event possible and connecting us to the stunning RoofGarden space but also by providing delicious pizza 🍕and drinks 🍻 that kept us energized all night!❤️\nWe’ll be announcing the September meeting shortly - stay tuned for more details coming your way soon! 🚀\n#AI #AIInsights #TechCommunity #TorontoTech #Innovation #Meetup #TorontoEvents #TechTank #InPersonEvent #TechCommunity #TechTanker #TechTankTo #TechIndustry #TechInsights #TechTalk #Community #Networking #TechEvents #Toronto",
     date: "2024-09-03",
     shortcode: "C_dVqoFOP2e",
-    pk: 18044417227799792,
+    pk: 18044417227799792n,
     createdAtRaw: 1725373805,
     media: [
       { type: "image", path: "/media/instagram/2024-09-03-CdVqoFOP2e/techtankto_C_dVqoFOP2e_3448724800623156959.webp" },
@@ -677,7 +677,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Thank you ❤️\nWe couldn’t have done it without the unwavering support of our incredible sponsor, @7shifts. Their commitment to our community continues to set the bar high. Not only did they sponsor the event and connect us to the stunning RoofGarden space, but they also went above and beyond by providing delicious pizza 🍕and drinks 🍻🥤 And as if that wasn’t enough, they continued to support us at the post-event social, making sure the conversation and good vibes kept flowing long after the panel ended 🥹 \nA massive thank you to Raul Chedrese and the 7shifts team for making this all possible and for being such an integral part of our tech community! 🙏\n#AIInsights #TechCommunity #TorontoTech #Community #Meetup #TorontoEvents #TechTank #InPersonEvent #TechCommunity #TechTanker #TechTankTo #TechIndustry #TechInsights #TechTalk #Networking #TechEvents #Toronto",
     date: "2024-09-03",
     shortcode: "C_dm2SnujZM",
-    pk: 18034704305484162,
+    pk: 18034704305484162n,
     createdAtRaw: 1725382811,
     media: [
       { type: "image", path: "/media/instagram/2024-09-03-Cdm2SnujZM/techtankto_C_dm2SnujZM_3449083746248701516.webp" },
@@ -688,7 +688,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🔍✨ Join us on Wednesday, September 18th, as @nikolovlazardotcom, full-stack developer, takes us through a forensic deep-dive into React Server Components (RSCs)—and solve the mystery of how they supercharge web performance🕵️‍♂️! This session will uncover how RSCs blend server-side and client-side rendering to boost web performance.\n🎤 Lazar is a dedicated educator, who loves to share insights and knowledge through his YouTube channel, online courses, and his own Discord server at creatures.sh.✨\nEvent Details: 🗓️ Date: Wednesday, September 18th ⌚ Time: 6:00 pm - 8:30 pm EST 📍 Location: Points, 111 Richmond St W, Toronto, ON M5H 2G4\nSchedule: 6:00pm - 6:45pm - Arrive, enjoy refreshments, and connect 6:45pm - 7:45pm - Announcements / Lazar’s presentation 7:45pm - 8:30pm - Q&A and networking\nThanks to our sponsors, Points (a Plusgrade company), for making this event possible and providing food and drinks 🙏\n👉 RSVP NOW on Meetup 👈 Link on bio 🔗\n#React #ReactServerComponents #WebPerformance #FrontEnd #TorontoEvents #TechTank #InPersonEvent #TechCommunity #Insights #TorontoTech #TechTanker #TechTankTo #TechIndustry #TechInsights #TechTalk #Community #Networking #TechEvents #Toronto",
     date: "2024-09-04",
     shortcode: "C_gBVf3vCTS",
-    pk: 18040077086023547,
+    pk: 18040077086023547n,
     createdAtRaw: 1725463809,
     media: [
       { type: "image", path: "/media/instagram/2024-09-04-CgBVf3vCTS/techtankto_C_gBVf3vCTS_3449763189942396114.webp" },
@@ -699,7 +699,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🎙️ Tune in to the latest episode of Guppy Talks! 🐠🎧\nWe’re diving into our fishbowl with Benjamin Lokash and Chris Taeyoung Kim, joined by guests Evert Pot and Anjalee Benedict, to discuss FE frameworks, SPAs, Neuralink, and mastering interview skills. This is just part 1, so stay tuned for part 2! 🔥\nProduced and edited by Benjamin Lokash with music and content editing by Chris Taeyoung Kim. Big shoutout to our recording directors Rana Selva Soyka and Riaz Virani!\nFor more info, visit techtankto.com or drop us a line at techtankto@gmail.com! 🐟💻\nPodcast 🔗 podcasters.spotify.com/pod/show/techtank6/\nCheck out our active community on Slack for the latest announcements 📢 📣 📢\n#TorontoPodcasts #TechTalks #GuppyTalks #FEFrameworks #SinglePageApps #Neuralink #TechInterviews #PodcastLife #Part1 #TechDiscussions #podcast #toronto #TorontoTech #StartupCommunity #TechInToronto #YTPodcast #TechIndustry #InnovationTalks #TechPodcast #DeveloperLife #TechTank #yyz #techtank #techtanktoronto #techtankto #techtankers",
     date: "2024-09-16",
     shortcode: "C_-1y27uKuL",
-    pk: 17920642085966893,
+    pk: 17920642085966893n,
     createdAtRaw: 1726500057,
     media: [
       { type: "image", path: "/media/instagram/2024-09-16-C1y27uKuL/techtankto_C_-1y27uKuL_3458438155290061707.webp" },
@@ -710,7 +710,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "​Get ready to end summer off with a bang💣!\nJoin our 🔥FYRE FEST 🔥 to celebrate summer before going into hibernation 🐻\n​Here’s the info:\n​​​Location📍: Exact location will be shared upon registration on Luma\n🔗 lu.ma/jkr3i7pz\n​​​When: Saturday, Sept 28th, 4PM\n​​​Dress Code: Casual or sporting attire—there’s a field for games, so come ready to play or chill out! 🏃‍♂️⚽\n​​​BYOB & Food🍻: We’ve got the (halal)marshmallows covered—bring your own beverages and any other snacks you’d like to share! We will have a cooler!!!\n​​​We’re looking forward to a fantastic time with everyone. Let’s make this day unforgettable! ✨\n​Can’t wait to see you there!\n#socialtoronto #devcommunity #techtank #techtanktoronto #techtankto #tech #techevents #byob #fyre #hibernation #sports #social #techtanker #techtankers #yyz #gta #toronto #6ix #iykyk #torontolife #torontolove",
     date: "2024-09-19",
     shortcode: "DAGbFxFOHtI",
-    pk: 18063441517632959,
+    pk: 18063441517632959n,
     createdAtRaw: 1726752757,
     media: [
       {
@@ -724,7 +724,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🎉 React Server Components Event Recap! 🎉\nWe had an incredible night on Wednesday, September 18 at the Plusgrade office (Points HQ)! 🚀\n👨‍💻 Lazar Nikolov wowed us with an insightful talk on React Server Components, breaking down how this cutting-edge tech blends server-side and client-side rendering to supercharge web performance. Attendees were hooked as Lazar walked through the inner workings of RSCs! 🔍\n🍕 With drinks, food, and lively conversation, the night was filled with networking and learning as devs across the community connected and shared ideas.\nMissed it? No worries—more events are on the horizon! Stay tuned for what’s next 👀. For more tutorials and insights, check out Lazar’s YouTube channel: 🔗 @ nikolovlazar 🎥\nLazar Nikolov is a developer advocate at Sentry, living in Toronto but originally from North Macedonia. As a full-stack engineer, he enjoys building interesting pet projects from scratch—though, like any normal developer, he often abandons them. Always curious, Lazar loves learning new things and enjoys live streaming on YouTube and creating courses for\n🔗 egghead.io.\nWant to join our future events? All event registrations are on Meetup, or join TechTank’s active Slack community to stay connected and up-to-date! You can also find all our handles at\n🔗 liw.bio/techtankto\nWe’d love to hear from you! Comment below on what you learned at the event or what you’re excited to explore next! 🙌\nA huge thank you to everyone who volunteered and made this event possible! Your support truly makes a difference.\nBig thanks to Points and Plusgrade for hosting this unforgettable event! Thank you @thanniablanchet for saying a few words and letting us know about opportunities!\nPoints has been a global leader in powering loyalty commerce for more than two decades! Points continues to revolutionize the loyalty and travel industries by creating new opportunities for ancillary revenue.\n🔗www.points.com/about/\n#TechTankTO #ReactServerComponents #TorontoTech #WebDevelopment #TechCommunity #DeveloperLife #TechEvents #FullStackDevelopment #ReactJS #CodingLife #TorontoDev #TechTank #Techtanktoronto #TechTanker #Techtankers #techevents #toronto",
     date: "2024-09-24",
     shortcode: "DATiy4XOfvL",
-    pk: 18037461965278612,
+    pk: 18037461965278612n,
     createdAtRaw: 1727196620,
     media: [
       {
@@ -738,7 +738,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🚀 Cypress for the Overwhelmed Developer 💻\nEnd-to-end testing ensures your app works seamlessly from a user’s perspective, and Cypress makes it simple! This powerful front-end tool lets developers automate tests by simulating real browser environments, capturing complex user behavior, and ensuring all parts of your system work together. 🛠️\nIn this StudyTank session, hosted by Nonso Otoh and featuring guest teacher Chelsea Roman, you’ll dive into how Cypress works, its time-saving features like real-time reloading and automatic waiting, and why testing your app’s full flow is crucial for a flawless user experience. 💡\n🗓️ Join us on October 1, 2024, at 7 PM EDT for this exciting virtual event. Boost your confidence in your code with Cypress!\n👉 Register now on Meetup\n🔗 www.meetup.com/techtank-to/events/303601353\n#CypressTesting #WebDevTools #StudyTank #EndToEndTesting #WebDevelopment #AutomatedTesting #LearnToCode #testing #code #devcommunity #toronto #online #onlinelearning #techtank #techtankto #techtanktoronto #techtanker #techtankers #torontoevents #remotelearning #cypress #js #javscript #goodpractices",
     date: "2024-09-27",
     shortcode: "DAbc737vNNk",
-    pk: 18240629236262972,
+    pk: 18240629236262972n,
     createdAtRaw: 1727458185,
     media: [
       {
@@ -752,7 +752,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🕵️‍♂️Case Closed: The Mystery of React Server Components Solved!\nLast Wednesday, we cracked the code on React Server Components, thanks to the incredible Lazar Nikolov @nikolovlazardotcom @gooddevhabits ! 🚀\nYour insights into how RSCs are transforming web performance were mind-blowing!\nA huge shoutout to our sponsor, @pointsloyalty Points , a Plusgrade Company! 🙌 Special thanks to Thannia Blanchet @thanniablanchet\nfor keeping this connection strong and providing an amazing venue, delicious food, and drinks. Your support for the tech community in Toronto is inspiring!\nTo everyone who joined us, you are the heartbeat of TechTank! The energy, thought-provoking questions, and engaging discussions made the night unforgettable. 🤝\nMissed the event? No worries! You can...\nWatch the full presentation here:\n🔗 https://www.youtube.com/watch?v=NOlSKs5PLpM\n📸 Check out the event photos here:\n🔗 https://photos.app.goo.gl/rY3cAbhYZPimH6Kx7\nHuge thank you to @nonsootoh for these amazing photos!\nWe’re always looking for new voices! Interested in speaking or partnering with us?\nLet’s connect!\n👉 Become a speaker 👉 Explore sponsorships 📧E-mail us at techtankto@gmail.com\nYour support keeps TechTank thriving! If our events bring you value, consider donating to help us grow:\n🔗 https://techtankto.com/donate 💙\nStay tuned for our next event—exciting details coming soon! ✨\n#ReactJS #ReactServerComponents #WebDevelopment #TechCommunity #TechEvents #PerformanceOptimization #FrontendDevelopment #TorontoTech #DeveloperCommunity #Coding #JavaScript #TechTalks #Innovation #SoftwareEngineering #ReactDeveloper #TechNetworking #CommunityBuilding #WebPerformance #Programming #TechEducation #EventRecap",
     date: "2024-10-01",
     shortcode: "DAlmPeCNBdb",
-    pk: 17899530414064165,
+    pk: 17899530414064165n,
     createdAtRaw: 1727817399,
     media: [
       {
@@ -802,7 +802,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "In this episode of Guppy Talks 🐠🎧, we dive into our fishbowl to discuss topics such as: should technology be exciting? are auto-formatters a crutch? Plus, don’t miss our Rapid Fire Question Section, where our guests think fast and answer faster! And then, we go through our GuppyMail where we answer questions from our community listeners. Today’s episode is part two of our discussion with Evert and Anjalee from last episode.\nHosts: Benjamin Lokash and Chris Taeyoung Kim Guests: Evert Pot and Anjalee Benedict Recording Directors: Rana Selva Soyak and Riaz Virani\nThis episode is produced and edited by Benjamin Lokash, and music and content editing by Chris Taeyoung Kim.\nPodcast 🔗 https://podcasters.spotify.com/pod/show/techtank6/\nCheck out our active community on Slack for the latest announcements 📢 📣 📢\nFor more information about our community, visit ⁠techtankto.com⁠, or email us at ⁠techtankto@gmail.com⁠.\n#TorontoPodcasts #TechTalks #GuppyTalks #FEFrameworks #SinglePageApps #Neuralink #TechInterviews #PodcastLife #Part2 #TechDiscussions #podcast #toronto #TorontoTech #StartupCommunity #TechInToronto #YTPodcast #TechIndustry #InnovationTalks #TechPodcast #DeveloperLife #TechTank #yyz #techtank #techtanktoronto #techtankto #techtankers",
     date: "2024-10-01",
     shortcode: "DAmHHnlveoh",
-    pk: 18073900021507430,
+    pk: 18073900021507430n,
     createdAtRaw: 1727815694,
     media: [
       {
@@ -816,7 +816,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🔥#ThrowbackThursday to TechTank’s FYRE FEST 🔥\nWe ended summer with a bang on Sept 28th, complete with games, food, and good vibes all around! 🏃‍♂️⚽\nHuge shoutout to everyone who came out, brought the energy, and made the day unforgettable ✨\nThank you to all the organizers and everyone who helped capture these amazing moments! 🙌\nMissed out? No worries—join our Slack community under the channel # social-toronto so you don’t miss the next one!\nCheck out all the fun in our Google Photos album or swipe through the pics below 📸👇\n🔗 https://photos.app.goo.gl/qztr4apPaox8sBWXA\n#TechTankTO #endofsummer #FyreFest #goodvibesonly #throwback #tbt #tb #techcommunity #torontotech #socialevents #devcommunity #touchsomegrass #techtankevents #YYZTech #yyz #6ix #torontolife #campfire #marshmallows #beforewehibernate #torontislands #islands #photodump",
     date: "2024-10-03",
     shortcode: "DAq61RWPvMW",
-    pk: 17873806857174776,
+    pk: 17873806857174776n,
     createdAtRaw: 1727977145,
     media: [
       {
@@ -830,7 +830,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🎓 EdTech at the Crossroads: AI, Accessibility & the Evolving Classroom!\nGet ready for an inspiring panel discussion that will reshape the future of EdTech! 🚀\n📅 Date: Monday, October 28th\n🕕 Time: Doors open at 6 PM\n📍 Location: Rakuten Kobo Office, 150 John St, Toronto\n✨ What’s in store?\n🍕Drinks, food, and great convos with leading experts in EdTech, AI, accessibility, and more! 👥 Plus, an awesome chance to network and connect with the community.\n🗣️ Meet the Panelists:\n🔹Rico Chow (he/him) - Chief Product Officer, SiSi\n🔹Natalie Famula (she/her) - Web Developer II, Prodigy Education\n🔹Alex Cooksey (she/her) - Senior Product Designer, Prodigy Education\n🔹 Patricia Park (she/her) - Educator, Toronto District School Board\nModerator: Chris Taeyoung Kim (she/her), Founder & Community Organizer @techtankto 🐠\n🗓 Schedule:\n6:00 PM - Doors open, grab food & network\n6:45 PM - Announcements & Panel Discussion\n7:45 PM - Q&A & more networking!\n📢 Bonus:\nKobo is hosting a food drive for the Daily Bread Food Bank! 🙌\nPlease bring non-perishable items like canned fish, veggies, or oatmeal to help fight food insecurity in our community. @dailybreadto\nSponsored by Rakuten Kobo – the world’s only dedicated digital bookseller, enabling over 30 million readers to enjoy their favorite books anytime, anywhere. @kobobooks\nRegister here:\n🔗 https://www.meetup.com/techtank-to/events/303655206\nDon’t miss out—let’s redefine the future of education together! 💡\n#tech #techtankto #techtank #techtanker #techtankers #techtanktoronto #torontoevents #techenthusiast #techrecruiters #techentrepreneur #6ix #torontolife #techtoronto #yyz #torontotech #panel #paneldiscussion #torontomeetups #october #octobermeeting #donate #dailybread #communitytoronto #toronto #torontoinsta #education #teachers #ai #webaccessibility #educationtechnology",
     date: "2024-10-07",
     shortcode: "DA1Dl3Kv6k_",
-    pk: 18155268145323328,
+    pk: 18155268145323328n,
     createdAtRaw: 1728324329,
     media: [
       { type: "image", path: "/media/instagram/2024-10-07-DA1Dl3Kv6k/techtankto_DA1Dl3Kv6k__3473698483582511423.webp" },
@@ -841,7 +841,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "1️⃣ Click this caption 2️⃣ Go to comments\n#techtankto #techtank #techtanktoronto #toronto #friday #happyfriday #friyay #6ix #yyz #foryou #foryoupage #secret #dashund #dogsofinstagram #dogoftheday #doggo",
     date: "2024-10-07",
     shortcode: "DAtx6-7v_2D",
-    pk: 18028519694346723,
+    pk: 18028519694346723n,
     createdAtRaw: 1728324420,
     media: [
       { type: "image", path: "/media/instagram/2024-10-07-DAtx67v2D/techtankto_DAtx6-7v_2D_3471650445355646339.webp" },
@@ -852,7 +852,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Happy long weekend! 🍁\nTake a break and recharge, but don’t forget to RSVP for our next TechTank social at Waterworks Foodhall on Saturday, October 26th from 6-8 PM! 🕕\nWe’re keeping it chill this month with a fun night exploring restaurants and bars, enjoying tasty food, sipping refreshing drinks, and having great conversations.\nWhether you’re a foodie or just love a good vibe, there’s something for everyone! 🍽️🍹✨\nPlease RSVP to help us with the headcount. Can’t wait to see you there! 🥂🍻\n🔗 RSVP here: lu.ma/fmi3zf6a\n#TechTank #techtankto #techtanktoronto #techtanker #techtankers #TechSocial #TorontoEvents #TorontoTech #WaterworksFoodhall #SocialEvent #TechCommunity #TorontoEats #TorontoFoodie #TorontoDrinks #luma #TechNetworking #SocialEvent #TechIndustry\n#TorontoNightlife #WeekendVibes #TorontoFood #LongWeekend #friends #pheobebuffay #rachelgreen #90s #rossgeller #friendsshow #weekend #cheers",
     date: "2024-10-11",
     shortcode: "DA_Z7SLvG1T",
-    pk: 17850354615312386,
+    pk: 17850354615312386n,
     createdAtRaw: 1728665911,
     media: [
       { type: "image", path: "/media/instagram/2024-10-11-DAZ7SLvG1T/techtankto_DA_Z7SLvG1T_3476611462489468243.webp" },
@@ -863,7 +863,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🐠 “There’s a reason every season to be tankful for you.”\nWishing you all a happy Thanksgiving! Enjoy the long weekend with those closest to you. Have a restful day 🎃🦃🍎\n#HappyThanksgiving #techtank #techtankto #techtanktoronto #techtanker #techtankers #techcommunity#HappyTanksGivingDay #ThanksGivingDay #longweekend",
     date: "2024-10-14",
     shortcode: "DBHFWy-PYBI",
-    pk: 17998274993693244,
+    pk: 17998274993693244n,
     createdAtRaw: 1728922126,
     media: [
       { type: "image", path: "/media/instagram/2024-10-14-DBHFWyPYBI/techtankto_DBHFWy-PYBI_3478772793959350344.webp" },
@@ -874,7 +874,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Perfection can hold us back, but progress pushes us forward! 🙌 Remember, it's not about waiting for everything to be perfect—it's about getting things DONE and learning along the way. 💪✨\nHow are you pushing through today? Let’s celebrate progress over perfection. 🚀\n--- Motivational Monday is here to power up your week- to spark your creativity and fuel your ambition! In the fast-paced world of tech, it's easy to get caught up in perfectionism and endless to-do lists. Staying inspired is essential. Every Monday, we share motivational quotes, insights, and strategies to help you tackle the week ahead with confidence and focus. Whether you’re coding the next big thing, solving complex problems, or brainstorming new ideas, these posts are designed to keep you energized and moving forward. Let’s kick off each week with the momentum to innovate and grow! 🌱💻\n#DoneIsBetterThanPerfect #ProgressOverPerfection #GetItDone #TechTank #TechTankMotivation #KeepMovingForward #TechInnovation #MindsetMatters #MotivationalMondays",
     date: "2024-10-21",
     shortcode: "DBZdF5lSjvU",
-    pk: 18052059433745657,
+    pk: 18052059433745657n,
     createdAtRaw: 1729538480,
     media: [
       {
@@ -888,7 +888,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🌟 Wonder Wednesdays: Transitioning Into Tech? 🤖\nLooking to make the leap? Here are 3 tips that helped a TechTanker’s journey into the field:\n1️⃣ Practice makes perfect: Dive in and start doing! Define a problem and use tech to solve it. Learn by facing the code head-on. 💻\n2️⃣ Don’t be afraid to ask: Find connections on LinkedIn and reach out for career advice, tech direction, and job opportunities. People are more willing to help than you think! 🤝\n3️⃣ Find your passion: What drives you? Beautiful frontends, structured backends, data, ML? Your goal will fuel your growth! 🚀\n#WonderWednesdays #TechTank #TechTankTo #TechTankToronto #CareerTransition #TechJourney #LearnByDoing #TechCommunity #TorontoTech #DevLife #TechAndTools #TechTanker #TechTankers #TechTips",
     date: "2024-10-23",
     shortcode: "DBentgfSU2r",
-    pk: 18029950235120660,
+    pk: 18029950235120660n,
     createdAtRaw: 1729712327,
     media: [
       {
@@ -902,7 +902,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🎃 Are you ready for another spook-tacular Halloween? 👻 Throwback to last year’s epic costume party where TechTank showed up in full force! We can’t wait to do it all over again this weekend. Who’s ready for more tricks, treats, and tech this year? 👾💻🧙🏻‍♂️\n#TBT #HalloweenThrowback #TechTank #TechTankTo #TechTankToronto #TechTanker #TechTankers #techcommunity #dev #tb #thursday #Halloween #Toronto #TechAndTreats #SpookySeason",
     date: "2024-10-24",
     shortcode: "DBgxiIlOOkr",
-    pk: 18045624860296637,
+    pk: 18045624860296637n,
     createdAtRaw: 1729786356,
     media: [
       {
@@ -936,7 +936,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Breaking into tech can feel intimidating—new skills, new networks, and new challenges.\nBut remember, even the best players faced a learning curve. Babe Ruth knew that striking out was part of every home run story. Don’t let the fear of not being “ready” or “perfect” hold you back. 👷\nTech needs diverse perspectives and fresh ideas—your ideas! No one else has the unique combination of skills and experience that you have. Try listing them all down and seeing which niche or industry you can really contribute to!\nWhether you're a career shifter, recent grad, or someone with a dream of creating impact through technology, stay committed, stay curious, and keep learning!\nWe are all for education - come join us at our in person event: Edtech at Crossroads: an inspiring panel discussion that will reshape the future of EdTech! 6 PM at Rakuten Kobo Office, 150 John St, Toronto. 🚀\nOur events are a great way to network so take a swing…. because every swing gets you closer. ⚾\n#TechTank #MotivationalMonday #CareerTransition #TechCareers #DreamBig #NoFear",
     date: "2024-10-28",
     shortcode: "DBrdDK5ytZm",
-    pk: 18048273715953539,
+    pk: 18048273715953539n,
     createdAtRaw: 1730143285,
     media: [
       {
@@ -950,7 +950,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Thought devs feared the outdoors? Think again! 🌱⚾️ From home runs to high-fives, we had an epic season on the softball field. Stay tuned for more sports action, and join our Slack community to get in on the fun ⭐️\nWe’re not just techies, we’re adrenaline chasers 💪🔥\n#DevsOutside #WeTouchGrass #SashimisSoftball #TBT #Softball #TechTank #TechTankTo #TechTankToronto #TechTanker #TechTankers #techcommunity #dev #tb #thursday #toronto",
     date: "2024-10-31",
     shortcode: "DByybOYuSdw",
-    pk: 18068227981563337,
+    pk: 18068227981563337n,
     createdAtRaw: 1730389076,
     media: [
       {
@@ -964,7 +964,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🌟 Earlier this week, we brought together EdTech Professionals for an inspiring panel discussion! 🚀✨\nOur event, “EdTech at the Crossroads: AI, Accessibility, and the Evolving Classroom,” sparked valuable insights about the future of education.\nHuge thanks to our panelists: Rico Chow, Chief Product Officer at SiSi Natalie Famula, Web Developer II at Prodigy Education Alex Cooksey, Senior Product Designer at Prodigy Education Patricia Park, Educator at the Toronto District School Board\nIntroductions by Riaz Virani, TechTank organizer, set the stage for an engaging discussion, moderated by Chris Taeyoung Kim, Founder & Community Organizer at TechTank 🎤📚\nKey topics included:\n	•	Leveraging AI for personalized learning and early intervention 	•	Addressing stigma and treating AI as a supportive tool 	•	Integrating AI into daily practices for lesson planning and student support 	•	Enhancing accessibility for young learners and those with learning difficulties\nWe also enjoyed meeting a cute Samoyed named Cyprus! 🐾💖\nThanks to everyone who contributed to our food drive for @dailybreadto Your generosity helps support those facing food insecurity in our community. 💖\nA big thank you to our sponsor, @kobobooks Kobo, a global leader in eReading, helps over 30 million readers access stories anytime, anywhere.\nTogether, we’re shaping the future of education! 📖🌎\nWant to stay connected?\n Join our Slack community\n🔗 https://techtankto.com/links/slack\n#edtech #futureofeducation #aiineducation #paneldiscussion #techcommunity #networking #dailybreadfoodbank #techtankto #techtank #techtabktoronto #techtankers #techtanker #learning #elearning #learningmanagementsystem\n#artificialintelligence #aiethics #techtools #education #educators",
     date: "2024-11-01",
     shortcode: "DB2G8ewvSZr",
-    pk: 18054018190913837,
+    pk: 18054018190913837n,
     createdAtRaw: 1730501139,
     media: [
       {
@@ -978,7 +978,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "✨ GIVEAWAY ALERT ✨\nWe’re so close to hitting 1,000 members in the TechTank Slack community! 🥳\nTo celebrate, we’re giving away an exclusive TechTank Toque 🧢 to our 1000th member who joins. 👀\n🎉 Fun Fact: Did you know that “toque” is a Canadian word for a beanie? 🇨🇦 Keep warm and rep TechTank style with this cozy prize!\nHow to Enter:\nSimply join our Slack and become part of one of Toronto’s most inclusive, diverse, and empowering tech communities!\nYou could be our lucky 1000th member and score the coveted toque. 🚀\n📍 RULES:\n- Must be located in Toronto. - Prize awarded to the 1000th member to join.\n🔗 Join here: https://techtankto.com/links/slack\nor check our linktree 🔗 https://linktr.ee/techtankto\nHuge thanks to everyone who’s made TechTank a welcoming and dynamic space for all tech enthusiasts. 🐠 🐟 🐠\nHelp us reach this milestone—tag a friend who should join the squad! 💙\n#JoinTechTank #ToqueGiveaway #TechCommunityToronto #TechTank #TechTankTo #TechTankToronto #ContestToronto #FreeTouque #TechTanker #TechTankers #Slack #torontofreebies #giveaway #toque #devcommunity #dev\n#toronto #6ix #torontonly #diversetech #inclusive #uxui #projectmanager #socialmedia #marketingdigital #qa #techlead #productdesigner #productmanager",
     date: "2024-11-05",
     shortcode: "DB_07HJOX6Q",
-    pk: 18021829199300283,
+    pk: 18021829199300283n,
     createdAtRaw: 1730826028,
     media: [
       { type: "image", path: "/media/instagram/2024-11-05-DB07HJOX6Q/techtankto_DB_07HJOX6Q_3494744596401454736.webp" },
@@ -989,7 +989,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Throw back to our event from a year ago! 🚀✨ Huge thanks to our sponsor, Rakuten Kobo, for hosting us in their amazing office 2 years in a row! 🖥️💡 Who remembers the insightful talks, the coding tips, and of course, the snacks? 🍕🤓 Here’s to more meetups, more learning, and more memories!\n#TBT #TechTank #RakutenKobo #TechTankTo #TechTankToronto #TechTanker #TechCommunity #TechTankers #dev #tb #thursday #Toronto #meetups #networking",
     date: "2024-11-07",
     shortcode: "DCFhk3OvZVx",
-    pk: 18043548824283056,
+    pk: 18043548824283056n,
     createdAtRaw: 1731017226,
     media: [
       {
@@ -1019,7 +1019,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Wait… someone actually bought *guthib.com* just to call out our spelling fails?! 🤯😂\nThe internet never disappoints! #MindBlown\n#GitHub #Guthib #DeveloperMemes #TechTank #CodingLife #ProgrammingHumor #SurpriseMoment #TechTankTo #DevMemes #TechTankToronto #CodingCommunity #TypoAlert #InternetWins #TechLife #SoftwareDev #DevLife #TechSurprises #CodeHumor #curbyourenthusiasm #oopsmoment #FunnyTech #techtanker #techtankers #funfridays #friday #friyay #friyayvibes #frolic",
     date: "2024-11-09",
     shortcode: "DCHmwcEvQ_j",
-    pk: 18036852710252612,
+    pk: 18036852710252612n,
     createdAtRaw: 1731196249,
     media: [
       { type: "image", path: "/media/instagram/2024-11-09-DCHmwcEvQj/techtankto_DCHmwcEvQ_j_3496934090123055075.webp" },
@@ -1030,7 +1030,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🧟‍♂️ When your search history starts looking like a Halloween horror flick… 🧟‍♀️\n👻 “How to find and kill zombie process in Linux” 🔪 “How to kill child from parent with fork” 🧠 “Fixing memory leaks in Python” 🧵 “Detached head in Git”\nAs a programmer, sometimes it feels like we’re running from real monsters… and memory leaks are scarier than any ghost 👻!\nDestroying zombies in Linux and children in Unity?\nJust another day in the life of a dev-slash-serial (bug) killer! 🖥️💀\n#TechTankToronto #TechTanker #TechTankers #CodeOrDie #TechHorror #HalloweenCode #DevNightmares #DebuggingIsLife #CodeOfTheDead #Git #MemoryLeaks #TechTank #TechTankTO #DevCommunity #ZombieProcess #UnityDev #PythonProblems #LinuxLife #GitGood #ForkIt #KillTheBugs #CodingStruggles #DeveloperLife #CodeSpooky #DevMemes #DevToronto #yyz #toronto",
     date: "2024-11-10",
     shortcode: "DBjhqNBPqns",
-    pk: 18021640388307932,
+    pk: 18021640388307932n,
     createdAtRaw: 1731221663,
     media: [
       {
@@ -1044,7 +1044,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🔨 Ready to enter the tech world? Remember: If opportunity doesn’t knock, build a door! 💡\nTech can be a tough industry to break into, but resilience and resourcefulness make all the difference. Whether it’s refining your skills, expanding your network, or launching a passion project, every step you take is a door you’re building toward your next opportunity. 🚀💻 And you don’t have to do it alone...\nWe have a community on Slack supporting each other through their tech journey - join us and be updated on our upcoming events, new job posts in the city, or just be a part of a community that will help you build more doors.\n🔗 https://linktr.ee/techtankto or click the link on our bio.\n#MotivationMonday #BuildYourPath #TechTransitions #CareerGrowth #TechTank",
     date: "2024-11-11",
     shortcode: "DCPpNY-hb_u",
-    pk: 18467247091001953,
+    pk: 18467247091001953n,
     createdAtRaw: 1731356772,
     media: [
       { type: "image", path: "/media/instagram/2024-11-11-DCPpNYhbu/techtankto_DCPMcRQPHdR_3499070154719655761.webp" },
@@ -1056,7 +1056,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Flashback to a year ago, when we shared an unforgettable night of tech talks, meaningful connections, and a vibrant sense of community! 💬✨\nOur event on Large Language Models wasn’t just about AI — it was about bringing brilliant minds together to learn, share, and network.\n🚀 Here’s to more nights of innovation and inspiration! 🌐🤝\nJoin us today for this month’s event! Meetup link in our bio 🔗\n#ThrowbackThursday #TechTank #TechTankTo #TechTankToronto #TechTanker #TechTankers #TBT #techcommunity #dev #tb #thursday #Networking #Toronto #LLM #AI #LanguageModels",
     date: "2024-11-14",
     shortcode: "DCW5HP3xmld",
-    pk: 18022648364535931,
+    pk: 18022648364535931n,
     createdAtRaw: 1731599992,
     media: [
       {
@@ -1082,7 +1082,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "The only ‘end’ I want to see is the weekend at this point. 😅\nI just want to rest after the debugging stress. 💻 🧘🧘‍♀️🧘‍♂️\n\n#DevLife #takeabreak #naptime #weekendmood #weekend\n#weekendvibes #friyay #funfridays #techtank #techtankto #techtanktoronto #techtankers #techtanker #frontend #backend #weekend #developers #devlife #drake #oldiebutgoodie",
     date: "2024-11-15",
     shortcode: "DCZhoCkPPdf",
-    pk: 18016335188341422,
+    pk: 18016335188341422n,
     createdAtRaw: 1731688841,
     media: [
       {
@@ -1096,7 +1096,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "“A good programmer looks both ways before crossing a one-way street.” Why? Because in tech, things aren’t always as they seem! 🚦\nImagine debugging a feature you’re confident only has one source of error, but a surprise dependency pops up from an unexpected place.\nStaying curious, cautious, and adaptable can save the day. As a new developer transitioning into tech, remember: thinking ahead and preparing for the unexpected sets you apart. Keep pushing, keep learning, and keep coding! 💪\n#TechTank #MotivationalMonday #NewDevelopers #StayAhead #AdaptAndThrive",
     date: "2024-11-18",
     shortcode: "DChoRIcBP9R",
-    pk: 17955183749738958,
+    pk: 17955183749738958n,
     createdAtRaw: 1731960259,
     media: [
       {
@@ -1110,7 +1110,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Come hang out with Nhi 👋 running this month’s TechTank social, and we’re hitting the pool hall! 🎱✨🚨\nSo far, she’s taken down TWO admins—who’s next? 😏\nBring your A-game, your best smack talk, and come beat her! 🔥💥💪\nChallenge Accepted!\nRegistration 🌐 : https://lu.ma/8qe5mdb7\nWhen 📅 : Saturday, Nov 23rd, 5PM\nWhere 📍: Exact location will drop when you register! 🔥\nAdmission 🎱 : Costs to be split amongst participants\nCome for the competition, stay for the vibes! Let’s make it a night to remember. ✨\nCan’t make it this weekend? That’s OK! Stay tuned on the next social on our slack community for future events. Check the Linktree on our profile to join in!\n#TechTank #TechTankToronto #YYZ #TorontoTech #TorontoLife #SocialToronto #DevCommunity #TechEvents #6ix #toronto #Luma #hangouts #techtankto #techtankers #techtanker",
     date: "2024-11-20",
     shortcode: "DCm66dGvnI_",
-    pk: 18050761831952622,
+    pk: 18050761831952622n,
     createdAtRaw: 1732138145,
     media: [
       { type: "image", path: "/media/instagram/2024-11-20-DCm66dGvnI/techtankto_DCm66dGvnI__3505748463633461823.webp" },
@@ -1121,7 +1121,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "As the days get colder ❄️ reminiscing about our epic Blue Mountain weekend last winter ☃️ snowboarding, hiking, cozy cottage vibes, and a few battle scars to keep it real! 🏂🐾\nJoin the fun 🔗 link in bio to join our Slack\n#WinterAdventure #TBT #TechTank #TechTankTo #TechTankToronto #TechTanker #TechTankers #techcommunity #dev #thursday #tb #Cottage #Friends",
     date: "2024-11-21",
     shortcode: "DCpBLdmvBl1",
-    pk: 18145153558344730,
+    pk: 18145153558344730n,
     createdAtRaw: 1732208201,
     media: [
       {
@@ -1171,7 +1171,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Feeling stuck or doubting your skills? Here’s a reminder: You’re doing better than you think! 💻✨\nSomeone out there is still navigating the web on a widely outdated tool like Internet Explorer (sorry/not sorry if you're an IE user! ✌)\nThis is proof that progress is all about perspective. 🚀\nWhether you’re tackling a new project, learning something new, or just trying to get through the day, you’re already ahead just by showing up and trying. Keep moving forward. You've got this! 💪💡\nJoin our community of tech enthusiasts for support, inspiration, and job posts!\n🔗 Link in our bio.\n#MotivationalMonday #TechTankInspo #KeepGoing #YouGotThis",
     date: "2024-11-25",
     shortcode: "DCzpnzENKdU",
-    pk: 17993237915725183,
+    pk: 17993237915725183n,
     createdAtRaw: 1732564947,
     media: [
       {
@@ -1185,7 +1185,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🚀 Fueling Growth- Generative AI & RAG in FP&A— What a ride! 🚀\nLast meetup TechTank teamed up with Vena Solutions to explore how Generative AI and RAG (Retrieval-Augmented Generation) are changing the game in Financial Planning & Analysis (FP&A)! 💡 From chat completions to semantic search, these cutting-edge tools are making data smarter, faster, and more actionable than ever before.\nHuge shoutout to our amazing speakers:\n- Chris Taeyoung Kim for kicking things off and introducing TechTank 🔥\n- Jasper Chow from Vena for sharing how Generative AI and RAG are driving innovation at Vena 💼\n- Kevin Chan for breaking down the technical magic behind RAG and vector databases 💻\n- Shahin Imtiaz for giving us the lowdown on metadata filtering and hybrid search 🔍\n- And of course, Ben Lokash, all the volunteers for making sure everything ran smoothly 🙌\nKey Highlights 👉 How RAG and semantic search are improving FP&A decision-making 📈 👉 Hands-on Jupyter Notebooks and example code in the GitHub repo 📂 👉 Cool tools like JSON schemas and Pydantic for API integration 🔧\nBig thanks to HashTank for capturing all the media moments 📸 and to Vena Solutions for their awesome support! 💪\nCheck out the resources below and let’s keep the conversation going! 💬\n🔗 GitHub Repo: https://github.com/khchan/building-blocks-ai\n✅ Careers at Vena: https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=b8031fb7-5175-4b0a-a6f0-181210d99213&ccId=19000101_000001&lang=en_US\n🌐 Join our TechTank community: https://linktr.ee/techtankto\nHere’s the direct YouTube recording: 🔗https://youtu.be/2UTsy-Lbulk?si=UCxIQxrNef_J-hE3\nAnd a BIG thanks to everyone who braved Toronto traffic during the Taylor Swift Eras Tour to join us! See you at the next event! 🚗💨\n#GenerativeAI #RAG #FP #dataanalytics #TechTank #TechTankTO #TechTanker #TechTankers #VenaSolutions #AI #techtanktoronto #MachineLearning #DataScience #Innovation #TechEvents #ArtificialIntelligence #TechCommunity #FinancialAnalysis #FinancialPlanning #TechTalks #Jupyter #Python #DataAnalysis #CareerOpportunities #TechNetworking #LLM #AIPromting",
     date: "2024-11-28",
     shortcode: "DC7de7mv4Qc",
-    pk: 18137267959368349,
+    pk: 18137267959368349n,
     createdAtRaw: 1732827262,
     media: [
       {
@@ -1199,7 +1199,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🎉💻 Happy Computer Security Day! 💻🎉\nCelebrated every November 30th, was first established in 1988 to raise awareness about protecting your data, devices, and online activities. 🛡️(Mostly in the USA)\n🔑 3 Security Tips to Stay Safe:\n1️⃣ Use a password manager:\nSecurely store unique, strong passwords for every account. Tools like LastPass or Bitwarden make it easy!\n2️⃣ Back up your files:\nPrevent data loss by saving backups on cloud services (like Google Drive) or external drives.\n3️⃣ Enable two-factor authentication (2FA):\nAdd an extra security step to your accounts with codes or biometrics.\n💡 Learn more about Computer Security Day here:\nhttps://www.digicert.com/blog/computer-security-day\n🤖 Join our Slack community for more tech tips, events, and conversations with fellow tech enthusiasts!\nCheck out all our links at linktr.ee/techtankto\n#techtank #techtankto #techtankers #techtanktoronto #techtanker #CyberSecurity #ComputerSecurityDay #DigitalSafety #OnlineProtection #DataBackups #PasswordManager #2FA #StaySecure #TechTips #TechCommunity #digicert",
     date: "2024-11-30",
     shortcode: "DDAP9IkvaZU",
-    pk: 18028029848206182,
+    pk: 18028029848206182n,
     createdAtRaw: 1732996011,
     media: [
       {
@@ -1213,7 +1213,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Progress in tech—and in life—isn’t about perfection; it’s about iteration. 💡 That messy first draft? It’s the foundation for greatness.\nPush it to the repo of life, let feedback guide you, and watch yourself grow.\nProgress is built step by step, commit by commit. Keep iterating—you’re on your way to something amazing! 💻✨\nJoin our Slack community to network and get feedback!\n🔗Link in bio\n#MotivationalMonday #TechTankInspo #KeepIterating #ProgressNotPerfection #TechTank #TechTankTo #TechTankToronto #TechTankers #TechTanker #LifeLongLearning",
     date: "2024-12-02",
     shortcode: "DDFWKMavI_G",
-    pk: 18335066851145190,
+    pk: 18335066851145190n,
     createdAtRaw: 1733158724,
     media: [
       { type: "image", path: "/media/instagram/2024-12-02-DDFWKMavIG/techtankto_DDFWKMavI_G_3514312541784018886.webp" },
@@ -1224,7 +1224,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Feeling like an imposter in tech? You're not alone! 💻💭\nAt our recent Code Diversity meetup, we dove deep into Imposter Syndrome—a challenge that impacts both new and seasoned developers.\nHere are 6 actionable tips to help you tackle self-doubt and celebrate your growth:\n1️⃣ Acknowledge the imposter – Recognize self-doubt and reframe negative thoughts. 2️⃣ Celebrate your wins – Keep a “brag folder” and share your accomplishments with peers! 3️⃣ Foster community – Build connections to normalize and navigate these feelings. 4️⃣ Focus on growth, not perfection – Mistakes are part of learning. Take small, actionable steps. 5️⃣ Challenge comparisons – Reflect on your unique journey and milestones. 6️⃣ Practice self-compassion – Be kind to yourself and take breaks when needed.\nWe’re all on this journey together—learning, growing, and thriving. Share one of your wins in the comments! Let’s celebrate 🎉\nMeetups happen once a month in small, intimate groups. 💬 Want to join the conversation and keep it going? Register on Meetup for the next event, and hop into our Slack channel, # Code Diversity, to connect with others in the community. Link in bio!\n#CodeDiversity\n#ImposterSyndrome #WomenInTech #NonBinaryInTech #TechCommunity #GrowthMindset #DeveloperLife #CelebrateWins #CodeNewbie #WomenWhoCode #TechTips #MentalHealthInTech #SelfCompassion #CareerGrowth #TechCareers #LearnToCode #TechJourney #InclusiveTech #WomenInSTEM #BreakTheBias #SupportSystem",
     date: "2024-12-03",
     shortcode: "DDHtcovAURw",
-    pk: 18073974565623772,
+    pk: 18073974565623772n,
     createdAtRaw: 1733238042,
     media: [
       {
@@ -1258,7 +1258,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🎉 A Shoutout to Our Amazing Community!\nThank you, Marms W, for sharing your first impression of our #CodeDiversity community! 💬\nTechTank\ncoffee meetup called Code Diversity brought together an inspiring group of developers to talk about various topics, celebrating achievements, and learning from one another.\nYour story reminds us why these meetups matter so much: creating a space where Women & Gender-Diverse Folks in Tech can connect, grow, and feel supported. 🌟\n📅 Want to join the next one? Spots are limited—check the link in bio and join our slack to learn about the next coffee hangout!\n💻 Keep the convo going in our Slack channel # code-diversity!\nLet’s keep building this amazing community together—see you at the next meetup on Dec 14th! 🙌\n#TechCommunity #WomenInTech #NonBinaryInTech #TechTankTO #TechTank #TechTankToronto #TechTankers #TechTanker #DevCommunity #ThankYou #DevCommunity #Dev #Developers #SWE",
     date: "2024-12-04",
     shortcode: "DDKp0Kbv259",
-    pk: 18061026415845250,
+    pk: 18061026415845250n,
     createdAtRaw: 1733336801,
     media: [
       {
@@ -1272,7 +1272,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🎄✨ Throwback Thursday! ✨🎄\nLooking back at last year’s holiday party has us feeling all the festive vibes! From laughs to epic memories, it was truly a night to remember. 🥂🎉\nMark your calendars because this year’s celebration will be even bigger and better with Bits, Bytes & Bowties 🎩 – a black-tie evening featuring mulled wine, exciting raffles, and plenty of holiday spirit. Join us on December 20th, 2024 for a night to remember!\n✨ Don’t miss out – register today! 🥳 luma link in our bio 🔗\n#TechTankTo #HolidayParty #ThrowbackThursday #TBT #TechTank #TechTankToronto #TechTanker #TechTankers #techcommunity #thursday #tb #Holiday #Blacktie",
     date: "2024-12-05",
     shortcode: "DDL8DILxGRz",
-    pk: 17873157963233015,
+    pk: 17873157963233015n,
     createdAtRaw: 1733379915,
     media: [
       {
@@ -1306,7 +1306,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Get ready to celebrate the holiday season in style next week!! ✨🎄\nTechTank Toronto is throwing a festive soirée where tech meets elegance. 🎀\nAll is welcome to join us for an unforgettable evening filled with mingling, games, and holiday cheer! 🌟 with Special Guest @dj.see.a 🎶\n\n🎩 Theme:\nBlack Tie + Tech Twist\nPut on your best bowtie or most elegant evening dress and add a dash of tech-inspired flair!\n📍 Location:\nToronto (Exact spot shared upon registration)\n🗓️ Date & Time:\nFriday, December 20, 2024\n7:00 PM – 11:00 PM\n💰 Admission:\n$25 per person – includes food, drinks, venue, auction fun, and all the party magic! 🪄\nRegister from the link: lu.ma/eqp4ccn5 or check the link in bio.\nE-transfer your fee to techtankto@gmail.com within a week of registering to secure your spot.\n🍴 Food & Drinks:\n- Mulled wine and prepared bites (we’ve got you covered – let us know any dietary restrictions!) - BYOB welcome!\n🎲 Fun & Games:\n- Silent Auction: Bid on epic community-donated items. - Raffle Tickets: Win unique prizes (or quirky surprises!). - Ice Breaker Games\n🚗 Parking Options:\n- Near Chapters Indigo: $5 (6 PM–6 AM) - Precise Park Link: $8 (12 hours)\nNeed help covering the fee? No worries – DM us and we’ll sort it out.\nLet’s celebrate a year of tech, growth, and community together! Can’t wait to see you there! 🚀💃\n#HolidayWithTech #TechTankToronto #TechMeetsElegance #TorontoEvents #TechTank #TechTankers #TechTankTo #TechTanker #toronto #holiday #holidays #holidayseason\n#DressToImpress #HolidayParty #TorontoEvents",
     date: "2024-12-13",
     shortcode: "DDhU_iARIj9",
-    pk: 17918568185917213,
+    pk: 17918568185917213n,
     createdAtRaw: 1734097926,
     media: [
       { type: "image", path: "/media/instagram/2024-12-13-DDhUiARIj9/techtankto_DDhU_iARIj9_3522188710349408509.webp" },
@@ -1317,7 +1317,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🏆 Season 1 Complete! 🎉\nWe’re thrilled to celebrate our 2nd place finish! 🥈 The real win was the incredible progress we made as a team. Week after week, we grew stronger, and it’s been amazing to see how far we’ve come.\nNow, we’re keeping the momentum going for Season 2! 🚀\nIf you’re ready to join the team and level up with us, check out the slack channel # volleyball-sashimis to reserve your spot!\nSeason 2 Details:\n📅 Duration: 12 weeks\n📍 Location: Glenview Sr. PS\n🗓️ Start Date: January 14, 2025\n🏁 End Date: April 8, 2025\n⏰ Game Times: Tuesdays at 6:45 PM, 7:45 PM, and 8:45 PM\n💲 Cost per game: $11.20–$16.79 (depending on team size: 6–9 players)\nLet’s make Season 2 even better! 💪\nWho’s in? 🙌\n#TeamGoals #Season2 #JoinTheTeam #KeepImproving #CommunitySports #Sashimis #Volleyball #JoinSeason2 #SportsTeam #IndoorGames #Toronto #TechTank #TechTankTO #TechTankers #TechTankToronto #TechTanker #VolleyballSashimis #SocialSports #6ix",
     date: "2024-12-17",
     shortcode: "DDrzcGXud-d",
-    pk: 18080407411572544,
+    pk: 18080407411572544n,
     createdAtRaw: 1734449143,
     media: [
       { type: "image", path: "/media/instagram/2024-12-17-DDrzcGXudd/techtankto_DDrzcGXud-d_3525137364705468317.webp" },
@@ -1328,7 +1328,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Embrace the Disruption! 🚀\nIn today’s tech landscape, progress is all about reimagining the possible. At TechTank, we’re here to empower tech enthusiasts to push boundaries, challenge the norms, and drive their own innovation. ⚙️\nWhether you're building, coding, designing or leading, remember—don’t wait for change to happen. Be the disruptor in your journey. Join our slack (link in bio) to be disruptors together💥\nOur Linktree: https://linktr.ee/techtankto\n#TechTank #FutureOfTech #InnovationJourney #DisruptToThrive #MotivationalMondays #Innovate #StayCurious #CreateYourOwn",
     date: "2024-12-23",
     shortcode: "DB9wVRshHUn",
-    pk: 18068465776743324,
+    pk: 18068465776743324n,
     createdAtRaw: 1734993755,
     media: [
       {
@@ -1341,7 +1341,7 @@ const instagramPosts: Record<string, InstagramPost> = {
     caption: "Thank you for an amazing 2024, TechTank! 💙\n#2024highlights #2024memories #recap #TechTankTo #thankyou",
     date: "2024-12-26",
     shortcode: "DEDf3AaPGe_",
-    pk: 17887632048173141,
+    pk: 17887632048173141n,
     createdAtRaw: 1735244584,
     media: [
       { type: "image", path: "/media/instagram/2024-12-26-DEDf3AaPGe/techtankto_DEDf3AaPGe__3531806652241831871.webp" },
@@ -1352,7 +1352,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🎉 TechTank To 2024 Wrapped 🎉\n🚀 Did you know?\nThis year, 1,659 #introductions were shared on our Slack, alongside 1,507 job postings—highlighting how TechTank thrives as a hub for connection and collaboration!\n🎙️ GuppyTalks Podcast\nWe launched 5 episodes in 2024, diving into developer journeys and expert insights. Got a topic in mind for 2025? Let us know—we’d love to amplify your voice!\n🏐 Sashimis Sports Teams\nTech meets play! Our volleyball team clinched 2nd place this fall. Here’s to teamwork, both on and off the court!\n📊 Behind the Numbers\n- 992 Slack Members - 2,619 Meetup Members\nBut the magic is in the connections we made: 🪄\n✅ Introductions → Collaborations ✅ Events → New ideas ✅ Messages → Lifelong friendships\n✨ What’s Next for 2025?\nExpect more workshops, fresh podcast episodes, and plenty of exciting surprises (maybe even another trophy for Sashimis?).\nSwipe through to reflect on this year’s highlights and share your journey with us.\n👉 Don’t forget to tag @TechTankTO and use #TechTankTO for a chance to be featured in our stories!\nLet’s keep growing together in 2025. 🌱",
     date: "2025-01-07",
     shortcode: "DENIAW-K8UN",
-    pk: 18481010545036535,
+    pk: 18481010545036535n,
     createdAtRaw: 1736215412,
     media: [
       { type: "image", path: "/media/instagram/2025-01-07-DENIAWK8UN/techtankto_DENIAW-K8UN_3534516452376409887.webp" },
@@ -1371,7 +1371,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "And… we’re back! 🎉\nHAPPY NEW YEAR (1st post in 2025!)\nReady for new tech insights? 💪\nKick off 2025 with Tony Ko, Senior Software Engineer, as he shares lessons on:\n💡 “Building Cross-Browser Extensions: Challenges and Best Practices”\nTony has over 7 years of experience delivering secure, high-performing solutions for top brands like Aeroplan, Air Miles, and Toyota. Don’t miss this chance to learn strategies for handling browser compatibility and network with Toronto’s tech community!\nLearn more about Tony: 🔗 Portfolio: https://tko.dev/ 🔗 LinkedIn: https://www.linkedin.com/in/tkodev/\nEvent Details: 🗓️ Date: Tuesday, January 28th ⏰ Time: 6:00 PM - 8:30 PM EST 📍 Location: Cohere (171 John St, Toronto, 3rd Floor)\nSchedule: 6:00 PM - Arrive, enjoy food, and socialize 6:45 PM - Announcements and presentation 7:45 PM - Networking and Q&A\nThank you to our sponsor, Cohere, for providing the space, food, and beverages! Cohere is a global enterprise AI company co-headquartered in Toronto and San Francisco. They specialize in building secure, multilingual AI models designed to solve real-world business challenges with the highest levels of security and privacy.\nLearn more about Cohere here: 🔗 https://cohere.com/\nRSVP now on Meetup: 🔗 https://www.meetup.com/techtank-to/events/305400630/\n#SWE #Coding #Browsers #browserextensions #CodingPractices #TechTankTo #DevCommunity #Tech #webdevelopment #techtanktoronto #techtank #techtanker #techtankers #dev #techtalk",
     date: "2025-01-18",
     shortcode: "DE8BI1uv0kd",
-    pk: 18049147364275153,
+    pk: 18049147364275153n,
     createdAtRaw: 1737185500,
     media: [
       {
@@ -1385,7 +1385,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🎉 Thank You, All 1,000 of You! 🎉\nTechTank has officially hit 1K members! This milestone means the world to us, and we couldn’t have done it without YOU. 💖\nYou’ve believed in our vision, supported our journey, and helped us grow this incredible community. Together, we’ve created something truly special—a space where people connect, collaborate, and inspire one another.\nFrom the bottom of our hearts, THANK YOU for being part of this adventure. We’re so grateful to have every single one of you with us as we continue to grow and make an impact. Let’s keep building, learning, and thriving together! 🐠\nWant to join TechTank? Join us on Slack! Link in our bio 🔗\n| ABOUT | TechTank is all about bringing people together. It is a lively and inclusive tech community where we wholeheartedly embrace tech enthusiasts from all walks of life. Whether you’re a newbie just starting out or a seasoned professional, TechTank wants to provide an inclusive environment where you can connect with like-minded individuals and foster meaningful relationships.\n#TechTank #TechTankTo #TechTankers #TechCommunity #Toronto #1KMilestone",
     date: "2025-01-20",
     shortcode: "DFD0RpYPyQX",
-    pk: 17995310519753688,
+    pk: 17995310519753688n,
     createdAtRaw: 1737402586,
     media: [
       {
@@ -1399,7 +1399,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "We kicked off our first meetup of the year with a session on building robust extensions that work seamlessly across platforms! Big thanks to Tony Ko @tkodev for sharing his expert insights on DOM management and deployment strategies🙏\nCheck out Tony’s LinkedIn:\n🔗 https://www.linkedin.com/in/tkodev\nSpecial shoutout to our sponsor Cohere for providing the perfect space to learn and network ✨ \nCheck out Cohere’s latest product, North\n🔗 https://cohere.com/north\nTo everyone who braved the snow to join us—thank you for your energy and amazing questions!\n✨ Missed it? No worries!\nCatch up on all the highlights:\nPhotos 📷\n🔗 https://photos.app.goo.gl/JdCB2QUhzxXPwUTg9\nRecording 📽️\n🔗 https://youtu.be/f8ONw6O_rco?si=N5OaEdIcFOM3vZVu\nTony’s Slides 💻\n🔗 https://www.figma.com/deck/Pp9WuKLFwDnXimapCLwnb2/TechTalk—Cross-Browser-Extensions?node-id=1-1788&t=h0Rn8vbGsHPTRxUa-1\n✨ Want to join TechTank’s journey?\nSpeak at a future event 🎤\n🔗 https://www.techtankto.com/speak\nPartner with us - Reach out via email: 📧 techtankto@gmail.com\n✨ Stay connected with us:\nSee our Linktree in our bio for more ways to get involved\nConsider donating so we can continue our mission:\n🔗 https://www.techtankto.com/donate\nLooking forward to seeing you in Spring 2025! 💙\n#techtankto #techtank #techtanktoronto #techtanker #techtankers #devcommunity #browserextension #torontonetworking #networking #developer #swe #software #dom #speaker #techtips #techtalk #cohere #coherenorth",
     date: "2025-02-25",
     shortcode: "DGdU8GHOON_",
-    pk: 17945902205958214,
+    pk: 17945902205958214n,
     createdAtRaw: 1740513755,
     media: [
       { type: "image", path: "/media/instagram/2025-02-25-DGdU8GHOON/techtankto_DGdU8GHOON__3575105769864487807.webp" },
@@ -1410,7 +1410,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🎲 TechTank's last Toronto Social at Snakes & Lattes was a blast!🍻✨\nFrom epic board game battles to great convos, we had it all. Thank you Nhi for being a great host!\nSwipe through and guess the board game in photo #️⃣3️⃣—drop your answer in the comments! 👇🔥\nMissed this one?\nDon’t worry—more socials coming soon!\nJoin our community on Slack and join the channel # social-toronto & stay tuned. 🚀\n#TechTankTO #BoardGameNight #TorontoTech #TechCommunity #TechTank #TechTankToronto #TechTanker #TechTankers #Social",
     date: "2025-02-26",
     shortcode: "DGjOLKRNswM",
-    pk: 18304750219224352,
+    pk: 18304750219224352n,
     createdAtRaw: 1740610320,
     featured: true,
     media: [
@@ -1434,7 +1434,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🔥 New Hobby Channels in TechTank Slack! 🔥\nTech isn’t just about coding—we’re building a space for everything you love! 🎉\nJoin our brand-new hobby channels and connect with fellow techies over shared interests:\n🎮 # game-tank – Talk strategy, new releases, or gaming nostalgia 📚 # readers-cove – Share book recs & reading goals 🎵 # sound-waves – Drop your favorite tracks & concert experiences 🐾 # aquarium – Show off your pets (furry, scaly, or feathery!) 🐶🐱🐟 🍜 # gta-foodies – Find the best eats in Toronto & GTA\nThese channels are brand new & experimental—your engagement shapes them!\nDive in, share your interests, and make Slack even more fun. 🌊\n#TechTank #Community #new #jointhefun #TechTankTo #devcommunity #TechTankers #TechTanker #JoinUs #Slack #techtanktoronto #hobby #games #music #books #reading #food #foodie #toronto #gta #pets #welovepets #JoinTheConversation",
     date: "2025-03-04",
     shortcode: "DGyMGxmtIPs",
-    pk: 17879445951167023,
+    pk: 17879445951167023n,
     createdAtRaw: 1741105804,
     media: [
       {
@@ -1448,7 +1448,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🌟 Celebrating an unforgettable International Women’s Day event from last year! 💜✨\nWe had the privilege of hearing from incredible #WomenInTech, who shared their wisdom, experiences, and insights. Huge thanks to our panelists, moderator, volunteers, and our generous sponsors at Cohere for making this event possible! 🙌\nLet’s continue to uplift, amplify, and empower women in tech—today and every day 💪🚀\n#TechTankTo #WomenInTech #IWD #TechTankers #Inspiration #DiversityInTech #TechCommunity",
     date: "2025-03-08",
     shortcode: "DG8Yis9u3z9",
-    pk: 18079707307639243,
+    pk: 18079707307639243n,
     createdAtRaw: 1741448146,
     media: [
       {
@@ -1484,7 +1484,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "✨ Thank you for attending! ✨\nOur latest CodeDiversity Meetup was our biggest one yet—thank you for being part of it! ☕💜\nIt’s always inspiring to see this community grow, connect, and support each other.\nA huge shoutout to Niki and Thannia for hosting this space every month with so much care and dedication! 💖\nYour warmth and effort make these meetups truly special.\n🚀 We’ll be back soon! Our next meetup will likely be in late April—stay tuned for updates.\n🔗 Stay connected: Join our Slack community and find the # code-diversity channel to keep the conversation going! Connect with us here 👉 https://linktr.ee/techtankto\nLet’s keep building an inclusive and supportive tech community—see you soon! 🧑🏽‍💻👩🏻‍💻👨🏾‍💻👩🏿‍💻👨🏼‍💻👩‍💻🌟\n#CodeDiversity #WomenInTech #NonBinaryInTech #TechCommunity #Networking #TechTankTo #TechTank\n#TechTankToronto #2slgbtqia #code",
     date: "2025-03-28",
     shortcode: "DHtTcVTvIo6",
-    pk: 18085231534720582,
+    pk: 18085231534720582n,
     createdAtRaw: 1743160498,
     media: [
       {
@@ -1498,7 +1498,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "💪 Gear up, friends! TechTank is turning TWO, and we’re celebrating with an epic CycleParty! 🚴‍♀️✨\nJoin us for 404: Fatigue Not Found, a high-energy, techno-pumping spin session that’ll have you smiling, sweating, and feeling like Angela Basset walking away from that burning car in Waiting to Exhale. 🔥💅\nSaturday April 12th for an afternoon adventure 🚴🚴‍♀️🚴‍♂️\nEvent Schedule:\n🔹 2:30 PM – Arrive at the studio ready to ride\n🔹 3:00-4:00 PM – Ride time! 60 minutes of pure energy and celebration\n🔹 4:00-5:00 PM – Cool down, shower, change\n🔹 5:00-7:00 PM – Post-ride celebration at Prema Coffee for drinks, snacks, and anniversary vibes ✨\nThis anniversary ride is all about good vibes, great music, and celebrating two fantastic years together. Bring your energy, your friends, and your best dance moves on the bike. Come dressed for a sweaty ride in your fave gym gear, and don’t forget your water bottle.\nSpaces are limited, so grab your spot and let’s ride into year three together! Can’t wait to celebrate with you! 🥳\nTickets are $35 – send an e-transfer to [techtankto@gmail.com](mailto:techtankto@gmail.com) to reserve your spot.\nPayment deadline: April 9 (we need to send the attendee list to the studio).\nOnce signed up, create your SPINCO account if you don’t have one yet.\nAt the studio, shoes and towels are provided. They also have essentials like hair ties, earplugs, deodorant spray, and showers.\nPrema Coffee: Please support the café by purchasing a drink or snack while attending.\nRegister now: https://lu.ma/ekdq0p25\nBy signing up, you agree to TechTank’s Sport Waiver. See you on the bikes—time to channel that Angela Basset energy. 🔥\n#TechTankToTurnsTwo #AnniversaryRide #CelebrationMode #TorontoCommunity #SquadGoals #SpinSquad #NoFatigueFound #FeelLikeABoss #angelabasset #TechTankTO #CycleParty #TechTankToronto #TechTank #TechTankers",
     date: "2025-03-31",
     shortcode: "DH3khozuwa5",
-    pk: 18085714615528530,
+    pk: 18085714615528530n,
     createdAtRaw: 1743433942,
     media: [
       {
@@ -1512,7 +1512,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🚀 TechTank’s first-ever Lightning Talk is here! ⚡\nJoin us on Thursday, April 10th @ 6PM at Vena Solutions (The Cube, 2nd Floor – 2 Fraser Ave, Suite 200, Toronto, ON M6K 1Y6) for an exciting evening on Migrating a SaaS Product Across Cloud Providers.\n🎤 Hear from:\n🔹 Saiid Douaihy (Senior Software Manager, Vena Solutions) – Experienced in backend and database development, leading teams responsible for managing the OLAP cube and ETL framework.\n🔹 Pawan Keer (Senior Software Development Manager, Vena Solutions) – Focuses on enhancing Developer Productivity and Experience, leading The Tooling team to improve engineering efficiency.\n🔹 Lucas Tran (Senior Software Developer, Vena Solutions) – Passionate about creating developer tools and improving Vena’s codebase to ensure efficiency and competitiveness.\n💡 Whether you’re tackling a migration or just curious about multi-cloud strategies, this is your chance to learn, network, and enjoy food & drinks with fellow tech enthusiasts.\n📅 Schedule:\n🕕 6:00 PM – Arrive, grab food & socialize\n🎙️ 6:45 PM – Announcements + Lightning Talks/Q&A\n🤝 7:45 PM – More networking (and optional post-event hangout at a nearby bar!)\n🔗 Register here: 👉 www.meetup.com/techtank-to/events/306752010/\n🏆 Sponsored by Vena Solutions – revolutionizing FP&A with AI-powered tools.\nLearn more: 👉 www.venasolutions.com\n#TechTankTO #TechTankToronto #TorontoNetworking #LightningTalks #CloudMigration #SaaS #TorontoTech #SoftwareDevelopment #DevCommunity",
     date: "2025-04-03",
     shortcode: "DH_U_RGPAs-",
-    pk: 18068943919733727,
+    pk: 18068943919733727n,
     createdAtRaw: 1743694207,
     media: [
       { type: "image", path: "/media/instagram/2025-04-03-DHURGPAs/techtankto_DH_U_RGPAs-_3602690535535151934.webp" },
@@ -1523,7 +1523,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🚨 48 HOURS LEFT 🚨 Why you hesitatin’? 🫣 This Saturday, April 12, we’re throwing down for our 🎉 TWO-YEAR ANNIVERSARY 🎉 and you’re invited.\n⏳ Sign-ups close soon — don’t miss out!\n👉 Register here: https://lu.ma/ekdq0p25\n#TechTankTO #AnniversaryEvent #TorontoEvents #TechCommunity #TwoYears #TechTank",
     date: "2025-04-07",
     shortcode: "DIJXS15O4OQ",
-    pk: 17927211408024185,
+    pk: 17927211408024185n,
     createdAtRaw: 1744031204,
     media: [
       {
@@ -1537,7 +1537,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🎉 TECHTANK TURNS TWO! 🎉 From our early days as The Dev Wears Prada to the thriving community we are now—we’ve come a long way 🐟💻 Every meetup, convo, and collab has helped build this amazing tech fam 💖\nThank YOU for swimming with us these past two years—your support, knowledge, and friendship mean the world 🌍💫\n✨ CELEBRATION REMINDER ✨ 🚲 404: Fatigue Not Found is TOMORROW! Spin class is full, but you can still catch us at the after-party: 🕔 5–7PM 📍 Prema Coffee (35 McCaul St # 110) 🥤 Drinks, snacks & bday vibes No reg needed—just show up & celebrate! (And grab a lil something from the café to support 💕)\nHere’s to more growth, laughs, and techy adventures ahead 🚀\n#HappyBirthdayTechTank 🥂 #TechTank #TechTankTo #TechTankToronto #TechTankers #devcommunity #TechTankTurnsTwo",
     date: "2025-04-12",
     shortcode: "DIVH5KgtCqS",
-    pk: 18090105820586520,
+    pk: 18090105820586520n,
     createdAtRaw: 1744425834,
     media: [
       {
@@ -1551,7 +1551,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "SPINNING into our second year with tankers! 🚴‍♀️💙\n“404: Fatigue Not Found” spin class was sweaty, silly, and so much fun thanks to everyone who came out to celebrate TechTank’s 2nd anniversary!\nHere’s to strong legs, stronger community, and many more years of laughs and learning together!\n#TechTankTO #HappyBirthdayTechTank 🍾 #TechTankers #TorontoEvents #TechCommunity",
     date: "2025-04-23",
     shortcode: "DIy88_-Ogx6",
-    pk: 17973027536842059,
+    pk: 17973027536842059n,
     createdAtRaw: 1745426565,
     media: [
       { type: "image", path: "/media/instagram/2025-04-23-DIy88Ogx6/techtankto_DIy88_-Ogx6_3617221525380926586.webp" },
@@ -1562,7 +1562,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "Congratulations 🎉\nMeet FINN — our adorable, floofy, and totally irresistible TechTank Pet of the Month!\nAlso known as: Phineas Gage, Finny, Finnoo, Finnoodle, Noodle, Finnonny, Nonny, Puppy Boy, Puppy Bear, Nafiniel, and *Floof*.\n🤍 With a face for every mood and a heart-melting stare that’s stolen the whole team’s hearts, Finn’s the snuggliest, fluffiest star lighting up our month. Congrats, Finn — you’re pawsitively iconic! 🐾",
     date: "2025-04-24",
     shortcode: "DI1cmTyu5kg",
-    pk: 18099395080535304,
+    pk: 18099395080535304n,
     createdAtRaw: 1745510130,
     featured: true,
     media: [
@@ -1582,7 +1582,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🎉 We’re part of Toronto Tech Week 2025!\n✨ CodeDiversity is back — centering women & gender-diverse folks in tech with lightning talks, workshops & real connection\n🗓️ June 25 👉RSVP now on Luma in our bio\n💜 Sponsored by @7shifts\n#CodeDiversity #TorontoTechWeek #WomenInTech #NonBinaryInTech #TechTankTo",
     date: "2025-06-02",
     shortcode: "DKaPVrgPuE0",
-    pk: 17942434472881101,
+    pk: 17942434472881101n,
     createdAtRaw: 1748892436,
     media: [
       {
@@ -1596,7 +1596,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🚨 GIVEAWAY ALERT! 🚨\nWin a ticket to see @techroastshow LIVE in Toronto 🎤🔥\nWe’ve teamed up with MRG Live to give away ticket to the TechRoast at The Queen Elizabeth Theatre on June 26th! Expect an unforgettable night of comedians roasting the tech world!\nHow to Enter:\nWinner will be chosen on June 25th, 2025 from attendees at ✨CodeDiversity✨\nFollow for more giveaways & event updates:\n👉 @techtankto\n👉 @mrgliveofficial",
     date: "2025-06-10",
     shortcode: "DKuVT7DuHIx",
-    pk: 17879665506225189,
+    pk: 17879665506225189n,
     createdAtRaw: 1749566397,
     media: [
       {
@@ -1610,7 +1610,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "🔥 BBQ SEASON🔥\nJoin us for Buns & Fun(d)s, a summer cookout for a cause! 🍔☀️ $25 gets you food, soft drinks & good vibes to support TechTank 💪\n🎟️ Check out our bio to RSVP on Luma\n🗓 Saturday, Aug 2 | 1:30PM\n🍻 BYOB\n#TechTankTO #BBQForACause #TorontoTech #SummerVibes #Tankers",
     date: "2025-07-07",
     shortcode: "DLz4I7KOww6",
-    pk: 18071767186979833,
+    pk: 18071767186979833n,
     createdAtRaw: 1751900083,
     featured: true,
     media: [
@@ -1626,7 +1626,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "YouTube 📹 LINK IN BIO EDM Party Mix Summer 2025 @techtankto\n#dj #edmdj #housedj #technodj #edm #housemusic #technomusic #canadiandj #koreandj #femaledj #nightlife #edmmix #hardstyle #hardstylemusic #ravemusic #technomix #clubmusic #partymusic",
     date: "2025-08-12",
     shortcode: "DNRVwWtPwky",
-    pk: 18337280413163939,
+    pk: 18337280413163939n,
     createdAtRaw: 1755036344,
     featured: true,
     media: [
@@ -1642,7 +1642,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "We’re excited to announce our first-ever ✨Mentorship Meetup✨ a new TechTank initiative designed to connect early-career folks in tech (1–5 years in) with mentors across multiple disciplines.\nRegister 👉 Link in bio (Luma)\nMeet the Mentors\n✅ Front-End Development: Natalie Famula\n✅ Full Stack Development: Florence Shelley Cobarrubia\n✅ Game Development: Winnie W. Kwan\n✅ UX & UI Design: Mark Frias\n✅ QA (Manual): Alejandra Villarreal\n✅ Data & Analytics: Queenie So\nThis is a pilot program initiated by Charlotte, a member of our community 🙏 Join and help us shape the future of mentorship at TechTank. We can’t wait to see you there!\n#TechTank #Mentorship #Tankers #Community #TorontoTech",
     date: "2025-08-20",
     shortcode: "DNmHtVwNshY",
-    pk: 18078892546765610,
+    pk: 18078892546765610n,
     createdAtRaw: 1755733466,
     featured: true,
     media: [
@@ -1658,7 +1658,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "✨ CodeDiversity × TigerBaby ✨ Clay & Connection — International Women’s Day\nJoin us for a cozy pottery + coffee social for women & gender-diverse folks in tech 🤍\n🧱 What’s included • Guided pottery workshop • All materials + firing\n🗓️ Saturday, March 14 11:00AM–2:00PM\nIf you’re craving connection, creativity, and a softer way to mark IWD come join us ✨ 🔗 RSVP on luma in our bio\n#CodeDiversity #TechTank #InternationalWomensDay #WomenInTech #NonBinaryInTech",
     date: "2026-02-05",
     shortcode: "DUY9ewPgSol",
-    pk: 17936958942175039,
+    pk: 17936958942175039n,
     createdAtRaw: 1770324232,
     media: [
       {
@@ -1672,7 +1672,7 @@ const instagramPosts: Record<string, InstagramPost> = {
       "we're just out here trying to make tech feel a little more human 🤝\nsocials, coffee chats, workshops, panels... it's all part of it\ncome hang with us this month: 📅 Code Diversity - Apr 11 (tomorrow!) 📅 CI Optimization @ BrainStation - Apr 13 🎉 3 year anniversary social - Apr 16 🌸 Supercollider Spring Fling - Apr 27\nopen to anyone in tech and tech-adjacent roles. all are welcome!\nthank you @prismatic_verse for putting this together 🙏\n#techtank #toronto #torontotech #torontotechcommunity #techinTO #womenintech #techcommunity #builders #techbuilders #torontoevents #yyztech",
     date: "2026-04-10",
     shortcode: "DW9-vcgiPHx",
-    pk: 18107726435506054,
+    pk: 18107726435506054n,
     createdAtRaw: 1775861509,
     featured: true,
     media: [
