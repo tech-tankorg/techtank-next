@@ -1,5 +1,3 @@
 {
-  "recommendations": [
-    "oxc.oxc"
-  ]
+  "recommendations": ["oxc.oxc"]
 }
