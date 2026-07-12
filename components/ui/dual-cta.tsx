@@ -2,7 +2,15 @@ import Link from "next/link";
 import { Calendar, Users, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getEventLinks, getSocialLinks, getContributeLinks } from "@/constants/social-links";
-import { LumaIcon, MeetupIcon, LinkedInIcon, SlackIcon, InstagramIcon, GitHubIcon, YouTubeIcon } from "@/components/icons";
+import {
+  LumaIcon,
+  MeetupIcon,
+  LinkedInIcon,
+  SlackIcon,
+  InstagramIcon,
+  GitHubIcon,
+  YouTubeIcon,
+} from "@/components/icons";
 
 export function DualCTA() {
   const eventLinks = getEventLinks();

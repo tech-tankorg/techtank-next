@@ -93,7 +93,9 @@ export function Footer() {
                           rel="noopener noreferrer"
                           className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground dark:text-foreground/60 dark:hover:text-foreground transition-colors group"
                         >
-                          {Icon && <Icon className="h-4 w-4 text-primary-foreground/60 group-hover:text-primary-foreground dark:text-foreground/60 dark:group-hover:text-foreground transition-colors" />}
+                          {Icon && (
+                            <Icon className="h-4 w-4 text-primary-foreground/60 group-hover:text-primary-foreground dark:text-foreground/60 dark:group-hover:text-foreground transition-colors" />
+                          )}
                           {link.name}
                         </a>
                       ) : (
@@ -101,7 +103,9 @@ export function Footer() {
                           href={link.href}
                           className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground dark:text-foreground/60 dark:hover:text-foreground transition-colors group"
                         >
-                          {Icon && <Icon className="h-4 w-4 text-primary-foreground/60 group-hover:text-primary-foreground dark:text-foreground/60 dark:group-hover:text-foreground transition-colors" />}
+                          {Icon && (
+                            <Icon className="h-4 w-4 text-primary-foreground/60 group-hover:text-primary-foreground dark:text-foreground/60 dark:group-hover:text-foreground transition-colors" />
+                          )}
                           {link.name}
                         </Link>
                       )}
