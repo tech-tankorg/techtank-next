@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail } from "lucide-react";
+import { LumaIcon, MeetupIcon, LinkedInIcon, SlackIcon, InstagramIcon, GitHubIcon, YouTubeIcon } from "../icons";
 
 const footerLinks = {
   community: {
@@ -73,27 +74,40 @@ export function Footer() {
                 {section.title}
               </h3>
               <ul className="mt-4 space-y-3">
-                {section.links.map((link) => (
-                  <li key={link.name}>
-                    {link.external ? (
-                      <a
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-primary-foreground/60 hover:text-primary-foreground dark:text-foreground/60 dark:hover:text-foreground transition-colors"
-                      >
-                        {link.name}
-                      </a>
-                    ) : (
-                      <Link
-                        href={link.href}
-                        className="text-sm text-primary-foreground/60 hover:text-primary-foreground dark:text-foreground/60 dark:hover:text-foreground transition-colors"
-                      >
-                        {link.name}
-                      </Link>
-                    )}
-                  </li>
-                ))}
+                {section.links.map((link) => {
+                  let Icon = null;
+                  if (link.name === "Luma") Icon = LumaIcon;
+                  else if (link.name === "Meetup") Icon = MeetupIcon;
+                  else if (link.name === "LinkedIn") Icon = LinkedInIcon;
+                  else if (link.name === "Slack") Icon = SlackIcon;
+                  else if (link.name === "Instagram") Icon = InstagramIcon;
+                  else if (link.name === "GitHub") Icon = GitHubIcon;
+                  else if (link.name === "YouTube") Icon = YouTubeIcon;
+
+                  return (
+                    <li key={link.name}>
+                      {link.external ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground dark:text-foreground/60 dark:hover:text-foreground transition-colors group"
+                        >
+                          {Icon && <Icon className="h-4 w-4 text-primary-foreground/60 group-hover:text-primary-foreground dark:text-foreground/60 dark:group-hover:text-foreground transition-colors" />}
+                          {link.name}
+                        </a>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground dark:text-foreground/60 dark:hover:text-foreground transition-colors group"
+                        >
+                          {Icon && <Icon className="h-4 w-4 text-primary-foreground/60 group-hover:text-primary-foreground dark:text-foreground/60 dark:group-hover:text-foreground transition-colors" />}
+                          {link.name}
+                        </Link>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}

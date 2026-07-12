@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Calendar, Users, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getEventLinks, getSocialLinks, getContributeLinks } from "@/constants/social-links";
+import { LumaIcon, MeetupIcon, LinkedInIcon, SlackIcon, InstagramIcon, GitHubIcon, YouTubeIcon } from "@/components/icons";
 
 export function DualCTA() {
   const eventLinks = getEventLinks();
@@ -22,22 +23,26 @@ export function DualCTA() {
             Subscribe to our Luma calendar and follow us on socials.
           </p>
           <div className="flex flex-wrap gap-2">
-            {eventLinks.map((link) => (
-              <Button key={link.id} variant="primary" size="sm" asChild>
-                <a href={link.url} target="_blank" rel="noopener noreferrer">
-                  {link.name}
-                  <ExternalLink className="ml-2 h-3.5 w-3.5" />
-                </a>
-              </Button>
-            ))}
-            {socialLinks.map((link) => (
-              <Button key={link.id} variant={link.type === "primary" ? "primary" : "outline"} size="sm" asChild>
-                <a href={link.url} target="_blank" rel="noopener noreferrer">
-                  {link.name}
-                  <ExternalLink className="ml-2 h-3.5 w-3.5" />
-                </a>
-              </Button>
-            ))}
+            {[...eventLinks, ...socialLinks].map((link) => {
+              let Icon = null;
+              if (link.name === "Luma") Icon = LumaIcon;
+              else if (link.name === "Meetup") Icon = MeetupIcon;
+              else if (link.name === "LinkedIn") Icon = LinkedInIcon;
+              else if (link.name === "Slack") Icon = SlackIcon;
+              else if (link.name === "Instagram") Icon = InstagramIcon;
+              else if (link.name === "GitHub") Icon = GitHubIcon;
+              else if (link.name === "YouTube") Icon = YouTubeIcon;
+
+              return (
+                <Button key={link.id} variant={link.type === "primary" ? "primary" : "outline"} size="sm" asChild>
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    {Icon && <Icon className="mr-2 h-4 w-4" />}
+                    {link.name}
+                    <ExternalLink className="ml-2 h-3.5 w-3.5" />
+                  </a>
+                </Button>
+              );
+            })}
           </div>
         </div>
       </div>
