@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, QrCode, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { QrDialog } from "@/components/ui/qr-dialog";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { useAppStore } from "@/stores/app-state";
 
@@ -16,7 +17,7 @@ const navigation = [
 ];
 
 export function Header() {
-  const { mobileMenuOpen, setMobileMenuOpen, toggleMobileMenu } = useAppStore();
+  const { mobileMenuOpen, setMobileMenuOpen, toggleMobileMenu, setQrDialogOpen } = useAppStore();
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-xl border-b border-border">
@@ -57,13 +58,29 @@ export function Header() {
         {/* Desktop CTA + theme toggle */}
         <div className="hidden lg:flex lg:items-center lg:gap-2">
           <ThemeToggle />
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setQrDialogOpen(true)}
+            aria-label="Show get involved QR code"
+          >
+            <QrCode className="h-5 w-5" />
+          </Button>
           <Button variant="primary" size="sm" asChild>
-            <Link href="/join-us">Join us</Link>
+            <Link href="/get-involved">Join us</Link>
           </Button>
         </div>
 
-        {/* Mobile: theme toggle + menu button */}
+        {/* Mobile: QR + theme toggle + menu button */}
         <div className="flex lg:hidden items-center gap-1">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setQrDialogOpen(true)}
+            aria-label="Show get involved QR code"
+          >
+            <QrCode className="h-5 w-5" />
+          </Button>
           <ThemeToggle />
           <button
             type="button"
@@ -92,12 +109,14 @@ export function Header() {
             ))}
             <div className="pt-4 border-t border-border">
               <Button variant="primary" size="sm" className="w-full" asChild>
-                <Link href="/#join-us">Join us</Link>
+                <Link href="/get-involved">Join us</Link>
               </Button>
             </div>
           </div>
         </div>
       )}
+
+      <QrDialog />
     </header>
   );
 }
