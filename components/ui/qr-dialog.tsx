@@ -30,7 +30,7 @@ export function QrDialog() {
           </p>
         </div>
 
-        <div className="rounded-2xl bg-white p-5 shadow-soft-lg">
+        <div className="rounded-2xl light bg-background p-5 shadow-soft-lg">
           <Image
             src="/images/share/get-involved-qr.svg"
             alt="QR code linking to the TechTank get involved page"
