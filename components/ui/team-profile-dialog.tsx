@@ -35,7 +35,7 @@ export function TeamProfileDialog({ member, open, onClose, titleId }: TeamProfil
               .split(/\n+/)
               .filter(Boolean)
               .map((paragraph, i) => (
-                <p key={i} className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                <p key={i} className="text-sm md:text-base text-foreground leading-relaxed">
                   {paragraph.trim()}
                 </p>
               ))}

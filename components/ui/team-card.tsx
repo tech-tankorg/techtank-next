@@ -94,8 +94,8 @@ export function TeamCard({ member, variant = "core", className }: TeamCardProps)
       <button type="button" onClick={() => setOpen(true)} className={cn(teamCardVariants({ variant }), className)}>
         {variant === "board" && (
           <>
-            <div className="pointer-events-none absolute -top-8 -right-8 h-40 w-40 rounded-full bg-white/10 dark:bg-white/5" />
-            <div className="pointer-events-none absolute -bottom-12 -left-6 h-32 w-32 rounded-full bg-white/10 dark:bg-white/5" />
+            <div className="pointer-events-none absolute -top-8 -right-8 h-40 w-40 rounded-full light bg-background/10 dark:bg-background/5" />
+            <div className="pointer-events-none absolute -bottom-12 -left-6 h-32 w-32 rounded-full light bg-background/10 dark:bg-background/5" />
           </>
         )}
         <TeamAvatar name={name} avatar={avatar} size={avatarSize} />
