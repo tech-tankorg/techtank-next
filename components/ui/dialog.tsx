@@ -44,7 +44,7 @@ export function Dialog({ open, onClose, labelledBy, className, children }: Dialo
     <>
       <button
         type="button"
-        className="fixed inset-0 z-50 bg-black/70 cursor-default"
+        className="fixed inset-0 z-50 bg-background/70 cursor-default"
         aria-label="Close dialog"
         onClick={onClose}
       />
