@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Megaphone, Users, Building2 } from "lucide-react";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { RoleCard, roleCardsData } from "@/components/ui/role-card";
@@ -9,6 +10,44 @@ export const metadata: Metadata = {
   description:
     "Get involved with TechTank TO. Speak, host, sponsor, or volunteer — there are multiple ways to contribute to Toronto's tech community.",
 };
+
+const communityLinks = [
+  {
+    name: "Luma",
+    href: "https://luma.com/techtank",
+    icon: "/platforms/Luma_Logo.png",
+  },
+  {
+    name: "Meetup",
+    href: "https://meetup.com/techtank-to",
+    icon: "/platforms/Meetup_Logo.png",
+  },
+  {
+    name: "Slack",
+    href: "/links/slack",
+    icon: "/platforms/slack-cropped.png",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://linkedin.com/company/techtank-to",
+    icon: "/platforms/LinkedIn.png",
+  },
+  {
+    name: "Instagram",
+    href: "https://instagram.com/techtankto",
+    icon: "/platforms/Instagram.svg",
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/tech-tankorg",
+    icon: "/platforms/GitHub_Invertocat_Logo.svg",
+  },
+  {
+    name: "YouTube",
+    href: "https://youtube.com/@TechTankTo",
+    icon: "/platforms/youtube-logo.png",
+  },
+];
 
 const whyGetInvolved = [
   {
@@ -48,6 +87,31 @@ export default function GetInvolvedPage() {
               TechTank runs because of people who show up and help make things happen. There are a few ways to get
               involved depending on where you&apos;re at and what you want to put in.
             </p>
+          </div>
+
+          {/* Community platforms */}
+          <div className="mt-10">
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+              Join the community
+            </span>
+            <div className="flex flex-wrap gap-4">
+              {communityLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group relative overflow-hidden rounded-2xl glass transition-transform hover:scale-[1.03]"
+                >
+                  <div className="flex flex-col items-center justify-center gap-1 p-5">
+                    <div className="relative flex h-10 w-10 items-center justify-center">
+                      <Image src={link.icon} alt="" width={40} height={40} />
+                    </div>
+                    <h2 className="text-sm font-medium text-foreground">{link.name}</h2>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
