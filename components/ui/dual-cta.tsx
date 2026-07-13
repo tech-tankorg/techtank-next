@@ -2,15 +2,7 @@ import Link from "next/link";
 import { Calendar, Users, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getEventLinks, getSocialLinks, getContributeLinks } from "@/constants/social-links";
-import {
-  LumaIcon,
-  MeetupIcon,
-  LinkedInIcon,
-  SlackIcon,
-  InstagramIcon,
-  GitHubIcon,
-  YouTubeIcon,
-} from "@/components/icons";
+import { BRAND_ICONS } from "@/components/icons";
 
 export function DualCTA() {
   const eventLinks = getEventLinks();
@@ -32,14 +24,7 @@ export function DualCTA() {
           </p>
           <div className="flex flex-wrap gap-2">
             {[...eventLinks, ...socialLinks].map((link) => {
-              let Icon = null;
-              if (link.name === "Luma") Icon = LumaIcon;
-              else if (link.name === "Meetup") Icon = MeetupIcon;
-              else if (link.name === "LinkedIn") Icon = LinkedInIcon;
-              else if (link.name === "Slack") Icon = SlackIcon;
-              else if (link.name === "Instagram") Icon = InstagramIcon;
-              else if (link.name === "GitHub") Icon = GitHubIcon;
-              else if (link.name === "YouTube") Icon = YouTubeIcon;
+              const Icon = BRAND_ICONS[link.name];
 
               return (
                 <Button key={link.id} variant={link.type === "primary" ? "primary" : "outline"} size="sm" asChild>

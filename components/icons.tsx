@@ -57,3 +57,13 @@ export function YouTubeIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export const BRAND_ICONS: Record<string, React.FC<SVGProps<SVGSVGElement>>> = {
+  Luma: LumaIcon,
+  Meetup: MeetupIcon,
+  LinkedIn: LinkedInIcon,
+  Slack: SlackIcon,
+  Instagram: InstagramIcon,
+  GitHub: GitHubIcon,
+  YouTube: YouTubeIcon,
+};

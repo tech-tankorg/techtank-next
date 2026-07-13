@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail } from "lucide-react";
-import { LumaIcon, MeetupIcon, LinkedInIcon, SlackIcon, InstagramIcon, GitHubIcon, YouTubeIcon } from "../icons";
+import { BRAND_ICONS } from "../icons";
 
 const footerLinks = {
   community: {
@@ -75,14 +75,7 @@ export function Footer() {
               </h3>
               <ul className="mt-4 space-y-3">
                 {section.links.map((link) => {
-                  let Icon = null;
-                  if (link.name === "Luma") Icon = LumaIcon;
-                  else if (link.name === "Meetup") Icon = MeetupIcon;
-                  else if (link.name === "LinkedIn") Icon = LinkedInIcon;
-                  else if (link.name === "Slack") Icon = SlackIcon;
-                  else if (link.name === "Instagram") Icon = InstagramIcon;
-                  else if (link.name === "GitHub") Icon = GitHubIcon;
-                  else if (link.name === "YouTube") Icon = YouTubeIcon;
+                  const Icon = BRAND_ICONS[link.name];
 
                   return (
                     <li key={link.name}>
