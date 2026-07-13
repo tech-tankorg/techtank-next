@@ -25,7 +25,7 @@ export function QrDialog() {
           <h2 id={titleId} className="font-display text-2xl font-bold text-foreground leading-tight">
             Get involved with TechTank
           </h2>
-          <p className="text-sm text-muted-foreground mt-2">
+          <p className="text-sm text-foreground mt-2">
             Point your phone camera at the code to open the get involved page.
           </p>
         </div>
