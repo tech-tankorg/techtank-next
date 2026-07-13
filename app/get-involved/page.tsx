@@ -15,37 +15,37 @@ const communityLinks = [
   {
     name: "Luma",
     href: "https://luma.com/techtank",
-    icon: "/platforms/Luma_Logo.png",
+    icon: "/images/platforms/Luma_Logo.png",
   },
   {
     name: "Meetup",
     href: "https://meetup.com/techtank-to",
-    icon: "/platforms/Meetup_Logo.png",
+    icon: "/images/platforms/Meetup_Logo.png",
   },
   {
     name: "Slack",
     href: "/links/slack",
-    icon: "/platforms/slack-cropped.png",
+    icon: "/images/platforms/slack-cropped.png",
   },
   {
     name: "LinkedIn",
     href: "https://linkedin.com/company/techtank-to",
-    icon: "/platforms/LinkedIn.png",
+    icon: "/images/platforms/LinkedIn.png",
   },
   {
     name: "Instagram",
     href: "https://instagram.com/techtankto",
-    icon: "/platforms/Instagram.svg",
+    icon: "/images/platforms/Instagram.svg",
   },
   {
     name: "GitHub",
     href: "https://github.com/tech-tankorg",
-    icon: "/platforms/GitHub_Invertocat_Logo.svg",
+    icon: "/images/platforms/GitHub_Invertocat_Logo.svg",
   },
   {
     name: "YouTube",
     href: "https://youtube.com/@TechTankTo",
-    icon: "/platforms/youtube-logo.png",
+    icon: "/images/platforms/youtube-logo.png",
   },
 ];
 
@@ -104,9 +104,7 @@ export default function GetInvolvedPage() {
                   className="group relative overflow-hidden rounded-2xl glass transition-transform hover:scale-[1.03]"
                 >
                   <div className="flex flex-col items-center justify-center gap-1 p-5">
-                    <div className="relative flex h-10 w-10 items-center justify-center">
-                      <Image src={link.icon} alt="" width={40} height={40} />
-                    </div>
+                    <Image src={link.icon} alt="" width={40} height={40} className="h-10 w-10" />
                     <h2 className="text-sm font-medium text-foreground">{link.name}</h2>
                   </div>
                 </a>

@@ -32,7 +32,7 @@ export function QrDialog() {
 
         <div className="rounded-2xl bg-white p-5 shadow-soft-lg">
           <Image
-            src="/images/get-involved-qr.svg"
+            src="/images/share/get-involved-qr.svg"
             alt="QR code linking to the TechTank get involved page"
             width={220}
             height={220}
@@ -41,7 +41,7 @@ export function QrDialog() {
         </div>
 
         <Button variant="primary" className="w-full" asChild onClick={onClose}>
-          <Link href="/get-involved">Open get involved page</Link>
+          <Link href="/get-involved">Visit Get Involved</Link>
         </Button>
       </div>
     </Dialog>
