@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { BRAND_ICONS } from "@/components/icons";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { EventBrowser } from "@/components/ui/event-browser";
 import { DualCTA } from "@/components/ui/dual-cta";
@@ -79,12 +80,14 @@ export default async function EventsPage() {
         <div className="flex flex-wrap gap-4 justify-center mb-8">
           <Button variant="primary" asChild>
             <Link href="https://lu.ma/techtank" target="_blank" rel="noopener noreferrer">
+              <BRAND_ICONS.Luma className="mr-2 h-4 w-4" />
               Follow us on Luma
               <ExternalLink className="ml-2 h-4 w-4" />
             </Link>
           </Button>
           <Button variant="outline" asChild>
             <Link href="https://meetup.com/techtank-to" target="_blank" rel="noopener noreferrer">
+              <BRAND_ICONS.Meetup className="mr-2 h-4 w-4" />
               Follow us on Meetup
               <ExternalLink className="ml-2 h-4 w-4" />
             </Link>

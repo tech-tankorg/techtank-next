@@ -53,14 +53,18 @@ export function DualCTA() {
             <Button variant="primary" size="sm" asChild>
               <Link href="/get-involved">Get involved</Link>
             </Button>
-            {contributeLinks.map((link) => (
-              <Button key={link.id} variant="outline" size="sm" asChild>
-                <a href={link.url} target="_blank" rel="noopener noreferrer">
-                  {link.name}
-                  <ExternalLink className="ml-2 h-3.5 w-3.5" />
-                </a>
-              </Button>
-            ))}
+            {contributeLinks.map((link) => {
+              const Icon = BRAND_ICONS[link.name];
+              return (
+                <Button key={link.id} variant="outline" size="sm" asChild>
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    {Icon && <Icon className="mr-2 h-4 w-4" />}
+                    {link.name}
+                    <ExternalLink className="ml-2 h-3.5 w-3.5" />
+                  </a>
+                </Button>
+              );
+            })}
           </div>
         </div>
       </div>

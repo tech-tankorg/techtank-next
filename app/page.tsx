@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Calendar, ExternalLink, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { BRAND_ICONS } from "@/components/icons";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { StatsMarquee } from "@/components/ui/stats-marquee";
 import { SponsorsMarquee } from "@/components/ui/sponsors-marquee";
@@ -150,12 +151,14 @@ export default async function HomePage() {
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Button variant="primary" size="md" asChild>
             <a href="https://luma.com/techtank" target="_blank" rel="noopener noreferrer">
+              <BRAND_ICONS.Luma className="mr-2 h-4 w-4" />
               Luma
               <ExternalLink className="ml-2 h-4 w-4" />
             </a>
           </Button>
           <Button variant="outline" size="md" asChild>
             <a href="https://meetup.com/techtank-to" target="_blank" rel="noopener noreferrer">
+              <BRAND_ICONS.Meetup className="mr-2 h-4 w-4" />
               Meetup
               <ExternalLink className="ml-2 h-4 w-4" />
             </a>
