@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Calendar, Users, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getEventLinks, getSocialLinks, getContributeLinks } from "@/constants/social-links";
+import { BRAND_ICONS } from "@/components/ui/icons";
 
 export function DualCTA() {
   const eventLinks = getEventLinks();
@@ -22,22 +23,19 @@ export function DualCTA() {
             Subscribe to our Luma calendar and follow us on socials.
           </p>
           <div className="flex flex-wrap gap-2">
-            {eventLinks.map((link) => (
-              <Button key={link.id} variant="primary" size="sm" asChild>
-                <a href={link.url} target="_blank" rel="noopener noreferrer">
-                  {link.name}
-                  <ExternalLink className="ml-2 h-3.5 w-3.5" />
-                </a>
-              </Button>
-            ))}
-            {socialLinks.map((link) => (
-              <Button key={link.id} variant={link.type === "primary" ? "primary" : "outline"} size="sm" asChild>
-                <a href={link.url} target="_blank" rel="noopener noreferrer">
-                  {link.name}
-                  <ExternalLink className="ml-2 h-3.5 w-3.5" />
-                </a>
-              </Button>
-            ))}
+            {[...eventLinks, ...socialLinks].map((link) => {
+              const Icon = BRAND_ICONS[link.id];
+
+              return (
+                <Button key={link.id} variant={link.type === "primary" ? "primary" : "outline"} size="sm" asChild>
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    {Icon && <Icon className="mr-2 h-4 w-4" />}
+                    {link.name}
+                    <ExternalLink className="ml-2 h-3.5 w-3.5" />
+                  </a>
+                </Button>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -55,14 +53,18 @@ export function DualCTA() {
             <Button variant="primary" size="sm" asChild>
               <Link href="/get-involved">Get involved</Link>
             </Button>
-            {contributeLinks.map((link) => (
-              <Button key={link.id} variant="outline" size="sm" asChild>
-                <a href={link.url} target="_blank" rel="noopener noreferrer">
-                  {link.name}
-                  <ExternalLink className="ml-2 h-3.5 w-3.5" />
-                </a>
-              </Button>
-            ))}
+            {contributeLinks.map((link) => {
+              const Icon = BRAND_ICONS[link.id];
+              return (
+                <Button key={link.id} variant="outline" size="sm" asChild>
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    {Icon && <Icon className="mr-2 h-4 w-4" />}
+                    {link.name}
+                    <ExternalLink className="ml-2 h-3.5 w-3.5" />
+                  </a>
+                </Button>
+              );
+            })}
           </div>
         </div>
       </div>
