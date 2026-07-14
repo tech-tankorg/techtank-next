@@ -68,7 +68,7 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
       <div className="p-6 flex flex-col flex-1">
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-4">
           <span className="text-[#E4405F]">
-            <BRAND_ICONS.Instagram className="h-5 w-5" />
+            <BRAND_ICONS.instagram className="h-5 w-5" />
           </span>
           <span className="text-xs text-muted-foreground uppercase tracking-wide font-medium shrink-0">Instagram</span>
           <span className="text-xs text-muted-foreground/50 shrink-0">·</span>
@@ -87,7 +87,7 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
           rel="noopener noreferrer"
           className="mt-auto inline-flex items-center text-sm text-amber-dark font-medium hover:text-amber-dark/80 transition-colors"
         >
-          <BRAND_ICONS.Instagram className="mr-2 h-4 w-4" />
+          <BRAND_ICONS.instagram className="mr-2 h-4 w-4" />
           View on Instagram
           <ExternalLink className="ml-1 h-3 w-3" />
         </a>
@@ -111,7 +111,7 @@ export function SocialFeed() {
         {getAllSocialLinks()
           .filter((link) => ["slack", "linkedin", "instagram"].includes(link.id))
           .map((link) => {
-            const Icon = BRAND_ICONS[link.name];
+            const Icon = BRAND_ICONS[link.id];
             return (
               <Button key={link.id} variant={link.type === "primary" ? "primary" : "outline"} size="sm" asChild>
                 <a

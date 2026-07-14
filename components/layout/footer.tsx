@@ -75,7 +75,7 @@ export function Footer() {
               </h3>
               <ul className="mt-4 space-y-3">
                 {section.links.map((link) => {
-                  const Icon = BRAND_ICONS[link.name];
+                  const Icon = BRAND_ICONS[link.name.toLowerCase()];
 
                   return (
                     <li key={link.name}>

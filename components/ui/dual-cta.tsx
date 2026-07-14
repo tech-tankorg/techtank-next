@@ -24,7 +24,7 @@ export function DualCTA() {
           </p>
           <div className="flex flex-wrap gap-2">
             {[...eventLinks, ...socialLinks].map((link) => {
-              const Icon = BRAND_ICONS[link.name];
+              const Icon = BRAND_ICONS[link.name.toLowerCase()];
 
               return (
                 <Button key={link.id} variant={link.type === "primary" ? "primary" : "outline"} size="sm" asChild>
@@ -54,7 +54,7 @@ export function DualCTA() {
               <Link href="/get-involved">Get involved</Link>
             </Button>
             {contributeLinks.map((link) => {
-              const Icon = BRAND_ICONS[link.name];
+              const Icon = BRAND_ICONS[link.name.toLowerCase()];
               return (
                 <Button key={link.id} variant="outline" size="sm" asChild>
                   <a href={link.url} target="_blank" rel="noopener noreferrer">

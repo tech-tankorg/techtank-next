@@ -273,28 +273,28 @@ export default function PressKitPage() {
           <div className="flex flex-wrap gap-4 justify-center">
             <Button variant="outline" asChild>
               <a href="https://linkedin.com/company/techtank-to" target="_blank" rel="noopener noreferrer">
-                <LinkedInIcon className="mr-2 h-4 w-4" />
+                <BRAND_ICONS.linkedin className="mr-2 h-4 w-4" />
                 LinkedIn
                 <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
             <Button variant="outline" asChild>
               <a href="https://instagram.com/techtankto" target="_blank" rel="noopener noreferrer">
-                <InstagramIcon className="mr-2 h-4 w-4" />
+                <BRAND_ICONS.instagram className="mr-2 h-4 w-4" />
                 Instagram
                 <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
             <Button variant="outline" asChild>
               <a href="https://youtube.com/@TechTankTo" target="_blank" rel="noopener noreferrer">
-                <YouTubeIcon className="mr-2 h-4 w-4" />
+                <BRAND_ICONS.youtube className="mr-2 h-4 w-4" />
                 YouTube
                 <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
             <Button variant="outline" asChild>
               <a href="https://github.com/tech-tankorg" target="_blank" rel="noopener noreferrer">
-                <GitHubIcon className="mr-2 h-4 w-4" />
+                <BRAND_ICONS.github className="mr-2 h-4 w-4" />
                 GitHub
                 <ExternalLink className="ml-2 h-4 w-4" />
               </a>

@@ -92,7 +92,7 @@ const currentPrograms = [
     icon: MessageSquare,
     title: "The Slack Channel",
     description: "Join the conversation between events. Where the community lives day-to-day.",
-    cta: { label: "Join on Slack", href: socialLinks.slack.url, brand: "Slack" },
+    cta: { label: "Join on Slack", href: socialLinks.slack.url, brand: "slack" },
   },
 ];
 
@@ -243,7 +243,7 @@ export default function AboutPage() {
         />
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {currentPrograms.map((program) => {
-            const BrandIcon = program.cta?.brand ? BRAND_ICONS[program.cta.brand] : null;
+            const BrandIcon = program.cta?.brand ? BRAND_ICONS[program.cta.brand.toLowerCase()] : null;
             return (
               <div key={program.title} className="flex flex-col gap-4 bg-card rounded-2xl border border-border p-6">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-ring/10 text-ring">

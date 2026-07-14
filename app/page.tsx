@@ -151,14 +151,14 @@ export default async function HomePage() {
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Button variant="primary" size="md" asChild>
             <a href="https://luma.com/techtank" target="_blank" rel="noopener noreferrer">
-              <BRAND_ICONS.Luma className="mr-2 h-4 w-4" />
+              <BRAND_ICONS.luma className="mr-2 h-4 w-4" />
               Luma
               <ExternalLink className="ml-2 h-4 w-4" />
             </a>
           </Button>
           <Button variant="outline" size="md" asChild>
             <a href="https://meetup.com/techtank-to" target="_blank" rel="noopener noreferrer">
-              <BRAND_ICONS.Meetup className="mr-2 h-4 w-4" />
+              <BRAND_ICONS.meetup className="mr-2 h-4 w-4" />
               Meetup
               <ExternalLink className="ml-2 h-4 w-4" />
             </a>
