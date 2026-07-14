@@ -19,7 +19,7 @@ import { Section, SectionHeader } from "@/components/ui/section";
 import { SponsorsMarquee } from "@/components/ui/sponsors-marquee";
 import { getCoverImage, getCoverVideo, getInstagramPostsByIds } from "@/constants/instagram-posts";
 import { socialLinks } from "@/constants/social-links";
-import { BRAND_ICONS } from "@/components/icons";
+import { BRAND_ICONS } from "@/components/ui/icons";
 
 export const metadata: Metadata = {
   title: "About",
@@ -243,7 +243,7 @@ export default function AboutPage() {
         />
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {currentPrograms.map((program) => {
-            const BrandIcon = program.cta?.brand ? BRAND_ICONS[program.cta.brand.toLowerCase()] : null;
+            const BrandIcon = program.cta?.brand ? BRAND_ICONS[program.cta.brand] : null;
             return (
               <div key={program.title} className="flex flex-col gap-4 bg-card rounded-2xl border border-border p-6">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-ring/10 text-ring">
