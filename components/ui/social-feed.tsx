@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { InstagramIcon } from "@/components/ui/custom-icons";
+import { BRAND_ICONS, InstagramIcon } from "@/components/ui/icons";
 import { getAllSocialLinks } from "@/constants/social-links";
 import {
   getCoverImage,
@@ -87,6 +87,7 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
           rel="noopener noreferrer"
           className="mt-auto inline-flex items-center text-sm text-amber-dark font-medium hover:text-amber-dark/80 transition-colors"
         >
+          <InstagramIcon className="mr-2 h-4 w-4" />
           View on Instagram
           <ExternalLink className="ml-1 h-3 w-3" />
         </a>
@@ -109,18 +110,22 @@ export function SocialFeed() {
       <div className="flex flex-wrap items-center justify-center gap-3 pt-6">
         {getAllSocialLinks()
           .filter((link) => ["slack", "linkedin", "instagram"].includes(link.id))
-          .map((link) => (
-            <Button key={link.id} variant={link.type === "primary" ? "primary" : "outline"} size="sm" asChild>
-              <a
-                href={link.id === "instagram" ? (instagramUrl ?? link.url) : link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {link.id === "slack" ? "Join Slack" : link.name}
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-          ))}
+          .map((link) => {
+            const Icon = BRAND_ICONS[link.id];
+            return (
+              <Button key={link.id} variant={link.type === "primary" ? "primary" : "outline"} size="sm" asChild>
+                <a
+                  href={link.id === "instagram" ? (instagramUrl ?? link.url) : link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {Icon && <Icon className="mr-2 h-4 w-4" />}
+                  {link.id === "slack" ? "Join Slack" : link.name}
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+            );
+          })}
       </div>
     </div>
   );

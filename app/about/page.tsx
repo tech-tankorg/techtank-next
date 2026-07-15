@@ -19,6 +19,7 @@ import { Section, SectionHeader } from "@/components/ui/section";
 import { SponsorsMarquee } from "@/components/ui/sponsors-marquee";
 import { getCoverImage, getCoverVideo, getInstagramPostsByIds } from "@/constants/instagram-posts";
 import { socialLinks } from "@/constants/social-links";
+import { BRAND_ICONS } from "@/components/ui/icons";
 
 export const metadata: Metadata = {
   title: "About",
@@ -91,7 +92,7 @@ const currentPrograms = [
     icon: MessageSquare,
     title: "The Slack Channel",
     description: "Join the conversation between events. Where the community lives day-to-day.",
-    cta: { label: "Join on Slack", href: socialLinks.slack.url },
+    cta: { label: "Join on Slack", href: socialLinks.slack.url, brand: "slack" },
   },
 ];
 
@@ -241,22 +242,28 @@ export default function AboutPage() {
           className="mb-12"
         />
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {currentPrograms.map((program) => (
-            <div key={program.title} className="flex flex-col gap-4 bg-card rounded-2xl border border-border p-6">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-ring/10 text-ring">
-                <program.icon className="h-6 w-6" />
+          {currentPrograms.map((program) => {
+            const BrandIcon = program.cta?.brand ? BRAND_ICONS[program.cta.brand] : null;
+            return (
+              <div key={program.title} className="flex flex-col gap-4 bg-card rounded-2xl border border-border p-6">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-ring/10 text-ring">
+                  <program.icon className="h-6 w-6" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-2">{program.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm">{program.description}</p>
+                </div>
+                {program.cta && (
+                  <Button variant="outline" size="sm" className="self-start" asChild>
+                    <Link href={program.cta.href}>
+                      {BrandIcon && <BrandIcon className="mr-2 h-4 w-4" />}
+                      {program.cta.label}
+                    </Link>
+                  </Button>
+                )}
               </div>
-              <div className="flex-1">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">{program.title}</h3>
-                <p className="text-muted-foreground leading-relaxed text-sm">{program.description}</p>
-              </div>
-              {program.cta && (
-                <Button variant="outline" size="sm" className="self-start" asChild>
-                  <Link href={program.cta.href}>{program.cta.label}</Link>
-                </Button>
-              )}
-            </div>
-          ))}
+            );
+          })}
         </div>
       </Section>
 

@@ -4,8 +4,10 @@ import Image from "next/image";
 import { Download, FileText, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
+import { BRAND_ICONS } from "@/components/ui/icons";
 import { ContactCard } from "@/components/ui/contact-card";
 import { CopyButton } from "@/components/ui/copy-button";
+import { getAllSocialLinks } from "@/constants/social-links";
 
 export const metadata: Metadata = {
   title: "Media Kit",
@@ -270,30 +272,20 @@ export default function PressKitPage() {
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground mb-8">Official channels</h2>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button variant="outline" asChild>
-              <a href="https://linkedin.com/company/techtank-to" target="_blank" rel="noopener noreferrer">
-                LinkedIn
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-            <Button variant="outline" asChild>
-              <a href="https://instagram.com/techtankto" target="_blank" rel="noopener noreferrer">
-                Instagram
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-            <Button variant="outline" asChild>
-              <a href="https://youtube.com/@TechTankTo" target="_blank" rel="noopener noreferrer">
-                YouTube
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-            <Button variant="outline" asChild>
-              <a href="https://github.com/tech-tankorg" target="_blank" rel="noopener noreferrer">
-                GitHub
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
+            {getAllSocialLinks()
+              .filter((link) => ["linkedin", "instagram", "youtube", "github"].includes(link.id))
+              .map((link) => {
+                const Icon = BRAND_ICONS[link.id];
+                return (
+                  <Button key={link.id} variant="outline" asChild>
+                    <a href={link.url} target="_blank" rel="noopener noreferrer">
+                      {Icon && <Icon className="mr-2 h-4 w-4" />}
+                      {link.name}
+                      <ExternalLink className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                );
+              })}
           </div>
         </div>
       </Section>

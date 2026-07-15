@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail } from "lucide-react";
+import { BRAND_ICONS } from "@/components/ui/icons";
 
 const footerLinks = {
   community: {
@@ -73,27 +74,37 @@ export function Footer() {
                 {section.title}
               </h3>
               <ul className="mt-4 space-y-3">
-                {section.links.map((link) => (
-                  <li key={link.name}>
-                    {link.external ? (
-                      <a
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-primary-foreground/60 hover:text-primary-foreground dark:text-foreground/60 dark:hover:text-foreground transition-colors"
-                      >
-                        {link.name}
-                      </a>
-                    ) : (
-                      <Link
-                        href={link.href}
-                        className="text-sm text-primary-foreground/60 hover:text-primary-foreground dark:text-foreground/60 dark:hover:text-foreground transition-colors"
-                      >
-                        {link.name}
-                      </Link>
-                    )}
-                  </li>
-                ))}
+                {section.links.map((link) => {
+                  const Icon = BRAND_ICONS[link.name.toLowerCase()];
+
+                  return (
+                    <li key={link.name}>
+                      {link.external ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground dark:text-foreground/60 dark:hover:text-foreground transition-colors group"
+                        >
+                          {Icon && (
+                            <Icon className="h-4 w-4 text-primary-foreground/60 group-hover:text-primary-foreground dark:text-foreground/60 dark:group-hover:text-foreground transition-colors" />
+                          )}
+                          {link.name}
+                        </a>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground dark:text-foreground/60 dark:hover:text-foreground transition-colors group"
+                        >
+                          {Icon && (
+                            <Icon className="h-4 w-4 text-primary-foreground/60 group-hover:text-primary-foreground dark:text-foreground/60 dark:group-hover:text-foreground transition-colors" />
+                          )}
+                          {link.name}
+                        </Link>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
