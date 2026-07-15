@@ -31,7 +31,8 @@ const buttonVariants = cva(
       {
         variant: "nav",
         isActive: true,
-        className: "bg-ring text-primary-foreground hover:bg-ring/90 dark:hover:bg-ring/90 dark:hover:text-primary-foreground",
+        className:
+          "bg-ring text-primary-foreground hover:bg-ring/90 dark:hover:bg-ring/90 dark:hover:text-primary-foreground",
       },
     ],
     defaultVariants: {
