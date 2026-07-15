@@ -78,62 +78,60 @@ export function EventBrowser({ events }: EventBrowserProps) {
   return (
     <div>
       {/* Controls */}
-      <div className="rounded-xl bg-card border border-border p-4 flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
+      <div className="rounded-2xl md:rounded-full bg-card border border-border p-4 md:p-3 flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
         {/* Category filters */}
-        <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
+        <div className="flex flex-wrap items-center justify-center md:justify-start gap-1">
           {categories.map((c) => (
-            <button
+            <Button
               key={c.id}
+              variant="nav"
+              size="sm"
+              isActive={category === c.id}
               onClick={() => setCategory(c.id)}
-              className={cn(
-                "px-3 py-1.5 rounded-full text-sm font-medium transition-colors",
-                category === c.id
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-muted text-muted-foreground hover:bg-muted/80",
-              )}
+              className="cursor-pointer"
             >
               {c.label}
-            </button>
+            </Button>
           ))}
         </div>
 
         {/* Display mode */}
-        <div className="flex items-center gap-0.5 rounded-lg bg-muted p-0.5 shrink-0">
+        <div className="flex items-center gap-0.5 rounded-full bg-muted p-1 shrink-0">
           <button
             onClick={() => setDisplayMode("cards")}
             className={cn(
-              "p-1.5 rounded-md transition-colors",
+              "p-1.5 rounded-full transition-colors cursor-pointer",
               displayMode === "cards"
                 ? "bg-background text-foreground shadow-sm"
                 : "text-muted-foreground hover:text-foreground",
             )}
             aria-label="Cards view"
           >
-            <Columns2 className="h-3.5 w-3.5" />
+            <Columns2 className="h-4 w-4" />
           </button>
           <button
             onClick={() => setDisplayMode("grid")}
             className={cn(
-              "p-1.5 rounded-md transition-colors",
+              "p-1.5 rounded-full transition-colors cursor-pointer",
               displayMode === "grid"
                 ? "bg-background text-foreground shadow-sm"
                 : "text-muted-foreground hover:text-foreground",
             )}
             aria-label="Grid view"
           >
-            <LayoutGrid className="h-3.5 w-3.5" />
+            <LayoutGrid className="h-4 w-4" />
           </button>
           <button
             onClick={() => setDisplayMode("list")}
             className={cn(
-              "p-1.5 rounded-md transition-colors",
+              "p-1.5 rounded-full transition-colors cursor-pointer",
               displayMode === "list"
                 ? "bg-background text-foreground shadow-sm"
                 : "text-muted-foreground hover:text-foreground",
             )}
             aria-label="List view"
           >
-            <List className="h-3.5 w-3.5" />
+            <List className="h-4 w-4" />
           </button>
         </div>
       </div>
@@ -156,7 +154,7 @@ export function EventBrowser({ events }: EventBrowserProps) {
 
       {hasMore && (
         <div className="mt-8 text-center">
-          <Button variant="outline" onClick={() => setVisibleCount((n) => n + PAGE_SIZE)}>
+          <Button variant="outline" onClick={() => setVisibleCount((n) => n + PAGE_SIZE)} className="cursor-pointer">
             Load more ({filtered.length - visibleCount} remaining)
           </Button>
         </div>
