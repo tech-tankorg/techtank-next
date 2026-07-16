@@ -118,35 +118,8 @@ they look like is the design contract's concern, not this section's.
 
 #### The file shape
 
-1. **Every component follows this example skeleton:**
-
-   ```tsx
-   import { forwardRef, type HTMLAttributes } from 'react'
-   import { cn, cva, VariantProps } from '@/utils/theme'
-
-   const styles = {
-     root: cva('…', { variants: { … }, defaultVariants: { … } })
-   }
-
-   type ExampleRef = HTMLDivElement
-   type ExampleProps = HTMLAttributes<ExampleRef> & VariantProps<typeof styles.root>
-
-   const Example = forwardRef<ExampleRef, ExampleProps>((props, ref) => {
-     // props
-     const { className, ...rest } = props
-
-     // hooks
-
-     // render vars
-
-     // jsx
-     return <div ref={ref} className={cn(styles.root({ className }))} {...rest}></div>
-   })
-   Example.displayName = 'Example'
-
-   export { Example }
-   export type { ExampleProps, ExampleRef }
-   ```
+1. **Every component follows the skeleton in
+   [`components/ui/example.tsx`](./components/ui/example.tsx).**
 
    Order within the file: **CVA styles/constants on top → types
    (`XxxRef`, `XxxProps`) → component.** Order within the function body,
