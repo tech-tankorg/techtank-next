@@ -83,8 +83,6 @@ const Marquee = forwardRef<MarqueeRef, MarqueeProps>((props, ref) => {
           data-paused={paused}
         >
           {Array.from({ length: copies }, (_, index) => (
-            // Duplicates exist only to make the scroll seamless; `inert` keeps
-            // their links out of the focus order, not just out of the a11y tree.
             <div
               key={index}
               className={cn(styles.group({ gap }), index > 0 && styles.duplicate())}
