@@ -97,21 +97,82 @@ document styling).
 - Social proof first: testimonials, real event photography, and
   logo clouds are required patterns, not decoration.
 
-### Component conventions
+### Components
 
-Components follow [shadcn/ui](https://ui.shadcn.com/) patterns with
-[CVA](https://cva.style/) (`class-variance-authority`) for variant management:
+How components are added, shaped, styled, and organized. This section
+owns the authoring and styling rules; what components exist and what
+they look like is the design contract's concern, not this section's.
+
+#### The flow: shadcn first
+
+1. **Check shadcn before writing anything.** Primitives use
+   [shadcn/ui](https://ui.shadcn.com/), which uses Radix primitives
+   underneath. Adding a new component starts with a check of the shadcn
+   library: if it exists there, import it with the CLI
+   (`pnpm dlx shadcn@latest add <name>`), then **reformat it to the
+   house shape below and re-theme it with the v5 tokens**.
+2. **Custom components use the identical shape.** If shadcn doesn't have
+   it (or the design calls for something bespoke), author it from
+   scratch in exactly the same format; the only difference is there's
+   nothing to import.
+
+#### The file shape
+
+1. **Every component follows this example skeleton:**
+
+   ```tsx
+   import { forwardRef, type HTMLAttributes } from 'react'
+   import { cn, cva, VariantProps } from '@/utils/theme'
+
+   const styles = {
+     root: cva('…', { variants: { … }, defaultVariants: { … } })
+   }
+
+   type ExampleRef = HTMLDivElement
+   type ExampleProps = HTMLAttributes<ExampleRef> & VariantProps<typeof styles.root>
+
+   const Example = forwardRef<ExampleRef, ExampleProps>((props, ref) => {
+     // props
+     const { className, ...rest } = props
+
+     // hooks
+
+     // render vars
+
+     // jsx
+     return <div ref={ref} className={cn(styles.root({ className }))} {...rest}></div>
+   })
+   Example.displayName = 'Example'
+
+   export { Example }
+   export type { ExampleProps, ExampleRef }
+   ```
+
+   Order within the file: **CVA styles/constants on top → types
+   (`XxxRef`, `XxxProps`) → component.** Order within the function body,
+   each under its comment: **props** destructure → **hooks** → **render
+   vars** → **jsx** (composed with `cn()`).
+
+2. **Named exports only**: the component plus its `Props` and `Ref`
+   types; `displayName` set on `forwardRef` components. No default
+   exports.
+
+#### Styling rules
 
 - Define visual variants (color, size, style) as CVA `variants` — never
-  as ad-hoc `className` overrides at the call site.
-- Use `cn()` from `lib/utils.ts` (clsx + tailwind-merge) for all
-  className composition.
+  as ad-hoc `className` overrides at the call site. Multi-element
+  components get one `cva` per element in the `styles` object, keyed by
+  element name (`root`, `viewport`, …).
+- Use `cn()` and `cva` from [`utils/theme.ts`](./utils/theme.ts) (which
+  re-exports `cva`/`VariantProps`) for all className composition.
 - Expose `asChild` via Radix `Slot` when a component needs to delegate
   rendering to its child (e.g. `<Button asChild><Link …>`).
 - Keep layout utilities (`w-full`, `mt-4`, etc.) at the call site via
   `className`; keep visual styles inside the CVA definition.
 - New primitives go in `components/ui/`; page-specific compositions
-  stay in the relevant `app/` directory.
+  stay in the relevant `app/` directory. Files are kebab-case
+  (`previous-button.tsx`), even though the component they export is
+  PascalCase.
 
 ### Theming
 
