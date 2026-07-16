@@ -64,6 +64,10 @@
   --radius-full: 9999px;
 }
 
+@utility paused {
+  animation-play-state: paused;
+}
+
 /* ─── Light Tokens & Gradients ─────────────────────────────────────────────── */
 
 /* Gradient defaults (light) — :root ensures var() resolves during SSR and before theme hydration */
@@ -331,37 +335,32 @@
 }
 
 /* Marquee */
-.marquee-container {
-  container-type: inline-size;
+/* Tailwind's duration-* utility only sets transition-duration, but it also
+   exposes its value as --tw-duration — so the track picks up the same
+   duration-[40s] class the rest of the codebase uses for timing. */
+.marquee-track {
+  animation-name: marquee;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: var(--tw-duration, 25s);
 }
 
-.marquee-item {
-  width: max(100cqw / var(--visible-count, 4), var(--item-width, 250px));
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation-name: none;
+    transform: none;
+  }
 }
 
+/* The track holds --marquee-copies identical groups, so shifting it by one
+   group's share of its width lands the next copy exactly where the previous one
+   started. Each group's trailing pad matches its gap, keeping the spacing even
+   across the seam. */
 @keyframes marquee {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(calc(-100% / var(--marquee-copies, 2)));
-  }
-}
-
-.marquee-track {
-  animation-name: marquee;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-duration: var(--marquee-duration, 25s);
-}
-
-.marquee-track:hover {
-  animation-play-state: paused !important;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track {
-    animation: none;
-    transform: none;
   }
 }

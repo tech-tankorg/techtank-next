@@ -6,26 +6,30 @@ const sponsors = getAllSponsors();
 
 export function SponsorsMarquee({ className }: { className?: string }) {
   return (
-    <Marquee duration="40s" itemWidth="200px" className={className}>
+    <Marquee
+      speed="slow"
+      pauseLabel="Pause scrolling sponsor logos"
+      resumeLabel="Resume scrolling sponsor logos"
+      className={className}
+    >
       {sponsors.map((sponsor) => (
         <a
           key={sponsor.id}
           href={sponsor.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex items-center justify-center h-8 lg:h-10"
+          className="group flex shrink-0 items-center justify-center [--logo-height:2rem] lg:[--logo-height:2.5rem]"
           title={sponsor.name}
         >
           <Image
             src={sponsor.logo}
             alt={`${sponsor.name} logo`}
-            width={120}
-            height={40}
-            className="w-auto h-full object-contain opacity-70 hover:opacity-100 transition-all duration-300 dark:brightness-0 dark:invert"
+            width={sponsor.width}
+            height={sponsor.height}
+            className="object-contain opacity-70 hover:opacity-100 transition-all duration-300 dark:brightness-0 dark:invert"
             style={{
               width: "auto",
-              height: "100%",
-              ...(sponsor.scale ? { transform: `scale(${sponsor.scale})` } : {}),
+              height: `calc(var(--logo-height) * ${sponsor.scale ?? 1})`,
             }}
           />
         </a>
