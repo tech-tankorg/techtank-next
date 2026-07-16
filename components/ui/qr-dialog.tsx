@@ -33,7 +33,7 @@ export function QrDialog() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 37 37"
           shapeRendering="crispEdges"
-          className="h-64 w-64 text-foreground"
+          className="h-64 w-64 text-black dark:text-white"
           aria-label="QR code linking to the TechTank get involved page"
         >
           <path
