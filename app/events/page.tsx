@@ -96,19 +96,17 @@ export default async function EventsPage() {
         <div className="flex justify-center w-full">
           {/* Light Mode Embed */}
           <iframe
+            title="TechTank TO events calendar"
             src="https://lu.ma/embed/calendar/cal-ZopuHimRKxPa5U0/events?lt=light"
             className="w-full md:w-3/4 h-[1200px] sm:h-[1000px] md:h-[900px] lg:h-[800px] block dark:hidden overflow-hidden"
             allowFullScreen
-            aria-hidden={false}
-            tabIndex={0}
           />
           {/* Dark Mode Embed */}
           <iframe
+            title="TechTank TO events calendar"
             src="https://lu.ma/embed/calendar/cal-ZopuHimRKxPa5U0/events?lt=dark"
             className="w-full md:w-3/4 h-[1200px] sm:h-[1000px] md:h-[900px] lg:h-[800px] hidden dark:block overflow-hidden"
             allowFullScreen
-            aria-hidden={false}
-            tabIndex={0}
           />
         </div>
       </Section>

@@ -34,7 +34,14 @@ export function Marquee({
         }
       >
         {Array.from({ length: copies }).map((_, copyIndex) => (
-          <div key={copyIndex} className="flex flex-none" aria-hidden={copyIndex > 0 || undefined}>
+          // Duplicate copies exist only to make the scroll seamless; `inert` keeps
+          // their links out of the focus order, not just out of the a11y tree.
+          <div
+            key={copyIndex}
+            className="flex flex-none"
+            aria-hidden={copyIndex > 0 || undefined}
+            inert={copyIndex > 0}
+          >
             {childArray.map((child, i) => (
               <div key={i} className="marquee-item flex-none flex items-center justify-center px-8">
                 {child}

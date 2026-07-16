@@ -517,7 +517,7 @@ export default function DesignSystemPage() {
 
           {/* Hover-link card */}
           <a
-            href="#"
+            href="/resources/media-kit"
             className="group flex items-center gap-4 bg-card rounded-xl border border-border p-5 hover:border-ring/50 transition-all"
           >
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-ring/10">
