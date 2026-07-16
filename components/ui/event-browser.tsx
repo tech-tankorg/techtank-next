@@ -9,11 +9,12 @@ import { cn } from "@/utils/theme";
 import type { Event } from "@/app/events/actions";
 import Image from "next/image";
 
-type CategoryFilter = "all" | "tech-talks" | "coffee-chats" | "socials" | "sports" | "other";
+type CategoryFilter = "all" | "tech-talks" | "build-nights" | "coffee-chats" | "socials" | "sports" | "other";
 type DisplayMode = "cards" | "grid" | "list";
 
 const CATEGORY_TAGS: Record<Exclude<CategoryFilter, "all" | "other">, string[]> = {
   "tech-talks": ["Tech Talk", "Panel", "Workshop"],
+  "build-nights": ["Build Night"],
   "coffee-chats": ["Coffee Chat"],
   socials: ["Social"],
   sports: ["Sports"],
@@ -69,6 +70,7 @@ export function EventBrowser({ events }: EventBrowserProps) {
   const categories: { id: CategoryFilter; label: string }[] = [
     { id: "all", label: "All" },
     { id: "tech-talks", label: "Tech Talks" },
+    { id: "build-nights", label: "Build Nights" },
     { id: "coffee-chats", label: "Coffee Chats" },
     { id: "socials", label: "Socials" },
     { id: "sports", label: "Sports" },

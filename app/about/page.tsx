@@ -13,6 +13,7 @@ import {
   Trophy,
   MessageSquare,
   ExternalLink,
+  Hammer,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
@@ -67,8 +68,15 @@ const currentPrograms = [
     icon: Mic,
     title: "Tech Talks",
     description:
-      "Speaker events hosted at venues across Toronto. We've partnered with companies like BrainStation, 7shifts, Rakuten Kobo, Cohere, Vena Solutions, Docebo, Plusgrade, Intuit, and Microsoft, and we're always looking for new hosts and sponsors to join us.",
+      "Speaker events hosted at venues across Toronto. We've partnered with companies like BrainStation, 7shifts, Rakuten Kobo, Posthog, Cohere, Vena Solutions, Docebo, Plusgrade, Intuit, and Microsoft, and we're always looking for new hosts and sponsors to join us.",
     cta: { label: "Host or sponsor an event", href: "/get-involved/host" },
+  },
+  {
+    icon: Hammer,
+    title: "Build Nights",
+    description:
+      "Hands-on evenings where people bring a project and build alongside each other. Partnered with companies like PostHog.",
+    cta: { label: "See upcoming build nights", href: "/events" },
   },
   {
     icon: PartyPopper,

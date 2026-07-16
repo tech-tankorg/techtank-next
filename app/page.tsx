@@ -45,7 +45,7 @@ export default async function HomePage() {
                 Toronto&apos;s home for tech community
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6 lg:max-w-md">
-                Tech talks, panels, socials, sports, and more—hosted at companies across the city.
+                Tech talks, build nights, panels, socials, sports, and more—hosted at companies across the city.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Button variant="primary" size="md" asChild>

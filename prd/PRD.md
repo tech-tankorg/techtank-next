@@ -45,6 +45,10 @@ levels can explore, create, and thrive in technology.
 ### 1.4 Event types
 
 - **Tech talks** — Lightning talks, deep dives, and technical presentations
+- **Build nights** — Hands-on evenings where attendees build alongside
+  each other, run in partnership with a sponsor (currently Build Night TO
+  by TechTank x PostHog). Cadence and long-term format: finalize with
+  organizers.
 - **Socials** — Casual networking and community building
 - **Sports** — Active events like volleyball and softball
 - **Code Diversity** — Inclusive events for underrepresented groups in tech
