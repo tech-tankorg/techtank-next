@@ -56,9 +56,6 @@ importers:
         specifier: ^5.0.12
         version: 5.0.12(@types/react@19.2.14)(react@19.2.5)
     devDependencies:
-      '@axe-core/react':
-        specifier: ^4.12.1
-        version: 4.12.1
       '@tailwindcss/postcss':
         specifier: ^4.2.2
         version: 4.2.2
@@ -95,9 +92,6 @@ packages:
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
-
-  '@axe-core/react@4.12.1':
-    resolution: {integrity: sha512-8tZysxguMYomHHFA1iPSpJfWiHX0LPSXdHxboR1YKPs+taNOG8wiEqLaGdgXaFDZ2WKyX/+bzvlLcqdNsR/Gdg==}
 
   '@emnapi/core@1.11.0':
     resolution: {integrity: sha512-l9Oo58x0HOP5znGzVhYW9U3e5wVuA4LAZU2AGezTmkhO1CgQRFDhDg4nneHsu/t3WniXg9QrG2nIXL/ZS8ln8Q==}
@@ -1134,10 +1128,6 @@ packages:
       vue-router:
         optional: true
 
-  axe-core@4.12.1:
-    resolution: {integrity: sha512-s7iGf5GaVMxEG0ENN9x+xTr7GFZCb1ZP/1uATUpCEK2X78nDB3RwbtFCo9pGAf9ru+VwoQ464DkaLEeRM08wJA==}
-    engines: {node: '>=4'}
-
   baseline-browser-mapping@2.10.43:
     resolution: {integrity: sha512-AjYpR78kDWAY3Efj+cDTFH9t9SCoL7OoTp1BOb0mQV7S+6CiLwnWM3FyxhJtdPufDFKzmCSFoUncKjWgJEZTCQ==}
     engines: {node: '>=6.0.0'}
@@ -1370,9 +1360,6 @@ packages:
     resolution: {integrity: sha512-llUJLzz1zTUBrskt2pwZgLq59AemifIftw4aB7JxOqf1HY2FDaGDxgwpAPVzHU1kdWabH7FauP4i1oEeer2WCA==}
     engines: {node: '>=0.10.0'}
 
-  requestidlecallback@0.3.0:
-    resolution: {integrity: sha512-TWHFkT7S9p7IxLC5A1hYmAYQx2Eb9w1skrXmQ+dS1URyvR8tenMLl4lHbqEOUnpEYxNKpkVMXUgknVpBZWXXfQ==}
-
   resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
 
@@ -1479,11 +1466,6 @@ packages:
 snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
-
-  '@axe-core/react@4.12.1':
-    dependencies:
-      axe-core: 4.12.1
-      requestidlecallback: 0.3.0
 
   '@emnapi/core@1.11.0':
     dependencies:
@@ -2135,8 +2117,6 @@ snapshots:
       next: 16.2.6(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       react: 19.2.5
 
-  axe-core@4.12.1: {}
-
   baseline-browser-mapping@2.10.43: {}
 
   caniuse-lite@1.0.30001805: {}
@@ -2393,8 +2373,6 @@ snapshots:
       scheduler: 0.27.0
 
   react@19.2.5: {}
-
-  requestidlecallback@0.3.0: {}
 
   resolve-pkg-maps@1.0.0: {}
 
