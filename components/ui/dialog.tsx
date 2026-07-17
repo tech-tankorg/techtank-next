@@ -48,19 +48,18 @@ export function Dialog({ open, onClose, labelledBy, className, children }: Dialo
         aria-label="Close dialog"
         onClick={onClose}
       />
-      <div
+      <dialog
+        open
         className={cn(
-          "fixed z-50 flex flex-col overflow-hidden bg-background border border-border shadow-soft-lg pb-6",
+          "fixed z-50 flex flex-col overflow-hidden bg-background text-foreground border border-border shadow-soft-lg p-0 pb-6",
           "left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2",
           "w-[calc(100%-2rem)] max-w-md max-h-[85dvh] rounded-2xl",
           "md:max-w-xl md:max-h-[80dvh]",
           "lg:max-w-2xl",
           className,
         )}
-        role="dialog"
         aria-modal="true"
         aria-labelledby={labelledBy}
-        onClick={(e) => e.stopPropagation()}
       >
         <div className="flex shrink-0 items-center justify-end px-4 pt-4">
           <Button
@@ -76,7 +75,7 @@ export function Dialog({ open, onClose, labelledBy, className, children }: Dialo
         </div>
 
         <div className="flex flex-1 flex-col gap-5 overflow-hidden px-6 md:px-8 lg:px-10 pb-4 min-h-0">{children}</div>
-      </div>
+      </dialog>
     </>,
     document.body,
   );
