@@ -1,9 +1,15 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
   "plugins": ["react", "jsx-a11y", "typescript", "unicorn", "oxc"],
+  "jsPlugins": ["oxlint-tailwindcss"],
   "env": {
     "browser": true,
     "es2024": true
+  },
+  "settings": {
+    "tailwindcss": {
+      "entryPoint": "app/globals.css"
+    }
   },
   "categories": {
     "correctness": "error"
@@ -37,7 +43,10 @@
     "jsx-a11y/role-has-required-aria-props": "error",
     "jsx-a11y/role-supports-aria-props": "error",
     "jsx-a11y/scope": "error",
-    "jsx-a11y/tabindex-no-positive": "error"
+    "jsx-a11y/tabindex-no-positive": "error",
+    "tailwindcss/enforce-canonical": "error",
+    "tailwindcss/enforce-shorthand": "error",
+    "tailwindcss/enforce-sort-order": "error"
   },
   "ignorePatterns": [".next", "node_modules", "public"]
 }

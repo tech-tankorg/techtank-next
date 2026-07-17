@@ -8,17 +8,17 @@ export const metadata: Metadata = {
 
 export default function TermsOfServicePage() {
   return (
-    <div className="bg-card rounded-2xl border border-border p-6 lg:p-10">
+    <div className="rounded-2xl border border-border bg-card p-6 lg:p-10">
       {/* Header */}
-      <div className="mb-8 pb-8 border-b border-border">
-        <p className="text-sm text-muted-foreground mb-2">Last updated: June 5, 2026</p>
-        <h1 className="font-display text-3xl lg:text-4xl font-semibold text-foreground">Terms of Service</h1>
+      <div className="mb-8 border-b border-border pb-8">
+        <p className="mb-2 text-sm text-muted-foreground">Last updated: June 5, 2026</p>
+        <h1 className="font-display text-3xl font-semibold text-foreground lg:text-4xl">Terms of Service</h1>
       </div>
 
       {/* Content */}
-      <div className="space-y-8 text-foreground leading-relaxed">
+      <div className="space-y-8 leading-relaxed text-foreground">
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">1. Acceptance of Terms</h2>
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">1. Acceptance of Terms</h2>
           <p className="text-muted-foreground">
             These terms apply to anyone who uses the TechTank TO website (techtankto.com), registers for or attends
             TechTank events, or participates in TechTank community spaces (including Slack or similar). By doing any of
@@ -28,8 +28,8 @@ export default function TermsOfServicePage() {
         </section>
 
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">2. What We Ask of You</h2>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">2. What We Ask of You</h2>
+          <ul className="list-disc space-y-2 pl-6 text-muted-foreground">
             <li>
               Respect the{" "}
               <Link href="/legal/code-of-conduct" className="text-ring hover:underline">
@@ -41,24 +41,24 @@ export default function TermsOfServicePage() {
         </section>
 
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">3. Website Use</h2>
-          <p className="text-muted-foreground mb-4">
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">3. Website Use</h2>
+          <p className="mb-4 text-muted-foreground">
             The TechTank TO website is provided for informational and community purposes. You may use the site to:
           </p>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+          <ul className="list-disc space-y-2 pl-6 text-muted-foreground">
             <li>Learn about TechTank events and programs</li>
             <li>Submit intake forms to speak, host, sponsor, or volunteer</li>
             <li>Access community resources and event information</li>
             <li>Download brand assets from the Media Kit</li>
           </ul>
-          <p className="text-muted-foreground mt-4">
+          <p className="mt-4 text-muted-foreground">
             You may not use the site for harmful purposes, including scraping at harmful volume, re-posting content
             without attribution, or impersonation.
           </p>
         </section>
 
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">4. External Platforms</h2>
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">4. External Platforms</h2>
           <p className="text-muted-foreground">
             TechTank uses third-party platforms for event registration (Luma, Meetup), community discussion (Slack), and
             content hosting (YouTube, GitHub). Use of these platforms is subject to their respective terms of service.
@@ -67,15 +67,15 @@ export default function TermsOfServicePage() {
         </section>
 
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">5. Events</h2>
-          <p className="text-muted-foreground mb-4">
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">5. Events</h2>
+          <p className="mb-4 text-muted-foreground">
             Participation at TechTank events (virtual or in-person) implies agreement with our{" "}
             <Link href="/legal/code-of-conduct" className="text-ring hover:underline">
               Code of Conduct
             </Link>
             . All attendees, speakers, hosts, sponsors, and volunteers are expected to follow these guidelines.
           </p>
-          <p className="text-muted-foreground mb-4">
+          <p className="mb-4 text-muted-foreground">
             Registration for events does not guarantee attendance if capacity is exceeded. TechTank reserves the right
             to cancel or reschedule events. Refund policies for paid events will be stated at the time of registration.
           </p>
@@ -92,11 +92,11 @@ export default function TermsOfServicePage() {
         </section>
 
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">6. Intellectual Property</h2>
-          <p className="text-muted-foreground mb-4">
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">6. Intellectual Property</h2>
+          <p className="mb-4 text-muted-foreground">
             TechTank branding, logos, and website content are property of TechTank TO.
           </p>
-          <p className="text-muted-foreground mb-4">
+          <p className="mb-4 text-muted-foreground">
             Content shared at TechTank events — including talks, presentations, and workshop materials — belongs to its
             creators. Do not record, reproduce, or distribute such content without permission from the creator.
           </p>
@@ -108,7 +108,7 @@ export default function TermsOfServicePage() {
         </section>
 
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">7. Disclaimers</h2>
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">7. Disclaimers</h2>
           <p className="text-muted-foreground">
             Information on this website is provided &quot;as is&quot; without warranty. TechTank makes no guarantees
             regarding event availability, venue, speaker lineup, or timing. Events may be cancelled, postponed, or
@@ -117,7 +117,7 @@ export default function TermsOfServicePage() {
         </section>
 
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">8. Limitation of Liability</h2>
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">8. Limitation of Liability</h2>
           <p className="text-muted-foreground">
             TechTank TO and its organizers shall not be liable for any direct, indirect, incidental, special, or
             consequential damages arising from your use of this website or participation in TechTank events, to the
@@ -126,7 +126,7 @@ export default function TermsOfServicePage() {
         </section>
 
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">9. Indemnification</h2>
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">9. Indemnification</h2>
           <p className="text-muted-foreground">
             You agree to indemnify and hold harmless TechTank TO and its organizers from any claims, damages, or
             expenses arising from your use of the website or participation in events, or your violation of these terms.
@@ -134,7 +134,7 @@ export default function TermsOfServicePage() {
         </section>
 
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">10. Changes to Terms</h2>
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">10. Changes to Terms</h2>
           <p className="text-muted-foreground">
             TechTank may update these Terms of Service at any time. Material changes will be announced via the website
             and Slack community. Your continued use of the website after changes constitutes acceptance of the new
@@ -143,7 +143,7 @@ export default function TermsOfServicePage() {
         </section>
 
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">11. Governing Law</h2>
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">11. Governing Law</h2>
           <p className="text-muted-foreground">
             These Terms of Service are governed by the laws of the Province of Ontario, Canada, and are subject to the
             exclusive jurisdiction of courts within Toronto, Ontario, Canada.
@@ -151,7 +151,7 @@ export default function TermsOfServicePage() {
         </section>
 
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">12. Contact</h2>
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">12. Contact</h2>
           <p className="text-muted-foreground">
             For questions about these Terms of Service, please contact us at{" "}
             <a href="mailto:techtankto@gmail.com" className="text-ring hover:underline">

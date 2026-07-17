@@ -75,16 +75,16 @@ export default function SponsorPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden gradient-hero texture-grain">
+      <section className="gradient-hero texture-grain relative overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+            <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
               Support the community
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
+            <h1 className="mb-6 font-display text-4xl font-semibold text-balance text-foreground md:text-5xl lg:text-6xl">
               Sponsor the Toronto tech community
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+            <p className="mb-8 text-xl leading-relaxed text-muted-foreground">
               Support the year-round events, speakers, and programs that bring the community together. Tasteful brand
               visibility, real impact.
             </p>
@@ -102,12 +102,12 @@ export default function SponsorPage() {
         <SectionHeader overline="Why sponsor" title="What you get out of it" className="mb-12" />
         <div className="grid gap-8 lg:grid-cols-3">
           {whySponsor.map((item) => (
-            <div key={item.title} className="bg-card rounded-2xl border border-border p-6 lg:p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-ring/10 text-ring mb-4">
-                <item.icon className="h-6 w-6" />
+            <div key={item.title} className="rounded-2xl border border-border bg-card p-6 lg:p-8">
+              <div className="mb-4 flex size-12 items-center justify-center rounded-xl bg-ring/10 text-ring">
+                <item.icon className="size-6" />
               </div>
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3">{item.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+              <h3 className="mb-3 font-display text-xl font-semibold text-foreground">{item.title}</h3>
+              <p className="leading-relaxed text-muted-foreground">{item.description}</p>
             </div>
           ))}
         </div>
@@ -117,23 +117,23 @@ export default function SponsorPage() {
       <Section background="white">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+            <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
               Your impact
             </span>
-            <h2 className="font-display text-3xl font-semibold text-foreground mb-6">What sponsorship supports</h2>
+            <h2 className="mb-6 font-display text-3xl font-semibold text-foreground">What sponsorship supports</h2>
             <ul className="space-y-4">
               {whatSponsorshipSupports.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-ring shrink-0 mt-0.5" />
+                  <Check className="mt-0.5 size-5 shrink-0 text-ring" />
                   <span className="text-foreground">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
           <div className="relative">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-peach via-lavender to-aqua">
+            <div className="via-lavender to-aqua relative aspect-4/3 overflow-hidden rounded-2xl bg-linear-to-br from-peach">
               {featuredVideo ? (
-                <video autoPlay loop muted playsInline className="absolute inset-0 h-full w-full object-cover">
+                <video autoPlay loop muted playsInline className="absolute inset-0 size-full object-cover">
                   <source src={featuredVideo.replace(/\.mp4$/, ".webm")} type="video/webm" />
                   <source src={featuredVideo} type="video/mp4" />
                 </video>
@@ -147,7 +147,7 @@ export default function SponsorPage() {
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="text-center text-foreground/60 px-8">Community event photography</p>
+                  <p className="px-8 text-center text-foreground/60">Community event photography</p>
                 </div>
               )}
             </div>
@@ -172,28 +172,28 @@ export default function SponsorPage() {
               }`}
             >
               {tier.highlight && (
-                <span className="inline-block text-xs font-semibold uppercase tracking-wider text-ring mb-2">
+                <span className="mb-2 inline-block text-xs font-semibold tracking-wider text-ring uppercase">
                   Most popular
                 </span>
               )}
-              <h3 className="font-display text-xl font-semibold text-foreground mb-2">{tier.name}</h3>
+              <h3 className="mb-2 font-display text-xl font-semibold text-foreground">{tier.name}</h3>
               <p className="text-muted-foreground">{tier.description}</p>
             </div>
           ))}
         </div>
-        <p className="text-center text-sm text-muted-foreground mt-8">
+        <p className="mt-8 text-center text-sm text-muted-foreground">
           Exact pricing and benefits in our sponsorship info. Tiers are illustrative — we&apos;ll work with your budget.
         </p>
       </Section>
 
       {/* Base Package */}
       <Section background="brand-soft">
-        <div className="max-w-3xl mx-auto">
+        <div className="mx-auto max-w-3xl">
           <SectionHeader overline="All sponsors get" title="Base sponsor package" align="center" className="mb-12" />
           <div className="grid gap-4 sm:grid-cols-2">
             {basePackage.map((item, index) => (
-              <div key={index} className="flex items-center gap-3 bg-card rounded-lg p-4">
-                <Check className="h-5 w-5 text-ring shrink-0" />
+              <div key={index} className="flex items-center gap-3 rounded-lg bg-card p-4">
+                <Check className="size-5 shrink-0 text-ring" />
                 <span className="text-foreground">{item}</span>
               </div>
             ))}
@@ -214,10 +214,10 @@ export default function SponsorPage() {
 
       {/* Hosting vs Sponsoring */}
       <Section>
-        <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">Not sure?</span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Hosting vs. sponsoring</h2>
-          <p className="text-muted-foreground mb-6">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">Not sure?</span>
+          <h2 className="mb-4 font-display text-3xl font-semibold text-foreground">Hosting vs. sponsoring</h2>
+          <p className="mb-6 text-muted-foreground">
             <strong className="text-foreground">Hosting</strong> means providing your venue and food for one event.{" "}
             <strong className="text-foreground">Sponsoring</strong> means supporting TechTank with funding for ongoing
             operations, programs, or multiple events.
@@ -230,12 +230,12 @@ export default function SponsorPage() {
 
       {/* Intake Form CTA */}
       <Section background="brand-soft">
-        <div className="max-w-2xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
             Ready to sponsor?
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Get the sponsorship info</h2>
-          <p className="text-muted-foreground mb-8">
+          <h2 className="mb-4 font-display text-3xl font-semibold text-foreground">Get the sponsorship info</h2>
+          <p className="mb-8 text-muted-foreground">
             Tell us about your company and goals. We&apos;ll send our full sponsorship details within a week.
           </p>
           <Button variant="primary" size="lg" asChild>
@@ -248,7 +248,7 @@ export default function SponsorPage() {
 
       {/* Contact */}
       <Section>
-        <div className="max-w-xl mx-auto">
+        <div className="mx-auto max-w-xl">
           <ContactCard context="Questions about sponsorship? Let's talk." />
         </div>
       </Section>

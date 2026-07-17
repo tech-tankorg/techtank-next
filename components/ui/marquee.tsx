@@ -23,7 +23,7 @@ export function Marquee({
   return (
     <div className={cn("marquee-container relative w-full overflow-hidden", className)}>
       <div
-        className="flex w-max marquee-track"
+        className="marquee-track flex w-max"
         style={
           {
             "--marquee-duration": duration,
@@ -41,7 +41,7 @@ export function Marquee({
             inert={copyIndex > 0}
           >
             {childArray.map((child, i) => (
-              <div key={i} className="marquee-item flex-none flex items-center justify-center px-8">
+              <div key={i} className="marquee-item flex flex-none items-center justify-center px-8">
                 {child}
               </div>
             ))}

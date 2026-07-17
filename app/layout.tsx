@@ -65,7 +65,7 @@ export const viewport: Viewport = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${spaceGrotesk.variable} bg-background`}>
-      <body className="min-h-screen flex flex-col font-sans antialiased" suppressHydrationWarning>
+      <body className="flex min-h-screen flex-col font-sans antialiased" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

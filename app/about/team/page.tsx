@@ -21,16 +21,16 @@ export default function TeamPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden gradient-hero texture-grain">
+      <section className="gradient-hero texture-grain relative overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-32">
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+            <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
               Our team
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
+            <h1 className="mb-6 font-display text-4xl font-semibold text-balance text-foreground md:text-5xl lg:text-6xl">
               The people behind TechTank
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+            <p className="mb-8 text-xl leading-relaxed text-muted-foreground">
               TechTank TO is powered entirely by volunteers — organizers, designers, developers, and community builders
               who give their time to make Toronto&apos;s tech community more inclusive and welcoming.
             </p>
@@ -51,7 +51,7 @@ export default function TeamPage() {
         />
 
         <div className="mb-10">
-          <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-5">Co-Chairs</p>
+          <p className="mb-5 text-xs font-semibold tracking-widest text-muted-foreground uppercase">Co-Chairs</p>
           <div className="grid gap-5 sm:grid-cols-2">
             {boardCoChairs.members.map((m) => (
               <TeamCard key={m.name} variant="board" member={m} />
@@ -60,7 +60,7 @@ export default function TeamPage() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-5">Treasurer</p>
+          <p className="mb-5 text-xs font-semibold tracking-widest text-muted-foreground uppercase">Treasurer</p>
           <div className="grid gap-5 sm:grid-cols-2">
             {boardTreasurer.members.map((m) => (
               <TeamCard key={m.name} variant="board" member={m} />
@@ -123,12 +123,12 @@ export default function TeamPage() {
 
       {/* CTA */}
       <Section background="brand-soft">
-        <div className="max-w-2xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
             Get involved
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Want to be part of the team?</h2>
-          <p className="text-muted-foreground mb-8">
+          <h2 className="mb-4 font-display text-3xl font-semibold text-foreground">Want to be part of the team?</h2>
+          <p className="mb-8 text-muted-foreground">
             We&apos;re always looking for volunteers who want to help build Toronto&apos;s most inclusive tech
             community.
           </p>
