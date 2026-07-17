@@ -44,6 +44,7 @@ export const events: Event[] = [
       { name: "Scott Peacock", title: "SVP & Head of Product", company: "Docebo" },
       { name: "Nitin Chopra", title: "CIO & CISO", company: "Docebo" },
     ],
+    youtubeUrl: "https://www.youtube.com/watch?v=0j0nLhOi6Ic",
     albumUrl: "https://photos.app.goo.gl/LtazsmigLB9WThoy8",
   },
   {
