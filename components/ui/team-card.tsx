@@ -8,12 +8,12 @@ import { TeamProfileHint } from "@/components/ui/team-profile-hint";
 import { cn } from "@/utils/theme";
 import type { TeamMember } from "@/constants/team";
 
-const teamCardVariants = cva("group relative text-left w-full", {
+const teamCardVariants = cva("group relative w-full text-left", {
   variants: {
     variant: {
       board:
-        "poster-card gradient-brand overflow-hidden p-8 flex flex-col gap-6 shadow-soft-lg cursor-pointer transition-shadow hover:shadow-soft-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-      core: "flex gap-4 bg-card rounded-2xl border border-border p-5 shadow-soft cursor-pointer transition-shadow hover:shadow-soft-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+        "poster-card gradient-brand shadow-soft-lg hover:shadow-soft-lg flex cursor-pointer flex-col gap-6 overflow-hidden p-8 transition-shadow focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none",
+      core: "shadow-soft hover:shadow-soft-lg flex cursor-pointer gap-4 rounded-2xl border border-border bg-card p-5 transition-shadow focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none",
       compact:
         "flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 transition-colors hover:border-ring/30 hover:bg-accent/30",
     },
@@ -33,13 +33,13 @@ export interface TeamCardProps extends VariantProps<typeof teamCardVariants> {
 function BoardBody({ name, pronouns, role, bio }: TeamMember) {
   return (
     <div>
-      <p className="font-display text-2xl font-bold text-foreground leading-tight">{name}</p>
-      <p className="text-sm text-muted-foreground mt-0.5">{pronouns}</p>
-      {role && <span className="mt-3 inline-block tag text-xs">{role}</span>}
+      <p className="font-display text-2xl leading-tight font-bold text-foreground">{name}</p>
+      <p className="mt-0.5 text-sm text-muted-foreground">{pronouns}</p>
+      {role && <span className="tag mt-3 inline-block text-xs">{role}</span>}
       {bio ? (
-        <p className="mt-4 text-sm text-muted-foreground leading-relaxed line-clamp-2">{bio}</p>
+        <p className="mt-4 line-clamp-2 text-sm leading-relaxed text-muted-foreground">{bio}</p>
       ) : (
-        <p className="mt-4 text-sm text-muted-foreground/40 italic line-clamp-2">Bio coming soon</p>
+        <p className="mt-4 line-clamp-2 text-sm text-muted-foreground/40 italic">Bio coming soon</p>
       )}
       <TeamProfileHint />
     </div>
@@ -49,13 +49,13 @@ function BoardBody({ name, pronouns, role, bio }: TeamMember) {
 function CoreBody({ name, pronouns, role, bio }: TeamMember) {
   return (
     <div className="min-w-0 flex-1">
-      <p className="font-display text-lg font-semibold text-foreground leading-tight">{name}</p>
-      <p className="text-xs text-muted-foreground mt-0.5">{pronouns}</p>
-      {role && <p className="mt-1 text-xs font-semibold text-ring uppercase tracking-wide">{role}</p>}
+      <p className="font-display text-lg leading-tight font-semibold text-foreground">{name}</p>
+      <p className="mt-0.5 text-xs text-muted-foreground">{pronouns}</p>
+      {role && <p className="mt-1 text-xs font-semibold tracking-wide text-ring uppercase">{role}</p>}
       {bio ? (
-        <p className="mt-4 text-sm text-muted-foreground leading-relaxed line-clamp-2">{bio}</p>
+        <p className="mt-4 line-clamp-2 text-sm leading-relaxed text-muted-foreground">{bio}</p>
       ) : (
-        <p className="mt-4 text-sm text-muted-foreground/40 italic line-clamp-2">Bio coming soon</p>
+        <p className="mt-4 line-clamp-2 text-sm text-muted-foreground/40 italic">Bio coming soon</p>
       )}
       <TeamProfileHint />
     </div>
@@ -65,7 +65,7 @@ function CoreBody({ name, pronouns, role, bio }: TeamMember) {
 function CompactBody({ name, pronouns, role }: TeamMember) {
   return (
     <div className="min-w-0">
-      <p className="text-sm font-semibold text-foreground truncate">{name}</p>
+      <p className="truncate text-sm font-semibold text-foreground">{name}</p>
       <p className="text-xs text-muted-foreground">
         {pronouns}
         {role ? ` · ${role}` : ""}
@@ -94,8 +94,8 @@ export function TeamCard({ member, variant = "core", className }: TeamCardProps)
       <button type="button" onClick={() => setOpen(true)} className={cn(teamCardVariants({ variant }), className)}>
         {variant === "board" && (
           <>
-            <div className="pointer-events-none absolute -top-8 -right-8 h-40 w-40 rounded-full light bg-background/10 dark:bg-background/5" />
-            <div className="pointer-events-none absolute -bottom-12 -left-6 h-32 w-32 rounded-full light bg-background/10 dark:bg-background/5" />
+            <div className="light pointer-events-none absolute -top-8 -right-8 size-40 rounded-full bg-background/10 dark:bg-background/5" />
+            <div className="light pointer-events-none absolute -bottom-12 -left-6 size-32 rounded-full bg-background/10 dark:bg-background/5" />
           </>
         )}
         <TeamAvatar name={name} avatar={avatar} size={avatarSize} />

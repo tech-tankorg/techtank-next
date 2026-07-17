@@ -39,28 +39,28 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
 
   if (variant === "featured") {
     return (
-      <div className="group relative overflow-hidden rounded-2xl glass">
+      <div className="group glass relative overflow-hidden rounded-2xl">
         <div className="p-6">
-          <div className="flex flex-wrap items-center gap-2 mb-3">
+          <div className="mb-3 flex flex-wrap items-center gap-2">
             <Badge variant={isUpcoming ? "warning" : "secondary"}>{isUpcoming ? "Upcoming" : "Past"}</Badge>
             {event.tags[0] && <span className="ml-auto text-xs text-muted-foreground">{event.tags[0]}</span>}
           </div>
 
-          <h3 className="font-display text-xl font-bold text-foreground mb-2 line-clamp-2">
+          <h3 className="mb-2 line-clamp-2 font-display text-xl font-bold text-foreground">
             <TitleWrapper>{event.title}</TitleWrapper>
           </h3>
 
-          {event.pitch && <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{event.pitch}</p>}
+          {event.pitch && <p className="mb-3 line-clamp-2 text-sm text-muted-foreground">{event.pitch}</p>}
 
-          <div className="flex items-center gap-2 text-sm text-muted-foreground mb-1.5">
-            <Calendar className="h-4 w-4 shrink-0" />
+          <div className="mb-1.5 flex items-center gap-2 text-sm text-muted-foreground">
+            <Calendar className="size-4 shrink-0" />
             <span>{formattedDate}</span>
             {showTime && <span className="text-muted-foreground/60">· {formattedTime}</span>}
           </div>
 
           {locationText && (
-            <div className="flex items-center gap-2 text-sm text-muted-foreground mb-1.5">
-              <MapPin className="h-4 w-4 shrink-0" />
+            <div className="mb-1.5 flex items-center gap-2 text-sm text-muted-foreground">
+              <MapPin className="size-4 shrink-0" />
               {locationUrl ? (
                 <a href={locationUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
                   {locationText}
@@ -72,7 +72,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
           )}
 
           {event.sponsors && event.sponsors.length > 0 && (
-            <div className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground mb-3">
+            <div className="mb-3 flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground">
               {event.sponsors.map((s) => (
                 <a key={s.id} href={s.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
                   {s.name}
@@ -86,7 +86,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
               {event.albumUrl && (
                 <Badge variant="secondary" asChild>
                   <a href={event.albumUrl} target="_blank" rel="noopener noreferrer" aria-label="View event photos">
-                    <Camera className="h-3 w-3" />
+                    <Camera className="size-3" />
                     Photos
                   </a>
                 </Badge>
@@ -99,7 +99,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
                     rel="noopener noreferrer"
                     aria-label="Watch recap on YouTube"
                   >
-                    <Play className="h-3 w-3 fill-current" />
+                    <Play className="size-3 fill-current" />
                     Recap
                   </a>
                 </Badge>
@@ -112,28 +112,28 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
   }
 
   return (
-    <div className="group relative flex flex-col glass rounded-xl p-4 transition-all duration-300">
-      <div className="flex flex-wrap items-center gap-1.5 mb-2">
+    <div className="group glass relative flex flex-col rounded-xl p-4 transition-all duration-300">
+      <div className="mb-2 flex flex-wrap items-center gap-1.5">
         <Badge variant={isUpcoming ? "warning" : "secondary"} size="sm">
           {isUpcoming ? "Upcoming" : "Past"}
         </Badge>
         {event.tags[0] && <span className="ml-auto text-[10px] text-muted-foreground">{event.tags[0]}</span>}
       </div>
 
-      <h3 className="font-display text-sm font-bold text-foreground mb-2 line-clamp-2">
+      <h3 className="mb-2 line-clamp-2 font-display text-sm font-bold text-foreground">
         <TitleWrapper>{event.title}</TitleWrapper>
       </h3>
 
-      <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-1">
-        <Calendar className="h-3 w-3 shrink-0" />
+      <div className="mb-1 flex items-center gap-1.5 text-xs text-muted-foreground">
+        <Calendar className="size-3 shrink-0" />
         <span>{formattedDate}</span>
       </div>
 
       {locationText && (
-        <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-1">
-          <MapPin className="h-3 w-3 shrink-0" />
+        <div className="mb-1 flex items-center gap-1.5 text-xs text-muted-foreground">
+          <MapPin className="size-3 shrink-0" />
           {locationUrl ? (
-            <a href={locationUrl} target="_blank" rel="noopener noreferrer" className="hover:underline line-clamp-1">
+            <a href={locationUrl} target="_blank" rel="noopener noreferrer" className="line-clamp-1 hover:underline">
               {locationText}
             </a>
           ) : (
@@ -143,14 +143,14 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
       )}
 
       {event.sponsors && event.sponsors.length > 0 && (
-        <div className="flex flex-wrap items-center gap-1 text-xs text-muted-foreground mb-2">
+        <div className="mb-2 flex flex-wrap items-center gap-1 text-xs text-muted-foreground">
           {event.sponsors.map((s) => (
             <a
               key={s.id}
               href={s.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline line-clamp-1"
+              className="line-clamp-1 hover:underline"
             >
               {s.name}
             </a>
@@ -159,11 +159,11 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
       )}
 
       {(event.albumUrl || event.youtubeUrl) && (
-        <div className="flex flex-wrap items-center gap-1.5 mt-auto pt-1">
+        <div className="mt-auto flex flex-wrap items-center gap-1.5 pt-1">
           {event.albumUrl && (
             <Badge variant="secondary" size="sm" asChild>
               <a href={event.albumUrl} target="_blank" rel="noopener noreferrer" aria-label="View event photos">
-                <Camera className="h-2.5 w-2.5" />
+                <Camera className="size-2.5" />
                 Photos
               </a>
             </Badge>
@@ -171,7 +171,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
           {event.youtubeUrl && (
             <Badge variant="secondary" size="sm" asChild>
               <a href={event.youtubeUrl} target="_blank" rel="noopener noreferrer" aria-label="Watch recap on YouTube">
-                <Play className="h-2.5 w-2.5 fill-current" />
+                <Play className="size-2.5 fill-current" />
                 Recap
               </a>
             </Badge>

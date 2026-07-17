@@ -46,7 +46,7 @@ const faqs = [
             Hosting a TechTank event is a great way to get your space and team in front of Toronto's tech community.{" "}
             <Link
               href="/get-involved/sponsor"
-              className="underline underline-offset-2 hover:text-foreground transition-colors"
+              className="underline underline-offset-2 transition-colors hover:text-foreground"
             >
               Fill out the sponsor and host inquiry form
             </Link>{" "}
@@ -62,7 +62,7 @@ const faqs = [
               TechTank is a nonprofit run almost entirely by volunteers. When you donate or when a company sponsors us,
               here is where that money goes:
             </p>
-            <ul className="list-disc list-inside space-y-1 text-muted-foreground mb-3">
+            <ul className="mb-3 list-inside list-disc space-y-1 text-muted-foreground">
               <li>Platform fees for Luma and Meetup</li>
               <li>Website hosting and domain costs</li>
               <li>Event materials like nametags, printed materials, and supplies</li>
@@ -103,7 +103,7 @@ const faqs = [
             organize something, facilitate a workshop, or launch a new initiative under the TechTank umbrella,{" "}
             <a
               href="mailto:techtankto@gmail.com"
-              className="underline underline-offset-2 hover:text-foreground transition-colors"
+              className="underline underline-offset-2 transition-colors hover:text-foreground"
             >
               reach out
             </a>{" "}
@@ -121,7 +121,7 @@ const faqs = [
             commitment varies.{" "}
             <Link
               href="/get-involved/volunteer"
-              className="underline underline-offset-2 hover:text-foreground transition-colors"
+              className="underline underline-offset-2 transition-colors hover:text-foreground"
             >
               Fill out the volunteer form
             </Link>{" "}
@@ -149,7 +149,7 @@ const faqs = [
             Please reach out to us at{" "}
             <a
               href="mailto:techtankto@gmail.com"
-              className="underline underline-offset-2 hover:text-foreground transition-colors"
+              className="underline underline-offset-2 transition-colors hover:text-foreground"
             >
               techtankto@gmail.com
             </a>{" "}
@@ -157,7 +157,7 @@ const faqs = [
             can also review our full{" "}
             <Link
               href="/legal/code-of-conduct"
-              className="underline underline-offset-2 hover:text-foreground transition-colors"
+              className="underline underline-offset-2 transition-colors hover:text-foreground"
             >
               Code of Conduct
             </Link>{" "}
@@ -173,19 +173,19 @@ export default function FAQPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden gradient-hero texture-grain">
+      <section className="gradient-hero texture-grain relative overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">FAQ</span>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
+            <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">FAQ</span>
+            <h1 className="mb-6 font-display text-4xl font-semibold text-balance text-foreground md:text-5xl lg:text-6xl">
               Frequently asked questions
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-xl leading-relaxed text-muted-foreground">
               Everything you need to know about TechTank — events, membership, sponsorship, and more. Can't find what
               you're looking for?{" "}
               <a
                 href="mailto:techtankto@gmail.com"
-                className="underline underline-offset-2 hover:text-foreground transition-colors"
+                className="underline underline-offset-2 transition-colors hover:text-foreground"
               >
                 Email us
               </a>
@@ -205,12 +205,12 @@ export default function FAQPage() {
                 <AccordionItem
                   key={index}
                   value={`${group.category}-${index}`}
-                  className="bg-card rounded-xl border border-border px-6"
+                  className="rounded-xl border border-border bg-card px-6"
                 >
-                  <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5">
+                  <AccordionTrigger className="py-5 text-left font-semibold text-foreground hover:no-underline">
                     {item.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5">{item.a}</AccordionContent>
+                  <AccordionContent className="pb-5 leading-relaxed text-muted-foreground">{item.a}</AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
@@ -220,17 +220,17 @@ export default function FAQPage() {
 
       {/* Still have questions */}
       <Section background="brand-soft">
-        <div className="max-w-2xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
             Still have questions?
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">We're happy to help</h2>
-          <p className="text-muted-foreground mb-6">
+          <h2 className="mb-4 font-display text-3xl font-semibold text-foreground">We're happy to help</h2>
+          <p className="mb-6 text-muted-foreground">
             If you didn't find what you were looking for, reach out directly and an organizer will get back to you.
           </p>
           <a
             href="mailto:techtankto@gmail.com"
-            className="inline-flex items-center gap-2 font-semibold text-foreground underline underline-offset-4 hover:text-ring transition-colors"
+            className="inline-flex items-center gap-2 font-semibold text-foreground underline underline-offset-4 transition-colors hover:text-ring"
           >
             techtankto@gmail.com
           </a>

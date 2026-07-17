@@ -35,16 +35,16 @@ export default async function HomePage() {
   return (
     <>
       {/* Hero Section - Left aligned text, stacked overlapping photos right */}
-      <section className="relative overflow-hidden gradient-hero texture-grain">
+      <section className="gradient-hero texture-grain relative overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-8 py-12 lg:px-8 lg:py-16">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-6 items-center">
+          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-6">
             {/* Left: Text content */}
-            <div className="lg:max-w-xl py-8 lg:py-12">
+            <div className="py-8 lg:max-w-xl lg:py-12">
               <span className="tag mb-4">Toronto &middot; Year-round &middot; Inclusive</span>
-              <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
+              <h1 className="mb-6 font-display text-4xl font-semibold text-balance text-foreground md:text-5xl lg:text-6xl">
                 Toronto&apos;s home for tech community
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6 lg:max-w-md">
+              <p className="mb-6 text-lg leading-relaxed text-muted-foreground lg:max-w-md">
                 Tech talks, panels, socials, sports, and more—hosted at companies across the city.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -61,14 +61,14 @@ export default async function HomePage() {
             <div className="flex items-start justify-center pb-8">
               {/* First card — tilted CCW, nudged down */}
               {heroPosts[0] && (
-                <div className="relative w-[45%] lg:w-[55%] aspect-[4/5] photo-frame overflow-hidden shadow-xl transition-transform duration-300 -rotate-2 translate-y-6 hover:scale-[1.02]">
+                <div className="photo-frame relative aspect-4/5 w-[45%] translate-y-6 -rotate-2 overflow-hidden shadow-xl transition-transform duration-300 hover:scale-[1.02] lg:w-[55%]">
                   {heroPosts[0].videoSrc ? (
                     <video
                       autoPlay
                       loop
                       muted
                       playsInline
-                      className="absolute inset-0 h-full w-full object-cover object-top"
+                      className="absolute inset-0 size-full object-cover object-top"
                     >
                       <source src={heroPosts[0].videoSrc.replace(/\.mp4$/, ".webm")} type="video/webm" />
                       <source src={heroPosts[0].videoSrc} type="video/mp4" />
@@ -86,14 +86,14 @@ export default async function HomePage() {
               )}
               {/* Second card — overlaps via negative margin, tilted CW */}
               {heroPosts[1] && (
-                <div className="relative w-[45%] lg:w-[55%] aspect-[4/5] -ml-[10%] z-10 photo-frame overflow-hidden shadow-xl transition-transform duration-300 rotate-2 hover:scale-[1.02]">
+                <div className="photo-frame relative z-10 ml-[-10%] aspect-4/5 w-[45%] rotate-2 overflow-hidden shadow-xl transition-transform duration-300 hover:scale-[1.02] lg:w-[55%]">
                   {heroPosts[1].videoSrc ? (
                     <video
                       autoPlay
                       loop
                       muted
                       playsInline
-                      className="absolute inset-0 h-full w-full object-cover object-top"
+                      className="absolute inset-0 size-full object-cover object-top"
                     >
                       <source src={heroPosts[1].videoSrc.replace(/\.mp4$/, ".webm")} type="video/webm" />
                       <source src={heroPosts[1].videoSrc} type="video/mp4" />
@@ -113,7 +113,7 @@ export default async function HomePage() {
           </div>
 
           {/* Stats Marquee */}
-          <StatsMarquee className="py-8 mt-8" />
+          <StatsMarquee className="mt-8 py-8" />
         </div>
       </section>
 
@@ -128,12 +128,12 @@ export default async function HomePage() {
         <SectionHeader overline="Events" title="Recent happenings" className="mb-6" />
 
         {/* Recent Events - Large featured + smaller cards */}
-        <div className="grid gap-4 lg:grid-cols-2 mb-4">
+        <div className="mb-4 grid gap-4 lg:grid-cols-2">
           {featuredEvents.map((event) => (
             <EventCard key={event.id} event={event} variant="featured" />
           ))}
         </div>
-        <div className="grid gap-3 grid-cols-2 lg:grid-cols-4 mb-8">
+        <div className="mb-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
           {pastEvents.map((event) => (
             <EventCard key={event.id} event={event} variant="compact" />
           ))}
@@ -141,7 +141,7 @@ export default async function HomePage() {
 
         {/* Sponsors */}
         <div className="mb-6">
-          <p className="text-center text-xs text-muted-foreground mb-4 uppercase tracking-widest font-medium">
+          <p className="mb-4 text-center text-xs font-medium tracking-widest text-muted-foreground uppercase">
             Hosted and supported by
           </p>
           <SponsorsMarquee className="py-4" />
@@ -151,22 +151,22 @@ export default async function HomePage() {
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Button variant="primary" size="md" asChild>
             <a href="https://luma.com/techtank" target="_blank" rel="noopener noreferrer">
-              <LumaIcon className="mr-2 h-4 w-4" />
+              <LumaIcon className="mr-2 size-4" />
               Luma
-              <ExternalLink className="ml-2 h-4 w-4" />
+              <ExternalLink className="ml-2 size-4" />
             </a>
           </Button>
           <Button variant="outline" size="md" asChild>
             <a href="https://meetup.com/techtank-to" target="_blank" rel="noopener noreferrer">
-              <MeetupIcon className="mr-2 h-4 w-4" />
+              <MeetupIcon className="mr-2 size-4" />
               Meetup
-              <ExternalLink className="ml-2 h-4 w-4" />
+              <ExternalLink className="ml-2 size-4" />
             </a>
           </Button>
           <Button variant="outline" size="md" asChild>
             <Link href="/events">
               View all
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRight className="ml-2 size-4" />
             </Link>
           </Button>
         </div>
@@ -189,10 +189,10 @@ export default async function HomePage() {
 
       {/* Values Teaser */}
       <Section>
-        <div className="glass rounded-2xl p-6 lg:p-10 text-center max-w-2xl mx-auto">
+        <div className="glass mx-auto max-w-2xl rounded-2xl p-6 text-center lg:p-10">
           <span className="tag-outline mb-4 inline-block text-sm">What we&apos;re about</span>
-          <h2 className="font-display text-2xl lg:text-3xl font-bold text-foreground mb-4">Community first. Always.</h2>
-          <p className="text-muted-foreground mb-6">
+          <h2 className="mb-4 font-display text-2xl font-bold text-foreground lg:text-3xl">Community first. Always.</h2>
+          <p className="mb-6 text-muted-foreground">
             No gatekeeping—just people who genuinely want to learn, share, and lift each other up.
           </p>
           <Button variant="primary" asChild>
@@ -212,38 +212,38 @@ export default async function HomePage() {
         <div className="grid gap-4 md:grid-cols-2">
           <Link
             href="/events"
-            className="group relative overflow-hidden rounded-xl glass p-5 lg:p-6 transition-all hover:scale-[1.01]"
+            className="group glass relative overflow-hidden rounded-xl p-5 transition-all hover:scale-[1.01] lg:p-6"
           >
-            <Calendar className="absolute top-4 right-4 h-14 w-14 text-foreground/15" />
+            <Calendar className="absolute top-4 right-4 size-14 text-foreground/15" />
             <div className="relative">
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
+              <span className="mb-2 inline-block text-xs font-semibold tracking-widest text-amber-dark uppercase">
                 Show up
               </span>
-              <h3 className="font-display text-lg lg:text-xl font-bold text-foreground mb-2">Upcoming events</h3>
-              <p className="text-sm text-muted-foreground mb-4">
+              <h3 className="mb-2 font-display text-lg font-bold text-foreground lg:text-xl">Upcoming events</h3>
+              <p className="mb-4 text-sm text-muted-foreground">
                 See what&apos;s coming up and RSVP to the next meetup.
               </p>
-              <span className="inline-flex items-center text-sm font-semibold text-foreground group-hover:text-amber-dark transition-colors">
+              <span className="inline-flex items-center text-sm font-semibold text-foreground transition-colors group-hover:text-amber-dark">
                 See events
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 size-4" />
               </span>
             </div>
           </Link>
 
           <Link
             href="/get-involved"
-            className="group relative overflow-hidden rounded-xl glass p-5 lg:p-6 transition-all hover:scale-[1.01]"
+            className="group glass relative overflow-hidden rounded-xl p-5 transition-all hover:scale-[1.01] lg:p-6"
           >
-            <Users className="absolute top-4 right-4 h-14 w-14 text-foreground/15" />
+            <Users className="absolute top-4 right-4 size-14 text-foreground/15" />
             <div className="relative">
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
+              <span className="mb-2 inline-block text-xs font-semibold tracking-widest text-amber-dark uppercase">
                 Contribute
               </span>
-              <h3 className="font-display text-lg lg:text-xl font-bold text-foreground mb-2">Get involved</h3>
-              <p className="text-sm text-muted-foreground mb-4">Speak, host, sponsor, or volunteer with the crew.</p>
-              <span className="inline-flex items-center text-sm font-semibold text-foreground group-hover:text-amber-dark transition-colors">
+              <h3 className="mb-2 font-display text-lg font-bold text-foreground lg:text-xl">Get involved</h3>
+              <p className="mb-4 text-sm text-muted-foreground">Speak, host, sponsor, or volunteer with the crew.</p>
+              <span className="inline-flex items-center text-sm font-semibold text-foreground transition-colors group-hover:text-amber-dark">
                 Pick your path
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 size-4" />
               </span>
             </div>
           </Link>

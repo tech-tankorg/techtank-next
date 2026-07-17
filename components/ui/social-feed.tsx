@@ -35,7 +35,7 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
     : (instagramUrl ?? "https://instagram.com/techtankto");
 
   return (
-    <article className="group relative glass rounded-2xl overflow-hidden transition-all flex flex-col">
+    <article className="group glass relative flex flex-col overflow-hidden rounded-2xl transition-all">
       {(video || cover) && (
         <div className="relative aspect-4/5 w-full overflow-hidden bg-muted">
           {video ? (
@@ -46,7 +46,7 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
               muted
               playsInline
               preload="auto"
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
             >
               <source src={video.replace(/\.mp4$/, ".webm")} type="video/webm" />
               <source src={video} type="video/mp4" />
@@ -61,23 +61,23 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
             />
           ) : null}
           {post.featured && (
-            <span className="absolute top-3 left-3 tag bg-warning text-warning-foreground text-xs">Featured</span>
+            <span className="tag absolute top-3 left-3 bg-warning text-xs text-warning-foreground">Featured</span>
           )}
         </div>
       )}
-      <div className="p-6 flex flex-col flex-1">
-        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-4">
+      <div className="flex flex-1 flex-col p-6">
+        <div className="mb-4 flex flex-wrap items-center gap-x-2 gap-y-1">
           <span className="text-[#E4405F]">
-            <InstagramIcon className="h-5 w-5" />
+            <InstagramIcon className="size-5" />
           </span>
-          <span className="text-xs text-muted-foreground uppercase tracking-wide font-medium shrink-0">Instagram</span>
-          <span className="text-xs text-muted-foreground/50 shrink-0">·</span>
-          <span className="text-xs text-muted-foreground min-w-[8.5em] shrink-0">
+          <span className="shrink-0 text-xs font-medium tracking-wide text-muted-foreground uppercase">Instagram</span>
+          <span className="shrink-0 text-xs text-muted-foreground/50">·</span>
+          <span className="min-w-[8.5em] shrink-0 text-xs text-muted-foreground">
             {formatDate(post.date, post.createdAtRaw)}
           </span>
         </div>
 
-        <p className="text-foreground leading-relaxed mb-4 line-clamp-3 whitespace-pre-line">
+        <p className="mb-4 line-clamp-3 leading-relaxed whitespace-pre-line text-foreground">
           {truncateCaption(post.caption)}
         </p>
 
@@ -85,11 +85,11 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
           href={postUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-auto inline-flex items-center text-sm text-amber-dark font-medium hover:text-amber-dark/80 transition-colors"
+          className="mt-auto inline-flex items-center text-sm font-medium text-amber-dark transition-colors hover:text-amber-dark/80"
         >
-          <InstagramIcon className="mr-2 h-4 w-4" />
+          <InstagramIcon className="mr-2 size-4" />
           View on Instagram
-          <ExternalLink className="ml-1 h-3 w-3" />
+          <ExternalLink className="ml-1 size-3" />
         </a>
       </div>
     </article>
@@ -101,7 +101,7 @@ export function SocialFeed() {
 
   return (
     <div className="space-y-8">
-      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
         {posts.map((post) => (
           <InstagramPostCard key={post.id} post={post} />
         ))}
@@ -119,9 +119,9 @@ export function SocialFeed() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {Icon && <Icon className="mr-2 h-4 w-4" />}
+                  {Icon && <Icon className="mr-2 size-4" />}
                   {link.id === "slack" ? "Join Slack" : link.name}
-                  <ExternalLink className="ml-2 h-4 w-4" />
+                  <ExternalLink className="ml-2 size-4" />
                 </a>
               </Button>
             );

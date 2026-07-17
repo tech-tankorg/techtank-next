@@ -21,41 +21,41 @@ export function ContactCard({
   };
 
   return (
-    <div className="rounded-2xl glass p-6 lg:p-8 space-y-4">
+    <div className="glass space-y-4 rounded-2xl p-6 lg:p-8">
       <p className="text-sm text-muted-foreground">{context}</p>
 
       {/* Email */}
-      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
-          <Mail className="h-5 w-5" />
+      <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-4">
+        <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
+          <Mail className="size-5" />
         </div>
-        <div className="flex-1 flex items-center gap-3">
+        <div className="flex flex-1 items-center gap-3">
           <a
             href={`mailto:${email}`}
-            className="font-display text-base font-semibold text-foreground hover:text-amber-dark transition-colors break-all"
+            className="font-display text-base font-semibold break-all text-foreground transition-colors hover:text-amber-dark"
           >
             {email}
           </a>
           <button
             onClick={handleCopy}
-            className="inline-flex items-center justify-center h-7 w-7 rounded-lg bg-card/50 hover:bg-secondary text-muted-foreground hover:text-secondary-foreground transition-colors"
+            className="inline-flex size-7 items-center justify-center rounded-lg bg-card/50 text-muted-foreground transition-colors hover:bg-secondary hover:text-secondary-foreground"
             aria-label={copied ? "Copied" : "Copy email"}
           >
-            {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
+            {copied ? <Check className="size-3.5" /> : <Copy className="size-3.5" />}
           </button>
         </div>
       </div>
 
       {/* Slack */}
-      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
-          <MessageSquare className="h-5 w-5" />
+      <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-4">
+        <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
+          <MessageSquare className="size-5" />
         </div>
         <a
           href={slackUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-display text-base font-semibold text-foreground hover:text-amber-dark transition-colors"
+          className="font-display text-base font-semibold text-foreground transition-colors hover:text-amber-dark"
         >
           Join our Slack community
         </a>
