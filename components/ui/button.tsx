@@ -14,7 +14,7 @@ const buttonVariants = cva(
         outline:
           "border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground focus-visible:ring-ring",
         ghost: "text-foreground/70 hover:bg-foreground/5 hover:text-foreground focus-visible:ring-ring",
-        nav: "font-medium text-muted-foreground hover:bg-muted/80 dark:hover:bg-white/10 dark:hover:text-white focus-visible:ring-ring",
+        nav: "font-medium text-muted-foreground hover:bg-muted/80 focus-visible:ring-ring dark:hover:bg-white/10 dark:hover:text-white",
       },
       isActive: {
         true: "",

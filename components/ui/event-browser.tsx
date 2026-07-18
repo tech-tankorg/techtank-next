@@ -78,7 +78,7 @@ export function EventBrowser({ events }: EventBrowserProps) {
   return (
     <div>
       {/* Controls */}
-      <div className="mb-8 flex flex-col md:flex-row items-center justify-between gap-4 rounded-full border border-border bg-card p-3">
+      <div className="mb-8 flex flex-col items-center justify-between gap-4 rounded-2xl border border-border bg-card p-4 md:flex-row md:rounded-full md:p-3">
         {/* Category filters */}
         <div className="flex flex-wrap items-center justify-center gap-1 md:justify-start">
           {categories.map((c) => (
@@ -100,7 +100,7 @@ export function EventBrowser({ events }: EventBrowserProps) {
           <button
             onClick={() => setDisplayMode("cards")}
             className={cn(
-              "rounded-full p-1.5 transition-colors cursor-pointer",
+              "cursor-pointer rounded-full p-1.5 transition-colors",
               displayMode === "cards"
                 ? "bg-background text-foreground shadow-sm"
                 : "text-muted-foreground hover:text-foreground",
@@ -112,7 +112,7 @@ export function EventBrowser({ events }: EventBrowserProps) {
           <button
             onClick={() => setDisplayMode("grid")}
             className={cn(
-              "rounded-full p-1.5 transition-colors cursor-pointer",
+              "cursor-pointer rounded-full p-1.5 transition-colors",
               displayMode === "grid"
                 ? "bg-background text-foreground shadow-sm"
                 : "text-muted-foreground hover:text-foreground",
@@ -124,7 +124,7 @@ export function EventBrowser({ events }: EventBrowserProps) {
           <button
             onClick={() => setDisplayMode("list")}
             className={cn(
-              "rounded-full p-1.5 transition-colors cursor-pointer",
+              "cursor-pointer rounded-full p-1.5 transition-colors",
               displayMode === "list"
                 ? "bg-background text-foreground shadow-sm"
                 : "text-muted-foreground hover:text-foreground",
