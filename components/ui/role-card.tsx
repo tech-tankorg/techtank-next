@@ -37,26 +37,26 @@ export function RoleCard({
   const Icon = icons[role];
 
   return (
-    <div className="group relative flex flex-col glass rounded-2xl p-6 lg:p-8 transition-all duration-300">
+    <div className="group glass relative flex flex-col rounded-2xl p-6 transition-all duration-300 lg:p-8">
       {/* Icon */}
-      <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
-        <Icon className="h-6 w-6" />
+      <div className="mb-4 inline-flex size-12 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
+        <Icon className="size-6" />
       </div>
 
       {/* Overline */}
-      <span className="text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">{overline}</span>
+      <span className="mb-2 text-xs font-semibold tracking-widest text-amber-dark uppercase">{overline}</span>
 
       {/* Title */}
-      <h3 className="font-display text-xl font-bold text-foreground mb-3">{title}</h3>
+      <h3 className="mb-3 font-display text-xl font-bold text-foreground">{title}</h3>
 
       {/* Description */}
-      <p className="text-muted-foreground text-sm leading-relaxed mb-6">{description}</p>
+      <p className="mb-6 text-sm leading-relaxed text-muted-foreground">{description}</p>
 
       {/* Benefits */}
-      <ul className="space-y-2 mb-6 flex-1">
+      <ul className="mb-6 flex-1 space-y-2">
         {benefits.map((benefit, index) => (
           <li key={index} className="flex items-start gap-2 text-sm text-foreground">
-            <Check className="h-4 w-4 text-mint mt-0.5 shrink-0" />
+            <Check className="mt-0.5 size-4 shrink-0 text-mint" />
             <span>{benefit}</span>
           </li>
         ))}

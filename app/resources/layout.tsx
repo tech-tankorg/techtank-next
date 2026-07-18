@@ -15,7 +15,7 @@ export default function ResourcesLayout({ children }: { children: React.ReactNod
   return (
     <div className="min-h-screen">
       {/* Sticky Sub-Nav */}
-      <nav className="sticky top-18 z-40 bg-background/80 backdrop-blur-xl border-b border-border">
+      <nav className="sticky top-18 z-40 border-b border-border bg-background/80 backdrop-blur-xl">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex items-center justify-center py-3">
             <div className="flex flex-wrap items-center justify-center gap-1">

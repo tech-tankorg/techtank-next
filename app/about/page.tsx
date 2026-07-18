@@ -125,16 +125,16 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden gradient-hero texture-grain">
+      <section className="gradient-hero texture-grain relative overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-32">
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+            <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
               About TechTank
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
+            <h1 className="mb-6 font-display text-4xl font-semibold text-balance text-foreground md:text-5xl lg:text-6xl">
               We build the community we wanted to find
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+            <p className="mb-8 text-xl leading-relaxed text-muted-foreground">
               TechTank TO is a volunteer-run, Toronto-based tech community founded in 2023. We host year-round in-person
               events where developers, designers, PMs, and tech-curious people gather to learn, share, and connect. No
               gatekeeping—just people helping people grow in tech.
@@ -170,17 +170,17 @@ export default function AboutPage() {
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {values.map((value) => (
-            <div key={value.title} className="flex flex-col gap-4 bg-card rounded-2xl border border-border p-6">
+            <div key={value.title} className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-6">
               <div
-                className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${
+                className={`flex size-12 shrink-0 items-center justify-center rounded-xl ${
                   value.color === "teal" ? "bg-ring/10 text-ring" : "bg-amber/10 text-amber"
                 }`}
               >
-                <value.icon className="h-6 w-6" />
+                <value.icon className="size-6" />
               </div>
               <div>
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">{value.title}</h3>
-                <p className="text-muted-foreground leading-relaxed text-sm">{value.description}</p>
+                <h3 className="mb-2 font-display text-lg font-semibold text-foreground">{value.title}</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">{value.description}</p>
               </div>
             </div>
           ))}
@@ -191,11 +191,11 @@ export default function AboutPage() {
       <Section background="white">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+            <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
               From a simple idea to a registered nonprofit
             </span>
-            <h2 className="font-display text-3xl font-semibold text-foreground lg:text-4xl mb-6">Our Story</h2>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <h2 className="mb-6 font-display text-3xl font-semibold text-foreground lg:text-4xl">Our Story</h2>
+            <div className="space-y-4 leading-relaxed text-muted-foreground">
               <p>
                 TechTank TO was founded in January 2023 with a simple idea: build a community for early-stage engineers
                 in Toronto. Free (or low cost) events, real connections, no pressure. A place where people just starting
@@ -217,9 +217,9 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="relative">
-            <div className="relative aspect-4/3 rounded-2xl overflow-hidden bg-linear-to-br from-peach via-lavender to-aqua">
+            <div className="via-lavender to-aqua relative aspect-4/3 overflow-hidden rounded-2xl bg-linear-to-br from-peach">
               {featuredVideo ? (
-                <video autoPlay loop muted playsInline className="absolute inset-0 h-full w-full object-cover">
+                <video autoPlay loop muted playsInline className="absolute inset-0 size-full object-cover">
                   <source src={featuredVideo.replace(/\.mp4$/, ".webm")} type="video/webm" />
                   <source src={featuredVideo} type="video/mp4" />
                 </video>
@@ -233,7 +233,7 @@ export default function AboutPage() {
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="text-center text-foreground/60 px-8">Event photography placeholder</p>
+                  <p className="px-8 text-center text-foreground/60">Event photography placeholder</p>
                 </div>
               )}
             </div>
@@ -253,18 +253,18 @@ export default function AboutPage() {
           {currentPrograms.map((program) => {
             const BrandIcon = program.cta?.brand ? BRAND_ICONS[program.cta.brand] : null;
             return (
-              <div key={program.title} className="flex flex-col gap-4 bg-card rounded-2xl border border-border p-6">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-ring/10 text-ring">
-                  <program.icon className="h-6 w-6" />
+              <div key={program.title} className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-6">
+                <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-ring/10 text-ring">
+                  <program.icon className="size-6" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-2">{program.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm">{program.description}</p>
+                  <h3 className="mb-2 font-display text-lg font-semibold text-foreground">{program.title}</h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">{program.description}</p>
                 </div>
                 {program.cta && (
                   <Button variant="outline" size="sm" className="self-start" asChild>
                     <Link href={program.cta.href}>
-                      {BrandIcon && <BrandIcon className="mr-2 h-4 w-4" />}
+                      {BrandIcon && <BrandIcon className="mr-2 size-4" />}
                       {program.cta.label}
                     </Link>
                   </Button>
@@ -285,15 +285,15 @@ export default function AboutPage() {
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {pastPrograms.map((p) => (
-            <div key={p.title} className="flex flex-col gap-4 bg-card rounded-2xl border border-border p-6">
+            <div key={p.title} className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-6">
               <div className="flex-1">
-                <div className="flex items-center gap-2 mb-2">
+                <div className="mb-2 flex items-center gap-2">
                   <h3 className="font-display text-lg font-semibold text-foreground">{p.title}</h3>
-                  <span className="rounded-full bg-warning/40 dark:bg-warning/60 text-warning-foreground px-2 py-0.5 text-xs font-medium">
+                  <span className="rounded-full bg-warning/40 px-2 py-0.5 text-xs font-medium text-warning-foreground dark:bg-warning/60">
                     {p.label}
                   </span>
                 </div>
-                <p className="text-muted-foreground leading-relaxed text-sm">{p.description}</p>
+                <p className="text-sm leading-relaxed text-muted-foreground">{p.description}</p>
               </div>
             </div>
           ))}
@@ -302,15 +302,15 @@ export default function AboutPage() {
 
       {/* Get Involved */}
       <Section>
-        <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
             Help shape what TechTank becomes
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Get Involved</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+          <h2 className="mb-4 font-display text-3xl font-semibold text-foreground">Get Involved</h2>
+          <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
             Whether you want to pitch a new idea or get involved in an existing initiative, we want to hear from you.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap justify-center gap-4">
             <Button variant="primary" size="lg" asChild>
               <Link href="/events">See upcoming events</Link>
             </Button>
@@ -343,8 +343,8 @@ export default function AboutPage() {
         <SectionHeader overline="Part of something bigger" title="Affiliations" className="mb-10" />
         <div className="max-w-2xl">
           <div className="rounded-2xl border border-border bg-card p-6 lg:p-8">
-            <h3 className="font-display text-xl font-semibold text-foreground mb-3">Supercollider</h3>
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <h3 className="mb-3 font-display text-xl font-semibold text-foreground">Supercollider</h3>
+            <p className="mb-6 leading-relaxed text-muted-foreground">
               TechTank is a proud member of the Supercollider network, a community of communities bringing together
               Toronto&apos;s tech scene. Our events are listed on their Luma calendar so you can discover everything
               happening across the ecosystem.
@@ -358,7 +358,7 @@ export default function AboutPage() {
                   className="inline-flex items-center gap-2"
                 >
                   Supercollider website
-                  <ExternalLink className="h-3.5 w-3.5" />
+                  <ExternalLink className="size-3.5" />
                 </a>
               </Button>
               <Button variant="outline" size="sm" asChild>
@@ -369,7 +369,7 @@ export default function AboutPage() {
                   className="inline-flex items-center gap-2"
                 >
                   Supercollider events calendar
-                  <ExternalLink className="h-3.5 w-3.5" />
+                  <ExternalLink className="size-3.5" />
                 </a>
               </Button>
             </div>
