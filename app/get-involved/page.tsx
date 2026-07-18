@@ -74,16 +74,16 @@ export default function GetInvolvedPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden gradient-hero texture-grain">
+      <section className="gradient-hero texture-grain relative overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+            <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
               Get involved
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
+            <h1 className="mb-6 font-display text-4xl font-semibold text-balance text-foreground md:text-5xl lg:text-6xl">
               Let&apos;s build TechTank together
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-xl leading-relaxed text-muted-foreground">
               TechTank runs because of people who show up and help make things happen. There are a few ways to get
               involved depending on where you&apos;re at and what you want to put in.
             </p>
@@ -91,7 +91,7 @@ export default function GetInvolvedPage() {
 
           {/* Community platforms */}
           <div className="mt-10">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+            <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
               Join the community
             </span>
             <div className="flex flex-wrap gap-4">
@@ -101,10 +101,10 @@ export default function GetInvolvedPage() {
                   href={link.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="group relative overflow-hidden rounded-2xl glass transition-transform hover:scale-[1.03]"
+                  className="group glass relative overflow-hidden rounded-2xl transition-transform hover:scale-[1.03]"
                 >
                   <div className="flex flex-col items-center justify-center gap-1 p-5">
-                    <Image src={link.icon} alt="" width={40} height={40} className="h-10 w-10" />
+                    <Image src={link.icon} alt="" width={40} height={40} className="size-10" />
                     <h2 className="text-sm font-medium text-foreground">{link.name}</h2>
                   </div>
                 </a>
@@ -129,12 +129,12 @@ export default function GetInvolvedPage() {
         <SectionHeader overline="Why get involved" title="What you get out of it" className="mb-12" />
         <div className="grid gap-8 lg:grid-cols-3">
           {whyGetInvolved.map((item) => (
-            <div key={item.title} className="bg-card rounded-2xl border border-border p-6 lg:p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-ring/10 text-ring mb-4">
-                <item.icon className="h-6 w-6" />
+            <div key={item.title} className="rounded-2xl border border-border bg-card p-6 lg:p-8">
+              <div className="mb-4 flex size-12 items-center justify-center rounded-xl bg-ring/10 text-ring">
+                <item.icon className="size-6" />
               </div>
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3">{item.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+              <h3 className="mb-3 font-display text-xl font-semibold text-foreground">{item.title}</h3>
+              <p className="leading-relaxed text-muted-foreground">{item.description}</p>
             </div>
           ))}
         </div>
@@ -142,17 +142,17 @@ export default function GetInvolvedPage() {
 
       {/* Contact Strip */}
       <Section>
-        <div className="max-w-2xl mx-auto text-center mb-8">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+        <div className="mx-auto mb-8 max-w-2xl text-center">
+          <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
             Ready to connect?
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Drop us a line</h2>
+          <h2 className="mb-4 font-display text-3xl font-semibold text-foreground">Drop us a line</h2>
           <p className="text-muted-foreground">
             We respond to every message — hosts, sponsors, speakers, and volunteers. Whichever role fits, we&apos;d love
             to hear from you.
           </p>
         </div>
-        <div className="max-w-xl mx-auto">
+        <div className="mx-auto max-w-xl">
           <ContactCard context="For hosting, sponsorship, speaking, and community inquiries." />
         </div>
       </Section>

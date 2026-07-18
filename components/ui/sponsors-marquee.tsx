@@ -13,7 +13,7 @@ export function SponsorsMarquee({ className }: { className?: string }) {
           href={sponsor.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex items-center justify-center h-8 lg:h-10"
+          className="group flex h-8 items-center justify-center lg:h-10"
           title={sponsor.name}
         >
           <Image
@@ -21,7 +21,7 @@ export function SponsorsMarquee({ className }: { className?: string }) {
             alt={`${sponsor.name} logo`}
             width={120}
             height={40}
-            className="w-auto h-full object-contain opacity-70 hover:opacity-100 transition-all duration-300 dark:brightness-0 dark:invert"
+            className="h-full w-auto object-contain opacity-70 transition-all duration-300 hover:opacity-100 dark:brightness-0 dark:invert"
             style={{
               width: "auto",
               height: "100%",

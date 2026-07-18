@@ -19,19 +19,19 @@ export function QrDialog() {
     <Dialog open={qrDialogOpen} onClose={onClose} labelledBy={titleId} className="md:max-w-md lg:max-w-md">
       <div className="flex flex-col items-center gap-6 text-center">
         <div>
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-3">
+          <span className="mb-3 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
             Scan to join
           </span>
-          <h2 id={titleId} className="font-display text-2xl font-bold text-foreground leading-tight">
+          <h2 id={titleId} className="font-display text-2xl leading-tight font-bold text-foreground">
             Get involved with TechTank
           </h2>
-          <p className="text-sm text-foreground mt-2">
+          <p className="mt-2 text-sm text-foreground">
             Point your phone camera at the code to open the get involved page.
           </p>
         </div>
 
         <QrCodeIcon
-          className="h-64 w-64 text-black dark:text-white"
+          className="size-64 text-black dark:text-white"
           aria-label="QR code linking to the TechTank get involved page"
         />
 

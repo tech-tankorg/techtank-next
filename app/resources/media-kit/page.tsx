@@ -73,22 +73,22 @@ export default function PressKitPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden gradient-hero texture-grain">
+      <section className="gradient-hero texture-grain relative overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+            <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
               Media Kit
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
+            <h1 className="mb-6 font-display text-4xl font-semibold text-balance text-foreground md:text-5xl lg:text-6xl">
               TechTank Media Kit
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+            <p className="mb-8 text-xl leading-relaxed text-muted-foreground">
               Logos, guidelines, and fast facts for press, sponsors, and partners. All assets are free to use with
               attribution.
             </p>
             <Button variant="primary" size="lg" asChild>
               <a href="/downloads/techtank-media-kit.zip" download>
-                <Download className="mr-2 h-5 w-5" />
+                <Download className="mr-2 size-5" />
                 Download all assets (ZIP)
               </a>
             </Button>
@@ -101,8 +101,8 @@ export default function PressKitPage() {
         <SectionHeader overline="Fast facts" title="About TechTank TO" className="mb-12" />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {fastFacts.map((fact) => (
-            <div key={fact.label} className="bg-card rounded-xl border border-border p-5">
-              <p className="text-sm text-muted-foreground mb-1">{fact.label}</p>
+            <div key={fact.label} className="rounded-xl border border-border bg-card p-5">
+              <p className="mb-1 text-sm text-muted-foreground">{fact.label}</p>
               <p className="font-semibold text-foreground">{fact.value}</p>
             </div>
           ))}
@@ -113,8 +113,8 @@ export default function PressKitPage() {
       <Section background="white">
         <SectionHeader overline="Boilerplate" title="About TechTank (for press)" className="mb-8" />
         <div className="max-w-3xl space-y-6">
-          <div className="bg-background rounded-xl border border-border p-6">
-            <p className="text-foreground leading-relaxed mb-4">
+          <div className="rounded-xl border border-border bg-background p-6">
+            <p className="mb-4 leading-relaxed text-foreground">
               <strong>Full paragraph: </strong>TechTank TO is Toronto&apos;s volunteer-run tech community, hosting
               year-round in-person events since 2023. Each event brings together 40-120 attendees, including developers,
               designers, and tech professionals for technical talks and networking. TechTank is committed to fostering a
@@ -123,15 +123,15 @@ export default function PressKitPage() {
             </p>
             <CopyButton text="TechTank TO is Toronto's volunteer-run tech community, hosting year-round in-person events since 2023. Each event brings together 40-120 attendees, including developers, designers, and tech professionals for technical talks and networking. TechTank is committed to fostering a supportive and inclusive environment where people of all skill levels can explore, create, and thrive in technology." />
           </div>
-          <div className="bg-background rounded-xl border border-border p-6">
-            <p className="text-foreground leading-relaxed mb-4">
+          <div className="rounded-xl border border-border bg-background p-6">
+            <p className="mb-4 leading-relaxed text-foreground">
               <strong>One-liner: </strong>TechTank TO is Toronto&apos;s volunteer-run tech community, hosting year-round
               events for developers, designers, and tech professionals since 2023.
             </p>
             <CopyButton text="TechTank TO is Toronto's volunteer-run tech community, hosting year-round events for developers, designers, and tech professionals since 2023." />
           </div>
-          <div className="bg-background rounded-xl border border-border p-6">
-            <p className="text-foreground leading-relaxed mb-4">
+          <div className="rounded-xl border border-border bg-background p-6">
+            <p className="mb-4 leading-relaxed text-foreground">
               <strong>Mission statement: </strong>TechTank strengthens Toronto&apos;s tech ecosystem by creating
               engaging, community-driven spaces that bring people together through social events and career-focused
               programming, helping them build meaningful connections and grow in their careers.
@@ -151,8 +151,8 @@ export default function PressKitPage() {
         />
 
         {/* Logo Preview */}
-        <div className="grid gap-6 lg:grid-cols-2 mb-12">
-          <div className="light bg-background/70 backdrop-blur-md rounded-xl border border-border p-8 flex items-center justify-center">
+        <div className="mb-12 grid gap-6 lg:grid-cols-2">
+          <div className="light flex items-center justify-center rounded-xl border border-border bg-background/70 p-8 backdrop-blur-md">
             <Image
               src="/images/logos/light.svg"
               alt="TechTank TO Logo (light)"
@@ -162,7 +162,7 @@ export default function PressKitPage() {
               style={{ width: "auto" }}
             />
           </div>
-          <div className="glass-dark rounded-xl p-8 flex items-center justify-center">
+          <div className="glass-dark flex items-center justify-center rounded-xl p-8">
             <Image
               src="/images/logos/dark.svg"
               alt="TechTank TO Logo (dark)"
@@ -178,16 +178,16 @@ export default function PressKitPage() {
         <a
           href={logoDownload.href}
           download
-          className="group flex items-center gap-4 bg-card rounded-xl border border-border p-5 hover:border-ring/50 transition-all"
+          className="group flex items-center gap-4 rounded-xl border border-border bg-card p-5 transition-all hover:border-ring/50"
         >
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-background">
-            <FileText className="h-6 w-6 text-ring" />
+          <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-background">
+            <FileText className="size-6 text-ring" />
           </div>
-          <div className="flex-1 min-w-0">
-            <p className="font-semibold text-foreground group-hover:text-ring transition-colors">{logoDownload.name}</p>
+          <div className="min-w-0 flex-1">
+            <p className="font-semibold text-foreground transition-colors group-hover:text-ring">{logoDownload.name}</p>
             <p className="text-sm text-muted-foreground">{logoDownload.description}</p>
           </div>
-          <Download className="h-5 w-5 text-muted-foreground group-hover:text-ring transition-colors shrink-0" />
+          <Download className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-ring" />
         </a>
       </Section>
 
@@ -196,10 +196,10 @@ export default function PressKitPage() {
         <SectionHeader overline="Brand colors" title="Color palette" className="mb-12" />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {brandColors.map((color) => (
-            <div key={color.name} className="bg-background rounded-xl border border-border overflow-hidden">
+            <div key={color.name} className="overflow-hidden rounded-xl border border-border bg-background">
               <div className="h-20" style={{ backgroundColor: color.hex }} />
               <div className="p-4">
-                <div className="flex items-center justify-between mb-1">
+                <div className="mb-1 flex items-center justify-between">
                   <p className="font-semibold text-foreground">{color.name}</p>
                   <code className="text-sm text-muted-foreground">{color.hex}</code>
                 </div>
@@ -214,16 +214,16 @@ export default function PressKitPage() {
       <Section>
         <SectionHeader overline="Typography" title="Font pairing" className="mb-12" />
         <div className="grid gap-8 lg:grid-cols-2">
-          <div className="bg-card rounded-xl border border-border p-6">
-            <p className="text-sm text-muted-foreground mb-2">Display / Headlines</p>
-            <p className="font-display text-4xl font-semibold text-foreground mb-4">Space Grotesk</p>
+          <div className="rounded-xl border border-border bg-card p-6">
+            <p className="mb-2 text-sm text-muted-foreground">Display / Headlines</p>
+            <p className="mb-4 font-display text-4xl font-semibold text-foreground">Space Grotesk</p>
             <p className="text-muted-foreground">
               Used for headings, titles, and display text. Geometric sans-serif with a modern, technical feel.
             </p>
           </div>
-          <div className="bg-card rounded-xl border border-border p-6">
-            <p className="text-sm text-muted-foreground mb-2">Body / UI</p>
-            <p className="font-sans text-4xl font-semibold text-foreground mb-4">Inter</p>
+          <div className="rounded-xl border border-border bg-card p-6">
+            <p className="mb-2 text-sm text-muted-foreground">Body / UI</p>
+            <p className="mb-4 font-sans text-4xl font-semibold text-foreground">Inter</p>
             <p className="text-muted-foreground">
               Used for body text, UI elements, and long-form content. Humanist sans-serif optimized for screens.
             </p>
@@ -242,21 +242,21 @@ export default function PressKitPage() {
               <Wrapper
                 key={resource.name}
                 {...wrapperProps}
-                className="group flex items-center gap-4 bg-card rounded-xl border border-border p-5 hover:border-ring/50 transition-all"
+                className="group flex items-center gap-4 rounded-xl border border-border bg-card p-5 transition-all hover:border-ring/50"
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-ring/10">
-                  <FileText className="h-6 w-6 text-ring" />
+                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-ring/10">
+                  <FileText className="size-6 text-ring" />
                 </div>
-                <div className="flex-1 min-w-0">
-                  <p className="font-semibold text-foreground group-hover:text-ring transition-colors">
+                <div className="min-w-0 flex-1">
+                  <p className="font-semibold text-foreground transition-colors group-hover:text-ring">
                     {resource.name}
                   </p>
                   <p className="text-sm text-muted-foreground">{resource.description}</p>
                 </div>
                 {resource.internal ? (
-                  <ExternalLink className="h-5 w-5 text-muted-foreground group-hover:text-ring transition-colors shrink-0" />
+                  <ExternalLink className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-ring" />
                 ) : (
-                  <Download className="h-5 w-5 text-muted-foreground group-hover:text-ring transition-colors shrink-0" />
+                  <Download className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-ring" />
                 )}
               </Wrapper>
             );
@@ -266,12 +266,12 @@ export default function PressKitPage() {
 
       {/* Social Links */}
       <Section background="brand-soft">
-        <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
             Connect with us
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-8">Official channels</h2>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <h2 className="mb-8 font-display text-3xl font-semibold text-foreground">Official channels</h2>
+          <div className="flex flex-wrap justify-center gap-4">
             {getAllSocialLinks()
               .filter((link) => ["linkedin", "instagram", "youtube", "github"].includes(link.id))
               .map((link) => {
@@ -279,9 +279,9 @@ export default function PressKitPage() {
                 return (
                   <Button key={link.id} variant="outline" asChild>
                     <a href={link.url} target="_blank" rel="noopener noreferrer">
-                      {Icon && <Icon className="mr-2 h-4 w-4" />}
+                      {Icon && <Icon className="mr-2 size-4" />}
                       {link.name}
-                      <ExternalLink className="ml-2 h-4 w-4" />
+                      <ExternalLink className="ml-2 size-4" />
                     </a>
                   </Button>
                 );
@@ -292,9 +292,9 @@ export default function PressKitPage() {
 
       {/* Usage Terms */}
       <Section>
-        <div className="max-w-3xl mx-auto">
+        <div className="mx-auto max-w-3xl">
           <SectionHeader overline="Usage terms" title="How to use our assets" className="mb-8" />
-          <div className="bg-card rounded-xl border border-border p-6 space-y-4">
+          <div className="space-y-4 rounded-xl border border-border bg-card p-6">
             <p className="text-foreground">
               <strong>Permitted:</strong> Use our logos and assets to reference TechTank TO in press coverage, event
               listings, partnership announcements, and sponsor materials with proper attribution.
@@ -303,7 +303,7 @@ export default function PressKitPage() {
               <strong>Not permitted:</strong> Modifying logo colors, proportions, or elements; using assets to imply
               endorsement without written permission; using assets in ways that could damage TechTank&apos;s reputation.
             </p>
-            <p className="text-muted-foreground text-sm">
+            <p className="text-sm text-muted-foreground">
               For questions about asset usage or to request permission for special use cases, please contact us at
               techtankto@gmail.com.
             </p>
@@ -313,14 +313,14 @@ export default function PressKitPage() {
 
       {/* Contact */}
       <Section>
-        <div className="max-w-2xl mx-auto text-center mb-8">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+        <div className="mx-auto mb-8 max-w-2xl text-center">
+          <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
             Media contact
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Get in touch</h2>
+          <h2 className="mb-4 font-display text-3xl font-semibold text-foreground">Get in touch</h2>
           <p className="text-muted-foreground">For press inquiries, interviews, and partnership discussions.</p>
         </div>
-        <div className="max-w-xl mx-auto">
+        <div className="mx-auto max-w-xl">
           <ContactCard context="For press inquiries, interviews, and partnership requests." />
         </div>
       </Section>

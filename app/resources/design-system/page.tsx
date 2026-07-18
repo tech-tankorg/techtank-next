@@ -130,16 +130,16 @@ export default function DesignSystemPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden gradient-hero texture-grain">
+      <section className="gradient-hero texture-grain relative overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+            <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
               Brand Guidelines
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
+            <h1 className="mb-6 font-display text-4xl font-semibold text-balance text-foreground md:text-5xl lg:text-6xl">
               Design System
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-xl leading-relaxed text-muted-foreground">
               Colors, typography, gradients, and components used across the TechTank TO website.
             </p>
           </div>
@@ -153,15 +153,15 @@ export default function DesignSystemPage() {
         <div className="space-y-6">
           {/* Brand */}
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground mb-2">Brand</p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border rounded-xl overflow-hidden border border-border">
+            <p className="mb-2 text-[11px] font-semibold tracking-widest text-muted-foreground uppercase">Brand</p>
+            <div className="grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-4">
               {brandColors.map((color) => (
                 <div key={color.name} className="bg-background">
                   <div className={`h-14 ${color.cls}`} />
                   <div className="px-3 py-2.5">
                     <p className="text-xs font-medium text-foreground">{color.label}</p>
                     <code className="text-[10px] text-muted-foreground">{color.hex}</code>
-                    <p className="text-[10px] text-muted-foreground mt-0.5 leading-tight">{color.usage}</p>
+                    <p className="mt-0.5 text-[10px] leading-tight text-muted-foreground">{color.usage}</p>
                   </div>
                 </div>
               ))}
@@ -170,15 +170,15 @@ export default function DesignSystemPage() {
 
           {/* Accent */}
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground mb-2">Accent</p>
-            <div className="grid grid-cols-3 sm:grid-cols-6 gap-px bg-border rounded-xl overflow-hidden border border-border">
+            <p className="mb-2 text-[11px] font-semibold tracking-widest text-muted-foreground uppercase">Accent</p>
+            <div className="grid grid-cols-3 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-6">
               {accentTokens.map((color) => (
                 <div key={color.name} className="bg-background">
                   <div className={`h-14 ${color.cls}`} />
                   <div className="px-3 py-2.5">
                     <p className="text-xs font-medium text-foreground">{color.label}</p>
                     <code className="text-[10px] text-muted-foreground">{color.hex}</code>
-                    <p className="text-[10px] text-muted-foreground mt-0.5 leading-tight">{color.usage}</p>
+                    <p className="mt-0.5 text-[10px] leading-tight text-muted-foreground">{color.usage}</p>
                   </div>
                 </div>
               ))}
@@ -190,36 +190,36 @@ export default function DesignSystemPage() {
       {/* Semantic tokens */}
       <Section background="muted">
         <SectionHeader overline="Theming" title="Semantic tokens" className="mb-4" />
-        <p className="text-sm text-muted-foreground mb-8 max-w-2xl">
+        <p className="mb-8 max-w-2xl text-sm text-muted-foreground">
           Every token resolves differently in light and dark mode. Never use raw brand hex values for text, surfaces, or
           borders in components — always use the semantic name.
         </p>
 
-        <div className="grid lg:grid-cols-2 gap-5">
+        <div className="grid gap-5 lg:grid-cols-2">
           {/* Light panel */}
-          <div className="light rounded-xl overflow-hidden border border-border bg-background">
-            <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
-              <div className="h-2.5 w-2.5 rounded-full bg-background border border-foreground/30" />
-              <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+          <div className="light overflow-hidden rounded-xl border border-border bg-background">
+            <div className="flex items-center gap-2 border-b border-border px-4 py-3">
+              <div className="size-2.5 rounded-full border border-foreground/30 bg-background" />
+              <span className="text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
                 Light mode
               </span>
             </div>
             {semanticPairs.map((pair) => (
-              <div key={pair.bg} className="px-4 py-2.5 border-b border-border/60">
-                <div className="flex items-center gap-2.5 mb-1.5">
-                  <div className={`h-4 w-4 rounded-[3px] border border-foreground/20 shrink-0 ${pair.bgCls}`} />
-                  <code className="text-[11px] font-semibold flex-1 text-foreground">bg-{pair.bg}</code>
-                  <span className="text-[10px] font-mono text-muted-foreground">{pair.bgAlias}</span>
+              <div key={pair.bg} className="border-b border-border/60 px-4 py-2.5">
+                <div className="mb-1.5 flex items-center gap-2.5">
+                  <div className={`size-4 shrink-0 rounded-[3px] border border-foreground/20 ${pair.bgCls}`} />
+                  <code className="flex-1 text-[11px] font-semibold text-foreground">bg-{pair.bg}</code>
+                  <span className="font-mono text-[10px] text-muted-foreground">{pair.bgAlias}</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <div className={`h-4 w-4 rounded-[3px] border border-foreground/20 shrink-0 ${pair.fgCls}`} />
-                  <code className="text-[11px] flex-1 text-muted-foreground">text-{pair.fg}</code>
-                  <span className="text-[10px] font-mono text-muted-foreground">{pair.fgAlias}</span>
+                  <div className={`size-4 shrink-0 rounded-[3px] border border-foreground/20 ${pair.fgCls}`} />
+                  <code className="flex-1 text-[11px] text-muted-foreground">text-{pair.fg}</code>
+                  <span className="font-mono text-[10px] text-muted-foreground">{pair.fgAlias}</span>
                 </div>
               </div>
             ))}
-            <div className="px-4 pt-3 pb-1 border-t border-border">
-              <p className="text-[10px] font-semibold uppercase tracking-widest mb-2 text-muted-foreground">
+            <div className="border-t border-border px-4 pt-3 pb-1">
+              <p className="mb-2 text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
                 Utilities
               </p>
             </div>
@@ -228,37 +228,37 @@ export default function DesignSystemPage() {
                 key={u.token}
                 className={`flex items-center gap-2.5 px-4 py-2${i === semanticUtilities.length - 1 ? " pb-4" : ""}`}
               >
-                <div className={`h-4 w-4 rounded-[3px] border border-foreground/20 shrink-0 ${u.bgCls}`} />
-                <code className="text-[11px] font-semibold flex-1 text-foreground">{u.token}</code>
-                <span className="text-[10px] font-mono text-muted-foreground">{u.lightAlias}</span>
+                <div className={`size-4 shrink-0 rounded-[3px] border border-foreground/20 ${u.bgCls}`} />
+                <code className="flex-1 text-[11px] font-semibold text-foreground">{u.token}</code>
+                <span className="font-mono text-[10px] text-muted-foreground">{u.lightAlias}</span>
               </div>
             ))}
           </div>
 
           {/* Dark panel */}
-          <div className="dark rounded-xl overflow-hidden border border-border bg-background">
-            <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
-              <div className="h-2.5 w-2.5 rounded-full bg-background border border-foreground/30" />
-              <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+          <div className="dark overflow-hidden rounded-xl border border-border bg-background">
+            <div className="flex items-center gap-2 border-b border-border px-4 py-3">
+              <div className="size-2.5 rounded-full border border-foreground/30 bg-background" />
+              <span className="text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
                 Dark mode
               </span>
             </div>
             {semanticPairs.map((pair) => (
-              <div key={pair.bg} className="px-4 py-2.5 border-b border-border/60">
-                <div className="flex items-center gap-2.5 mb-1.5">
-                  <div className={`h-4 w-4 rounded-[3px] border border-foreground/20 shrink-0 ${pair.bgCls}`} />
-                  <code className="text-[11px] font-semibold flex-1 text-foreground">bg-{pair.bg}</code>
-                  <span className="text-[10px] font-mono text-muted-foreground">{pair.darkBgAlias}</span>
+              <div key={pair.bg} className="border-b border-border/60 px-4 py-2.5">
+                <div className="mb-1.5 flex items-center gap-2.5">
+                  <div className={`size-4 shrink-0 rounded-[3px] border border-foreground/20 ${pair.bgCls}`} />
+                  <code className="flex-1 text-[11px] font-semibold text-foreground">bg-{pair.bg}</code>
+                  <span className="font-mono text-[10px] text-muted-foreground">{pair.darkBgAlias}</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <div className={`h-4 w-4 rounded-[3px] border border-foreground/20 shrink-0 ${pair.fgCls}`} />
-                  <code className="text-[11px] flex-1 text-muted-foreground">text-{pair.fg}</code>
-                  <span className="text-[10px] font-mono text-muted-foreground">{pair.darkFgAlias}</span>
+                  <div className={`size-4 shrink-0 rounded-[3px] border border-foreground/20 ${pair.fgCls}`} />
+                  <code className="flex-1 text-[11px] text-muted-foreground">text-{pair.fg}</code>
+                  <span className="font-mono text-[10px] text-muted-foreground">{pair.darkFgAlias}</span>
                 </div>
               </div>
             ))}
-            <div className="px-4 pt-3 pb-1 border-t border-border">
-              <p className="text-[10px] font-semibold uppercase tracking-widest mb-2 text-muted-foreground">
+            <div className="border-t border-border px-4 pt-3 pb-1">
+              <p className="mb-2 text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
                 Utilities
               </p>
             </div>
@@ -267,9 +267,9 @@ export default function DesignSystemPage() {
                 key={u.token}
                 className={`flex items-center gap-2.5 px-4 py-2${i === semanticUtilities.length - 1 ? " pb-4" : ""}`}
               >
-                <div className={`h-4 w-4 rounded-[3px] border border-foreground/20 shrink-0 ${u.bgCls}`} />
-                <code className="text-[11px] font-semibold flex-1 text-foreground">{u.token}</code>
-                <span className="text-[10px] font-mono text-muted-foreground">{u.darkAlias}</span>
+                <div className={`size-4 shrink-0 rounded-[3px] border border-foreground/20 ${u.bgCls}`} />
+                <code className="flex-1 text-[11px] font-semibold text-foreground">{u.token}</code>
+                <span className="font-mono text-[10px] text-muted-foreground">{u.darkAlias}</span>
               </div>
             ))}
           </div>
@@ -279,16 +279,16 @@ export default function DesignSystemPage() {
       {/* Gradient utilities */}
       <Section>
         <SectionHeader overline="Theming" title="Gradient utilities" className="mb-4" />
-        <p className="text-sm text-muted-foreground mb-8 max-w-xl">
+        <p className="mb-8 max-w-xl text-sm text-muted-foreground">
           Each gradient has a paired dark variant in CSS — same class name, palette flips automatically.
         </p>
 
-        <div className="grid lg:grid-cols-2 gap-5">
+        <div className="grid gap-5 lg:grid-cols-2">
           {/* Light panel */}
-          <div className="light rounded-xl overflow-hidden border border-border">
-            <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-background">
-              <div className="h-2.5 w-2.5 rounded-full bg-background border border-foreground/30" />
-              <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+          <div className="light overflow-hidden rounded-xl border border-border">
+            <div className="flex items-center gap-2 border-b border-border bg-background px-4 py-3">
+              <div className="size-2.5 rounded-full border border-foreground/30 bg-background" />
+              <span className="text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
                 Light mode
               </span>
             </div>
@@ -300,8 +300,8 @@ export default function DesignSystemPage() {
                 >
                   <div className={`h-28 w-full ${g.cls}`} />
                   <div className="px-3 py-2.5">
-                    <code className="text-[11px] font-semibold block text-foreground">{g.label}</code>
-                    <p className="text-[10px] mt-0.5 leading-tight text-muted-foreground">{g.desc}</p>
+                    <code className="block text-[11px] font-semibold text-foreground">{g.label}</code>
+                    <p className="mt-0.5 text-[10px] leading-tight text-muted-foreground">{g.desc}</p>
                   </div>
                 </div>
               ))}
@@ -309,10 +309,10 @@ export default function DesignSystemPage() {
           </div>
 
           {/* Dark panel */}
-          <div className="dark rounded-xl overflow-hidden border border-border">
-            <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-background">
-              <div className="h-2.5 w-2.5 rounded-full bg-background border border-foreground/30" />
-              <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+          <div className="dark overflow-hidden rounded-xl border border-border">
+            <div className="flex items-center gap-2 border-b border-border bg-background px-4 py-3">
+              <div className="size-2.5 rounded-full border border-foreground/30 bg-background" />
+              <span className="text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
                 Dark mode
               </span>
             </div>
@@ -324,8 +324,8 @@ export default function DesignSystemPage() {
                 >
                   <div className={`h-28 w-full ${g.cls}`} />
                   <div className="px-3 py-2.5">
-                    <code className="text-[11px] font-semibold block text-foreground">{g.label}</code>
-                    <p className="text-[10px] mt-0.5 leading-tight text-muted-foreground">{g.desc}</p>
+                    <code className="block text-[11px] font-semibold text-foreground">{g.label}</code>
+                    <p className="mt-0.5 text-[10px] leading-tight text-muted-foreground">{g.desc}</p>
                   </div>
                 </div>
               ))}
@@ -337,28 +337,28 @@ export default function DesignSystemPage() {
       {/* Typography */}
       <Section background="muted">
         <SectionHeader overline="Typography" title="Type scale" className="mb-12" />
-        <div className="space-y-8 max-w-3xl">
-          <div className="pb-6 border-b border-border">
-            <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">
+        <div className="max-w-3xl space-y-8">
+          <div className="border-b border-border pb-6">
+            <p className="mb-3 text-xs tracking-wider text-muted-foreground uppercase">
               Display — Space Grotesk (.font-display)
             </p>
-            <p className="font-display text-6xl font-semibold text-foreground leading-tight">Aa Display 6xl</p>
-            <p className="font-display text-5xl font-semibold text-foreground leading-tight mt-2">Aa Display 5xl</p>
-            <p className="font-display text-4xl font-semibold text-foreground leading-tight mt-2">Aa Display 4xl</p>
-            <p className="font-display text-3xl font-semibold text-foreground mt-2">Aa Display 3xl</p>
-            <p className="font-display text-2xl font-semibold text-foreground mt-2">Aa Display 2xl</p>
-            <p className="font-display text-xl font-semibold text-foreground mt-2">Aa Display xl</p>
+            <p className="font-display text-6xl leading-tight font-semibold text-foreground">Aa Display 6xl</p>
+            <p className="mt-2 font-display text-5xl leading-tight font-semibold text-foreground">Aa Display 5xl</p>
+            <p className="mt-2 font-display text-4xl leading-tight font-semibold text-foreground">Aa Display 4xl</p>
+            <p className="mt-2 font-display text-3xl font-semibold text-foreground">Aa Display 3xl</p>
+            <p className="mt-2 font-display text-2xl font-semibold text-foreground">Aa Display 2xl</p>
+            <p className="mt-2 font-display text-xl font-semibold text-foreground">Aa Display xl</p>
           </div>
-          <div className="pb-6 border-b border-border">
-            <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Body — Inter (.font-sans)</p>
+          <div className="border-b border-border pb-6">
+            <p className="mb-3 text-xs tracking-wider text-muted-foreground uppercase">Body — Inter (.font-sans)</p>
             <p className="text-xl text-foreground">Text xl — lead paragraphs</p>
-            <p className="text-base text-foreground mt-2">Text base — body copy, default size</p>
-            <p className="text-sm text-muted-foreground mt-2">Text sm — secondary copy, captions</p>
-            <p className="text-xs text-muted-foreground mt-2">Text xs — labels, overlines, metadata</p>
+            <p className="mt-2 text-base text-foreground">Text base — body copy, default size</p>
+            <p className="mt-2 text-sm text-muted-foreground">Text sm — secondary copy, captions</p>
+            <p className="mt-2 text-xs text-muted-foreground">Text xs — labels, overlines, metadata</p>
           </div>
           <div>
-            <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Special — Overlines</p>
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring">
+            <p className="mb-3 text-xs tracking-wider text-muted-foreground uppercase">Special — Overlines</p>
+            <span className="inline-block text-xs font-semibold tracking-widest text-ring uppercase">
               Section overline pattern
             </span>
           </div>
@@ -370,8 +370,8 @@ export default function DesignSystemPage() {
         <SectionHeader overline="Components" title="Buttons" className="mb-12" />
         <div className="space-y-8">
           <div>
-            <p className="text-sm text-muted-foreground mb-4 uppercase tracking-wider">Variants</p>
-            <div className="flex flex-wrap gap-4 items-center">
+            <p className="mb-4 text-sm tracking-wider text-muted-foreground uppercase">Variants</p>
+            <div className="flex flex-wrap items-center gap-4">
               <Button variant="primary">Primary</Button>
               <Button variant="secondary">Secondary</Button>
               <Button variant="outline">Outline</Button>
@@ -379,8 +379,8 @@ export default function DesignSystemPage() {
             </div>
           </div>
           <div>
-            <p className="text-sm text-muted-foreground mb-4 uppercase tracking-wider">Sizes</p>
-            <div className="flex flex-wrap gap-4 items-center">
+            <p className="mb-4 text-sm tracking-wider text-muted-foreground uppercase">Sizes</p>
+            <div className="flex flex-wrap items-center gap-4">
               <Button variant="primary" size="lg">
                 Large
               </Button>
@@ -391,34 +391,34 @@ export default function DesignSystemPage() {
                 Small
               </Button>
               <Button variant="primary" size="icon">
-                <Star className="h-4 w-4" />
+                <Star className="size-4" />
               </Button>
             </div>
           </div>
           <div>
-            <p className="text-sm text-muted-foreground mb-4 uppercase tracking-wider">With icons</p>
-            <div className="flex flex-wrap gap-4 items-center">
+            <p className="mb-4 text-sm tracking-wider text-muted-foreground uppercase">With icons</p>
+            <div className="flex flex-wrap items-center gap-4">
               <Button variant="primary">
-                <Mail className="mr-2 h-4 w-4" />
+                <Mail className="mr-2 size-4" />
                 Email us
               </Button>
               <Button variant="outline">
                 Open Media Kit
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 size-4" />
               </Button>
               <Button variant="secondary">
-                <Download className="mr-2 h-4 w-4" />
+                <Download className="mr-2 size-4" />
                 Download
               </Button>
               <Button variant="ghost">
                 Learn more
-                <ExternalLink className="ml-2 h-4 w-4" />
+                <ExternalLink className="ml-2 size-4" />
               </Button>
             </div>
           </div>
           <div>
-            <p className="text-sm text-muted-foreground mb-4 uppercase tracking-wider">States</p>
-            <div className="flex flex-wrap gap-4 items-center">
+            <p className="mb-4 text-sm tracking-wider text-muted-foreground uppercase">States</p>
+            <div className="flex flex-wrap items-center gap-4">
               <Button variant="primary" disabled>
                 Disabled primary
               </Button>
@@ -435,8 +435,8 @@ export default function DesignSystemPage() {
         <SectionHeader overline="Components" title="Tags &amp; Badges" className="mb-12" />
         <div className="space-y-6">
           <div>
-            <p className="text-sm text-muted-foreground mb-3 uppercase tracking-wider">Variants</p>
-            <div className="flex flex-wrap gap-3 items-center">
+            <p className="mb-3 text-sm tracking-wider text-muted-foreground uppercase">Variants</p>
+            <div className="flex flex-wrap items-center gap-3">
               <Badge variant="default">Default</Badge>
               <Badge variant="secondary">Secondary</Badge>
               <Badge variant="warning">Warning</Badge>
@@ -445,8 +445,8 @@ export default function DesignSystemPage() {
             </div>
           </div>
           <div>
-            <p className="text-sm text-muted-foreground mb-3 uppercase tracking-wider">Sizes</p>
-            <div className="flex flex-wrap gap-3 items-center">
+            <p className="mb-3 text-sm tracking-wider text-muted-foreground uppercase">Sizes</p>
+            <div className="flex flex-wrap items-center gap-3">
               <Badge variant="default" size="md">
                 Medium (default)
               </Badge>
@@ -456,8 +456,8 @@ export default function DesignSystemPage() {
             </div>
           </div>
           <div>
-            <p className="text-sm text-muted-foreground mb-3 uppercase tracking-wider">CSS tag utilities</p>
-            <div className="flex flex-wrap gap-3 items-center">
+            <p className="mb-3 text-sm tracking-wider text-muted-foreground uppercase">CSS tag utilities</p>
+            <div className="flex flex-wrap items-center gap-3">
               <span className="tag">tag filled</span>
               <span className="tag-outline">tag outline</span>
             </div>
@@ -470,23 +470,23 @@ export default function DesignSystemPage() {
         <SectionHeader overline="Components" title="Cards" className="mb-12" />
         <div className="grid gap-6 lg:grid-cols-3">
           {/* Icon card */}
-          <div className="bg-card rounded-2xl border border-border p-6 lg:p-8">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-ring/10 text-ring mb-4">
-              <Users className="h-6 w-6" />
+          <div className="rounded-2xl border border-border bg-card p-6 lg:p-8">
+            <div className="mb-4 flex size-12 items-center justify-center rounded-xl bg-ring/10 text-ring">
+              <Users className="size-6" />
             </div>
-            <h3 className="font-display text-xl font-semibold text-foreground mb-3">Icon card</h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <h3 className="mb-3 font-display text-xl font-semibold text-foreground">Icon card</h3>
+            <p className="leading-relaxed text-muted-foreground">
               Used for feature lists and benefit sections throughout the site.
             </p>
           </div>
 
           {/* Checklist card — ring tint */}
-          <div className="bg-ring/8 rounded-2xl border border-ring/30 p-6 lg:p-8">
-            <h3 className="font-display text-xl font-semibold text-foreground mb-6">Checklist — ring tint</h3>
+          <div className="rounded-2xl border border-ring/30 bg-ring/8 p-6 lg:p-8">
+            <h3 className="mb-6 font-display text-xl font-semibold text-foreground">Checklist — ring tint</h3>
             <ul className="space-y-3">
               {["Speaker sourcing", "Marketing", "Recording"].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-ring shrink-0 mt-0.5" />
+                  <Check className="mt-0.5 size-5 shrink-0 text-ring" />
                   <span className="text-foreground">{item}</span>
                 </li>
               ))}
@@ -494,12 +494,12 @@ export default function DesignSystemPage() {
           </div>
 
           {/* Checklist card — amber */}
-          <div className="bg-amber/8 rounded-2xl border border-amber/30 p-6 lg:p-8">
-            <h3 className="font-display text-xl font-semibold text-foreground mb-6">Checklist — amber tint</h3>
+          <div className="rounded-2xl border border-amber/30 bg-amber/8 p-6 lg:p-8">
+            <h3 className="mb-6 font-display text-xl font-semibold text-foreground">Checklist — amber tint</h3>
             <ul className="space-y-3">
               {["Venue", "Food & drinks", "Optional: your speaker"].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-amber-dark shrink-0 mt-0.5" />
+                  <Check className="mt-0.5 size-5 shrink-0 text-amber-dark" />
                   <span className="text-foreground">{item}</span>
                 </li>
               ))}
@@ -507,27 +507,27 @@ export default function DesignSystemPage() {
           </div>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-2 mt-6">
+        <div className="mt-6 grid gap-6 lg:grid-cols-2">
           {/* Stat card */}
-          <div className="bg-card rounded-xl border border-border p-5">
-            <p className="text-sm text-muted-foreground mb-1">Stat label</p>
+          <div className="rounded-xl border border-border bg-card p-5">
+            <p className="mb-1 text-sm text-muted-foreground">Stat label</p>
             <p className="font-display text-3xl font-semibold text-foreground">40–120</p>
-            <p className="text-sm text-muted-foreground mt-1">Attendees per event</p>
+            <p className="mt-1 text-sm text-muted-foreground">Attendees per event</p>
           </div>
 
           {/* Hover-link card */}
           <a
-            href="#"
-            className="group flex items-center gap-4 bg-card rounded-xl border border-border p-5 hover:border-ring/50 transition-all"
+            href="/resources/media-kit"
+            className="group flex items-center gap-4 rounded-xl border border-border bg-card p-5 transition-all hover:border-ring/50"
           >
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-ring/10">
-              <Star className="h-6 w-6 text-ring" />
+            <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-ring/10">
+              <Star className="size-6 text-ring" />
             </div>
-            <div className="flex-1 min-w-0">
-              <p className="font-semibold text-foreground group-hover:text-ring transition-colors">Hover-link card</p>
+            <div className="min-w-0 flex-1">
+              <p className="font-semibold text-foreground transition-colors group-hover:text-ring">Hover-link card</p>
               <p className="text-sm text-muted-foreground">Used for downloadable resources and media kit assets.</p>
             </div>
-            <Download className="h-5 w-5 text-muted-foreground group-hover:text-ring transition-colors shrink-0" />
+            <Download className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-ring" />
           </a>
         </div>
       </Section>
@@ -537,29 +537,29 @@ export default function DesignSystemPage() {
         <SectionHeader overline="Components" title="Surfaces &amp; effects" className="mb-12" />
         <div className="grid gap-6 lg:grid-cols-3">
           <div className="glass rounded-2xl p-8">
-            <Zap className="h-8 w-8 text-ring mb-4" />
-            <p className="font-semibold text-foreground mb-1">.glass</p>
+            <Zap className="mb-4 size-8 text-ring" />
+            <p className="mb-1 font-semibold text-foreground">.glass</p>
             <p className="text-sm text-muted-foreground">White 55%, blur 20px, saturate 180%</p>
           </div>
           <div className="glass-subtle rounded-2xl p-8">
-            <Zap className="h-8 w-8 text-ring mb-4" />
-            <p className="font-semibold text-foreground mb-1">.glass-subtle</p>
+            <Zap className="mb-4 size-8 text-ring" />
+            <p className="mb-1 font-semibold text-foreground">.glass-subtle</p>
             <p className="text-sm text-muted-foreground">White 35%, blur 16px, saturate 150%</p>
           </div>
           <div className="glass-dark rounded-2xl p-8">
-            <Zap className="h-8 w-8 text-seafoam mb-4" />
-            <p className="font-semibold text-white mb-1">.glass-dark</p>
+            <Zap className="mb-4 size-8 text-seafoam" />
+            <p className="mb-1 font-semibold text-white">.glass-dark</p>
             <p className="text-sm text-seafoam/70">Teal-dark 80%, blur 20px, saturate 180%</p>
           </div>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-2 mt-6">
-          <div className="shadow-soft bg-card rounded-2xl p-8">
-            <p className="font-semibold text-foreground mb-1">.shadow-soft</p>
+        <div className="mt-6 grid gap-6 lg:grid-cols-2">
+          <div className="shadow-soft rounded-2xl bg-card p-8">
+            <p className="mb-1 font-semibold text-foreground">.shadow-soft</p>
             <p className="text-sm text-muted-foreground">Layered drop shadows, default cards</p>
           </div>
-          <div className="shadow-soft-lg bg-card rounded-2xl p-8">
-            <p className="font-semibold text-foreground mb-1">.shadow-soft-lg</p>
+          <div className="shadow-soft-lg rounded-2xl bg-card p-8">
+            <p className="mb-1 font-semibold text-foreground">.shadow-soft-lg</p>
             <p className="text-sm text-muted-foreground">Deeper layered shadow for elevated panels</p>
           </div>
         </div>
@@ -571,10 +571,10 @@ export default function DesignSystemPage() {
         <div className="grid gap-6 lg:grid-cols-5">
           {["Initial contact", "Scoping call", "Confirm details", "Marketing kickoff", "Event day"].map((title, i) => (
             <div key={title} className="relative">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-ring text-primary-foreground font-semibold mb-4">
+              <div className="mb-4 flex size-10 items-center justify-center rounded-full bg-ring font-semibold text-primary-foreground">
                 {i + 1}
               </div>
-              <h4 className="font-semibold text-foreground mb-1">{title}</h4>
+              <h4 className="mb-1 font-semibold text-foreground">{title}</h4>
               <p className="text-sm text-muted-foreground">Step description goes here.</p>
             </div>
           ))}
@@ -583,12 +583,12 @@ export default function DesignSystemPage() {
 
       {/* CTA section pattern */}
       <Section background="brand-soft">
-        <div className="max-w-2xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
             CTA section pattern
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Gradient CTA section</h2>
-          <p className="text-muted-foreground mb-8">
+          <h2 className="mb-4 font-display text-3xl font-semibold text-foreground">Gradient CTA section</h2>
+          <p className="mb-8 text-muted-foreground">
             Used at the bottom of every get-involved sub-page. Always ends with a primary action.
           </p>
           <Button variant="primary" size="lg">
