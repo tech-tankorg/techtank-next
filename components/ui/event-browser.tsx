@@ -5,7 +5,6 @@ import { LayoutGrid, List, Columns2, Calendar, MapPin, Camera, Play } from "luci
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { EventCard } from "@/components/ui/event-card";
-import { cn } from "@/utils/theme";
 import type { Event } from "@/app/events/actions";
 import Image from "next/image";
 
@@ -78,63 +77,58 @@ export function EventBrowser({ events }: EventBrowserProps) {
   return (
     <div>
       {/* Controls */}
-      <div className="mb-8 flex flex-col items-center justify-between gap-4 rounded-xl border border-border bg-card p-4 md:flex-row">
+      <div className="mb-8 flex flex-col items-center justify-between gap-4 rounded-2xl border border-border bg-card p-4 md:flex-row md:rounded-full md:p-3">
         {/* Category filters */}
-        <div className="flex flex-wrap items-center justify-center gap-2 md:justify-start">
+        <div className="flex flex-wrap items-center justify-center gap-1 md:justify-start">
           {categories.map((c) => (
-            <button
+            <Button
               key={c.id}
+              variant="nav"
+              size="sm"
+              isActive={category === c.id}
               onClick={() => setCategory(c.id)}
-              className={cn(
-                "rounded-full px-3 py-1.5 text-sm font-medium transition-colors",
-                category === c.id
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-muted text-muted-foreground hover:bg-muted/80",
-              )}
+              className="cursor-pointer"
             >
               {c.label}
-            </button>
+            </Button>
           ))}
         </div>
 
         {/* Display mode */}
-        <div className="flex shrink-0 items-center gap-0.5 rounded-lg bg-muted p-0.5">
-          <button
+        <div className="flex shrink-0 items-center gap-1">
+          <Button
+            variant="nav"
+            size="icon"
+            isActive={displayMode === "cards"}
             onClick={() => setDisplayMode("cards")}
-            className={cn(
-              "rounded-md p-1.5 transition-colors",
-              displayMode === "cards"
-                ? "bg-background text-foreground shadow-sm"
-                : "text-muted-foreground hover:text-foreground",
-            )}
+            className="size-7 cursor-pointer"
             aria-label="Cards view"
+            title="Cards view"
           >
             <Columns2 className="size-3.5" />
-          </button>
-          <button
+          </Button>
+          <Button
+            variant="nav"
+            size="icon"
+            isActive={displayMode === "grid"}
             onClick={() => setDisplayMode("grid")}
-            className={cn(
-              "rounded-md p-1.5 transition-colors",
-              displayMode === "grid"
-                ? "bg-background text-foreground shadow-sm"
-                : "text-muted-foreground hover:text-foreground",
-            )}
+            className="size-7 cursor-pointer"
             aria-label="Grid view"
+            title="Grid view"
           >
             <LayoutGrid className="size-3.5" />
-          </button>
-          <button
+          </Button>
+          <Button
+            variant="nav"
+            size="icon"
+            isActive={displayMode === "list"}
             onClick={() => setDisplayMode("list")}
-            className={cn(
-              "rounded-md p-1.5 transition-colors",
-              displayMode === "list"
-                ? "bg-background text-foreground shadow-sm"
-                : "text-muted-foreground hover:text-foreground",
-            )}
+            className="size-7 cursor-pointer"
             aria-label="List view"
+            title="List view"
           >
             <List className="size-3.5" />
-          </button>
+          </Button>
         </div>
       </div>
 
@@ -156,7 +150,7 @@ export function EventBrowser({ events }: EventBrowserProps) {
 
       {hasMore && (
         <div className="mt-8 text-center">
-          <Button variant="outline" onClick={() => setVisibleCount((n) => n + PAGE_SIZE)}>
+          <Button variant="outline" onClick={() => setVisibleCount((n) => n + PAGE_SIZE)} className="cursor-pointer">
             Load more ({filtered.length - visibleCount} remaining)
           </Button>
         </div>
