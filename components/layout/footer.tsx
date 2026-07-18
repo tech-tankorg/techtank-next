@@ -62,7 +62,7 @@ export function Footer() {
             <Link href="/" className="flex items-center">
               <Image src="/images/logos/dark.svg" alt="TechTank TO" width={128} height={56} className="h-10 w-auto" />
             </Link>
-            <p className="mt-4 text-sm leading-relaxed text-primary-foreground/70 dark:text-foreground/70">
+            <p className="mt-4 text-sm leading-relaxed text-primary-foreground dark:text-foreground">
               Toronto&apos;s inclusive tech community. Year-round events since 2023.
             </p>
           </div>
@@ -84,20 +84,20 @@ export function Footer() {
                           href={link.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="group flex items-center gap-2 text-sm text-primary-foreground/60 transition-colors hover:text-primary-foreground dark:text-foreground/60 dark:hover:text-foreground"
+                          className="group flex items-center gap-2 text-sm text-primary-foreground transition-colors hover:text-primary-foreground hover:underline dark:text-foreground dark:hover:text-foreground"
                         >
                           {Icon && (
-                            <Icon className="size-4 text-primary-foreground/60 transition-colors group-hover:text-primary-foreground dark:text-foreground/60 dark:group-hover:text-foreground" />
+                            <Icon className="size-4 text-primary-foreground transition-colors group-hover:text-primary-foreground hover:underline dark:text-foreground dark:group-hover:text-foreground" />
                           )}
                           {link.name}
                         </a>
                       ) : (
                         <Link
                           href={link.href}
-                          className="group flex items-center gap-2 text-sm text-primary-foreground/60 transition-colors hover:text-primary-foreground dark:text-foreground/60 dark:hover:text-foreground"
+                          className="group flex items-center gap-2 text-sm text-primary-foreground transition-colors hover:text-primary-foreground hover:underline dark:text-foreground dark:hover:text-foreground"
                         >
                           {Icon && (
-                            <Icon className="size-4 text-primary-foreground/60 transition-colors group-hover:text-primary-foreground dark:text-foreground/60 dark:group-hover:text-foreground" />
+                            <Icon className="size-4 text-primary-foreground transition-colors group-hover:text-primary-foreground hover:underline dark:text-foreground dark:group-hover:text-foreground" />
                           )}
                           {link.name}
                         </Link>
@@ -113,12 +113,12 @@ export function Footer() {
         {/* Bottom section */}
         <div className="mt-12 border-t border-primary-foreground/10 pt-8 dark:border-foreground/10">
           <div className="flex flex-col items-center gap-4 lg:flex-row lg:justify-between">
-            <p className="text-sm text-primary-foreground/60 dark:text-foreground/60">
+            <p className="text-sm text-primary-foreground dark:text-foreground">
               Copyright &copy; {Math.max(new Date().getFullYear(), 2026)} TechTank TO Inc. All rights reserved.
             </p>
             <a
               href="mailto:techtankto@gmail.com"
-              className="flex items-center gap-2 text-sm text-primary-foreground/60 transition-colors hover:text-primary-foreground dark:text-foreground/60 dark:hover:text-foreground"
+              className="flex items-center gap-2 text-sm text-primary-foreground transition-colors hover:text-primary-foreground hover:underline dark:text-foreground dark:hover:text-foreground"
             >
               <Mail className="size-4" />
               techtankto@gmail.com
