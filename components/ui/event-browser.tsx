@@ -78,9 +78,9 @@ export function EventBrowser({ events }: EventBrowserProps) {
   return (
     <div>
       {/* Controls */}
-      <div className="rounded-2xl md:rounded-full bg-card border border-border p-4 md:p-3 flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
+      <div className="mb-8 flex flex-col md:flex-row items-center justify-between gap-4 rounded-full border border-border bg-card p-3">
         {/* Category filters */}
-        <div className="flex flex-wrap items-center justify-center md:justify-start gap-1">
+        <div className="flex flex-wrap items-center justify-center gap-1 md:justify-start">
           {categories.map((c) => (
             <Button
               key={c.id}
@@ -96,54 +96,54 @@ export function EventBrowser({ events }: EventBrowserProps) {
         </div>
 
         {/* Display mode */}
-        <div className="flex items-center gap-0.5 rounded-full bg-muted p-1 shrink-0">
+        <div className="flex shrink-0 items-center gap-0.5 rounded-full bg-muted p-1">
           <button
             onClick={() => setDisplayMode("cards")}
             className={cn(
-              "p-1.5 rounded-full transition-colors cursor-pointer",
+              "rounded-full p-1.5 transition-colors cursor-pointer",
               displayMode === "cards"
                 ? "bg-background text-foreground shadow-sm"
                 : "text-muted-foreground hover:text-foreground",
             )}
             aria-label="Cards view"
           >
-            <Columns2 className="h-4 w-4" />
+            <Columns2 className="size-4" />
           </button>
           <button
             onClick={() => setDisplayMode("grid")}
             className={cn(
-              "p-1.5 rounded-full transition-colors cursor-pointer",
+              "rounded-full p-1.5 transition-colors cursor-pointer",
               displayMode === "grid"
                 ? "bg-background text-foreground shadow-sm"
                 : "text-muted-foreground hover:text-foreground",
             )}
             aria-label="Grid view"
           >
-            <LayoutGrid className="h-4 w-4" />
+            <LayoutGrid className="size-4" />
           </button>
           <button
             onClick={() => setDisplayMode("list")}
             className={cn(
-              "p-1.5 rounded-full transition-colors cursor-pointer",
+              "rounded-full p-1.5 transition-colors cursor-pointer",
               displayMode === "list"
                 ? "bg-background text-foreground shadow-sm"
                 : "text-muted-foreground hover:text-foreground",
             )}
             aria-label="List view"
           >
-            <List className="h-4 w-4" />
+            <List className="size-4" />
           </button>
         </div>
       </div>
 
       {/* Result count */}
-      <p className="text-xs text-muted-foreground mb-6 text-center">
+      <p className="mb-6 text-center text-xs text-muted-foreground">
         {filtered.length} event{filtered.length !== 1 ? "s" : ""}
       </p>
 
       {/* Events */}
       {filtered.length === 0 ? (
-        <div className="text-center py-16 text-muted-foreground">No events match the current filters.</div>
+        <div className="py-16 text-center text-muted-foreground">No events match the current filters.</div>
       ) : displayMode === "cards" ? (
         <CardsView events={visible} />
       ) : displayMode === "grid" ? (
@@ -166,13 +166,13 @@ export function EventBrowser({ events }: EventBrowserProps) {
 function CardsView({ events }: { events: Event[] }) {
   return (
     <>
-      <div className="grid gap-4 lg:grid-cols-2 mb-4">
+      <div className="mb-4 grid gap-4 lg:grid-cols-2">
         {events.slice(0, 2).map((e) => (
           <EventCard key={e.id} event={e} variant="featured" />
         ))}
       </div>
       {events.length > 2 && (
-        <div className="grid gap-3 grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
           {events.slice(2).map((e) => (
             <EventCard key={e.id} event={e} variant="compact" />
           ))}
@@ -184,7 +184,7 @@ function CardsView({ events }: { events: Event[] }) {
 
 function GridView({ events }: { events: Event[] }) {
   return (
-    <div className="grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {events.map((event) => {
         const img = event.imagePath;
         const isUpcoming = event.status === "upcoming";
@@ -199,7 +199,7 @@ function GridView({ events }: { events: Event[] }) {
         const locationUrl = event.host?.url ?? null;
 
         return (
-          <div key={event.id} className="group relative overflow-hidden rounded-xl aspect-square bg-muted">
+          <div key={event.id} className="group relative aspect-square overflow-hidden rounded-xl bg-muted">
             {img ? (
               <Image
                 src={img}
@@ -209,17 +209,17 @@ function GridView({ events }: { events: Event[] }) {
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
             ) : (
-              <div className="h-full w-full gradient-brand" />
+              <div className="gradient-brand size-full" />
             )}
 
             {/* Always-visible overlay */}
-            <div className="absolute inset-0 gradient-overlay-brand flex flex-col justify-end p-3 gap-1">
+            <div className="gradient-overlay-brand absolute inset-0 flex flex-col justify-end gap-1 p-3">
               <Badge variant={isUpcoming ? "warning" : "secondary"} size="sm" className="self-start">
                 {isUpcoming ? "Upcoming" : "Past"}
               </Badge>
               {event.tags[0] && <span className="text-[10px] text-white">{event.tags[0]}</span>}
 
-              <p className="text-white text-xs font-semibold line-clamp-2 leading-snug">
+              <p className="line-clamp-2 text-xs leading-snug font-semibold text-white">
                 {event.eventUrl ? (
                   <a href={event.eventUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
                     {event.title}
@@ -230,19 +230,19 @@ function GridView({ events }: { events: Event[] }) {
               </p>
 
               <div className="flex items-center gap-1 text-[10px] text-white/70">
-                <Calendar className="h-2.5 w-2.5 shrink-0" />
+                <Calendar className="size-2.5 shrink-0" />
                 <span>{formattedDate}</span>
               </div>
 
               {locationText && (
                 <div className="flex items-center gap-1 text-[10px] text-white/70">
-                  <MapPin className="h-2.5 w-2.5 shrink-0" />
+                  <MapPin className="size-2.5 shrink-0" />
                   {locationUrl ? (
                     <a
                       href={locationUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:underline truncate"
+                      className="truncate hover:underline"
                     >
                       {locationText}
                     </a>
@@ -257,7 +257,7 @@ function GridView({ events }: { events: Event[] }) {
                   {event.albumUrl && (
                     <Badge variant="secondary" size="sm" asChild>
                       <a href={event.albumUrl} target="_blank" rel="noopener noreferrer" aria-label="View event photos">
-                        <Camera className="h-2.5 w-2.5" />
+                        <Camera className="size-2.5" />
                         Photos
                       </a>
                     </Badge>
@@ -265,7 +265,7 @@ function GridView({ events }: { events: Event[] }) {
                   {event.youtubeUrl && (
                     <Badge variant="secondary" size="sm" asChild>
                       <a href={event.youtubeUrl} target="_blank" rel="noopener noreferrer" aria-label="Watch recap">
-                        <Play className="h-2.5 w-2.5 fill-current" />
+                        <Play className="size-2.5 fill-current" />
                         Recap
                       </a>
                     </Badge>
@@ -282,7 +282,7 @@ function GridView({ events }: { events: Event[] }) {
 
 function ListView({ events }: { events: Event[] }) {
   return (
-    <div className="divide-y divide-border rounded-xl border border-border overflow-hidden">
+    <div className="divide-y divide-border overflow-hidden rounded-xl border border-border">
       {events.map((event) => {
         const dateObj = new Date(event.start_at);
         const formattedDate = dateObj.toLocaleDateString("en-US", {
@@ -294,14 +294,14 @@ function ListView({ events }: { events: Event[] }) {
         const location = event.host ? event.host.name : event.venue;
 
         return (
-          <div key={event.id} className="flex items-center gap-4 px-4 py-3 bg-card hover:bg-muted/50 transition-colors">
-            <div className="shrink-0 w-20 text-xs text-muted-foreground">
-              <Calendar className="h-3 w-3 inline mr-1" />
+          <div key={event.id} className="flex items-center gap-4 bg-card px-4 py-3 transition-colors hover:bg-muted/50">
+            <div className="w-20 shrink-0 text-xs text-muted-foreground">
+              <Calendar className="mr-1 inline size-3" />
               {formattedDate}
             </div>
 
-            <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium text-foreground truncate">
+            <div className="min-w-0 flex-1">
+              <p className="truncate text-sm font-medium text-foreground">
                 {event.eventUrl ? (
                   <a href={event.eventUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
                     {event.title}
@@ -311,8 +311,8 @@ function ListView({ events }: { events: Event[] }) {
                 )}
               </p>
               {location && (
-                <p className="text-xs text-muted-foreground truncate">
-                  <MapPin className="h-2.5 w-2.5 inline mr-0.5" />
+                <p className="truncate text-xs text-muted-foreground">
+                  <MapPin className="mr-0.5 inline size-2.5" />
                   {event.host ? (
                     <a href={event.host.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
                       {location}
@@ -324,9 +324,9 @@ function ListView({ events }: { events: Event[] }) {
               )}
             </div>
 
-            <div className="shrink-0 flex items-center gap-2">
+            <div className="flex shrink-0 items-center gap-2">
               {event.tags[0] && (
-                <span className="hidden sm:inline text-[10px] text-muted-foreground">{event.tags[0]}</span>
+                <span className="hidden text-[10px] text-muted-foreground sm:inline">{event.tags[0]}</span>
               )}
               <Badge variant={event.status === "upcoming" ? "warning" : "secondary"} size="sm">
                 {event.status === "upcoming" ? "Upcoming" : "Past"}
@@ -338,7 +338,7 @@ function ListView({ events }: { events: Event[] }) {
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground"
                 >
-                  <Camera className="h-3.5 w-3.5" />
+                  <Camera className="size-3.5" />
                 </a>
               )}
               {event.youtubeUrl && (
@@ -348,7 +348,7 @@ function ListView({ events }: { events: Event[] }) {
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground"
                 >
-                  <Play className="h-3.5 w-3.5" />
+                  <Play className="size-3.5" />
                 </a>
               )}
             </div>

@@ -13,8 +13,8 @@ export function StatsMarquee({ className }: { className?: string }) {
     <Marquee duration="25s" itemWidth="300px" copies={5} className={className}>
       {items.map((item) => (
         <div key={item.label} className="flex flex-col items-center text-center">
-          <span className="font-display text-xl lg:text-2xl font-bold text-foreground">{item.value}</span>
-          <span className="text-xs text-foreground/60 whitespace-nowrap">{item.label}</span>
+          <span className="font-display text-xl font-bold text-foreground lg:text-2xl">{item.value}</span>
+          <span className="text-xs whitespace-nowrap text-foreground/60">{item.label}</span>
         </div>
       ))}
     </Marquee>
