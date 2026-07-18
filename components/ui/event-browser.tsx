@@ -5,7 +5,6 @@ import { LayoutGrid, List, Columns2, Calendar, MapPin, Camera, Play } from "luci
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { EventCard } from "@/components/ui/event-card";
-import { cn } from "@/utils/theme";
 import type { Event } from "@/app/events/actions";
 import Image from "next/image";
 
@@ -96,43 +95,40 @@ export function EventBrowser({ events }: EventBrowserProps) {
         </div>
 
         {/* Display mode */}
-        <div className="flex shrink-0 items-center gap-0.5 rounded-full bg-muted p-1">
-          <button
+        <div className="flex shrink-0 items-center gap-1">
+          <Button
+            variant="nav"
+            size="icon"
+            isActive={displayMode === "cards"}
             onClick={() => setDisplayMode("cards")}
-            className={cn(
-              "cursor-pointer rounded-full p-1.5 transition-colors",
-              displayMode === "cards"
-                ? "bg-background text-foreground shadow-sm"
-                : "text-muted-foreground hover:text-foreground",
-            )}
+            className="size-7 cursor-pointer"
             aria-label="Cards view"
+            title="Cards view"
           >
-            <Columns2 className="size-4" />
-          </button>
-          <button
+            <Columns2 className="size-3.5" />
+          </Button>
+          <Button
+            variant="nav"
+            size="icon"
+            isActive={displayMode === "grid"}
             onClick={() => setDisplayMode("grid")}
-            className={cn(
-              "cursor-pointer rounded-full p-1.5 transition-colors",
-              displayMode === "grid"
-                ? "bg-background text-foreground shadow-sm"
-                : "text-muted-foreground hover:text-foreground",
-            )}
+            className="size-7 cursor-pointer"
             aria-label="Grid view"
+            title="Grid view"
           >
-            <LayoutGrid className="size-4" />
-          </button>
-          <button
+            <LayoutGrid className="size-3.5" />
+          </Button>
+          <Button
+            variant="nav"
+            size="icon"
+            isActive={displayMode === "list"}
             onClick={() => setDisplayMode("list")}
-            className={cn(
-              "cursor-pointer rounded-full p-1.5 transition-colors",
-              displayMode === "list"
-                ? "bg-background text-foreground shadow-sm"
-                : "text-muted-foreground hover:text-foreground",
-            )}
+            className="size-7 cursor-pointer"
             aria-label="List view"
+            title="List view"
           >
-            <List className="size-4" />
-          </button>
+            <List className="size-3.5" />
+          </Button>
         </div>
       </div>
 
