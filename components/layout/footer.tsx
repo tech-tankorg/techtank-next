@@ -84,20 +84,20 @@ export function Footer() {
                           href={link.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="group flex items-center gap-2 text-sm text-primary-foreground transition-colors hover:text-primary-foreground dark:text-foreground hover:underline dark:hover:text-foreground"
+                          className="group flex items-center gap-2 text-sm text-primary-foreground transition-colors hover:text-primary-foreground hover:underline dark:text-foreground dark:hover:text-foreground"
                         >
                           {Icon && (
-                            <Icon className="size-4 text-primary-foreground transition-colors group-hover:text-primary-foreground dark:text-foreground hover:underline dark:group-hover:text-foreground" />
+                            <Icon className="size-4 text-primary-foreground transition-colors group-hover:text-primary-foreground hover:underline dark:text-foreground dark:group-hover:text-foreground" />
                           )}
                           {link.name}
                         </a>
                       ) : (
                         <Link
                           href={link.href}
-                          className="group flex items-center gap-2 text-sm text-primary-foreground transition-colors hover:text-primary-foreground dark:text-foreground hover:underline dark:hover:text-foreground"
+                          className="group flex items-center gap-2 text-sm text-primary-foreground transition-colors hover:text-primary-foreground hover:underline dark:text-foreground dark:hover:text-foreground"
                         >
                           {Icon && (
-                            <Icon className="size-4 text-primary-foreground transition-colors group-hover:text-primary-foreground dark:text-foreground hover:underline dark:group-hover:text-foreground" />
+                            <Icon className="size-4 text-primary-foreground transition-colors group-hover:text-primary-foreground hover:underline dark:text-foreground dark:group-hover:text-foreground" />
                           )}
                           {link.name}
                         </Link>
@@ -118,7 +118,7 @@ export function Footer() {
             </p>
             <a
               href="mailto:techtankto@gmail.com"
-              className="flex items-center gap-2 text-sm text-primary-foreground transition-colors hover:text-primary-foreground dark:text-foreground hover:underline dark:hover:text-foreground"
+              className="flex items-center gap-2 text-sm text-primary-foreground transition-colors hover:text-primary-foreground hover:underline dark:text-foreground dark:hover:text-foreground"
             >
               <Mail className="size-4" />
               techtankto@gmail.com
