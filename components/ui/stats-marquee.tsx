@@ -10,9 +10,16 @@ const items = [
 
 export function StatsMarquee({ className }: { className?: string }) {
   return (
-    <Marquee duration="25s" itemWidth="300px" copies={5} className={className}>
+    <Marquee
+      speed="normal"
+      pauseLabel="Pause scrolling TechTank stats"
+      resumeLabel="Resume scrolling TechTank stats"
+      className={className}
+      gap="xl"
+      copies={4}
+    >
       {items.map((item) => (
-        <div key={item.label} className="flex flex-col items-center text-center">
+        <div key={item.label} className="flex shrink-0 flex-col items-center text-center">
           <span className="font-display text-xl font-bold text-foreground lg:text-2xl">{item.value}</span>
           <span className="text-xs whitespace-nowrap text-foreground/60">{item.label}</span>
         </div>

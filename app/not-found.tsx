@@ -1,5 +1,5 @@
 import FishCanvas from "@/components/ui/fish-canvas";
-import PreviousButton from "@/components/ui/PreviousButton";
+import PreviousButton from "@/components/ui/previous-button";
 
 export default function NotFound() {
   return (
