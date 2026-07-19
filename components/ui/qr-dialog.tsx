@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Dialog } from "@/components/ui/dialog";
+import { QrCodeIcon } from "@/components/ui/icons";
 import { useAppStore } from "@/stores/app-state";
 
 // The QR SVG below encodes https://www.techtankto.com/get-involved
@@ -30,15 +30,10 @@ export function QrDialog() {
           </p>
         </div>
 
-        <div className="light shadow-soft-lg rounded-2xl bg-background p-5">
-          <Image
-            src="/images/share/get-involved-qr.svg"
-            alt="QR code linking to the TechTank get involved page"
-            width={220}
-            height={220}
-            className="size-52"
-          />
-        </div>
+        <QrCodeIcon
+          className="size-64 text-black dark:text-white"
+          aria-label="QR code linking to the TechTank get involved page"
+        />
 
         <Button variant="primary" className="w-full" asChild onClick={onClose}>
           <Link href="/get-involved">Visit Get Involved</Link>
