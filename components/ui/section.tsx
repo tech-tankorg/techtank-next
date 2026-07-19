@@ -5,8 +5,8 @@ const sectionVariants = cva("py-10 lg:py-14", {
   variants: {
     background: {
       default: "",
-      muted: "bg-muted texture-grain",
-      white: "bg-card border-y border-border",
+      muted: "texture-grain bg-muted",
+      white: "border-y border-border bg-card",
       brand: "gradient-brand texture-grain",
       "brand-soft": "gradient-hero-soft",
       "brand-vertical": "gradient-brand-vertical texture-grain",
@@ -35,7 +35,7 @@ const sectionHeaderVariants = cva("max-w-3xl", {
   variants: {
     align: {
       left: "",
-      center: "text-center mx-auto",
+      center: "mx-auto text-center",
     },
   },
   defaultVariants: {
@@ -54,12 +54,12 @@ export function SectionHeader({ overline, title, description, align, className }
   return (
     <div className={cn(sectionHeaderVariants({ align }), className)}>
       {overline && (
-        <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
+        <span className="mb-2 inline-block text-xs font-semibold tracking-widest text-foreground uppercase dark:text-amber-dark">
           {overline}
         </span>
       )}
-      <h2 className="font-display text-2xl font-bold text-foreground lg:text-3xl text-balance">{title}</h2>
-      {description && <p className="mt-3 text-base text-muted-foreground leading-relaxed">{description}</p>}
+      <h2 className="font-display text-2xl font-bold text-balance text-foreground lg:text-3xl">{title}</h2>
+      {description && <p className="mt-3 text-base leading-relaxed text-muted-foreground">{description}</p>}
     </div>
   );
 }

@@ -45,16 +45,16 @@ export default function OrganizerPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden gradient-hero texture-grain">
+      <section className="gradient-hero texture-grain relative overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+            <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
               Shape what TechTank becomes
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
+            <h1 className="mb-6 font-display text-4xl font-semibold text-balance text-foreground md:text-5xl lg:text-6xl">
               Join the Organizer Team
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+            <p className="mb-8 text-xl leading-relaxed text-muted-foreground">
               We&apos;re building out a more structured volunteer leadership team with defined roles and a 6-month
               commitment. If you want to help shape what TechTank becomes, this is the path.
             </p>
@@ -70,12 +70,12 @@ export default function OrganizerPage() {
         <SectionHeader overline="Why organize" title="What this role is about" className="mb-12" />
         <div className="grid gap-8 lg:grid-cols-3">
           {whyOrganize.map((item) => (
-            <div key={item.title} className="bg-card rounded-2xl border border-border p-6 lg:p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-ring/10 text-ring mb-4">
-                <item.icon className="h-6 w-6" />
+            <div key={item.title} className="rounded-2xl border border-border bg-card p-6 lg:p-8">
+              <div className="mb-4 flex size-12 items-center justify-center rounded-xl bg-ring/10 text-ring">
+                <item.icon className="size-6" />
               </div>
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3">{item.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+              <h3 className="mb-3 font-display text-xl font-semibold text-foreground">{item.title}</h3>
+              <p className="leading-relaxed text-muted-foreground">{item.description}</p>
             </div>
           ))}
         </div>
@@ -83,12 +83,12 @@ export default function OrganizerPage() {
 
       {/* What You Get */}
       <Section background="brand-soft">
-        <div className="max-w-3xl mx-auto">
+        <div className="mx-auto max-w-3xl">
           <SectionHeader overline="What you get" title="Organizer perks" align="center" className="mb-12" />
           <div className="grid gap-4 sm:grid-cols-2">
             {whatYouGet.map((item, index) => (
-              <div key={index} className="flex items-center gap-3 bg-card rounded-lg p-4">
-                <Check className="h-5 w-5 text-ring shrink-0" />
+              <div key={index} className="flex items-center gap-3 rounded-lg bg-card p-4">
+                <Check className="size-5 shrink-0 text-ring" />
                 <span className="text-foreground">{item}</span>
               </div>
             ))}
@@ -98,12 +98,12 @@ export default function OrganizerPage() {
 
       {/* Get Started */}
       <Section>
-        <div className="max-w-2xl mx-auto text-center mb-8">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+        <div className="mx-auto mb-8 max-w-2xl text-center">
+          <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
             Get started
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Ready to get involved?</h2>
-          <p className="text-muted-foreground mb-8">
+          <h2 className="mb-4 font-display text-3xl font-semibold text-foreground">Ready to get involved?</h2>
+          <p className="mb-8 text-muted-foreground">
             Send us a note introducing yourself. Tell us what you&apos;d want to own and why TechTank matters to you.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
@@ -115,7 +115,7 @@ export default function OrganizerPage() {
             </Button>
           </div>
         </div>
-        <div className="max-w-xl mx-auto">
+        <div className="mx-auto max-w-xl">
           <ContactCard context="Interested in joining the organizer team? Tell us about yourself." />
         </div>
       </Section>

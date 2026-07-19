@@ -16,7 +16,7 @@ export default function LegalLayout({ children }: { children: React.ReactNode })
   return (
     <div className="min-h-screen bg-background">
       {/* Sticky Sub-Nav */}
-      <nav className="sticky top-18 z-40 bg-background/80 backdrop-blur-xl border-b border-border">
+      <nav className="sticky top-18 z-40 border-b border-border bg-background/80 backdrop-blur-xl">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex items-center justify-center py-3">
             {/* Sub-navigation */}

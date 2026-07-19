@@ -77,16 +77,16 @@ export default function HostPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden gradient-hero texture-grain">
+      <section className="gradient-hero texture-grain relative overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+            <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
               Bring us to your space
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
+            <h1 className="mb-6 font-display text-4xl font-semibold text-balance text-foreground md:text-5xl lg:text-6xl">
               Host a TechTank event
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+            <p className="mb-8 text-xl leading-relaxed text-muted-foreground">
               Bring the Toronto tech community to your office. Great for recruiting, brand visibility, and giving back
               to the community.
             </p>
@@ -102,12 +102,12 @@ export default function HostPage() {
         <SectionHeader overline="Why host" title="What you get out of it" className="mb-12" />
         <div className="grid gap-8 lg:grid-cols-3">
           {whyHost.map((item) => (
-            <div key={item.title} className="bg-card rounded-2xl border border-border p-6 lg:p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-ring/10 text-ring mb-4">
-                <item.icon className="h-6 w-6" />
+            <div key={item.title} className="rounded-2xl border border-border bg-card p-6 lg:p-8">
+              <div className="mb-4 flex size-12 items-center justify-center rounded-xl bg-ring/10 text-ring">
+                <item.icon className="size-6" />
               </div>
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3">{item.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+              <h3 className="mb-3 font-display text-xl font-semibold text-foreground">{item.title}</h3>
+              <p className="leading-relaxed text-muted-foreground">{item.description}</p>
             </div>
           ))}
         </div>
@@ -118,8 +118,8 @@ export default function HostPage() {
         <SectionHeader overline="Event logistics" title="What we need from your space" className="mb-12" />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {logistics.map((item) => (
-            <div key={item.label} className="flex items-start gap-4 bg-background rounded-xl p-5">
-              <item.icon className="h-5 w-5 text-ring shrink-0 mt-0.5" />
+            <div key={item.label} className="flex items-start gap-4 rounded-xl bg-background p-5">
+              <item.icon className="mt-0.5 size-5 shrink-0 text-ring" />
               <div>
                 <p className="font-semibold text-foreground">{item.label}</p>
                 <p className="text-sm text-muted-foreground">{item.value}</p>
@@ -132,24 +132,24 @@ export default function HostPage() {
       {/* What TechTank Handles vs What You Provide */}
       <Section>
         <div className="grid gap-8 lg:grid-cols-2">
-          <div className="bg-ring/8 rounded-2xl border border-ring/30 p-6 lg:p-8">
-            <h3 className="font-display text-xl font-semibold text-foreground mb-6">What TechTank handles</h3>
+          <div className="rounded-2xl border border-ring/30 bg-ring/8 p-6 lg:p-8">
+            <h3 className="mb-6 font-display text-xl font-semibold text-foreground">What TechTank handles</h3>
             <ul className="space-y-3">
               {techTankHandles.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-ring shrink-0 mt-0.5" />
+                  <Check className="mt-0.5 size-5 shrink-0 text-ring" />
                   <span className="text-foreground">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="bg-amber/8 rounded-2xl border border-amber/30 p-6 lg:p-8">
-            <h3 className="font-display text-xl font-semibold text-foreground mb-6">What you provide</h3>
+          <div className="rounded-2xl border border-amber/30 bg-amber/8 p-6 lg:p-8">
+            <h3 className="mb-6 font-display text-xl font-semibold text-foreground">What you provide</h3>
             <ul className="space-y-3">
               {youProvide.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-amber shrink-0 mt-0.5" />
+                  <Check className="mt-0.5 size-5 shrink-0 text-amber" />
                   <span className="text-foreground">{item}</span>
                 </li>
               ))}
@@ -160,12 +160,12 @@ export default function HostPage() {
 
       {/* What You Get */}
       <Section background="brand-soft">
-        <div className="max-w-3xl mx-auto">
+        <div className="mx-auto max-w-3xl">
           <SectionHeader overline="What you get" title="Host perks" align="center" className="mb-12" />
           <div className="grid gap-4 sm:grid-cols-2">
             {whatYouGet.map((item, index) => (
-              <div key={index} className="flex items-center gap-3 bg-card rounded-lg p-4">
-                <Check className="h-5 w-5 text-ring shrink-0" />
+              <div key={index} className="flex items-center gap-3 rounded-lg bg-card p-4">
+                <Check className="size-5 shrink-0 text-ring" />
                 <span className="text-foreground">{item}</span>
               </div>
             ))}
@@ -179,10 +179,10 @@ export default function HostPage() {
         <div className="grid gap-6 lg:grid-cols-5">
           {process.map((item) => (
             <div key={item.step} className="relative">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-ring text-white font-semibold mb-4">
+              <div className="mb-4 flex size-10 items-center justify-center rounded-full bg-ring font-semibold text-white">
                 {item.step}
               </div>
-              <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+              <h4 className="mb-1 font-semibold text-foreground">{item.title}</h4>
               <p className="text-sm text-muted-foreground">{item.description}</p>
             </div>
           ))}
@@ -197,16 +197,16 @@ export default function HostPage() {
 
       {/* Host Resources */}
       <Section>
-        <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">Resources</span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Host toolkit in the Media Kit</h2>
-          <p className="text-muted-foreground mb-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">Resources</span>
+          <h2 className="mb-4 font-display text-3xl font-semibold text-foreground">Host toolkit in the Media Kit</h2>
+          <p className="mb-8 text-muted-foreground">
             Run-of-show guides, host checklists, brand assets, and event templates all live in our Media Kit.
           </p>
           <Button variant="outline" asChild>
             <Link href="/resources/media-kit">
               Open the Media Kit
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRight className="ml-2 size-4" />
             </Link>
           </Button>
         </div>
@@ -214,14 +214,14 @@ export default function HostPage() {
 
       {/* Intake Form CTA */}
       <Section background="brand-soft">
-        <div className="max-w-2xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
             Ready to host?
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
+          <h2 className="mb-4 font-display text-3xl font-semibold text-foreground">
             Let&apos;s bring TechTank to your space
           </h2>
-          <p className="text-muted-foreground mb-8">
+          <p className="mb-8 text-muted-foreground">
             Tell us about your venue and when you&apos;d like to host. We&apos;ll get back to you within a week.
           </p>
           <Button variant="primary" size="lg" asChild>
@@ -232,7 +232,7 @@ export default function HostPage() {
 
       {/* Contact */}
       <Section>
-        <div className="max-w-xl mx-auto">
+        <div className="mx-auto max-w-xl">
           <ContactCard context="Questions about hosting? We're here to help." />
         </div>
       </Section>

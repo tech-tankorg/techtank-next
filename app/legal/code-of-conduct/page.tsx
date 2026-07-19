@@ -8,23 +8,23 @@ export const metadata: Metadata = {
 
 export default function CodeOfConductPage() {
   return (
-    <div className="bg-card rounded-2xl border border-border p-6 lg:p-10">
+    <div className="rounded-2xl border border-border bg-card p-6 lg:p-10">
       {/* Header */}
-      <div className="mb-8 pb-8 border-b border-border">
-        <p className="text-sm text-muted-foreground mb-2">Last updated: June 5, 2026</p>
-        <h1 className="font-display text-3xl lg:text-4xl font-semibold text-foreground">Code of Conduct</h1>
+      <div className="mb-8 border-b border-border pb-8">
+        <p className="mb-2 text-sm text-muted-foreground">Last updated: June 5, 2026</p>
+        <h1 className="font-display text-3xl font-semibold text-foreground lg:text-4xl">Code of Conduct</h1>
       </div>
 
       {/* Quick Report */}
-      <div className="bg-ring/5 border border-ring/20 rounded-xl p-6 mb-8">
-        <div className="flex flex-col sm:flex-row items-start gap-4">
-          <Mail className="h-6 w-6 text-ring shrink-0 sm:mt-0.5" />
+      <div className="mb-8 rounded-xl border border-ring/20 bg-ring/5 p-6">
+        <div className="flex flex-col items-start gap-4 sm:flex-row">
+          <Mail className="size-6 shrink-0 text-ring sm:mt-0.5" />
           <div>
-            <h2 className="font-semibold text-foreground mb-1">Need to report something?</h2>
-            <p className="text-muted-foreground text-sm mb-2">
+            <h2 className="mb-1 font-semibold text-foreground">Need to report something?</h2>
+            <p className="mb-2 text-sm text-muted-foreground">
               At events: speak to any TechTank organizer. Any time: email us.
             </p>
-            <a href="mailto:techtankto@gmail.com" className="text-ring font-medium hover:underline">
+            <a href="mailto:techtankto@gmail.com" className="font-medium text-ring hover:underline">
               techtankto@gmail.com
             </a>
           </div>
@@ -32,10 +32,10 @@ export default function CodeOfConductPage() {
       </div>
 
       {/* Content */}
-      <div className="space-y-10 text-foreground leading-relaxed">
+      <div className="space-y-10 leading-relaxed text-foreground">
         {/* Scope */}
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">Scope</h2>
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">Scope</h2>
           <div className="space-y-4 text-muted-foreground">
             <p>
               This code of conduct applies to everyone in the TechTank community: attendees, volunteers, speakers,
@@ -52,7 +52,7 @@ export default function CodeOfConductPage() {
 
         {/* Our Commitment to a Safe Space */}
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">Our Commitment to a Safe Space</h2>
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">Our Commitment to a Safe Space</h2>
           <div className="space-y-4 text-muted-foreground">
             <p>
               TechTank is committed to being a safe and affirming space for 2SLGBTQ+ people. We use and respect
@@ -69,16 +69,16 @@ export default function CodeOfConductPage() {
 
         {/* A. Members and Attendees */}
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">A. Members and Attendees</h2>
-          <p className="text-muted-foreground mb-6">
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">A. Members and Attendees</h2>
+          <p className="mb-6 text-muted-foreground">
             Everyone who attends a TechTank event, joins our Slack, or participates in any community space agrees to the
             following.
           </p>
 
           <div className="space-y-6">
             <div>
-              <h3 className="font-semibold text-foreground mb-3">Expected behaviour</h3>
-              <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+              <h3 className="mb-3 font-semibold text-foreground">Expected behaviour</h3>
+              <ul className="list-disc space-y-2 pl-6 text-muted-foreground">
                 <li>Be friendly, patient, and kind</li>
                 <li>Be welcoming to people of all backgrounds and identities</li>
                 <li>
@@ -93,11 +93,11 @@ export default function CodeOfConductPage() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-foreground mb-3">Unacceptable behaviour</h3>
+              <h3 className="mb-3 font-semibold text-foreground">Unacceptable behaviour</h3>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-medium text-foreground mb-2">Harassment and Discrimination</h4>
-                  <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                  <h4 className="mb-2 font-medium text-foreground">Harassment and Discrimination</h4>
+                  <ul className="list-disc space-y-2 pl-6 text-muted-foreground">
                     <li>
                       Hate speech or discriminatory language of any kind, including racist, sexist, homophobic,
                       transphobic, or ableist remarks
@@ -112,8 +112,8 @@ export default function CodeOfConductPage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-medium text-foreground mb-2">Respect and Boundaries</h4>
-                  <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                  <h4 className="mb-2 font-medium text-foreground">Respect and Boundaries</h4>
+                  <ul className="list-disc space-y-2 pl-6 text-muted-foreground">
                     <li>
                       Don&apos;t talk over people or shut down questions — everyone is at a different stage and
                       that&apos;s the point
@@ -130,7 +130,7 @@ export default function CodeOfConductPage() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-foreground mb-3">Referral Policy</h3>
+              <h3 className="mb-3 font-semibold text-foreground">Referral Policy</h3>
               <p className="text-muted-foreground">
                 Referrals carry real professional weight for the person giving them. Members should not request
                 referrals from someone they have not built a genuine relationship with. A single interaction is not
@@ -142,16 +142,16 @@ export default function CodeOfConductPage() {
 
         {/* B. Organizers and Volunteers */}
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">B. Organizers and Volunteers</h2>
-          <p className="text-muted-foreground mb-6">
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">B. Organizers and Volunteers</h2>
+          <p className="mb-6 text-muted-foreground">
             Organizers and volunteers are held to the same standards as all community members, and carry additional
             responsibilities as representatives of TechTank.
           </p>
 
           <div className="space-y-6">
             <div>
-              <h3 className="font-semibold text-foreground mb-3">Additional Expectations</h3>
-              <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+              <h3 className="mb-3 font-semibold text-foreground">Additional Expectations</h3>
+              <ul className="list-disc space-y-2 pl-6 text-muted-foreground">
                 <li>Model the behaviour and values in this code of conduct at all times</li>
                 <li>
                   Create a welcoming environment at every event — greet newcomers, make introductions, and make sure no
@@ -173,7 +173,7 @@ export default function CodeOfConductPage() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-foreground mb-3">If an Organizer or Volunteer Violates This Code</h3>
+              <h3 className="mb-3 font-semibold text-foreground">If an Organizer or Volunteer Violates This Code</h3>
               <p className="text-muted-foreground">
                 Reports involving an organizer or volunteer should be sent to the board at{" "}
                 <a href="mailto:techtankto@gmail.com" className="text-ring hover:underline">
@@ -189,16 +189,16 @@ export default function CodeOfConductPage() {
 
         {/* C. Sponsors and Hosts */}
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">C. Sponsors and Hosts</h2>
-          <p className="text-muted-foreground mb-6">
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">C. Sponsors and Hosts</h2>
+          <p className="mb-6 text-muted-foreground">
             TechTank welcomes sponsors and venue hosts as partners in building community. By sponsoring or hosting a
             TechTank event, you agree to the following.
           </p>
 
           <div className="space-y-6">
             <div>
-              <h3 className="font-semibold text-foreground mb-3">Expected behaviour</h3>
-              <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+              <h3 className="mb-3 font-semibold text-foreground">Expected behaviour</h3>
+              <ul className="list-disc space-y-2 pl-6 text-muted-foreground">
                 <li>Treat all TechTank community members with respect and dignity</li>
                 <li>
                   Abide by TechTank&apos;s code of conduct in all interactions with attendees, organizers, and
@@ -219,8 +219,8 @@ export default function CodeOfConductPage() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-foreground mb-3">What Sponsors and Hosts Should Not Do</h3>
-              <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+              <h3 className="mb-3 font-semibold text-foreground">What Sponsors and Hosts Should Not Do</h3>
+              <ul className="list-disc space-y-2 pl-6 text-muted-foreground">
                 <li>
                   Recruiting and hiring outreach is welcome with prior agreement from TechTank organizers. Collecting
                   attendee contact information or pitching attendees without their explicit consent is not permitted.
@@ -238,7 +238,7 @@ export default function CodeOfConductPage() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-foreground mb-3">Attendee Data</h3>
+              <h3 className="mb-3 font-semibold text-foreground">Attendee Data</h3>
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   TechTank does not share attendee contact information or registration data with sponsors for marketing
@@ -253,7 +253,7 @@ export default function CodeOfConductPage() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-foreground mb-3">Sponsor Violations</h3>
+              <h3 className="mb-3 font-semibold text-foreground">Sponsor Violations</h3>
               <p className="text-muted-foreground">
                 TechTank reserves the right to end a sponsorship or hosting relationship at any time if a sponsor or
                 host violates this code of conduct, acts in a way that conflicts with TechTank&apos;s values, or creates
@@ -265,15 +265,15 @@ export default function CodeOfConductPage() {
 
         {/* Report a Concern */}
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">Report a Concern</h2>
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">Report a Concern</h2>
 
           <div className="space-y-6">
             <div>
-              <h3 className="font-semibold text-foreground mb-3">General Reports</h3>
-              <p className="text-muted-foreground mb-3">
+              <h3 className="mb-3 font-semibold text-foreground">General Reports</h3>
+              <p className="mb-3 text-muted-foreground">
                 If you experience or witness behaviour that violates this code of conduct, please reach out at:
               </p>
-              <p className="text-muted-foreground mb-3">
+              <p className="mb-3 text-muted-foreground">
                 <a href="mailto:techtankto@gmail.com" className="text-ring hover:underline">
                   techtankto@gmail.com
                 </a>
@@ -285,7 +285,7 @@ export default function CodeOfConductPage() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-foreground mb-3">Reports Involving an Organizer or Board Member</h3>
+              <h3 className="mb-3 font-semibold text-foreground">Reports Involving an Organizer or Board Member</h3>
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   If your report involves an organizer or board member, please contact the board directly at{" "}
@@ -306,8 +306,8 @@ export default function CodeOfConductPage() {
 
         {/* Enforcement */}
         <section>
-          <h2 className="font-display text-xl font-semibold text-foreground mb-4">Enforcement</h2>
-          <p className="text-muted-foreground mb-6">
+          <h2 className="mb-4 font-display text-xl font-semibold text-foreground">Enforcement</h2>
+          <p className="mb-6 text-muted-foreground">
             TechTank reserves the right to take corrective action in response to any behaviour deemed inappropriate,
             threatening, offensive, or harmful. This applies to all community members, including organizers and board
             members.
@@ -315,7 +315,7 @@ export default function CodeOfConductPage() {
 
           <div className="space-y-6">
             <div>
-              <h3 className="font-semibold text-foreground mb-2">1. Notice of Correction</h3>
+              <h3 className="mb-2 font-semibold text-foreground">1. Notice of Correction</h3>
               <p className="text-muted-foreground">
                 You will be contacted directly regarding the behaviour in question and asked to correct it. This may
                 happen via Slack, email, or in person depending on the situation.
@@ -323,7 +323,7 @@ export default function CodeOfConductPage() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-foreground mb-2">2. Temporary Ban</h3>
+              <h3 className="mb-2 font-semibold text-foreground">2. Temporary Ban</h3>
               <p className="text-muted-foreground">
                 A temporary ban from TechTank community spaces for up to two weeks. This includes all in-person and
                 virtual events, Slack, and direct messages.
@@ -331,14 +331,14 @@ export default function CodeOfConductPage() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-foreground mb-2">3. Permanent Ban</h3>
+              <h3 className="mb-2 font-semibold text-foreground">3. Permanent Ban</h3>
               <p className="text-muted-foreground">
                 Permanent removal from all TechTank spaces and events. Reserved for severe violations or repeated
                 behaviour after prior enforcement.
               </p>
             </div>
 
-            <p className="text-muted-foreground text-sm">
+            <p className="text-sm text-muted-foreground">
               Note: some behaviours may warrant skipping directly to a temporary or permanent ban without a prior notice
               of correction, at the board&apos;s discretion.
             </p>

@@ -48,14 +48,14 @@ export default async function EventsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden gradient-hero texture-grain">
+      <section className="gradient-hero texture-grain relative overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+              <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
                 TechTank TO
               </span>
-              <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-4">
+              <h1 className="mb-4 font-display text-4xl font-semibold text-balance text-foreground md:text-5xl lg:text-6xl">
                 All Events
               </h1>
               <p className="text-xl text-muted-foreground">
@@ -71,44 +71,42 @@ export default async function EventsPage() {
       </section>
 
       {/* Luma Calendar Embed Section */}
-      <Section className="bg-[#f7f8f9] dark:bg-[#212325] text-center">
-        <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">Next Up</span>
-        <h2 className="font-display text-3xl font-semibold text-foreground mb-6">Subscribe on Luma</h2>
-        <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+      <Section className="bg-[#f7f8f9] text-center dark:bg-[#212325]">
+        <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">Next Up</span>
+        <h2 className="mb-6 font-display text-3xl font-semibold text-foreground">Subscribe on Luma</h2>
+        <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
           Subscribe on Luma to get notified when new events are announced.
         </p>
-        <div className="flex flex-wrap gap-4 justify-center mb-8">
+        <div className="mb-8 flex flex-wrap justify-center gap-4">
           <Button variant="primary" asChild>
             <Link href="https://lu.ma/techtank" target="_blank" rel="noopener noreferrer">
-              <LumaIcon className="mr-2 h-4 w-4" />
+              <LumaIcon className="mr-2 size-4" />
               Follow us on Luma
-              <ExternalLink className="ml-2 h-4 w-4" />
+              <ExternalLink className="ml-2 size-4" />
             </Link>
           </Button>
           <Button variant="outline" asChild>
             <Link href="https://meetup.com/techtank-to" target="_blank" rel="noopener noreferrer">
-              <MeetupIcon className="mr-2 h-4 w-4" />
+              <MeetupIcon className="mr-2 size-4" />
               Follow us on Meetup
-              <ExternalLink className="ml-2 h-4 w-4" />
+              <ExternalLink className="ml-2 size-4" />
             </Link>
           </Button>
         </div>
-        <div className="flex justify-center w-full">
+        <div className="flex w-full justify-center">
           {/* Light Mode Embed */}
           <iframe
+            title="TechTank TO events calendar"
             src="https://lu.ma/embed/calendar/cal-ZopuHimRKxPa5U0/events?lt=light"
-            className="w-full md:w-3/4 h-[1200px] sm:h-[1000px] md:h-[900px] lg:h-[800px] block dark:hidden overflow-hidden"
+            className="block h-300 w-full overflow-hidden sm:h-250 md:h-225 md:w-3/4 lg:h-200 dark:hidden"
             allowFullScreen
-            aria-hidden={false}
-            tabIndex={0}
           />
           {/* Dark Mode Embed */}
           <iframe
+            title="TechTank TO events calendar"
             src="https://lu.ma/embed/calendar/cal-ZopuHimRKxPa5U0/events?lt=dark"
-            className="w-full md:w-3/4 h-[1200px] sm:h-[1000px] md:h-[900px] lg:h-[800px] hidden dark:block overflow-hidden"
+            className="hidden h-300 w-full overflow-hidden sm:h-250 md:h-225 md:w-3/4 lg:h-200 dark:block"
             allowFullScreen
-            aria-hidden={false}
-            tabIndex={0}
           />
         </div>
       </Section>
@@ -131,13 +129,13 @@ export default async function EventsPage() {
 
       {/* Contact */}
       <Section>
-        <div className="max-w-2xl mx-auto text-center mb-8">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+        <div className="mx-auto mb-8 max-w-2xl text-center">
+          <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
             Get in touch
           </span>
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">Questions about events?</h2>
+          <h2 className="mb-4 font-display text-3xl font-semibold text-foreground">Questions about events?</h2>
         </div>
-        <div className="max-w-xl mx-auto">
+        <div className="mx-auto max-w-xl">
           <ContactCard context="For hosting, sponsorship, and media inquiries." />
         </div>
       </Section>
