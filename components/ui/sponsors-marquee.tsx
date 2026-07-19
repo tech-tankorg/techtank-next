@@ -26,7 +26,7 @@ export function SponsorsMarquee({ className }: { className?: string }) {
             alt={`${sponsor.name} logo`}
             width={sponsor.width}
             height={sponsor.height}
-            className="object-contain opacity-70 hover:opacity-100 transition-all duration-300 dark:brightness-0 dark:invert"
+            className="object-contain opacity-70 transition-all duration-300 hover:opacity-100 dark:brightness-0 dark:invert"
             style={{
               width: "auto",
               height: `calc(var(--logo-height) * ${sponsor.scale ?? 1})`,

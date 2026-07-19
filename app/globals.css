@@ -68,34 +68,10 @@
 
 /* Gradient defaults (light) — :root ensures var() resolves during SSR and before theme hydration */
 :root {
-  --gradient-brand: linear-gradient(
-    135deg,
-    #a8d5d8 0%,
-    #c9e4e5 22%,
-    #f7ede2 45%,
-    #f4dfa8 82%,
-    #f2d870 100%
-  );
-  --gradient-brand-vertical: linear-gradient(
-    180deg,
-    #a8d5d8 0%,
-    #f7ede2 40%,
-    #f2dca8 100%
-  );
-  --gradient-hero: linear-gradient(
-    160deg,
-    #b5dfe0 0%,
-    #d4e8e5 20%,
-    #f0e6dc 45%,
-    #f5d4c1 80%,
-    #f5c9b0 100%
-  );
-  --gradient-hero-soft: linear-gradient(
-    135deg,
-    #bee0e2 0%,
-    #f0e9e0 40%,
-    #f5d4c1 100%
-  );
+  --gradient-brand: linear-gradient(135deg, #a8d5d8 0%, #c9e4e5 22%, #f7ede2 45%, #f4dfa8 82%, #f2d870 100%);
+  --gradient-brand-vertical: linear-gradient(180deg, #a8d5d8 0%, #f7ede2 40%, #f2dca8 100%);
+  --gradient-hero: linear-gradient(160deg, #b5dfe0 0%, #d4e8e5 20%, #f0e6dc 45%, #f5d4c1 80%, #f5c9b0 100%);
+  --gradient-hero-soft: linear-gradient(135deg, #bee0e2 0%, #f0e9e0 40%, #f5d4c1 100%);
 }
 
 .light {
@@ -127,34 +103,10 @@
   --color-popover: #ffffff;
   --color-popover-foreground: #1b4b5a;
 
-  --gradient-brand: linear-gradient(
-    135deg,
-    #a8d5d8 0%,
-    #c9e4e5 22%,
-    #f7ede2 45%,
-    #f4dfa8 82%,
-    #f2d870 100%
-  );
-  --gradient-brand-vertical: linear-gradient(
-    180deg,
-    #a8d5d8 0%,
-    #f7ede2 40%,
-    #f2dca8 100%
-  );
-  --gradient-hero: linear-gradient(
-    160deg,
-    #b5dfe0 0%,
-    #d4e8e5 20%,
-    #f0e6dc 45%,
-    #f5d4c1 80%,
-    #f5c9b0 100%
-  );
-  --gradient-hero-soft: linear-gradient(
-    135deg,
-    #bee0e2 0%,
-    #f0e9e0 40%,
-    #f5d4c1 100%
-  );
+  --gradient-brand: linear-gradient(135deg, #a8d5d8 0%, #c9e4e5 22%, #f7ede2 45%, #f4dfa8 82%, #f2d870 100%);
+  --gradient-brand-vertical: linear-gradient(180deg, #a8d5d8 0%, #f7ede2 40%, #f2dca8 100%);
+  --gradient-hero: linear-gradient(160deg, #b5dfe0 0%, #d4e8e5 20%, #f0e6dc 45%, #f5d4c1 80%, #f5c9b0 100%);
+  --gradient-hero-soft: linear-gradient(135deg, #bee0e2 0%, #f0e9e0 40%, #f5d4c1 100%);
 }
 
 .gradient-brand {
@@ -171,12 +123,7 @@
 }
 
 .gradient-overlay-brand {
-  background: linear-gradient(
-    to top,
-    rgba(27, 75, 90, 0.92) 0%,
-    rgba(232, 124, 78, 0.55) 42%,
-    transparent 60%
-  );
+  background: linear-gradient(to top, rgba(27, 75, 90, 0.92) 0%, rgba(232, 124, 78, 0.55) 42%, transparent 60%);
 }
 
 /* ─── Dark Tokens & Gradients ──────────────────────────────────────────────── */
@@ -210,33 +157,10 @@
   --color-popover: #1a3d4a;
   --color-popover-foreground: #e8f4f5;
 
-  --gradient-brand: linear-gradient(
-    135deg,
-    #1a3d4a 0%,
-    #1b4b5a 25%,
-    #3a2e20 50%,
-    #352e18 100%
-  );
-  --gradient-brand-vertical: linear-gradient(
-    180deg,
-    #1a3d4a 0%,
-    #2a3830 38%,
-    #352e18 100%
-  );
-  --gradient-hero: linear-gradient(
-    160deg,
-    #0b2e38 0%,
-    #1a3d4a 22%,
-    #2e3028 48%,
-    #4a2e1a 82%,
-    #3a1e0e 100%
-  );
-  --gradient-hero-soft: linear-gradient(
-    135deg,
-    #1a3d4a 0%,
-    #2a3028 38%,
-    #3a2818 100%
-  );
+  --gradient-brand: linear-gradient(135deg, #1a3d4a 0%, #1b4b5a 25%, #3a2e20 50%, #352e18 100%);
+  --gradient-brand-vertical: linear-gradient(180deg, #1a3d4a 0%, #2a3830 38%, #352e18 100%);
+  --gradient-hero: linear-gradient(160deg, #0b2e38 0%, #1a3d4a 22%, #2e3028 48%, #4a2e1a 82%, #3a1e0e 100%);
+  --gradient-hero-soft: linear-gradient(135deg, #1a3d4a 0%, #2a3028 38%, #3a2818 100%);
 }
 
 /* ─── Helper Classes ───────────────────────────────────────────────────────── */

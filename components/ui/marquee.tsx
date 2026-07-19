@@ -102,7 +102,7 @@ const Marquee = forwardRef<MarqueeRef, MarqueeProps>((props, ref) => {
         variant="primary"
         onClick={handleToggle}
       >
-        {paused ? <PlayIcon className="h-4 w-4" /> : <PauseIcon className="h-4 w-4" />}
+        {paused ? <PlayIcon className="size-4" /> : <PauseIcon className="size-4" />}
       </Button>
     </div>
   );
