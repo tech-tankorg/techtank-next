@@ -14,7 +14,7 @@ Graph API (1 page) → Zod validate → transform to InstagramPost
 
 - **Split ownership.** The scraper only ever writes
   `constants/instagram-posts.generated.ts`. Human curation (featured posts) lives
-  in `constants/instagram-curation.ts` and is never touched. `instagram-posts.ts`
+  in `constants/instagram-featured.ts` and is never touched. `instagram-posts.ts`
   merges the two.
 - **Incremental + safe.** Posts are deduped by their record key
   (`YYYY-MM-DD-<shortcode>`); existing entries are never overwritten or deleted,

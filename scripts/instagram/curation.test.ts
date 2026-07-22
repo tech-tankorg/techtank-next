@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest";
 import { findOrphanedFeaturedKeys } from "./curation";
 import { generatedPosts } from "../../constants/instagram-posts.generated";
-import { featuredKeys } from "../../constants/instagram-curation";
+import { featuredKeys } from "../../constants/instagram-featured";
 import type { InstagramPost } from "../../constants/instagram-posts";
 
 const post = (): InstagramPost => ({ caption: "", media: [] });

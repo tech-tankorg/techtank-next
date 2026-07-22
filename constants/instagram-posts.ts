@@ -1,5 +1,5 @@
 import { generatedPosts } from "./instagram-posts.generated";
-import { featuredKeys } from "./instagram-curation";
+import { featuredKeys } from "./instagram-featured";
 
 // --- Types ---
 
@@ -28,7 +28,7 @@ export interface InstagramPostWithId extends InstagramPost {
 
 // Merge machine-owned scraped data with human-owned curation. The scraper only
 // ever writes instagram-posts.generated.ts; featured/curation lives separately in
-// instagram-curation.ts, so an automated run can never clobber editorial choices.
+// instagram-featured.ts, so an automated run can never clobber editorial choices.
 export const instagramPosts: Record<string, InstagramPost> = Object.fromEntries(
   Object.entries(generatedPosts).map(([id, post]) => [id, featuredKeys.has(id) ? { ...post, featured: true } : post]),
 );
