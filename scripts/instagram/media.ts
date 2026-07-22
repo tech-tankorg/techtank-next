@@ -89,8 +89,7 @@ export const defaultProcessDeps: ProcessDeps = {
   removeDir: (dir) => rm(dir, { recursive: true, force: true }),
 };
 
-// Download one asset to a temp file, compress it to its final public path, and
-// clean up. Throws on any failure so the caller can skip-and-flag the post.
+// Throws on any failure so the caller can skip-and-flag the whole post.
 export async function processDownload(
   download: Download,
   publicDir: string,
@@ -115,8 +114,6 @@ export async function processDownload(
   const temp = await deps.writeTemp(bytes, suffix);
 
   await deps.ensureDir(dirname(output));
-  // A video yields two encodes from the one download: the h264 mp4 and a VP9
-  // webm sibling the <video> element prefers. An image yields a single webp.
   const encodes =
     download.kind === "video"
       ? [buildVideoArgs(temp, output), buildWebmArgs(temp, output.replace(/\.mp4$/, ".webm"))]

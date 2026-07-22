@@ -44,8 +44,8 @@ export interface Selection {
   failed: FailedPost[];
 }
 
-// Transform every node, dropping ones whose key already exists and collecting
-// (never throwing on) any that fail to transform.
+// A single bad node collects into `failed` rather than throwing, so one
+// malformed post can't abort the whole run.
 export function selectNewPosts(existingKeys: Set<string>, nodes: MediaNode[]): Selection {
   const fresh: TransformResult[] = [];
   const skippedExisting: string[] = [];
