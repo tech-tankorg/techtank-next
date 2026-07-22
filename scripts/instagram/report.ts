@@ -15,9 +15,7 @@ export function formatRunReport(summary: RunSummary): string {
   const lines: string[] = [];
 
   if (summary.added.length > 0) {
-    lines.push(
-      `Added ${summary.added.length} new post(s): ${summary.added.join(", ")}`,
-    );
+    lines.push(`Added ${summary.added.length} new post(s): ${summary.added.join(", ")}`);
   } else {
     lines.push("No new posts.");
   }

@@ -8,9 +8,7 @@ const post = (): InstagramPost => ({ caption: "", media: [] });
 
 describe("findOrphanedFeaturedKeys", () => {
   test("returns keys that have no matching generated post", () => {
-    expect(findOrphanedFeaturedKeys({ a: post() }, ["a", "ghost"])).toEqual([
-      "ghost",
-    ]);
+    expect(findOrphanedFeaturedKeys({ a: post() }, ["a", "ghost"])).toEqual(["ghost"]);
   });
 
   test("returns empty when every curated key resolves", () => {

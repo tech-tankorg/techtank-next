@@ -50,9 +50,7 @@ function expandSource(
 
   if (source.media_type === "VIDEO") {
     const video: InstagramPostMedia = { type: "video", path: `${base}.mp4` };
-    const downloads: Download[] = [
-      { sourceUrl: source.media_url, destPath: video.path, kind: "video" },
-    ];
+    const downloads: Download[] = [{ sourceUrl: source.media_url, destPath: video.path, kind: "video" }];
     const media: InstagramPostMedia[] = [video];
     // Videos historically carry a poster image; keep that so getCoverImage works.
     if (source.thumbnail_url) {
@@ -82,10 +80,7 @@ export function transformNode(node: MediaNode): TransformResult {
   const key = deriveKey(node.timestamp, shortcode);
   const dir = `/media/instagram/${key}`;
 
-  const sources: MediaSource[] =
-    node.media_type === "CAROUSEL_ALBUM"
-      ? (node.children?.data ?? [])
-      : [node];
+  const sources: MediaSource[] = node.media_type === "CAROUSEL_ALBUM" ? (node.children?.data ?? []) : [node];
 
   const media: InstagramPostMedia[] = [];
   const downloads: Download[] = [];

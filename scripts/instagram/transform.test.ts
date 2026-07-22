@@ -35,8 +35,7 @@ describe("transformNode", () => {
     expect(downloads).toEqual([
       {
         sourceUrl: "https://cdn.example.com/a.jpg",
-        destPath:
-          "/media/instagram/2024-05-14-C69JJhR2qP/techtankto_C69JJhR2qP_3367888333715237519.webp",
+        destPath: "/media/instagram/2024-05-14-C69JJhR2qP/techtankto_C69JJhR2qP_3367888333715237519.webp",
         kind: "image",
       },
     ]);

@@ -2,9 +2,7 @@ import type { InstagramPost } from "../../constants/instagram-posts";
 
 // Sort by key so the generated file has a stable order and scrape runs produce
 // minimal, reviewable diffs.
-export function sortByKey(
-  posts: Record<string, InstagramPost>,
-): Record<string, InstagramPost> {
+export function sortByKey(posts: Record<string, InstagramPost>): Record<string, InstagramPost> {
   return Object.fromEntries(
     Object.keys(posts)
       .sort()
@@ -14,9 +12,7 @@ export function sortByKey(
 
 // JSON.stringify output is also a valid TypeScript object literal, so no AST
 // library is needed. Captions (newlines, quotes, emoji) are JSON-escaped.
-export function renderGeneratedFile(
-  posts: Record<string, InstagramPost>,
-): string {
+export function renderGeneratedFile(posts: Record<string, InstagramPost>): string {
   const literal = JSON.stringify(sortByKey(posts), null, 2);
   return `import type { InstagramPost } from "./instagram-posts";
 

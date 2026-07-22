@@ -6,5 +6,5 @@ export const featuredKeys: ReadonlySet<string> = new Set([
   "2025-07-07-DLz4I7KOww6",
   "2025-08-12-DNRVwWtPwky",
   "2025-08-20-DNmHtVwNshY",
-  "2026-04-10-DW9vcgiPHx"
+  "2026-04-10-DW9vcgiPHx",
 ]);

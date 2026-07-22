@@ -24,9 +24,7 @@ export const mediaNodeSchema = z.object({
 
 export const mediaResponseSchema = z.object({
   data: z.array(mediaNodeSchema),
-  paging: z
-    .object({ cursors: z.unknown().optional(), next: z.string().optional() })
-    .optional(),
+  paging: z.object({ cursors: z.unknown().optional(), next: z.string().optional() }).optional(),
 });
 
 export type MediaNode = z.infer<typeof mediaNodeSchema>;

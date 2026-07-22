@@ -9,27 +9,21 @@ const post = (caption: string): InstagramPost => ({
 
 describe("upsertByKey", () => {
   test("adds posts whose key is not already present", () => {
-    const { merged, added } = upsertByKey({ a: post("a") }, [
-      { key: "b", post: post("b") },
-    ]);
+    const { merged, added } = upsertByKey({ a: post("a") }, [{ key: "b", post: post("b") }]);
     expect(Object.keys(merged).sort()).toEqual(["a", "b"]);
     expect(added).toEqual(["b"]);
   });
 
   test("skips an existing key without overwriting it", () => {
     const existing = { a: post("original") };
-    const { merged, added, skipped } = upsertByKey(existing, [
-      { key: "a", post: post("CHANGED") },
-    ]);
+    const { merged, added, skipped } = upsertByKey(existing, [{ key: "a", post: post("CHANGED") }]);
     expect(merged.a.caption).toBe("original");
     expect(added).toEqual([]);
     expect(skipped).toEqual(["a"]);
   });
 
   test("never deletes existing entries absent from the incoming set", () => {
-    const { merged } = upsertByKey({ a: post("a"), b: post("b") }, [
-      { key: "c", post: post("c") },
-    ]);
+    const { merged } = upsertByKey({ a: post("a"), b: post("b") }, [{ key: "c", post: post("c") }]);
     expect(Object.keys(merged).sort()).toEqual(["a", "b", "c"]);
   });
 

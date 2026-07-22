@@ -24,10 +24,7 @@ export function buildMediaUrl(config: GraphConfig): string {
 // Fetches a single (most-recent) page of media. Deliberately not paginating all
 // history: one page per run keeps us well within rate limits, and the merge step
 // only ever adds genuinely new posts.
-export async function fetchRecentMedia(
-  config: GraphConfig,
-  fetchImpl: typeof fetch = fetch,
-): Promise<MediaResponse> {
+export async function fetchRecentMedia(config: GraphConfig, fetchImpl: typeof fetch = fetch): Promise<MediaResponse> {
   const res = await fetchImpl(buildMediaUrl(config), {
     signal: AbortSignal.timeout(30_000),
   });

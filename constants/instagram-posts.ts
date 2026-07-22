@@ -22,10 +22,7 @@ export interface InstagramPost {
 // ever writes instagram-posts.generated.ts; featured/curation lives separately in
 // instagram-curation.ts, so an automated run can never clobber editorial choices.
 export const instagramPosts: Record<string, InstagramPost> = Object.fromEntries(
-  Object.entries(generatedPosts).map(([id, post]) => [
-    id,
-    featuredKeys.has(id) ? { ...post, featured: true } : post,
-  ]),
+  Object.entries(generatedPosts).map(([id, post]) => [id, featuredKeys.has(id) ? { ...post, featured: true } : post]),
 );
 
 export interface InstagramPostWithId extends InstagramPost {

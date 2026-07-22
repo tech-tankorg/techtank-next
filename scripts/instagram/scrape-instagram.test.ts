@@ -21,9 +21,7 @@ describe("loadConfig", () => {
   });
 
   test("throws listing every missing required var", () => {
-    expect(() => loadConfig({})).toThrow(
-      /INSTAGRAM_USER_ID.*INSTAGRAM_ACCESS_TOKEN/,
-    );
+    expect(() => loadConfig({})).toThrow(/INSTAGRAM_USER_ID.*INSTAGRAM_ACCESS_TOKEN/);
   });
 });
 
@@ -44,9 +42,7 @@ describe("selectNewPosts", () => {
   });
 
   test("collects transform failures instead of throwing", () => {
-    const { fresh, failed } = selectNewPosts(new Set(), [
-      node({ id: "99", permalink: "https://example.com/broken" }),
-    ]);
+    const { fresh, failed } = selectNewPosts(new Set(), [node({ id: "99", permalink: "https://example.com/broken" })]);
     expect(fresh).toEqual([]);
     expect(failed).toEqual([{ id: "99", reason: expect.stringContaining("permalink") }]);
   });

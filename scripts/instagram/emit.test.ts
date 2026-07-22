@@ -15,10 +15,7 @@ const dataLiteral = (rendered: string) => {
 
 describe("sortByKey", () => {
   test("orders keys ascending for stable diffs", () => {
-    expect(Object.keys(sortByKey({ b: post("b"), a: post("a") }))).toEqual([
-      "a",
-      "b",
-    ]);
+    expect(Object.keys(sortByKey({ b: post("b"), a: post("a") }))).toEqual(["a", "b"]);
   });
 });
 
@@ -26,9 +23,7 @@ describe("renderGeneratedFile", () => {
   test("emits the type import and the typed export", () => {
     const out = renderGeneratedFile({ a: post("a") });
     expect(out).toContain('import type { InstagramPost } from "./instagram-posts";');
-    expect(out).toContain(
-      "export const generatedPosts: Record<string, InstagramPost> =",
-    );
+    expect(out).toContain("export const generatedPosts: Record<string, InstagramPost> =");
     expect(out.endsWith("\n")).toBe(true);
   });
 

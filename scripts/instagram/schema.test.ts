@@ -25,17 +25,13 @@ describe("mediaNodeSchema", () => {
       permalink: "https://www.instagram.com/p/X/",
       timestamp: "2024-05-14T18:59:58+0000",
       children: {
-        data: [
-          { id: "2", media_type: "IMAGE", media_url: "https://c/x.jpg" },
-        ],
+        data: [{ id: "2", media_type: "IMAGE", media_url: "https://c/x.jpg" }],
       },
     };
     expect(mediaNodeSchema.parse(carousel).children?.data).toHaveLength(1);
   });
   test("rejects an unknown media_type", () => {
-    expect(() =>
-      mediaNodeSchema.parse({ ...imageNode, media_type: "STORY" }),
-    ).toThrow();
+    expect(() => mediaNodeSchema.parse({ ...imageNode, media_type: "STORY" })).toThrow();
   });
   test("rejects a node missing a permalink", () => {
     const { permalink: _p, ...noPermalink } = imageNode;
