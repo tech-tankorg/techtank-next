@@ -18,9 +18,22 @@ const SCALE = "scale='w=min(1080,iw):h=min(1080,ih):force_original_aspect_ratio=
 // progressive playback. The site uses mp4 for video (no webm in the dataset).
 export function buildVideoArgs(input: string, output: string): string[] {
   return [
-    "-y", "-i", input, "-vf", SCALE,
-    "-c:v", "libx264", "-preset", "medium", "-crf", "28",
-    "-c:a", "aac", "-movflags", "+faststart", output,
+    "-y",
+    "-i",
+    input,
+    "-vf",
+    SCALE,
+    "-c:v",
+    "libx264",
+    "-preset",
+    "medium",
+    "-crf",
+    "28",
+    "-c:a",
+    "aac",
+    "-movflags",
+    "+faststart",
+    output,
   ];
 }
 
@@ -34,9 +47,7 @@ const defaultRunner: FfmpegRunner = (cmd, args) => {
   return { status: r.status, stderr: r.stderr };
 };
 
-export function isFfmpegAvailable(
-  probe: FfmpegRunner = defaultRunner,
-): boolean {
+export function isFfmpegAvailable(probe: FfmpegRunner = defaultRunner): boolean {
   try {
     return probe("ffmpeg", ["-version"]).status === 0;
   } catch {
@@ -50,6 +61,7 @@ export interface ProcessDeps {
   ensureDir: (dir: string) => Promise<void>;
   runFfmpeg: FfmpegRunner;
   cleanup: (path: string) => void | Promise<void>;
+  removeDir: (dir: string) => Promise<void>;
 }
 
 const defaultWriteTemp = async (bytes: Uint8Array, suffix: string) => {
@@ -66,6 +78,7 @@ export const defaultProcessDeps: ProcessDeps = {
   },
   runFfmpeg: defaultRunner,
   cleanup: (path) => rm(path, { force: true }),
+  removeDir: (dir) => rm(dir, { recursive: true, force: true }),
 };
 
 // Download one asset to a temp file, compress it to its final public path, and
@@ -94,10 +107,7 @@ export async function processDownload(
   const temp = await deps.writeTemp(bytes, suffix);
 
   await deps.ensureDir(dirname(output));
-  const args =
-    download.kind === "video"
-      ? buildVideoArgs(temp, output)
-      : buildImageArgs(temp, output);
+  const args = download.kind === "video" ? buildVideoArgs(temp, output) : buildImageArgs(temp, output);
 
   try {
     const result = deps.runFfmpeg("ffmpeg", args);
@@ -106,5 +116,27 @@ export async function processDownload(
     }
   } finally {
     await deps.cleanup(temp);
+  }
+}
+
+// Download every asset for one post; on any failure remove the post's media
+// dir(s) so a partial failure never leaves orphan files that the next scrape
+// commit would pick up. Rethrows so the caller can skip-and-flag the post.
+export async function processPostDownloads(
+  downloads: Download[],
+  publicDir: string,
+  deps: ProcessDeps = defaultProcessDeps,
+): Promise<void> {
+  try {
+    await Promise.all(downloads.map((d) => processDownload(d, publicDir, deps)));
+  } catch (error) {
+    // Same root guard as processDownload: never rm outside publicDir, even if
+    // a sibling download in the batch carried a traversal path.
+    const root = resolve(publicDir) + sep;
+    const dirs = new Set(
+      downloads.map((d) => dirname(resolve(join(publicDir, d.destPath)))).filter((dir) => dir.startsWith(root)),
+    );
+    await Promise.all([...dirs].map((dir) => deps.removeDir(dir)));
+    throw error;
   }
 }

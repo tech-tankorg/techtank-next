@@ -1,10 +1,5 @@
 import { describe, expect, test, vi } from "vitest";
-import {
-  buildImageArgs,
-  buildVideoArgs,
-  isFfmpegAvailable,
-  processDownload,
-} from "./media";
+import { buildImageArgs, buildVideoArgs, isFfmpegAvailable, processDownload, processPostDownloads } from "./media";
 import type { Download } from "./transform";
 
 describe("ffmpeg arg builders", () => {
@@ -50,6 +45,7 @@ describe("processDownload", () => {
     ensureDir: vi.fn().mockResolvedValue(undefined),
     runFfmpeg: vi.fn().mockReturnValue({ status: 0 }),
     cleanup: vi.fn(),
+    removeDir: vi.fn(),
   };
 
   test("routes a video through the video encoder to the right output path", async () => {
@@ -97,9 +93,7 @@ describe("processDownload", () => {
       processDownload(dl, "/public", {
         ...baseDeps,
         runFfmpeg,
-        fetchImpl: vi
-          .fn()
-          .mockResolvedValue({ ok: false, status: 404 }) as unknown as typeof fetch,
+        fetchImpl: vi.fn().mockResolvedValue({ ok: false, status: 404 }) as unknown as typeof fetch,
       }),
     ).rejects.toThrow(/404/);
     expect(runFfmpeg).not.toHaveBeenCalled();
@@ -111,8 +105,65 @@ describe("processDownload", () => {
       destPath: "/../../etc/evil.webp",
       kind: "image",
     };
-    await expect(processDownload(dl, "/public", baseDeps)).rejects.toThrow(
-      /outside public/i,
-    );
+    await expect(processDownload(dl, "/public", baseDeps)).rejects.toThrow(/outside public/i);
+  });
+});
+
+describe("processPostDownloads", () => {
+  const deps = () => ({
+    fetchImpl: vi.fn().mockResolvedValue({
+      ok: true,
+      arrayBuffer: async () => new ArrayBuffer(4),
+    }) as unknown as typeof fetch,
+    writeTemp: vi.fn().mockResolvedValue("/tmp/raw"),
+    ensureDir: vi.fn().mockResolvedValue(undefined),
+    runFfmpeg: vi.fn().mockReturnValue({ status: 0 }),
+    cleanup: vi.fn(),
+    removeDir: vi.fn().mockResolvedValue(undefined),
+  });
+
+  const downloads: Download[] = [
+    {
+      sourceUrl: "https://c/a.webp",
+      destPath: "/media/instagram/k/a.webp",
+      kind: "image",
+    },
+    {
+      sourceUrl: "https://c/v.mp4",
+      destPath: "/media/instagram/k/v.mp4",
+      kind: "video",
+    },
+  ];
+
+  test("removes the post's media dir and rethrows when any download fails", async () => {
+    const d = deps();
+    d.fetchImpl = vi.fn((url: string) =>
+      url === "https://c/v.mp4"
+        ? Promise.resolve({ ok: false, status: 500 })
+        : Promise.resolve({ ok: true, arrayBuffer: async () => new ArrayBuffer(4) }),
+    ) as unknown as typeof fetch;
+    await expect(processPostDownloads(downloads, "/public", d)).rejects.toThrow(/500/);
+    expect(d.removeDir).toHaveBeenCalledTimes(1);
+    expect(d.removeDir).toHaveBeenCalledWith("/public/media/instagram/k");
+  });
+
+  test("does not remove anything when every download succeeds", async () => {
+    const d = deps();
+    await processPostDownloads(downloads, "/public", d);
+    expect(d.removeDir).not.toHaveBeenCalled();
+    expect(d.runFfmpeg).toHaveBeenCalledTimes(2);
+  });
+
+  test("never removes a dir outside the public root", async () => {
+    const d = deps();
+    const evil: Download[] = [
+      {
+        sourceUrl: "https://c/a.jpg",
+        destPath: "/../../etc/evil.webp",
+        kind: "image",
+      },
+    ];
+    await expect(processPostDownloads(evil, "/public", d)).rejects.toThrow(/outside public/i);
+    expect(d.removeDir).not.toHaveBeenCalled();
   });
 });

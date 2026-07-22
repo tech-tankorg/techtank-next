@@ -10,13 +10,12 @@ import { transformNode, type TransformResult } from "./transform";
 import { assertNoShrink, upsertByKey } from "./merge";
 import { renderGeneratedFile } from "./emit";
 import { formatRunReport, type FailedPost } from "./report";
-import { isFfmpegAvailable, processDownload } from "./media";
+import { isFfmpegAvailable, processPostDownloads } from "./media";
 
 const DEFAULT_VERSION = "v21.0";
 const DEFAULT_LIMIT = 25;
 
-const toMessage = (error: unknown): string =>
-  error instanceof Error ? error.message : String(error);
+const toMessage = (error: unknown): string => (error instanceof Error ? error.message : String(error));
 
 // Coerce-and-guard: a non-positive or non-integer env value falls back to the
 // default rather than producing a "limit=NaN" request.
@@ -27,13 +26,9 @@ function parseLimit(raw: string | undefined): number {
 }
 
 export function loadConfig(env: Record<string, string | undefined>): GraphConfig {
-  const missing = ["INSTAGRAM_USER_ID", "INSTAGRAM_ACCESS_TOKEN"].filter(
-    (key) => !env[key],
-  );
+  const missing = ["INSTAGRAM_USER_ID", "INSTAGRAM_ACCESS_TOKEN"].filter((key) => !env[key]);
   if (missing.length > 0) {
-    throw new Error(
-      `Missing required env vars: ${missing.join(", ")}. See .env.example.`,
-    );
+    throw new Error(`Missing required env vars: ${missing.join(", ")}. See .env.example.`);
   }
   return {
     userId: env.INSTAGRAM_USER_ID!,
@@ -51,10 +46,7 @@ export interface Selection {
 
 // Transform every node, dropping ones whose key already exists and collecting
 // (never throwing on) any that fail to transform.
-export function selectNewPosts(
-  existingKeys: Set<string>,
-  nodes: MediaNode[],
-): Selection {
+export function selectNewPosts(existingKeys: Set<string>, nodes: MediaNode[]): Selection {
   const fresh: TransformResult[] = [];
   const skippedExisting: string[] = [];
   const failed: FailedPost[] = [];
@@ -84,16 +76,9 @@ interface RunOptions {
   existing: Record<string, InstagramPost>;
 }
 
-export async function run({
-  dryRun,
-  publicDir,
-  generatedPath,
-  existing,
-}: RunOptions): Promise<string> {
+export async function run({ dryRun, publicDir, generatedPath, existing }: RunOptions): Promise<string> {
   if (!dryRun && !isFfmpegAvailable()) {
-    throw new Error(
-      "ffmpeg not found in PATH. Install it (macOS: `brew install ffmpeg`).",
-    );
+    throw new Error("ffmpeg not found in PATH. Install it (macOS: `brew install ffmpeg`).");
   }
 
   const config = loadConfig(process.env);
@@ -101,16 +86,14 @@ export async function run({
   const existingKeys = new Set(Object.keys(existing));
   const selection = selectNewPosts(existingKeys, response.data);
 
-  // Download + compress each fresh post's media; a media failure skips that post.
-  // Media within a post run concurrently; posts stay sequential for ordered
-  // failure reporting.
+  // Download + compress each fresh post's media; a media failure skips that
+  // post and removes its partially-written files. Media within a post run
+  // concurrently; posts stay sequential for ordered failure reporting.
   const toAdd = [];
   for (const result of selection.fresh) {
     try {
       if (!dryRun) {
-        await Promise.all(
-          result.downloads.map((download) => processDownload(download, publicDir)),
-        );
+        await processPostDownloads(result.downloads, publicDir);
       }
       toAdd.push({ key: result.key, post: result.post });
     } catch (error) {
