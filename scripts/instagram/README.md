@@ -27,17 +27,17 @@ Graph API (1 page) → Zod validate → transform to InstagramPost
 One module per pipeline stage. Pure modules have no I/O (fast, tested directly);
 shell modules isolate the network, filesystem, and ffmpeg behind injected deps.
 
-| Module | Responsibility | Kind |
-|---|---|---|
-| `schema.ts` | Zod schemas validating the Graph API payload | pure |
-| `keys.ts` | Derive the `YYYY-MM-DD-<shortcode>` record key | pure |
-| `transform.ts` | API node → `InstagramPost` + download list (expands carousels) | pure |
-| `merge.ts` | Upsert by key + never-shrink guard | pure |
-| `emit.ts` | Render the generated `.ts` data file | pure |
-| `report.ts` | Format the run summary | pure |
-| `graph-api.ts` | Fetch one page of media | shell |
-| `media.ts` | Download + ffmpeg-encode media, sandboxed to `public/` | shell |
-| `scrape-instagram.ts` | Orchestrate the run; CLI entry point | shell |
+| Module                | Responsibility                                                 | Kind  |
+| --------------------- | -------------------------------------------------------------- | ----- |
+| `schema.ts`           | Zod schemas validating the Graph API payload                   | pure  |
+| `keys.ts`             | Derive the `YYYY-MM-DD-<shortcode>` record key                 | pure  |
+| `transform.ts`        | API node → `InstagramPost` + download list (expands carousels) | pure  |
+| `merge.ts`            | Upsert by key + never-shrink guard                             | pure  |
+| `emit.ts`             | Render the generated `.ts` data file                           | pure  |
+| `report.ts`           | Format the run summary                                         | pure  |
+| `graph-api.ts`        | Fetch one page of media                                        | shell |
+| `media.ts`            | Download + ffmpeg-encode media, sandboxed to `public/`         | shell |
+| `scrape-instagram.ts` | Orchestrate the run; CLI entry point                           | shell |
 
 ## Prerequisites
 
