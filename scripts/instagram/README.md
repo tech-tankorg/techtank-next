@@ -24,7 +24,11 @@ Graph API (1 page) → Zod validate → transform to InstagramPost
 
 ## Prerequisites
 
-1. **ffmpeg** on PATH — macOS: `brew install ffmpeg`.
+1. **ffmpeg with libwebp** on PATH — macOS: `brew install ffmpeg-full`. Plain
+   `brew install ffmpeg` does **not** include the `libwebp` encoder and the
+   media pipeline will fail on every post with `Unknown encoder 'libwebp'`.
+   `ffmpeg-full` is keg-only (won't overwrite a plain `ffmpeg` install already
+   on PATH), so put it first: `export PATH="/opt/homebrew/opt/ffmpeg-full/bin:$PATH"`.
 2. **A Meta app + long-lived token** for the @techtankto account:
    - Convert @techtankto to an Instagram **Business/Creator** account and link it
      to a Facebook Page.

@@ -1471,6 +1471,23 @@ export const generatedPosts: Record<string, InstagramPost> = {
     ],
     "pk": "17995310519753688"
   },
+  "2025-02-24-DGdU8GHOON": {
+    "caption": "We kicked off our first meetup of the year with a session on building robust extensions that work seamlessly across platforms! Big thanks to Tony Ko @tkodev for sharing his expert insights on DOM management and deployment strategies🙏\n\nCheck out Tony’s LinkedIn:\n\n🔗 https://www.linkedin.com/in/tkodev\n\nSpecial shoutout to our sponsor Cohere for providing the perfect space to learn and network ✨ \n\nCheck out Cohere’s latest product, North \n\n🔗 https://cohere.com/north\n\nTo everyone who braved the snow to join us—thank you for your energy and amazing questions!\n\n✨ Missed it? No worries!\n\nCatch up on all the highlights:\n\nPhotos 📷\n\n🔗 https://photos.app.goo.gl/JdCB2QUhzxXPwUTg9\n\nRecording 📽️\n\n🔗 https://youtu.be/f8ONw6O_rco?si=N5OaEdIcFOM3vZVu\n\nTony’s Slides 💻\n\n🔗 https://www.figma.com/deck/Pp9WuKLFwDnXimapCLwnb2/TechTalk—Cross-Browser-Extensions?node-id=1-1788&t=h0Rn8vbGsHPTRxUa-1\n\n✨ Want to join TechTank’s journey?\n\nSpeak at a future event 🎤\n\n🔗 https://www.techtankto.com/speak\n\nPartner with us - Reach out via email: 📧 techtankto@gmail.com\n\n✨ Stay connected with us:\n\nSee our Linktree in our bio for more ways to get involved\n\nConsider donating so we can continue our mission:\n\n🔗 https://www.techtankto.com/donate\n\nLooking forward to seeing you in Spring 2025! 💙\n\n#techtankto #techtank #techtanktoronto #techtanker #techtankers #devcommunity #browserextension #torontonetworking #networking #developer #swe #software #dom #speaker #techtips #techtalk #cohere #coherenorth",
+    "date": "2025-02-24",
+    "shortcode": "DGdU8GHOON_",
+    "pk": "17945742722958214",
+    "createdAtRaw": 1740405877,
+    "media": [
+      {
+        "type": "video",
+        "path": "/media/instagram/2025-02-24-DGdU8GHOON/techtankto_DGdU8GHOON_17945742722958214.mp4"
+      },
+      {
+        "type": "image",
+        "path": "/media/instagram/2025-02-24-DGdU8GHOON/techtankto_DGdU8GHOON_17945742722958214_poster.webp"
+      }
+    ]
+  },
   "2025-02-25-DGdU8GHOON": {
     "caption": "We kicked off our first meetup of the year with a session on building robust extensions that work seamlessly across platforms! Big thanks to Tony Ko @tkodev for sharing his expert insights on DOM management and deployment strategies🙏\nCheck out Tony’s LinkedIn:\n🔗 https://www.linkedin.com/in/tkodev\nSpecial shoutout to our sponsor Cohere for providing the perfect space to learn and network ✨ \nCheck out Cohere’s latest product, North\n🔗 https://cohere.com/north\nTo everyone who braved the snow to join us—thank you for your energy and amazing questions!\n✨ Missed it? No worries!\nCatch up on all the highlights:\nPhotos 📷\n🔗 https://photos.app.goo.gl/JdCB2QUhzxXPwUTg9\nRecording 📽️\n🔗 https://youtu.be/f8ONw6O_rco?si=N5OaEdIcFOM3vZVu\nTony’s Slides 💻\n🔗 https://www.figma.com/deck/Pp9WuKLFwDnXimapCLwnb2/TechTalk—Cross-Browser-Extensions?node-id=1-1788&t=h0Rn8vbGsHPTRxUa-1\n✨ Want to join TechTank’s journey?\nSpeak at a future event 🎤\n🔗 https://www.techtankto.com/speak\nPartner with us - Reach out via email: 📧 techtankto@gmail.com\n✨ Stay connected with us:\nSee our Linktree in our bio for more ways to get involved\nConsider donating so we can continue our mission:\n🔗 https://www.techtankto.com/donate\nLooking forward to seeing you in Spring 2025! 💙\n#techtankto #techtank #techtanktoronto #techtanker #techtankers #devcommunity #browserextension #torontonetworking #networking #developer #swe #software #dom #speaker #techtips #techtalk #cohere #coherenorth",
     "date": "2025-02-25",
@@ -1556,6 +1573,23 @@ export const generatedPosts: Record<string, InstagramPost> = {
       }
     ],
     "pk": "18002597894740092"
+  },
+  "2025-03-27-DHtTcVTvIo6": {
+    "caption": "✨ Thank you for attending! ✨\n\nOur latest CodeDiversity Meetup was our biggest one yet—thank you for being part of it! ☕💜 \n\nIt’s always inspiring to see this community grow, connect, and support each other.\n\nA huge shoutout to Niki and Thannia for hosting this space every month with so much care and dedication! 💖 \n\nYour warmth and effort make these meetups truly special.\n\n🚀 We’ll be back soon! Our next meetup will likely be in late April—stay tuned for updates.\n\n🔗 Stay connected: Join our Slack community and find the # code-diversity channel to keep the conversation going! Connect with us here 👉 https://linktr.ee/techtankto\n\nLet’s keep building an inclusive and supportive tech community—see you soon! 🧑🏽‍💻👩🏻‍💻👨🏾‍💻👩🏿‍💻👨🏼‍💻👩‍💻🌟\n\n#CodeDiversity #WomenInTech #NonBinaryInTech #TechCommunity #Networking #TechTankTo #TechTank \n#TechTankToronto #2slgbtqia #code",
+    "date": "2025-03-27",
+    "shortcode": "DHtTcVTvIo6",
+    "pk": "18085092925720582",
+    "createdAtRaw": 1743089400,
+    "media": [
+      {
+        "type": "video",
+        "path": "/media/instagram/2025-03-27-DHtTcVTvIo6/techtankto_DHtTcVTvIo6_18085092925720582.mp4"
+      },
+      {
+        "type": "image",
+        "path": "/media/instagram/2025-03-27-DHtTcVTvIo6/techtankto_DHtTcVTvIo6_18085092925720582_poster.webp"
+      }
+    ]
   },
   "2025-03-28-DHtTcVTvIo6": {
     "caption": "✨ Thank you for attending! ✨\nOur latest CodeDiversity Meetup was our biggest one yet—thank you for being part of it! ☕💜\nIt’s always inspiring to see this community grow, connect, and support each other.\nA huge shoutout to Niki and Thannia for hosting this space every month with so much care and dedication! 💖\nYour warmth and effort make these meetups truly special.\n🚀 We’ll be back soon! Our next meetup will likely be in late April—stay tuned for updates.\n🔗 Stay connected: Join our Slack community and find the # code-diversity channel to keep the conversation going! Connect with us here 👉 https://linktr.ee/techtankto\nLet’s keep building an inclusive and supportive tech community—see you soon! 🧑🏽‍💻👩🏻‍💻👨🏾‍💻👩🏿‍💻👨🏼‍💻👩‍💻🌟\n#CodeDiversity #WomenInTech #NonBinaryInTech #TechCommunity #Networking #TechTankTo #TechTank\n#TechTankToronto #2slgbtqia #code",
@@ -1763,6 +1797,56 @@ export const generatedPosts: Record<string, InstagramPost> = {
     ],
     "pk": "18107726435506054"
   },
+  "2026-05-12-DYQOwFZgIfS": {
+    "caption": "🤠🌵 We put on our boots, threw on our hats, and took over @dinastavern for the night 🤠✨\n\nBig thank you to everyone who came out and made it one to remember 🤎🔥 Until the next ride\n\n#TechTankTo #TechTankers #TorontoTech #TechCommunity #friends",
+    "date": "2026-05-12",
+    "shortcode": "DYQOwFZgIfS",
+    "pk": "18360261424233613",
+    "createdAtRaw": 1778621094,
+    "media": [
+      {
+        "type": "image",
+        "path": "/media/instagram/2026-05-12-DYQOwFZgIfS/techtankto_DYQOwFZgIfS_18093189278228835.webp"
+      },
+      {
+        "type": "image",
+        "path": "/media/instagram/2026-05-12-DYQOwFZgIfS/techtankto_DYQOwFZgIfS_18079999595418295.webp"
+      },
+      {
+        "type": "image",
+        "path": "/media/instagram/2026-05-12-DYQOwFZgIfS/techtankto_DYQOwFZgIfS_18389069881088407.webp"
+      },
+      {
+        "type": "image",
+        "path": "/media/instagram/2026-05-12-DYQOwFZgIfS/techtankto_DYQOwFZgIfS_18128326153594976.webp"
+      },
+      {
+        "type": "image",
+        "path": "/media/instagram/2026-05-12-DYQOwFZgIfS/techtankto_DYQOwFZgIfS_18066020744701639.webp"
+      },
+      {
+        "type": "image",
+        "path": "/media/instagram/2026-05-12-DYQOwFZgIfS/techtankto_DYQOwFZgIfS_18313537039272886.webp"
+      },
+      {
+        "type": "image",
+        "path": "/media/instagram/2026-05-12-DYQOwFZgIfS/techtankto_DYQOwFZgIfS_17954280360132260.webp"
+      }
+    ]
+  },
+  "2026-05-20-DYkPshWgcE0": {
+    "caption": "🌱 May I have your attention: we’re running\n\nIt’s time 🙂‍↕️ TECHTANK RUNCLUB THIS SUNDAY 🌿🏃‍♂️💨 Time to log off and touch grass \n\nRSVP on Luma - link in bio!",
+    "date": "2026-05-20",
+    "shortcode": "DYkPshWgcE0",
+    "pk": "17869481679677192",
+    "createdAtRaw": 1779292789,
+    "media": [
+      {
+        "type": "image",
+        "path": "/media/instagram/2026-05-20-DYkPshWgcE0/techtankto_DYkPshWgcE0_17869481679677192.webp"
+      }
+    ]
+  },
   "2026-06-09-DZWPNciI8eO": {
     "caption": "TechTank latest video",
     "date": "2026-06-09",
@@ -1775,6 +1859,73 @@ export const generatedPosts: Record<string, InstagramPost> = {
       {
         "type": "image",
         "path": "/media/instagram/2026-06-09-DZWPNciI8eO/techtankto_DZWPNciI8eO.webp"
+      }
+    ]
+  },
+  "2026-06-23-DZ7zBUYBhUz": {
+    "caption": "At our Code Diversity gathering last Saturday, women and nonbinary people in tech came together for an honest conversation about authenticity at work — and what it costs.\n\nWe had thoughtful hosting from Thannia, Niki, and Charu, who helped guide a grounded and open conversation throughout the session.\n\nWe also want to extend a thank you to Prema Coffee Coffee and Bar for sharing their space and helping us hold a safe, welcoming environment for this discussion.\n\nWe talked about masking as both safety and survival, and how unmasking can feel deeply energizing but also risky in environments that don’t always reward it. From code-switching to neurodivergence, to the pressure to be “the best,” to navigating micromanagement, feedback, and recognition — the thread throughout was how often people are asked to perform rather than simply be.\n\nWe also explored advocacy and self-advocacy: speaking up, asking for help without fear of being seen as incompetent, and pushing for growth and promotion in systems that don’t always make credit or visibility evenly distributed, especially when it comes to roles of leadership and promotion in the workplace.\n\nA big theme was the tension between perfectionism and velocity, how we were socialized to equate worth with being flawless, and how modern tech culture often rewards something very different in terms of expectations.\n\nWe’re continuing the conversation on Slack — feel free to share your reflections, experiences, and resources there. This is also a space to support each other, exchange tools, and build ways of working that feel more human and sustainable.\n\nDrop in, share what resonated, and pass along anything that’s helped you navigate authenticity, advocacy, or burnout in tech.\n\n#CodeDiversity #WomenInTech #NeurodiversityInTech #TechCulture #AuthenticLeadership",
+    "date": "2026-06-23",
+    "shortcode": "DZ7zBUYBhUz",
+    "pk": "18116591605803157",
+    "createdAtRaw": 1782230414,
+    "media": [
+      {
+        "type": "video",
+        "path": "/media/instagram/2026-06-23-DZ7zBUYBhUz/techtankto_DZ7zBUYBhUz_18116591605803157.mp4"
+      },
+      {
+        "type": "image",
+        "path": "/media/instagram/2026-06-23-DZ7zBUYBhUz/techtankto_DZ7zBUYBhUz_18116591605803157_poster.webp"
+      }
+    ]
+  },
+  "2026-06-23-DZ8LYQPgY72": {
+    "caption": "TechTank runclub is back for round 2 🏃‍♀️⚡️ We survived the rain on our first run, so now we deserve some sunshine ☀️😌\nJoin us this Sunday 12PM • 5K • Great people • Good vibes\n🔗 RSVP in our bio",
+    "date": "2026-06-23",
+    "shortcode": "DZ8LYQPgY72",
+    "pk": "18594745102019120",
+    "createdAtRaw": 1782243205,
+    "media": [
+      {
+        "type": "video",
+        "path": "/media/instagram/2026-06-23-DZ8LYQPgY72/techtankto_DZ8LYQPgY72_18200152984366683.mp4"
+      },
+      {
+        "type": "image",
+        "path": "/media/instagram/2026-06-23-DZ8LYQPgY72/techtankto_DZ8LYQPgY72_18200152984366683_poster.webp"
+      },
+      {
+        "type": "video",
+        "path": "/media/instagram/2026-06-23-DZ8LYQPgY72/techtankto_DZ8LYQPgY72_17862447042638246.mp4"
+      },
+      {
+        "type": "image",
+        "path": "/media/instagram/2026-06-23-DZ8LYQPgY72/techtankto_DZ8LYQPgY72_17862447042638246_poster.webp"
+      },
+      {
+        "type": "video",
+        "path": "/media/instagram/2026-06-23-DZ8LYQPgY72/techtankto_DZ8LYQPgY72_18089907449379931.mp4"
+      },
+      {
+        "type": "image",
+        "path": "/media/instagram/2026-06-23-DZ8LYQPgY72/techtankto_DZ8LYQPgY72_18089907449379931_poster.webp"
+      }
+    ]
+  },
+  "2026-06-29-DaLhcpahRRn": {
+    "caption": "🏃🏽‍♀️🏃🏻🏃🏿‍♂️🏃🏼‍♀️🏃🏾‍♂️💻💙\n\nThis past Sunday at noon, the Tech Tank Run Club came together for a fun and energizing 5K! 🙌\n\nThe group ran, jogged, and walked the route with breaks, games, and light exercises built in along the way—making it a perfect mix of movement and connection.\n\nHuge thank you to Ivy Coffee @ivy.coffeeshop for supporting the run with a special discount on drinks for our crew ☕💙\n\nGreat energy, great people, and a strong way to spend a Sunday.\n\n#TechTank #RunClub #TorontoTech #Community #Networking",
+    "date": "2026-06-29",
+    "shortcode": "DaLhcpahRRn",
+    "pk": "18025525577837761",
+    "createdAtRaw": 1782758251,
+    "media": [
+      {
+        "type": "video",
+        "path": "/media/instagram/2026-06-29-DaLhcpahRRn/techtankto_DaLhcpahRRn_18025525577837761.mp4"
+      },
+      {
+        "type": "image",
+        "path": "/media/instagram/2026-06-29-DaLhcpahRRn/techtankto_DaLhcpahRRn_18025525577837761_poster.webp"
       }
     ]
   }
