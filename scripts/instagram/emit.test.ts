@@ -8,8 +8,7 @@ const post = (caption: string): InstagramPost => ({
 });
 
 const dataLiteral = (rendered: string) => {
-  const marker = "generatedPosts: Record<string, InstagramPost> =";
-  const start = rendered.indexOf("{", rendered.indexOf(marker));
+  const start = rendered.indexOf("{", rendered.indexOf("generatedPosts ="));
   return JSON.parse(rendered.slice(start, rendered.lastIndexOf("}") + 1));
 };
 
@@ -20,10 +19,11 @@ describe("sortByKey", () => {
 });
 
 describe("renderGeneratedFile", () => {
-  test("emits the type import and the typed export", () => {
+  test("emits the type import and a satisfies-typed export that preserves literal keys", () => {
     const out = renderGeneratedFile({ a: post("a") });
     expect(out).toContain('import type { InstagramPost } from "./instagram-posts";');
-    expect(out).toContain("export const generatedPosts: Record<string, InstagramPost> =");
+    expect(out).toContain("export const generatedPosts = ");
+    expect(out).toContain("} satisfies Record<string, InstagramPost>;");
     expect(out.endsWith("\n")).toBe(true);
   });
 
