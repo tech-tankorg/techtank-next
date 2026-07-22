@@ -1,5 +1,12 @@
 import { describe, expect, test, vi } from "vitest";
-import { buildImageArgs, buildVideoArgs, isFfmpegAvailable, processDownload, processPostDownloads } from "./media";
+import {
+  buildImageArgs,
+  buildVideoArgs,
+  buildWebmArgs,
+  isFfmpegAvailable,
+  processDownload,
+  processPostDownloads,
+} from "./media";
 import type { Download } from "./transform";
 
 describe("ffmpeg arg builders", () => {
@@ -12,6 +19,16 @@ describe("ffmpeg arg builders", () => {
     expect(args[0]).toBe("-y");
     expect(args).toContain("/in.mp4");
     expect(args.at(-1)).toBe("/out.mp4");
+  });
+
+  test("webm args encode VP9 with opus audio and a 1080 cap", () => {
+    const args = buildWebmArgs("/in.mp4", "/out.webm");
+    expect(args).toContain("libvpx-vp9");
+    expect(args).toContain("libopus");
+    expect(args.join(" ")).toContain("min(1080,iw)");
+    expect(args[0]).toBe("-y");
+    expect(args).toContain("/in.mp4");
+    expect(args.at(-1)).toBe("/out.webm");
   });
 
   test("image args encode webp", () => {
@@ -63,6 +80,35 @@ describe("processDownload", () => {
     const [, args] = runFfmpeg.mock.calls[0];
     expect(args).toContain("libx264");
     expect(args.at(-1)).toBe("/public/media/instagram/k/techtankto_X_1.mp4");
+  });
+
+  test("encodes a video to both mp4 and a webm sibling", async () => {
+    const runFfmpeg = vi.fn().mockReturnValue({ status: 0 });
+    const dl: Download = {
+      sourceUrl: "https://c/v.mp4",
+      destPath: "/media/instagram/k/techtankto_X_1.mp4",
+      kind: "video",
+    };
+    await processDownload(dl, "/public", { ...baseDeps, runFfmpeg });
+    expect(runFfmpeg).toHaveBeenCalledTimes(2);
+    const outputs = runFfmpeg.mock.calls.map(([, args]) => args.at(-1));
+    expect(outputs).toEqual([
+      "/public/media/instagram/k/techtankto_X_1.mp4",
+      "/public/media/instagram/k/techtankto_X_1.webm",
+    ]);
+    const webmArgs = runFfmpeg.mock.calls[1][1];
+    expect(webmArgs).toContain("libvpx-vp9");
+  });
+
+  test("images run a single encode (no webm)", async () => {
+    const runFfmpeg = vi.fn().mockReturnValue({ status: 0 });
+    const dl: Download = {
+      sourceUrl: "https://c/a.jpg",
+      destPath: "/media/instagram/k/a.webp",
+      kind: "image",
+    };
+    await processDownload(dl, "/public", { ...baseDeps, runFfmpeg });
+    expect(runFfmpeg).toHaveBeenCalledTimes(1);
   });
 
   test("throws and still cleans up the temp file when ffmpeg fails", async () => {
@@ -151,7 +197,8 @@ describe("processPostDownloads", () => {
     const d = deps();
     await processPostDownloads(downloads, "/public", d);
     expect(d.removeDir).not.toHaveBeenCalled();
-    expect(d.runFfmpeg).toHaveBeenCalledTimes(2);
+    // One encode for the image, two for the video (mp4 + webm sibling).
+    expect(d.runFfmpeg).toHaveBeenCalledTimes(3);
   });
 
   test("never removes a dir outside the public root", async () => {

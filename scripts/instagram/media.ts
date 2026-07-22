@@ -14,8 +14,10 @@ type FfmpegRunner = (cmd: string, args: string[]) => FfmpegResult;
 
 const SCALE = "scale='w=min(1080,iw):h=min(1080,ih):force_original_aspect_ratio=decrease'";
 
-// Ported from scripts/compress-media.ps1 — h264 mp4, downscaled, faststart for
-// progressive playback. The site uses mp4 for video (no webm in the dataset).
+// Ported from scripts/compress-media.sh — h264 mp4, downscaled, faststart for
+// progressive playback. Every video is also encoded to a webm sibling
+// (buildWebmArgs); the <video> elements list the webm <source> first and fall
+// back to this mp4.
 export function buildVideoArgs(input: string, output: string): string[] {
   return [
     "-y",
@@ -35,6 +37,12 @@ export function buildVideoArgs(input: string, output: string): string[] {
     "+faststart",
     output,
   ];
+}
+
+// Ported from scripts/compress-media.sh — VP9/opus webm, the preferred <source>
+// for browsers that support it (smaller than the h264 mp4 at equal quality).
+export function buildWebmArgs(input: string, output: string): string[] {
+  return ["-y", "-i", input, "-vf", SCALE, "-c:v", "libvpx-vp9", "-crf", "40", "-b:v", "0", "-c:a", "libopus", output];
 }
 
 // Images are served as webp across the dataset.
@@ -107,12 +115,19 @@ export async function processDownload(
   const temp = await deps.writeTemp(bytes, suffix);
 
   await deps.ensureDir(dirname(output));
-  const args = download.kind === "video" ? buildVideoArgs(temp, output) : buildImageArgs(temp, output);
+  // A video yields two encodes from the one download: the h264 mp4 and a VP9
+  // webm sibling the <video> element prefers. An image yields a single webp.
+  const encodes =
+    download.kind === "video"
+      ? [buildVideoArgs(temp, output), buildWebmArgs(temp, output.replace(/\.mp4$/, ".webm"))]
+      : [buildImageArgs(temp, output)];
 
   try {
-    const result = deps.runFfmpeg("ffmpeg", args);
-    if (result.status !== 0) {
-      throw new Error(`ffmpeg failed (${result.status}): ${result.stderr ?? ""}`);
+    for (const args of encodes) {
+      const result = deps.runFfmpeg("ffmpeg", args);
+      if (result.status !== 0) {
+        throw new Error(`ffmpeg failed (${result.status}): ${result.stderr ?? ""}`);
+      }
     }
   } finally {
     await deps.cleanup(temp);
