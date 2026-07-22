@@ -1,11 +1,11 @@
 import type { InstagramPost } from "../../constants/instagram-posts";
 
-export interface IncomingPost {
+interface IncomingPost {
   key: string;
   post: InstagramPost;
 }
 
-export interface MergeResult {
+interface MergeResult {
   merged: Record<string, InstagramPost>;
   added: string[];
   skipped: string[];

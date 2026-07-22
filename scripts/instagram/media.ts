@@ -6,7 +6,7 @@ import type { Download } from "./transform";
 
 const FETCH_TIMEOUT_MS = 30_000;
 
-export interface FfmpegResult {
+interface FfmpegResult {
   status: number | null;
   stderr?: string;
 }
@@ -63,7 +63,7 @@ export function isFfmpegAvailable(probe: FfmpegRunner = defaultRunner): boolean 
   }
 }
 
-export interface ProcessDeps {
+interface ProcessDeps {
   fetchImpl: typeof fetch;
   writeTemp: (bytes: Uint8Array, suffix: string) => Promise<string>;
   ensureDir: (dir: string) => Promise<void>;
@@ -78,7 +78,7 @@ const defaultWriteTemp = async (bytes: Uint8Array, suffix: string) => {
   return path;
 };
 
-export const defaultProcessDeps: ProcessDeps = {
+const defaultProcessDeps: ProcessDeps = {
   fetchImpl: fetch,
   writeTemp: defaultWriteTemp,
   ensureDir: async (dir) => {

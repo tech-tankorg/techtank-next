@@ -3,7 +3,7 @@ export interface FailedPost {
   reason: string;
 }
 
-export interface RunSummary {
+interface RunSummary {
   added: string[];
   skippedExisting: string[];
   failed: FailedPost[];

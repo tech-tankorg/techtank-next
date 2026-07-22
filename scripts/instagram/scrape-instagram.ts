@@ -38,7 +38,7 @@ export function loadConfig(env: Record<string, string | undefined>): GraphConfig
   };
 }
 
-export interface Selection {
+interface Selection {
   fresh: TransformResult[];
   skippedExisting: string[];
   failed: FailedPost[];
