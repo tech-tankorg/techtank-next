@@ -22,6 +22,23 @@ Graph API (1 page) → Zod validate → transform to InstagramPost
 - **Skip-and-flag.** A post whose media 404s or fails to compress is skipped (not
   partially written) and surfaced in the run summary; it retries next run.
 
+## Files
+
+One module per pipeline stage. Pure modules have no I/O (fast, tested directly);
+shell modules isolate the network, filesystem, and ffmpeg behind injected deps.
+
+| Module | Responsibility | Kind |
+|---|---|---|
+| `schema.ts` | Zod schemas validating the Graph API payload | pure |
+| `keys.ts` | Derive the `YYYY-MM-DD-<shortcode>` record key | pure |
+| `transform.ts` | API node → `InstagramPost` + download list (expands carousels) | pure |
+| `merge.ts` | Upsert by key + never-shrink guard | pure |
+| `emit.ts` | Render the generated `.ts` data file | pure |
+| `report.ts` | Format the run summary | pure |
+| `graph-api.ts` | Fetch one page of media | shell |
+| `media.ts` | Download + ffmpeg-encode media, sandboxed to `public/` | shell |
+| `scrape-instagram.ts` | Orchestrate the run; CLI entry point | shell |
+
 ## Prerequisites
 
 1. **ffmpeg with libwebp** on PATH — macOS: `brew install ffmpeg-full`. Plain
@@ -56,6 +73,6 @@ Review the resulting diff (new entries + downloaded media under
 pnpm test
 ```
 
-The pure core (key derivation, schema, transform, merge, emit, report) is fully
-unit-tested. The shell (fetch, ffmpeg) uses injectable dependencies, so tests
-assert behavior without hitting the network or running ffmpeg.
+Each module has a colocated `*.test.ts`. Pure modules are tested directly; the
+shell modules take injected dependencies, so tests never hit the network or run
+ffmpeg.
