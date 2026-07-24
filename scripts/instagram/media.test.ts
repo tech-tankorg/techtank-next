@@ -13,7 +13,11 @@ import type { Download } from "./transform";
 // Output paths in these tests are asserted as POSIX literals, but join()
 // returns platform-native separators (and a drive letter on Windows) — strip
 // both so the assertions hold on every OS.
-const normalizePath = (p: string) => p.replace(/^[A-Za-z]:/, "").split(sep).join("/");
+const normalizePath = (p: string) =>
+  p
+    .replace(/^[A-Za-z]:/, "")
+    .split(sep)
+    .join("/");
 
 describe("ffmpeg arg builders", () => {
   test("video args encode h264 mp4 with faststart and a 1080 cap", () => {
