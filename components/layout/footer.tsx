@@ -12,7 +12,7 @@ const footerLinks = {
       { name: "Slack", href: "/links/slack", external: true },
       { name: "LinkedIn", href: "https://linkedin.com/company/techtank-to", external: true },
       { name: "Instagram", href: "https://instagram.com/techtankto", external: true },
-      { name: "GitHub", href: "https://github.com/tech-tankorg", external: true },
+      { name: "GitHub", href: "https://github.com/techtankto", external: true },
       { name: "YouTube", href: "https://youtube.com/@TechTankTo", external: true },
     ],
   },
