@@ -39,7 +39,7 @@ const communityLinks = [
   },
   {
     name: "GitHub",
-    href: "https://github.com/tech-tankorg",
+    href: "https://github.com/techtankto",
     icon: "/images/platforms/GitHub_Invertocat_Logo.svg",
   },
   {

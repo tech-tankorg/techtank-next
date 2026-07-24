@@ -52,7 +52,7 @@ export const socialLinks: Record<string, SocialLink> = {
   github: {
     id: "github",
     name: "GitHub",
-    url: "https://github.com/tech-tankorg",
+    url: "https://github.com/techtankto",
     type: "secondary",
     category: "contribute",
   },
