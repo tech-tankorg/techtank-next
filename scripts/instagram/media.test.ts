@@ -1,3 +1,4 @@
+import { sep } from "node:path";
 import { describe, expect, test, vi } from "vitest";
 import {
   buildImageArgs,
@@ -8,6 +9,11 @@ import {
   processPostDownloads,
 } from "./media";
 import type { Download } from "./transform";
+
+// Output paths in these tests are asserted as POSIX literals, but join()
+// returns platform-native separators (and a drive letter on Windows) — strip
+// both so the assertions hold on every OS.
+const normalizePath = (p: string) => p.replace(/^[A-Za-z]:/, "").split(sep).join("/");
 
 describe("ffmpeg arg builders", () => {
   test("video args encode h264 mp4 with faststart and a 1080 cap", () => {
@@ -79,7 +85,7 @@ describe("processDownload", () => {
     );
     const [, args] = runFfmpeg.mock.calls[0];
     expect(args).toContain("libx264");
-    expect(args.at(-1)).toBe("/public/media/instagram/k/techtankto_X_1.mp4");
+    expect(normalizePath(args.at(-1))).toBe("/public/media/instagram/k/techtankto_X_1.mp4");
   });
 
   test("encodes a video to both mp4 and a webm sibling", async () => {
@@ -91,7 +97,7 @@ describe("processDownload", () => {
     };
     await processDownload(dl, "/public", { ...baseDeps, runFfmpeg });
     expect(runFfmpeg).toHaveBeenCalledTimes(2);
-    const outputs = runFfmpeg.mock.calls.map(([, args]) => args.at(-1));
+    const outputs = runFfmpeg.mock.calls.map(([, args]) => normalizePath(args.at(-1)));
     expect(outputs).toEqual([
       "/public/media/instagram/k/techtankto_X_1.mp4",
       "/public/media/instagram/k/techtankto_X_1.webm",
@@ -190,7 +196,7 @@ describe("processPostDownloads", () => {
     ) as unknown as typeof fetch;
     await expect(processPostDownloads(downloads, "/public", d)).rejects.toThrow(/500/);
     expect(d.removeDir).toHaveBeenCalledTimes(1);
-    expect(d.removeDir).toHaveBeenCalledWith("/public/media/instagram/k");
+    expect(normalizePath(d.removeDir.mock.calls[0][0])).toBe("/public/media/instagram/k");
   });
 
   test("does not remove anything when every download succeeds", async () => {

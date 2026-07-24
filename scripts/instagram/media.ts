@@ -140,7 +140,14 @@ export async function processPostDownloads(
   deps: ProcessDeps = defaultProcessDeps,
 ): Promise<void> {
   try {
-    await Promise.all(downloads.map((d) => processDownload(d, publicDir, deps)));
+    // allSettled, not all: `all` rejects on the first failure while siblings are
+    // still mid-download/mid-encode, so the catch below could rm the dir out from
+    // under a download that finishes late and recreates an orphan file in it.
+    const results = await Promise.allSettled(downloads.map((d) => processDownload(d, publicDir, deps)));
+    const failure = results.find((r): r is PromiseRejectedResult => r.status === "rejected");
+    if (failure) {
+      throw failure.reason;
+    }
   } catch (error) {
     // Same root guard as processDownload: never rm outside publicDir, even if
     // a sibling download in the batch carried a traversal path.
