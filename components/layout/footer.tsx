@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail } from "lucide-react";
 import { BRAND_ICONS } from "@/components/ui/icons";
+import { CONTACT_EMAIL } from "@/constants/contact";
 
 const footerLinks = {
   community: {
@@ -117,11 +118,11 @@ export function Footer() {
               Copyright &copy; {Math.max(new Date().getFullYear(), 2026)} TechTank TO Inc. All rights reserved.
             </p>
             <a
-              href="mailto:techtankto@gmail.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="flex items-center gap-2 text-sm text-primary-foreground transition-colors hover:text-primary-foreground hover:underline dark:text-foreground dark:hover:text-foreground"
             >
               <Mail className="size-4" />
-              techtankto@gmail.com
+              {CONTACT_EMAIL}
             </a>
           </div>
         </div>

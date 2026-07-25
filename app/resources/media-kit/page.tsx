@@ -8,6 +8,7 @@ import { BRAND_ICONS } from "@/components/ui/icons";
 import { ContactCard } from "@/components/ui/contact-card";
 import { CopyButton } from "@/components/ui/copy-button";
 import { getAllSocialLinks } from "@/constants/social-links";
+import { CONTACT_EMAIL } from "@/constants/contact";
 
 export const metadata: Metadata = {
   title: "Media Kit",
@@ -20,7 +21,7 @@ const fastFacts = [
   { label: "Cadence", value: "Year-round, in-person events via Luma + ongoing Slack community" },
   { label: "Typical attendance", value: "40-120 per event" },
   { label: "Structure", value: "Volunteer-run, non-commercial" },
-  { label: "Contact", value: "techtankto@gmail.com" },
+  { label: "Contact", value: CONTACT_EMAIL },
 ];
 
 const brandColors = [
@@ -305,7 +306,7 @@ export default function PressKitPage() {
             </p>
             <p className="text-sm text-muted-foreground">
               For questions about asset usage or to request permission for special use cases, please contact us at
-              techtankto@gmail.com.
+              {CONTACT_EMAIL}.
             </p>
           </div>
         </div>

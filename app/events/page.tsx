@@ -5,10 +5,12 @@ import { Button } from "@/components/ui/button";
 import { LumaIcon, MeetupIcon } from "@/components/ui/icons";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { EventBrowser } from "@/components/ui/event-browser";
+import { LumaCalendarEmbed } from "@/components/ui/luma-calendar-embed";
 import { DualCTA } from "@/components/ui/dual-cta";
 import { ContactCard } from "@/components/ui/contact-card";
 import { events } from "@/constants/events";
-import { getLumaEvents, getPastLumaEvents } from "./actions";
+import { LUMA_CALENDAR_ID } from "@/constants/luma";
+import { getAllLumaEvents } from "./actions";
 
 export const metadata: Metadata = {
   title: "Events",
@@ -17,8 +19,7 @@ export const metadata: Metadata = {
 };
 
 export default async function EventsPage() {
-  const lumaEvents = await getLumaEvents();
-  const pastLumaEvents = await getPastLumaEvents();
+  const { upcoming: lumaEvents, past: pastLumaEvents } = await getAllLumaEvents();
   const allLumaEvents = [...lumaEvents, ...pastLumaEvents];
 
   const staticLumaSlugs = new Set(
@@ -94,19 +95,9 @@ export default async function EventsPage() {
           </Button>
         </div>
         <div className="flex w-full justify-center">
-          {/* Light Mode Embed */}
-          <iframe
-            title="TechTank TO events calendar"
-            src="https://lu.ma/embed/calendar/cal-ZopuHimRKxPa5U0/events?lt=light"
-            className="block h-300 w-full overflow-hidden sm:h-250 md:h-225 md:w-3/4 lg:h-200 dark:hidden"
-            allowFullScreen
-          />
-          {/* Dark Mode Embed */}
-          <iframe
-            title="TechTank TO events calendar"
-            src="https://lu.ma/embed/calendar/cal-ZopuHimRKxPa5U0/events?lt=dark"
-            className="hidden h-300 w-full overflow-hidden sm:h-250 md:h-225 md:w-3/4 lg:h-200 dark:block"
-            allowFullScreen
+          <LumaCalendarEmbed
+            calendarId={LUMA_CALENDAR_ID}
+            className="h-300 w-full overflow-hidden sm:h-250 md:h-225 md:w-3/4 lg:h-200"
           />
         </div>
       </Section>

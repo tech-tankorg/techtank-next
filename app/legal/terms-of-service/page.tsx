@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CONTACT_EMAIL } from "@/constants/contact";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -154,8 +155,8 @@ export default function TermsOfServicePage() {
           <h2 className="mb-4 font-display text-xl font-semibold text-foreground">12. Contact</h2>
           <p className="text-muted-foreground">
             For questions about these Terms of Service, please contact us at{" "}
-            <a href="mailto:techtankto@gmail.com" className="text-ring hover:underline">
-              techtankto@gmail.com
+            <a href={`mailto:${CONTACT_EMAIL}`} className="text-ring hover:underline">
+              {CONTACT_EMAIL}
             </a>
             .
           </p>
