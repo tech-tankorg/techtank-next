@@ -1,6 +1,7 @@
 "use server";
 
 import type { Sponsor } from "@/constants/sponsors";
+import { LUMA_CALENDAR_ID } from "@/constants/luma";
 import { z } from "zod";
 
 export interface Event {
@@ -28,11 +29,9 @@ export interface Event {
   }[];
 }
 
-const CALENDAR_ID = "cal-ZopuHimRKxPa5U0";
+const LUMA_EVENT_API = `https://api2.luma.com/calendar/get?api_id=${LUMA_CALENDAR_ID}`;
 
-const LUMA_EVENT_API = `https://api2.luma.com/calendar/get?api_id=${CALENDAR_ID}`;
-
-const LUMA_EVENT_API_PAST = `https://api2.luma.com/calendar/get-items?calendar_api_id=${CALENDAR_ID}&pagination_limit=20&period=past`;
+const LUMA_EVENT_API_PAST = `https://api2.luma.com/calendar/get-items?calendar_api_id=${LUMA_CALENDAR_ID}&pagination_limit=20&period=past`;
 
 const SIX_HOURS_IN_SECONDS = 6 * 60 * 60;
 
@@ -103,7 +102,7 @@ function lumaCalendarResponseToEvents(parsed: LumaEventResponse[]): Event[] {
   }));
 }
 
-export async function getLumaEvents(): Promise<Event[]> {
+async function getLumaEvents(): Promise<Event[]> {
   const res = await fetch(LUMA_EVENT_API, {
     next: {
       // @ts-expect-error this is next cache policy
@@ -116,7 +115,7 @@ export async function getLumaEvents(): Promise<Event[]> {
   return lumaCalendarResponseToEvents(parsed.featured_items);
 }
 
-export async function getPastLumaEvents(): Promise<Event[]> {
+async function getPastLumaEvents(): Promise<Event[]> {
   const res = await fetch(LUMA_EVENT_API_PAST, {
     next: {
       // @ts-expect-error this is next cache policy
@@ -127,4 +126,13 @@ export async function getPastLumaEvents(): Promise<Event[]> {
   const json = await res.json();
   const parsed = LumaPastEventApiResponseSchema.parse(json);
   return lumaCalendarResponseToEvents(parsed.entries);
+}
+
+export async function getAllLumaEvents(): Promise<{
+  upcoming: Event[];
+  past: Event[];
+}> {
+  const [upcoming, past] = await Promise.all([getLumaEvents(), getPastLumaEvents()]);
+
+  return { upcoming, past };
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { CONTACT_EMAIL } from "@/constants/contact";
 
 export const metadata: Metadata = {
   title: "FAQ",
@@ -102,7 +103,7 @@ const faqs = [
             Please do. TechTank has been shaped by people who showed up with ideas and made them happen. If you want to
             organize something, facilitate a workshop, or launch a new initiative under the TechTank umbrella,{" "}
             <a
-              href="mailto:techtankto@gmail.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="underline underline-offset-2 transition-colors hover:text-foreground"
             >
               reach out
@@ -148,10 +149,10 @@ const faqs = [
           <>
             Please reach out to us at{" "}
             <a
-              href="mailto:techtankto@gmail.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="underline underline-offset-2 transition-colors hover:text-foreground"
             >
-              techtankto@gmail.com
+              {CONTACT_EMAIL}
             </a>{" "}
             or speak to any organizer at the event. We take every report seriously and handle them confidentially. You
             can also review our full{" "}
@@ -184,7 +185,7 @@ export default function FAQPage() {
               Everything you need to know about TechTank — events, membership, sponsorship, and more. Can't find what
               you're looking for?{" "}
               <a
-                href="mailto:techtankto@gmail.com"
+                href={`mailto:${CONTACT_EMAIL}`}
                 className="underline underline-offset-2 transition-colors hover:text-foreground"
               >
                 Email us
@@ -229,10 +230,10 @@ export default function FAQPage() {
             If you didn't find what you were looking for, reach out directly and an organizer will get back to you.
           </p>
           <a
-            href="mailto:techtankto@gmail.com"
+            href={`mailto:${CONTACT_EMAIL}`}
             className="inline-flex items-center gap-2 font-semibold text-foreground underline underline-offset-4 transition-colors hover:text-ring"
           >
-            techtankto@gmail.com
+            {CONTACT_EMAIL}
           </a>
         </div>
       </Section>
