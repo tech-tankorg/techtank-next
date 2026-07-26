@@ -110,4 +110,3 @@ const Marquee = forwardRef<MarqueeRef, MarqueeProps>((props, ref) => {
 Marquee.displayName = "Marquee";
 
 export { Marquee };
-export type { MarqueeProps, MarqueeRef };

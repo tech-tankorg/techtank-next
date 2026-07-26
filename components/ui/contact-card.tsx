@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Mail, Copy, Check, MessageSquare } from "lucide-react";
+import { CONTACT_EMAIL } from "@/constants/contact";
 
 interface ContactCardProps {
   context?: string;
@@ -11,7 +12,7 @@ export function ContactCard({
   context = "For hosting, sponsorship, speaking, and community inquiries.",
 }: ContactCardProps) {
   const [copied, setCopied] = useState(false);
-  const email = "techtankto@gmail.com";
+  const email = CONTACT_EMAIL;
   const slackUrl = "/links/slack";
 
   const handleCopy = async () => {

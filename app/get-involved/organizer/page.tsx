@@ -4,6 +4,7 @@ import { Check, Star, Users, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { ContactCard } from "@/components/ui/contact-card";
+import { CONTACT_EMAIL } from "@/constants/contact";
 
 export const metadata: Metadata = {
   title: "Join the Organizer Team",
@@ -59,7 +60,7 @@ export default function OrganizerPage() {
               commitment. If you want to help shape what TechTank becomes, this is the path.
             </p>
             <Button variant="primary" size="lg" asChild>
-              <a href="mailto:techtankto@gmail.com?subject=Organizer%20Team%20Inquiry%20-%20TechTank">Get in touch</a>
+              <a href={`mailto:${CONTACT_EMAIL}?subject=Organizer%20Team%20Inquiry%20-%20TechTank`}>Get in touch</a>
             </Button>
           </div>
         </div>
@@ -108,7 +109,7 @@ export default function OrganizerPage() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Button variant="primary" size="sm" asChild>
-              <a href="mailto:techtankto@gmail.com?subject=Organizer%20Team%20Inquiry%20-%20TechTank">Get in touch</a>
+              <a href={`mailto:${CONTACT_EMAIL}?subject=Organizer%20Team%20Inquiry%20-%20TechTank`}>Get in touch</a>
             </Button>
             <Button variant="outline" size="sm" asChild>
               <Link href="/events">Attend an event first</Link>
