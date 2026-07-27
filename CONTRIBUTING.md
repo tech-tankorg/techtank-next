@@ -83,8 +83,6 @@ BREAKING CHANGE: /get-involved/sponsor now expects a `tier` query param
 
 - One focused concern per PR — avoid mixing features with refactors
 - Link the relevant section of `docs/prd/03-solution.md` if the change affects IA or content
-- When adding or renaming a route, update the route table and global navigation section in
-  `docs/prd/03-solution.md`
 
 ## Reviews and merging
 
