@@ -48,8 +48,9 @@ surface is shaped the way it is, not as the current route reference (see
 ## How the information architecture works
 
 The redesign replaces a flat "link-tree" layout with a
-**conversion-oriented onboarding hub** — see `docs/prd/03-solution.md` for
-the full route map, shared layouts, and navigation structure:
+**conversion-oriented onboarding hub** — see `README.md` for the current
+route map, and `docs/prd/03-solution.md` for the shared layouts and
+navigation structure as originally specified:
 
 - `/` — social-proof-driven home (testimonials, event photos, logo cloud).
 - `/about` (+ `/about/faq`, `/about/team`) — values manifesto built on four pillars:
@@ -72,7 +73,7 @@ The `/get-involved` and `/legal` sections use **Next.js shared layouts**
 - `docs/prd/` is frozen as a historic record — don't edit it to reflect new
   IA or route changes. When the IA changes, update the route/nav
   documentation in `README.md` and the code under `app/` instead.
-- Use the PRD to understand *why* the current structure looks the way it
+- Use the PRD to understand _why_ the current structure looks the way it
   does before changing it, not as a target to keep in sync.
 
 ### Tone in specs
