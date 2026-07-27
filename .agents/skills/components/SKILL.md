@@ -1,6 +1,6 @@
 ---
 name: components
-description: House style for authoring, shaping, and styling React/shadcn components (file skeleton, CVA variants, atomic-design organization, layout shell). Use when adding, refactoring, or reviewing a component in any project using shadcn + Tailwind v4.
+description: House style for authoring, shaping, and styling React/shadcn components (file skeleton, CVA variants, this repo's flat ui/layout organization, layout shell). Use when adding, refactoring, or reviewing a component in this project.
 ---
 
 # Components
@@ -57,29 +57,27 @@ How components are added, shaped, styled, and organized. This skill owns authori
 6. **Tailwind v4 CSS-first.** All theme extension in `themes/theme.css` `@theme`; no `tailwind.config.ts`.
 7. **`asChild` + Radix `Slot`** when a component delegates rendering (`<Button asChild><Link …/></Button>`); never nest interactive elements.
 
-## Organization: atomic design
+## Organization: this repo does not use atomic design
 
-1. Components live in `components/` in an atomic-design structure:
-    - `atoms/`: simple components. E.g. a button, a badge, the wordmark.
-    - `molecules/`: collections of atoms. E.g. a search bar, a date picker, an accordion, a project card.
-    - `organisms/`: collections of atoms/molecules. E.g. a page block, a dialog, a menu, an overlay.
-    - `templates/`: layout-focused things: footer, header, layout, main, section.
-2. shadcn CLI imports land in `atoms/` (the `components.json` `ui` alias points there) and are reformatted on arrival.
+This repo uses a flat two-folder split, not an atoms/molecules/organisms/templates
+hierarchy:
+
+- `components/ui/`: reusable primitives and shared building blocks (buttons, cards,
+  sections, dialogs, marquees — anything usable from more than one route). shadcn CLI
+  imports land here (the `components.json` `ui` alias points there) and are reformatted
+  on arrival.
+- `components/layout/`: the persistent shell — `Header`, `Footer`.
+- **Page-specific compositions stay in their route's `app/` directory**, not under
+  `components/`. A component only earns a place in `components/ui/` once a second route
+  needs it; until then it lives next to the page that uses it.
 
 ## Layout shell
 
-1. **One persistent shell wraps every page**, composed from `templates/`:
-
-   ```text
-   layout
-   ├── underlays    # site-wide background layers (e.g. custom webgl backgrounds)
-   ├── header       # top bar: identity + nav links
-   ├── main         # page content, sections in flow
-   ├── footer       # bottom bar: copyright, quick links
-   └── overlays     # takeover layers (e.g. loading screen, nav overlay)
-   ```
-
-2. **Pages are stacks of `section` shells.** Every section renders through the `section` template: a full-bleed wrapper with a centered inner container in one of three widths (`lg` / `md` / `sm`, values set by the design tokens), never ad-hoc page-level wrappers.
+1. **One persistent shell wraps every page**: `Header` and `Footer` from
+   `components/layout/`, composed in the root layout around each route's page content.
+2. Page sections are plain composed JSX in each route's `page.tsx` (or a page-local
+   component), not a shared `section` template — there is no enforced three-width wrapper
+   primitive in this repo.
 
 ## Reusability
 
