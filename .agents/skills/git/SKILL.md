@@ -24,7 +24,7 @@ How change is recorded.
    - **Allowed types:** `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`.
    - **Scopes** match the affected area: the surface (`home`), the layer (`templates`, `tokens`, `constants`), or the docs (`prd`, `docs`). Omit when global.
    - **Subject:** ≤ 72 characters, lowercase, no trailing period.
-   - **Body:** explain the *why* when the diff alone doesn't.
+   - **Body:** explain the _why_ when the diff alone doesn't.
    - **Breaking changes:** `!` suffix and a `BREAKING CHANGE:` footer for route moves, renames, or behavior changes.
 
 ## Branch naming

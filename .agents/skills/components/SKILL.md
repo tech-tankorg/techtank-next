@@ -45,6 +45,7 @@ How components are added, shaped, styled, and organized. This skill owns authori
    ```
 
    Order within the file: **CVA styles/constants on top → types (`XxxRef`, `XxxProps`) → component.** Order within the function body, each under its comment: **props** destructure → **hooks** → **render vars** → **jsx** (composed with `cn()`).
+
 2. **Named exports only**: the component plus its `Props` and `Ref` types; `displayName` set on `forwardRef` components. No default exports.
 
 ## Styling

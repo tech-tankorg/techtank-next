@@ -1,13 +1,13 @@
 # Plan
 
-| # | Milestone | Kind | Depends on | Status |
-| - | --------- | ---- | ---------- | ------ |
-| 1 | Foundation: scaffold, design tokens, shared layouts, event content model | System | — | Merged |
-| 2 | Home (`/`) — the proving surface | Surface | 1 | Merged |
-| 3 | About + FAQ, Events | Surface | 2 | Merged |
-| 4 | Get Involved hub + 4 role pages | Surface | 2 | Merged |
-| 5 | Resources (Media Kit, Design System), Legal | Surface | 2 | Merged |
-| 6 | Launch sweep: SEO, analytics, accessibility, performance | Sweep | 3, 4, 5 | In progress |
+| #   | Milestone                                                                | Kind    | Depends on | Status      |
+| --- | ------------------------------------------------------------------------ | ------- | ---------- | ----------- |
+| 1   | Foundation: scaffold, design tokens, shared layouts, event content model | System  | —          | Merged      |
+| 2   | Home (`/`) — the proving surface                                         | Surface | 1          | Merged      |
+| 3   | About + FAQ, Events                                                      | Surface | 2          | Merged      |
+| 4   | Get Involved hub + 4 role pages                                          | Surface | 2          | Merged      |
+| 5   | Resources (Media Kit, Design System), Legal                              | Surface | 2          | Merged      |
+| 6   | Launch sweep: SEO, analytics, accessibility, performance                 | Sweep   | 3, 4, 5    | In progress |
 
 ## Milestone 1 — Foundation (system)
 

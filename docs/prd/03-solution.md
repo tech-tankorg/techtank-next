@@ -11,19 +11,19 @@ routes each visitor type to its own intake page. Two shared layouts (`/get-invol
 
 Route-level purpose and content requirements, at concept level:
 
-| Path | Purpose |
-| --- | --- |
-| `/` | Social-proof-driven overview and primary CTAs |
-| `/about` (+ `/about/faq`, `/about/team`) | Values & community manifesto (the four pillars); FAQ; team roster (board, core team, volunteers) |
-| `/get-involved` | Onboarding hub; routes visitors to a role |
-| `/get-involved/speak-or-facilitate` | Speaker logistics + intake action |
-| `/get-involved/host` | Venue logistics (40–120 cap, 6–8:30pm) + intake action |
-| `/get-involved/sponsor` | Corporate partner pitch + intake action |
-| `/get-involved/organizer` | Crew onboarding + intake action |
-| `/events` | Upcoming events (Luma) + past-events timeline |
-| `/resources/media-kit` | Brand assets, logos, fast facts for press and partners |
-| `/resources/design-system` | Brand guidelines — colours, typography, component reference |
-| `/legal/terms-of-service`, `/legal/privacy-policy`, `/legal/code-of-conduct` | Compliance docs |
+| Path                                                                         | Purpose                                                                                          |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `/`                                                                          | Social-proof-driven overview and primary CTAs                                                    |
+| `/about` (+ `/about/faq`, `/about/team`)                                     | Values & community manifesto (the four pillars); FAQ; team roster (board, core team, volunteers) |
+| `/get-involved`                                                              | Onboarding hub; routes visitors to a role                                                        |
+| `/get-involved/speak-or-facilitate`                                          | Speaker logistics + intake action                                                                |
+| `/get-involved/host`                                                         | Venue logistics (40–120 cap, 6–8:30pm) + intake action                                           |
+| `/get-involved/sponsor`                                                      | Corporate partner pitch + intake action                                                          |
+| `/get-involved/organizer`                                                    | Crew onboarding + intake action                                                                  |
+| `/events`                                                                    | Upcoming events (Luma) + past-events timeline                                                    |
+| `/resources/media-kit`                                                       | Brand assets, logos, fast facts for press and partners                                           |
+| `/resources/design-system`                                                   | Brand guidelines — colours, typography, component reference                                      |
+| `/legal/terms-of-service`, `/legal/privacy-policy`, `/legal/code-of-conduct` | Compliance docs                                                                                  |
 
 ### Shared layouts
 
@@ -78,14 +78,14 @@ Luma (`luma.com/techtank`), Meetup (`meetup.com/techtank-to`), Slack
   YouTube URL + inline host/sponsor thanks) for v1; a dedicated `/events/<slug>` detail
   route is v2-only.
 - **Recurring UI patterns:**
-  - *Overline kicker* — a short, all-caps label above every major section headline.
-  - *Role cards with checkmarks* — the four `/get-involved` role teasers share one shape
+  - _Overline kicker_ — a short, all-caps label above every major section headline.
+  - _Role cards with checkmarks_ — the four `/get-involved` role teasers share one shape
     (icon → overline → headline → pitch → three checkmarks), reused verbatim across `/`
     and `/get-involved` so the four paths read as siblings.
-  - *Supported-by strip* — a single-line host/sponsor acknowledgment above the footer on
+  - _Supported-by strip_ — a single-line host/sponsor acknowledgment above the footer on
     `/` and `/events`, and on each past-event card.
-  - *Dual end-of-page CTA cards* — a two-up close on long pages: "stay in the loop"
+  - _Dual end-of-page CTA cards_ — a two-up close on long pages: "stay in the loop"
     (Luma/Slack) + "collaborate with us" (email/`/get-involved`), used on `/` and `/events`.
-  - *Direct-email contact card* — `techtankto@gmail.com` as a prominent, copy-friendly card
+  - _Direct-email contact card_ — `techtankto@gmail.com` as a prominent, copy-friendly card
     (not just a hyperlink) at the end of `/get-involved`, its role pages, and
     `/resources/media-kit`.

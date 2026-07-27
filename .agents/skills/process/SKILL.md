@@ -33,14 +33,14 @@ it's canonical, versioned material (§Division of truth), not a side note.
 The PRD folder is the numbered product pipeline, read in order; each stage
 derives from the ones before it:
 
-| Stage | Owns |
-| --- | --- |
-| `01-brief.md` | The distilled intent: what it is, who it's for, the aesthetic, references |
-| `02-observations.md` | Research and risks, each paired with the direction taken |
-| `03-solution.md` | The settled design at concept level: concept, surfaces, systems |
-| `04-design.md` | The design-token contract, transcribed from the design file |
-| `05-architecture.md` | Stack, information architecture, repo structure, data layer |
-| `06-plan.md` | The plan: the milestone graph (kinds, dependencies), cut from the stages above |
+| Stage                | Owns                                                                           |
+| -------------------- | ------------------------------------------------------------------------------ |
+| `01-brief.md`        | The distilled intent: what it is, who it's for, the aesthetic, references      |
+| `02-observations.md` | Research and risks, each paired with the direction taken                       |
+| `03-solution.md`     | The settled design at concept level: concept, surfaces, systems                |
+| `04-design.md`       | The design-token contract, transcribed from the design file                    |
+| `05-architecture.md` | Stack, information architecture, repo structure, data layer                    |
+| `06-plan.md`         | The plan: the milestone graph (kinds, dependencies), cut from the stages above |
 
 - **Observations follow the priority frame**, the order problems get worked in:
   1. **The Problem**: one or two sentences.
@@ -87,11 +87,11 @@ concrete scope, a definition of done, and a status. Milestones form a
 dependency graph, not a fixed sequence, laid out in the plan; three kinds set
 what may run in parallel:
 
-| Kind | The work | Parallelism |
-| --- | --- | --- |
-| **System** | Creates or proves shared conventions: scaffold, tokens, the shell | Serial; nothing may consume unproven conventions |
-| **Surface** | Delivers one surface on conventions already proven | Parallel with other surface milestones, as sibling branches with independent gates |
-| **Sweep** | One cross-cutting pass over everything: coherence, polish, audits, launch | Serial, after the surfaces it sweeps |
+| Kind        | The work                                                                  | Parallelism                                                                        |
+| ----------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **System**  | Creates or proves shared conventions: scaffold, tokens, the shell         | Serial; nothing may consume unproven conventions                                   |
+| **Surface** | Delivers one surface on conventions already proven                        | Parallel with other surface milestones, as sibling branches with independent gates |
+| **Sweep**   | One cross-cutting pass over everything: coherence, polish, audits, launch | Serial, after the surfaces it sweeps                                               |
 
 - **System milestones gate on a specimen.** A system milestone has no surface
   to review, so its gate reviews a specimen artifact instead: a design-system

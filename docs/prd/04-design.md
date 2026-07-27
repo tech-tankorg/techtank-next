@@ -17,16 +17,16 @@ Final pairing per visual design (current build: Inter + Space Grotesk via `next/
 Refined from event posters. Primary brand colour is teal dark; do not introduce hot pink,
 true blue, or colours outside this family without explicit organizer sign-off.
 
-| Token | Hex | Usage |
-| --- | --- | --- |
-| Teal dark (primary) | `#1B4B5A` | Headlines, buttons, footer |
-| Teal mid | `#2A6B7C` | Secondary text and headings |
-| Seafoam | `#A8D5D8` | Soft backgrounds and accents |
-| Mint | `#5B9A8B` | Speaker circles, icons |
-| Peach | `#F5D4C1` | Warm gradient tone |
-| Coral (accent) | `#E87C4E` | CTAs and highlights (from CodeDiversity branding) |
-| Blush | `#EABFBF` | Soft pink accent |
-| Sand | `#F7EDE2` | Warm off-white background |
+| Token               | Hex       | Usage                                             |
+| ------------------- | --------- | ------------------------------------------------- |
+| Teal dark (primary) | `#1B4B5A` | Headlines, buttons, footer                        |
+| Teal mid            | `#2A6B7C` | Secondary text and headings                       |
+| Seafoam             | `#A8D5D8` | Soft backgrounds and accents                      |
+| Mint                | `#5B9A8B` | Speaker circles, icons                            |
+| Peach               | `#F5D4C1` | Warm gradient tone                                |
+| Coral (accent)      | `#E87C4E` | CTAs and highlights (from CodeDiversity branding) |
+| Blush               | `#EABFBF` | Soft pink accent                                  |
+| Sand                | `#F7EDE2` | Warm off-white background                         |
 
 **Gradient:** seafoam → sand → peach, textured/organic (matching event posters);
 backgrounds use a subtle grain-texture overlay.

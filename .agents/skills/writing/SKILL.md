@@ -50,7 +50,7 @@ voice is the design's.
 ## Mechanics
 
 - Filenames, tokens, commands, and identifiers in `code` format.
-- **Bold** for rule leads and load-bearing terms; *italics* for one word of
+- **Bold** for rule leads and load-bearing terms; _italics_ for one word of
   stress at a time. Asterisk emphasis, never underscores.
 - **No em dashes.** Join clauses with a colon, a semicolon, parentheses, or a
   new sentence.

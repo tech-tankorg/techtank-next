@@ -25,7 +25,7 @@ Runtime, language, and what "done" requires.
 4. **All images render through `next/image`** with explicit width and height. (Video loops are not images; they render as media elements with their own posters and dimensions.)
 5. **Fonts load through `next/font/local`**, exposed as CSS variables and applied on `<body>`.
 6. **Metadata via the Metadata API**
-: a full root export plus per-page overrides (never hand-rolled `<head>` tags).
+   : a full root export plus per-page overrides (never hand-rolled `<head>` tags).
 
 ## Folder structure
 

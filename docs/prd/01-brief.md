@@ -2,8 +2,7 @@
 
 ## What it is
 
-TechTank TO (TechTank) is a volunteer-run, Toronto-based Canadian tech community founded in
-2023. The redesign moves the site away from a flat "link-tree" layout toward a
+TechTank TO (TechTank) is a volunteer-run, Toronto-based Canadian tech community founded in 2023. The redesign moves the site away from a flat "link-tree" layout toward a
 conversion-oriented onboarding hub that turns curious visitors into active contributors —
 attendees, speakers, hosts, sponsors, and organizers.
 
