@@ -20,7 +20,9 @@
     "build": "next build",
     "start": "next start",
     "format": "oxfmt .",
-    "lint": "oxlint ."
+    "lint": "oxlint .",
+    "test": "vitest run",
+    "scrape:instagram": "tsx --env-file=.env.local scripts/instagram/scrape-instagram.ts"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.20",
@@ -49,7 +51,9 @@
     "oxlint-tailwindcss": "^1.4.0",
     "postcss": "^8.5.23",
     "tailwindcss": "^4.3.3",
-    "typescript": "^6.0.3"
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
   },
   "engines": {
     "pnpm": ">=10"
