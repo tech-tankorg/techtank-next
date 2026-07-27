@@ -48,13 +48,14 @@ The redesign replaces a flat "link-tree" layout with a
 the full route map, shared layouts, and navigation structure:
 
 - `/` — social-proof-driven home (testimonials, event photos, logo cloud).
-- `/about` — values manifesto built on four pillars: **Community,
-  Innovation, Teamwork, Respect**.
+- `/about` (+ `/about/faq`, `/about/team`) — values manifesto built on four pillars:
+  **Community, Innovation, Teamwork, Respect**; FAQ; team roster.
 - `/get-involved` — onboarding hub with four role sub-pages (Speaker,
   Host, Sponsor, Organizer Team), each ending in an intake action (email us
   at `techtankto@gmail.com`).
 - `/events` — embedded Luma calendar.
-- `/press-kit` — standalone brand assets and fast facts for media.
+- `/resources/media-kit` — standalone brand assets and fast facts for media.
+- `/resources/design-system` — brand guidelines and design-token reference.
 - `/legal` — grouped compliance documents.
 
 The `/get-involved` and `/legal` sections use **Next.js shared layouts**
@@ -109,7 +110,7 @@ Do both before reporting a task complete or opening a commit.
 
 1. Decide where it belongs in the IA. If it's a role, it goes under
    `/get-involved`; if it's legal, under `/legal`; if it's a resource,
-   it's probably a sibling of `/press-kit`.
+   it's probably a sibling of `/resources/media-kit`.
 2. Add the route to the route table and, if user-facing, the global
    navigation section in `docs/prd/03-solution.md`.
 3. Update the relevant nav (global header or shared layout sub-nav)

@@ -98,16 +98,8 @@ enabled site-wide via the `robots` metadata in
 
 ## Contributing
 
-See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for contribution guidelines.
-
-1. Read [`docs/prd/`](./docs/prd/) before making structural changes — it
-   defines the Info Architecture, brand, and content conventions.
-   - **AI agents only:** also read [`AGENTS.md`](./AGENTS.md) for agent-specific
-     working conventions and constraints. (`CLAUDE.md` is a stub that includes it.)
-2. When adding or renaming a route, update both the route table and the global
-   navigation section in [`docs/prd/03-solution.md`](./docs/prd/03-solution.md).
-3. Keep one dominant CTA per page. Role pages under `/get-involved/*` must end
-   in an intake action (email us).
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for contribution guidelines, team
+onboarding, and the roadmap.
 
 ## Contributors
 

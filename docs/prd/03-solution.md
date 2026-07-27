@@ -14,7 +14,7 @@ Route-level purpose and content requirements, at concept level:
 | Path | Purpose |
 | --- | --- |
 | `/` | Social-proof-driven overview and primary CTAs |
-| `/about` (+ `/about/faq`) | Values & community manifesto (the four pillars); FAQ |
+| `/about` (+ `/about/faq`, `/about/team`) | Values & community manifesto (the four pillars); FAQ; team roster (board, core team, volunteers) |
 | `/get-involved` | Onboarding hub; routes visitors to a role |
 | `/get-involved/speak-or-facilitate` | Speaker logistics + intake action |
 | `/get-involved/host` | Venue logistics (40–120 cap, 6–8:30pm) + intake action |
