@@ -13,9 +13,10 @@ layout toward a conversion-oriented onboarding hub that funnels
 visitors into specific roles — attendee, speaker, host, sponsor, or
 volunteer.
 
-The PRD (`docs/prd/`) is the live source of truth for product intent, IA,
-design tokens, architecture, and the delivery plan — a numbered pipeline,
-read in order. House standards (process, writing, nextjs, components, data,
+The PRD (`docs/prd/`) is kept as a historic record of how the current
+structure came to be — read it for context on prior decisions (why a route
+was shaped the way it was, what a design token replaced), not as a spec to
+keep in sync going forward. House standards (process, writing, nextjs, components, data,
 testing, performance, accessibility, seo, git) are supplied by the vendored
 skills under `.claude/skills/` / `.agents/skills/` and load automatically via
 skill discovery. Application code lives in `app/`, with shared pieces in
@@ -38,8 +39,11 @@ For developer-facing setup (scripts, directory tree, route map), see
     └── prd/               # 01-brief → 06-plan, the numbered pipeline
 ```
 
-`docs/prd/06-plan.md` is the live milestone list. `docs/prd/03-solution.md`
-holds the route map and per-surface content requirements.
+`docs/prd/06-plan.md` records the milestone list as it stood during the
+redesign. `docs/prd/03-solution.md` documents the route map and per-surface
+content requirements as originally specified — read it to understand why a
+surface is shaped the way it is, not as the current route reference (see
+`README.md` for that).
 
 ## How the information architecture works
 
@@ -63,17 +67,13 @@ The `/get-involved` and `/legal` sections use **Next.js shared layouts**
 
 ## Working conventions
 
-### Editing the PRD
+### Referencing the PRD
 
-- When the IA changes, update **both** the route table in
-  `docs/prd/03-solution.md` **and** the global navigation section in the
-  same file. Keeping these in sync is the single most important
-  maintenance task.
-- Never introduce a route in the code that isn't reflected in the route
-  table.
-- Keep each of the six pipeline files in its own concern (`01-brief.md`
-  through `06-plan.md`) — don't restate one file's content in another;
-  point instead.
+- `docs/prd/` is frozen as a historic record — don't edit it to reflect new
+  IA or route changes. When the IA changes, update the route/nav
+  documentation in `README.md` and the code under `app/` instead.
+- Use the PRD to understand *why* the current structure looks the way it
+  does before changing it, not as a target to keep in sync.
 
 ### Tone in specs
 
@@ -111,22 +111,20 @@ Do both before reporting a task complete or opening a commit.
 1. Decide where it belongs in the IA. If it's a role, it goes under
    `/get-involved`; if it's legal, under `/legal`; if it's a resource,
    it's probably a sibling of `/resources/media-kit`.
-2. Add the route to the route table and, if user-facing, the global
-   navigation section in `docs/prd/03-solution.md`.
+2. Add the route to the directory tree and route map in `README.md`.
 3. Update the relevant nav (global header or shared layout sub-nav)
    to match.
 
 ### Removing or renaming a page
 
-- Remove the route table row, its navigation entry, and any inbound
-  links from other pages or specs. Use Grep to find references before
+- Remove the route from `README.md`'s tree, its navigation entry, and any
+  inbound links from other pages. Use Grep to find references before
   deleting.
 
 ## Things to avoid
 
-- Don't let the implementation drift from the PRD. When behaviour or
-  IA changes, update both `docs/prd/03-solution.md` and the matching code
-  under `app/` in the same change.
+- Don't edit `docs/prd/` to reflect IA or behaviour changes — it's a frozen
+  historic record. Update `README.md` and the code under `app/` instead.
 - Don't add numbers, quotes, or tier details that organizers haven't
   confirmed. It's better to leave a "finalize with organizers" note
   than to publish fiction.
