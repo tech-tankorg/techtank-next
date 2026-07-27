@@ -67,9 +67,10 @@ hierarchy:
   imports land here (the `components.json` `ui` alias points there) and are reformatted
   on arrival.
 - `components/layout/`: the persistent shell — `Header`, `Footer`.
-- **Page-specific compositions stay in their route's `app/` directory**, not under
-  `components/`. A component only earns a place in `components/ui/` once a second route
-  needs it; until then it lives next to the page that uses it.
+- **All component definitions live under `components/`, never inline in `app/`.** A route's
+  `page.tsx` composes components; it doesn't define new ones. Page-specific components still
+  go in `components/ui/` alongside shared ones — nothing under `app/` besides Next.js's own
+  route files (`page.tsx`, `layout.tsx`, `opengraph-image.tsx`, etc.).
 
 ## Layout shell
 
