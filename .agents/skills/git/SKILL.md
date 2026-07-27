@@ -1,6 +1,6 @@
 ---
 name: git
-description: Git workflow standards — Conventional Commits, branch naming, and no-AI-attribution rule. Use when creating branches, writing commit messages, opening PRs, or the user asks how a change should be recorded in git.
+description: Git workflow standards — Conventional Commits, branch naming, the no-AI-attribution rule, and how to review a PR. Use when creating branches, writing commit messages, opening PRs, reviewing a PR, or the user asks how a change should be recorded in git.
 ---
 
 # Git
@@ -44,3 +44,19 @@ How change is recorded.
 ## Attribution
 
 1. **No AI/agent attribution** in commits, PRs, or issues: no `Co-Authored-By: Claude/Codex`, no "Generated with Claude Code" markers, no `claude.ai/code` session links.
+
+## Review
+
+1. **Read the project's own vendored skills before reviewing the diff.** Skills under
+   `.claude/skills/` / `.agents/skills/` are that project's actual, current standards, not
+   generic advice; load the ones relevant to the changed files (`components` for a component
+   diff, `data` for a constants/data change, `nextjs` for routing, etc.) and check the diff
+   against what they specifically say before reaching for anything else.
+2. **Then apply conventional best practice**: correctness, security, performance, test
+   coverage, readability — the concerns a project's skills don't cover because they're
+   universal rather than project-specific.
+3. **A skill deviation is a finding on its own**, distinct from a generic style nit: name the
+   skill and the rule it violates, not just "this looks off."
+4. **When a project has no vendored skills**, or the change touches an area none of them
+   cover, fall back to conventional best practice alone — don't invent a project standard
+   that isn't written down anywhere.
