@@ -58,15 +58,16 @@ You can also run `pnpm format` from the CLI at any time.
 ## Pull requests
 
 - One focused concern per PR — avoid mixing features with refactors
-- Link the relevant `prd/pages/*.md` spec if the change affects IA or content
-- When adding or renaming a route, update both `prd/PRD.md` §2.1 and the matching spec in `prd/pages/`
+- Link the relevant section of `docs/prd/03-solution.md` if the change affects IA or content
+- When adding or renaming a route, update the route table and global navigation section in
+  `docs/prd/03-solution.md`
 
 ## Reviews and merging
 
 - **Anyone on the team can review and approve** another contributor's PR — you do not need to wait for an organizer.
 - Aim for at least **one approval** before merging. For larger changes (new pages, IA shifts, breaking routes), two approvals are preferred.
 - Once your PR has the required approvals, **the PR author merges** — this keeps the git attribution correct.
-- Actually review: read the diff, check it against the relevant `prd/pages/*.md` spec, and leave a comment if something is unclear. Trust comes with responsibility.
+- Actually review: read the diff, check it against `docs/prd/03-solution.md`, and leave a comment if something is unclear. Trust comes with responsibility.
 
 ## Discussions and questions
 
@@ -82,4 +83,4 @@ Clear issues mean anyone on the team can pick them up and ship without needing t
 
 ## Before you start
 
-Read [`AGENTS.md`](./AGENTS.md) and [`prd/PRD.md`](./prd/PRD.md) — they define the information architecture, brand conventions, and content rules that all contributions must follow. (`CLAUDE.md` is a stub that includes `AGENTS.md`.)
+Read [`AGENTS.md`](./AGENTS.md) and [`docs/prd/`](./docs/prd/) — they define the information architecture, brand conventions, and content rules that all contributions must follow. (`CLAUDE.md` is a stub that includes `AGENTS.md`.)

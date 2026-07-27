@@ -16,7 +16,7 @@ assignees: ""
 
 ## Context
 
-<!-- Screenshots, links, relevant spec (prd/pages/*.md), or any other helpful detail. -->
+<!-- Screenshots, links, relevant section of docs/prd/, or any other helpful detail. -->
 
 ## Acceptance criteria
 
