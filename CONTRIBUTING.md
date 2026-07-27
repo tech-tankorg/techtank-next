@@ -17,10 +17,8 @@ Welcome — this is the TechTank TO website, built and maintained by volunteers.
 3. Skim [`AGENTS.md`](./AGENTS.md) if you're using an AI coding agent; it holds the
    agent-specific working conventions. (`CLAUDE.md` is a stub that includes it.)
 
-Three content rules worth knowing up front:
+Two content rules worth knowing up front:
 
-- When adding or renaming a route, update the route table and global navigation section
-  in [`docs/prd/03-solution.md`](./docs/prd/03-solution.md).
 - Keep one dominant CTA per page. Role pages under `/get-involved/*` must end in an intake
   action (email us).
 - Don't invent numbers, quotes, or sponsor tiers organizers haven't confirmed — leave a
