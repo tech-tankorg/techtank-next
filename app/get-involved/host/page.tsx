@@ -4,6 +4,7 @@ import { Check, Clock, Users, Building, MapPin, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { SponsorsMarquee } from "@/components/ui/sponsors-marquee";
+import { CONTACT_EMAIL } from "@/constants/contact";
 import { ContactCard } from "@/components/ui/contact-card";
 
 export const metadata: Metadata = {
@@ -91,7 +92,7 @@ export default function HostPage() {
               to the community.
             </p>
             <Button variant="primary" size="lg" asChild>
-              <a href="mailto:techtankto@gmail.com?subject=Host%20Inquiry%20-%20TechTank">Contact us to host</a>
+              <a href={`mailto:${CONTACT_EMAIL}?subject=Host%20Inquiry%20-%20TechTank`}>Contact us to host</a>
             </Button>
           </div>
         </div>
@@ -225,7 +226,7 @@ export default function HostPage() {
             Tell us about your venue and when you&apos;d like to host. We&apos;ll get back to you within a week.
           </p>
           <Button variant="primary" size="lg" asChild>
-            <a href="mailto:techtankto@gmail.com?subject=Host%20Inquiry%20-%20TechTank">Contact us to host</a>
+            <a href={`mailto:${CONTACT_EMAIL}?subject=Host%20Inquiry%20-%20TechTank`}>Contact us to host</a>
           </Button>
         </div>
       </Section>

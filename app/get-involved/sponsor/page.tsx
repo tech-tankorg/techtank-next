@@ -7,6 +7,7 @@ import { Section, SectionHeader } from "@/components/ui/section";
 import { SponsorsMarquee } from "@/components/ui/sponsors-marquee";
 import { ContactCard } from "@/components/ui/contact-card";
 import { getCoverImage, getCoverVideo, getInstagramPostsByIds } from "@/constants/instagram-posts";
+import { CONTACT_EMAIL } from "@/constants/contact";
 
 export const metadata: Metadata = {
   title: "Sponsor TechTank",
@@ -89,7 +90,7 @@ export default function SponsorPage() {
               visibility, real impact.
             </p>
             <Button variant="primary" size="lg" asChild>
-              <a href="mailto:techtankto@gmail.com?subject=Sponsorship%20Inquiry%20-%20TechTank">
+              <a href={`mailto:${CONTACT_EMAIL}?subject=Sponsorship%20Inquiry%20-%20TechTank`}>
                 Request sponsorship info
               </a>
             </Button>
@@ -239,7 +240,7 @@ export default function SponsorPage() {
             Tell us about your company and goals. We&apos;ll send our full sponsorship details within a week.
           </p>
           <Button variant="primary" size="lg" asChild>
-            <a href="mailto:techtankto@gmail.com?subject=Sponsorship%20Inquiry%20-%20TechTank">
+            <a href={`mailto:${CONTACT_EMAIL}?subject=Sponsorship%20Inquiry%20-%20TechTank`}>
               Request sponsorship package
             </a>
           </Button>

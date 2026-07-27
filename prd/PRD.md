@@ -166,7 +166,7 @@ under Ontario/Canadian jurisdiction.
 - LinkedIn: https://linkedin.com/company/techtank-to
 - Instagram: https://instagram.com/techtankto
 - YouTube: https://youtube.com/@TechTankTo
-- GitHub: https://github.com/tech-tankorg
+- GitHub: https://github.com/techtankto
 - Google Photos albums (per-event)
 - Email intake: `techtankto@gmail.com` (one inbox for all `/get-involved/*` roles)
 

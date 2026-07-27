@@ -10,7 +10,7 @@ import { RoleCard, roleCardsData } from "@/components/ui/role-card";
 import { EventCard } from "@/components/ui/event-card";
 import { SocialFeed } from "@/components/ui/social-feed";
 import { getCoverImage, getCoverVideo, getInstagramPostsByIds } from "@/constants/instagram-posts";
-import { getLumaEvents, getPastLumaEvents } from "./events/actions";
+import { getAllLumaEvents } from "./events/actions";
 
 function captionToAlt(caption: string): string {
   const firstLine = caption.split("\n")[0] ?? "";
@@ -19,8 +19,7 @@ function captionToAlt(caption: string): string {
 }
 
 export default async function HomePage() {
-  const featuredEvents = await getLumaEvents();
-  const pastEvents = await getPastLumaEvents();
+  const { upcoming: featuredEvents, past: pastEvents } = await getAllLumaEvents();
 
   const heroPosts = getInstagramPostsByIds([
     "2026-06-09-DZWPNciI8eO", // Docebo Brainstation (Jun 2026)
@@ -68,6 +67,7 @@ export default async function HomePage() {
                       loop
                       muted
                       playsInline
+                      preload="auto"
                       className="absolute inset-0 size-full object-cover object-top"
                     >
                       <source src={heroPosts[0].videoSrc.replace(/\.mp4$/, ".webm")} type="video/webm" />
@@ -78,6 +78,7 @@ export default async function HomePage() {
                       src={heroPosts[0].imageSrc}
                       alt={heroPosts[0].alt}
                       fill
+                      priority
                       sizes="(min-width: 1024px) 28vw, (min-width: 640px) 44vw, 50vw"
                       className="object-cover"
                     />
@@ -93,6 +94,7 @@ export default async function HomePage() {
                       loop
                       muted
                       playsInline
+                      preload="auto"
                       className="absolute inset-0 size-full object-cover object-top"
                     >
                       <source src={heroPosts[1].videoSrc.replace(/\.mp4$/, ".webm")} type="video/webm" />

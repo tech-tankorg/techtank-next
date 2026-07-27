@@ -18,6 +18,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { SponsorsMarquee } from "@/components/ui/sponsors-marquee";
+import { CONTACT_EMAIL } from "@/constants/contact";
 import { getCoverImage, getCoverVideo, getInstagramPostsByIds } from "@/constants/instagram-posts";
 import { socialLinks } from "@/constants/social-links";
 import { BRAND_ICONS } from "@/components/ui/icons";
@@ -333,7 +334,7 @@ export default function AboutPage() {
           className="mb-6"
         />
         <Button variant="outline" className="mb-10" asChild>
-          <a href="mailto:techtankto@gmail.com">Interested in becoming a technology sponsor? Get in touch.</a>
+          <a href={`mailto:${CONTACT_EMAIL}`}>Interested in becoming a technology sponsor? Get in touch.</a>
         </Button>
         <SponsorsMarquee />
       </Section>
