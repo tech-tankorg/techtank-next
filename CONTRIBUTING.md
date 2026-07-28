@@ -11,8 +11,7 @@ Welcome — this is the TechTank TO website, built and maintained by volunteers.
 ## Before you start
 
 1. Get the app running locally — see [`README.md`](./README.md) for setup and scripts.
-2. Skim [`docs/prd/`](./docs/prd/). It defines the information architecture, brand
-   conventions, and content rules that all contributions must follow — read it before
+2. Skim [`docs/prd/`](./docs/prd/). It defines the architecture that the project was initially built from. — Read it before
    making any structural change.
 3. Skim [`AGENTS.md`](./AGENTS.md) if you're using an AI coding agent; it holds the
    agent-specific working conventions. (`CLAUDE.md` is a stub that includes it.)
