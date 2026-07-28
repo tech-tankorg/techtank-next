@@ -82,7 +82,6 @@ BREAKING CHANGE: /get-involved/sponsor now expects a `tier` query param
 ## Pull requests
 
 - One focused concern per PR — avoid mixing features with refactors
-- Link the relevant section of `docs/prd/03-solution.md` if the change affects IA or content
 
 ## Reviews and merging
 
