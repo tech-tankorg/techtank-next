@@ -136,7 +136,7 @@ Do both before reporting a task complete or opening a commit.
 - Never use agent memory (e.g. Claude Code's persistent memory directory,
   `MEMORY.md`, or any equivalent tool-specific store). Conventions and
   project facts must live in this repository — in `AGENTS.md`, the
-  `docs/prd/` pipeline, or the code itself — so they are reviewable,
+  `.agent/skills`, `docs/` or the code itself — so they are reviewable,
   versioned, and available to every contributor and agent. Memory that
   only one tool can read is invisible to code review and drifts out of
   date. If something is worth remembering, commit it.
