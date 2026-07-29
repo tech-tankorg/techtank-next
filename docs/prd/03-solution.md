@@ -47,7 +47,7 @@ Route-level purpose and content requirements, at concept level:
 Luma (`luma.com/techtank`), Meetup (`meetup.com/techtank-to`), Slack
 (`techtankto.com/links/slack`), LinkedIn (`linkedin.com/company/techtank-to`), Instagram
 (`instagram.com/techtankto`), YouTube (`youtube.com/@TechTankTo`), GitHub
-(`github.com/tech-tankorg`), per-event Google Photos albums, and email intake
+(`github.com/techtankto`), per-event Google Photos albums, and email intake
 (`techtankto@gmail.com`, one inbox for all `/get-involved/*` roles).
 
 ### Key user journeys
