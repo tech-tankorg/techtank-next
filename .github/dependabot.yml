@@ -6,9 +6,17 @@ updates:
       interval: "monthly"
     labels:
       - "dependencies"
+    groups:
+      npm-dependencies:
+        patterns:
+          - "*"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "monthly"
     labels:
       - "dependencies"
+    groups:
+      github-actions-dependencies:
+        patterns:
+          - "*"
