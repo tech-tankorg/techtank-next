@@ -17,7 +17,7 @@ export function QrDialog() {
 
   return (
     <Dialog open={qrDialogOpen} onClose={onClose} labelledBy={titleId} className="md:max-w-md lg:max-w-md">
-      <div className="flex flex-col items-center gap-6 text-center">
+      <div className="flex flex-col items-center gap-2 text-center">
         <div>
           <span className="mb-3 inline-block text-xs font-semibold tracking-widest text-ring uppercase">
             Scan to join
@@ -31,7 +31,7 @@ export function QrDialog() {
         </div>
 
         <QrCodeIcon
-          className="size-64 text-black dark:text-white"
+          className="size-64 max-w-full text-black dark:text-white"
           aria-label="QR code linking to the TechTank get involved page"
         />
 
