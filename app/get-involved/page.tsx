@@ -101,7 +101,7 @@ export default function GetInvolvedPage() {
                   href={link.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="group glass relative overflow-hidden rounded-2xl transition-transform hover:scale-[1.03]"
+                  className="group glass relative w-26 overflow-hidden rounded-2xl transition-transform hover:scale-[1.03]"
                 >
                   <div className="flex flex-col items-center justify-center gap-1 p-5">
                     <Image src={link.icon} alt="" width={40} height={40} className="size-10" />
