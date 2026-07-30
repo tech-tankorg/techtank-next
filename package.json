@@ -47,13 +47,13 @@
     "@types/react-dom": "^19.2.3",
     "knip": "^6.29.0",
     "oxfmt": "^0.61.0",
-    "oxlint": "^1.75.0",
+    "oxlint": "^1.76.0",
     "oxlint-tailwindcss": "^1.4.0",
-    "postcss": "^8.5.23",
+    "postcss": "^8.5.25",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.8"
+    "vitest": "^4.1.10"
   },
   "engines": {
     "pnpm": ">=10"

@@ -13,9 +13,15 @@ layout toward a conversion-oriented onboarding hub that funnels
 visitors into specific roles — attendee, speaker, host, sponsor, or
 volunteer.
 
-Specs live in `prd/` (see `prd/PRD.md`); application code lives in
-`app/`, with shared pieces in `components/`, `constants/`, and
-`public/`. The initial UI scaffold was generated from the PRD via v0 —
+The PRD (`docs/prd/`) is kept as a historic record of how the current
+structure came to be — read it for context on prior decisions (why a route
+was shaped the way it was, what a design token replaced), not as a spec to
+keep in sync going forward. House standards (process, writing, nextjs, components, data,
+testing, performance, accessibility, seo, git) are supplied by the vendored
+skills under `.claude/skills/` / `.agents/skills/` and load automatically via
+skill discovery. Application code lives in `app/`, with shared pieces in
+`components/`, `constants/`, and `public/`. The initial UI scaffold was
+generated from the prior PRD via v0 —
 [original prompt and generation](https://v0.app/chat/website-generation-from-prd-eLek8w4RJMh).
 
 For developer-facing setup (scripts, directory tree, route map), see
@@ -27,66 +33,48 @@ For developer-facing setup (scripts, directory tree, route map), see
 .
 ├── AGENTS.md              # This file — primary agent context
 ├── CLAUDE.md              # Claude Code stub that includes AGENTS.md
-└── prd/
-    ├── PRD.md             # Top-level product requirements document
-    └── pages/             # One spec per route
-        ├── home.md                # /
-        ├── about.md               # /about
-        ├── events.md              # /events
-        ├── press-kit.md           # /press-kit
-        ├── get-involved/          # Onboarding hub (shared layout)
-        │   ├── index.md           # /get-involved
-        │   ├── speak-or-facilitate.md         # /get-involved/speak-or-facilitate
-        │   ├── host.md            # /get-involved/host
-        │   ├── sponsor.md         # /get-involved/sponsor
-        │   └── organizer.md       # /get-involved/organizer
-        ├── resources/             # Resources folder
-        │   ├── media-kit.md       # /resources/media-kit
-        │   └── design-system.md   # /resources/design-system (brand guidelines + design token reference)
-        └── legal/                 # Legal folder (shared layout)
-            ├── terms-of-service.md
-            ├── privacy-policy.md
-            └── code-of-conduct.md
+├── .agents/skills/        # vendored house-standard skills (copied, portable)
+├── .claude/skills/        # same skills (symlinked to .agents/skills/)
+└── docs/
+    └── prd/               # 01-brief → 06-plan, the numbered pipeline
 ```
 
-`prd/PRD.md` is the top-level document. Each file in `prd/pages/` fully
-describes one route. The file tree under `prd/pages/` mirrors the final
-URL structure.
+`docs/prd/06-plan.md` records the milestone list as it stood during the
+redesign. `docs/prd/03-solution.md` documents the route map and per-surface
+content requirements as originally specified — read it to understand why a
+surface is shaped the way it is, not as the current route reference (see
+`README.md` for that).
 
 ## How the information architecture works
 
 The redesign replaces a flat "link-tree" layout with a
-**conversion-oriented onboarding hub**:
+**conversion-oriented onboarding hub** — see `README.md` for the current
+route map, and `docs/prd/03-solution.md` for the shared layouts and
+navigation structure as originally specified:
 
 - `/` — social-proof-driven home (testimonials, event photos, logo cloud).
-- `/about` — values manifesto built on four pillars: **Community,
-  Innovation, Teamwork, Respect**.
+- `/about` (+ `/about/faq`, `/about/team`) — values manifesto built on four pillars:
+  **Community, Innovation, Teamwork, Respect**; FAQ; team roster.
 - `/get-involved` — onboarding hub with four role sub-pages (Speaker,
   Host, Sponsor, Organizer Team), each ending in an intake action (email us
   at `techtankto@gmail.com`).
 - `/events` — embedded Luma calendar.
-- `/press-kit` — standalone brand assets and fast facts for media.
+- `/resources/media-kit` — standalone brand assets and fast facts for media.
+- `/resources/design-system` — brand guidelines and design-token reference.
 - `/legal` — grouped compliance documents.
 
-The `/get-involved` and `/legal` sections are designed for **Next.js
-shared layouts** (sticky sub-nav, persistent CTA, consistent form/
-document styling).
+The `/get-involved` and `/legal` sections use **Next.js shared layouts**
+(sticky sub-nav, persistent CTA, consistent form/document styling).
 
 ## Working conventions
 
-### Editing specs
+### Referencing the PRD
 
-- Keep the per-page structure consistent: Purpose, Primary audience,
-  Key messages, Content sections, CTAs, Functional requirements,
-  Acceptance criteria.
-- Internal links between PRD documents are relative (e.g.
-  `pages/home.md` from `prd/PRD.md`; `../about.md` from a
-  `prd/pages/legal/*.md` file).
-- When the IA changes, update **both** `prd/PRD.md` §2 (Route map /
-  shared layouts / navigation) **and** the affected per-page files.
-  Keeping these in sync is the single most important maintenance task.
-- Never introduce a URL in a page spec that isn't reflected in the
-  Route map in `prd/PRD.md`.
+- `docs/prd/` is frozen as a historic record — don't edit it to reflect new
+  IA or route changes. When the IA changes, update the route/nav
+  documentation in `README.md` and the code under `app/` instead.
+- Use the PRD to understand _why_ the current structure looks the way it
+  does before changing it, not as a target to keep in sync.
 
 ### Tone in specs
 
@@ -96,56 +84,6 @@ document styling).
   CTA**, and `/get-involved/*` must end in an intake action (email us).
 - Social proof first: testimonials, real event photography, and
   logo clouds are required patterns, not decoration.
-
-### Components
-
-How components are added, shaped, styled, and organized. This section
-owns the authoring and styling rules; what components exist and what
-they look like is the design contract's concern, not this section's.
-
-#### The flow: shadcn first
-
-1. **Check shadcn before writing anything.** Primitives use
-   [shadcn/ui](https://ui.shadcn.com/), which uses Radix primitives
-   underneath. Adding a new component starts with a check of the shadcn
-   library: if it exists there, import it with the CLI
-   (`pnpm dlx shadcn@latest add <name>`), then **reformat it to the
-   house shape below and re-theme it with the v5 tokens**.
-2. **Custom components use the identical shape.** If shadcn doesn't have
-   it (or the design calls for something bespoke), author it from
-   scratch in exactly the same format; the only difference is there's
-   nothing to import.
-
-#### The file shape
-
-1. **Every component follows the skeleton in
-   [`components/ui/example.tsx`](./components/ui/example.tsx).**
-
-   Order within the file: **CVA styles/constants on top → types
-   (`XxxRef`, `XxxProps`) → component.** Order within the function body,
-   each under its comment: **props** destructure → **hooks** → **render
-   vars** → **jsx** (composed with `cn()`).
-
-2. **Named exports only**: the component plus its `Props` and `Ref`
-   types; `displayName` set on `forwardRef` components. No default
-   exports.
-
-#### Styling rules
-
-- Define visual variants (color, size, style) as CVA `variants` — never
-  as ad-hoc `className` overrides at the call site. Multi-element
-  components get one `cva` per element in the `styles` object, keyed by
-  element name (`root`, `viewport`, …).
-- Use `cn()` and `cva` from [`utils/theme.ts`](./utils/theme.ts) (which
-  re-exports `cva`/`VariantProps`) for all className composition.
-- Expose `asChild` via Radix `Slot` when a component needs to delegate
-  rendering to its child (e.g. `<Button asChild><Link …>`).
-- Keep layout utilities (`w-full`, `mt-4`, etc.) at the call site via
-  `className`; keep visual styles inside the CVA definition.
-- New primitives go in `components/ui/`; page-specific compositions
-  stay in the relevant `app/` directory. Files are kebab-case
-  (`previous-button.tsx`), even though the component they export is
-  PascalCase.
 
 ### Theming
 
@@ -162,12 +100,6 @@ they look like is the design contract's concern, not this section's.
 - Keep `next-themes` as the single source of truth for theme — do not duplicate theme state in Zustand.
 - Use `pnpm` (not npm or yarn) for all package operations in this repo.
 
-### Semantic colour tokens
-
-- Never use brand-named colour utilities (e.g. `text-teal-dark`, `bg-seafoam`) in components or pages. Use semantic tokens (`text-foreground`, `bg-primary`, `bg-secondary`, `text-muted-foreground`, etc.) so dark mode works without per-component overrides.
-- Pair every background token with its matching foreground: `bg-primary → text-primary-foreground`, `bg-secondary → text-secondary-foreground`, `bg-success → text-success-foreground`.
-- Gradients are defined as CSS utility classes (`.gradient-brand`, `.gradient-hero`, etc.) with `.dark` overrides in `globals.css`; use the class name in JSX, never inline `background:` values.
-
 ### After making code changes
 
 - Run `pnpm type:check` to catch type errors.
@@ -179,25 +111,21 @@ Do both before reporting a task complete or opening a commit.
 
 1. Decide where it belongs in the IA. If it's a role, it goes under
    `/get-involved`; if it's legal, under `/legal`; if it's a resource,
-   it's probably a sibling of `/press-kit`.
-2. Create `prd/pages/<path>.md` following the existing section
-   structure.
-3. Add the route to the Route map table in `prd/PRD.md` §2.1.
-4. Add a link to it in `prd/PRD.md` §4 (Page-Level Requirements Index).
-5. Update the relevant nav (global header or shared layout sub-nav)
-   description in `prd/PRD.md` §2.3.
+   it's probably a sibling of `/resources/media-kit`.
+2. Add the route to the directory tree and route map in `README.md`.
+3. Update the relevant nav (global header or shared layout sub-nav)
+   to match.
 
 ### Removing or renaming a page
 
-- Remove the file, its Route map row, its index entry, and any inbound
-  links from other page specs. Use Grep to find references before
+- Remove the route from `README.md`'s tree, its navigation entry, and any
+  inbound links from other pages. Use Grep to find references before
   deleting.
 
 ## Things to avoid
 
-- Don't let the implementation drift from the PRD. When behaviour or
-  IA changes, update both the relevant `prd/pages/*.md` spec and the
-  matching code under `app/` in the same change.
+- Don't edit `docs/prd/` to reflect IA or behaviour changes — it's a frozen
+  historic record. Update `README.md` and the code under `app/` instead.
 - Don't add numbers, quotes, or tier details that organizers haven't
   confirmed. It's better to leave a "finalize with organizers" note
   than to publish fiction.
@@ -208,47 +136,17 @@ Do both before reporting a task complete or opening a commit.
 - Never use agent memory (e.g. Claude Code's persistent memory directory,
   `MEMORY.md`, or any equivalent tool-specific store). Conventions and
   project facts must live in this repository — in `AGENTS.md`, the
-  `prd/` specs, or the code itself — so they are reviewable, versioned,
-  and available to every contributor and agent. Memory that only one
-  tool can read is invisible to code review and drifts out of date.
-  If something is worth remembering, commit it.
+  `.agent/skills`, `docs/` or the code itself — so they are reviewable,
+  versioned, and available to every contributor and agent. Memory that
+  only one tool can read is invisible to code review and drifts out of
+  date. If something is worth remembering, commit it.
 
 ## Git workflow
 
-- Feature work happens on the branch specified in the session brief
-  (currently `claude/techtank-toronto-prd-kuQxt`).
-- Create new commits rather than amending. Use HEREDOC commit messages.
+Conventional Commits, branch naming, and the no-AI-attribution rule are
+supplied by the vendored `git` skill. Project-specific overrides:
+
+- Feature work happens on the branch specified in the session brief.
 - Never force-push to any branch, especially `main`. No exceptions.
 - Never skip hooks without explicit permission.
 - Do not open a pull request unless explicitly asked.
-- Do not sign commits or PRs as an AI agent, and do not include
-  session links, `Co-Authored-By` agent trailers, or any other
-  "Generated with …" markers in commit messages or PR bodies.
-
-### Conventional commits
-
-- Use [Conventional Commits](https://www.conventionalcommits.org/)
-  for every commit subject:
-  `<type>(<optional scope>): <imperative summary>`
-- Allowed types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`,
-  `test`, `build`, `ci`, `chore`, `revert`.
-- Pick a scope that matches the page or area (`about`, `events`,
-  `get-involved/sponsor`, `prd`, `legal`, etc.) when one is obvious;
-  omit it when the change is global.
-- Keep the subject under ~72 characters, lowercase, no trailing
-  period; explain the _why_ in the body if the diff alone doesn't.
-- Use `!` (e.g. `feat(get-involved)!: …`) and a `BREAKING CHANGE:`
-  footer for changes that move URLs, rename routes, or alter
-  documented behavior.
-
-### Branch naming
-
-- Branches follow `<type>/<short-kebab-summary>` using the same
-  type vocabulary as commits — e.g. `feat/sponsor-intake-form`,
-  `fix/events-luma-fallback`, `docs/prd-route-map`,
-  `refactor/get-involved-layout`.
-- Session-managed agent branches keep the `claude/<slug>` prefix
-  given in the session brief; treat the slug as the conventional
-  summary and don't rename it.
-- Keep slugs short (≤40 chars), lowercase, hyphen-separated, and
-  reference the affected area rather than the ticket number.

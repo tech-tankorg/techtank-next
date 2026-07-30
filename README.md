@@ -5,9 +5,14 @@ Toronto's volunteer-run tech community website. The redesign moves away from a
 flat "link-tree" layout toward a conversion-oriented onboarding hub that funnels
 visitors into specific roles — attendee, speaker, host, sponsor, or organizer.
 
-Specs live in [`prd/`](./prd/PRD.md); application code lives in [`app/`](./app).
+Specs live in [`docs/prd/`](./docs/prd/); application code lives in [`app/`](./app).
 The initial UI scaffold was generated from the PRD via v0 —
 [original prompt and generation](https://v0.app/chat/website-generation-from-prd-eLek8w4RJMh).
+
+House standards (process, writing, nextjs, components, data, testing, performance,
+accessibility, seo, git) are supplied by the [harness-skills](https://github.com/tkodev/harness-skills)
+library, vendored at [`.agents/skills/`](./.agents/skills/) (`.claude/skills/` symlinks to
+it) and loaded automatically by any skill-aware coding agent.
 
 ## Stack
 
@@ -72,15 +77,18 @@ route, annotated with its purpose.
 │   ├── layout/                     # Header, Footer
 │   └── ui/                         # Reusable UI (buttons, cards, sections, etc.)
 ├── constants/                      # Structured data (events, sponsors, social links)
-├── prd/                            # Product requirements documents (specs)
+├── docs/prd/                       # Product requirements pipeline (01-brief → 06-plan)
+├── .agents/skills/                 # Vendored house-standard skills (copied, portable)
+├── .claude/skills/                 # Same skills (symlinked to .agents/skills/)
 ├── public/                         # Static assets (images, downloads, social media dumps)
 ├── next.config.ts
 ├── vercel.json                     # Vercel deployment config (noindex header)
 └── tsconfig.json
 ```
 
-See [`prd/PRD.md`](./prd/PRD.md) for the full route map, shared-layout
-conventions, and per-page content requirements.
+See [`docs/prd/03-solution.md`](./docs/prd/03-solution.md) for the full route map and
+shared-layout conventions, and the rest of [`docs/prd/`](./docs/prd/) for product intent,
+design tokens, architecture, and the delivery plan.
 
 ## Deployment
 
@@ -90,16 +98,8 @@ enabled site-wide via the `robots` metadata in
 
 ## Contributing
 
-See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for contribution guidelines.
-
-1. Read [`prd/PRD.md`](./prd/PRD.md) before making structural changes — it
-   defines the Info Architecture, brand, and content conventions.
-   - **AI agents only:** also read [`AGENTS.md`](./AGENTS.md) for agent-specific
-     working conventions and constraints. (`CLAUDE.md` is a stub that includes it.)
-2. When adding or renaming a route, update both the route table in
-   `prd/PRD.md` §2.1 and the corresponding spec in `prd/pages/`.
-3. Keep one dominant CTA per page. Role pages under `/get-involved/*` must end
-   in an intake action (email us).
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for contribution guidelines, team
+onboarding, and the roadmap.
 
 ## Contributors
 
