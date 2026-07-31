@@ -37,6 +37,16 @@ pnpm dev
 
 Then open <http://localhost:3000>.
 
+### Environment Variables
+
+Some features require environment variables to function correctly. Copy `.env.example` to `.env.local` and populate the values:
+
+| Variable           | What it is                                                                                          |
+| ------------------ | --------------------------------------------------------------------------------------------------- |
+| `LUMA_CALENDAR_ID` | The Luma calendar ID (e.g. `cal-...`) used to fetch upcoming and past events on the `/events` page. |
+
+See `scripts/instagram/README.md` for Instagram-specific environment variables.
+
 ### Scripts
 
 | Command             | What it does                        |

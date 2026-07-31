@@ -9,7 +9,7 @@ import { LumaCalendarEmbed } from "@/components/ui/luma-calendar-embed";
 import { DualCTA } from "@/components/ui/dual-cta";
 import { ContactCard } from "@/components/ui/contact-card";
 import { events } from "@/constants/events";
-import { LUMA_CALENDAR_ID } from "@/constants/luma";
+
 import { getAllLumaEvents } from "./actions";
 
 export const metadata: Metadata = {
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 };
 
 export default async function EventsPage() {
+  const LUMA_CALENDAR_ID = process.env.LUMA_CALENDAR_ID;
   const { upcoming: lumaEvents, past: pastLumaEvents } = await getAllLumaEvents();
   const allLumaEvents = [...lumaEvents, ...pastLumaEvents];
 
@@ -94,12 +95,20 @@ export default async function EventsPage() {
             </Link>
           </Button>
         </div>
-        <div className="flex w-full justify-center">
-          <LumaCalendarEmbed
-            calendarId={LUMA_CALENDAR_ID}
-            className="h-300 w-full overflow-hidden sm:h-250 md:h-225 md:w-3/4 lg:h-200"
-          />
-        </div>
+        {LUMA_CALENDAR_ID ? (
+          <div className="flex w-full justify-center">
+            <LumaCalendarEmbed
+              calendarId={LUMA_CALENDAR_ID}
+              className="h-300 w-full overflow-hidden sm:h-250 md:h-225 md:w-3/4 lg:h-200"
+            />
+          </div>
+        ) : (
+          <div className="flex w-full justify-center">
+            <p className="rounded-xl border border-dashed border-border p-8 text-center text-sm text-muted-foreground">
+              Luma calendar is unavailable (missing environment variables).
+            </p>
+          </div>
+        )}
       </Section>
 
       {/* All Events */}
