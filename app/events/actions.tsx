@@ -1,7 +1,7 @@
 "use server";
 
 import type { Sponsor } from "@/constants/sponsors";
-import { LUMA_CALENDAR_ID } from "@/constants/luma";
+
 import { z } from "zod";
 
 export interface Event {
@@ -29,9 +29,23 @@ export interface Event {
   }[];
 }
 
-const LUMA_EVENT_API = `https://api2.luma.com/calendar/get?api_id=${LUMA_CALENDAR_ID}`;
+const LUMA_CALENDAR_ID = process.env.LUMA_CALENDAR_ID;
 
-const LUMA_EVENT_API_PAST = `https://api2.luma.com/calendar/get-items?calendar_api_id=${LUMA_CALENDAR_ID}&pagination_limit=20&period=past`;
+if (!LUMA_CALENDAR_ID) {
+  console.warn("LUMA_CALENDAR_ID is not set in environment variables. Luma events will not be fetched.");
+}
+
+const LUMA_EVENT_API = new URL("https://api2.luma.com/calendar/get");
+LUMA_EVENT_API.search = new URLSearchParams({
+  api_id: LUMA_CALENDAR_ID || "",
+}).toString();
+
+const LUMA_EVENT_API_PAST = new URL("https://api2.luma.com/calendar/get-items");
+LUMA_EVENT_API_PAST.search = new URLSearchParams({
+  calendar_api_id: LUMA_CALENDAR_ID || "",
+  pagination_limit: "20",
+  period: "past",
+}).toString();
 
 const SIX_HOURS_IN_SECONDS = 6 * 60 * 60;
 
@@ -103,6 +117,7 @@ function lumaCalendarResponseToEvents(parsed: LumaEventResponse[]): Event[] {
 }
 
 async function getLumaEvents(): Promise<Event[]> {
+  if (!LUMA_CALENDAR_ID) return [];
   const res = await fetch(LUMA_EVENT_API, {
     next: {
       // @ts-expect-error this is next cache policy
@@ -116,6 +131,7 @@ async function getLumaEvents(): Promise<Event[]> {
 }
 
 async function getPastLumaEvents(): Promise<Event[]> {
+  if (!LUMA_CALENDAR_ID) return [];
   const res = await fetch(LUMA_EVENT_API_PAST, {
     next: {
       // @ts-expect-error this is next cache policy
