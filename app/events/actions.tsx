@@ -35,8 +35,17 @@ if (!LUMA_CALENDAR_ID) {
   console.warn("LUMA_CALENDAR_ID is not set in environment variables. Luma events will not be fetched.");
 }
 
-const LUMA_EVENT_API = `https://api2.luma.com/calendar/get?api_id=${LUMA_CALENDAR_ID}`;
-const LUMA_EVENT_API_PAST = `https://api2.luma.com/calendar/get-items?calendar_api_id=${LUMA_CALENDAR_ID}&pagination_limit=20&period=past`;
+const LUMA_EVENT_API = new URL("https://api2.luma.com/calendar/get");
+LUMA_EVENT_API.search = new URLSearchParams({
+  api_id: LUMA_CALENDAR_ID || "",
+}).toString();
+
+const LUMA_EVENT_API_PAST = new URL("https://api2.luma.com/calendar/get-items");
+LUMA_EVENT_API_PAST.search = new URLSearchParams({
+  calendar_api_id: LUMA_CALENDAR_ID || "",
+  pagination_limit: "20",
+  period: "past",
+}).toString();
 
 const SIX_HOURS_IN_SECONDS = 6 * 60 * 60;
 
