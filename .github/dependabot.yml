@@ -1,9 +1,15 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
+    versioning-strategy: "increase"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]
     directory: "/"
     schedule:
       interval: "monthly"
+    cooldown:
+      default-days: 14
     labels:
       - "dependencies"
     groups:
@@ -14,6 +20,8 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    cooldown:
+      default-days: 14
     labels:
       - "dependencies"
     groups:
