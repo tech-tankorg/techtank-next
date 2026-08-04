@@ -143,6 +143,7 @@ When she’s not here, she’s somewhere in the world or somewhere in Toronto ch
       { name: "Jyle Vergara", pronouns: "she/her", avatar: "/images/team/jyle-vergara.webp" },
       { name: "John Malapit", pronouns: "he/him", avatar: "/images/team/john-malapit.webp" },
       { name: "Jacky Tea", pronouns: "he/him", avatar: "/images/team/jacky-tea.webp" },
+      { name: "Marco Campos", pronouns: "he/him", avatar: "/images/team/marco-campos.webp" },
     ],
   },
   {
@@ -173,6 +174,7 @@ When she’s not here, she’s somewhere in the world or somewhere in Toronto ch
       { name: "Lune Moreau", pronouns: "she/they", role: "General", avatar: "/images/team/lune-moreau.webp" },
       { name: "Ayushi Guha", pronouns: "she/her", role: "General" },
       { name: "Abu Saeed", pronouns: "he/him", role: "General", avatar: "/images/team/abu-saeed.webp" },
+      { name: "Carmen Lam", pronouns: "she/her", role: "General", avatar: "/images/team/carmen-lam.webp" },
     ],
   },
 ];
