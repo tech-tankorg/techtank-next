@@ -11,12 +11,11 @@ export const metadata: Metadata = {
 };
 
 export default function TeamPage() {
-  const boardCoChairs = teamGroups[0];
-  const boardTreasurer = teamGroups[1];
-  const coreTeam = teamGroups[2];
-  const websiteTeam = teamGroups[3];
-  const socialMedia = teamGroups[4];
-  const volunteers = teamGroups[5];
+  const board = teamGroups[0];
+  const coreTeam = teamGroups[1];
+  const websiteTeam = teamGroups[2];
+  const socialMedia = teamGroups[3];
+  const volunteers = teamGroups[4];
 
   return (
     <>
@@ -44,28 +43,16 @@ export default function TeamPage() {
       {/* Board of Directors */}
       <Section>
         <SectionHeader
-          overline="Leadership"
+          overline="Governance"
           title="Board of Directors"
-          description="The organizers who set the direction and keep TechTank running."
+          description="The board handles the governance side of TechTank: strategy, finances, and the legal responsibilities behind the organization. Most board members are active organizers as well."
           className="mb-12"
         />
 
-        <div className="mb-10">
-          <p className="mb-5 text-xs font-semibold tracking-widest text-muted-foreground uppercase">Co-Chairs</p>
-          <div className="grid gap-5 sm:grid-cols-2">
-            {boardCoChairs.members.map((m) => (
-              <TeamCard key={m.name} variant="board" member={m} />
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <p className="mb-5 text-xs font-semibold tracking-widest text-muted-foreground uppercase">Treasurer</p>
-          <div className="grid gap-5 sm:grid-cols-2">
-            {boardTreasurer.members.map((m) => (
-              <TeamCard key={m.name} variant="board" member={m} />
-            ))}
-          </div>
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {board.members.map((m) => (
+            <TeamCard key={m.name} variant="board" member={m} />
+          ))}
         </div>
       </Section>
 
@@ -73,8 +60,8 @@ export default function TeamPage() {
       <Section background="white">
         <SectionHeader
           overline="Core team"
-          title="Organizers"
-          description="The people who keep events running, the community thriving, and the details polished."
+          title="Leads & organizers"
+          description="The people who lead the work behind TechTank: events, programming, video, and everything in between."
           className="mb-10"
         />
         <div className="grid gap-4 sm:grid-cols-2">
