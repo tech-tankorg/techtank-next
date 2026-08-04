@@ -14,6 +14,7 @@ import {
   MessageSquare,
   ExternalLink,
   Hammer,
+  BookOpen,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
@@ -84,18 +85,27 @@ const currentPrograms = [
     title: "Socials",
     description:
       "Fun events built around actually meeting people and making genuine connections. No agenda, no pitch, just a good room.",
+    cta: { label: "See upcoming socials", href: "/events" },
   },
   {
     icon: Coffee,
     title: "Code Diversity Monthly Coffee Chats",
     description:
       "A recurring monthly series for women and gender-diverse folks in tech. Casual, intentional, and community-led.",
+    cta: { label: "See upcoming coffee chats", href: "/events" },
   },
   {
     icon: Trophy,
     title: "Sports Leagues (Sashimis)",
     description:
       "TechTank's sports leagues and run clubs are about more than just the game. It's a chance to get moving, have fun, and build the kind of friendships that don't start with a LinkedIn connection request.",
+  },
+  {
+    icon: BookOpen,
+    title: "StudyTank",
+    description:
+      "Our study group series, which has taken different formats over time. The current run is System Design and AI with Rob So: bi-weekly sessions where we work through problems together, open to all experience levels.",
+    cta: { label: "See upcoming sessions", href: "/events" },
   },
   {
     icon: MessageSquare,
@@ -110,11 +120,6 @@ const pastPrograms = [
     title: "Guppy Talks",
     label: "on pause",
     description: "Community podcast",
-  },
-  {
-    title: "StudyTank",
-    label: "on pause",
-    description: "Study group",
   },
 ];
 
