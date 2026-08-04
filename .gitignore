@@ -8,6 +8,10 @@
 !.yarn/releases
 !.yarn/versions
 
+# lockfiles from other package managers (this repo uses pnpm)
+package-lock.json
+yarn.lock
+
 # testing
 /coverage
 /temp
