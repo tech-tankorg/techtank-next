@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import { SiteHeader } from "@/components/layout/site-header";
+import { SiteFooter } from "@/components/layout/site-footer";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { THEMES } from "@/constants/theme";
 import { Analytics } from "@vercel/analytics/next";
@@ -74,9 +74,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           disableTransitionOnChange
           themes={[THEMES.LIGHT, THEMES.DARK]}
         >
-          <Header />
+          <SiteHeader />
           <main className="flex-1">{children}</main>
-          <Footer />
+          <SiteFooter />
           <Analytics />
           <SpeedInsights />
         </ThemeProvider>
