@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { SlackIcon } from "@/components/ui/icons";
 import { createClient } from "@/utils/supabase/client";
-import { useMutation } from "@/utils/use-mutation";
+import { useMutation } from "@/hooks/use-mutation";
 import { isTakingApplications, type ContributionTask } from "@/constants/contribution-board";
 
 interface ApplyPanelProps {

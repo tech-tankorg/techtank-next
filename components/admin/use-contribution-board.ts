@@ -2,7 +2,7 @@
 
 import { useCallback, useState } from "react";
 import { arrayMove } from "@dnd-kit/sortable";
-import { useMutation } from "@/utils/use-mutation";
+import { useMutation } from "@/hooks/use-mutation";
 import type { AdminContributionTask } from "@/constants/contribution-board";
 import {
   assignContributionTask,

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { errorMessage } from "@/utils/error-message";
-import { useMutation } from "@/utils/use-mutation";
+import { useMutation } from "@/hooks/use-mutation";
 import { listTaskApplications } from "@/app/admin/tasks/actions";
 import type { ContributionTaskApplication } from "@/constants/contribution-board";
 
