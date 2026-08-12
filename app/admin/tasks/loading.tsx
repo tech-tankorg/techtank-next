@@ -1,4 +1,4 @@
-import { AdminContributionBoardSkeleton } from "@/components/contribution/admin-board-skeleton";
+import { AdminContributionBoardSkeleton } from "@/components/admin/admin-board-skeleton";
 
 /** Safe as a segment-level boundary: nothing under `/admin/tasks`
  * calls `notFound()`, so streaming can't produce a soft-404 here. The
