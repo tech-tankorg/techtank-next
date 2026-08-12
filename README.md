@@ -139,31 +139,36 @@ See [`AGENTS.md`](./AGENTS.md) for the backend conventions.
 ## Project structure
 
 The tree below doubles as a route map — each directory under `app/` is a
-route, annotated with its purpose.
+route, annotated with its purpose. Folders in parentheses (e.g. `(site)`)
+are route groups: they scope a shared layout without adding a URL segment.
 
 ```
 .
 ├── app/                            # Next.js App Router routes
-│   ├── layout.tsx                  # Root layout (header, footer, fonts, SEO)
-│   ├── page.tsx                    # /                    Social-proof-driven home
-│   ├── about/                      # /about               Values & community manifesto
-│   ├── events/                     # /events              Upcoming (Luma) + past event timeline
-│   ├── get-involved/               # /get-involved        Onboarding hub (shared layout)
-│   │   ├── speak-or-facilitate/    #   /speak-or-facilitate  Speaker/facilitator intake
-│   │   ├── host/                   #   /host              Host intake
-│   │   ├── sponsor/                #   /sponsor           Sponsor intake
-│   │   └── organizer/              #   /organizer         Organizer intake
-│   ├── tasks/                     # /tasks             Public board of tasks to pick up + apply
+│   ├── layout.tsx                  # Root layout (fonts, SEO, theme provider)
+│   ├── (site)/                     # Public site route group (no URL segment)
+│   │   ├── layout.tsx              # Site chrome (header, footer)
+│   │   ├── page.tsx                # /                    Social-proof-driven home
+│   │   ├── about/                  # /about               Values & community manifesto
+│   │   ├── events/                 # /events              Upcoming (Luma) + past event timeline
+│   │   ├── get-involved/           # /get-involved        Onboarding hub (shared layout)
+│   │   │   ├── speak-or-facilitate/#   /speak-or-facilitate  Speaker/facilitator intake
+│   │   │   ├── host/               #   /host              Host intake
+│   │   │   ├── sponsor/            #   /sponsor           Sponsor intake
+│   │   │   └── organizer/          #   /organizer         Organizer intake
+│   │   ├── tasks/                  # /tasks               Public board of tasks to pick up + apply
+│   │   ├── legal/                  # /legal               Legal documents (shared layout)
+│   │   │   ├── terms-of-service/   #   /terms-of-service
+│   │   │   ├── privacy-policy/     #   /privacy-policy
+│   │   │   └── code-of-conduct/    #   /code-of-conduct
+│   │   └── resources/              # /resources
+│   │       ├── media-kit/          #   /resources/media-kit     Brand assets + fast facts
+│   │       └── design-system/      #   /resources/design-system  Brand guidelines — design tokens & component reference
 │   ├── admin/                      # /admin               Organizer back office (Supabase auth)
+│   │   ├── layout.tsx              # Admin chrome + auth gate
 │   │   ├── login/                  #   /admin/login       Sign in with Slack
-│   │   └── tasks/                 #   /admin/tasks     Manage tasks + applicants
-│   ├── legal/                      # /legal               Legal documents (shared layout)
-│   │   ├── terms-of-service/       #   /terms-of-service
-│   │   ├── privacy-policy/         #   /privacy-policy
-│   │   └── code-of-conduct/        #   /code-of-conduct
-│   ├── resources/                  # /resources
-│   │   ├── media-kit/              #   /resources/media-kit     Brand assets + fast facts
-│   │   └── design-system/          #   /resources/design-system  Brand guidelines — design tokens & component reference
+│   │   └── tasks/                  #   /admin/tasks       Manage tasks + applicants
+│   ├── auth/callback/              #   /auth/callback     Slack OAuth callback
 │   └── globals.css
 ├── components/
 │   ├── layout/                     # Header, Footer
@@ -172,6 +177,7 @@ route, annotated with its purpose.
 │   ├── admin/                      # Admin back-office UI
 │   └── auth/                       # Admin login form
 ├── constants/                      # Structured data (events, sponsors, board vocabulary)
+├── hooks/                          # Reusable React hooks (useMutation)
 ├── utils/                          # Helpers (theme, Supabase clients)
 ├── db/                             # Supabase — migrations, seed, edge functions
 ├── middleware.ts                   # Admin session refresh + route guard
