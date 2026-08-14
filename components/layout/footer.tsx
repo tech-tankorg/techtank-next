@@ -114,9 +114,14 @@ export function Footer() {
         {/* Bottom section */}
         <div className="mt-12 border-t border-primary-foreground/10 pt-8 dark:border-foreground/10">
           <div className="flex flex-col items-center gap-4 lg:flex-row lg:justify-between">
-            <p className="text-sm text-primary-foreground dark:text-foreground">
-              Copyright &copy; {Math.max(new Date().getFullYear(), 2026)} TechTank TO Inc. All rights reserved.
-            </p>
+            <div className="flex flex-col items-center gap-1 text-center lg:items-start lg:text-left">
+              <p className="text-sm text-primary-foreground dark:text-foreground">
+                Copyright &copy; {Math.max(new Date().getFullYear(), 2026)} TechTank TO Inc. All rights reserved.
+              </p>
+              <p className="text-sm text-primary-foreground/80 dark:text-foreground/80">
+                Registered Nonprofit &mdash; Ontario Corporation No. 1001581728
+              </p>
+            </div>
             <a
               href={`mailto:${CONTACT_EMAIL}`}
               className="flex items-center gap-2 text-sm text-primary-foreground transition-colors hover:text-primary-foreground hover:underline dark:text-foreground dark:hover:text-foreground"
