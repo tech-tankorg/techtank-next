@@ -119,7 +119,15 @@ export function Footer() {
                 Copyright &copy; {Math.max(new Date().getFullYear(), 2026)} TechTank TO Inc. All rights reserved.
               </p>
               <p className="text-sm text-primary-foreground/80 dark:text-foreground/80">
-                Registered Nonprofit &mdash; Ontario Corporation No. 1001581728
+                Registered Nonprofit &mdash; Ontario Corporation No.{" "}
+                <a
+                  href="https://www.appmybizaccount.gov.on.ca/onbis/corporations/viewInstance/view.pub?id=280aa9d4fbca6577ccb365bb8f57e85a6ffa0ef043506e27dfa9fa1183d3d47a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-primary-foreground/40 underline-offset-2 hover:decoration-primary-foreground dark:decoration-foreground/40 dark:hover:decoration-foreground"
+                >
+                  1001581728
+                </a>
               </p>
             </div>
             <a
