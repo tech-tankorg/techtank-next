@@ -200,7 +200,7 @@ export default function FAQPage() {
         <Section key={group.category} background={groupIndex % 2 === 0 ? undefined : "white"}>
           <SectionHeader overline={group.category} title={group.category} className="mb-8" />
           {group.items.map((item, index) => (
-            <details key={index} className="rounded-xl border border-border bg-card px-6 mb-4">
+            <details key={index} className="mb-4 rounded-xl border border-border bg-card px-6">
               <summary className="py-5 text-left font-semibold text-foreground hover:no-underline">{item.q}</summary>
               <p className="pb-5 leading-relaxed text-muted-foreground">{item.a}</p>
             </details>
