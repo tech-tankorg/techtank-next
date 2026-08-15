@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, SectionHeader } from "@/components/ui/section";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CONTACT_EMAIL } from "@/constants/contact";
 
 export const metadata: Metadata = {
@@ -199,23 +198,13 @@ export default function FAQPage() {
       {/* FAQ sections */}
       {faqs.map((group, groupIndex) => (
         <Section key={group.category} background={groupIndex % 2 === 0 ? undefined : "white"}>
-          <div>
-            <SectionHeader overline={group.category} title={group.category} className="mb-8" />
-            <Accordion type="single" collapsible className="space-y-2">
-              {group.items.map((item, index) => (
-                <AccordionItem
-                  key={index}
-                  value={`${group.category}-${index}`}
-                  className="rounded-xl border border-border bg-card px-6"
-                >
-                  <AccordionTrigger className="py-5 text-left font-semibold text-foreground hover:no-underline">
-                    {item.q}
-                  </AccordionTrigger>
-                  <AccordionContent className="pb-5 leading-relaxed text-muted-foreground">{item.a}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
+          <SectionHeader overline={group.category} title={group.category} className="mb-8" />
+          {group.items.map((item, index) => (
+            <details key={index} className="mb-4 rounded-xl border border-border bg-card px-6">
+              <summary className="py-5 text-left font-semibold text-foreground hover:no-underline">{item.q}</summary>
+              <p className="pb-5 leading-relaxed text-muted-foreground">{item.a}</p>
+            </details>
+          ))}
         </Section>
       ))}
 
