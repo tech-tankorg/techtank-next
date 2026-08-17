@@ -3,7 +3,7 @@ import PreviousButton from "@/components/ui/previous-button";
 
 export default function NotFound() {
   return (
-    <main className={`relative min-h-dvh overflow-x-hidden`}>
+    <div className={`relative min-h-dvh overflow-x-hidden`}>
       {/* Canvas */}
       <FishCanvas />
 
@@ -14,6 +14,6 @@ export default function NotFound() {
         <p className="mt-3 animate-pulse text-[0.6rem] tracking-[0.18em] uppercase">move cursor or touch to reveal</p>
         <PreviousButton />
       </div>
-    </main>
+    </div>
   );
 }
