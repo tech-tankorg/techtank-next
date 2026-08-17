@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ProseLink } from "@/components/ui/prose-link";
 import { CONTACT_EMAIL } from "@/constants/contact";
 
 export const metadata: Metadata = {
@@ -142,11 +143,8 @@ export default function PrivacyPolicyPage() {
             <li>Request removal of your data from TechTank-managed records, where technically feasible</li>
           </ul>
           <p className="mt-4 text-muted-foreground">
-            To exercise these rights, email{" "}
-            <a href={`mailto:${CONTACT_EMAIL}`} className="text-ring hover:underline">
-              {CONTACT_EMAIL}
-            </a>
-            . These rights are available under PIPEDA (Canada) and, where applicable, GDPR. For data held by third-party
+            To exercise these rights, email <ProseLink href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</ProseLink>.
+            These rights are available under PIPEDA (Canada) and, where applicable, GDPR. For data held by third-party
             platforms like Luma and Meetup, please refer to their respective privacy policies.
           </p>
         </section>
@@ -171,10 +169,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="mb-4 font-display text-xl font-semibold text-foreground">12. Contact</h2>
           <p className="text-muted-foreground">
             For privacy-related questions or to exercise your data rights, contact us at{" "}
-            <a href={`mailto:${CONTACT_EMAIL}`} className="text-ring hover:underline">
-              {CONTACT_EMAIL}
-            </a>
-            .
+            <ProseLink href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</ProseLink>.
           </p>
         </section>
       </div>
