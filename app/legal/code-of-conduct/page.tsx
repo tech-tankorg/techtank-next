@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Mail } from "lucide-react";
-import { ProseLink } from "@/components/ui/prose-link";
 import { CONTACT_EMAIL } from "@/constants/contact";
+import { PROSE_LINK } from "@/constants/theme";
 
 export const metadata: Metadata = {
   title: "Code of Conduct",
@@ -26,9 +26,9 @@ export default function CodeOfConductPage() {
             <p className="mb-2 text-sm text-muted-foreground">
               At events: speak to any TechTank organizer. Any time: email us.
             </p>
-            <ProseLink href={`mailto:${CONTACT_EMAIL}`} weight="medium">
+            <a href={`mailto:${CONTACT_EMAIL}`} className={`font-medium ${PROSE_LINK}`}>
               {CONTACT_EMAIL}
-            </ProseLink>
+            </a>
           </div>
         </div>
       </div>
@@ -178,9 +178,12 @@ export default function CodeOfConductPage() {
               <h3 className="mb-3 font-semibold text-foreground">If an Organizer or Volunteer Violates This Code</h3>
               <p className="text-muted-foreground">
                 Reports involving an organizer or volunteer should be sent to the board at{" "}
-                <ProseLink href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</ProseLink>. The implicated person will be
-                recused from any discussion or decision related to the report. Depending on the severity, consequences
-                may include removal from their role, temporary suspension, or permanent removal from the community.
+                <a href={`mailto:${CONTACT_EMAIL}`} className={PROSE_LINK}>
+                  {CONTACT_EMAIL}
+                </a>
+                . The implicated person will be recused from any discussion or decision related to the report. Depending
+                on the severity, consequences may include removal from their role, temporary suspension, or permanent
+                removal from the community.
               </p>
             </div>
           </div>
@@ -273,7 +276,9 @@ export default function CodeOfConductPage() {
                 If you experience or witness behaviour that violates this code of conduct, please reach out at:
               </p>
               <p className="mb-3 text-muted-foreground">
-                <ProseLink href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</ProseLink>
+                <a href={`mailto:${CONTACT_EMAIL}`} className={PROSE_LINK}>
+                  {CONTACT_EMAIL}
+                </a>
               </p>
               <p className="text-muted-foreground">
                 You can also report directly to any organizer or board member you feel comfortable approaching. All
@@ -286,9 +291,11 @@ export default function CodeOfConductPage() {
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   If your report involves an organizer or board member, please contact the board directly at{" "}
-                  <ProseLink href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</ProseLink>. The implicated person will be
-                  recused from any discussion or decision related to the report. The remaining board members will handle
-                  the matter.
+                  <a href={`mailto:${CONTACT_EMAIL}`} className={PROSE_LINK}>
+                    {CONTACT_EMAIL}
+                  </a>
+                  . The implicated person will be recused from any discussion or decision related to the report. The
+                  remaining board members will handle the matter.
                 </p>
                 <p>
                   We recognize this process is imperfect for a small team. As TechTank grows, we are committed to

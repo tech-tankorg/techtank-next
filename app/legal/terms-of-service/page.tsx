@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ProseLink } from "@/components/ui/prose-link";
 import { CONTACT_EMAIL } from "@/constants/contact";
+import { PROSE_LINK } from "@/constants/theme";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -34,9 +34,9 @@ export default function TermsOfServicePage() {
           <ul className="list-disc space-y-2 pl-6 text-muted-foreground">
             <li>
               Respect the{" "}
-              <ProseLink asChild>
-                <Link href="/legal/code-of-conduct">Code of Conduct</Link>
-              </ProseLink>{" "}
+              <Link href="/legal/code-of-conduct" className={PROSE_LINK}>
+                Code of Conduct
+              </Link>{" "}
               in all community spaces
             </li>
           </ul>
@@ -72,9 +72,9 @@ export default function TermsOfServicePage() {
           <h2 className="mb-4 font-display text-xl font-semibold text-foreground">5. Events</h2>
           <p className="mb-4 text-muted-foreground">
             Participation at TechTank events (virtual or in-person) implies agreement with our{" "}
-            <ProseLink asChild>
-              <Link href="/legal/code-of-conduct">Code of Conduct</Link>
-            </ProseLink>
+            <Link href="/legal/code-of-conduct" className={PROSE_LINK}>
+              Code of Conduct
+            </Link>
             . All attendees, speakers, hosts, sponsors, and volunteers are expected to follow these guidelines.
           </p>
           <p className="mb-4 text-muted-foreground">
@@ -156,7 +156,10 @@ export default function TermsOfServicePage() {
           <h2 className="mb-4 font-display text-xl font-semibold text-foreground">12. Contact</h2>
           <p className="text-muted-foreground">
             For questions about these Terms of Service, please contact us at{" "}
-            <ProseLink href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</ProseLink>.
+            <a href={`mailto:${CONTACT_EMAIL}`} className={PROSE_LINK}>
+              {CONTACT_EMAIL}
+            </a>
+            .
           </p>
         </section>
       </div>
