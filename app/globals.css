@@ -363,3 +363,48 @@
     transform: translateX(calc(-100% / var(--marquee-copies, 2)));
   }
 }
+
+/* ─── Marquee Scroll Mask ─────────────────────────────────────────────────────────── */
+
+@property --scroll-mask-l-from {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+
+@property --scroll-mask-r-from {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+
+@keyframes scroll-mask-x-scroll {
+  0% {
+    --scroll-mask-l-from: 100%;
+  }
+  10%,
+  100% {
+    --scroll-mask-l-from: 85%;
+  }
+  0%,
+  90% {
+    --scroll-mask-r-from: 85%;
+  }
+  100% {
+    --scroll-mask-r-from: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @supports (animation-timeline: scroll()) {
+    .marquee-viewport {
+      --scroll-mask-l: linear-gradient(to left, black, black var(--scroll-mask-l-from), transparent);
+      --scroll-mask-r: linear-gradient(to right, black, black var(--scroll-mask-r-from), transparent);
+      mask-image: var(--scroll-mask-l), var(--scroll-mask-r);
+      mask-composite: intersect;
+      -webkit-mask-composite: source-in;
+      animation: scroll-mask-x-scroll linear;
+      animation-timeline: scroll(self inline);
+    }
+  }
+}

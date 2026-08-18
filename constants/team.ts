@@ -56,7 +56,7 @@ Outside of tech, she enjoys hosting events, muay thai, travelling, and creating 
       {
         name: "Natasha Kasunic",
         pronouns: "she/her",
-        role: "Board Member & Organizer",
+        role: "Board Member, Partnerships & Community Lead",
         avatar: "/images/team/natasha-kasunic.webp",
         bio: `Natasha is one of TechTank’s newer volunteers! She’s a Technical Customer Success Lead at Tightknit, a small startup building an app for community builders, where she sits between the engineering and the humans using it, translating one to the other. Computer science at Waterloo gave her the technical half; the years since taught her the part that actually matters, which is people.
 She came to TechTank as an attendee first and found something she didn’t expect: a room full of community leaders, operators, and builders, who happen to be her favourite kind of person. So she started pitching in. What’s kept her around isn’t any single event but the in-between, the hallway conversation that turns into a real one, and the way a good community quietly makes space for people, women in tech especially, to find their footing.

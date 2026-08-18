@@ -115,9 +115,22 @@ export function Footer() {
         {/* Bottom section */}
         <div className="mt-12 border-t border-primary-foreground/10 pt-8 dark:border-foreground/10">
           <div className="flex flex-col items-center gap-4 lg:flex-row lg:justify-between">
-            <p className="text-sm text-primary-foreground dark:text-foreground">
-              Copyright &copy; {Math.max(new Date().getFullYear(), 2026)} TechTank TO Inc. All rights reserved.
-            </p>
+            <div className="flex flex-col items-center gap-1 text-center lg:items-start lg:text-left">
+              <p className="text-sm text-primary-foreground dark:text-foreground">
+                Copyright &copy; {Math.max(new Date().getFullYear(), 2026)} TechTank TO Inc. All rights reserved.
+              </p>
+              <p className="text-sm text-primary-foreground/80 dark:text-foreground/80">
+                Registered Nonprofit &mdash; Ontario Corporation No.{" "}
+                <a
+                  href="https://www.appmybizaccount.gov.on.ca/onbis/corporations/viewInstance/view.pub?id=280aa9d4fbca6577ccb365bb8f57e85a6ffa0ef043506e27dfa9fa1183d3d47a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-primary-foreground/40 underline-offset-2 hover:decoration-primary-foreground dark:decoration-foreground/40 dark:hover:decoration-foreground"
+                >
+                  1001581728
+                </a>
+              </p>
+            </div>
             <a
               href={`mailto:${CONTACT_EMAIL}`}
               className="flex items-center gap-2 text-sm text-primary-foreground transition-colors hover:text-primary-foreground hover:underline dark:text-foreground dark:hover:text-foreground"

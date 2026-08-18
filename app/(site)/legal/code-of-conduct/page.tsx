@@ -25,7 +25,7 @@ export default function CodeOfConductPage() {
             <p className="mb-2 text-sm text-muted-foreground">
               At events: speak to any TechTank organizer. Any time: email us.
             </p>
-            <a href={`mailto:${CONTACT_EMAIL}`} className="font-medium text-ring hover:underline">
+            <a href={`mailto:${CONTACT_EMAIL}`} className="font-medium text-ring underline underline-offset-2">
               {CONTACT_EMAIL}
             </a>
           </div>
@@ -177,7 +177,7 @@ export default function CodeOfConductPage() {
               <h3 className="mb-3 font-semibold text-foreground">If an Organizer or Volunteer Violates This Code</h3>
               <p className="text-muted-foreground">
                 Reports involving an organizer or volunteer should be sent to the board at{" "}
-                <a href={`mailto:${CONTACT_EMAIL}`} className="text-ring hover:underline">
+                <a href={`mailto:${CONTACT_EMAIL}`} className="text-ring underline underline-offset-2">
                   {CONTACT_EMAIL}
                 </a>
                 . The implicated person will be recused from any discussion or decision related to the report. Depending
@@ -275,7 +275,7 @@ export default function CodeOfConductPage() {
                 If you experience or witness behaviour that violates this code of conduct, please reach out at:
               </p>
               <p className="mb-3 text-muted-foreground">
-                <a href={`mailto:${CONTACT_EMAIL}`} className="text-ring hover:underline">
+                <a href={`mailto:${CONTACT_EMAIL}`} className="text-ring underline underline-offset-2">
                   {CONTACT_EMAIL}
                 </a>
               </p>
@@ -290,7 +290,7 @@ export default function CodeOfConductPage() {
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   If your report involves an organizer or board member, please contact the board directly at{" "}
-                  <a href={`mailto:${CONTACT_EMAIL}`} className="text-ring hover:underline">
+                  <a href={`mailto:${CONTACT_EMAIL}`} className="text-ring underline underline-offset-2">
                     {CONTACT_EMAIL}
                   </a>
                   . The implicated person will be recused from any discussion or decision related to the report. The

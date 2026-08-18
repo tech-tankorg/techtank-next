@@ -184,7 +184,7 @@ export default function PrivacyPolicyPage() {
           </ul>
           <p className="mt-4 text-muted-foreground">
             To exercise these rights, email{" "}
-            <a href={`mailto:${CONTACT_EMAIL}`} className="text-ring hover:underline">
+            <a href={`mailto:${CONTACT_EMAIL}`} className="text-ring underline underline-offset-2">
               {CONTACT_EMAIL}
             </a>
             . These rights are available under PIPEDA (Canada) and, where applicable, GDPR. For data held by third-party
@@ -212,7 +212,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="mb-4 font-display text-xl font-semibold text-foreground">12. Contact</h2>
           <p className="text-muted-foreground">
             For privacy-related questions or to exercise your data rights, contact us at{" "}
-            <a href={`mailto:${CONTACT_EMAIL}`} className="text-ring hover:underline">
+            <a href={`mailto:${CONTACT_EMAIL}`} className="text-ring underline underline-offset-2">
               {CONTACT_EMAIL}
             </a>
             .

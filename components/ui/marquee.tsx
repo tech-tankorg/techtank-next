@@ -10,7 +10,10 @@ const MIN_COPIES = 2;
 
 const styles = {
   root: cva("relative w-full"),
-  viewport: cva(["w-full overflow-hidden", "motion-reduce:overflow-x-auto motion-reduce:overscroll-x-contain"]),
+  viewport: cva([
+    "marquee-viewport w-full overflow-hidden",
+    "motion-reduce:overflow-x-auto motion-reduce:overscroll-x-contain",
+  ]),
   track: cva(["marquee-track flex w-max", "hover:paused data-[paused=true]:paused"], {
     variants: {
       speed: {
