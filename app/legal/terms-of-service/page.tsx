@@ -33,7 +33,7 @@ export default function TermsOfServicePage() {
           <ul className="list-disc space-y-2 pl-6 text-muted-foreground">
             <li>
               Respect the{" "}
-              <Link href="/legal/code-of-conduct" className="text-ring hover:underline">
+              <Link href="/legal/code-of-conduct" className="text-ring underline underline-offset-2">
                 Code of Conduct
               </Link>{" "}
               in all community spaces
@@ -71,7 +71,7 @@ export default function TermsOfServicePage() {
           <h2 className="mb-4 font-display text-xl font-semibold text-foreground">5. Events</h2>
           <p className="mb-4 text-muted-foreground">
             Participation at TechTank events (virtual or in-person) implies agreement with our{" "}
-            <Link href="/legal/code-of-conduct" className="text-ring hover:underline">
+            <Link href="/legal/code-of-conduct" className="text-ring underline underline-offset-2">
               Code of Conduct
             </Link>
             . All attendees, speakers, hosts, sponsors, and volunteers are expected to follow these guidelines.
@@ -155,7 +155,7 @@ export default function TermsOfServicePage() {
           <h2 className="mb-4 font-display text-xl font-semibold text-foreground">12. Contact</h2>
           <p className="text-muted-foreground">
             For questions about these Terms of Service, please contact us at{" "}
-            <a href={`mailto:${CONTACT_EMAIL}`} className="text-ring hover:underline">
+            <a href={`mailto:${CONTACT_EMAIL}`} className="text-ring underline underline-offset-2">
               {CONTACT_EMAIL}
             </a>
             .
