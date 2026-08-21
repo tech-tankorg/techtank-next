@@ -32,11 +32,19 @@ BEGIN
     RETURN jsonb_build_object('status', 'not_found');
   END IF;
 
+  -- Reassigning an open/in-progress task is intentional (an organizer can
+  -- hand it to a different applicant), but reopening a finished one from a
+  -- stale applicant list is not — guard against silently un-completing it.
   UPDATE public.contribution_tasks
      SET assigned_name = v_app.applicant_name,
          status = 'in_progress'
    WHERE id = v_app.task_id
+     AND status <> 'done'
   RETURNING title INTO v_title;
+
+  IF NOT FOUND THEN
+    RETURN jsonb_build_object('status', 'closed');
+  END IF;
 
   SELECT slack_user_id INTO v_admin_slack
   FROM public.admins

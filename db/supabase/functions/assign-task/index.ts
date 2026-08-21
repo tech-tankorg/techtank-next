@@ -15,7 +15,7 @@ import { assignmentMessage } from "../_shared/slack-messages.ts";
 const SITE_URL = Deno.env.get("PUBLIC_SITE_URL") ?? "https://www.techtankto.com";
 
 interface AssignResult {
-  status: "assigned" | "not_found";
+  status: "assigned" | "not_found" | "closed";
   task_id?: string;
   task_title?: string;
   assignee_name?: string;
@@ -71,6 +71,7 @@ servePost("assign-task", async (req) => {
 
   const result = data as AssignResult;
   if (result.status === "not_found") throw new HttpError(404, "Application not found");
+  if (result.status === "closed") throw new HttpError(409, "This task is already marked done. Reopen it before assigning.");
 
   await notifyAssignment(result, `${SITE_URL}/tasks/${result.task_id}`);
   return { ok: true };
