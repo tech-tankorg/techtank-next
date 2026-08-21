@@ -80,14 +80,21 @@ export function ApplyPanel({ task }: ApplyPanelProps) {
   useEffect(() => {
     let active = true;
     const supabase = createClient();
-    supabase.auth.getSession().then(async ({ data }) => {
-      if (!active) return;
-      setSession(data.session);
-      if (data.session) {
-        const { data: applied } = await supabase.rpc("has_applied_to_contribution_task", { p_task_id: task.id });
-        if (active && applied === true) setAlreadyApplied(true);
-      }
-    });
+    supabase.auth
+      .getSession()
+      .then(async ({ data }) => {
+        if (!active) return;
+        setSession(data.session);
+        if (data.session) {
+          const { data: applied } = await supabase.rpc("has_applied_to_contribution_task", { p_task_id: task.id });
+          if (active && applied === true) setAlreadyApplied(true);
+        }
+      })
+      .catch(() => {
+        // A failed pre-check just leaves the apply form usable; the apply
+        // RPC dedupes on submit, so a stale "already applied?" answer can
+        // never create a duplicate.
+      });
     return () => {
       active = false;
     };

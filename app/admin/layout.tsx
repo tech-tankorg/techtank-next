@@ -29,7 +29,7 @@ export default async function AdminLayout({ children }: { children: ReactNode })
 
   if (!isAdmin) {
     return (
-      <div className="mx-auto flex min-h-full max-w-md flex-col items-center justify-center gap-4 px-6 py-16 text-center">
+      <div className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-4 px-6 py-16 text-center">
         <h1 className="font-display text-2xl font-semibold text-foreground">Not authorized</h1>
         <p className="text-muted-foreground">This account doesn&rsquo;t have back-office access.</p>
         <form action={signOutAdmin}>

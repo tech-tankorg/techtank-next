@@ -1,6 +1,7 @@
 "use client";
 
 import { Check } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SlackIcon } from "@/components/ui/icons";
 import { cn } from "@/utils/theme";
@@ -32,10 +33,10 @@ export function ApplicantRow({ app, isAssignee, busy, onAssign, onUnassign }: Ap
           <p className="flex flex-wrap items-center gap-1.5 text-sm font-medium text-foreground">
             {app.applicant_name}
             {isAssignee && (
-              <span className="inline-flex items-center gap-1 rounded-full bg-success/15 px-1.5 py-0.5 text-[10px] font-semibold tracking-wide text-success uppercase">
+              <Badge variant="success" size="sm" className="uppercase">
                 <Check className="size-3" />
                 On it
-              </span>
+              </Badge>
             )}
           </p>
           {/* Slack is how organizers reach people, so it's the action. The

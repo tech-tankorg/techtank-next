@@ -158,6 +158,11 @@ export function ApplicationsPanel({
       >
         <span className="font-medium text-foreground">{assignApp?.applicant_name}</span> will be assigned to{" "}
         <span className="font-medium text-foreground">{taskTitle}</span>, which moves it to In progress.{" "}
+        {assignedName && (
+          <>
+            This replaces <span className="font-medium text-foreground">{assignedName}</span>.{" "}
+          </>
+        )}
         {assignApp?.slack_user_id
           ? "They'll get a Slack DM confirming it, and we'll open a group DM with you so you can get them started."
           : "We don't have a Slack ID for them, so no message will be sent."}

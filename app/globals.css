@@ -152,10 +152,11 @@
   --color-accent: #1e4a58;
   --color-accent-foreground: #a8d5d8;
 
-  /* success matches the @theme base and isn't repeated. Only
-     destructive needs a dark override: on a dark page `text-destructive`
-     has to be light enough to read, so white can no longer sit on top
-     of it and the foreground flips dark. */
+  /* On a dark page, `text-success`/`text-destructive` have to be light
+     enough to read, so the base green/coral are lifted and the foreground
+     flips dark so it stays legible on the solid `bg-*` variants. */
+  --color-success: #7fd0b0;
+  --color-success-foreground: #0d2b20;
   --color-destructive: #f59d78;
   --color-destructive-foreground: #221004;
 

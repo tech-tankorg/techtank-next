@@ -52,7 +52,7 @@ export function AdminLogin() {
   };
 
   return (
-    <div className="mx-auto flex min-h-full max-w-md flex-col justify-center px-6 py-16">
+    <div className="mx-auto flex min-h-dvh max-w-md flex-col justify-center px-6 py-16">
       <div className="mb-8 text-center">
         <span className="font-display text-2xl font-bold text-foreground">
           TechTank<span className="text-ring"> Admin</span>
