@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select } from "@/components/ui/select";
@@ -69,10 +70,7 @@ export function TaskEditor({ task, onSave, onCancel, saving, error }: TaskEditor
     // outside an input's border box) from being clipped by this
     // scroll container, without shifting the fields visually.
     <div className="-m-1 flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-1">
-      {/* id is referenced by the Dialog's aria-labelledby */}
-      <h2 id="task-editor-title" className="font-display text-xl font-semibold text-foreground">
-        {task ? "Edit task" : "New task"}
-      </h2>
+      <DialogTitle>{task ? "Edit task" : "New task"}</DialogTitle>
 
       <div className="space-y-1.5">
         <label htmlFor="task-title" className="text-sm font-medium text-foreground">

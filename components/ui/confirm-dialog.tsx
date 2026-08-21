@@ -1,8 +1,8 @@
 "use client";
 
-import { useId, type ReactNode } from "react";
+import type { ReactNode } from "react";
 import { Button, type ButtonProps } from "@/components/ui/button";
-import { Dialog } from "@/components/ui/dialog";
+import { Dialog, DialogTitle } from "@/components/ui/dialog";
 
 interface ConfirmDialogProps {
   open: boolean;
@@ -34,8 +34,6 @@ export function ConfirmDialog({
   busy = false,
   error,
 }: ConfirmDialogProps) {
-  const titleId = useId();
-
   // Block close while a request is in flight.
   const close = () => {
     if (busy) return;
@@ -43,10 +41,8 @@ export function ConfirmDialog({
   };
 
   return (
-    <Dialog open={open} onClose={close} labelledBy={titleId} className="md:max-w-md">
-      <h2 id={titleId} className="font-display text-xl font-semibold text-foreground">
-        {title}
-      </h2>
+    <Dialog open={open} onClose={close} className="md:max-w-md">
+      <DialogTitle>{title}</DialogTitle>
       <p className="text-sm leading-relaxed text-muted-foreground">{children}</p>
       {error && (
         <p role="alert" className="text-sm text-destructive">

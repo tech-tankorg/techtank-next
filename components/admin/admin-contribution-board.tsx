@@ -109,7 +109,7 @@ export function AdminContributionBoard({ initialTasks }: AdminContributionBoardP
         </DndContext>
       )}
 
-      <Dialog open={editor.open} onClose={editor.close} labelledBy="task-editor-title">
+      <Dialog open={editor.open} onClose={editor.close}>
         <TaskEditor
           task={editor.task}
           onSave={editor.submit}
