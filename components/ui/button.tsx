@@ -42,10 +42,24 @@ const buttonVariants = cva(
   },
 );
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
-  asChild?: boolean;
-}
+type ButtonSize = NonNullable<VariantProps<typeof buttonVariants>["size"]>;
+type IconButtonSize = "icon";
+type TextButtonSize = Exclude<ButtonSize, IconButtonSize>;
+
+type ButtonBaseProps = Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "aria-label"> &
+  Omit<VariantProps<typeof buttonVariants>, "size"> & {
+    asChild?: boolean;
+  };
+
+export type ButtonProps =
+  | (ButtonBaseProps & {
+      size?: TextButtonSize | null;
+      "aria-label"?: string;
+    })
+  | (ButtonBaseProps & {
+      size: IconButtonSize;
+      "aria-label": string;
+    });
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, isActive, asChild = false, ...props }, ref) => {
