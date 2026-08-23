@@ -13,19 +13,14 @@ export const metadata: Metadata = {
 
 const communityLinks = [
   {
-    name: "Luma",
-    href: "https://luma.com/techtank",
-    icon: "/images/platforms/Luma_Logo.png",
-  },
-  {
-    name: "Meetup",
-    href: "https://meetup.com/techtank-to",
-    icon: "/images/platforms/Meetup_Logo.png",
-  },
-  {
     name: "Slack",
     href: "/links/slack",
     icon: "/images/platforms/slack-cropped.png",
+  },
+  {
+    name: "Luma",
+    href: "https://luma.com/techtank",
+    icon: "/images/platforms/Luma_Logo.png",
   },
   {
     name: "LinkedIn",
@@ -46,6 +41,11 @@ const communityLinks = [
     name: "YouTube",
     href: "https://youtube.com/@TechTankTo",
     icon: "/images/platforms/youtube-logo.png",
+  },
+  {
+    name: "Meetup",
+    href: "https://meetup.com/techtank-to",
+    icon: "/images/platforms/Meetup_Logo.png",
   },
 ];
 

@@ -237,10 +237,11 @@
 }
 
 .dark .glass {
-  background: rgba(27, 75, 90, 0.45);
+  background: rgba(13, 38, 47, 0.65);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(168, 213, 216, 0.12);
+  border: 1px solid rgba(168, 213, 216, 0.22);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
 .glass-subtle {
