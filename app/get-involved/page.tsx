@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Megaphone, Users, Building2 } from "lucide-react";
 import { Section, SectionHeader } from "@/components/ui/section";
-import { RoleCard, roleCardsData } from "@/components/ui/role-card";
+import { RoleCard } from "@/components/ui/role-card";
+import { roleCardsData } from "@/constants/role-cards";
 import { ContactCard } from "@/components/ui/contact-card";
 
 export const metadata: Metadata = {
