@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, QrCode, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SlackIcon } from "@/components/ui/icons";
 import { QrDialog } from "@/components/ui/qr-dialog";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { useAppStore } from "@/stores/app-state";
@@ -71,16 +72,8 @@ export function Header() {
           </Button>
         </div>
 
-        {/* Mobile: QR + theme toggle + menu button */}
+        {/* Mobile: theme toggle + menu button */}
         <div className="flex items-center gap-1 lg:hidden">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setQrDialogOpen(true)}
-            aria-label="Show get involved QR code"
-          >
-            <QrCode className="size-5" />
-          </Button>
           <ThemeToggle />
           <button
             type="button"
@@ -107,9 +100,15 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            <div className="border-t border-border pt-4">
-              <Button variant="primary" size="sm" className="w-full" asChild>
-                <Link href="/get-involved">Join us</Link>
+            <div className="space-y-2 border-t border-border pt-4">
+              <Button variant="secondary" size="sm" className="w-full" asChild onClick={() => setMobileMenuOpen(false)}>
+                <a href="/links/slack" target="_blank" rel="noopener noreferrer">
+                  <SlackIcon className="mr-2 size-4" />
+                  Join our Slack
+                </a>
+              </Button>
+              <Button variant="primary" size="sm" className="w-full" asChild onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/get-involved">Get involved</Link>
               </Button>
             </div>
           </div>
