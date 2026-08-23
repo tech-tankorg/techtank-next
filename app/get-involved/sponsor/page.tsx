@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { SponsorsMarquee } from "@/components/ui/sponsors-marquee";
 import { ContactCard } from "@/components/ui/contact-card";
+import { ToolsGrid } from "@/components/ui/tools-grid";
 import { getCoverImage, getCoverVideo, getInstagramPostsByIds } from "@/constants/instagram-posts";
 import { CONTACT_EMAIL } from "@/constants/contact";
 
@@ -199,6 +200,27 @@ export default function SponsorPage() {
               </div>
             ))}
           </div>
+        </div>
+      </Section>
+
+      {/* Tools In-Kind Sponsors */}
+      <Section>
+        <SectionHeader
+          overline="In-kind sponsors"
+          title="Tools that power TechTank"
+          description="As a nonprofit, we run on tools that generous companies provide free or at low cost. They keep our design, communication, and events running — thank you."
+          className="mb-12"
+        />
+        <ToolsGrid />
+        <div className="mx-auto mt-12 max-w-2xl text-center">
+          <h3 className="mb-3 font-display text-xl font-semibold text-foreground">Have a tool we should be using?</h3>
+          <p className="mb-6 text-muted-foreground">
+            Put your product in the hands of real professional users working across Toronto&apos;s tech companies.
+            Provide TechTank free or discounted access and we&apos;ll credit you here and use it in the open.
+          </p>
+          <Button variant="outline" asChild>
+            <a href={`mailto:${CONTACT_EMAIL}?subject=Tool%20Sponsorship%20-%20TechTank`}>Offer your tool</a>
+          </Button>
         </div>
       </Section>
 

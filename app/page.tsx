@@ -6,6 +6,7 @@ import { LumaIcon, MeetupIcon } from "@/components/ui/icons";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { StatsMarquee } from "@/components/ui/stats-marquee";
 import { SponsorsMarquee } from "@/components/ui/sponsors-marquee";
+import { ToolsStrip } from "@/components/ui/tools-grid";
 import { RoleCard, roleCardsData } from "@/components/ui/role-card";
 import { EventCard } from "@/components/ui/event-card";
 import { SocialFeed } from "@/components/ui/social-feed";
@@ -147,6 +148,20 @@ export default async function HomePage() {
             Hosted and supported by
           </p>
           <SponsorsMarquee className="py-4" />
+        </div>
+
+        {/* Tools (in-kind sponsors) */}
+        <div className="mb-6">
+          <p className="mb-4 text-center text-xs font-medium tracking-widest text-muted-foreground uppercase">
+            Sponsored tools we run on
+          </p>
+          <ToolsStrip />
+          <p className="mt-3 text-center text-sm text-muted-foreground">
+            Provided free or discounted to our nonprofit —{" "}
+            <Link href="/get-involved/sponsor" className="underline underline-offset-4 hover:text-foreground">
+              offer your tool
+            </Link>
+          </p>
         </div>
 
         {/* CTAs */}
