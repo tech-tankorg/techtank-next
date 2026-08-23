@@ -21,13 +21,13 @@ const whySponsor = [
     icon: Megaphone,
     title: "Brand alignment",
     description:
-      "Align with Toronto's most inclusive tech community. Your brand is seen by developers, designers, and tech leaders who value authenticity.",
+      "Align with Toronto's most inclusive tech community and build real credibility with developers, designers, and tech leaders who value authenticity.",
   },
   {
     icon: Users,
-    title: "Recruiting pipeline",
+    title: "Hiring pipeline",
     description:
-      "Sustained exposure to Toronto tech talent across all levels. Build relationships and recognition before you need to hire.",
+      "Sustained exposure to Toronto tech talent across all levels. Build relationships and recognition before you need to hire, at a fraction of the cost of job boards and recruiters.",
   },
   {
     icon: Heart,
@@ -170,11 +170,11 @@ export default function SponsorPage() {
             <div
               key={tier.name}
               className={`rounded-2xl border p-6 lg:p-8 ${
-                tier.highlight ? "border-ring bg-ring/5" : "border-border bg-card"
+                tier.highlight ? "border-amber bg-amber/10" : "border-border bg-card"
               }`}
             >
               {tier.highlight && (
-                <span className="mb-2 inline-block text-xs font-semibold tracking-wider text-ring uppercase">
+                <span className="text-amber-dark mb-2 inline-block text-xs font-semibold tracking-wider uppercase">
                   Most popular
                 </span>
               )}
@@ -203,12 +203,24 @@ export default function SponsorPage() {
         </div>
       </Section>
 
-      {/* Tools In-Kind Sponsors */}
-      <Section>
+      {/* Past Sponsors */}
+      <Section background="white">
         <SectionHeader
-          overline="In-kind sponsors"
+          overline="Our supporters"
+          title="Companies that host and sponsor TechTank"
+          description="These companies sponsor TechTank with funding for ongoing operations and programs. Some also host events with their venues and food."
+          align="center"
+          className="mb-8"
+        />
+        <SponsorsMarquee className="py-4" />
+      </Section>
+
+      {/* Tools Product Sponsors */}
+      <Section id="tools" className="scroll-mt-24">
+        <SectionHeader
+          overline="Product sponsors"
           title="Tools that power TechTank"
-          description="As a nonprofit, we run on tools that generous companies provide free or at low cost. They keep our design, communication, and events running — thank you."
+          description="Some companies sponsor TechTank with their products. They keep our design, communication, and events running. Thank you."
           className="mb-12"
         />
         <ToolsGrid />
@@ -216,7 +228,7 @@ export default function SponsorPage() {
           <h3 className="mb-3 font-display text-xl font-semibold text-foreground">Have a tool we should be using?</h3>
           <p className="mb-6 text-muted-foreground">
             Put your product in the hands of real professional users working across Toronto&apos;s tech companies.
-            Provide TechTank free or discounted access and we&apos;ll credit you here and use it in the open.
+            Sponsor TechTank with your product and we&apos;ll credit you here and use it in the open.
           </p>
           <Button variant="outline" asChild>
             <a href={`mailto:${CONTACT_EMAIL}?subject=Tool%20Sponsorship%20-%20TechTank`}>Offer your tool</a>
@@ -224,26 +236,15 @@ export default function SponsorPage() {
         </div>
       </Section>
 
-      {/* Past Sponsors */}
-      <Section background="white">
-        <SectionHeader
-          overline="Our supporters"
-          title="Companies that sponsor TechTank"
-          align="center"
-          className="mb-8"
-        />
-        <SponsorsMarquee className="py-4" />
-      </Section>
-
       {/* Hosting vs Sponsoring */}
-      <Section>
+      <Section background="muted">
         <div className="mx-auto max-w-3xl text-center">
           <span className="mb-4 inline-block text-xs font-semibold tracking-widest text-ring uppercase">Not sure?</span>
           <h2 className="mb-4 font-display text-3xl font-semibold text-foreground">Hosting vs. sponsoring</h2>
           <p className="mb-6 text-muted-foreground">
             <strong className="text-foreground">Hosting</strong> means providing your venue and food for one event.{" "}
             <strong className="text-foreground">Sponsoring</strong> means supporting TechTank with funding for ongoing
-            operations, programs, or multiple events.
+            operations, programs, or multiple events. It&apos;s the deepest, most sustained way to back the community.
           </p>
           <Button variant="outline" asChild>
             <Link href="/get-involved/host">Learn about hosting</Link>

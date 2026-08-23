@@ -150,20 +150,6 @@ export default async function HomePage() {
           <SponsorsMarquee className="py-4" />
         </div>
 
-        {/* Tools (in-kind sponsors) */}
-        <div className="mb-6">
-          <p className="mb-4 text-center text-xs font-medium tracking-widest text-muted-foreground uppercase">
-            Sponsored tools we run on
-          </p>
-          <ToolsStrip />
-          <p className="mt-3 text-center text-sm text-muted-foreground">
-            Provided free or discounted to our nonprofit —{" "}
-            <Link href="/get-involved/sponsor" className="underline underline-offset-4 hover:text-foreground">
-              offer your tool
-            </Link>
-          </p>
-        </div>
-
         {/* CTAs */}
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Button variant="primary" size="md" asChild>
@@ -202,6 +188,19 @@ export default async function HomePage() {
             <RoleCard key={role.role} {...role} />
           ))}
         </div>
+      </Section>
+
+      {/* Tools (product sponsors) */}
+      <Section background="white" className="py-8 lg:py-10">
+        <p className="mb-4 text-center text-xs font-medium tracking-widest text-muted-foreground uppercase">
+          Sponsored tools we run on
+        </p>
+        <ToolsStrip />
+        <p className="mt-3 text-center text-sm text-muted-foreground">
+          <Link href="/get-involved/sponsor#tools" className="underline underline-offset-4 hover:text-foreground">
+            Learn about tool sponsorship
+          </Link>
+        </p>
       </Section>
 
       {/* Values Teaser */}

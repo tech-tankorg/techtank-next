@@ -2,31 +2,22 @@ export interface Tool {
   id: string;
   name: string;
   url: string;
-  /** What the company provides TechTank — shown on the sponsor page */
-  contribution: string;
-  /** Wordmark in public/images/tools/. Tools without one render their name (plus an icon where the ui/icons set has one). */
-  logo?: string;
+  /** What the tool does and how TechTank volunteers use it */
+  description: string;
+  /** Wordmark in public/images/tools/ */
+  logo: string;
   /** Intrinsic pixel dimensions of the logo file, used to preserve aspect ratio */
-  width?: number;
-  height?: number;
+  width: number;
+  height: number;
   scale?: number; // Multiplier on the base row height, to even out logos with lots of built-in padding (default 1)
 }
 
 export const tools: Record<string, Tool> = {
-  canva: {
-    id: "canva",
-    name: "Canva",
-    url: "https://canva.com",
-    contribution: "Canva Pro through the Canva for Nonprofits program",
-    logo: "/images/tools/canva.svg",
-    width: 80,
-    height: 30,
-  },
   slack: {
     id: "slack",
     name: "Slack",
     url: "https://slack.com",
-    contribution: "Sponsors our community with a free Slack Pro workspace",
+    description: "Messaging home of the TechTank community, where members and organizers connect between events.",
     logo: "/images/tools/slack.svg",
     width: 498,
     height: 127,
@@ -35,7 +26,7 @@ export const tools: Record<string, Tool> = {
     id: "tightknit",
     name: "Tightknit",
     url: "https://tightknit.ai",
-    contribution: "Free access to their Slack-native community platform",
+    description: "Slack-native community platform powering our member hub and event experience.",
     logo: "/images/tools/tightknit.webp",
     width: 600,
     height: 120,
@@ -44,16 +35,19 @@ export const tools: Record<string, Tool> = {
     id: "ideogram",
     name: "Ideogram",
     url: "https://ideogram.ai",
-    contribution: "Free access for event and community graphics",
+    description: "AI image generation and editing our volunteers use for event visuals and creative assets.",
     logo: "/images/tools/ideogram.svg",
     width: 119,
     height: 24,
   },
-  luma: {
-    id: "luma",
-    name: "Luma",
-    url: "https://luma.com",
-    contribution: "Discounted event management for our calendar and RSVPs",
+  canva: {
+    id: "canva",
+    name: "Canva",
+    url: "https://canva.com",
+    description: "Design platform our volunteers use for event graphics, slides, and social posts.",
+    logo: "/images/tools/canva.svg",
+    width: 80,
+    height: 30,
   },
 };
 
