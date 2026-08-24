@@ -30,7 +30,7 @@ export function ToolsGrid({ className }: { className?: string }) {
           target="_blank"
           rel="noopener noreferrer"
           title={tool.name}
-          className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:border-ring/50 [--logo-height:1.75rem]"
+          className="group rounded-2xl border border-border bg-card p-6 transition-colors [--logo-height:1.75rem] hover:border-ring/50"
         >
           <div className="mb-4 flex h-8 items-center">
             <ToolLogo tool={tool} />

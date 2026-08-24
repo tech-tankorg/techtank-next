@@ -174,7 +174,7 @@ export default function SponsorPage() {
               }`}
             >
               {tier.highlight && (
-                <span className="text-amber-dark mb-2 inline-block text-xs font-semibold tracking-wider uppercase">
+                <span className="mb-2 inline-block text-xs font-semibold tracking-wider text-amber-dark uppercase">
                   Most popular
                 </span>
               )}
