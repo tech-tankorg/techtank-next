@@ -70,12 +70,7 @@ export default function DonatePage() {
               we&apos;ll follow up.
             </p>
             <div className="flex flex-wrap items-center gap-3 rounded-xl border border-border bg-background/50 px-4 py-3">
-              <a
-                href={`mailto:${CONTACT_EMAIL}`}
-                className="font-display text-sm font-semibold text-foreground hover:text-amber-dark"
-              >
-                {CONTACT_EMAIL}
-              </a>
+              <span className="font-display text-sm font-semibold text-foreground">{CONTACT_EMAIL}</span>
               <CopyButton text={CONTACT_EMAIL} />
             </div>
           </div>
