@@ -70,7 +70,12 @@ export default function DonatePage() {
               we&apos;ll follow up.
             </p>
             <div className="flex flex-wrap items-center gap-3 rounded-xl border border-border bg-background/50 px-4 py-3">
-              <span className="font-display text-sm font-semibold text-foreground">{CONTACT_EMAIL}</span>
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="font-display text-sm font-semibold text-foreground hover:text-amber-dark"
+              >
+                {CONTACT_EMAIL}
+              </a>
               <CopyButton text={CONTACT_EMAIL} />
             </div>
           </div>
@@ -94,8 +99,11 @@ export default function DonatePage() {
           <div className="flex items-start gap-3">
             <ShieldCheck className="mt-0.5 size-5 shrink-0 text-ring" />
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Questions about where donations go, or want to support TechTank another way? Reach out at {CONTACT_EMAIL}.
-              We&apos;re also always looking for{" "}
+              Questions about where donations go, or want to support TechTank another way? Reach out at{" "}
+              <a href={`mailto:${CONTACT_EMAIL}`} className="underline underline-offset-2 hover:text-foreground">
+                {CONTACT_EMAIL}
+              </a>
+              . We&apos;re also always looking for{" "}
               <a href="/get-involved/sponsor" className="underline underline-offset-2 hover:text-foreground">
                 sponsors
               </a>{" "}
