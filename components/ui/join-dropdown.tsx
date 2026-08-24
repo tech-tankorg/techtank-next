@@ -43,6 +43,14 @@ export function JoinDropdown() {
           role="menu"
           className="shadow-soft-lg absolute top-full right-0 mt-2 w-fit min-w-max rounded-md border border-border bg-background p-1"
         >
+          <Link
+            role="menuitem"
+            href="/get-involved"
+            onClick={() => setOpen(false)}
+            className="flex items-center justify-end gap-2 rounded-sm px-3 py-2 text-sm font-medium whitespace-nowrap text-foreground transition-colors hover:bg-foreground/5"
+          >
+            Get Involved
+          </Link>
           <a
             role="menuitem"
             href="/links/slack"
@@ -54,14 +62,6 @@ export function JoinDropdown() {
             <SlackIcon className="size-4 text-amber-dark" />
             Join Slack
           </a>
-          <Link
-            role="menuitem"
-            href="/get-involved"
-            onClick={() => setOpen(false)}
-            className="flex items-center justify-end gap-2 rounded-sm px-3 py-2 text-sm font-medium whitespace-nowrap text-foreground transition-colors hover:bg-foreground/5"
-          >
-            Get Involved
-          </Link>
         </div>
       )}
     </div>

@@ -108,14 +108,14 @@ export function Header() {
               </Link>
             ))}
             <div className="space-y-2 border-t border-border pt-4">
+              <Button variant="primary" size="sm" className="w-full" asChild onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/get-involved">Get involved</Link>
+              </Button>
               <Button variant="secondary" size="sm" className="w-full" asChild onClick={() => setMobileMenuOpen(false)}>
                 <a href="/links/slack" target="_blank" rel="noopener noreferrer">
                   <SlackIcon className="mr-2 size-4" />
                   Join our Slack
                 </a>
-              </Button>
-              <Button variant="primary" size="sm" className="w-full" asChild onClick={() => setMobileMenuOpen(false)}>
-                <Link href="/get-involved">Get involved</Link>
               </Button>
             </div>
           </div>
