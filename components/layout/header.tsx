@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Menu, QrCode, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SlackIcon } from "@/components/ui/icons";
+import { JoinDropdown } from "@/components/ui/join-dropdown";
 import { QrDialog } from "@/components/ui/qr-dialog";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { useAppStore } from "@/stores/app-state";
@@ -67,13 +68,19 @@ export function Header() {
           >
             <QrCode className="size-5" />
           </Button>
-          <Button variant="primary" size="sm" asChild>
-            <Link href="/get-involved">Join us</Link>
-          </Button>
+          <JoinDropdown />
         </div>
 
-        {/* Mobile: theme toggle + menu button */}
+        {/* Mobile: QR + theme toggle + menu button */}
         <div className="flex items-center gap-1 lg:hidden">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setQrDialogOpen(true)}
+            aria-label="Show get involved QR code"
+          >
+            <QrCode className="size-5" />
+          </Button>
           <ThemeToggle />
           <button
             type="button"
