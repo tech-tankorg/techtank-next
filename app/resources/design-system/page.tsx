@@ -390,8 +390,8 @@ export default function DesignSystemPage() {
               <Button variant="primary" size="sm">
                 Small
               </Button>
-              <Button variant="primary" size="icon">
-                <Star className="size-4" />
+              <Button variant="primary" size="icon" aria-label="Favorite">
+                <Star className="size-4" aria-hidden="true" />
               </Button>
             </div>
           </div>
