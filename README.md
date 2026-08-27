@@ -70,12 +70,12 @@ route, annotated with its purpose.
 │   ├── page.tsx                    # /                    Social-proof-driven home
 │   ├── about/                      # /about               Values & community manifesto
 │   ├── events/                     # /events              Upcoming (Luma) + past event timeline
-│   ├── donate/                     # /donate              Interac e-transfer donation info
 │   ├── get-involved/               # /get-involved        Onboarding hub (shared layout)
 │   │   ├── speak-or-facilitate/    #   /speak-or-facilitate  Speaker/facilitator intake
 │   │   ├── host/                   #   /host              Host intake
 │   │   ├── sponsor/                #   /sponsor           Sponsor intake
-│   │   └── organizer/              #   /organizer         Organizer intake
+│   │   ├── organizer/              #   /organizer         Organizer intake
+│   │   └── donate/                 #   /donate            (via next.config rewrites) Interac e-transfer donation info
 │   ├── legal/                      # /legal               Legal documents (shared layout)
 │   │   ├── terms-of-service/       #   /terms-of-service
 │   │   ├── privacy-policy/         #   /privacy-policy
