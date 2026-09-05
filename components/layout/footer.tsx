@@ -32,6 +32,7 @@ const footerLinks = {
       { name: "Host", href: "/get-involved/host", external: false },
       { name: "Sponsor", href: "/get-involved/sponsor", external: false },
       { name: "Organizer Team", href: "/get-involved/organizer", external: false },
+      { name: "Donate", href: "/donate", external: false },
       { name: "Events", href: "/events", external: false },
     ],
   },
