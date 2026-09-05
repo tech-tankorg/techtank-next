@@ -74,7 +74,7 @@ export function Dialog({ open, onClose, labelledBy, className, children }: Dialo
           </Button>
         </div>
 
-        <div className="flex min-h-0 flex-1 flex-col gap-5 overflow-hidden px-6 pb-4 md:px-8 lg:px-10">{children}</div>
+        <div className="flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto px-6 pb-4 md:px-8 lg:px-10">{children}</div>
       </dialog>
     </>,
     document.body,
